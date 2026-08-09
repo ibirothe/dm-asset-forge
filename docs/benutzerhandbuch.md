@@ -32,6 +32,17 @@ Ein Asset besitzt genau einen kanonischen Speicherort. Wenn ein NPC an mehreren 
 
 Bitte Codex ausdrücklich, Annahmen nicht als Fakten auszugeben. Unkritische Annahmen dürfen dokumentiert werden; Entscheidungen mit großem Einfluss auf Ton, Plot oder Weltlogik sollen als offene Frage stehen bleiben.
 
+## Metadaten und qualitative Werte
+
+Assets verwenden gemeinsame Metadaten und feste englische Werte für Gefahr, Einfluss, Reichweite, Seltenheit, Zugänglichkeit und Informationssicherheit. Die Bedeutungen sind regelneutral und in [Metadaten und regelneutrale Werte v1](metadaten-und-werte.md) festgelegt.
+
+- `unknown`: Die Angabe ist relevant, aber noch nicht bekannt.
+- `null`: Ein einzelnes Feld ist bewusst nicht anwendbar oder besitzt kein Ziel.
+- `[]`: Eine Liste ist anwendbar, enthält aber aktuell keine Einträge.
+- Offene Entscheidungen: stehen zusätzlich in `90-meta/open-questions.md`.
+
+Leere Zeichenketten werden nicht als Platzhalter verwendet. Dadurch kann Codex offene Fragen von bewusst nicht anwendbaren Angaben unterscheiden.
+
 ## Bilder
 
 Bilddateien werden als PNG gespeichert. Neben jedem Bild liegt ein gleichnamiges Bildbriefing mit der Endung `.prompt.md`. So kann das Motiv später reproduziert oder gezielt überarbeitet werden.

@@ -15,6 +15,7 @@ Ein regelneutrales Codex-Template zum strukturierten Erstellen und Pflegen von P
 
 Die vollständige Anleitung steht in [docs/benutzerhandbuch.md](docs/benutzerhandbuch.md).
 Der verbindliche v1-Typenkatalog steht in [docs/asset-katalog.md](docs/asset-katalog.md).
+Das gemeinsame Metadatenschema und alle regelneutralen Werteskalen stehen in [docs/metadaten-und-werte.md](docs/metadaten-und-werte.md).
 
 ## Grundprinzipien
 

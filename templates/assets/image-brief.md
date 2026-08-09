@@ -3,7 +3,8 @@ id: img-{{SLUG}}
 type: image-brief
 title: "{{TITLE}}"
 status: draft
-subject_asset: ""
+version: 1
+subject_asset: unknown
 output_file: "{{SLUG}}.png"
 tags: []
 themes: []

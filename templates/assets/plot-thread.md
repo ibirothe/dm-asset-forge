@@ -3,8 +3,11 @@ id: plot-{{SLUG}}
 type: plot-thread
 title: "{{TITLE}}"
 status: draft
+version: 1
 entry_locations: []
 related_factions: []
+danger: unknown
+reach: unknown
 tags: []
 themes: []
 created: {{DATE}}

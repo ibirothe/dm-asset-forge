@@ -5,6 +5,7 @@
 Use this repository to create and maintain system-neutral tabletop role-playing adventure material. Keep user-facing guidance in German and technical identifiers, folder names, file names, YAML keys, and IDs in English.
 
 Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
+Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 
 ## Start a new adventure
 
@@ -47,6 +48,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Give every usable asset a purpose at the table, discoverability, and consequences.
 - Preserve user-authored facts. Make small, targeted edits and never silently rewrite unrelated files.
 - Use YAML frontmatter from the matching template in `templates/assets/`.
+- Use only keys and controlled values defined in `docs/metadaten-und-werte.md`. Never use an empty string for an unknown, inapplicable, or open value.
 - Use ISO dates (`YYYY-MM-DD`) and relative Markdown links.
 
 ## Images

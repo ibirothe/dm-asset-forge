@@ -5,7 +5,7 @@ description: Create or revise a single structured, system-neutral Dungeon Master
 
 # Create or revise an asset
 
-1. Read `AGENTS.md`, the normative `docs/asset-katalog.md`, the target adventure overview, the relevant index, and the minimum linked context.
+1. Read `AGENTS.md`, the normative `docs/asset-katalog.md` and `docs/metadaten-und-werte.md`, the target adventure overview, the relevant index, and the minimum linked context.
 2. Determine the asset type, scope, required relations, and canonical path from the catalog. Do not substitute another type because its generator already exists.
 3. For a type currently supported by the asset generator, run:
 
@@ -19,7 +19,7 @@ description: Create or revise a single structured, system-neutral Dungeon Master
 
    If the catalog type is not implemented yet, report that gap instead of inventing a conflicting path or borrowing another type's schema.
 
-4. Fill every field that affects table use. Leave an explicit TODO or open question instead of fabricating unsupported canon.
+4. Fill every field that affects table use. Use only documented keys and controlled values. Represent unknown, inapplicable, empty-list, and open values according to the metadata specification instead of fabricating unsupported canon.
 5. Apply the type-specific quality checks:
    - NPC: purpose, recognizable cues, motivation, pressure, leverage, knowledge, behavior, consequences.
    - Object: discoverability, properties, uses, risk, context, consequences.

@@ -3,8 +3,12 @@ id: obj-{{SLUG}}
 type: object
 title: "{{TITLE}}"
 status: draft
+version: 1
 primary_location: "{{LOCATION_ID}}"
 owner: null
+danger: unknown
+rarity: unknown
+accessibility: unknown
 tags: []
 themes: []
 created: {{DATE}}
