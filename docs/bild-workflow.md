@@ -1,17 +1,26 @@
 # Bild-Workflow
 
-## Dateipaar
+## Asset-Dateien
 
 Ein visuelles Asset besteht aus:
 
+- `visual.md`: kanonische Metadaten, sichtbare Fakten und Subject-Beziehung
 - `<name>.prompt.md`: reproduzierbares Bildbriefing
-- `<name>.png`: tatsächlich erzeugtes Ergebnis
+- optional `<name>.png`: tatsächlich erzeugtes Ergebnis
 
-Das Briefing entsteht zuerst. Die PNG-Datei wird nur bei einer ausdrücklichen Bildanforderung erzeugt oder ersetzt.
+Das Visual und sein Briefing entstehen zuerst. Die PNG-Datei wird nur bei einer ausdrücklichen Bildanforderung erzeugt oder ersetzt. Alle drei Dateien liegen in `<subject-directory>/visuals/<name>/`.
+
+```bash
+python3 scripts/new_asset.py \
+  --type visual \
+  --subject <asset-id> \
+  --slug <name> \
+  --title "<title>"
+```
 
 ## Inhalt des Briefings
 
-Das Template `templates/assets/image-brief.md` führt:
+Die Templates `templates/assets/visual.md` und `templates/visual-prompt.md` führen:
 
 - Zweck und Motiv
 - Komposition und Blickwinkel
@@ -20,7 +29,7 @@ Das Template `templates/assets/image-brief.md` führt:
 - auszuschließende Elemente
 - gewünschte Auflösung beziehungsweise Seitenrelation
 - Ausgabepfad
-- Provenienz und Änderungsnotizen
+- Provenienz und Änderungsnotizen im kanonischen Visual
 
 ## Konsistenz
 

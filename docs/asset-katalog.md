@@ -133,6 +133,6 @@ Typische Nutzung: Gerüchte, Begegnungsimpulse, Wetter, Fundstücke, Namen oder 
 
 ## Implementierungsstatus
 
-Der Katalog definiert v1 unabhängig vom aktuellen Generatorstand. `world` entsteht über die Abenteuerinitialisierung. Der Asset-Generator unterstützt derzeit `location`, `npc`, `object`, `information`, `encounter`, `handout`, `faction`, `plot-thread` und ein vorläufiges `image-brief`. Die vollständige Angleichung von Templates, Skripten und Validatoren an alle 14 Typen erfolgt in nachgelagerten Issues.
+`scripts/new_asset.py` unterstützt alle 14 Typen aus diesem Katalog. Der Generator wählt Template, ID-Präfix und kanonischen Pfad anhand von `--type`, prüft erforderliche Beziehungen vor dem Schreiben und überschreibt bestehende Dateien nur mit `--overwrite`.
 
-Ein fehlendes Template ändert nicht die Typdefinition. Assets dürfen nicht unter einem falschen Typ gespeichert werden, nur weil dessen Generator bereits existiert.
+Bei `world` ersetzt der Generator mit explizitem `--overwrite` die noch unbefüllte Overview-Datei des initialisierten Scaffolds. Bei `visual` entstehen `visual.md` und das zugehörige `<slug>.prompt.md`; eine PNG-Datei wird nicht automatisch erzeugt. Der Generator legt nur das Asset-Grundgerüst an und pflegt keine Indizes oder Rückverweise automatisch.

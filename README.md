@@ -51,9 +51,14 @@ templates/assets/     Einheitliche Asset-Schemata
 
 ```bash
 python3 scripts/init_adventure.py --slug nebel-ueber-arken --title "Nebel über Arken"
+python3 scripts/new_asset.py --type world --slug nebel-ueber-arken --title "Nebel über Arken" --overwrite
 python3 scripts/new_asset.py --type location --slug hafenviertel --title "Hafenviertel"
+python3 scripts/new_asset.py --type npc --location hafenviertel --slug mara-veen --title "Mara Veen"
+python3 scripts/new_asset.py --type visual --subject npc-mara-veen --slug portrait --title "Porträt von Mara Veen"
 python3 scripts/validate_adventure.py
 ```
+
+`new_asset.py` unterstützt alle 14 Typen des Asset-Katalogs. `python3 scripts/new_asset.py --help` zeigt typspezifische Optionen und Beispiele. Es überschreibt keine bestehende Datei ohne `--overwrite` und pflegt Indizes oder Rückverweise nicht automatisch.
 
 Die Skripte verwenden ausschließlich die Python-Standardbibliothek.
 

@@ -14,19 +14,27 @@ adventure/
 ├── 10-world/
 │   ├── overview.md
 │   ├── themes.md
-│   └── timeline.md
+│   ├── timeline.md
+│   └── events/<event>/event.md
 ├── 20-plot/
 │   ├── overview.md
 │   └── threads/<thread>/plot-thread.md
 ├── 30-locations/<location>/
 │   ├── location.md
+│   ├── scenes/<scene>/scene.md
 │   ├── npcs/<npc>/npc.md
+│   ├── creatures/<creature>/creature.md
 │   ├── objects/<object>/object.md
 │   ├── information/<information>/information.md
 │   ├── encounters/<encounter>/encounter.md
 │   ├── handouts/<handout>/handout.md
-│   └── images/
-├── 40-global/factions/<faction>/faction.md
+│   └── visuals/<visual>/
+│       ├── visual.md
+│       ├── <visual>.prompt.md
+│       └── <visual>.png (optional)
+├── 40-global/
+│   ├── factions/<faction>/faction.md
+│   └── random-tables/<table>/random-table.md
 ├── 50-indexes/
 └── 90-meta/
     ├── assumptions.md

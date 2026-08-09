@@ -9,7 +9,7 @@ Jedes Asset führt die folgenden Pflichtfelder. Das Abenteuer-Manifest in `adven
 | Key | Format | Bedeutung |
 |---|---|---|
 | `id` | nicht leerer String | Stabile ID mit dem Präfix aus dem Asset-Katalog; nach der Erstellung nicht ändern. |
-| `type` | kontrollierter String | Einer der 14 Katalogtypen; beim Abenteuer-Manifest `adventure`; beim vorläufigen Bildbrief `image-brief`. |
+| `type` | kontrollierter String | Einer der 14 Katalogtypen; beim Abenteuer-Manifest `adventure`. |
 | `title` | nicht leerer String | Anzeigename; darf geändert werden, ohne die ID zu ändern. |
 | `status` | kontrollierter String | Bearbeitungsstand gemäß Statuswerten unten. |
 | `version` | positive Ganzzahl | Inhaltsversion des Assets; beginnt bei `1` und steigt bei einer inhaltlich relevanten Überarbeitung. |
@@ -157,9 +157,6 @@ Templates dürfen neben den gemeinsamen Schlüsseln nur die hier für ihren Typ 
 | `event` | `related_locations`, `participants`, `affected_assets`, `danger`, `reach` |
 | `visual` | `subject_asset`, `output_file` |
 | `random-table` | `related_locations`, `applicable_contexts` |
-| `image-brief` | `subject_asset`, `output_file` |
-
-`image-brief` bleibt bis zur vollständigen Implementierung des Katalogtyps `visual` ein vorläufiger technischer Dokumenttyp. Er darf nicht anstelle eines anderen Assets verwendet werden.
 
 ## Fehlende, leere und offene Angaben
 

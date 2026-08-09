@@ -126,9 +126,10 @@ Originaltext, Klarstellung, Annahme und Entscheidung dürfen nicht in derselben 
 
 1. Einen stabilen Slug ableiten.
 2. `python3 scripts/init_adventure.py --slug <slug> --title "<title>"` ausführen.
-3. Die vollständige Nutzeranfrage unverändert in `00-input/original-request.md` einfügen.
-4. Welt-, Plot- und Constraint-Angaben in die jeweiligen Input-Dateien extrahieren und zur Originalanfrage verlinken.
-5. Noch keine Bilder erzeugen oder Bilddateien behaupten.
+3. Den World-Singleton mit `python3 scripts/new_asset.py --type world --slug <slug> --title "<title>" --overwrite` aus dem Asset-Template erzeugen. `--overwrite` nur verwenden, solange `10-world/overview.md` noch die unveränderte Scaffold-Platzhalterdatei ist; sonst stoppen und den bestehenden Inhalt erhalten.
+4. Die vollständige Nutzeranfrage unverändert in `00-input/original-request.md` einfügen.
+5. Welt-, Plot- und Constraint-Angaben in die jeweiligen Input-Dateien extrahieren und zur Originalanfrage verlinken.
+6. Noch keine Bilder erzeugen oder Bilddateien behaupten.
 
 ### 3. Aussagen klassifizieren
 

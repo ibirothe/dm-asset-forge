@@ -40,16 +40,32 @@ REQUIRED_FILES = (
     "90-meta/change-log.md",
 )
 ASSET_FILENAMES = {
+    "scene.md",
     "location.md",
     "npc.md",
+    "creature.md",
     "object.md",
     "information.md",
     "encounter.md",
     "handout.md",
     "faction.md",
     "plot-thread.md",
+    "event.md",
+    "visual.md",
+    "random-table.md",
 }
-COMMON_REQUIRED_KEYS = {"id", "type", "title", "status", "created", "updated"}
+COMMON_REQUIRED_KEYS = {
+    "id",
+    "type",
+    "title",
+    "status",
+    "version",
+    "scope",
+    "tags",
+    "themes",
+    "created",
+    "updated",
+}
 FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 KEY_VALUE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*)$")
 LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
@@ -106,20 +122,35 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
         if SYSTEM_TERMS.search(text):
             warnings.append(f"possible system-specific term: {relative}")
 
-        is_asset = path.name in ASSET_FILENAMES and "50-indexes" not in relative.parts
-        if is_asset or path.name.endswith(".prompt.md") or path == root / "README.md":
-            metadata = parse_frontmatter(text)
+        metadata = parse_frontmatter(text)
+        is_world_asset = path == root / "10-world" / "overview.md" and metadata is not None
+        is_asset = (
+            path.name in ASSET_FILENAMES and "50-indexes" not in relative.parts
+        ) or is_world_asset
+        if path.name.endswith(".prompt.md"):
+            if not (path.parent / "visual.md").is_file():
+                errors.append(f"visual prompt has no sibling visual.md: {relative}")
+        elif is_asset or path == root / "README.md":
             if metadata is None:
                 errors.append(f"missing YAML frontmatter: {relative}")
             else:
-                required = COMMON_REQUIRED_KEYS if path != root / "README.md" else {"id", "type", "title", "status", "created", "updated"}
-                missing = sorted(required - metadata.keys())
+                missing = sorted(COMMON_REQUIRED_KEYS - metadata.keys())
                 if missing:
                     errors.append(f"missing frontmatter keys in {relative}: {', '.join(missing)}")
                 if metadata.get("id"):
                     ids[metadata["id"]].append(path)
-                if path.name.endswith(".prompt.md") and not metadata.get("output_file", "").lower().endswith(".png"):
-                    errors.append(f"image brief output_file must be PNG: {relative}")
+                if path.name == "visual.md":
+                    output_file = metadata.get("output_file", "")
+                    if not output_file.lower().endswith(".png"):
+                        errors.append(f"visual output_file must be PNG: {relative}")
+                    elif Path(output_file).name != output_file:
+                        errors.append(f"visual output_file must be a neighboring file: {relative}")
+                    else:
+                        prompt = path.parent / f"{Path(output_file).stem}.prompt.md"
+                        if not prompt.is_file():
+                            errors.append(
+                                f"visual has no matching prompt: {prompt.relative_to(root)}"
+                            )
 
         for raw_target in LINK.findall(text):
             resolved = resolve_link(path, raw_target)
