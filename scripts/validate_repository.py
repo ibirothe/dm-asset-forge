@@ -86,6 +86,27 @@ def main() -> int:
             if section not in structure_content:
                 errors.append(f"adventure structure guide is missing section: {section}")
 
+    audit_guide = ROOT / "docs" / "adventure-audit-guide.md"
+    required_audit_sections = (
+        "## Prüfreihenfolge",
+        "## Technische Basisprüfung",
+        "## Kanon und Kontinuität",
+        "## Informationswege",
+        "## Plot-Threads und Spielerwirksamkeit",
+        "## Schweregrade",
+        "## Format eines Findings",
+        "## Audit-Bericht",
+        "## Fix-Aufträge",
+        "## Definition of Done",
+    )
+    if not audit_guide.is_file():
+        errors.append("missing adventure audit guide: docs/adventure-audit-guide.md")
+    else:
+        audit_content = audit_guide.read_text(encoding="utf-8")
+        for section in required_audit_sections:
+            if section not in audit_content:
+                errors.append(f"adventure audit guide is missing section: {section}")
+
     metadata_spec = ROOT / "docs" / "metadaten-und-werte.md"
     if not metadata_spec.is_file():
         errors.append("missing metadata specification: docs/metadaten-und-werte.md")
@@ -109,6 +130,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the asset authoring guide")
     if "docs/adventure-structure-guide.md" not in agents_content:
         errors.append("AGENTS.md does not reference the adventure structure guide")
+    if "docs/adventure-audit-guide.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the adventure audit guide")
     if "docs/metadaten-und-werte.md" not in agents_content:
         errors.append("AGENTS.md does not reference the metadata specification")
     if "docs/beziehungen-und-speicherorte.md" not in agents_content:
@@ -176,6 +199,8 @@ def main() -> int:
     audit_skill = SKILLS / "dm-audit-adventure" / "SKILL.md"
     if audit_skill.is_file() and "docs/validierung.md" not in audit_skill.read_text(encoding="utf-8"):
         errors.append("dm-audit-adventure does not reference the validation guide")
+    if audit_skill.is_file() and "docs/adventure-audit-guide.md" not in audit_skill.read_text(encoding="utf-8"):
+        errors.append("dm-audit-adventure does not reference the adventure audit guide")
 
     validator_tests = ROOT / "tests" / "test_validate_adventure.py"
     if not validator_tests.is_file():
