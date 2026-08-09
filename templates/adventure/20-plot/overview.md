@@ -44,7 +44,17 @@
 
 ## One-shot scope and pacing
 
-<!-- Reference the target duration and content density from ../00-input/constraints.md. Keep the central conflict and its possible resolutions fully playable in this one-shot. Remove unnecessary branches instead of deferring required material. -->
+- Target frame: [Constraints](../00-input/constraints.md)
+- Minimum resolution state:
+- Core content:
+- Supporting content:
+- Optional content:
+- Safe cuts:
+  - Cut: none defined
+  - Impact: none documented
+- Late pressure:
+
+<!-- `core`, `supporting`, and `optional` are editorial prose labels, not metadata values. Every safe cut must preserve independent paths to necessary conclusions, multiple forms of player influence, and reachable resolutions. Late pressure changes the situation without prescribing a player action or Scene. -->
 
 ## Active threads
 
