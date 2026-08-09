@@ -5,7 +5,7 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
 
 # Create an adventure
 
-1. Read the repository `AGENTS.md` and `docs/struktur-und-konventionen.md`.
+1. Read the repository `AGENTS.md`, `docs/struktur-und-konventionen.md`, and the normative `docs/asset-katalog.md`.
 2. Capture the requested title plus the user's rough world and plot descriptions. Ask only about missing facts that would materially change the first structure; record non-blocking uncertainties instead.
 3. Derive a lowercase ASCII kebab-case slug. Confirm that `adventure/` does not exist; one repository may contain only one initialized adventure.
 4. Run:

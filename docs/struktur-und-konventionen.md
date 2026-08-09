@@ -41,16 +41,14 @@ Das Verzeichnis `adventure/` entsteht bei der einmaligen Initialisierung. Titel 
 
 ## Asset-Typen
 
-| Typ | Präfix | Kanonischer Speicherort |
-|---|---:|---|
-| location | `loc-` | `30-locations/<location>/location.md` |
-| npc | `npc-` | `<location>/npcs/<npc>/npc.md` |
-| object | `obj-` | `<location>/objects/<object>/object.md` |
-| information | `info-` | `<location>/information/<information>/information.md` |
-| encounter | `enc-` | `<location>/encounters/<encounter>/encounter.md` |
-| handout | `hand-` | `<location>/handouts/<handout>/handout.md` |
-| faction | `fac-` | `40-global/factions/<faction>/faction.md` |
-| plot-thread | `plot-` | `20-plot/threads/<thread>/plot-thread.md` |
+Der [kanonische DM-Asset-Katalog v1](asset-katalog.md) ist die verbindliche Quelle für alle 14 Typen, Präfixe, Geltungsbereiche, Speicherorte, Pflichtbeziehungen und Auswahlregeln. Diese Datei wiederholt die Typentabelle bewusst nicht, damit keine zweite Quelle abweichende Definitionen entwickelt.
+
+Kurzregel:
+
+- lokale Assets besitzen genau einen primären Ort;
+- globale Assets werden nicht in einem Ortsordner dupliziert;
+- Visuals liegen bei ihrem kanonischen Subject-Asset;
+- weitere Vorkommen werden ausschließlich verlinkt.
 
 ## Frontmatter
 

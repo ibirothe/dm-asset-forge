@@ -4,6 +4,8 @@
 
 Use this repository to create and maintain system-neutral tabletop role-playing adventure material. Keep user-facing guidance in German and technical identifiers, folder names, file names, YAML keys, and IDs in English.
 
+Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
+
 ## Start a new adventure
 
 1. Begin with the user's rough world and plot description. Ask only for missing information that blocks a coherent first pass.

@@ -5,12 +5,9 @@ description: Create or revise a single structured, system-neutral Dungeon Master
 
 # Create or revise an asset
 
-1. Read `AGENTS.md`, the target adventure overview, the relevant index, and the minimum linked context.
-2. Determine the asset type and canonical location:
-   - Require a primary location for `npc`, `object`, `information`, `encounter`, and `handout`.
-   - Store `faction` globally and `plot-thread` under the plot structure.
-   - Put visual briefs near their subject or in the location's `images/` directory.
-3. For a new supported asset, run:
+1. Read `AGENTS.md`, the normative `docs/asset-katalog.md`, the target adventure overview, the relevant index, and the minimum linked context.
+2. Determine the asset type, scope, required relations, and canonical path from the catalog. Do not substitute another type because its generator already exists.
+3. For a type currently supported by the asset generator, run:
 
    ```bash
    python3 scripts/new_asset.py \
@@ -19,6 +16,8 @@ description: Create or revise a single structured, system-neutral Dungeon Master
      --slug <slug> \
      --title "<title>"
    ```
+
+   If the catalog type is not implemented yet, report that gap instead of inventing a conflicting path or borrowing another type's schema.
 
 4. Fill every field that affects table use. Leave an explicit TODO or open question instead of fabricating unsupported canon.
 5. Apply the type-specific quality checks:
