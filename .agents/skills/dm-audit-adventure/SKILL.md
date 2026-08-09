@@ -5,7 +5,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
 
 # Audit an adventure
 
-1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md`, then `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
+1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md`, then `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
 2. Run:
 
    ```bash
@@ -23,7 +23,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
    - no required conclusion depends on a single fragile clue;
    - NPC knowledge and motivations do not contradict established facts;
    - timelines, locations, ownership, and relationships agree;
-   - assets marked `ready` are usable at the table;
+   - every asset marked `ready` meets the shared and type-specific Definition of Done in the authoring guide;
    - system-specific mechanics have not entered the content;
    - generated PNGs have matching Visual assets, prompt companions, and declared provenance.
 5. Classify findings as `blocking`, `important`, or `polish`. Cite exact relative file paths.
