@@ -26,7 +26,7 @@ Ein Asset wird nur einmal vollständig gespeichert. Weitere Vorkommen werden dur
 | `encounter` | `enc-` | local | `adventure/30-locations/<location>/encounters/<encounter>/encounter.md` | primary location | optionales Lage-, Gegner- oder Atmosphärenbild |
 | `plot-thread` | `plot-` | global | `adventure/20-plot/threads/<plot-thread>/plot-thread.md` | world and at least one entry asset | normalerweise kein eigenes Bild; verlinkt beteiligte Visuals |
 | `event` | `event-` | global | `adventure/10-world/events/<event>/event.md` | world and affected assets | optionales Bild für sichtbare oder historische Ereignisse |
-| `handout` | `hand-` | local | `adventure/30-locations/<location>/handouts/<handout>/handout.md` | primary delivery location | kann eine spielersichere PNG-Ausgabe besitzen |
+| `handout` | `hand-` | local | `adventure/30-locations/<location>/handouts/<handout>/handout.md` | primary delivery location | eine PNG-Ausgabe wird als untergeordnetes `visual` geführt |
 | `visual` | `vis-` | subject-owned | `<subject-directory>/visuals/<visual>/visual.md` | exactly one subject asset | PNG und `.prompt.md` liegen neben `visual.md` |
 | `random-table` | `table-` | global | `adventure/40-global/random-tables/<random-table>/random-table.md` | world and applicable contexts | normalerweise kein eigenes Bild |
 
@@ -102,7 +102,7 @@ Typische Nutzung: historischer Umbruch, bevorstehendes Ritual, Frist, Katastroph
 
 ### `handout`
 
-Beschreibt ein kontrolliert spielersichtbares Artefakt mit Auslieferungskontext, offenbarten Informationen und strikt getrennten DM-Hinweisen. Markdown ist die Quelle; PNG kann eine freigegebene Ausgabe sein.
+Beschreibt ein kontrolliert spielersichtbares Artefakt mit Auslieferungskontext, offenbarten Informationen und strikt getrennten DM-Hinweisen. Markdown ist die Quelle; eine optionale PNG-Fassung wird als Subject-owned `visual` des Handouts geführt.
 
 Typische Nutzung: Brief, Aushang, Tagebuchseite, Symbolblatt oder Bild für Spieler. Ein Handout darf keine kanonischen Geheimnisse enthalten, die nicht bewusst offengelegt werden.
 

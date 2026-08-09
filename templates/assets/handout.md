@@ -36,4 +36,4 @@ updated: {{DATE}}
 
 ## Rendered output
 
-<!-- Optionale Links zu einer freigegebenen player.md und einer daraus abgeleiteten player.png. -->
+<!-- Optionaler Link zur freigegebenen player.md. Eine PNG-Fassung wird als Visual unter visuals/<slug>/ geführt. -->

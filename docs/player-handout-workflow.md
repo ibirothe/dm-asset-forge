@@ -7,7 +7,7 @@ Dieser Leitfaden definiert die sichere Markdown-Ausgabe eines Handouts für Spie
 - `handout.md` bleibt die einzige kanonische DM-Datei. Sie enthält Frontmatter, Auslieferungskontext, offenbarte Informationen und DM-only Wissen.
 - `player.md` ist eine optionale, abgeleitete Spielerdatei im selben Handout-Ordner.
 - `player.md` enthält kein YAML-Frontmatter, keine Arbeitsnotizen und keine Repository-Navigation.
-- Eine optionale `player.png` darf erst aus der freigegebenen `player.md` entstehen. Markdown bleibt die maßgebliche Spielerfassung.
+- Eine optionale PNG-Fassung wird als reguläres Visual des Handouts geführt. Sie darf erst aus der freigegebenen `player.md` entstehen; Markdown bleibt die maßgebliche Spielerfassung.
 - Player-Dateien werden nicht außerhalb des zugehörigen Handout-Ordners gesammelt oder für andere Abenteuer wiederverwendet.
 
 Beispiel:
@@ -15,8 +15,11 @@ Beispiel:
 ```text
 adventure/30-locations/old-harbor/handouts/harbor-letter/
 ├── handout.md
-├── player.md       (optional, ausdrücklich freigegeben)
-└── player.png      (optional)
+├── player.md                    (optional, ausdrücklich freigegeben)
+└── visuals/player/              (optionale Bildfassung)
+    ├── visual.md
+    ├── player.prompt.md
+    └── player.png
 ```
 
 ## Freigabestatus in der Quelle
@@ -64,7 +67,17 @@ Kann ein möglicher Spoiler nicht sicher bewertet werden, bleibt die Ausgabe blo
 
 ## Optionale PNG-Ausgabe
 
-Eine PNG-Ausgabe ist keine Voraussetzung für ein nutzbares Handout. Nach Freigabe von `player.md` darf Codex auf ausdrücklichen Wunsch eine `player.png` im selben Ordner gestalten. Inhaltliche Aussagen dürfen sich dabei nicht ändern; Layout, Schrift, Symbole und Illustration müssen denselben Safety-Check bestehen. Der Bildworkflow aus `docs/bild-workflow.md` gilt ergänzend.
+Eine PNG-Ausgabe ist keine Voraussetzung für ein nutzbares Handout. Nach Freigabe von `player.md` darf Codex auf ausdrücklichen Wunsch ein Visual mit dem Handout als Subject anlegen:
+
+```bash
+python3 scripts/new_asset.py \
+  --type visual \
+  --subject <handout-id> \
+  --slug player \
+  --title "<title> – Spielerfassung"
+```
+
+Die Bildfassung liegt ausschließlich unter `visuals/player/`; eine direkte `player.png` neben `handout.md` ist unzulässig. `visual.md` nennt die freigegebene `player.md` als konkrete Identitäts- und Inhaltsquelle. Das Prompt-Briefing darf nur deren player-facing Aussagen übernehmen. Inhaltliche Aussagen dürfen sich nicht ändern; Layout, Schrift, Symbole und Illustration müssen den Handout-Safety-Check und den vollständigen [Bild-Workflow](bild-workflow.md) bestehen.
 
 ## Definition of Done
 

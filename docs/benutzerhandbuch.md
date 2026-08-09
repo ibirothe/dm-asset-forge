@@ -69,7 +69,7 @@ Die kanonische `handout.md` bleibt eine DM-Arbeitsdatei und kann Geheimnisse, Au
 
 > Erstelle für das Handout `<name>` einen Safety-geprüften Entwurf für `player.md`. Zeige mir den vollständigen Text, aber schreibe oder ersetze die Datei erst nach meiner ausdrücklichen Freigabe.
 
-Nach der Freigabe liegt `player.md` direkt neben `handout.md`. Sie enthält weder Frontmatter noch DM-only Abschnitte oder interne Repository-Links und ist ohne Projektkontext verständlich. Jede spätere Ersetzung erfordert erneut eine ausdrückliche Freigabe. Eine PNG-Ausgabe ist optional und wird nur auf Wunsch aus der bereits freigegebenen Markdown-Fassung abgeleitet. Der vollständige Ablauf steht in [Spielerfreigabe für Handouts](player-handout-workflow.md).
+Nach der Freigabe liegt `player.md` direkt neben `handout.md`. Sie enthält weder Frontmatter noch DM-only Abschnitte oder interne Repository-Links und ist ohne Projektkontext verständlich. Jede spätere Ersetzung erfordert erneut eine ausdrückliche Freigabe. Eine PNG-Ausgabe ist optional und wird nur auf Wunsch aus der bereits freigegebenen Markdown-Fassung abgeleitet. Sie liegt als reguläres Visual mit Briefing, Freigabe und Provenienz unter `visuals/player/`, niemals direkt neben `handout.md`. Der vollständige Ablauf steht in [Spielerfreigabe für Handouts](player-handout-workflow.md).
 
 ## Mit vorhandenen Dateien arbeiten
 

@@ -927,18 +927,13 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
         if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".tiff"}:
             errors.append(diagnostic(rel, "IMAGE_FORMAT", "non-PNG image file found.", "Convert the image to PNG and update references."))
         if path.is_file() and path.suffix.lower() == ".png":
-            player_png = (
-                path.name == "player.png"
-                and (path.parent / "player.md").is_file()
-                and (path.parent / "handout.md").is_file()
-            )
-            if not player_png and not (path.parent / "visual.md").is_file():
+            if not (path.parent / "visual.md").is_file():
                 errors.append(
                     diagnostic(
                         rel,
                         "PNG_ORPHAN",
-                        "PNG has neither a neighboring Visual asset nor an approved Handout source.",
-                        "Move it beside its visual.md or derive player.png from an approved player.md.",
+                        "PNG has no neighboring Visual asset.",
+                        "Move it into a Subject-owned Visual directory beside visual.md and its prompt.",
                     )
                 )
         if not path.is_file() or path.suffix != ".md":
