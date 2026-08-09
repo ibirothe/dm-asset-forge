@@ -18,6 +18,7 @@ Der verbindliche v1-Typenkatalog steht in [docs/asset-katalog.md](docs/asset-kat
 Die fachlichen Mindestinhalte und Definition of Done jedes Typs stehen in [docs/asset-authoring-guide.md](docs/asset-authoring-guide.md).
 Der zustandsbasierte Abenteueraufbau mit echten Entscheidungen und robusten Informationswegen steht in [docs/adventure-structure-guide.md](docs/adventure-structure-guide.md).
 Die getrennte fachliche Prüfung von Kontinuität, Informationswegen und Spielerwirksamkeit steht in [docs/adventure-audit-guide.md](docs/adventure-audit-guide.md).
+Die kompakte Vorbereitung eines konkreten Spielabends steht in [docs/session-preparation-guide.md](docs/session-preparation-guide.md).
 Das gemeinsame Metadatenschema und alle regelneutralen Werteskalen stehen in [docs/metadaten-und-werte.md](docs/metadaten-und-werte.md).
 Das verbindliche Ownership- und Beziehungsmodell steht in [docs/beziehungen-und-speicherorte.md](docs/beziehungen-und-speicherorte.md).
 Der geführte Erstlauf von freiem Welt- und Plottext zum strukturierten Abenteuer steht in [docs/intake-workflow.md](docs/intake-workflow.md).
@@ -50,6 +51,7 @@ templates/assets/     Einheitliche Asset-Schemata
 - `dm-develop-location`: entwickelt einen Ort samt lokal gruppierter Assets
 - `dm-create-asset`: erzeugt oder überarbeitet ein einzelnes DM-Asset
 - `dm-audit-adventure`: prüft Struktur, Links und erzählerische Konsistenz
+- `dm-prepare-session`: erstellt eine kompakte, quellverlinkte Arbeitsmappe für einen Spielabend
 
 ## Lokale Werkzeuge
 
