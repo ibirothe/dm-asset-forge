@@ -40,6 +40,10 @@ adventure/
 │       └── <visual>.png (optional)
 ├── 40-global/
 │   ├── factions/<faction>/faction.md
+│   ├── player-characters/<player-character>/
+│   │   ├── player-character.md
+│   │   ├── player.md (optional, freigegeben)
+│   │   └── visuals/<visual>/
 │   └── random-tables/<table>/random-table.md
 ├── 50-indexes/
 └── 90-meta/
@@ -57,12 +61,13 @@ Der [geführte Intake-Workflow](intake-workflow.md) definiert, wie Originalanfra
 
 `adventure/README.md` ist die knappe Steuerübersicht für Vorbereitung und Tischgebrauch. Sie fasst Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Pacing-Verweis in kurzen Sätzen zusammen. Zentrale Assets werden direkt verlinkt; vollständige Beschreibungen bleiben in ihren kanonischen Dateien.
 
-Die fünf Dateien unter `adventure/50-indexes/` ergänzen diesen Einstieg typbezogen:
+Die sechs Dateien unter `adventure/50-indexes/` ergänzen diesen Einstieg typbezogen:
 
 | Index | Tischkontext |
 |---|---|
 | `locations.md` | Funktion und aktueller Druck des Orts |
 | `npcs.md` | primärer Ort und unmittelbar relevante Absicht |
+| `player-characters.md` | One-Shot-Rolle und freiwilliger persönlicher Hook |
 | `objects.md` | primärer Ort und unmittelbarer Einsatz |
 | `information.md` | Bedeutung für den Konflikt und unabhängige Fundwege |
 | `open-threads.md` | nächster Druck, minimaler Auflösungszustand und sichere Kürzung |
@@ -79,16 +84,16 @@ Für den Tischgebrauch gilt der Leseweg `README -> direkter Asset-Link` oder `RE
 - IDs: stabiler Präfix plus Slug, beispielsweise `loc-old-harbor` oder `npc-mara-veen`
 - Bilder: PNG; Briefing: gleicher Basisname plus `.prompt.md`
 
-Eine Spielerfassung eines Handouts liegt ausschließlich als optionale `player.md` neben der kanonischen `handout.md`. Sie besitzt kein Frontmatter und entsteht nur nach dem Freigabeworkflow in [Spielerfreigabe für Handouts](player-handout-workflow.md). Eine Bildfassung wird als reguläres Subject-owned Visual unter `visuals/player/` geführt; eine direkte `player.png` neben `handout.md` ist unzulässig.
+Eine Spielerfassung eines Handouts liegt ausschließlich als optionale `player.md` neben der kanonischen `handout.md`. Eine Player-Character-Ausgabe liegt entsprechend neben `player-character.md`. Beide besitzen kein Frontmatter, keine internen Links oder DM-only Inhalte und entstehen nur nach ihrem jeweiligen Freigabeworkflow: [Spielerfreigabe für Handouts](player-handout-workflow.md) beziehungsweise [Spielerfreigabe für Player Characters](player-character-workflow.md). Bilder bleiben reguläre Subject-owned Visuals.
 
 ## Asset-Typen
 
-Der [kanonische DM-Asset-Katalog v1](asset-katalog.md) ist die verbindliche Quelle für alle 14 Typen, Präfixe, Geltungsbereiche, Speicherorte, Pflichtbeziehungen und Auswahlregeln. Diese Datei wiederholt die Typentabelle bewusst nicht, damit keine zweite Quelle abweichende Definitionen entwickelt.
+Der [kanonische DM-Asset-Katalog v1](asset-katalog.md) ist die verbindliche Quelle für alle 15 Typen, Präfixe, Geltungsbereiche, Speicherorte, Pflichtbeziehungen und Auswahlregeln. Diese Datei wiederholt die Typentabelle bewusst nicht, damit keine zweite Quelle abweichende Definitionen entwickelt.
 
 Kurzregel:
 
 - lokale Assets besitzen genau einen primären Ort;
-- globale Assets werden nicht in einem Ortsordner dupliziert;
+- globale Assets wie Player Characters werden nicht in einem Ortsordner dupliziert;
 - Visuals liegen bei ihrem kanonischen Subject-Asset;
 - weitere Vorkommen werden ausschließlich verlinkt.
 
