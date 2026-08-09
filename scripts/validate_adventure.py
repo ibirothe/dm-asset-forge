@@ -31,6 +31,8 @@ REQUIRED_FILES = (
     "00-input/clarifications.md",
     "10-world/overview.md",
     "20-plot/overview.md",
+    "20-plot/threads/index.md",
+    "40-global/factions/index.md",
     "50-indexes/locations.md",
     "50-indexes/npcs.md",
     "50-indexes/objects.md",
@@ -224,6 +226,36 @@ RELATION_RULES = {
     "subject_asset": (False, None),
     "affected_assets": (True, None),
 }
+INDEX_PATHS = {
+    "location": (Path("50-indexes/locations.md"),),
+    "npc": (Path("50-indexes/npcs.md"),),
+    "object": (Path("50-indexes/objects.md"),),
+    "information": (Path("50-indexes/information.md"),),
+    "plot-thread": (
+        Path("20-plot/threads/index.md"),
+        Path("50-indexes/open-threads.md"),
+    ),
+    "faction": (Path("40-global/factions/index.md"),),
+}
+NAVIGATION_RELATIONS = frozenset(
+    {
+        "primary_location",
+        "parent_location",
+        "current_location",
+        "appearance_locations",
+        "discovery_locations",
+        "delivery_locations",
+        "entry_locations",
+        "related_locations",
+        "owner",
+        "factions",
+        "known_by",
+        "part_of",
+        "components",
+        "reveals",
+        "subject_asset",
+    }
+)
 NULL_VALUES = frozenset({"null", "unknown"})
 
 
@@ -448,6 +480,224 @@ def validate_relations(
                     errors.append(diagnostic(rel, "REL_TARGET_TYPE", f"relation {key!r} targets type {target.asset_type!r}, expected {choices}.", "Replace the ID with an asset of an allowed type."))
 
 
+def resolved_markdown_links(path: Path) -> set[Path]:
+    result: set[Path] = set()
+    text = path.read_text(encoding="utf-8")
+    for raw_target in LINK.findall(text):
+        target = resolve_link(path, raw_target)
+        if target is not None:
+            result.add(target)
+    return result
+
+
+def relation_values(record: AssetRecord, key: str) -> list[str]:
+    if key not in record.metadata:
+        return []
+    is_list, _ = RELATION_RULES[key]
+    if is_list:
+        return parse_list(record.metadata[key]) or []
+    value = scalar(record.metadata[key])
+    return [] if value in NULL_VALUES or not value else [value]
+
+
+def validate_navigation_links(
+    root: Path,
+    records: list[AssetRecord],
+    assets_by_id: dict[str, AssetRecord],
+    errors: list[str],
+) -> None:
+    link_cache: dict[Path, set[Path]] = {}
+    checked_directions: set[tuple[Path, Path]] = set()
+
+    def links(path: Path) -> set[Path]:
+        if path not in link_cache:
+            link_cache[path] = resolved_markdown_links(path)
+        return link_cache[path]
+
+    for record in records:
+        source_id = scalar(record.metadata.get("id", ""))
+        for key in NAVIGATION_RELATIONS:
+            if key not in RELATION_RULES:
+                continue
+            _, allowed_types = RELATION_RULES[key]
+            for target_id in relation_values(record, key):
+                target = assets_by_id.get(target_id)
+                if target is None or target.path == record.path:
+                    continue
+                if allowed_types is not None and target.asset_type not in allowed_types:
+                    continue
+
+                forward = (record.path, target.path)
+                if forward not in checked_directions:
+                    checked_directions.add(forward)
+                    if target.path.resolve() not in links(record.path):
+                        errors.append(
+                            diagnostic(
+                                relative(record.path, root),
+                                "REL_LINK_MISSING",
+                                f"relation to {target_id!r} has no relative Markdown link in the source asset.",
+                                f"Add a relative link to {relative(target.path, root)} in the relevant section.",
+                            )
+                        )
+
+                reverse = (target.path, record.path)
+                if reverse not in checked_directions:
+                    checked_directions.add(reverse)
+                    if record.path.resolve() not in links(target.path):
+                        errors.append(
+                            diagnostic(
+                                relative(target.path, root),
+                                "BACKLINK_MISSING",
+                                f"required backlink to {source_id!r} is missing.",
+                                f"Add a relative link to {relative(record.path, root)} in the relevant section.",
+                            )
+                        )
+
+                if key == "part_of":
+                    components = parse_list(target.metadata.get("components", "[]")) or []
+                    if source_id not in components:
+                        errors.append(
+                            diagnostic(
+                                relative(target.path, root),
+                                "REL_RECIPROCAL",
+                                f"components does not include part {source_id!r}.",
+                                f"Add {source_id!r} to components or remove the part_of relation.",
+                            )
+                        )
+                elif key == "components":
+                    if scalar(target.metadata.get("part_of", "")) != source_id:
+                        errors.append(
+                            diagnostic(
+                                relative(target.path, root),
+                                "REL_RECIPROCAL",
+                                f"part_of does not point back to whole object {source_id!r}.",
+                                f"Set part_of: {source_id!r} or remove the component relation.",
+                            )
+                        )
+
+
+def expected_index_prefix(record: AssetRecord) -> list[str]:
+    metadata = record.metadata
+    asset_id = scalar(metadata.get("id", ""))
+    title = scalar(metadata.get("title", ""))
+    status = scalar(metadata.get("status", ""))
+    if record.asset_type == "location":
+        return [asset_id, title, status, scalar(metadata.get("function", ""))]
+    if record.asset_type in {"npc", "object"}:
+        return [asset_id, title, status, scalar(metadata.get("primary_location", ""))]
+    if record.asset_type == "information":
+        return [
+            asset_id,
+            title,
+            scalar(metadata.get("truth_status", "")),
+            scalar(metadata.get("primary_location", "")),
+        ]
+    return [asset_id, title, status]
+
+
+def validate_indexes(
+    root: Path,
+    records: list[AssetRecord],
+    errors: list[str],
+) -> None:
+    records_by_path = {record.path.resolve(): record for record in records}
+    records_by_type: defaultdict[str, list[AssetRecord]] = defaultdict(list)
+    for record in records:
+        records_by_type[record.asset_type].append(record)
+
+    for asset_type, index_paths in INDEX_PATHS.items():
+        for index_rel in index_paths:
+            index = root / index_rel
+            if not index.is_file():
+                continue
+            rows_by_target: defaultdict[Path, list[list[str]]] = defaultdict(list)
+            for line in index.read_text(encoding="utf-8").splitlines():
+                stripped = line.strip()
+                if not stripped.startswith("|"):
+                    continue
+                cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+                if not cells or cells[0] == "ID" or set(cells[0]) <= {"-", ":"}:
+                    continue
+                links = LINK.findall(line)
+                if len(links) != 1:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_LINK",
+                            f"index row for {cells[0]!r} must contain exactly one relative Markdown link.",
+                            "Add one link to the canonical asset file and remove extra links.",
+                        )
+                    )
+                    continue
+                target = resolve_link(index, links[0])
+                if target is None:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_LINK",
+                            f"index row for {cells[0]!r} does not use a relative asset link.",
+                            "Use one portable relative Markdown link to the canonical asset file.",
+                        )
+                    )
+                    continue
+                record = records_by_path.get(target.resolve())
+                if record is None:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_TARGET",
+                            f"index row for {cells[0]!r} does not target a canonical asset.",
+                            "Remove the stale row or link it to the canonical asset file.",
+                        )
+                    )
+                    continue
+                if record.asset_type != asset_type:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_TYPE",
+                            f"index row targets type {record.asset_type!r}, expected {asset_type!r}.",
+                            "Move the row to the correct index.",
+                        )
+                    )
+                    continue
+                rows_by_target[record.path.resolve()].append(cells)
+
+            for record in records_by_type[asset_type]:
+                rows = rows_by_target.get(record.path.resolve(), [])
+                if not rows:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_MISSING",
+                            f"asset {scalar(record.metadata.get('id', ''))!r} is not listed.",
+                            f"Add one row linking to {relative(record.path, root)}.",
+                        )
+                    )
+                    continue
+                if len(rows) > 1:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_DUPLICATE",
+                            f"asset {scalar(record.metadata.get('id', ''))!r} is listed more than once.",
+                            "Keep exactly one current index row.",
+                        )
+                    )
+                    continue
+                expected = expected_index_prefix(record)
+                actual = rows[0][: len(expected)]
+                if actual != expected:
+                    errors.append(
+                        diagnostic(
+                            index_rel,
+                            "INDEX_STALE",
+                            f"index values for {expected[0]!r} are stale: expected {expected}, got {actual}.",
+                            "Refresh the row from the canonical asset metadata without copying descriptive content.",
+                        )
+                    )
+
+
 def validate(root: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -538,6 +788,8 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
     for record in records:
         validate_asset_record(root, record, assets_by_id, manifest, errors)
     validate_relations(root, records, assets_by_id, errors)
+    validate_navigation_links(root, records, assets_by_id, errors)
+    validate_indexes(root, records, errors)
 
     for asset_id, paths in sorted(ids.items()):
         if len(paths) > 1:
