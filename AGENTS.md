@@ -53,6 +53,14 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
 - Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, or retired.
 
+## Asset lifecycle changes
+
+- Before changing a title, canonical owner, status to `retired`, or combining assets, follow the preflight and exact workflow in `docs/beziehungen-und-speicherorte.md`. Report the canonical target, stable ID, current and proposed paths, affected indexes, incoming links, reciprocal relations, and meta files before writing.
+- Preserve ID and `created` for title changes and ownership moves. A title change does not rename the technical slug or path.
+- Stop without modifying files when ownership, successor identity, or merged canon is ambiguous. Combining assets requires an explicit user decision about the surviving ID, path, and content.
+- Keep retired assets at their canonical path and indexed with `status: retired` unless the user explicitly authorizes deletion after impact review.
+- After an approved lifecycle change, update version, date, links, indexes, reciprocal relations, and change log, then run the adventure validator.
+
 ## Content rules
 
 - Remain system-neutral. Do not introduce armor class, hit points, challenge ratings, difficulty classes, spell slots, named rules, dice formulas, or system-specific stat blocks.
