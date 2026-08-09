@@ -26,13 +26,13 @@ Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target durati
 
 ## Vorbereitung und Tischgebrauch
 
-Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
+Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
 
 Die Kurztexte in README und Indizes dienen nur der Orientierung. Vollständiger Kanon, Geheimnisse, Bedingungen und Konsequenzen werden ausschließlich im verlinkten Plot oder Asset gepflegt. Ändert sich dort eine tischrelevante Aussage, lässt du Codex anschließend die betroffene Kurzfassung aktualisieren. Eine Volltextsuche oder ein Durchsehen sämtlicher Ordner sollte für zentrale Inhalte nicht nötig sein.
 
 Ein geeigneter Prüfauftrag ist:
 
-> Prüfe README und die fünf Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
+> Prüfe README und die sechs Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
 
 ## Sinnvolle Folgeaufträge
 
@@ -44,11 +44,12 @@ Ein geeigneter Prüfauftrag ist:
 
 ## Assets anlegen
 
-Der Generator unterstützt alle 14 Typen des [Asset-Katalogs](asset-katalog.md). Beispiele:
+Der Generator unterstützt alle 15 Typen des [Asset-Katalogs](asset-katalog.md). Beispiele:
 
 ```bash
 python3 scripts/new_asset.py --type location --slug alter-hafen --title "Alter Hafen"
 python3 scripts/new_asset.py --type npc --location alter-hafen --slug mara-veen --title "Mara Veen"
+python3 scripts/new_asset.py --type player-character --slug ira-veen --title "Ira Veen"
 python3 scripts/new_asset.py --type faction --slug graue-laterne --title "Graue Laterne"
 python3 scripts/new_asset.py --type visual --subject npc-mara-veen --slug portrait --title "Porträt von Mara Veen"
 ```
@@ -65,7 +66,7 @@ python3 scripts/new_asset.py --type world --slug <adventure-slug> --title "<titl
 
 ## Assets fachlich ausarbeiten
 
-Das Template legt Abschnitte und Metadaten an, erzeugt aber noch keinen spielbereiten Inhalt. Der [Autoren- und Tischleitfaden für DM-Assets](asset-authoring-guide.md) beschreibt für jeden der 14 Typen:
+Das Template legt Abschnitte und Metadaten an, erzeugt aber noch keinen spielbereiten Inhalt. Der [Autoren- und Tischleitfaden für DM-Assets](asset-authoring-guide.md) beschreibt für jeden der 15 Typen:
 
 - Einsatz und Abgrenzung zu ähnlichen Typen;
 - fachlichen Mindestinhalt und hilfreiche Leitfragen;
@@ -84,6 +85,22 @@ Die kanonische `handout.md` bleibt eine DM-Arbeitsdatei und kann Geheimnisse, Au
 > Erstelle für das Handout `<name>` einen Safety-geprüften Entwurf für `player.md`. Zeige mir den vollständigen Text, aber schreibe oder ersetze die Datei erst nach meiner ausdrücklichen Freigabe.
 
 Nach der Freigabe liegt `player.md` direkt neben `handout.md`. Sie enthält weder Frontmatter noch DM-only Abschnitte oder interne Repository-Links und ist ohne Projektkontext verständlich. Jede spätere Ersetzung erfordert erneut eine ausdrückliche Freigabe. Eine PNG-Ausgabe ist optional und wird nur auf Wunsch aus der bereits freigegebenen Markdown-Fassung abgeleitet. Sie liegt als reguläres Visual mit Briefing, Freigabe und Provenienz unter `visuals/player/`, niemals direkt neben `handout.md`. Der vollständige Ablauf steht in [Spielerfreigabe für Handouts](player-handout-workflow.md).
+
+## Player Characters vorbereiten und freigeben
+
+Ein optionaler `player-character` beschreibt eine vorgefertigte oder teilweise vorbereitete Spielerfigur für diesen One-Shot. Er liegt global unter `40-global/player-characters/`, weil seine kanonische Identität nicht von einem Aufenthaltsort abhängt:
+
+```bash
+python3 scripts/new_asset.py --type player-character --slug ira-veen --title "Ira Veen"
+```
+
+Der Character bleibt regelneutral. Stärken, Grenzen und geeignete Herangehensweisen werden erzählerisch beschrieben; Herkunft, Motivation, Loyalität und Entscheidungen bleiben offen, sofern du sie nicht ausdrücklich vorgibst. Persönliche Hooks sind freiwillige Angebote und dürfen weder die einzige Motivation noch einen notwendigen Plotknoten bilden.
+
+Bitte Codex vor einer Spielerdatei um einen vollständigen Safety-geprüften Entwurf:
+
+> Erstelle für den Player Character `<name>` einen Entwurf für `player.md`. Bewahre alle offenen Entscheidungen, entferne DM-only Verknüpfungen und interne Links und schreibe die Datei erst nach meiner ausdrücklichen Freigabe.
+
+Die optionale `player.md` liegt anschließend neben `player-character.md`; sie ist ohne Repository-Kontext verständlich und für genau die dokumentierte Quellversion freigegeben. Portraits werden als reguläre Visuals mit dem Character als Subject geführt. Der vollständige Ablauf steht in [Spielerfreigabe für Player Characters](player-character-workflow.md).
 
 ## Mit vorhandenen Dateien arbeiten
 
