@@ -5,28 +5,29 @@ description: Create and initialize one complete system-neutral tabletop RPG one-
 
 # Create an adventure
 
-1. Read `AGENTS.md` and the normative `docs/intake-workflow.md`, `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/adventure-structure-guide.md`, `docs/metadaten-und-werte.md`, and `docs/beziehungen-und-speicherorte.md` before creating assets.
-2. Treat the user's free-form world description and plot or conflict description as the required inputs. Accept an optional title and constraints. Ask only the minimum blocking questions defined by the intake workflow.
-3. Confirm that `adventure/` does not exist. Derive a provisional title when needed and a lowercase ASCII kebab-case slug; record an agent-proposed title as an assumption after initialization.
-4. Run:
+1. Always read `AGENTS.md`, `docs/intake-workflow.md`, and `docs/adventure-structure-guide.md`. Do not load every normative guide up front.
+2. Load references when their decisions become active: `docs/asset-katalog.md` before selecting asset types; only the selected type sections of `docs/asset-authoring-guide.md` before drafting those assets; `docs/metadaten-und-werte.md` before assigning frontmatter or qualitative values; and `docs/beziehungen-und-speicherorte.md` before assigning ownership or relations.
+3. Treat the user's free-form world description and plot or conflict description as the required inputs. Accept an optional title and constraints. Ask only the minimum blocking questions defined by the intake workflow.
+4. Confirm that `adventure/` does not exist. Derive a provisional title when needed and a lowercase ASCII kebab-case slug; record an agent-proposed title as an assumption after initialization.
+5. Run:
 
    ```bash
    python3 scripts/init_adventure.py --slug <slug> --title "<title>"
    ```
 
-5. While `adventure/10-world/overview.md` is still the untouched scaffold placeholder, replace it with the canonical World template:
+6. While `adventure/10-world/overview.md` is still the untouched scaffold placeholder, replace it with the canonical World template:
 
    ```bash
    python3 scripts/new_asset.py --type world --slug <slug> --title "<title>" --overwrite
    ```
 
    Do not use `--overwrite` if the file already contains authored material.
-6. Preserve the complete original request unchanged in `00-input/original-request.md`. Extract only explicit world, plot, and constraint statements into their dedicated input files; store later user answers in `00-input/clarifications.md`.
-7. Classify derived work as established fact, clarification, assumption, decision, or open question. Store each category in the file required by the intake workflow and never present a proposed assumption as established canon.
-8. Build the restrained world and plot overviews as states rather than a required scene sequence. Provide a clear entry without prescribing player-character motivation, at least two plausible approaches, independent paths to every necessary conclusion, playable consequences for failure or neglect, and multiple possible resolutions. Create only the plot threads, locations, and assets necessary for the complete one-shot. Do not defer required parts of the central conflict. Use `scripts/new_asset.py` for all catalog types and keep them `draft` until they meet their type-specific Definition of Done.
-9. Assign canonical ownership and add required links. Inspect the navigation files reported by `scripts/new_asset.py`, which maintains applicable indexes and deterministic owner, Parent, or Subject links without duplicates. Complete the five indexes, adventure README, contextual reciprocal links, and change log without repeating existing navigation entries.
-10. Do not generate images during initialization.
-11. Check every item in the intake Definition of Done. Run `python3 scripts/validate_adventure.py` and fix structural errors.
-12. Return the German completion summary in the exact content order defined by the intake workflow: created state, confirmed basis, assumptions, open questions, validation, and prioritized next steps.
+7. Preserve the complete original request unchanged in `00-input/original-request.md`. Extract only explicit world, plot, and constraint statements into their dedicated input files; store later user answers in `00-input/clarifications.md`.
+8. Classify derived work as established fact, clarification, assumption, decision, or open question. Store each category in the file required by the intake workflow and never present a proposed assumption as established canon.
+9. Build the restrained world and plot overviews as states rather than a required scene sequence. Provide a clear entry without prescribing player-character motivation, at least two plausible approaches, independent paths to every necessary conclusion, playable consequences for failure or neglect, and multiple possible resolutions. Create only the plot threads, locations, and assets necessary for the complete one-shot. Do not defer required parts of the central conflict. Use `scripts/new_asset.py` for all catalog types and keep them `draft` until they meet their type-specific Definition of Done.
+10. Assign canonical ownership and add required links. Inspect the navigation files reported by `scripts/new_asset.py`, which maintains applicable indexes and deterministic owner, Parent, or Subject links without duplicates. Complete the five indexes, adventure README, contextual reciprocal links, and change log without repeating existing navigation entries.
+11. Do not generate images during initialization.
+12. Check every item in the intake Definition of Done. Run `python3 scripts/validate_adventure.py` and fix structural errors.
+13. Return the German completion summary in the exact content order defined by the intake workflow: created state, confirmed basis, assumptions, open questions, validation, and prioritized next steps.
 
 Do not introduce system-specific rules, statistics, difficulty values, or named mechanics. Do not create an example adventure when the user has not supplied a world and plot brief. If `adventure/` already exists, stop initialization and offer to continue editing the existing adventure.
