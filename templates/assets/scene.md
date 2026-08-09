@@ -29,8 +29,12 @@ updated: {{DATE}}
 
 ## Discoverable information
 
+<!-- Kanonische Information verlinken und hier nur ihre konkrete Präsentation in dieser Situation beschreiben. -->
+
 ## Possible transitions
 
-## Changes after the scene
+<!-- Mögliche Folgezustände und ihre sichtbaren Änderungen beschreiben, keine vorgeschriebene nächste Scene. -->
 
 ## Related assets
+
+<!-- Nur direkte Links mit szenenspezifischem Kurzkontext; Asset-Inhalte nicht wiederholen. -->
