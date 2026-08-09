@@ -12,6 +12,7 @@ Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Trea
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
 Read `docs/player-handout-workflow.md` before creating or replacing a player-facing Handout file. Never infer approval from asset status or an earlier release.
+Read `docs/player-character-workflow.md` before creating or replacing a Player Character's player-facing file. Preserve open character decisions and never infer approval from asset status or an earlier release.
 Read `docs/bild-workflow.md` before creating or revising a Visual brief or generating or replacing a PNG. Keep the Subject as the identity source and require approval for the exact Visual version before image generation.
 
 ## Start a new adventure
@@ -23,10 +24,10 @@ Read `docs/bild-workflow.md` before creating or revising a Visual brief or gener
 5. Store clarifications, assumptions, decisions, and open questions in their separate canonical files. Never present an unconfirmed assumption as an established fact.
 6. Before creating assets, record a compact one-shot premise in `adventure/20-plot/overview.md`: player-facing starting situation, central conflict, at least two broad forms of player influence, and the resolution boundary. Record target duration, content density, tone, themes, focus, and content boundaries in `adventure/00-input/constraints.md`; use `open` when the user did not specify them.
 7. Define qualitative pacing in `adventure/20-plot/overview.md`: distinguish `core`, `supporting`, and `optional` content in prose; preserve a minimum resolution state; name at least one safe cut and a prepared `late pressure` state change. Give every active Plot Thread its own minimum resolution state, must-preserve information, and safe cuts.
-8. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 14 catalog types. Do not copy asset templates manually.
+8. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 15 catalog types. Do not copy asset templates manually.
 9. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
-10. Turn `adventure/README.md` into the concise table guide and add a short table-use context to every row in the five existing indexes. Link central actors, necessary information, and resolution-relevant assets directly instead of copying their canonical descriptions.
-11. Do not generate images during initialization.
+10. Turn `adventure/README.md` into the concise table guide and add a short table-use context to every row in the six existing indexes. Link central actors, necessary information, and resolution-relevant assets directly instead of copying their canonical descriptions.
+11. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
 
 ## Read before editing
 
@@ -52,12 +53,13 @@ For preparation and table use, navigate from `adventure/README.md` either direct
   - `adventure/30-locations/<location>/information/<information>/information.md`
   - `adventure/30-locations/<location>/encounters/<encounter>/encounter.md`
   - `adventure/30-locations/<location>/handouts/<handout>/handout.md`
-- Store factions and random tables under their catalog paths in `adventure/40-global/`, plot threads under `adventure/20-plot/threads/`, and events under `adventure/10-world/events/`.
+- Store factions, Player Characters, and random tables under their catalog paths in `adventure/40-global/`, plot threads under `adventure/20-plot/threads/`, and events under `adventure/10-world/events/`.
 - Store each visual under `<subject-directory>/visuals/<visual>/visual.md` with its matching prompt file.
 - Represent appearances elsewhere with relative Markdown links. Never duplicate the descriptive body.
 - Keep `primary_location` stable when only `current_location` or a temporary appearance changes. Move the canonical file only when editorial ownership changes permanently.
 - Store relationship targets as stable IDs in frontmatter and add relative Markdown links plus required back-references according to `docs/beziehungen-und-speicherorte.md`.
 - Keep an optional player-facing Handout as `player.md` beside its canonical `handout.md`. It has no frontmatter, internal links, or DM-only content and requires explicit approval before creation or replacement.
+- Keep an optional player-facing Character file as `player.md` beside its canonical `player-character.md`. It has no frontmatter, internal links, or DM-only content, preserves open player decisions, and requires explicit approval before creation or replacement.
 - Represent every Handout PNG as a regular Visual under the Handout's `visuals/<slug>/` directory. Never store `player.png` directly beside `handout.md`.
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
 - Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, retired, or changes its immediate table function. Keep each context cell to one short, action-relevant summary and the final link pointed at the only canonical description.
