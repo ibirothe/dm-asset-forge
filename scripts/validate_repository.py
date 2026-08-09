@@ -65,6 +65,27 @@ def main() -> int:
             if f"## `{asset_type}`" not in authoring_content:
                 errors.append(f"asset authoring guide is missing type: {asset_type}")
 
+    structure_guide = ROOT / "docs" / "adventure-structure-guide.md"
+    required_structure_sections = (
+        "## Einstieg und flexible Spieler-Hooks",
+        "## Bedeutungsvolle Entscheidungen",
+        "## Robuste Informationswege",
+        "## Scheitern, Rückzug und Ignorieren",
+        "## Notwendige Voraussetzungen und optionale Szenen",
+        "## Plot-Threads und Weltdynamik",
+        "## Auflösungen und offene Enden",
+        "## Asset-Rollen im Verlauf",
+        "## Umfang skalieren",
+        "## Definition of Done",
+    )
+    if not structure_guide.is_file():
+        errors.append("missing adventure structure guide: docs/adventure-structure-guide.md")
+    else:
+        structure_content = structure_guide.read_text(encoding="utf-8")
+        for section in required_structure_sections:
+            if section not in structure_content:
+                errors.append(f"adventure structure guide is missing section: {section}")
+
     metadata_spec = ROOT / "docs" / "metadaten-und-werte.md"
     if not metadata_spec.is_file():
         errors.append("missing metadata specification: docs/metadaten-und-werte.md")
@@ -86,6 +107,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
     if "docs/asset-authoring-guide.md" not in agents_content:
         errors.append("AGENTS.md does not reference the asset authoring guide")
+    if "docs/adventure-structure-guide.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the adventure structure guide")
     if "docs/metadaten-und-werte.md" not in agents_content:
         errors.append("AGENTS.md does not reference the metadata specification")
     if "docs/beziehungen-und-speicherorte.md" not in agents_content:
@@ -128,6 +151,8 @@ def main() -> int:
             errors.append(f"skill does not reference the canonical asset catalog: {skill_dir.name}")
         if "docs/asset-authoring-guide.md" not in path.read_text(encoding="utf-8"):
             errors.append(f"skill does not reference the asset authoring guide: {skill_dir.name}")
+        if "docs/adventure-structure-guide.md" not in path.read_text(encoding="utf-8"):
+            errors.append(f"skill does not reference the adventure structure guide: {skill_dir.name}")
         if "docs/metadaten-und-werte.md" not in path.read_text(encoding="utf-8"):
             errors.append(f"skill does not reference the metadata specification: {skill_dir.name}")
         if "docs/beziehungen-und-speicherorte.md" not in path.read_text(encoding="utf-8"):
@@ -166,6 +191,24 @@ def main() -> int:
 
     if not (ROOT / "templates" / "visual-prompt.md").is_file():
         errors.append("missing visual prompt template: templates/visual-prompt.md")
+
+    plot_overview = ROOT / "templates" / "adventure" / "20-plot" / "overview.md"
+    required_plot_sections = (
+        "## Inciting situation",
+        "## Flexible player hooks",
+        "## Decision landscape",
+        "## Information paths",
+        "## Failure, retreat, and neglect",
+        "## Possible outcomes",
+        "## Scope and pacing",
+    )
+    if not plot_overview.is_file():
+        errors.append("missing plot overview template: templates/adventure/20-plot/overview.md")
+    else:
+        plot_content = plot_overview.read_text(encoding="utf-8")
+        for section in required_plot_sections:
+            if section not in plot_content:
+                errors.append(f"plot overview template is missing section: {section}")
 
     if errors:
         for error in errors:

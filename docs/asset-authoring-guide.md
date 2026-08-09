@@ -1,6 +1,6 @@
 # Autoren- und Tischleitfaden für DM-Assets
 
-Dieser Leitfaden beschreibt, wie aus den 14 technischen Asset-Grundgerüsten fachlich belastbare, regelneutrale und am Spieltisch nutzbare Inhalte werden. Der [Asset-Katalog](asset-katalog.md) bestimmt Typ und Speicherort, [Metadaten und Werte](metadaten-und-werte.md) bestimmen Frontmatter und kontrollierte Werte, das [Beziehungsmodell](beziehungen-und-speicherorte.md) bestimmt Ownership und Verweise.
+Dieser Leitfaden beschreibt, wie aus den 14 technischen Asset-Grundgerüsten fachlich belastbare, regelneutrale und am Spieltisch nutzbare Inhalte werden. Der [Asset-Katalog](asset-katalog.md) bestimmt Typ und Speicherort, [Metadaten und Werte](metadaten-und-werte.md) bestimmen Frontmatter und kontrollierte Werte, das [Beziehungsmodell](beziehungen-und-speicherorte.md) bestimmt Ownership und Verweise. Das zustandsbasierte Zusammenspiel von Plot, Scenes, Encounters und Informationen regelt der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md).
 
 ## Inhalt
 
@@ -99,7 +99,7 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Anti-Patterns:** Dialog oder Ergebnis vorschreiben; nur einen gültigen Übergang zulassen; Scene und Location doppelt beschreiben; Konsequenzen aus Spielerentscheidungen ignorieren.
 
-**Definition of Done:** Die Scene kann aus unterschiedlichen Spielerhandlungen weiterlaufen; Teilnehmer handeln aus nachvollziehbaren Absichten; Übergänge und Folgezustände sind vorbereitet.
+**Definition of Done:** Die Scene kann aus unterschiedlichen Spielerhandlungen weiterlaufen; Teilnehmer handeln aus nachvollziehbaren Absichten; Zustandsänderungen und Folgezustände sind vorbereitet. Sie ist kein verpflichtender Knoten einer festen Szenenfolge.
 
 ## `npc`
 
@@ -179,7 +179,7 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Anti-Patterns:** Vage Themen statt konkreter Aussage; genau ein fragiler Fundweg; Hinweis und Schlussfolgerung verwechseln; keine Folge bei Verpassen; Gerücht als bestätigte Wahrheit schreiben.
 
-**Definition of Done:** Aussage und Wahrheitsstatus sind eindeutig; mindestens ein belastbarer Entdeckungspfad ist spielbar; Folgen von Lernen und Verpassen sind bekannt.
+**Definition of Done:** Aussage und Wahrheitsstatus sind eindeutig; für eine notwendige Schlussfolgerung bestehen mindestens zwei unabhängige Entdeckungspfade, andernfalls mindestens ein belastbarer Pfad; Folgen von Lernen und Verpassen sind bekannt.
 
 ## `encounter`
 
@@ -211,7 +211,7 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Anti-Patterns:** Vorgegebene Szenenfolge; nur eine gültige Auflösung; passiver Thread ohne Druck; zentrale Information nur einmal platzieren; Ignorieren folgenlos lassen.
 
-**Definition of Done:** Einstieg, Druck, Wahlmöglichkeiten, Informationsweg und mindestens zwei plausible Folgezustände sind vorhanden; beteiligte Assets sind verlinkt.
+**Definition of Done:** Einstieg, Druck, bedeutungsvolle Wahlmöglichkeiten, robuste Informationswege und mindestens zwei plausible Folgezustände sind vorhanden; der Thread beschreibt nächsten Druck und Folgen des Ignorierens; beteiligte Assets sind verlinkt.
 
 ## `event`
 

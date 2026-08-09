@@ -6,6 +6,7 @@ Use this repository to create and maintain system-neutral tabletop role-playing 
 
 Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
 Read `docs/asset-authoring-guide.md` before drafting or assessing asset content. Use its type-specific minimum content, table-use guidance, anti-patterns, and Definition of Done.
+Read `docs/adventure-structure-guide.md` before designing or assessing entry situations, choices, information paths, consequences, plot progression, or resolutions. Prepare state changes rather than a required scene sequence.
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
@@ -18,7 +19,8 @@ Read `docs/validierung.md` before interpreting validator diagnostics or changing
 4. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
 5. Store clarifications, assumptions, decisions, and open questions in their separate canonical files. Never present an unconfirmed assumption as an established fact.
 6. Create only the locations and assets required for the first playable structure. Use `scripts/new_asset.py`; it supports all 14 catalog types. Do not copy asset templates manually.
-7. Do not generate images during initialization.
+7. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
+8. Do not generate images during initialization.
 
 ## Read before editing
 
@@ -56,6 +58,8 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Express challenge and capability narratively with context, risks, leverage, and consequences.
 - Separate established facts, rumors, secrets, assumptions, and unresolved questions.
 - Give every usable asset a purpose at the table, discoverability, and consequences.
+- Never make required progress depend on one prescribed player action, one fragile clue, or one mandatory Scene. Express prerequisites as reachable states.
+- Treat player-character background, motivation, loyalty, and decisions as open unless the user explicitly establishes them.
 - Keep `status: draft` until the asset meets the shared and type-specific Definition of Done in `docs/asset-authoring-guide.md`; template completeness alone is insufficient.
 - Preserve user-authored facts. Make small, targeted edits and never silently rewrite unrelated files.
 - Use YAML frontmatter from the matching template in `templates/assets/`.
