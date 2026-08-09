@@ -6,6 +6,7 @@ Use this repository to create and maintain system-neutral tabletop role-playing 
 
 Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
+Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 
 ## Start a new adventure
 
@@ -37,6 +38,8 @@ Do not scan every asset by default. Expand the read set only when relationships 
   - `adventure/30-locations/<location>/handouts/<handout>/handout.md`
 - Store factions under `adventure/40-global/factions/` and plot threads under `adventure/20-plot/threads/`.
 - Represent appearances elsewhere with relative Markdown links. Never duplicate the descriptive body.
+- Keep `primary_location` stable when only `current_location` or a temporary appearance changes. Move the canonical file only when editorial ownership changes permanently.
+- Store relationship targets as stable IDs in frontmatter and add relative Markdown links plus required back-references according to `docs/beziehungen-und-speicherorte.md`.
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
 - Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, or retired.
 

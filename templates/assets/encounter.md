@@ -4,6 +4,7 @@ type: encounter
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: local
 primary_location: "{{LOCATION_ID}}"
 participants: []
 related_threads: []

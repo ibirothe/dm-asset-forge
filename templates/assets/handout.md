@@ -4,7 +4,9 @@ type: handout
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: local
 primary_location: "{{LOCATION_ID}}"
+delivery_locations: ["{{LOCATION_ID}}"]
 reveals: []
 accessibility: unknown
 tags: []

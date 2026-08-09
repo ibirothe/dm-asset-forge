@@ -50,13 +50,15 @@ Kurzregel:
 - Visuals liegen bei ihrem kanonischen Subject-Asset;
 - weitere Vorkommen werden ausschließlich verlinkt.
 
+Die vollständigen Regeln für primären, aktuellen und ursprünglichen Ort, Auftritte, Rückverweise und dauerhafte Umzüge stehen in [Beziehungen und ortszentrierte Speicherung v1](beziehungen-und-speicherorte.md).
+
 ## Frontmatter
 
 Jedes Asset beginnt mit YAML-Frontmatter. [Gemeinsame Metadaten und regelneutrale Werte v1](metadaten-und-werte.md) ist die verbindliche Quelle für Pflichtfelder, zulässige typspezifische Schlüssel, kontrollierte Werte und die Unterscheidung zwischen `unknown`, `null`, `[]` und offenen Entscheidungen. Die Dateien unter `templates/assets/` setzen dieses Schema um.
 
 ## Verknüpfungen
 
-Relative Markdown-Links bilden Beziehungen ab. Freitext darf einen anderen Asset-Titel erwähnen, ersetzt aber nicht den Link in den dafür vorgesehenen Abschnitten. Inhalte werden nicht an mehreren Stellen kopiert.
+Strukturierte Metadaten führen Beziehungen über stabile IDs; relative Markdown-Links machen sie navigierbar. Freitext darf einen anderen Asset-Titel erwähnen, ersetzt aber nicht den Link in den dafür vorgesehenen Abschnitten. Inhalte werden nicht an mehreren Stellen kopiert. Richtung und erforderliche Rückverweise folgen dem [Beziehungsmodell](beziehungen-und-speicherorte.md).
 
 ## Regelneutralität
 

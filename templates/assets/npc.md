@@ -4,7 +4,11 @@ type: npc
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: local
 primary_location: "{{LOCATION_ID}}"
+current_location: "{{LOCATION_ID}}"
+origin_location: unknown
+appearance_locations: []
 factions: []
 influence: unknown
 reach: unknown
@@ -25,6 +29,10 @@ updated: {{DATE}}
 ## Voice cues
 
 ## Public role
+
+## Locations and movement
+
+<!-- Primären, aktuellen, ursprünglichen und weitere Auftrittsorte relativ verlinken. -->
 
 ## Motivation
 

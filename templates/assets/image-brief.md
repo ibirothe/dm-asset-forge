@@ -4,6 +4,7 @@ type: image-brief
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: subject-owned
 subject_asset: unknown
 output_file: "{{SLUG}}.png"
 tags: []
