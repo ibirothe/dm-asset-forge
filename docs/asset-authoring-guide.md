@@ -1,6 +1,6 @@
 # Autoren- und Tischleitfaden für DM-Assets
 
-Dieser Leitfaden beschreibt, wie aus den 14 technischen Asset-Grundgerüsten fachlich belastbare, regelneutrale und am Spieltisch nutzbare Inhalte werden. Der [Asset-Katalog](asset-katalog.md) bestimmt Typ und Speicherort, [Metadaten und Werte](metadaten-und-werte.md) bestimmen Frontmatter und kontrollierte Werte, das [Beziehungsmodell](beziehungen-und-speicherorte.md) bestimmt Ownership und Verweise. Das zustandsbasierte Zusammenspiel von Plot, Scenes, Encounters und Informationen regelt der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md).
+Dieser Leitfaden beschreibt, wie aus den 15 technischen Asset-Grundgerüsten fachlich belastbare, regelneutrale und am Spieltisch nutzbare Inhalte werden. Der [Asset-Katalog](asset-katalog.md) bestimmt Typ und Speicherort, [Metadaten und Werte](metadaten-und-werte.md) bestimmen Frontmatter und kontrollierte Werte, das [Beziehungsmodell](beziehungen-und-speicherorte.md) bestimmt Ownership und Verweise. Das zustandsbasierte Zusammenspiel von Plot, Scenes, Encounters und Informationen regelt der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md).
 
 ## Inhalt
 
@@ -9,6 +9,7 @@ Dieser Leitfaden beschreibt, wie aus den 14 technischen Asset-Grundgerüsten fac
 - [`location`](#location)
 - [`scene`](#scene)
 - [`npc`](#npc)
+- [`player-character`](#player-character)
 - [`creature`](#creature)
 - [`faction`](#faction)
 - [`object`](#object)
@@ -128,6 +129,22 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 **Anti-Patterns:** Biografie ohne Spielbezug; Motivation mit Plotfunktion verwechseln; Wissen nicht nach Wahrheit trennen; starres Verhalten unabhängig von Spielerhandlungen.
 
 **Definition of Done:** Der NPC ist wiedererkennbar, kann eigenständig reagieren und besitzt mindestens einen konkreten Bezug zu Ort, Information, Fraktion oder Plot.
+
+## `player-character`
+
+**Einsatz:** Eine optionale vorgefertigte oder teilweise vorbereitete Spielerfigur für den einen One-Shot bereitstellen. Vom DM geführte Figuren sind `npc`; ein Regelsystem-Charakterbogen gehört nicht in dieses Asset.
+
+**Mindestinhalt:** One-Shot-Rolle, player-facing Konzept, Ausgangslage, freiwillige persönliche Hooks, etablierter Hintergrund, offene Entscheidungen, narrative Stärken und Herangehensweisen, Grenzen und Komplikationen, freigegebenes Startwissen, Beziehungen, DM-only Verknüpfungen und Player-Release-Status.
+
+**Leitfragen:** Was macht die Figur sofort spielbar? Welche unterschiedlichen Handlungsweisen unterstützt sie? Welche Verbindungen laden zur Beteiligung ein, ohne Motivation oder Loyalität vorzuschreiben? Was darf der Spieler zu Beginn wissen, und welche Entscheidungen bleiben ausdrücklich bei ihm?
+
+**Am Spieltisch:** Konzept, unmittelbare Rolle, zwei oder mehr geeignete Herangehensweisen, relevante Grenzen, Startwissen und freiwillige Hooks müssen schnell erfassbar sein. Offene Entscheidungen dürfen nicht wie festgelegter Kanon klingen.
+
+**Sichtbarkeit und Visual:** Die freigegebene Spielerfassung entsteht ausschließlich nach [Spielerfreigabe für Player Characters](player-character-workflow.md). DM-only Verknüpfungen, verdeckte Wahrheiten und mögliche Konsequenzen bleiben in `player-character.md`. Ein Portrait ist optional und folgt als reguläres Subject-Visual dem Bild-Workflow.
+
+**Anti-Patterns:** Motivation oder Reaktion vorschreiben; eine Figur zur einzigen Quelle notwendigen Wissens machen; Systemeigenschaften oder Zahlenwerte verstecken; `npc` und `player-character` vermischen; interne Links oder Spoiler in `player.md` übernehmen.
+
+**Definition of Done:** Die Figur ist regelneutral und sofort spielbar; Hooks bieten Wahl statt Zwang; etablierter Hintergrund und offene Entscheidungen sind getrennt; notwendiger Fortschritt hängt nicht von einer vorgeschriebenen Charakterhandlung ab; Startwissen und Beziehungen sind kanonisch verlinkt; eine vorhandene `player.md` ist für die aktuelle Version ausdrücklich freigegeben.
 
 ## `creature`
 
