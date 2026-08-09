@@ -66,6 +66,24 @@ HEADING = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
 LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 IMAGE_LINK = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
+HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
+PLAYER_RELEASE_STATUS = re.compile(
+    r"^- Status:\s*(not-approved|approved)\s*$", re.MULTILINE
+)
+PLAYER_RELEASE_VERSION = re.compile(
+    r"^- Approved source version:\s*([^\s]+)\s*$", re.MULTILINE
+)
+PLAYER_RELEASE_APPROVAL = re.compile(r"^- Approval:\s*(.+?)\s*$", re.MULTILINE)
+PLAYER_FORBIDDEN_HEADINGS = frozenset(
+    {
+        "Player-facing content",
+        "Delivery",
+        "DM-only context",
+        "Reveals and consequences",
+        "Player release",
+        "Rendered output",
+    }
+)
 SYSTEM_TERMS = re.compile(
     r"\b(?:armor class|hit points?|challenge rating|difficulty class|spell slots?|saving throw|"
     r"initiative modifier|trefferpunkte|rüstungsklasse|schwierigkeitsgrad)\b",
@@ -169,7 +187,7 @@ ASSET_SPECS = {
     "handout": spec(
         "hand-", "local", "handout.md", "handouts",
         ("primary_location", "delivery_locations", "reveals", "accessibility"), ("primary_location",),
-        ("Player-facing content", "Delivery", "DM-only context", "Reveals and consequences", "Rendered output"),
+        ("Player-facing content", "Delivery", "DM-only context", "Reveals and consequences", "Player release", "Rendered output"),
     ),
     "visual": spec(
         "vis-", "subject-owned", "visual.md", "subject",
@@ -444,6 +462,141 @@ def validate_asset_record(
             prompt = record.path.parent / f"{Path(output_file).stem}.prompt.md"
             if not prompt.is_file():
                 errors.append(diagnostic(rel, "VISUAL_PROMPT", f"matching prompt is missing at {relative(prompt, root)}.", "Create the prompt companion from templates/visual-prompt.md."))
+    elif record.asset_type == "handout":
+        validate_handout_release(root, record, errors)
+
+
+def validate_handout_release(
+    root: Path,
+    record: AssetRecord,
+    errors: list[str],
+) -> None:
+    rel = relative(record.path, root)
+    source = record.path.read_text(encoding="utf-8")
+    player = record.path.parent / "player.md"
+    status_match = PLAYER_RELEASE_STATUS.search(source)
+    if status_match is None:
+        errors.append(
+            diagnostic(
+                rel,
+                "PLAYER_RELEASE_STATUS",
+                "Player release has no valid status.",
+                "Use '- Status: not-approved' or '- Status: approved'.",
+            )
+        )
+        return
+
+    status = status_match.group(1)
+    if status == "not-approved":
+        if player.is_file():
+            errors.append(
+                diagnostic(
+                    relative(player, root),
+                    "PLAYER_RELEASE_BLOCKED",
+                    "player.md exists although the canonical Handout is not approved.",
+                    "Remove the player file or obtain explicit approval and document the current source version.",
+                )
+            )
+        else:
+            return
+
+    if not player.is_file():
+        errors.append(
+            diagnostic(
+                rel,
+                "PLAYER_FILE_MISSING",
+                "Player release is approved but player.md is missing.",
+                "Create the approved neighboring player.md or reset the release to not-approved.",
+            )
+        )
+        return
+
+    if player.resolve() not in resolved_markdown_links(record.path):
+        errors.append(
+            diagnostic(
+                rel,
+                "PLAYER_SOURCE_LINK",
+                "approved player.md is not linked from its canonical Handout.",
+                "Set '- Player file: [player.md](player.md)' in Player release.",
+            )
+        )
+
+    approved_version = PLAYER_RELEASE_VERSION.search(source)
+    current_version = scalar(record.metadata.get("version", ""))
+    if approved_version is None or approved_version.group(1) != current_version:
+        errors.append(
+            diagnostic(
+                rel,
+                "PLAYER_SOURCE_VERSION",
+                "approved source version does not match the current Handout version.",
+                f"Obtain explicit approval for version {current_version} before replacing player.md.",
+            )
+        )
+
+    approval = PLAYER_RELEASE_APPROVAL.search(source)
+    if approval is None or approval.group(1).strip().lower() in {
+        "none",
+        "pending",
+        "not-approved",
+    }:
+        errors.append(
+            diagnostic(
+                rel,
+                "PLAYER_APPROVAL_RECORD",
+                "approved release has no concrete approval record.",
+                "Record the user's explicit approval for this exact source version.",
+            )
+        )
+
+    player_text = player.read_text(encoding="utf-8")
+    player_rel = relative(player, root)
+    if FRONTMATTER.match(player_text):
+        errors.append(
+            diagnostic(
+                player_rel,
+                "PLAYER_FRONTMATTER",
+                "player.md contains YAML frontmatter.",
+                "Remove all metadata from the player-facing file.",
+            )
+        )
+    if HTML_COMMENT.search(player_text):
+        errors.append(
+            diagnostic(
+                player_rel,
+                "PLAYER_COMMENT",
+                "player.md contains an internal Markdown comment.",
+                "Remove comments and working notes from the player-facing file.",
+            )
+        )
+    if not re.search(r"^#\s+\S", player_text, re.MULTILINE):
+        errors.append(
+            diagnostic(
+                player_rel,
+                "PLAYER_TITLE",
+                "player.md has no readable level-one title.",
+                "Add one standalone '# Title' heading.",
+            )
+        )
+    forbidden = PLAYER_FORBIDDEN_HEADINGS.intersection(HEADING.findall(player_text))
+    for heading in sorted(forbidden):
+        errors.append(
+            diagnostic(
+                player_rel,
+                "PLAYER_DM_SECTION",
+                f"player.md contains internal section '## {heading}'.",
+                "Remove DM-only and workflow sections from the player-facing file.",
+            )
+        )
+    for raw_target in LINK.findall(player_text) + IMAGE_LINK.findall(player_text):
+        if resolve_link(player, raw_target) is not None:
+            errors.append(
+                diagnostic(
+                    player_rel,
+                    "PLAYER_INTERNAL_LINK",
+                    f"player.md contains repository-relative link {raw_target!r}.",
+                    "Remove internal links or express the required player-facing context directly.",
+                )
+            )
 
 
 def validate_relations(
