@@ -17,6 +17,7 @@ Die vollständige Anleitung steht in [docs/benutzerhandbuch.md](docs/benutzerhan
 Der verbindliche v1-Typenkatalog steht in [docs/asset-katalog.md](docs/asset-katalog.md).
 Die fachlichen Mindestinhalte und Definition of Done jedes Typs stehen in [docs/asset-authoring-guide.md](docs/asset-authoring-guide.md).
 Der zustandsbasierte Abenteueraufbau mit echten Entscheidungen und robusten Informationswegen steht in [docs/adventure-structure-guide.md](docs/adventure-structure-guide.md).
+Die getrennte fachliche Prüfung von Kontinuität, Informationswegen und Spielerwirksamkeit steht in [docs/adventure-audit-guide.md](docs/adventure-audit-guide.md).
 Das gemeinsame Metadatenschema und alle regelneutralen Werteskalen stehen in [docs/metadaten-und-werte.md](docs/metadaten-und-werte.md).
 Das verbindliche Ownership- und Beziehungsmodell steht in [docs/beziehungen-und-speicherorte.md](docs/beziehungen-und-speicherorte.md).
 Der geführte Erstlauf von freiem Welt- und Plottext zum strukturierten Abenteuer steht in [docs/intake-workflow.md](docs/intake-workflow.md).

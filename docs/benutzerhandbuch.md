@@ -100,7 +100,9 @@ Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Code
 
 ## Vor einer Spielrunde
 
-Beauftrage Codex mit einer Konsistenzprüfung. Die Prüfung kontrolliert unter anderem:
+Beauftrage Codex mit einer Konsistenzprüfung. Der technische Validator und der fachliche Audit werden getrennt berichtet. Der [Fachliche Audit-Leitfaden](adventure-audit-guide.md) verlangt für jedes Finding Begründung, betroffene Dateien, Auswirkung und kleinste sinnvolle Korrekturrichtung. Ohne ausdrücklichen Fix-Auftrag verändert Codex keine Inhalte.
+
+Die Prüfung kontrolliert unter anderem:
 
 - fehlende Pflichtverzeichnisse und Metadaten
 - doppelte IDs
@@ -108,7 +110,9 @@ Beauftrage Codex mit einer Konsistenzprüfung. Die Prüfung kontrolliert unter a
 - verbliebene Template-Platzhalter
 - systemgebundene Begriffe
 - Hinweise ohne Fundort oder Konsequenz
-- Plotfäden ohne Einstieg, Fortschritt oder möglichen Abschluss
+- notwendige Schlussfolgerungen mit nur einem fragilen Entdeckungspfad
+- jeden aktiven Plotfaden auf Einstieg, Druck, Wahl, Ignorieren und mögliche Auflösung
+- Widersprüche bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen
 
 Das technische Prüfsystem kann auch direkt ausgeführt werden:
 
