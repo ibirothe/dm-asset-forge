@@ -16,6 +16,7 @@ Dieser Leitfaden beschreibt, wie Codex einen regelneutralen, in sich abgeschloss
 - [Auflösungen und offene Enden](#auflösungen-und-offene-enden)
 - [Asset-Rollen im Verlauf](#asset-rollen-im-verlauf)
 - [One-Shot-Umfang begrenzen](#one-shot-umfang-begrenzen)
+- [Pacing und sichere Kürzbarkeit](#pacing-und-sichere-kürzbarkeit)
 - [Anti-Patterns](#anti-patterns)
 - [Definition of Done](#definition-of-done)
 
@@ -170,6 +171,39 @@ Der Umfang bleibt auf einen vollständig spielbaren One-Shot begrenzt. Entscheid
 
 Wenn der gewünschte Inhalt diesen Rahmen übersteigt, verdichtet Codex Akteure, Orte und Nebenfragen. Verpflichtende Entwicklungen werden nicht auf später vertagt. Die genaue Zahl der Scenes oder Assets bleibt frei.
 
+## Pacing und sichere Kürzbarkeit
+
+Pacing wird qualitativ gegen `Target duration` und `Content density` aus `00-input/constraints.md` geprüft. Es gibt keine automatische Laufzeitberechnung und keine vorgeschriebene Szenenfolge. Sind beide Angaben `open`, optimiert Codex weiterhin auf einen kompakten One-Shot, behauptet aber keine konkrete Spielzeit.
+
+Die folgenden Begriffe sind redaktionelle Labels in Prosa und keine Frontmatter- oder Validator-Werte:
+
+| Label | Bedeutung |
+|---|---|
+| `core` | Ohne diesen Zustand, Akteur, Informationsweg oder Konfliktbestandteil ist der zentrale Konflikt nicht verständlich oder auflösbar. |
+| `supporting` | Verstärkt Entscheidungstiefe, Atmosphäre, Kontext oder alternative Hebel und kann bei Zeitdruck verdichtet oder zusammengeführt werden. |
+| `optional` | Kann vollständig entfallen, ohne notwendige Schlussfolgerungen, Spieler-Einfluss oder erreichbare Auflösungen zu verlieren. |
+
+Der **minimale Auflösungszustand** beschreibt die kleinste vorbereitete Menge aus erreichbaren Zuständen, notwendigen Schlussfolgerungen und handlungsfähigen Akteuren, mit der die zentrale dramatische Frage noch fair beantwortet werden kann. Er ist kein vorgeschriebener Weg: Spieler dürfen ihn über unterschiedliche Entscheidungen, Orte und Methoden erreichen.
+
+Eine **sichere Kürzung** benennt konkrete `supporting`- oder `optional`-Inhalte und ihre Auswirkung. Nach jeder sicheren Kürzung müssen weiterhin gelten:
+
+- der zentrale Konflikt und mindestens zwei grundsätzlich unterschiedliche Formen der Spieler-Einflussnahme bleiben zugänglich;
+- jede notwendige Schlussfolgerung behält mindestens zwei unabhängige Entdeckungspfade oder einen vorbereiteten belastbaren Umweg;
+- keine einzelne Scene, kein einzelner NPC und kein einzelner Hinweis wird zum Pflichtknoten;
+- mindestens zwei plausible Auflösungen oder eine Auflösung plus bewusst offener Endzustand bleiben erreichbar;
+- bestehende Entscheidungen und Konsequenzen behalten ihre Bedeutung.
+
+**Komprimieren** verkürzt die Darstellung, nicht den Kanon. Codex darf etwa `supporting` Informationen gemeinsam präsentieren, einen Übergang zusammenfassen oder optionale Begegnungen auslassen. Es erfindet dabei keine neue Wahrheit, überspringt keine notwendige Entscheidung und erklärt kein ungespieltes Ergebnis zum Fakt.
+
+`Late pressure` ist ein vorbereiteter Zustandswechsel für fortgeschrittenen Zeitdruck: Ein bereits aktiver Akteur handelt, eine Gefahr wird sichtbar oder ein Zugang verändert sich. Der Wechsel darf verbleibende Ansatzpunkte bündeln oder den Preis erhöhen, aber niemals eine Spielerentscheidung treffen, eine Auflösung festlegen oder die Gruppe in eine Pflicht-Scene versetzen.
+
+Jeder aktive Plot-Thread nennt in seinen bestehenden Abschnitten:
+
+- unter `Possible resolutions` den eigenen `Minimum resolution state`;
+- unter `Information path` die Informationen, die nach Kürzungen erhalten bleiben müssen;
+- unter `Involved assets` `core`, `supporting`, `optional` und `Safe cuts`;
+- unter `Pressures and progression` einen passenden `Late pressure`-Zustandswechsel.
+
 ## Anti-Patterns
 
 - **Feste Szenenkette:** Fortschritt verlangt eine vorgeschriebene Reihenfolge.
@@ -181,6 +215,8 @@ Wenn der gewünschte Inhalt diesen Rahmen übersteigt, verdichtet Codex Akteure,
 - **Verzweigungsinventar:** Jede denkbare Handlung wird als eigener Plotast vorausgeschrieben.
 - **Vorgeschriebene Spielerfigur:** Herkunft, Motivation, Moral oder Entscheidung wird ohne Nutzerfestlegung behauptet.
 - **Pflicht-Scene als Voraussetzung:** Der Besuch einer konkreten Scene wird mit dem benötigten Zustand verwechselt.
+- **Kürzen durch Railroading:** Zeitdruck wird gelöst, indem eine Entscheidung, Methode oder nächste Scene vorgeschrieben wird.
+- **Falsche sichere Kürzung:** Als optional markierter Inhalt entfernt einen notwendigen Informationsweg, Hebel oder erreichbaren Endzustand.
 
 ## Definition of Done
 
@@ -198,5 +234,8 @@ Eine vollständige One-Shot-Struktur ist fachlich belastbar, wenn:
 - [ ] `plot-thread`, `scene`, `encounter`, `information` und `event` ihre unterschiedlichen Rollen erfüllen und sinnvoll verlinkt sind;
 - [ ] mindestens zwei plausible Auflösungen oder eine Auflösung plus bewusst offener Endzustand vorgesehen sind;
 - [ ] Einstieg, zentraler Konflikt und mögliche Auflösungen innerhalb des One-Shots vollständig spielbar sind;
+- [ ] ein minimaler Auflösungszustand sowie `core`, `supporting` und `optional` Inhalte nachvollziehbar beschrieben sind;
+- [ ] mindestens eine sichere Kürzung notwendige Informationswege, Spieler-Einfluss und erreichbare Auflösungen erhält;
+- [ ] `late pressure` aus etablierten Akteuren oder Zuständen entsteht und keine Spielerentscheidung erzwingt;
 - [ ] der ausgearbeitete Umfang keine unnötige Verzweigungsfülle erzeugt;
 - [ ] alle Inhalte regelneutral bleiben.
