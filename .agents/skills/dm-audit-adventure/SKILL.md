@@ -5,14 +5,14 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
 
 # Audit an adventure
 
-1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/metadaten-und-werte.md`, and `docs/beziehungen-und-speicherorte.md`, `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
+1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md`, then `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
 2. Run:
 
    ```bash
    python3 scripts/validate_adventure.py
    ```
 
-3. Use validator results to select a narrow read set. Inspect implicated locations, assets, and their direct links.
+3. Treat validator errors as blocking structural findings. Review warnings in context before classifying them; a warning is not automatically a defect. Use rule codes and paths to select a narrow read set. Inspect implicated locations, assets, and their direct links.
 4. Check narrative quality separately from structural validation:
    - every asset uses the catalog type and canonical path that match its purpose;
    - every asset uses only defined metadata keys, controlled values, and missing-value semantics;

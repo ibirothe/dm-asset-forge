@@ -95,3 +95,5 @@ Das technische Prüfsystem kann auch direkt ausgeführt werden:
 ```bash
 python3 scripts/validate_adventure.py
 ```
+
+Fehler enthalten den betroffenen Pfad, einen stabilen technischen Regelcode und einen konkreten Korrekturhinweis. Fehler blockieren den erfolgreichen Abschluss; Warnungen markieren prüfbedürftige, aber nicht zwingend falsche Inhalte. Der Validator verändert keine Abenteuerdateien und nimmt keine automatischen Reparaturen vor. Die vollständige Referenz steht in [Validierung](validierung.md).
