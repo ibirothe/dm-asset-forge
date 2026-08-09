@@ -75,12 +75,31 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Do not claim an image exists until the PNG file exists.
 - Do not generate or replace images unless the user requests it or approves a proposed image pass.
 
-## Finish adventure work
+## Finish work
+
+Choose exactly one completion path according to the work performed.
+
+### Template or repository work
+
+1. Do not create or update adventure indexes, adventure meta files, or an `adventure/` workspace solely to validate repository changes.
+2. Run `python3 scripts/validate_repository.py`.
+3. Run `python3 -m unittest discover -s tests -v`.
+4. Run any focused check required by a changed script, template, or repository-local skill.
+5. Report changed repository files and every validation result.
+
+### Adventure content changes
 
 1. Resolve or record affected links and contradictions.
-2. Update indexes and `adventure/90-meta/change-log.md` when adventure content changed.
+2. Update the relevant indexes and `adventure/90-meta/change-log.md`.
 3. Run `python3 scripts/validate_adventure.py`.
 4. Treat errors as blocking and warnings as findings that require contextual review. Do not suppress or automatically repair a diagnostic without checking its rule and target file.
-5. Report created or changed files, unresolved questions, and validation results.
+5. Report created or changed adventure files, unresolved questions, and validation results.
+
+### Read-only audit
+
+1. Do not modify adventure content, indexes, meta files, statuses, or repository guidance without an explicit fix request.
+2. If `adventure/` exists, run `python3 scripts/validate_adventure.py` as the separate technical basis. If it does not exist, report that the adventure validation is not applicable; do not initialize an adventure for the audit.
+3. Apply `docs/adventure-audit-guide.md` and keep technical diagnostics separate from narrative findings.
+4. Report the inspected scope, validation availability, findings, and unresolved questions. State explicitly that no files were changed.
 
 Do not create example adventures in this template repository.
