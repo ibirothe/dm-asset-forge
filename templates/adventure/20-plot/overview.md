@@ -28,9 +28,9 @@
 
 ## Possible outcomes
 
-## Scope and pacing
+## One-shot scope and pacing
 
-<!-- State the near play horizon and defer unnecessary branches. -->
+<!-- Keep the central conflict and its possible resolutions fully playable in this one-shot. Remove unnecessary branches instead of deferring required material. -->
 
 ## Active threads
 

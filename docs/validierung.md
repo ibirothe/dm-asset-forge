@@ -33,8 +33,6 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Bilder | ausschließlich PNG-Dateien und PNG-Verweise; passender Prompt für jedes Visual |
 | Hygiene | verbliebene Template-Platzhalter und mögliche systemspezifische Begriffe |
 
-Relative Links werden in allen Markdown-Dateien unter `adventure/` geprüft, damit auch fehlende Quellen einer Session-Arbeitsmappe unter `60-sessions/` als `LINK_BROKEN` sichtbar werden. Ob eine vorhandene Quelle seit der Vorbereitung inhaltlich geändert wurde, prüft der fachliche Audit über das Quellenregister.
-
 Die normativen Grundlagen bleiben der [Asset-Katalog](asset-katalog.md), die [Metadaten und Werte](metadaten-und-werte.md) sowie das [Beziehungsmodell](beziehungen-und-speicherorte.md). Die anschließende fachliche Prüfung und ihr getrenntes Berichtsformat definiert der [Fachliche Audit-Leitfaden](adventure-audit-guide.md).
 
 ## Ausgabe verstehen

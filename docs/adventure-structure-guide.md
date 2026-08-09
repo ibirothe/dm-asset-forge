@@ -1,6 +1,6 @@
 # Leitfaden für Spielerentscheidungen und Abenteuerstruktur
 
-Dieser Leitfaden beschreibt, wie Codex regelneutrale Abenteuer als veränderbare Situationen statt als feste Szenenfolge vorbereitet. Der [Autoren- und Tischleitfaden](asset-authoring-guide.md) definiert die Qualität einzelner Assets; hier geht es um ihr Zusammenspiel im Abenteuerverlauf.
+Dieser Leitfaden beschreibt, wie Codex einen regelneutralen, in sich abgeschlossenen One-Shot als veränderbare Situation statt als feste Szenenfolge vorbereitet. Der [Autoren- und Tischleitfaden](asset-authoring-guide.md) definiert die Qualität einzelner Assets; hier geht es um ihr Zusammenspiel im Abenteuerverlauf.
 
 ## Inhalt
 
@@ -15,7 +15,7 @@ Dieser Leitfaden beschreibt, wie Codex regelneutrale Abenteuer als veränderbare
 - [Plot-Threads und Weltdynamik](#plot-threads-und-weltdynamik)
 - [Auflösungen und offene Enden](#auflösungen-und-offene-enden)
 - [Asset-Rollen im Verlauf](#asset-rollen-im-verlauf)
-- [Umfang skalieren](#umfang-skalieren)
+- [One-Shot-Umfang begrenzen](#one-shot-umfang-begrenzen)
 - [Anti-Patterns](#anti-patterns)
 - [Definition of Done](#definition-of-done)
 
@@ -156,17 +156,19 @@ Offene Enden sind bewusst, wenn klar ist:
 
 Kein einzelnes Asset trägt allein den gesamten Verlauf. Beziehungen zeigen, welche Assets einen Zustand erklären, verändern oder sichtbar machen.
 
-## Umfang skalieren
+## One-Shot-Umfang begrenzen
 
-Der Umfang wird über die Zahl gleichzeitig relevanter Fragen, Akteure und Folgezustände skaliert, nicht durch künstliche Szenenanzahl.
+Der Umfang bleibt auf einen vollständig spielbaren One-Shot begrenzt. Entscheidend ist nicht eine künstliche Szenenanzahl, sondern ob Einstieg, zentraler Konflikt, notwendige Informationen, bedeutsame Entscheidungen und mögliche Auflösungen gemeinsam überschaubar bleiben.
 
-| Format | Fachlicher Fokus |
-|---|---|
-| One-Shot | Ein zentraler Konflikt, wenige aktive Akteure, ein klarer Einstieg, kompakte Informationswege und unmittelbar sichtbare Konsequenzen. Offene Nebenfragen nur, wenn sie Atmosphäre oder Abschluss stärken. |
-| Kurzes Abenteuer | Ein zentraler Konflikt mit wenigen verbundenen Threads, mehreren Locations oder Wendepunkten und mindestens einer langfristig sichtbaren Konsequenz. |
-| Längeres Abenteuer | Mehrere miteinander reagierende Threads, autonome Akteure und längerfristige Zustandsänderungen. Nur den nahen Spielhorizont detaillieren; spätere Entwicklungen als Druck und Möglichkeiten führen. |
+- ein zentraler Konflikt mit klarer dramatischer Frage;
+- wenige aktive Akteure, Locations und Plot-Threads;
+- ein unmittelbar verständlicher Einstieg mit mehreren Ansatzpunkten;
+- kompakte, robuste Informationswege;
+- spielbare Folgen für Erfolg, Scheitern, Rückzug und Ignorieren;
+- mindestens zwei plausible Endzustände oder ein Endzustand mit bewusst verbleibender Ambiguität;
+- offene Nebenfragen nur, wenn sie Atmosphäre oder Abschluss stärken.
 
-Diese Kategorien schreiben keine Sitzungs-, Scene- oder Asset-Zahl vor. Wenn der Umfang unklar ist, beginnt Codex mit dem kleinsten spielbaren Kern und dokumentiert sinnvolle Erweiterungen als nächste Schritte.
+Wenn der gewünschte Inhalt diesen Rahmen übersteigt, verdichtet Codex Akteure, Orte und Nebenfragen. Verpflichtende Entwicklungen werden nicht auf später vertagt. Die genaue Zahl der Scenes oder Assets bleibt frei.
 
 ## Anti-Patterns
 
@@ -182,7 +184,7 @@ Diese Kategorien schreiben keine Sitzungs-, Scene- oder Asset-Zahl vor. Wenn der
 
 ## Definition of Done
 
-Eine erste spielbare Abenteuerstruktur ist fachlich belastbar, wenn:
+Eine vollständige One-Shot-Struktur ist fachlich belastbar, wenn:
 
 - [ ] der Einstieg Situation, Druck und mindestens zwei Ansatzpunkte verständlich macht, ohne eine Handlung zu erzwingen;
 - [ ] Spieler-Hooks keine unbestätigte Herkunft, Motivation, Loyalität oder Entscheidung vorgeben;
@@ -195,5 +197,6 @@ Eine erste spielbare Abenteuerstruktur ist fachlich belastbar, wenn:
 - [ ] jeder aktive Plot-Thread nächsten Druck, beteiligte Akteure und Folgen des Ignorierens besitzt;
 - [ ] `plot-thread`, `scene`, `encounter`, `information` und `event` ihre unterschiedlichen Rollen erfüllen und sinnvoll verlinkt sind;
 - [ ] mindestens zwei plausible Auflösungen oder eine Auflösung plus bewusst offener Endzustand vorgesehen sind;
-- [ ] der ausgearbeitete Umfang dem nahen Spielhorizont entspricht und keine unnötige Verzweigungsfülle erzeugt;
+- [ ] Einstieg, zentraler Konflikt und mögliche Auflösungen innerhalb des One-Shots vollständig spielbar sind;
+- [ ] der ausgearbeitete Umfang keine unnötige Verzweigungsfülle erzeugt;
 - [ ] alle Inhalte regelneutral bleiben.

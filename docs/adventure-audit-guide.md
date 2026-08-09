@@ -1,6 +1,6 @@
 # Fachlicher Audit-Leitfaden
 
-Dieser Leitfaden definiert die read-only Prüfung eines bestehenden Abenteuers auf Kontinuität, robuste Informationswege, wirksame Spielerentscheidungen und Tischreife. Die technische Prüfung durch [`scripts/validate_adventure.py`](validierung.md) bleibt davon getrennt. Der [Autoren- und Tischleitfaden](asset-authoring-guide.md) liefert die Qualitätskriterien einzelner Assets, der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md) die Kriterien ihres Zusammenspiels.
+Dieser Leitfaden definiert die read-only Prüfung eines vollständigen One-Shots auf Kontinuität, robuste Informationswege, wirksame Spielerentscheidungen, erreichbare Auflösungen und Tischreife. Die technische Prüfung durch [`scripts/validate_adventure.py`](validierung.md) bleibt davon getrennt. Der [Autoren- und Tischleitfaden](asset-authoring-guide.md) liefert die Qualitätskriterien einzelner Assets, der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md) die Kriterien ihres Zusammenspiels.
 
 ## Inhalt
 
@@ -11,7 +11,6 @@ Dieser Leitfaden definiert die read-only Prüfung eines bestehenden Abenteuers a
 - [Informationswege](#informationswege)
 - [Plot-Threads und Spielerwirksamkeit](#plot-threads-und-spielerwirksamkeit)
 - [Tischreife](#tischreife)
-- [Session-Arbeitsmappen prüfen](#session-arbeitsmappen-prüfen)
 - [Schweregrade](#schweregrade)
 - [Format eines Findings](#format-eines-findings)
 - [Audit-Bericht](#audit-bericht)
@@ -20,7 +19,7 @@ Dieser Leitfaden definiert die read-only Prüfung eines bestehenden Abenteuers a
 
 ## Audit-Auftrag und Grenzen
 
-Vor der Prüfung werden Umfang und Bezugspunkt benannt: vollständiges Abenteuer, nächste Session, bestimmter Plot-Thread, Ort oder ausgewählte Assets. Fehlt eine Eingrenzung, gilt das aktive Abenteuer als Scope; gelesen wird dennoch schrittweise über Übersicht, Indizes und betroffene Verweise.
+Vor der Prüfung werden Umfang und Bezugspunkt benannt: vollständiger One-Shot, bestimmter Plot-Thread, Ort oder ausgewählte Assets. Fehlt eine Eingrenzung, gilt der vollständige One-Shot als Scope; gelesen wird dennoch schrittweise über Übersicht, Indizes und betroffene Verweise.
 
 Ein Audit:
 
@@ -33,16 +32,17 @@ Ein Audit:
 
 ## Prüfreihenfolge
 
-1. **Scope festhalten:** Audit-Ziel, betrachteten Spielhorizont und ausdrücklich ausgeschlossene Bereiche nennen.
+1. **Scope festhalten:** Audit-Ziel und ausdrücklich ausgeschlossene Bereiche nennen.
 2. **Orientierung lesen:** `adventure/README.md`, alle fünf Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
 3. **Technische Basis prüfen:** Validator ausführen und dessen Ergebnis unverändert als eigenen Berichtsteil behandeln.
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
 6. **Informationswege prüfen:** Notwendigkeit, konkrete Präsentation, unabhängige Entdeckungspfade und Folgen des Verpassens bewerten.
 7. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
-8. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
-9. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
-10. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
+8. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
+9. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
+10. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
+11. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
 
 ## Technische Basisprüfung
 
@@ -82,7 +82,7 @@ Fehlt eine entscheidende Festlegung, ist eine offene Frage oft richtiger als die
 
 ## Informationswege
 
-Zuerst werden notwendige Schlussfolgerungen identifiziert. Notwendig ist eine Schlussfolgerung, wenn ohne sie der zentrale Konflikt oder ein für den betrachteten Spielhorizont erforderlicher Zustandswechsel nicht verständlich oder erreichbar bleibt.
+Zuerst werden notwendige Schlussfolgerungen identifiziert. Notwendig ist eine Schlussfolgerung, wenn ohne sie der zentrale Konflikt oder ein für die Auflösung erforderlicher Zustandswechsel nicht verständlich oder erreichbar bleibt.
 
 Für jede notwendige Schlussfolgerung prüfen:
 
@@ -130,21 +130,6 @@ Für den Scope relevante Assets mit `status: ready` werden gegen die gemeinsame 
 
 Ein formal vollständiges Asset kann fachlich noch `draft` sein. Ein Detailwunsch ohne Auswirkung auf Tischgebrauch oder Kontinuität ist höchstens `polish`.
 
-## Session-Arbeitsmappen prüfen
-
-Wenn eine Datei unter `adventure/60-sessions/` zum Audit-Scope gehört, wird sie als abgeleitete Arbeitsansicht und nicht als kanonisches Asset geprüft:
-
-- jeder Quellenlink muss relativ, erreichbar und für die komprimierte Aussage passend sein;
-- aufgezeichnete `version`- und `updated`-Werte werden mit der aktuellen Quelle verglichen;
-- abweichende Quellen müssen den Status `changed`, nicht erreichbare Quellen `missing` tragen;
-- nach einer Quellenänderung darf der Status erst `current` sein, wenn die betroffene Kurzfassung erneut geprüft wurde;
-- player-safe bekannte Fakten und DM-only Hinweise oder Geheimnisse müssen eindeutig getrennt sein;
-- neue Namen, Gerüchte, Details und Reaktionen dürfen nur als `provisional` erscheinen;
-- die Arbeitsmappe darf keine kanonische Quelle ersetzen oder eine verpflichtende Szenenfolge behaupten;
-- relevante Plot-Threads, notwendige Schlussfolgerungen und zentrale Folgezustände müssen für den Session-Fokus abgedeckt sein.
-
-Gebrochene Links meldet der technische Validator. Veraltete Kurzfassungen, falsch gesetzte Prüfstatus und unbelegte neue Behauptungen sind fachliche Findings im Bereich `session-prep`.
-
 ## Schweregrade
 
 | Schweregrad | Bedeutung |
@@ -172,13 +157,13 @@ Jedes fachliche Finding verwendet dieses Format:
 - Kleinste Korrekturrichtung: <eng begrenzte Richtung, keine erfundene Lösung>
 ```
 
-Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-agency`, `plot-thread`, `truth-boundary`, `table-readiness` und `session-prep`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
+Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-agency`, `plot-thread`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
 
 ## Audit-Bericht
 
 Der Bericht verwendet diese Reihenfolge:
 
-1. **Scope und Lesebasis:** betrachteter Bereich, Spielhorizont, gelesene Übersichten und gezielt verfolgte Assets.
+1. **Scope und Lesebasis:** betrachteter Bereich, gelesene Übersichten und gezielt verfolgte Assets.
 2. **Technische Validierung:** Befehl, Exit-Code, Errors und Warnings; keine Vermischung mit fachlichen Findings.
 3. **Fachliche Zusammenfassung:** Anzahl `blocking`, `important` und `polish` sowie das größte Risiko.
 4. **Findings:** vollständig im definierten Format, nach Schweregrad sortiert.
@@ -206,12 +191,13 @@ Ein Audit ohne Fix-Auftrag verändert auch dann nichts, wenn ein `blocking`-Find
 
 Ein fachlicher Audit ist abgeschlossen, wenn:
 
-- [ ] Scope, Spielhorizont und Lesebasis nachvollziehbar sind;
+- [ ] Scope und Lesebasis nachvollziehbar sind;
 - [ ] technische Validator-Ergebnisse getrennt und vollständig berichtet wurden;
 - [ ] relevante Aussagen zu Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen auf Widersprüche geprüft wurden;
 - [ ] alle Kontinuitäts-Findings sämtliche beteiligten Dateien und den betroffenen Kanon nennen;
 - [ ] jede notwendige Schlussfolgerung auf konkrete Präsentation, mindestens zwei unabhängige Pfade und Folgen des Verpassens geprüft wurde;
 - [ ] jeder aktive Plot-Thread auf Einstieg, Druck, Wahl, Scheitern oder Rückzug, Ignorieren und Auflösungen geprüft wurde;
+- [ ] der zentrale Konflikt innerhalb des One-Shots vollständig erreichbar und auflösbar ist;
 - [ ] Annahmen, Gerüchte, Geheimnisse und etablierte Fakten nicht als gleichwertige Wahrheit behandelt wurden;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;

@@ -1,6 +1,6 @@
 ---
 name: dm-develop-location
-description: Develop or revise one location in an existing system-neutral tabletop RPG adventure, grouping its scenes, NPCs, creatures, objects, information, encounters, handouts, and visuals under that location. Use for location design, scene hubs, settlements, rooms, regions, and location-centered content; do not use to initialize a new adventure.
+description: Develop or revise one location in an existing system-neutral tabletop RPG one-shot, grouping its scenes, NPCs, creatures, objects, information, encounters, handouts, and visuals under that location. Use for location design, scene hubs, settlements, rooms, regions, and location-centered content; do not use to initialize a new one-shot.
 ---
 
 # Develop a location

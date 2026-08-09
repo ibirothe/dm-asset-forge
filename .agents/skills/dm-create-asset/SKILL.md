@@ -1,6 +1,6 @@
 ---
 name: dm-create-asset
-description: Create or revise one of the 14 structured, system-neutral Dungeon Master asset types in an existing adventure. Use for focused asset work; use the location skill when the request centers on developing a whole place.
+description: Create or revise one of the 14 structured, system-neutral Dungeon Master asset types in an existing one-shot. Use for focused asset work; use the location skill when the request centers on developing a whole place.
 ---
 
 # Create or revise an asset

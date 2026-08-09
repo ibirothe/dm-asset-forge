@@ -98,7 +98,7 @@ Typische Nutzung: Quest, Mysterium, Fraktionskonflikt oder drohende Entwicklung.
 
 Beschreibt ein eindeutig geschehenes, geplantes oder mögliches Ereignis mit zeitlicher Einordnung, Ursache, Beteiligten und Folgen. Events bilden die kanonische Timeline und können Plot-Threads verändern.
 
-Typische Nutzung: historischer Umbruch, bevorstehendes Ritual, Frist, Katastrophe oder nach einer Spielsitzung eingetretene Konsequenz. Ein Event ist kein offener Handlungsbogen.
+Typische Nutzung: historischer Umbruch, bevorstehendes Ritual, Frist, Katastrophe oder eine bereits eingetretene Konsequenz. Ein Event ist kein offener Handlungsbogen.
 
 ### `handout`
 

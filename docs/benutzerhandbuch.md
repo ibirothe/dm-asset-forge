@@ -1,16 +1,16 @@
 # Benutzerhandbuch
 
-## Neues Abenteuer beginnen
+## Neuen One-Shot beginnen
 
 Starte Codex im Stammverzeichnis dieses Repositories. Beschreibe Welt und Plot zunächst grob. Ein geeigneter Startauftrag ist:
 
-> Erstelle ein neues regelneutrales Abenteuer mit dem Titel „…“. Die Welt ist … Der Ausgangskonflikt ist … Die Spielerfiguren sollen … erleben. Lege Unklarheiten als offene Fragen ab.
+> Erstelle einen neuen regelneutralen One-Shot mit dem Titel „…“. Die Welt ist … Der Ausgangskonflikt ist … Die Spielerfiguren sollen … erleben. Lege Unklarheiten als offene Fragen ab und bereite den zentralen Konflikt vollständig auflösbar vor.
 
 Codex legt das Abenteuer unter `adventure/` an. Die vollständige ursprüngliche Anfrage bleibt unverändert in `adventure/00-input/original-request.md` erhalten. Welt, Plot und Constraints werden daraus getrennt extrahiert; spätere Antworten stehen datiert in `clarifications.md`.
 
-Ein Repository enthält genau ein Abenteuer. Existiert `adventure/` bereits, arbeitet Codex mit diesem Stand weiter und initialisiert kein zweites Abenteuer. Für ein weiteres Abenteuer wird eine neue Arbeitskopie aus dem Template erzeugt.
+Ein Repository enthält genau einen abgeschlossenen One-Shot. Existiert `adventure/` bereits, arbeitet Codex mit diesem Stand weiter und initialisiert keinen zweiten One-Shot. Für einen weiteren One-Shot wird eine neue Arbeitskopie aus dem Template erzeugt.
 
-Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Konfliktidee. Titel, Spielerrolle, Umfang und genaue Stimmung dürfen später ergänzt werden. Codex fragt vor dem Erstlauf nur nach, wenn fehlende oder widersprüchliche Angaben den ersten kohärenten Stand wesentlich verändern würden.
+Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Konfliktidee. Titel, Spielerrolle, gewünschte Spieldauer und genaue Stimmung dürfen später ergänzt werden. Codex fragt vor dem Erstlauf nur nach, wenn fehlende oder widersprüchliche Angaben den ersten kohärenten Stand wesentlich verändern würden.
 
 Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt- und Plot-Intake](intake-workflow.md).
 
@@ -18,7 +18,7 @@ Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt
 
 Codex bereitet das Abenteuer als veränderbare Situation vor, nicht als feste Szenenfolge. Der Einstieg erklärt den aktuellen Druck und bietet mehrere Ansatzpunkte, ohne Herkunft, Motivation oder Entscheidung der Spielerfiguren vorzugeben. Notwendige Erkenntnisse bleiben über unabhängige Informationswege erreichbar. Scheitern, Rückzug und Ignorieren verändern Akteure, Orte, Beziehungen oder Druck, statt den Plot zu beenden.
 
-Der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md) enthält die prüfbaren Kriterien für Einstieg, Entscheidungen, Konsequenzen, optionale Scenes, Plot-Threads, mögliche Auflösungen und die Skalierung vom One-Shot bis zum längeren Abenteuer.
+Der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md) enthält die prüfbaren Kriterien für Einstieg, Entscheidungen, Konsequenzen, optionale Scenes, Plot-Threads, mögliche Auflösungen und einen begrenzten One-Shot-Umfang.
 
 ## Sinnvolle Folgeaufträge
 
@@ -98,17 +98,9 @@ Bilddateien werden als PNG gespeichert. Ein Visual-Ordner enthält das kanonisch
 
 Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Codex darf erst dann behaupten, dass ein Bild vorhanden ist, wenn die PNG-Datei tatsächlich im Projekt liegt.
 
-## Vor einer Spielrunde
+## Vor dem Spielen
 
-Für einen konkreten Spielabend kann Codex eine kompakte Arbeitsmappe anlegen:
-
-> Bereite die nächste Session mit dem Fokus „…“ vor. Erwartete Orte sind …, aktive Plotfäden sind …. Bündele nur relevante Inhalte, verlinke jede kanonische Quelle und markiere Improvisationsideen als vorläufig.
-
-Die Arbeitsmappe liegt unter `adventure/60-sessions/` und fasst Startsituation, mögliche Übergänge, NPC-Kurzprofile, Hinweise, Handouts, laufenden Druck, Folgezustände und Improvisationsanker zusammen. Sie ist vollständig DM-only und keine zweite kanonische Beschreibung. Ein Quellenregister zeigt für jede verwendete Datei die aufgezeichnete Version, das `updated`-Datum und den Prüfstatus `current`, `changed`, `missing` oder `not-checked`.
-
-Der [Leitfaden für Session-Vorbereitung](session-preparation-guide.md) beschreibt Eingaben, Speicherort, Sichtbarkeit, Quellenpflege und Definition of Done. Änderungen an der Arbeitsmappe verändern kanonische Assets niemals automatisch.
-
-Beauftrage Codex mit einer Konsistenzprüfung. Der technische Validator und der fachliche Audit werden getrennt berichtet. Der [Fachliche Audit-Leitfaden](adventure-audit-guide.md) verlangt für jedes Finding Begründung, betroffene Dateien, Auswirkung und kleinste sinnvolle Korrekturrichtung. Ohne ausdrücklichen Fix-Auftrag verändert Codex keine Inhalte.
+Beauftrage Codex mit einer Konsistenzprüfung des vollständigen One-Shots. Der technische Validator und der fachliche Audit werden getrennt berichtet. Der [Fachliche Audit-Leitfaden](adventure-audit-guide.md) verlangt für jedes Finding Begründung, betroffene Dateien, Auswirkung und kleinste sinnvolle Korrekturrichtung. Ohne ausdrücklichen Fix-Auftrag verändert Codex keine Inhalte.
 
 Die Prüfung kontrolliert unter anderem:
 
