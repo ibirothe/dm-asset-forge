@@ -31,6 +31,35 @@ def main() -> int:
     errors: list[str] = []
     names: set[str] = set()
 
+    catalog = ROOT / "docs" / "asset-katalog.md"
+    required_asset_types = (
+        "world",
+        "location",
+        "scene",
+        "npc",
+        "creature",
+        "faction",
+        "object",
+        "information",
+        "encounter",
+        "plot-thread",
+        "event",
+        "handout",
+        "visual",
+        "random-table",
+    )
+    if not catalog.is_file():
+        errors.append("missing canonical asset catalog: docs/asset-katalog.md")
+    else:
+        catalog_content = catalog.read_text(encoding="utf-8")
+        for asset_type in required_asset_types:
+            if f"| `{asset_type}` |" not in catalog_content:
+                errors.append(f"asset catalog is missing type: {asset_type}")
+
+    agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+    if "docs/asset-katalog.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the canonical asset catalog")
+
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
 
@@ -60,6 +89,8 @@ def main() -> int:
             continue
         if set(data) != {"name", "description"}:
             errors.append(f"frontmatter must contain only name and description: {path.relative_to(ROOT)}")
+        if "docs/asset-katalog.md" not in path.read_text(encoding="utf-8"):
+            errors.append(f"skill does not reference the canonical asset catalog: {skill_dir.name}")
         name = data.get("name", "")
         description = data.get("description", "")
         if not NAME.fullmatch(name):
