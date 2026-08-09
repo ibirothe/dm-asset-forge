@@ -179,8 +179,8 @@ Erst nach diesem Check wird entschieden, welche Locations und Assets wirklich no
 1. `10-world/overview.md` mit Prämisse, bestätigten Wahrheiten, Alltag, Kräften und Unknowns füllen.
 2. `10-world/themes.md` nur mit belegten Themen und Guardrails füllen; fehlende Angaben offenlassen.
 3. `10-world/timeline.md` nur mit ausdrücklich etablierten oder klar als unbekannt markierten Ereignissen ergänzen.
-4. `20-plot/overview.md` mit player-facing Ausgangslage, flexiblen Spieler-Hooks, zentralem Konflikt, mindestens zwei Formen der Spieler-Einflussnahme, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Abschlussrahmen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen.
-5. Nur Plot-Threads anlegen, die für den Kernkonflikt und seine möglichen Auflösungen erforderlich sind.
+4. `20-plot/overview.md` mit player-facing Ausgangslage, flexiblen Spieler-Hooks, zentralem Konflikt, mindestens zwei Formen der Spieler-Einflussnahme, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Abschlussrahmen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen. Im Abschnitt `One-shot scope and pacing` den minimalen Auflösungszustand, `core`, `supporting` und `optional` Inhalte, mindestens eine sichere Kürzung und einen vorbereiteten `late pressure`-Zustandswechsel festhalten.
+5. Nur Plot-Threads anlegen, die für den Kernkonflikt und seine möglichen Auflösungen erforderlich sind. Jeder aktive Thread benennt seinen minimalen Auflösungszustand, unverzichtbare Informationen, sichere Kürzungen und die Auswirkung dieser Kürzungen.
 6. Genau die Locations anlegen, die für Einstieg, zentrale Entscheidungen, Verständnis oder Auflösung des Kernkonflikts notwendig sind.
 7. Nur Assets anlegen, die für den vollständigen One-Shot oder die logische Verbindung des Plots benötigt werden.
 8. Ownership, Metadaten und Beziehungen nach den normativen Referenzen setzen.
@@ -204,6 +204,9 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] Klarstellungen, Annahmen, Entscheidungen und offene Fragen sind getrennt gespeichert.
 - [ ] Die One-Shot-Prämisse benennt player-facing Ausgangslage, zentralen Konflikt, mindestens zwei Formen der Spieler-Einflussnahme und den Abschlussrahmen.
 - [ ] Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Inhaltsgrenzen sind als Nutzerangabe oder ausdrücklich als `open` dokumentiert.
+- [ ] Der Plot unterscheidet `core`, `supporting` und `optional` Inhalte in Prosa und benennt mindestens eine sichere Kürzung.
+- [ ] Der minimale Auflösungszustand bleibt nach jeder vorgesehenen Kürzung erreichbar; notwendige Schlussfolgerungen behalten ihre unabhängigen Entdeckungspfade.
+- [ ] Ein vorbereiteter `late pressure`-Zustandswechsel verdichtet den One-Shot, ohne eine Spielerentscheidung oder feste Szenenfolge zu erzwingen.
 - [ ] `10-world/overview.md` trennt bestätigte Wahrheiten von Unknowns und Arbeitsannahmen.
 - [ ] `20-plot/overview.md` enthält Ausgangslage, zentralen Konflikt, Stakes und mehrere mögliche Auflösungen des vollständigen One-Shots.
 - [ ] Der Einstieg bietet mindestens zwei erkennbare Ansatzpunkte, ohne Motivation oder Entscheidung der Spielerfiguren vorzugeben.

@@ -11,6 +11,7 @@ Dieser Leitfaden definiert die read-only Prüfung eines vollständigen One-Shots
 - [Informationswege](#informationswege)
 - [Spielerausgaben und Visuals](#spielerausgaben-und-visuals)
 - [Plot-Threads und Spielerwirksamkeit](#plot-threads-und-spielerwirksamkeit)
+- [Pacing und sichere Kürzbarkeit](#pacing-und-sichere-kürzbarkeit)
 - [Tischreife](#tischreife)
 - [Schweregrade](#schweregrade)
 - [Format eines Findings](#format-eines-findings)
@@ -43,9 +44,10 @@ Ein Audit:
 8. **Visuals prüfen:** Visual, Subject, Prompt und vorhandene PNG auf Identität, dargestellten Zustand, Sichtbarkeit und Ausschlüsse abgleichen.
 9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
 10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
-11. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
-12. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
-13. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
+11. **Pacing prüfen:** Zielrahmen, minimalen Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
+12. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
+13. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
+14. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
 
 ## Technische Basisprüfung
 
@@ -142,6 +144,21 @@ Jeder aktive Plot-Thread wird einzeln erfasst. Die Prüfung darf keinen Thread s
 
 Scheinwahl, Pflicht-Scene, einzelner Flaschenhals-Hinweis und folgenloses Ignorieren werden als fachliche Ursache benannt, nicht nur als fehlender Abschnitt. Der Audit beschreibt keine bevorzugte Spielerentscheidung und ergänzt keine neue Lösung.
 
+## Pacing und sichere Kürzbarkeit
+
+Der Audit vergleicht `Target duration` und `Content density` aus `00-input/constraints.md` mit dem tatsächlich als erforderlich beschriebenen Umfang. Sind die Werte `open`, wird keine konkrete Laufzeit behauptet; geprüft wird dennoch, ob der One-Shot einen kompakten minimalen Auflösungszustand und sichere Kürzungen besitzt.
+
+Prüfen:
+
+1. **Minimum resolution state:** Bleiben zentraler Konflikt, notwendige Schlussfolgerungen, handlungsfähige Akteure und erreichbare Auflösungen im kleinsten vorbereiteten Umfang erhalten?
+2. **Content roles:** Sind `core`, `supporting` und `optional` nachvollziehbar unterschieden, ohne Pflichtinhalt als optional zu tarnen?
+3. **Safe cuts:** Nennt der One-Shot mindestens eine konkrete Kürzung samt Auswirkung, die unabhängige Informationswege, Spieler-Einfluss und Auflösungen erhält?
+4. **Thread coverage:** Besitzt jeder aktive Plot-Thread einen eigenen minimalen Auflösungszustand, unverzichtbare Informationen und sichere Kürzungen?
+5. **Late pressure:** Entsteht die Verdichtung aus etablierten Akteuren oder Zuständen und bleiben mehrere plausible Spielerreaktionen möglich?
+6. **Overload:** Verlangt der minimale Auflösungszustand nahezu alle vorbereiteten Locations, Threads oder `supporting` Inhalte, obwohl der Zielrahmen kleiner ist?
+
+Ein Zielrahmen ohne realistisch erreichbaren minimalen Auflösungszustand oder ohne sichere Kürzung ist mindestens `important`. Ein als sicher bezeichneter Cut ist `blocking`, wenn er den einzigen verbleibenden Fortschritt oder jede Auflösung entfernt. Der Audit bewertet keine exakten Minuten und erzeugt keinen Ablaufplan.
+
 ## Tischreife
 
 Für den Scope relevante Assets mit `status: ready` werden gegen die gemeinsame und typspezifische Definition of Done im Autorenleitfaden geprüft. Besondere Aufmerksamkeit gilt:
@@ -182,7 +199,7 @@ Jedes fachliche Finding verwendet dieses Format:
 - Kleinste Korrekturrichtung: <eng begrenzte Richtung, keine erfundene Lösung>
 ```
 
-Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-output`, `visual-consistency`, `player-agency`, `plot-thread`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
+Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-output`, `visual-consistency`, `player-agency`, `plot-thread`, `pacing`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
 
 ## Audit-Bericht
 
@@ -195,8 +212,9 @@ Der Bericht verwendet diese Reihenfolge:
 5. **Plot-Thread-Abdeckung:** jeder aktive Thread mit Ergebnis für Einstieg, Druck, Wahl, Ignorieren und Auflösung; `ok`, `finding <ID>` oder `not in scope`.
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
-8. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
-9. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
+8. **Pacing und Kürzbarkeit:** Zielrahmen, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
+9. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
+10. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
 Sind keine fachlichen Findings vorhanden, wird dies ausdrücklich gesagt. Es werden keine leeren Schweregradabschnitte künstlich gefüllt.
 
@@ -227,6 +245,8 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] Annahmen, Gerüchte, Geheimnisse und etablierte Fakten nicht als gleichwertige Wahrheit behandelt wurden;
 - [ ] jede vorhandene `player.md` im Scope gegen Freigabequelle, `reveals`, Wahrheitsstatus, Auslieferung und DM-Wissen geprüft wurde;
 - [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
+- [ ] Zielrahmen, minimaler Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` fachlich geprüft wurden;
+- [ ] jede sichere Kürzung notwendige Informationswege, mehrere Formen der Spieler-Einflussnahme und erreichbare Auflösungen erhält;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;
 - [ ] der Bericht eine priorisierte nächste Aktion nennt.

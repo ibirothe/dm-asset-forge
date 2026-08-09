@@ -201,17 +201,17 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Einsatz:** Eine fortlaufende dramatische Frage mit Druck, Informationswegen, Entscheidungen und möglichen Auflösungen führen.
 
-**Mindestinhalt:** Dramatische Frage, Einstiegspunkte, aktueller Zustand, fortschreitender Druck, Informationsweg, beteiligte Assets, bedeutungsvolle Spielerentscheidungen, mehrere mögliche Auflösungen und Folgen des Ignorierens.
+**Mindestinhalt:** Dramatische Frage, Einstiegspunkte, aktueller Zustand, fortschreitender Druck, Informationsweg, beteiligte Assets, bedeutungsvolle Spielerentscheidungen, mehrere mögliche Auflösungen, minimaler Auflösungszustand, sichere Kürzungen und Folgen des Ignorierens.
 
 **Leitfragen:** Welche offene Frage treibt diesen Thread? Wie können Spieler einsteigen oder aussteigen? Was geschieht ohne ihr Eingreifen? Welche unterschiedlichen Entscheidungen können den Zustand verändern?
 
-**Am Spieltisch:** Aktueller Zustand, nächster Druck, verfügbare Einstiegspunkte, bekannte Informationen und mögliche Folgezustände müssen schnell erfassbar sein.
+**Am Spieltisch:** Aktueller Zustand, nächster Druck, verfügbare Einstiegspunkte, bekannte Informationen, minimaler Auflösungszustand, sichere Kürzungen und mögliche Folgezustände müssen schnell erfassbar sein. Unter `Involved assets` werden Inhalte in Prosa als `core`, `supporting` oder `optional` eingeordnet; diese Labels sind keine Metadatenwerte.
 
 **Sichtbarkeit und Visual:** Spieler sehen nur bekannte Ziele, Zeichen und Konsequenzen; tatsächliche Ursachen, verdeckte Beteiligte und mögliche Auflösungen bleiben DM-Wissen. Eigene Visuals sind selten nötig und sollten auf beteiligte Assets verweisen.
 
 **Anti-Patterns:** Vorgegebene Szenenfolge; nur eine gültige Auflösung; passiver Thread ohne Druck; zentrale Information nur einmal platzieren; Ignorieren folgenlos lassen.
 
-**Definition of Done:** Einstieg, Druck, bedeutungsvolle Wahlmöglichkeiten, robuste Informationswege und mindestens zwei plausible Folgezustände sind vorhanden; der Thread beschreibt nächsten Druck und Folgen des Ignorierens; beteiligte Assets sind verlinkt.
+**Definition of Done:** Einstieg, Druck, bedeutungsvolle Wahlmöglichkeiten, robuste Informationswege und mindestens zwei plausible Folgezustände sind vorhanden; der Thread beschreibt nächsten Druck, `Late pressure`, minimalen Auflösungszustand, must-preserve Informationen, sichere Kürzungen und Folgen des Ignorierens; beteiligte Assets sind verlinkt. Jede Kürzung erhält die für den zentralen Konflikt notwendigen Informationswege und Auflösungen.
 
 ## `event`
 
