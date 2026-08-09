@@ -9,7 +9,7 @@ Jedes Asset führt die folgenden Pflichtfelder. Das Abenteuer-Manifest in `adven
 | Key | Format | Bedeutung |
 |---|---|---|
 | `id` | nicht leerer String | Stabile ID mit dem Präfix aus dem Asset-Katalog; nach der Erstellung nicht ändern. |
-| `type` | kontrollierter String | Einer der 14 Katalogtypen; beim Abenteuer-Manifest `adventure`. |
+| `type` | kontrollierter String | Einer der 15 Katalogtypen; beim Abenteuer-Manifest `adventure`. |
 | `title` | nicht leerer String | Anzeigename; darf geändert werden, ohne die ID zu ändern. |
 | `status` | kontrollierter String | Bearbeitungsstand gemäß Statuswerten unten. |
 | `version` | positive Ganzzahl | Inhaltsversion des Assets; beginnt bei `1` und steigt bei einer inhaltlich relevanten Überarbeitung. |
@@ -147,6 +147,7 @@ Templates dürfen neben den gemeinsamen Schlüsseln nur die hier für ihren Typ 
 | `location` | `parent_location`, `function`, `danger`, `accessibility` |
 | `scene` | `primary_location`, `participants`, `related_threads`, `danger` |
 | `npc` | `primary_location`, `current_location`, `origin_location`, `appearance_locations`, `factions`, `influence`, `reach` |
+| `player-character` | `related_locations`, `related_factions`, `related_threads` |
 | `creature` | `primary_location`, `current_location`, `origin_location`, `appearance_locations`, `danger`, `rarity`, `reach` |
 | `object` | `primary_location`, `current_location`, `origin_location`, `appearance_locations`, `owner`, `part_of`, `components`, `danger`, `rarity`, `accessibility` |
 | `information` | `truth_status`, `confidence`, `accessibility`, `primary_location`, `discovery_locations`, `known_by`, `related_threads` |
