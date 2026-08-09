@@ -1,9 +1,11 @@
-# Original plot brief
+# Extracted plot brief
 
-## User input
+Source: [Original request](original-request.md)
 
-<!-- Originalbeschreibung des Plots möglichst wortgetreu einfügen. -->
+## Explicit plot statements
 
-## Clarifications
+<!-- Nur aus der Originalanfrage extrahierte Plotangaben; keine neue Auflösung ergänzen. -->
 
-<!-- Spätere Klarstellungen mit Datum ergänzen; Originaltext nicht überschreiben. -->
+## Related clarifications
+
+Siehe [Clarifications](clarifications.md).

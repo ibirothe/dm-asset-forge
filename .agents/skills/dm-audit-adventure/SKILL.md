@@ -17,6 +17,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
    - every asset uses the catalog type and canonical path that match its purpose;
    - every asset uses only defined metadata keys, controlled values, and missing-value semantics;
    - every local asset has one canonical owner location, appearances are links rather than copies, and required reciprocal links exist;
+   - unconfirmed assumptions remain in `90-meta/assumptions.md` and are not presented as established truths;
    - every active plot thread has an entry point, pressure, player choice, and possible outcome;
    - important information has at least one discoverable path and meaningful consequence;
    - no required conclusion depends on a single fragile clue;

@@ -64,6 +64,10 @@ def main() -> int:
     if not relationship_spec.is_file():
         errors.append("missing relationship specification: docs/beziehungen-und-speicherorte.md")
 
+    intake_spec = ROOT / "docs" / "intake-workflow.md"
+    if not intake_spec.is_file():
+        errors.append("missing intake workflow: docs/intake-workflow.md")
+
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
@@ -71,6 +75,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the metadata specification")
     if "docs/beziehungen-und-speicherorte.md" not in agents_content:
         errors.append("AGENTS.md does not reference the relationship specification")
+    if "docs/intake-workflow.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the intake workflow")
 
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
@@ -118,6 +124,10 @@ def main() -> int:
         names.add(name)
         if len(description) < 40:
             errors.append(f"skill description too short: {name}")
+
+    create_adventure_skill = SKILLS / "dm-create-adventure" / "SKILL.md"
+    if create_adventure_skill.is_file() and "docs/intake-workflow.md" not in create_adventure_skill.read_text(encoding="utf-8"):
+        errors.append("dm-create-adventure does not reference the intake workflow")
 
     required_templates = {
         "location.md",

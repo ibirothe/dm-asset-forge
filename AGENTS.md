@@ -10,12 +10,13 @@ Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownershi
 
 ## Start a new adventure
 
-1. Begin with the user's rough world and plot description. Ask only for missing information that blocks a coherent first pass.
-2. Choose a lowercase ASCII kebab-case adventure slug and run `python3 scripts/init_adventure.py --slug <slug> --title "<title>"`.
-3. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
-4. Preserve the user's original wording in `adventure/00-input/world.md` and `adventure/00-input/plot.md` before interpreting it.
-5. Derive only supported facts. Record assumptions in `adventure/90-meta/decisions.md` and unresolved choices in `adventure/90-meta/open-questions.md`.
-6. Create locations and assets with `scripts/new_asset.py`; do not copy template files manually when the script supports the asset type.
+1. Read and follow `docs/intake-workflow.md` as the normative first-pass workflow.
+2. Begin with the user's free-form world and plot description. Ask only for missing information that materially blocks a coherent first pass.
+3. Before interpreting the content, choose a lowercase ASCII kebab-case slug, initialize the scaffold, and preserve the complete original request unchanged in `adventure/00-input/original-request.md`.
+4. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
+5. Store clarifications, assumptions, decisions, and open questions in their separate canonical files. Never present an unconfirmed assumption as an established fact.
+6. Create only the locations and assets required for the first playable structure. Use `scripts/new_asset.py`; do not copy template files manually when the script supports the asset type.
+7. Do not generate images during initialization.
 
 ## Read before editing
 
@@ -23,8 +24,9 @@ For an existing adventure, read in this order:
 
 1. `adventure/README.md`;
 2. relevant files in `adventure/50-indexes/` and `adventure/90-meta/open-questions.md`;
-3. the target location's `location.md` below `adventure/30-locations/`;
-4. only the linked assets required for the task.
+3. `adventure/90-meta/assumptions.md` when unconfirmed canon can affect the task;
+4. the target location's `location.md` below `adventure/30-locations/`;
+5. only the linked assets required for the task.
 
 Do not scan every asset by default. Expand the read set only when relationships or continuity require it.
 

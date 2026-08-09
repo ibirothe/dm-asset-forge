@@ -6,9 +6,11 @@
 adventure/
 ├── README.md
 ├── 00-input/
+│   ├── original-request.md
 │   ├── world.md
 │   ├── plot.md
-│   └── constraints.md
+│   ├── constraints.md
+│   └── clarifications.md
 ├── 10-world/
 │   ├── overview.md
 │   ├── themes.md
@@ -27,9 +29,15 @@ adventure/
 ├── 40-global/factions/<faction>/faction.md
 ├── 50-indexes/
 └── 90-meta/
+    ├── assumptions.md
+    ├── decisions.md
+    ├── open-questions.md
+    └── change-log.md
 ```
 
 Das Verzeichnis `adventure/` entsteht bei der einmaligen Initialisierung. Titel und Slug werden als stabile Metadaten im Abenteuer-Frontmatter geführt, nicht als zusätzliche Verzeichnisebene.
+
+Der [geführte Intake-Workflow](intake-workflow.md) definiert, wie Originalanfrage, Extrakte, Klarstellungen, Annahmen, Entscheidungen und offene Fragen getrennt gepflegt werden.
 
 ## Benennung
 

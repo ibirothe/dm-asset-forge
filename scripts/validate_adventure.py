@@ -22,8 +22,11 @@ REQUIRED_DIRS = (
 )
 REQUIRED_FILES = (
     "README.md",
+    "00-input/original-request.md",
     "00-input/world.md",
     "00-input/plot.md",
+    "00-input/constraints.md",
+    "00-input/clarifications.md",
     "10-world/overview.md",
     "20-plot/overview.md",
     "50-indexes/locations.md",
@@ -32,6 +35,7 @@ REQUIRED_FILES = (
     "50-indexes/information.md",
     "50-indexes/open-threads.md",
     "90-meta/decisions.md",
+    "90-meta/assumptions.md",
     "90-meta/open-questions.md",
     "90-meta/change-log.md",
 )
