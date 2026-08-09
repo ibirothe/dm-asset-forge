@@ -182,6 +182,38 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertIn("[VISUAL_PNG_STATE]", rendered)
         self.assertIn("[VISUAL_PNG_APPROVAL]", rendered)
 
+    def test_handout_png_requires_a_regular_visual_asset(self) -> None:
+        self.create("handout", "brief", "Brief", "--location", "hafen")
+        handout = self.adventure / "30-locations/hafen/handouts/brief/handout.md"
+        player = handout.parent / "player.md"
+        source = handout.read_text(encoding="utf-8")
+        source = source.replace("- Status: not-approved", "- Status: approved")
+        source = source.replace("- Player file: none", "- Player file: [player.md](player.md)")
+        source = source.replace("- Approved source version: none", "- Approved source version: 1")
+        source = source.replace("- Approval: none", "- Approval: User approved this exact player draft")
+        handout.write_text(source, encoding="utf-8")
+        player.write_text("# Brief\n\nTrefft mich am alten Kai.\n", encoding="utf-8")
+        (handout.parent / "player.png").write_bytes(b"\x89PNG\r\n\x1a\n")
+
+        errors, _ = self.validate()
+        self.assertIn("[PNG_ORPHAN]", "\n".join(errors))
+
+        (handout.parent / "player.png").unlink()
+        self.create("visual", "player", "Brief – Spielerfassung", "--subject", "hand-brief")
+        visual = handout.parent / "visuals/player/visual.md"
+        visual_source = visual.read_text(encoding="utf-8")
+        visual_source = visual_source.replace("provenance: unknown", "provenance: agent-generated")
+        visual_source = visual_source.replace("- Status: not-approved", "- Status: approved")
+        visual_source = visual_source.replace("- PNG state: not-created", "- PNG state: current")
+        visual_source = visual_source.replace("- Approved visual version: none", "- Approved visual version: 1")
+        visual_source = visual_source.replace("- Approval: none", "- Approval: User approved the Handout Visual")
+        visual.write_text(visual_source, encoding="utf-8")
+        (visual.parent / "player.png").write_bytes(b"\x89PNG\r\n\x1a\n")
+
+        errors, warnings = self.validate()
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+
     def test_unknown_key_and_invalid_enum_are_errors_with_hints(self) -> None:
         npc = self.adventure / "30-locations/hafen/npcs/mara/npc.md"
         content = npc.read_text(encoding="utf-8")
