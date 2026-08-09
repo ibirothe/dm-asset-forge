@@ -71,6 +71,20 @@ Ein Asset besitzt genau einen kanonischen Speicherort. Wenn ein NPC an mehreren 
 
 Der primäre Ort bestimmt die Ablage, der aktuelle Ort den momentanen Aufenthalt in der Spielwelt. Bei einer Reise ändert Codex `current_location` und die Links am Zielort, kopiert oder verschiebt die NPC-Datei aber nicht. Erst wenn sich die dauerhafte redaktionelle Zuordnung ändert, wird die kanonische Datei einmalig verschoben und werden alle Verweise angepasst. Details stehen in [Beziehungen und ortszentrierte Speicherung](beziehungen-und-speicherorte.md).
 
+## Assets sicher ändern oder ausmustern
+
+Für seltene Änderungen soll Codex vor dem Schreiben zuerst den betroffenen Umfang nennen. Geeignete Aufträge sind:
+
+> Ändere nur den sichtbaren Titel von `<asset>`. Behalte ID, Slug und Pfad bei und aktualisiere Index, Linktexte, Version, Datum und Change Log.
+
+> Verschiebe die redaktionelle Ownership von `<asset>` nach `<location>`. Nenne vorher alle betroffenen Pfade, Links, Beziehungen und Indizes. Behalte die ID bei und stoppe bei Mehrdeutigkeit.
+
+> Setze `<asset>` auf `retired`. Prüfe vorher aktive Abhängigkeiten, behalte die Datei auffindbar und entscheide jeden eingehenden Link bewusst.
+
+Eine Titeländerung verändert niemals automatisch ID, Slug oder Pfad. Ein Ownership-Wechsel verschiebt genau eine kanonische Datei und entfernt den alten Pfad. Ein retired Asset bleibt mit stabilem Pfad und Indexzeile auffindbar; es wird nicht automatisch gelöscht.
+
+Bei einer gewünschten Zusammenführung nennt Codex zuerst beide kanonischen Dateien und alle Konflikte. Der User entscheidet ausdrücklich, welche ID, welcher Pfad und welche Aussagen überleben. Ohne diese Entscheidung werden keine Inhalte zusammengeführt. Der vollständige Preflight und die Checklisten stehen unter [Änderungsabläufe](beziehungen-und-speicherorte.md#änderungsabläufe).
+
 ## Offene Fragen und Annahmen
 
 - `90-meta/open-questions.md` enthält Entscheidungen, die noch vom User benötigt werden.
