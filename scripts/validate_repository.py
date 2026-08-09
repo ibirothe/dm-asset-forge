@@ -152,6 +152,23 @@ def main() -> int:
     if not validation_spec.is_file():
         errors.append("missing validation guide: docs/validierung.md")
 
+    player_handout_guide = ROOT / "docs" / "player-handout-workflow.md"
+    required_player_handout_sections = (
+        "## Dateimodell",
+        "## Freigabestatus in der Quelle",
+        "## Freigabeworkflow",
+        "## Safety-Check",
+        "## Optionale PNG-Ausgabe",
+        "## Definition of Done",
+    )
+    if not player_handout_guide.is_file():
+        errors.append("missing player Handout workflow: docs/player-handout-workflow.md")
+    else:
+        player_handout_content = player_handout_guide.read_text(encoding="utf-8")
+        for section in required_player_handout_sections:
+            if section not in player_handout_content:
+                errors.append(f"player Handout workflow is missing section: {section}")
+
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
@@ -169,6 +186,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the intake workflow")
     if "docs/validierung.md" not in agents_content:
         errors.append("AGENTS.md does not reference the validation guide")
+    if "docs/player-handout-workflow.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the player Handout workflow")
 
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
@@ -247,6 +266,16 @@ def main() -> int:
 
     if not (ROOT / "templates" / "visual-prompt.md").is_file():
         errors.append("missing visual prompt template: templates/visual-prompt.md")
+    if not (ROOT / "templates" / "player-handout.md").is_file():
+        errors.append("missing player Handout template: templates/player-handout.md")
+
+    create_asset_skill = SKILLS / "dm-create-asset" / "SKILL.md"
+    if (
+        create_asset_skill.is_file()
+        and "docs/player-handout-workflow.md"
+        not in create_asset_skill.read_text(encoding="utf-8")
+    ):
+        errors.append("dm-create-asset does not reference the player Handout workflow")
 
     plot_overview = ROOT / "templates" / "adventure" / "20-plot" / "overview.md"
     required_plot_sections = (

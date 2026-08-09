@@ -233,17 +233,17 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Einsatz:** Ein kontrolliert spielersichtbares Artefakt mit eigener Ausgabe und eindeutig getrenntem DM-Kontext bereitstellen.
 
-**Mindestinhalt:** Player-facing Inhalt, Auslieferungssituation, DM-only Kontext, offenbarte Information und geplanter Ausgabezustand.
+**Mindestinhalt:** Player-facing Inhalt, Auslieferungssituation, DM-only Kontext, offenbarte Information, Player-Release-Status und geplanter Ausgabezustand.
 
 **Leitfragen:** Was erhalten Spieler tatsächlich? Wann und unter welchen Bedingungen? Welche Information wird dadurch bestätigt oder angedeutet? Welche internen Hinweise dürfen keinesfalls in die Ausgabe gelangen?
 
 **Am Spieltisch:** Freigegebener Inhalt, Übergabepunkt und betroffene Information müssen sofort auffindbar sein; DM-Kontext muss optisch eindeutig getrennt bleiben.
 
-**Sichtbarkeit und Visual:** Nur der freigegebene Abschnitt ist spielersichtbar. Ein PNG ist optional und lohnt sich bei Layout, Handschrift, Symbolen oder Illustration; Markdown bleibt die kanonische Quelle.
+**Sichtbarkeit und Visual:** Nur der freigegebene Abschnitt ist spielersichtbar. Eine eigenständige `player.md` entsteht ausschließlich nach dem Safety- und Freigabeworkflow in [Spielerfreigabe für Handouts](player-handout-workflow.md). Ein PNG ist optional und lohnt sich bei Layout, Handschrift, Symbolen oder Illustration; die freigegebene Markdown-Fassung bleibt die maßgebliche Spielerquelle.
 
 **Anti-Patterns:** DM-Notizen in Spielertext kopieren; interne Links oder Frontmatter exportieren; Information und Handout doppelt kanonisch beschreiben; Ausgabe ohne Freigabe erzeugen.
 
-**Definition of Done:** Player-facing Inhalt ist eigenständig verständlich; DM-only Wissen ist sicher getrennt; Auslieferung und `reveals`-Beziehungen sind klar.
+**Definition of Done:** Player-facing Inhalt ist eigenständig verständlich; DM-only Wissen ist sicher getrennt; Auslieferung und `reveals`-Beziehungen sind klar. Wenn eine Spielerdatei existiert, verweist die Quelle nachvollziehbar auf die ausdrücklich freigegebene Quellversion und der Safety-Check ist bestanden.
 
 ## `visual`
 

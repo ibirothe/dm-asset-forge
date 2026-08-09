@@ -11,6 +11,7 @@ Read `docs/adventure-audit-guide.md` before auditing an adventure. Keep validato
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
+Read `docs/player-handout-workflow.md` before creating or replacing a player-facing Handout file. Never infer approval from asset status or an earlier release.
 
 ## Start a new adventure
 
@@ -50,6 +51,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Represent appearances elsewhere with relative Markdown links. Never duplicate the descriptive body.
 - Keep `primary_location` stable when only `current_location` or a temporary appearance changes. Move the canonical file only when editorial ownership changes permanently.
 - Store relationship targets as stable IDs in frontmatter and add relative Markdown links plus required back-references according to `docs/beziehungen-und-speicherorte.md`.
+- Keep an optional player-facing Handout as `player.md` beside its canonical `handout.md`. It has no frontmatter, internal links, or DM-only content and requires explicit approval before creation or replacement.
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
 - Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, or retired.
 

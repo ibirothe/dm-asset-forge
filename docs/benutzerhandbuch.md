@@ -63,6 +63,14 @@ Das Template legt Abschnitte und Metadaten an, erzeugt aber noch keinen spielber
 
 Ein Asset bleibt `status: draft`, solange zentrale Beziehungen, Zugänge, Handlungsmöglichkeiten oder Konsequenzen fehlen. Erst wenn es die gemeinsamen und typspezifischen Kriterien erfüllt, darf Codex es als `ready` markieren. Dabei soll nicht jeder Abschnitt möglichst lang, sondern jede Information für Vorbereitung, Spiel oder Kontinuität nützlich sein.
 
+## Handouts für Spieler freigeben
+
+Die kanonische `handout.md` bleibt eine DM-Arbeitsdatei und kann Geheimnisse, Auslieferungskontext sowie interne Beziehungen enthalten. Bitte Codex zunächst um einen vollständigen Entwurf der eigenständigen Spielerfassung:
+
+> Erstelle für das Handout `<name>` einen Safety-geprüften Entwurf für `player.md`. Zeige mir den vollständigen Text, aber schreibe oder ersetze die Datei erst nach meiner ausdrücklichen Freigabe.
+
+Nach der Freigabe liegt `player.md` direkt neben `handout.md`. Sie enthält weder Frontmatter noch DM-only Abschnitte oder interne Repository-Links und ist ohne Projektkontext verständlich. Jede spätere Ersetzung erfordert erneut eine ausdrückliche Freigabe. Eine PNG-Ausgabe ist optional und wird nur auf Wunsch aus der bereits freigegebenen Markdown-Fassung abgeleitet. Der vollständige Ablauf steht in [Spielerfreigabe für Handouts](player-handout-workflow.md).
+
 ## Mit vorhandenen Dateien arbeiten
 
 Codex liest zuerst Übersicht, Indizes und den betroffenen Ort. Es folgt Links nur so weit, wie es für die Aufgabe nötig ist. Dadurch bleiben Änderungen fokussiert und bestehende Inhalte werden nicht unnötig neu formuliert.

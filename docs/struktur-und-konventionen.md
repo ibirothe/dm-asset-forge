@@ -27,7 +27,10 @@ adventure/
 │   ├── objects/<object>/object.md
 │   ├── information/<information>/information.md
 │   ├── encounters/<encounter>/encounter.md
-│   ├── handouts/<handout>/handout.md
+│   ├── handouts/<handout>/
+│   │   ├── handout.md
+│   │   ├── player.md (optional, freigegeben)
+│   │   └── player.png (optional)
 │   └── visuals/<visual>/
 │       ├── visual.md
 │       ├── <visual>.prompt.md
@@ -54,6 +57,8 @@ Der [geführte Intake-Workflow](intake-workflow.md) definiert, wie Originalanfra
 - Slugs: ASCII, kleingeschrieben, mit Bindestrichen
 - IDs: stabiler Präfix plus Slug, beispielsweise `loc-old-harbor` oder `npc-mara-veen`
 - Bilder: PNG; Briefing: gleicher Basisname plus `.prompt.md`
+
+Eine Spielerfassung eines Handouts liegt ausschließlich als optionale `player.md` neben der kanonischen `handout.md`. Sie besitzt kein Frontmatter und entsteht nur nach dem Freigabeworkflow in [Spielerfreigabe für Handouts](player-handout-workflow.md). Eine `player.png` darf nur aus dieser freigegebenen Markdown-Fassung abgeleitet werden.
 
 ## Asset-Typen
 

@@ -27,6 +27,13 @@ updated: {{DATE}}
 
 ## Reveals and consequences
 
+## Player release
+
+- Status: not-approved
+- Player file: none
+- Approved source version: none
+- Approval: none
+
 ## Rendered output
 
-<!-- Optionaler relativer Link zu einer PNG-Ausgabe. -->
+<!-- Optionale Links zu einer freigegebenen player.md und einer daraus abgeleiteten player.png. -->

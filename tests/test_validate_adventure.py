@@ -110,6 +110,41 @@ class AdventureValidationTests(unittest.TestCase):
             },
         )
 
+    def test_approved_player_handout_is_standalone_and_traceable(self) -> None:
+        self.create("handout", "brief", "Brief", "--location", "hafen")
+        handout = self.adventure / "30-locations/hafen/handouts/brief/handout.md"
+        player = handout.parent / "player.md"
+        source = handout.read_text(encoding="utf-8")
+        source = source.replace("- Status: not-approved", "- Status: approved")
+        source = source.replace("- Player file: none", "- Player file: [player.md](player.md)")
+        source = source.replace("- Approved source version: none", "- Approved source version: 1")
+        source = source.replace("- Approval: none", "- Approval: User approval for this exact draft")
+        handout.write_text(source, encoding="utf-8")
+        player.write_text("# Brief\n\nTrefft mich bei Sonnenuntergang am alten Kai.\n", encoding="utf-8")
+
+        errors, warnings = self.validate()
+
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+
+    def test_player_handout_leaks_and_missing_approval_are_blocking(self) -> None:
+        self.create("handout", "brief", "Brief", "--location", "hafen")
+        handout = self.adventure / "30-locations/hafen/handouts/brief/handout.md"
+        player = handout.parent / "player.md"
+        player.write_text(
+            "---\nsource: internal\n---\n\n# Brief\n\n"
+            "## DM-only context\n\n[Interne Quelle](handout.md)\n",
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[PLAYER_RELEASE_BLOCKED]", rendered)
+        self.assertIn("[PLAYER_FRONTMATTER]", rendered)
+        self.assertIn("[PLAYER_DM_SECTION]", rendered)
+        self.assertIn("[PLAYER_INTERNAL_LINK]", rendered)
+
     def test_unknown_key_and_invalid_enum_are_errors_with_hints(self) -> None:
         npc = self.adventure / "30-locations/hafen/npcs/mara/npc.md"
         content = npc.read_text(encoding="utf-8")
