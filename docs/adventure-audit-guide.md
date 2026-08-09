@@ -9,6 +9,7 @@ Dieser Leitfaden definiert die read-only Prüfung eines vollständigen One-Shots
 - [Technische Basisprüfung](#technische-basisprüfung)
 - [Kanon und Kontinuität](#kanon-und-kontinuität)
 - [Informationswege](#informationswege)
+- [Spielerausgaben und Visuals](#spielerausgaben-und-visuals)
 - [Plot-Threads und Spielerwirksamkeit](#plot-threads-und-spielerwirksamkeit)
 - [Tischreife](#tischreife)
 - [Schweregrade](#schweregrade)
@@ -38,11 +39,13 @@ Ein Audit:
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
 6. **Informationswege prüfen:** Notwendigkeit, konkrete Präsentation, unabhängige Entdeckungspfade und Folgen des Verpassens bewerten.
-7. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
-8. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
-9. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
-10. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
-11. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
+7. **Spielerausgaben prüfen:** Vorhandene `player.md`-Dateien gegen Freigabequelle, `reveals`, Wahrheitsstatus und Auslieferungssituation prüfen.
+8. **Visuals prüfen:** Visual, Subject, Prompt und vorhandene PNG auf Identität, dargestellten Zustand, Sichtbarkeit und Ausschlüsse abgleichen.
+9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
+10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
+11. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
+12. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
+13. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
 
 ## Technische Basisprüfung
 
@@ -97,6 +100,28 @@ Für jede notwendige Schlussfolgerung prüfen:
 Eine bloße Wiederholung desselben Hinweises an zwei Stellen ist kein unabhängiger Pfad. Ebenso genügt ein verlinktes `information`-Asset nicht, wenn die beteiligte Scene, der NPC oder Ort keine konkrete Präsentation ermöglicht.
 
 Nicht notwendige Informationen benötigen nicht automatisch zwei Pfade. Sie brauchen jedoch einen verständlichen Zugang und eine erkennbare Tischfunktion, wenn sie als `ready` gelten.
+
+## Spielerausgaben und Visuals
+
+Diese Prüfung ergänzt den technischen Validator um semantische Grenzen. Bei einem vollständigen One-Shot-Audit umfasst sie alle vorhandenen `player.md`-Dateien sowie alle Visuals mit vorhandener PNG-Datei oder geplanter Spieler-Sichtbarkeit. Bei engerem Scope werden nur Ausgaben der betrachteten Subject-Assets geprüft. Existiert keine entsprechende Ausgabe, wird dies im Bericht festgehalten und es entsteht kein Finding allein wegen ihres Fehlens.
+
+Für jede `player.md` prüfen:
+
+1. **Freigabequelle:** Verweist das zugehörige `handout.md` auf genau diese Spielerdatei und die freigegebene Quellversion?
+2. **Erlaubter Inhalt:** Stammt jede Aussage aus `Player-facing content` oder aus einer bewusst offenbarten Information unter `reveals`?
+3. **Wahrheitsgrenze:** Bleiben Gerücht, Lüge, Teilwahrheit und Unsicherheit in derselben Bedeutung erhalten?
+4. **Auslieferung:** Verrät die Datei nur, was Spieler in der dokumentierten Auslieferungssituation tatsächlich erhalten?
+5. **Geheimnisschutz:** Fehlen DM-Kontext, verdeckte Ursachen, Lösungen, zukünftige Ereignisse, interne IDs, Statuswerte und Repository-Navigation?
+
+Für jedes relevante Visual prüfen:
+
+1. **Subject-Identität:** Sind `Identity source` und `Stable identity anchors` durch das kanonische Subject oder bei einer Handout-Bildfassung durch die freigegebene `player.md` gedeckt?
+2. **One-Shot-Zustand:** Kommt der unter `Depicted state` beschriebene Zustand im vorbereiteten One-Shot tatsächlich vor, ohne spätere Abenteuerentwicklung vorwegzunehmen?
+3. **Briefing-Konsistenz:** Stimmen Visual und Prompt bei Identitätsankern, Zustand, Variation, Komposition, Sichtbarkeit, Ausschlüssen und Zielpfad überein?
+4. **PNG-Konsistenz:** Wenn eine PNG existiert, entsprechen ihre erkennbaren Inhalte der freigegebenen Visual-Version und dem Prompt? Kann die Datei im verfügbaren Audit-Werkzeug nicht visuell geprüft werden, wird sie als Audit-Grenze statt als verifiziert gemeldet.
+5. **Spieler-Sicherheit:** Zeigen Text, Symbole, Komposition oder Hintergrund keine Geheimnisse, die zum vorgesehenen Anzeigezeitpunkt noch nicht bekannt sind?
+
+Ein tatsächlich player-facing Geheimnisleck ist `blocking`. Ein Widerspruch zwischen Subject, Visual, Prompt und PNG ist nach seiner Auswirkung einzustufen; er ist mindestens `important`, wenn Wiedererkennung, Kanonverständnis oder eine spielrelevante Information betroffen sind. Rein technische Status-, Pfad- und Provenienzfehler bleiben im getrennten Validator-Abschnitt, können aber als Nachweis für ihre fachliche Auswirkung dienen.
 
 ## Plot-Threads und Spielerwirksamkeit
 
@@ -157,7 +182,7 @@ Jedes fachliche Finding verwendet dieses Format:
 - Kleinste Korrekturrichtung: <eng begrenzte Richtung, keine erfundene Lösung>
 ```
 
-Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-agency`, `plot-thread`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
+Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-output`, `visual-consistency`, `player-agency`, `plot-thread`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
 
 ## Audit-Bericht
 
@@ -169,8 +194,9 @@ Der Bericht verwendet diese Reihenfolge:
 4. **Findings:** vollständig im definierten Format, nach Schweregrad sortiert.
 5. **Plot-Thread-Abdeckung:** jeder aktive Thread mit Ergebnis für Einstieg, Druck, Wahl, Ignorieren und Auflösung; `ok`, `finding <ID>` oder `not in scope`.
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
-7. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
-8. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
+7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
+8. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
+9. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
 Sind keine fachlichen Findings vorhanden, wird dies ausdrücklich gesagt. Es werden keine leeren Schweregradabschnitte künstlich gefüllt.
 
@@ -199,6 +225,8 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] jeder aktive Plot-Thread auf Einstieg, Druck, Wahl, Scheitern oder Rückzug, Ignorieren und Auflösungen geprüft wurde;
 - [ ] der zentrale Konflikt innerhalb des One-Shots vollständig erreichbar und auflösbar ist;
 - [ ] Annahmen, Gerüchte, Geheimnisse und etablierte Fakten nicht als gleichwertige Wahrheit behandelt wurden;
+- [ ] jede vorhandene `player.md` im Scope gegen Freigabequelle, `reveals`, Wahrheitsstatus, Auslieferung und DM-Wissen geprüft wurde;
+- [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;
 - [ ] der Bericht eine priorisierte nächste Aktion nennt.
