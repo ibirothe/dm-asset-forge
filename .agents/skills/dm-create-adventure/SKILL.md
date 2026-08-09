@@ -1,6 +1,6 @@
 ---
 name: dm-create-adventure
-description: Create and initialize a new system-neutral tabletop RPG adventure in this repository from a user's rough world and plot description. Use when starting a new adventure, campaign, scenario, or module; do not use for editing a single asset in an existing adventure.
+description: Create and initialize one complete system-neutral tabletop RPG one-shot in this repository from a user's rough world and plot description. Use when starting a new one-shot; do not use for editing a single asset in an existing adventure.
 ---
 
 # Create an adventure
@@ -23,7 +23,7 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
    Do not use `--overwrite` if the file already contains authored material.
 6. Preserve the complete original request unchanged in `00-input/original-request.md`. Extract only explicit world, plot, and constraint statements into their dedicated input files; store later user answers in `00-input/clarifications.md`.
 7. Classify derived work as established fact, clarification, assumption, decision, or open question. Store each category in the file required by the intake workflow and never present a proposed assumption as established canon.
-8. Build the restrained world and plot overviews as states rather than a required scene sequence. Provide a clear entry without prescribing player-character motivation, at least two plausible approaches, independent paths to every necessary conclusion, playable consequences for failure or neglect, and multiple possible resolutions. Create only the plot threads, locations, and assets necessary for the entry situation and central conflict, using `scripts/new_asset.py` for all catalog types. Keep them `draft` until they meet their type-specific Definition of Done.
+8. Build the restrained world and plot overviews as states rather than a required scene sequence. Provide a clear entry without prescribing player-character motivation, at least two plausible approaches, independent paths to every necessary conclusion, playable consequences for failure or neglect, and multiple possible resolutions. Create only the plot threads, locations, and assets necessary for the complete one-shot. Do not defer required parts of the central conflict. Use `scripts/new_asset.py` for all catalog types and keep them `draft` until they meet their type-specific Definition of Done.
 9. Assign canonical ownership and add required links. Update all five indexes, the adventure README, and the change log.
 10. Do not generate images during initialization.
 11. Check every item in the intake Definition of Done. Run `python3 scripts/validate_adventure.py` and fix structural errors.
