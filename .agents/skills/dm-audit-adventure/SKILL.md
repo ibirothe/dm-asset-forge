@@ -1,33 +1,22 @@
 ---
 name: dm-audit-adventure
-description: Audit an existing system-neutral tabletop RPG adventure for structural integrity, broken links, duplicate IDs, unresolved placeholders, system-specific leakage, orphaned assets, dead clues, plot continuity, and table readiness. Use for reviews and pre-session checks; do not expand or rewrite content unless the user asks for fixes.
+description: Audit an existing system-neutral tabletop RPG adventure for technical integrity, canon continuity, robust clue paths, player agency, plot-thread reachability, truth boundaries, and table readiness. Use for reviews and pre-session checks; report only unless the user explicitly requests selected fixes.
 ---
 
 # Audit an adventure
 
-1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/adventure-structure-guide.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md`, then `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
-2. Run:
+1. Read the root `AGENTS.md` and `docs/adventure-audit-guide.md`. Follow its scope, read order, severity definitions, finding format, report order, and read-only boundary. Read `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/adventure-structure-guide.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md` as required by the audit scope.
+2. Read `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/open-questions.md`, `assumptions.md`, and `decisions.md`. Derive the narrow set of active plot threads, necessary conclusions, locations, and directly linked assets to inspect.
+3. Run:
 
    ```bash
    python3 scripts/validate_adventure.py
    ```
 
-3. Treat validator errors as blocking structural findings. Review warnings in context before classifying them; a warning is not automatically a defect. Use rule codes and paths to select a narrow read set. Inspect implicated locations, assets, and their direct links.
-4. Check narrative quality separately from structural validation:
-   - every asset uses the catalog type and canonical path that match its purpose;
-   - every asset uses only defined metadata keys, controlled values, and missing-value semantics;
-   - every local asset has one canonical owner location, appearances are links rather than copies, and required reciprocal links exist;
-   - unconfirmed assumptions remain in `90-meta/assumptions.md` and are not presented as established truths;
-   - the entry situation is understandable without prescribing player-character background, motivation, or action;
-   - every active plot thread has an entry point, next pressure, meaningful choice, playable neglect state, and multiple possible outcomes;
-   - every necessary conclusion has at least two independent discovery paths, while other important information has a discoverable path and meaningful consequence;
-   - failure, retreat, and neglect create playable changed states rather than dead ends;
-   - required progress depends on states, not a single action, clue, location, encounter, or mandatory Scene;
-   - NPC knowledge and motivations do not contradict established facts;
-   - timelines, locations, ownership, and relationships agree;
-   - every asset marked `ready` meets the shared and type-specific Definition of Done in the authoring guide;
-   - system-specific mechanics have not entered the content;
-   - generated PNGs have matching Visual assets, prompt companions, and declared provenance.
-5. Classify findings as `blocking`, `important`, or `polish`. Cite exact relative file paths.
-6. If the user requested fixes, make the smallest coherent edits, update indexes and change log, then rerun validation. Otherwise, do not edit files.
-7. Report validation output, narrative findings, open questions, and the recommended next action.
+4. Keep technical diagnostics separate. Treat validator errors as blocking technical results; review warnings in context rather than automatically promoting them to findings.
+5. Apply the guide's sequence: canon and continuity; necessary information paths; every active plot thread; then table readiness. For contradictions, inspect every file that asserts the affected canon. Do not infer one correct version when the sources are ambiguous.
+6. Record each narrative finding as `blocking`, `important`, or `polish` with area, affected canon, rationale, every evidence path, impact, and smallest useful correction direction.
+7. Report in the guide's order, including coverage for every active plot thread and every necessary conclusion. If no finding exists, say so explicitly.
+8. Do not modify any file unless the user explicitly requests fixes. For a fix request, name selected finding IDs and affected files first, make the smallest coherent edits, update required indexes and change log, then rerun technical and affected narrative checks.
+
+Do not create system mechanics, fill missing story content, or judge literary quality during an audit.
