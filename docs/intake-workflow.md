@@ -1,6 +1,6 @@
-# Geführter Welt- und Plot-Intake v1
+# Geführter One-Shot-Intake v1
 
-Diese Datei definiert den reproduzierbaren Erstlauf, mit dem Codex aus einem freien Welt- und Plottext einen belastbaren ersten Abenteuerstand erzeugt. Sie ist die normative Quelle für Eingaben, Rückfragen, Annahmen, Ablage und Definition of Done. Die fachlichen Regeln für Entscheidungen, Informationswege und Folgezustände stehen im [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md).
+Diese Datei definiert den reproduzierbaren Erstlauf, mit dem Codex aus einem freien Welt- und Plottext einen belastbaren, in sich abgeschlossenen One-Shot erzeugt. Sie ist die normative Quelle für Eingaben, Rückfragen, Annahmen, Ablage und Definition of Done. Die fachlichen Regeln für Entscheidungen, Informationswege und Folgezustände stehen im [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md).
 
 ## Inhalt
 
@@ -16,14 +16,14 @@ Diese Datei definiert den reproduzierbaren Erstlauf, mit dem Codex aus einem fre
 
 ## Ziel und Ergebnis
 
-Der Erstlauf erzeugt keinen vollständigen Abenteuerband. Er schafft einen nachvollziehbaren Arbeitsstand, von dem aus Orte und Assets gezielt vertieft werden können.
+Der Erstlauf erzeugt keinen ausgeschriebenen Abenteuerband. Er schafft jedoch bereits die vollständige, auflösbare Struktur des One-Shots, von der aus Orte und Assets gezielt vertieft werden können.
 
 Nach dem Erstlauf existieren:
 
 - die unveränderte Originalanfrage;
 - getrennte Welt-, Plot- und Constraint-Extrakte;
 - eine Weltübersicht und eine Plotübersicht;
-- nur die für Einstieg und Kernkonflikt notwendigen Locations und Assets;
+- nur die für Einstieg, Kernkonflikt und mögliche Auflösungen notwendigen Locations und Assets;
 - aktuelle Indizes;
 - getrennte Klarstellungen, Annahmen, Entscheidungen und offene Fragen;
 - eine Abschlussmeldung mit Ergebnis, Unsicherheiten, Validierung und nächsten Schritten.
@@ -39,7 +39,7 @@ Der User darf in freiem Text schreiben. Eine feste Formularsprache ist nicht erf
 | Titel | nein | Codex darf einen ausdrücklich vorläufigen Arbeitstitel vorschlagen und als Annahme dokumentieren. |
 | Startort | nein | Wird aus dem Plot abgeleitet; nur bei strukturell gleichwertigen, stark unterschiedlichen Optionen nachfragen. |
 | Spielerrolle | nein | Darf als offene Frage verbleiben, solange ein neutraler Einstieg möglich ist. |
-| Umfang und Regelsystem | nein | Das Repository bleibt regelneutral; gewünschter Umfang kann später vertieft werden. |
+| Spieldauer und Regelsystem | nein | Das Repository bleibt regelneutral und auf einen One-Shot begrenzt; eine gewünschte ungefähre Spieldauer darf später ergänzt werden. |
 
 Fehlt Welt- oder Plottext vollständig, beginnt Codex nicht mit der Initialisierung. Es bittet gezielt um die fehlende minimale Eingabe.
 
@@ -49,9 +49,9 @@ Die folgenden Fragen verbessern den Entwurf, blockieren ihn aber normalerweise n
 
 - Welche Stimmung und welche zentralen Themen sind gewünscht?
 - Welche Inhalte oder Themen sollen ausgeschlossen werden?
-- Soll der erste spielbare Abschnitt eher Erkundung, soziale Spannung, Mysterium, Reise oder offenen Konflikt betonen?
+- Soll der One-Shot eher Erkundung, soziale Spannung, Mysterium, Reise oder offenen Konflikt betonen?
 - Welche Rolle oder Ausgangslage haben die Spielerfiguren?
-- Welcher ungefähre Umfang ist vorgesehen?
+- Welche ungefähre Spieldauer und inhaltliche Dichte sind vorgesehen?
 - Gibt es unverzichtbare Orte, Fraktionen, Figuren, Gegenstände oder Enthüllungen?
 - Wie offen oder zielgerichtet sollen mögliche Verläufe sein?
 
@@ -149,9 +149,9 @@ Nicht bestätigte Annahmen erscheinen nie unter „Established truths“ oder al
 2. `10-world/themes.md` nur mit belegten Themen und Guardrails füllen; fehlende Angaben offenlassen.
 3. `10-world/timeline.md` nur mit ausdrücklich etablierten oder klar als unbekannt markierten Ereignissen ergänzen.
 4. `20-plot/overview.md` mit Ausgangslage, flexiblen Spieler-Hooks, Konflikt, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen.
-5. Nur Plot-Threads anlegen, die für den Kernkonflikt erforderlich sind.
-6. Genau die Locations anlegen, die für Einstieg, unmittelbare Handlung oder Verständnis des Kernkonflikts notwendig sind.
-7. Nur Assets anlegen, die im ersten spielbaren Abschnitt oder für die logische Verbindung des Plots benötigt werden.
+5. Nur Plot-Threads anlegen, die für den Kernkonflikt und seine möglichen Auflösungen erforderlich sind.
+6. Genau die Locations anlegen, die für Einstieg, zentrale Entscheidungen, Verständnis oder Auflösung des Kernkonflikts notwendig sind.
+7. Nur Assets anlegen, die für den vollständigen One-Shot oder die logische Verbindung des Plots benötigt werden.
 8. Ownership, Metadaten und Beziehungen nach den normativen Referenzen setzen.
 
 Nicht jeden erwähnten Ort, NPC oder Gegenstand ausarbeiten. Ein Name oder Link genügt, wenn das Asset noch keine eigenständige Tischfunktion benötigt.
@@ -172,7 +172,7 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] Welt, Plot und Constraints sind extrahiert und auf die Originalanfrage zurückführbar.
 - [ ] Klarstellungen, Annahmen, Entscheidungen und offene Fragen sind getrennt gespeichert.
 - [ ] `10-world/overview.md` trennt bestätigte Wahrheiten von Unknowns und Arbeitsannahmen.
-- [ ] `20-plot/overview.md` enthält Ausgangslage, zentralen Konflikt, Stakes und mehrere mögliche Entwicklungen oder Ergebnisse.
+- [ ] `20-plot/overview.md` enthält Ausgangslage, zentralen Konflikt, Stakes und mehrere mögliche Auflösungen des vollständigen One-Shots.
 - [ ] Der Einstieg bietet mindestens zwei erkennbare Ansatzpunkte, ohne Motivation oder Entscheidung der Spielerfiguren vorzugeben.
 - [ ] Notwendige Schlussfolgerungen besitzen mindestens zwei unabhängige Entdeckungspfade; keine Pflichtentwicklung hängt an einer einzelnen Scene.
 - [ ] Zentrale Entscheidungen sowie Scheitern, Rückzug oder Ignorieren führen zu spielbaren Folgezuständen.
@@ -202,12 +202,12 @@ Keine Datei oder kein Bild als erzeugt melden, wenn sie beziehungsweise es nicht
 
 ### Minimaler Start
 
-> Erstelle ein neues regelneutrales Abenteuer. Die Welt ist: … Der Ausgangskonflikt ist: … Bewahre meinen Originaltext, dokumentiere Annahmen getrennt und erstelle nur den notwendigen ersten Stand.
+> Erstelle einen neuen regelneutralen One-Shot. Die Welt ist: … Der Ausgangskonflikt ist: … Bewahre meinen Originaltext, dokumentiere Annahmen getrennt und erstelle nur den notwendigen vollständigen Stand.
 
 ### Start mit Leitplanken
 
-> Erstelle ein Abenteuer mit dem Titel „…“. Welt: … Plot: … Gewünschte Stimmung: … Ausgeschlossen sind: … Frage nur nach Punkten, die den ersten kohärenten Stand wesentlich verändern. Erzeuge noch keine Bilder.
+> Erstelle einen One-Shot mit dem Titel „…“. Welt: … Plot: … Gewünschte Stimmung: … Ausgeschlossen sind: … Frage nur nach Punkten, die den ersten kohärenten Stand wesentlich verändern. Erzeuge noch keine Bilder.
 
 ### Stark freier Start
 
-> Ich habe eine grobe Idee für ein Abenteuer: … Strukturiere daraus Welt und Plot, markiere alles Unbestätigte als Annahme oder offene Frage und nenne mir danach die sinnvollsten nächsten Ausarbeitungsschritte.
+> Ich habe eine grobe Idee für einen One-Shot: … Strukturiere daraus Welt und Plot, markiere alles Unbestätigte als Annahme oder offene Frage und nenne mir danach die sinnvollsten nächsten Ausarbeitungsschritte.
