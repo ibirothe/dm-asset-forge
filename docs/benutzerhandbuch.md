@@ -43,6 +43,20 @@ python3 scripts/new_asset.py --type world --slug <adventure-slug> --title "<titl
 
 `--overwrite` ist hier nur für die noch unveränderte Platzhalterdatei des Scaffolds vorgesehen. Der Generator aktualisiert keine Indizes, Rückverweise oder Inhalte automatisch; diese werden anschließend durch Codex gepflegt. Alle Optionen zeigt `python3 scripts/new_asset.py --help`.
 
+## Assets fachlich ausarbeiten
+
+Das Template legt Abschnitte und Metadaten an, erzeugt aber noch keinen spielbereiten Inhalt. Der [Autoren- und Tischleitfaden für DM-Assets](asset-authoring-guide.md) beschreibt für jeden der 14 Typen:
+
+- Einsatz und Abgrenzung zu ähnlichen Typen;
+- fachlichen Mindestinhalt und hilfreiche Leitfragen;
+- Informationen, die der DM am Tisch schnell benötigt;
+- Trennung von Spielerwissen, DM-Wissen und Geheimnissen;
+- sinnvollen, optionalen oder unnötigen Einsatz eines Visuals;
+- typische Anti-Patterns;
+- eine typspezifische Definition of Done.
+
+Ein Asset bleibt `status: draft`, solange zentrale Beziehungen, Zugänge, Handlungsmöglichkeiten oder Konsequenzen fehlen. Erst wenn es die gemeinsamen und typspezifischen Kriterien erfüllt, darf Codex es als `ready` markieren. Dabei soll nicht jeder Abschnitt möglichst lang, sondern jede Information für Vorbereitung, Spiel oder Kontinuität nützlich sein.
+
 ## Mit vorhandenen Dateien arbeiten
 
 Codex liest zuerst Übersicht, Indizes und den betroffenen Ort. Es folgt Links nur so weit, wie es für die Aufgabe nötig ist. Dadurch bleiben Änderungen fokussiert und bestehende Inhalte werden nicht unnötig neu formuliert.

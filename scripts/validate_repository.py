@@ -56,6 +56,15 @@ def main() -> int:
             if f"| `{asset_type}` |" not in catalog_content:
                 errors.append(f"asset catalog is missing type: {asset_type}")
 
+    authoring_guide = ROOT / "docs" / "asset-authoring-guide.md"
+    if not authoring_guide.is_file():
+        errors.append("missing asset authoring guide: docs/asset-authoring-guide.md")
+    else:
+        authoring_content = authoring_guide.read_text(encoding="utf-8")
+        for asset_type in required_asset_types:
+            if f"## `{asset_type}`" not in authoring_content:
+                errors.append(f"asset authoring guide is missing type: {asset_type}")
+
     metadata_spec = ROOT / "docs" / "metadaten-und-werte.md"
     if not metadata_spec.is_file():
         errors.append("missing metadata specification: docs/metadaten-und-werte.md")
@@ -75,6 +84,8 @@ def main() -> int:
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
+    if "docs/asset-authoring-guide.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the asset authoring guide")
     if "docs/metadaten-und-werte.md" not in agents_content:
         errors.append("AGENTS.md does not reference the metadata specification")
     if "docs/beziehungen-und-speicherorte.md" not in agents_content:
@@ -115,6 +126,8 @@ def main() -> int:
             errors.append(f"frontmatter must contain only name and description: {path.relative_to(ROOT)}")
         if "docs/asset-katalog.md" not in path.read_text(encoding="utf-8"):
             errors.append(f"skill does not reference the canonical asset catalog: {skill_dir.name}")
+        if "docs/asset-authoring-guide.md" not in path.read_text(encoding="utf-8"):
+            errors.append(f"skill does not reference the asset authoring guide: {skill_dir.name}")
         if "docs/metadaten-und-werte.md" not in path.read_text(encoding="utf-8"):
             errors.append(f"skill does not reference the metadata specification: {skill_dir.name}")
         if "docs/beziehungen-und-speicherorte.md" not in path.read_text(encoding="utf-8"):

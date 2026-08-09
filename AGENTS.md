@@ -5,6 +5,7 @@
 Use this repository to create and maintain system-neutral tabletop role-playing adventure material. Keep user-facing guidance in German and technical identifiers, folder names, file names, YAML keys, and IDs in English.
 
 Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
+Read `docs/asset-authoring-guide.md` before drafting or assessing asset content. Use its type-specific minimum content, table-use guidance, anti-patterns, and Definition of Done.
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
@@ -55,6 +56,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Express challenge and capability narratively with context, risks, leverage, and consequences.
 - Separate established facts, rumors, secrets, assumptions, and unresolved questions.
 - Give every usable asset a purpose at the table, discoverability, and consequences.
+- Keep `status: draft` until the asset meets the shared and type-specific Definition of Done in `docs/asset-authoring-guide.md`; template completeness alone is insufficient.
 - Preserve user-authored facts. Make small, targeted edits and never silently rewrite unrelated files.
 - Use YAML frontmatter from the matching template in `templates/assets/`.
 - Use only keys and controlled values defined in `docs/metadaten-und-werte.md`. Never use an empty string for an unknown, inapplicable, or open value.

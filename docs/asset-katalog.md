@@ -1,6 +1,6 @@
 # Kanonischer DM-Asset-Katalog v1
 
-Diese Datei ist die normative Quelle für Asset-Typen, technische Bezeichner, kanonische Speicherorte und Typauswahl. Widersprechen Templates, Skripte oder andere Anleitungen diesem Katalog, gilt dieser Katalog. Gemeinsame Metadaten und qualitative Werteskalen stehen in [Metadaten und regelneutrale Werte v1](metadaten-und-werte.md); Ownership, Ortswechsel und Rückverweise in [Beziehungen und ortszentrierte Speicherung v1](beziehungen-und-speicherorte.md).
+Diese Datei ist die normative Quelle für Asset-Typen, technische Bezeichner, kanonische Speicherorte und Typauswahl. Widersprechen Templates, Skripte oder andere Anleitungen diesem Katalog, gilt dieser Katalog. Fachliche Mindestinhalte, Tischgebrauch und Definition of Done stehen im [Autoren- und Tischleitfaden](asset-authoring-guide.md); gemeinsame Metadaten und qualitative Werteskalen in [Metadaten und regelneutrale Werte v1](metadaten-und-werte.md); Ownership, Ortswechsel und Rückverweise in [Beziehungen und ortszentrierte Speicherung v1](beziehungen-und-speicherorte.md).
 
 ## Geltungsbereich
 
