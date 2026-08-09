@@ -22,9 +22,10 @@ Read `docs/bild-workflow.md` before creating or revising a Visual brief or gener
 4. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
 5. Store clarifications, assumptions, decisions, and open questions in their separate canonical files. Never present an unconfirmed assumption as an established fact.
 6. Before creating assets, record a compact one-shot premise in `adventure/20-plot/overview.md`: player-facing starting situation, central conflict, at least two broad forms of player influence, and the resolution boundary. Record target duration, content density, tone, themes, focus, and content boundaries in `adventure/00-input/constraints.md`; use `open` when the user did not specify them.
-7. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 14 catalog types. Do not copy asset templates manually.
-8. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
-9. Do not generate images during initialization.
+7. Define qualitative pacing in `adventure/20-plot/overview.md`: distinguish `core`, `supporting`, and `optional` content in prose; preserve a minimum resolution state; name at least one safe cut and a prepared `late pressure` state change. Give every active Plot Thread its own minimum resolution state, must-preserve information, and safe cuts.
+8. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 14 catalog types. Do not copy asset templates manually.
+9. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
+10. Do not generate images during initialization.
 
 ## Read before editing
 
