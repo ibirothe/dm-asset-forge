@@ -25,7 +25,8 @@ Read `docs/bild-workflow.md` before creating or revising a Visual brief or gener
 7. Define qualitative pacing in `adventure/20-plot/overview.md`: distinguish `core`, `supporting`, and `optional` content in prose; preserve a minimum resolution state; name at least one safe cut and a prepared `late pressure` state change. Give every active Plot Thread its own minimum resolution state, must-preserve information, and safe cuts.
 8. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 14 catalog types. Do not copy asset templates manually.
 9. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
-10. Do not generate images during initialization.
+10. Turn `adventure/README.md` into the concise table guide and add a short table-use context to every row in the five existing indexes. Link central actors, necessary information, and resolution-relevant assets directly instead of copying their canonical descriptions.
+11. Do not generate images during initialization.
 
 ## Read before editing
 
@@ -38,6 +39,8 @@ For an existing adventure, read in this order:
 5. only the linked assets required for the task.
 
 Do not scan every asset by default. Expand the read set only when relationships or continuity require it.
+
+For preparation and table use, navigate from `adventure/README.md` either directly to a central asset or through exactly one matching index. Treat README and index prose as short derived orientation only; resolve details and canon conflicts in the linked canonical asset.
 
 ## Canonical storage
 
@@ -57,7 +60,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Keep an optional player-facing Handout as `player.md` beside its canonical `handout.md`. It has no frontmatter, internal links, or DM-only content and requires explicit approval before creation or replacement.
 - Represent every Handout PNG as a regular Visual under the Handout's `visuals/<slug>/` directory. Never store `player.png` directly beside `handout.md`.
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
-- Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, or retired.
+- Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, retired, or changes its immediate table function. Keep each context cell to one short, action-relevant summary and the final link pointed at the only canonical description.
 
 ## Asset lifecycle changes
 
@@ -74,6 +77,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Express challenge and capability narratively with context, risks, leverage, and consequences.
 - Separate established facts, rumors, secrets, assumptions, and unresolved questions.
 - Give every usable asset a purpose at the table, discoverability, and consequences.
+- Keep `adventure/README.md` and index summaries concise and derived. Never introduce canon there that is absent from the linked plot or asset source, and never copy a full canonical description into navigation.
 - Never make required progress depend on one prescribed player action, one fragile clue, or one mandatory Scene. Express prerequisites as reachable states.
 - Treat player-character background, motivation, loyalty, and decisions as open unless the user explicitly establishes them.
 - Keep `status: draft` until the asset meets the shared and type-specific Definition of Done in `docs/asset-authoring-guide.md`; template completeness alone is insufficient.
