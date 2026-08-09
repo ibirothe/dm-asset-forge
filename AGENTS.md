@@ -7,6 +7,7 @@ Use this repository to create and maintain system-neutral tabletop role-playing 
 Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
 Read `docs/asset-authoring-guide.md` before drafting or assessing asset content. Use its type-specific minimum content, table-use guidance, anti-patterns, and Definition of Done.
 Read `docs/adventure-structure-guide.md` before designing or assessing entry situations, choices, information paths, consequences, plot progression, or resolutions. Prepare state changes rather than a required scene sequence.
+Read `docs/adventure-audit-guide.md` before auditing an adventure. Keep validator diagnostics separate from narrative findings and never change content without an explicit fix request.
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
