@@ -29,6 +29,8 @@ updated: {{DATE}}
 
 ## Stable identity anchors
 
+<!-- Nur die für diese Darstellung erforderlichen Anker aus der Identity source extrahieren; keine neue Subject-Beschreibung oder neue kanonische Eigenschaft einführen. -->
+
 ## Depicted state
 
 - One-shot context:
