@@ -84,6 +84,33 @@ PLAYER_FORBIDDEN_HEADINGS = frozenset(
         "Rendered output",
     }
 )
+VISUAL_GENERATION_STATUS = re.compile(
+    r"^- Status:\s*(not-approved|approved)\s*$", re.MULTILINE
+)
+VISUAL_PNG_STATE = re.compile(
+    r"^- PNG state:\s*(not-created|current|stale)\s*$", re.MULTILINE
+)
+VISUAL_APPROVED_VERSION = re.compile(
+    r"^- Approved visual version:\s*([^\s]+)\s*$", re.MULTILINE
+)
+VISUAL_APPROVAL = re.compile(r"^- Approval:\s*(.+?)\s*$", re.MULTILINE)
+VISUAL_PROMPT_OUTPUT = re.compile(
+    r"^- Relative output path:\s*`([^`]+)`\s*$", re.MULTILINE
+)
+VISUAL_PROMPT_SECTIONS = frozenset(
+    {
+        "Prompt",
+        "Identity anchors",
+        "Depicted state",
+        "Allowed variation",
+        "Composition and viewpoint",
+        "Style, palette, and lighting",
+        "Narrative details",
+        "Exclusions",
+        "Canon checks",
+        "Output",
+    }
+)
 SYSTEM_TERMS = re.compile(
     r"\b(?:armor class|hit points?|challenge rating|difficulty class|spell slots?|saving throw|"
     r"initiative modifier|trefferpunkte|rüstungsklasse|schwierigkeitsgrad)\b",
@@ -192,7 +219,7 @@ ASSET_SPECS = {
     "visual": spec(
         "vis-", "subject-owned", "visual.md", "subject",
         ("subject_asset", "output_file"), ("subject_asset", "output_file"),
-        ("Table purpose", "Subject", "Canonical visual facts", "Player visibility", "Output", "Provenance and revisions"),
+        ("Table purpose", "Subject", "Identity source", "Stable identity anchors", "Depicted state", "Allowed variation", "Player visibility", "Generation approval", "Output", "Provenance and revisions"),
     ),
     "random-table": spec(
         "table-", "global", "random-table.md", "40-global/random-tables",
@@ -462,6 +489,8 @@ def validate_asset_record(
             prompt = record.path.parent / f"{Path(output_file).stem}.prompt.md"
             if not prompt.is_file():
                 errors.append(diagnostic(rel, "VISUAL_PROMPT", f"matching prompt is missing at {relative(prompt, root)}.", "Create the prompt companion from templates/visual-prompt.md."))
+            else:
+                validate_visual_generation(root, record, prompt, errors)
     elif record.asset_type == "handout":
         validate_handout_release(root, record, errors)
 
@@ -488,17 +517,16 @@ def validate_handout_release(
 
     status = status_match.group(1)
     if status == "not-approved":
-        if player.is_file():
-            errors.append(
-                diagnostic(
-                    relative(player, root),
-                    "PLAYER_RELEASE_BLOCKED",
-                    "player.md exists although the canonical Handout is not approved.",
-                    "Remove the player file or obtain explicit approval and document the current source version.",
-                )
-            )
-        else:
+        if not player.is_file():
             return
+        errors.append(
+            diagnostic(
+                relative(player, root),
+                "PLAYER_RELEASE_BLOCKED",
+                "player.md exists although the canonical Handout is not approved.",
+                "Remove the player file or obtain explicit approval and document the current source version.",
+            )
+        )
 
     if not player.is_file():
         errors.append(
@@ -510,7 +538,6 @@ def validate_handout_release(
             )
         )
         return
-
     if player.resolve() not in resolved_markdown_links(record.path):
         errors.append(
             diagnostic(
@@ -532,12 +559,9 @@ def validate_handout_release(
                 f"Obtain explicit approval for version {current_version} before replacing player.md.",
             )
         )
-
     approval = PLAYER_RELEASE_APPROVAL.search(source)
     if approval is None or approval.group(1).strip().lower() in {
-        "none",
-        "pending",
-        "not-approved",
+        "none", "pending", "not-approved"
     }:
         errors.append(
             diagnostic(
@@ -551,52 +575,85 @@ def validate_handout_release(
     player_text = player.read_text(encoding="utf-8")
     player_rel = relative(player, root)
     if FRONTMATTER.match(player_text):
-        errors.append(
-            diagnostic(
-                player_rel,
-                "PLAYER_FRONTMATTER",
-                "player.md contains YAML frontmatter.",
-                "Remove all metadata from the player-facing file.",
-            )
-        )
+        errors.append(diagnostic(player_rel, "PLAYER_FRONTMATTER", "player.md contains YAML frontmatter.", "Remove all metadata from the player-facing file."))
     if HTML_COMMENT.search(player_text):
-        errors.append(
-            diagnostic(
-                player_rel,
-                "PLAYER_COMMENT",
-                "player.md contains an internal Markdown comment.",
-                "Remove comments and working notes from the player-facing file.",
-            )
-        )
+        errors.append(diagnostic(player_rel, "PLAYER_COMMENT", "player.md contains an internal Markdown comment.", "Remove comments and working notes from the player-facing file."))
     if not re.search(r"^#\s+\S", player_text, re.MULTILINE):
-        errors.append(
-            diagnostic(
-                player_rel,
-                "PLAYER_TITLE",
-                "player.md has no readable level-one title.",
-                "Add one standalone '# Title' heading.",
-            )
-        )
+        errors.append(diagnostic(player_rel, "PLAYER_TITLE", "player.md has no readable level-one title.", "Add one standalone '# Title' heading."))
     forbidden = PLAYER_FORBIDDEN_HEADINGS.intersection(HEADING.findall(player_text))
     for heading in sorted(forbidden):
-        errors.append(
-            diagnostic(
-                player_rel,
-                "PLAYER_DM_SECTION",
-                f"player.md contains internal section '## {heading}'.",
-                "Remove DM-only and workflow sections from the player-facing file.",
-            )
-        )
+        errors.append(diagnostic(player_rel, "PLAYER_DM_SECTION", f"player.md contains internal section '## {heading}'.", "Remove DM-only and workflow sections from the player-facing file."))
     for raw_target in LINK.findall(player_text) + IMAGE_LINK.findall(player_text):
         if resolve_link(player, raw_target) is not None:
-            errors.append(
-                diagnostic(
-                    player_rel,
-                    "PLAYER_INTERNAL_LINK",
-                    f"player.md contains repository-relative link {raw_target!r}.",
-                    "Remove internal links or express the required player-facing context directly.",
-                )
-            )
+            errors.append(diagnostic(player_rel, "PLAYER_INTERNAL_LINK", f"player.md contains repository-relative link {raw_target!r}.", "Remove internal links or express the required player-facing context directly."))
+
+
+def validate_visual_generation(
+    root: Path,
+    record: AssetRecord,
+    prompt: Path,
+    errors: list[str],
+) -> None:
+    rel = relative(record.path, root)
+    visual_text = record.path.read_text(encoding="utf-8")
+    prompt_text = prompt.read_text(encoding="utf-8")
+    prompt_rel = relative(prompt, root)
+    output_file = scalar(record.metadata.get("output_file", ""))
+    png = record.path.parent / Path(output_file).name
+
+    prompt_headings = frozenset(HEADING.findall(prompt_text))
+    for section in sorted(VISUAL_PROMPT_SECTIONS - prompt_headings):
+        errors.append(diagnostic(prompt_rel, "VISUAL_PROMPT_SECTION", f"missing reproducibility section '## {section}'.", f"Add '## {section}' from templates/visual-prompt.md."))
+    if record.path.resolve() not in resolved_markdown_links(prompt):
+        errors.append(diagnostic(prompt_rel, "VISUAL_PROMPT_SOURCE", "prompt does not link its canonical visual.md source.", "Add the relative source link '[Visual asset](visual.md)'."))
+    prompt_output = VISUAL_PROMPT_OUTPUT.search(prompt_text)
+    if prompt_output is None or prompt_output.group(1) != output_file:
+        errors.append(diagnostic(prompt_rel, "VISUAL_PROMPT_OUTPUT", "prompt output path does not match visual metadata.", f"Set the relative output path to `{output_file}`."))
+
+    status_match = VISUAL_GENERATION_STATUS.search(visual_text)
+    state_match = VISUAL_PNG_STATE.search(visual_text)
+    if status_match is None:
+        errors.append(diagnostic(rel, "VISUAL_APPROVAL_STATUS", "Generation approval has no valid status.", "Use '- Status: not-approved' or '- Status: approved'."))
+    if state_match is None:
+        errors.append(diagnostic(rel, "VISUAL_PNG_STATE", "Generation approval has no valid PNG state.", "Use not-created, current, or stale."))
+    if status_match is None or state_match is None:
+        return
+
+    status = status_match.group(1)
+    state = state_match.group(1)
+    exists = png.is_file()
+    if state == "not-created" and exists:
+        errors.append(diagnostic(rel, "VISUAL_PNG_STATE", f"PNG state is not-created but {png.name!r} exists.", "Document an approved current PNG or a stale previous PNG."))
+    if state in {"current", "stale"} and not exists:
+        errors.append(diagnostic(rel, "VISUAL_PNG_MISSING", f"PNG state is {state} but {png.name!r} is missing.", "Restore the PNG or set PNG state to not-created."))
+    if exists and state != "stale" and status != "approved":
+        errors.append(diagnostic(rel, "VISUAL_PNG_APPROVAL", "a non-stale PNG exists without approval for the documented Visual version.", "Obtain explicit approval or mark the older PNG stale."))
+    if status == "approved" and state != "current":
+        errors.append(diagnostic(rel, "VISUAL_APPROVAL_STATE", "approved status is only valid for a current PNG.", "Set the matching current state or reset approval to not-approved."))
+    if state == "stale" and status != "not-approved":
+        errors.append(diagnostic(rel, "VISUAL_APPROVAL_STATE", "a stale PNG must await a new approval.", "Set Status to not-approved until replacement is explicitly approved."))
+
+    approved_version_match = VISUAL_APPROVED_VERSION.search(visual_text)
+    approved_version = approved_version_match.group(1) if approved_version_match else ""
+    current_version = scalar(record.metadata.get("version", ""))
+    approval_match = VISUAL_APPROVAL.search(visual_text)
+    approval = approval_match.group(1).strip() if approval_match else ""
+    concrete_approval = approval.lower() not in {"", "none", "pending", "not-approved"}
+
+    if state == "current":
+        if approved_version != current_version:
+            errors.append(diagnostic(rel, "VISUAL_APPROVED_VERSION", "current PNG approval does not match the current Visual version.", f"Obtain explicit approval for version {current_version}."))
+        if not concrete_approval:
+            errors.append(diagnostic(rel, "VISUAL_APPROVAL_RECORD", "current PNG has no concrete approval record.", "Record the user's approval for this exact Visual version and prompt."))
+        if scalar(record.metadata.get("provenance", "unknown")) == "unknown":
+            errors.append(diagnostic(rel, "VISUAL_PROVENANCE", "current PNG has unknown provenance.", "Set provenance to the documented actual origin and record the revision."))
+    elif state == "stale":
+        if not approved_version.isdigit() or approved_version == current_version:
+            errors.append(diagnostic(rel, "VISUAL_APPROVED_VERSION", "stale PNG must identify an older approved Visual version.", "Record the prior numeric version that produced the retained PNG."))
+        if not concrete_approval:
+            errors.append(diagnostic(rel, "VISUAL_APPROVAL_RECORD", "stale PNG has no record of its prior approval.", "Preserve the approval record for the older retained PNG."))
+    elif approved_version != "none" or approval.lower() != "none":
+        errors.append(diagnostic(rel, "VISUAL_APPROVAL_RECORD", "not-created PNG must not claim an approval or approved version.", "Use Approved visual version: none and Approval: none."))
 
 
 def validate_relations(
@@ -869,6 +926,21 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
         rel = relative(path, root)
         if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".tiff"}:
             errors.append(diagnostic(rel, "IMAGE_FORMAT", "non-PNG image file found.", "Convert the image to PNG and update references."))
+        if path.is_file() and path.suffix.lower() == ".png":
+            player_png = (
+                path.name == "player.png"
+                and (path.parent / "player.md").is_file()
+                and (path.parent / "handout.md").is_file()
+            )
+            if not player_png and not (path.parent / "visual.md").is_file():
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "PNG_ORPHAN",
+                        "PNG has neither a neighboring Visual asset nor an approved Handout source.",
+                        "Move it beside its visual.md or derive player.png from an approved player.md.",
+                    )
+                )
         if not path.is_file() or path.suffix != ".md":
             continue
 
