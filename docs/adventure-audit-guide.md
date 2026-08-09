@@ -11,6 +11,7 @@ Dieser Leitfaden definiert die read-only Prüfung eines bestehenden Abenteuers a
 - [Informationswege](#informationswege)
 - [Plot-Threads und Spielerwirksamkeit](#plot-threads-und-spielerwirksamkeit)
 - [Tischreife](#tischreife)
+- [Session-Arbeitsmappen prüfen](#session-arbeitsmappen-prüfen)
 - [Schweregrade](#schweregrade)
 - [Format eines Findings](#format-eines-findings)
 - [Audit-Bericht](#audit-bericht)
@@ -129,6 +130,21 @@ Für den Scope relevante Assets mit `status: ready` werden gegen die gemeinsame 
 
 Ein formal vollständiges Asset kann fachlich noch `draft` sein. Ein Detailwunsch ohne Auswirkung auf Tischgebrauch oder Kontinuität ist höchstens `polish`.
 
+## Session-Arbeitsmappen prüfen
+
+Wenn eine Datei unter `adventure/60-sessions/` zum Audit-Scope gehört, wird sie als abgeleitete Arbeitsansicht und nicht als kanonisches Asset geprüft:
+
+- jeder Quellenlink muss relativ, erreichbar und für die komprimierte Aussage passend sein;
+- aufgezeichnete `version`- und `updated`-Werte werden mit der aktuellen Quelle verglichen;
+- abweichende Quellen müssen den Status `changed`, nicht erreichbare Quellen `missing` tragen;
+- nach einer Quellenänderung darf der Status erst `current` sein, wenn die betroffene Kurzfassung erneut geprüft wurde;
+- player-safe bekannte Fakten und DM-only Hinweise oder Geheimnisse müssen eindeutig getrennt sein;
+- neue Namen, Gerüchte, Details und Reaktionen dürfen nur als `provisional` erscheinen;
+- die Arbeitsmappe darf keine kanonische Quelle ersetzen oder eine verpflichtende Szenenfolge behaupten;
+- relevante Plot-Threads, notwendige Schlussfolgerungen und zentrale Folgezustände müssen für den Session-Fokus abgedeckt sein.
+
+Gebrochene Links meldet der technische Validator. Veraltete Kurzfassungen, falsch gesetzte Prüfstatus und unbelegte neue Behauptungen sind fachliche Findings im Bereich `session-prep`.
+
 ## Schweregrade
 
 | Schweregrad | Bedeutung |
@@ -156,7 +172,7 @@ Jedes fachliche Finding verwendet dieses Format:
 - Kleinste Korrekturrichtung: <eng begrenzte Richtung, keine erfundene Lösung>
 ```
 
-Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-agency`, `plot-thread`, `truth-boundary` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
+Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-agency`, `plot-thread`, `truth-boundary`, `table-readiness` und `session-prep`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
 
 ## Audit-Bericht
 

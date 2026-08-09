@@ -93,6 +93,7 @@ def main() -> int:
         "## Kanon und Kontinuität",
         "## Informationswege",
         "## Plot-Threads und Spielerwirksamkeit",
+        "## Session-Arbeitsmappen prüfen",
         "## Schweregrade",
         "## Format eines Findings",
         "## Audit-Bericht",
@@ -106,6 +107,29 @@ def main() -> int:
         for section in required_audit_sections:
             if section not in audit_content:
                 errors.append(f"adventure audit guide is missing section: {section}")
+
+    session_guide = ROOT / "docs" / "session-preparation-guide.md"
+    required_session_sections = (
+        "## Zweck und Grenzen",
+        "## Speicherort und Dateiname",
+        "## Eingaben",
+        "## Arbeitsmappe erstellen",
+        "## Player-safe und DM-only",
+        "## Startsituation und Übergänge",
+        "## NPC-Kurzprofile",
+        "## Informationen und Handouts",
+        "## Folgezustände",
+        "## Improvisationsanker",
+        "## Quellenregister und Aktualität",
+        "## Definition of Done",
+    )
+    if not session_guide.is_file():
+        errors.append("missing session preparation guide: docs/session-preparation-guide.md")
+    else:
+        session_content = session_guide.read_text(encoding="utf-8")
+        for section in required_session_sections:
+            if section not in session_content:
+                errors.append(f"session preparation guide is missing section: {section}")
 
     metadata_spec = ROOT / "docs" / "metadaten-und-werte.md"
     if not metadata_spec.is_file():
@@ -132,6 +156,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the adventure structure guide")
     if "docs/adventure-audit-guide.md" not in agents_content:
         errors.append("AGENTS.md does not reference the adventure audit guide")
+    if "docs/session-preparation-guide.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the session preparation guide")
     if "docs/metadaten-und-werte.md" not in agents_content:
         errors.append("AGENTS.md does not reference the metadata specification")
     if "docs/beziehungen-und-speicherorte.md" not in agents_content:
@@ -202,6 +228,12 @@ def main() -> int:
     if audit_skill.is_file() and "docs/adventure-audit-guide.md" not in audit_skill.read_text(encoding="utf-8"):
         errors.append("dm-audit-adventure does not reference the adventure audit guide")
 
+    session_skill = SKILLS / "dm-prepare-session" / "SKILL.md"
+    if not session_skill.is_file():
+        errors.append("missing session preparation skill: dm-prepare-session")
+    elif "docs/session-preparation-guide.md" not in session_skill.read_text(encoding="utf-8"):
+        errors.append("dm-prepare-session does not reference the session preparation guide")
+
     validator_tests = ROOT / "tests" / "test_validate_adventure.py"
     if not validator_tests.is_file():
         errors.append("missing validator regression tests: tests/test_validate_adventure.py")
@@ -216,6 +248,28 @@ def main() -> int:
 
     if not (ROOT / "templates" / "visual-prompt.md").is_file():
         errors.append("missing visual prompt template: templates/visual-prompt.md")
+
+    session_template = ROOT / "templates" / "session-prep.md"
+    required_session_template_sections = (
+        "## Session metadata",
+        "## Scope",
+        "## Immediate starting state",
+        "## Possible transitions",
+        "## NPC quick reference",
+        "## Information and handouts",
+        "## Active pressure and consequences",
+        "## Outcome states",
+        "## Improvisation anchors",
+        "## Source register",
+        "## Pre-session review",
+    )
+    if not session_template.is_file():
+        errors.append("missing session preparation template: templates/session-prep.md")
+    else:
+        session_template_content = session_template.read_text(encoding="utf-8")
+        for section in required_session_template_sections:
+            if section not in session_template_content:
+                errors.append(f"session preparation template is missing section: {section}")
 
     plot_overview = ROOT / "templates" / "adventure" / "20-plot" / "overview.md"
     required_plot_sections = (

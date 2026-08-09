@@ -100,6 +100,14 @@ Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Code
 
 ## Vor einer Spielrunde
 
+Für einen konkreten Spielabend kann Codex eine kompakte Arbeitsmappe anlegen:
+
+> Bereite die nächste Session mit dem Fokus „…“ vor. Erwartete Orte sind …, aktive Plotfäden sind …. Bündele nur relevante Inhalte, verlinke jede kanonische Quelle und markiere Improvisationsideen als vorläufig.
+
+Die Arbeitsmappe liegt unter `adventure/60-sessions/` und fasst Startsituation, mögliche Übergänge, NPC-Kurzprofile, Hinweise, Handouts, laufenden Druck, Folgezustände und Improvisationsanker zusammen. Sie ist vollständig DM-only und keine zweite kanonische Beschreibung. Ein Quellenregister zeigt für jede verwendete Datei die aufgezeichnete Version, das `updated`-Datum und den Prüfstatus `current`, `changed`, `missing` oder `not-checked`.
+
+Der [Leitfaden für Session-Vorbereitung](session-preparation-guide.md) beschreibt Eingaben, Speicherort, Sichtbarkeit, Quellenpflege und Definition of Done. Änderungen an der Arbeitsmappe verändern kanonische Assets niemals automatisch.
+
 Beauftrage Codex mit einer Konsistenzprüfung. Der technische Validator und der fachliche Audit werden getrennt berichtet. Der [Fachliche Audit-Leitfaden](adventure-audit-guide.md) verlangt für jedes Finding Begründung, betroffene Dateien, Auswirkung und kleinste sinnvolle Korrekturrichtung. Ohne ausdrücklichen Fix-Auftrag verändert Codex keine Inhalte.
 
 Die Prüfung kontrolliert unter anderem:

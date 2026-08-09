@@ -14,7 +14,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for technic
    ```
 
 4. Keep technical diagnostics separate. Treat validator errors as blocking technical results; review warnings in context rather than automatically promoting them to findings.
-5. Apply the guide's sequence: canon and continuity; necessary information paths; every active plot thread; then table readiness. For contradictions, inspect every file that asserts the affected canon. Do not infer one correct version when the sources are ambiguous.
+5. Apply the guide's sequence: canon and continuity; necessary information paths; every active plot thread; table readiness; and any session package in scope. For contradictions, inspect every file that asserts the affected canon. Do not infer one correct version when the sources are ambiguous.
 6. Record each narrative finding as `blocking`, `important`, or `polish` with area, affected canon, rationale, every evidence path, impact, and smallest useful correction direction.
 7. Report in the guide's order, including coverage for every active plot thread and every necessary conclusion. If no finding exists, say so explicitly.
 8. Do not modify any file unless the user explicitly requests fixes. For a fix request, name selected finding IDs and affected files first, make the smallest coherent edits, update required indexes and change log, then rerun technical and affected narrative checks.

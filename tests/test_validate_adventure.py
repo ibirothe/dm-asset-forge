@@ -165,6 +165,23 @@ class AdventureValidationTests(unittest.TestCase):
         after = self.file_hashes()
         self.assertEqual(before, after)
 
+    def test_session_package_links_are_checked_without_asset_frontmatter(self) -> None:
+        package = self.adventure / "60-sessions/2026-08-09-hafen.md"
+        package.parent.mkdir(parents=True)
+        package.write_text(
+            "# Session prep: Hafen\n\n"
+            "- [Mara](../30-locations/hafen/npcs/mara/npc.md)\n"
+            "- [Missing source](../20-plot/threads/missing/plot-thread.md)\n",
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("60-sessions/2026-08-09-hafen.md [LINK_BROKEN]", rendered)
+        self.assertNotIn("60-sessions/2026-08-09-hafen.md [FM_MISSING]", rendered)
+        self.assertNotIn("60-sessions/2026-08-09-hafen.md [ASSET_TYPE]", rendered)
+
     def file_hashes(self) -> dict[Path, str]:
         return {
             path.relative_to(self.adventure): hashlib.sha256(path.read_bytes()).hexdigest()

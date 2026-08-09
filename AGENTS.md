@@ -8,6 +8,7 @@ Read `docs/asset-katalog.md` before selecting an asset type or canonical path. T
 Read `docs/asset-authoring-guide.md` before drafting or assessing asset content. Use its type-specific minimum content, table-use guidance, anti-patterns, and Definition of Done.
 Read `docs/adventure-structure-guide.md` before designing or assessing entry situations, choices, information paths, consequences, plot progression, or resolutions. Prepare state changes rather than a required scene sequence.
 Read `docs/adventure-audit-guide.md` before auditing an adventure. Keep validator diagnostics separate from narrative findings and never change content without an explicit fix request.
+Read `docs/session-preparation-guide.md` before creating or refreshing a session package. Treat it as a derived DM-only view whose canonical sources always take precedence.
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
@@ -47,6 +48,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
   - `adventure/30-locations/<location>/handouts/<handout>/handout.md`
 - Store factions and random tables under their catalog paths in `adventure/40-global/`, plot threads under `adventure/20-plot/threads/`, and events under `adventure/10-world/events/`.
 - Store each visual under `<subject-directory>/visuals/<visual>/visual.md` with its matching prompt file.
+- Store derived session packages under `adventure/60-sessions/<YYYY-MM-DD>-<session-slug>.md`. Keep them source-linked, visibly non-canonical, and separate from asset indexes.
 - Represent appearances elsewhere with relative Markdown links. Never duplicate the descriptive body.
 - Keep `primary_location` stable when only `current_location` or a temporary appearance changes. Move the canonical file only when editorial ownership changes permanently.
 - Store relationship targets as stable IDs in frontmatter and add relative Markdown links plus required back-references according to `docs/beziehungen-und-speicherorte.md`.
