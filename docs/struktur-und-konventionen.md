@@ -53,6 +53,24 @@ Das Verzeichnis `adventure/` entsteht bei der einmaligen Initialisierung. Titel 
 
 Der [geführte Intake-Workflow](intake-workflow.md) definiert, wie Originalanfrage, Extrakte, Klarstellungen, Annahmen, Entscheidungen und offene Fragen getrennt gepflegt werden.
 
+## Übersichten und Kanongrenze
+
+`adventure/README.md` ist die knappe Steuerübersicht für Vorbereitung und Tischgebrauch. Sie fasst Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Pacing-Verweis in kurzen Sätzen zusammen. Zentrale Assets werden direkt verlinkt; vollständige Beschreibungen bleiben in ihren kanonischen Dateien.
+
+Die fünf Dateien unter `adventure/50-indexes/` ergänzen diesen Einstieg typbezogen:
+
+| Index | Tischkontext |
+|---|---|
+| `locations.md` | Funktion und aktueller Druck des Orts |
+| `npcs.md` | primärer Ort und unmittelbar relevante Absicht |
+| `objects.md` | primärer Ort und unmittelbarer Einsatz |
+| `information.md` | Bedeutung für den Konflikt und unabhängige Fundwege |
+| `open-threads.md` | nächster Druck, minimaler Auflösungszustand und sichere Kürzung |
+
+Eine Kontextzelle enthält höchstens einen kurzen handlungsrelevanten Satz oder knappe Stichworte und keine zusätzlichen Links. Die einzige Zeilenverknüpfung unter `Link` führt zur kanonischen Datei. Bei Widerspruch gilt nicht die Zusammenfassung: Zuerst wird der Kanon im verlinkten Asset geklärt, danach werden README und Index nachgezogen.
+
+Für den Tischgebrauch gilt der Leseweg `README -> direkter Asset-Link` oder `README -> passender Index -> kanonisches Asset`. Ein zentrales Asset, das nur durch Volltextsuche oder blindes Durchsuchen von Ordnern auffindbar ist, ist nicht ausreichend navigiert.
+
 ## Benennung
 
 - Ordner, Dateien, IDs und YAML-Schlüssel: englisch
