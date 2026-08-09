@@ -18,6 +18,7 @@ Der verbindliche v1-Typenkatalog steht in [docs/asset-katalog.md](docs/asset-kat
 Das gemeinsame Metadatenschema und alle regelneutralen Werteskalen stehen in [docs/metadaten-und-werte.md](docs/metadaten-und-werte.md).
 Das verbindliche Ownership- und Beziehungsmodell steht in [docs/beziehungen-und-speicherorte.md](docs/beziehungen-und-speicherorte.md).
 Der geführte Erstlauf von freiem Welt- und Plottext zum strukturierten Abenteuer steht in [docs/intake-workflow.md](docs/intake-workflow.md).
+Regeln, Fehlercodes und Grenzen der technischen Prüfung stehen in [docs/validierung.md](docs/validierung.md).
 
 ## Grundprinzipien
 
@@ -56,6 +57,7 @@ python3 scripts/new_asset.py --type location --slug hafenviertel --title "Hafenv
 python3 scripts/new_asset.py --type npc --location hafenviertel --slug mara-veen --title "Mara Veen"
 python3 scripts/new_asset.py --type visual --subject npc-mara-veen --slug portrait --title "Porträt von Mara Veen"
 python3 scripts/validate_adventure.py
+python3 -m unittest discover -s tests -v
 ```
 
 `new_asset.py` unterstützt alle 14 Typen des Asset-Katalogs. `python3 scripts/new_asset.py --help` zeigt typspezifische Optionen und Beispiele. Es überschreibt keine bestehende Datei ohne `--overwrite` und pflegt Indizes oder Rückverweise nicht automatisch.

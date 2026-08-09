@@ -7,6 +7,7 @@ Use this repository to create and maintain system-neutral tabletop role-playing 
 Read `docs/asset-katalog.md` before selecting an asset type or canonical path. Treat it as the normative type source; do not substitute a different type merely because its template or generator already exists.
 Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Treat it as the normative source for shared keys, controlled values, qualitative scales, and missing-value semantics.
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
+Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
 
 ## Start a new adventure
 
@@ -71,6 +72,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 1. Resolve or record affected links and contradictions.
 2. Update indexes and `adventure/90-meta/change-log.md`.
 3. Run `python3 scripts/validate_adventure.py`.
-4. Report created or changed files, unresolved questions, and validation results.
+4. Treat errors as blocking and warnings as findings that require contextual review. Do not suppress or automatically repair a diagnostic without checking its rule and target file.
+5. Report created or changed files, unresolved questions, and validation results.
 
 Do not create example adventures in this template repository.

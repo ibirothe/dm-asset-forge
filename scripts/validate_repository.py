@@ -68,6 +68,10 @@ def main() -> int:
     if not intake_spec.is_file():
         errors.append("missing intake workflow: docs/intake-workflow.md")
 
+    validation_spec = ROOT / "docs" / "validierung.md"
+    if not validation_spec.is_file():
+        errors.append("missing validation guide: docs/validierung.md")
+
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
@@ -77,6 +81,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the relationship specification")
     if "docs/intake-workflow.md" not in agents_content:
         errors.append("AGENTS.md does not reference the intake workflow")
+    if "docs/validierung.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the validation guide")
 
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
@@ -128,6 +134,14 @@ def main() -> int:
     create_adventure_skill = SKILLS / "dm-create-adventure" / "SKILL.md"
     if create_adventure_skill.is_file() and "docs/intake-workflow.md" not in create_adventure_skill.read_text(encoding="utf-8"):
         errors.append("dm-create-adventure does not reference the intake workflow")
+
+    audit_skill = SKILLS / "dm-audit-adventure" / "SKILL.md"
+    if audit_skill.is_file() and "docs/validierung.md" not in audit_skill.read_text(encoding="utf-8"):
+        errors.append("dm-audit-adventure does not reference the validation guide")
+
+    validator_tests = ROOT / "tests" / "test_validate_adventure.py"
+    if not validator_tests.is_file():
+        errors.append("missing validator regression tests: tests/test_validate_adventure.py")
 
     required_templates = {f"{asset_type}.md" for asset_type in required_asset_types}
     existing_templates = {path.name for path in (ROOT / "templates" / "assets").glob("*.md")}
