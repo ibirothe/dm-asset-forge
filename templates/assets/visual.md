@@ -23,9 +23,28 @@ updated: {{DATE}}
 
 <!-- Kanonisches Subject-Asset relativ verlinken. -->
 
-## Canonical visual facts
+## Identity source
+
+<!-- Exakte kanonische Subject-Abschnitte relativ verlinken oder benennen. -->
+
+## Stable identity anchors
+
+## Depicted state
+
+- One-shot context:
+- State changes from baseline:
+- Canonical basis:
+
+## Allowed variation
 
 ## Player visibility
+
+## Generation approval
+
+- Status: not-approved
+- PNG state: not-created
+- Approved visual version: none
+- Approval: none
 
 ## Output
 
