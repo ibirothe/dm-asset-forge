@@ -145,6 +145,43 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertIn("[PLAYER_DM_SECTION]", rendered)
         self.assertIn("[PLAYER_INTERNAL_LINK]", rendered)
 
+    def test_current_visual_png_has_matching_approval_and_provenance(self) -> None:
+        visual = self.adventure / "30-locations/hafen/npcs/mara/visuals/portrait/visual.md"
+        png = visual.parent / "portrait.png"
+        source = visual.read_text(encoding="utf-8")
+        source = source.replace("provenance: unknown", "provenance: agent-generated")
+        source = source.replace("- Status: not-approved", "- Status: approved")
+        source = source.replace("- PNG state: not-created", "- PNG state: current")
+        source = source.replace("- Approved visual version: none", "- Approved visual version: 1")
+        source = source.replace("- Approval: none", "- Approval: User approved version 1 and its exact prompt")
+        visual.write_text(source, encoding="utf-8")
+        png.write_bytes(b"\x89PNG\r\n\x1a\n")
+
+        errors, warnings = self.validate()
+
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+
+    def test_visual_prompt_drift_and_unapproved_png_are_blocking(self) -> None:
+        visual = self.adventure / "30-locations/hafen/npcs/mara/visuals/portrait/visual.md"
+        prompt = visual.parent / "portrait.prompt.md"
+        png = visual.parent / "portrait.png"
+        prompt.write_text(
+            prompt.read_text(encoding="utf-8")
+            .replace("## Identity anchors\n", "")
+            .replace("`portrait.png`", "`wrong.png`"),
+            encoding="utf-8",
+        )
+        png.write_bytes(b"\x89PNG\r\n\x1a\n")
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[VISUAL_PROMPT_SECTION]", rendered)
+        self.assertIn("[VISUAL_PROMPT_OUTPUT]", rendered)
+        self.assertIn("[VISUAL_PNG_STATE]", rendered)
+        self.assertIn("[VISUAL_PNG_APPROVAL]", rendered)
+
     def test_unknown_key_and_invalid_enum_are_errors_with_hints(self) -> None:
         npc = self.adventure / "30-locations/hafen/npcs/mara/npc.md"
         content = npc.read_text(encoding="utf-8")
