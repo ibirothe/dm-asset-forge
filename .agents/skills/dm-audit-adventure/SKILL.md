@@ -25,7 +25,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
    - timelines, locations, ownership, and relationships agree;
    - assets marked `ready` are usable at the table;
    - system-specific mechanics have not entered the content;
-   - generated PNGs have matching image briefs and declared provenance.
+   - generated PNGs have matching Visual assets, prompt companions, and declared provenance.
 5. Classify findings as `blocking`, `important`, or `polish`. Cite exact relative file paths.
 6. If the user requested fixes, make the smallest coherent edits, update indexes and change log, then rerun validation. Otherwise, do not edit files.
 7. Report validation output, narrative findings, open questions, and the recommended next action.

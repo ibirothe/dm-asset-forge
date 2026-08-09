@@ -14,12 +14,19 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
    python3 scripts/init_adventure.py --slug <slug> --title "<title>"
    ```
 
-5. Preserve the complete original request unchanged in `00-input/original-request.md`. Extract only explicit world, plot, and constraint statements into their dedicated input files; store later user answers in `00-input/clarifications.md`.
-6. Classify derived work as established fact, clarification, assumption, decision, or open question. Store each category in the file required by the intake workflow and never present a proposed assumption as established canon.
-7. Build the restrained world and plot overviews. Create only the plot threads, locations, and assets necessary for the entry situation and central conflict, using `scripts/new_asset.py` for supported types.
-8. Assign canonical ownership and add required links. Update all five indexes, the adventure README, and the change log.
-9. Do not generate images during initialization.
-10. Check every item in the intake Definition of Done. Run `python3 scripts/validate_adventure.py` and fix structural errors.
-11. Return the German completion summary in the exact content order defined by the intake workflow: created state, confirmed basis, assumptions, open questions, validation, and prioritized next steps.
+5. While `adventure/10-world/overview.md` is still the untouched scaffold placeholder, replace it with the canonical World template:
+
+   ```bash
+   python3 scripts/new_asset.py --type world --slug <slug> --title "<title>" --overwrite
+   ```
+
+   Do not use `--overwrite` if the file already contains authored material.
+6. Preserve the complete original request unchanged in `00-input/original-request.md`. Extract only explicit world, plot, and constraint statements into their dedicated input files; store later user answers in `00-input/clarifications.md`.
+7. Classify derived work as established fact, clarification, assumption, decision, or open question. Store each category in the file required by the intake workflow and never present a proposed assumption as established canon.
+8. Build the restrained world and plot overviews. Create only the plot threads, locations, and assets necessary for the entry situation and central conflict, using `scripts/new_asset.py` for all catalog types.
+9. Assign canonical ownership and add required links. Update all five indexes, the adventure README, and the change log.
+10. Do not generate images during initialization.
+11. Check every item in the intake Definition of Done. Run `python3 scripts/validate_adventure.py` and fix structural errors.
+12. Return the German completion summary in the exact content order defined by the intake workflow: created state, confirmed basis, assumptions, open questions, validation, and prioritized next steps.
 
 Do not introduce system-specific rules, statistics, difficulty values, or named mechanics. Do not create an example adventure when the user has not supplied a world and plot brief. If `adventure/` already exists, stop initialization and offer to continue editing the existing adventure.

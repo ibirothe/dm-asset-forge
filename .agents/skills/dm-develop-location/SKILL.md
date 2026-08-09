@@ -1,6 +1,6 @@
 ---
 name: dm-develop-location
-description: Develop or revise one location in an existing system-neutral tabletop RPG adventure, grouping its NPCs, objects, information, encounters, handouts, and visual briefs under that location. Use for location design, scene hubs, settlements, rooms, regions, and location-centered content; do not use to initialize a new adventure.
+description: Develop or revise one location in an existing system-neutral tabletop RPG adventure, grouping its scenes, NPCs, creatures, objects, information, encounters, handouts, and visuals under that location. Use for location design, scene hubs, settlements, rooms, regions, and location-centered content; do not use to initialize a new adventure.
 ---
 
 # Develop a location
@@ -14,7 +14,7 @@ description: Develop or revise one location in an existing system-neutral tablet
    ```
 
 4. Give the location a table purpose, immediate impression, sensory identity, access boundaries, usable areas, pressures, and possible change over time. Set qualitative metadata only with documented values.
-5. Classify local assets according to the catalog. Create them only when they serve the location or an established plot need. Use `scripts/new_asset.py` and pass `--location <location-slug>` when the selected type is currently supported.
+5. Classify local assets according to the catalog. Create them only when they serve the location or an established plot need. Use `scripts/new_asset.py` for every selected type and pass `--location <location-slug>` for scenes, NPCs, creatures, objects, information, encounters, and handouts.
 6. Keep each owned asset canonical under this location. Link visiting, mobile, or otherwise externally owned assets and record only location-specific appearance context instead of copying them.
 7. Ensure information has a discovery path and consequence; encounters have a trigger, intentions, leverage, escalation, and outcomes; NPCs have motivation and actionable knowledge.
 8. Update the location body, relevant `50-indexes/` files, metadata logs, and cross-links.

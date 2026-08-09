@@ -99,7 +99,7 @@ Ortspezifischer Kontext darf am auftretenden Ort stehen, etwa „Mara wartet hie
 | `related_factions` | Asset → `faction` | Direkte Fraktionsrelevanz. |
 | `part_of` | `object` → `object` | Zugehörigkeit eines eigenständig relevanten Teils. |
 | `components` | `object` → Liste von `object` | Eigenständig relevante Bestandteile. |
-| `subject_asset` | `visual` oder `image-brief` → Asset | Genau ein dargestelltes Subject-Asset. |
+| `subject_asset` | `visual` → Asset | Genau ein dargestelltes Subject-Asset. |
 
 Freie zusätzliche Beziehungen werden im Text mit relativen Links beschrieben. Ein neuer strukturierter Schlüssel wird erst in der Metadatenspezifikation definiert, bevor Templates ihn verwenden.
 
@@ -120,7 +120,7 @@ Die strukturierte Beziehung wird an der Source geführt. Ein Rückverweis ist ei
 | `origin_location` | optional; erforderlich, wenn die Herkunft am Ort selbst relevant ist. |
 | `part_of` / `components` | erforderlich und beidseitig in Metadaten konsistent. |
 | `reveals` | erforderlich: Information verlinkt das offenbarende Handout. |
-| `subject_asset` | erforderlich: Subject-Asset verlinkt das Visual oder Bildbriefing. |
+| `subject_asset` | erforderlich: Subject-Asset verlinkt das Visual. |
 | `owner`, `factions`, `known_by` | erforderlich, wenn beide Seiten als Assets existieren und die Beziehung kanonisch ist. |
 | `participants`, `related_threads`, `related_factions` | Rückverweis erforderlich, wenn die Beziehung dauerhaft oder für Navigation wesentlich ist; sonst optional. |
 

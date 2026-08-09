@@ -15,7 +15,7 @@ Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownershi
 3. Before interpreting the content, choose a lowercase ASCII kebab-case slug, initialize the scaffold, and preserve the complete original request unchanged in `adventure/00-input/original-request.md`.
 4. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
 5. Store clarifications, assumptions, decisions, and open questions in their separate canonical files. Never present an unconfirmed assumption as an established fact.
-6. Create only the locations and assets required for the first playable structure. Use `scripts/new_asset.py`; do not copy template files manually when the script supports the asset type.
+6. Create only the locations and assets required for the first playable structure. Use `scripts/new_asset.py`; it supports all 14 catalog types. Do not copy asset templates manually.
 7. Do not generate images during initialization.
 
 ## Read before editing
@@ -33,12 +33,15 @@ Do not scan every asset by default. Expand the read set only when relationships 
 ## Canonical storage
 
 - Store a local asset exactly once under its primary location:
+  - `adventure/30-locations/<location>/scenes/<scene>/scene.md`
   - `adventure/30-locations/<location>/npcs/<npc>/npc.md`
+  - `adventure/30-locations/<location>/creatures/<creature>/creature.md`
   - `adventure/30-locations/<location>/objects/<object>/object.md`
   - `adventure/30-locations/<location>/information/<information>/information.md`
   - `adventure/30-locations/<location>/encounters/<encounter>/encounter.md`
   - `adventure/30-locations/<location>/handouts/<handout>/handout.md`
-- Store factions under `adventure/40-global/factions/` and plot threads under `adventure/20-plot/threads/`.
+- Store factions and random tables under their catalog paths in `adventure/40-global/`, plot threads under `adventure/20-plot/threads/`, and events under `adventure/10-world/events/`.
+- Store each visual under `<subject-directory>/visuals/<visual>/visual.md` with its matching prompt file.
 - Represent appearances elsewhere with relative Markdown links. Never duplicate the descriptive body.
 - Keep `primary_location` stable when only `current_location` or a temporary appearance changes. Move the canonical file only when editorial ownership changes permanently.
 - Store relationship targets as stable IDs in frontmatter and add relative Markdown links plus required back-references according to `docs/beziehungen-und-speicherorte.md`.
@@ -59,7 +62,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 ## Images
 
 - Store final visual assets as `.png`.
-- Store a neighboring `.prompt.md` image brief containing subject, composition, style, exclusions, output path, and provenance.
+- Store visual metadata in `visual.md` and a neighboring `<slug>.prompt.md` brief containing composition, style, exclusions, and output path.
 - Do not claim an image exists until the PNG file exists.
 - Do not generate or replace images unless the user requests it or approves a proposed image pass.
 

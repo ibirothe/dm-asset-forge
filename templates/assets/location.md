@@ -5,7 +5,7 @@ title: "{{TITLE}}"
 status: draft
 version: 1
 scope: local
-parent_location: null
+parent_location: {{PARENT_LOCATION_ID}}
 function: unknown
 danger: unknown
 accessibility: unknown

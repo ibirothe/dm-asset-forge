@@ -129,20 +129,16 @@ def main() -> int:
     if create_adventure_skill.is_file() and "docs/intake-workflow.md" not in create_adventure_skill.read_text(encoding="utf-8"):
         errors.append("dm-create-adventure does not reference the intake workflow")
 
-    required_templates = {
-        "location.md",
-        "npc.md",
-        "object.md",
-        "information.md",
-        "encounter.md",
-        "handout.md",
-        "faction.md",
-        "plot-thread.md",
-        "image-brief.md",
-    }
+    required_templates = {f"{asset_type}.md" for asset_type in required_asset_types}
     existing_templates = {path.name for path in (ROOT / "templates" / "assets").glob("*.md")}
     for missing in sorted(required_templates - existing_templates):
         errors.append(f"missing asset template: templates/assets/{missing}")
+    unexpected_templates = existing_templates - required_templates
+    for unexpected in sorted(unexpected_templates):
+        errors.append(f"unexpected asset template: templates/assets/{unexpected}")
+
+    if not (ROOT / "templates" / "visual-prompt.md").is_file():
+        errors.append("missing visual prompt template: templates/visual-prompt.md")
 
     if errors:
         for error in errors:

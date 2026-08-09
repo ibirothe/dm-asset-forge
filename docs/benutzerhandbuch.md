@@ -22,6 +22,27 @@ Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt
 - „Erstelle Bildbriefings für die wichtigsten Orte; noch keine Bilder erzeugen.“
 - „Prüfe das Abenteuer auf Widersprüche, tote Hinweise und nicht verknüpfte Assets.“
 
+## Assets anlegen
+
+Der Generator unterstützt alle 14 Typen des [Asset-Katalogs](asset-katalog.md). Beispiele:
+
+```bash
+python3 scripts/new_asset.py --type location --slug alter-hafen --title "Alter Hafen"
+python3 scripts/new_asset.py --type npc --location alter-hafen --slug mara-veen --title "Mara Veen"
+python3 scripts/new_asset.py --type faction --slug graue-laterne --title "Graue Laterne"
+python3 scripts/new_asset.py --type visual --subject npc-mara-veen --slug portrait --title "Porträt von Mara Veen"
+```
+
+Lokale Assets benötigen `--location`; ein Visual benötigt mit `--subject` die ID eines bestehenden Assets. Eine Location kann mit `--parent-location` hierarchisch eingeordnet werden. Der Generator prüft Argumente, Beziehungen, IDs und Zielpfade vor dem Schreiben. Bestehende Dateien werden nur mit dem ausdrücklich gesetzten `--overwrite` ersetzt.
+
+Nach der Initialisierung wird der World-Singleton einmalig aus seinem Asset-Template erzeugt:
+
+```bash
+python3 scripts/new_asset.py --type world --slug <adventure-slug> --title "<title>" --overwrite
+```
+
+`--overwrite` ist hier nur für die noch unveränderte Platzhalterdatei des Scaffolds vorgesehen. Der Generator aktualisiert keine Indizes, Rückverweise oder Inhalte automatisch; diese werden anschließend durch Codex gepflegt. Alle Optionen zeigt `python3 scripts/new_asset.py --help`.
+
 ## Mit vorhandenen Dateien arbeiten
 
 Codex liest zuerst Übersicht, Indizes und den betroffenen Ort. Es folgt Links nur so weit, wie es für die Aufgabe nötig ist. Dadurch bleiben Änderungen fokussiert und bestehende Inhalte werden nicht unnötig neu formuliert.
@@ -53,7 +74,7 @@ Leere Zeichenketten werden nicht als Platzhalter verwendet. Dadurch kann Codex o
 
 ## Bilder
 
-Bilddateien werden als PNG gespeichert. Neben jedem Bild liegt ein gleichnamiges Bildbriefing mit der Endung `.prompt.md`. So kann das Motiv später reproduziert oder gezielt überarbeitet werden.
+Bilddateien werden als PNG gespeichert. Ein Visual-Ordner enthält das kanonische `visual.md`, ein gleichnamiges Bildbriefing mit der Endung `.prompt.md` und optional die PNG-Datei. So kann das Motiv später reproduziert oder gezielt überarbeitet werden.
 
 Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Codex darf erst dann behaupten, dass ein Bild vorhanden ist, wenn die PNG-Datei tatsächlich im Projekt liegt.
 
