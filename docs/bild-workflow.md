@@ -90,7 +90,7 @@ Wird die Bildgenerierung abgebrochen oder liefert sie keine gespeicherte PNG-Dat
 
 ## Karten und Handouts
 
-Präzise Karten, Diagramme oder textreiche Handouts werden nicht als freie Illustration entworfen. Struktur und Text entstehen zuerst in Markdown. Für `player.png` gilt zusätzlich der Freigabe- und Safety-Workflow aus [Spielerfreigabe für Handouts](player-handout-workflow.md).
+Präzise Karten, Diagramme oder textreiche Handouts werden nicht als freie Illustration entworfen. Struktur und Text entstehen zuerst in Markdown. Eine Handout-Bildfassung ist ein reguläres Visual mit dem Handout als Subject und liegt unter dessen `visuals/<slug>/`; eine PNG direkt neben `handout.md` ist unzulässig. `Identity source` verweist auf die freigegebene `player.md`. Zusätzlich gilt deren Freigabe- und Safety-Workflow aus [Spielerfreigabe für Handouts](player-handout-workflow.md).
 
 ## Definition of Done
 
