@@ -256,6 +256,32 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertIn("[INDEX_DUPLICATE]", rendered)
         self.assertIn("[BACKLINK_MISSING]", rendered)
 
+    def test_renamed_retired_asset_keeps_stable_identity_and_index(self) -> None:
+        npc = self.adventure / "30-locations/hafen/npcs/mara/npc.md"
+        npc.write_text(
+            npc.read_text(encoding="utf-8")
+            .replace('title: "Mara"', 'title: "Mara Veen"')
+            .replace("status: draft", "status: retired", 1)
+            .replace("version: 1", "version: 2", 1)
+            .replace("# Mara\n", "# Mara Veen\n", 1),
+            encoding="utf-8",
+        )
+        index = self.adventure / "50-indexes/npcs.md"
+        index.write_text(
+            index.read_text(encoding="utf-8").replace(
+                "| npc-mara | Mara | draft | loc-hafen | [Mara]",
+                "| npc-mara | Mara Veen | retired | loc-hafen | [Mara Veen]",
+            ),
+            encoding="utf-8",
+        )
+
+        errors, warnings = self.validate()
+
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+        self.assertIn("id: npc-mara", npc.read_text(encoding="utf-8"))
+        self.assertEqual(npc.parent.name, "mara")
+
     def file_hashes(self) -> dict[Path, str]:
         return {
             path.relative_to(self.adventure): hashlib.sha256(path.read_bytes()).hexdigest()

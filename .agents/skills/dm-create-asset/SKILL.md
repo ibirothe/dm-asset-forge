@@ -7,6 +7,7 @@ description: Create or revise one of the 14 structured, system-neutral Dungeon M
 
 1. Read `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/adventure-structure-guide.md`, `docs/metadaten-und-werte.md`, and `docs/beziehungen-und-speicherorte.md`, the target adventure overview, the relevant index, and the minimum linked context.
 2. Determine the asset type, scope, canonical owner, required relations, reverse-link policy, and canonical path from the normative references. Do not substitute another type because its generator already exists.
+   For a title change, ownership move, retire request, or asset combination, use the exact lifecycle workflow in `docs/beziehungen-und-speicherorte.md`. Complete and report its preflight before writing. Preserve stable identity, stop on ambiguity, and require the user's explicit choice of surviving ID, path, and canon before combining assets.
 3. Create any of the 14 catalog types with the asset generator:
 
    ```bash

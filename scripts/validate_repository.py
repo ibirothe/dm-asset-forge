@@ -114,6 +114,17 @@ def main() -> int:
     relationship_spec = ROOT / "docs" / "beziehungen-und-speicherorte.md"
     if not relationship_spec.is_file():
         errors.append("missing relationship specification: docs/beziehungen-und-speicherorte.md")
+    else:
+        relationship_content = relationship_spec.read_text(encoding="utf-8")
+        for section in (
+            "### Gemeinsamer Preflight",
+            "### Titel ändern",
+            "### Dauerhafte Änderung der Ownership",
+            "### Asset retiren",
+            "### Assets zusammenführen",
+        ):
+            if section not in relationship_content:
+                errors.append(f"relationship specification is missing lifecycle section: {section}")
 
     intake_spec = ROOT / "docs" / "intake-workflow.md"
     if not intake_spec.is_file():
