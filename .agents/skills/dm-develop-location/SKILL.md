@@ -17,7 +17,7 @@ description: Develop or revise one location in an existing system-neutral tablet
 5. Classify local assets according to the catalog. Create them only when they serve the location or an established plot need. Use `scripts/new_asset.py` for every selected type and pass `--location <location-slug>` for scenes, NPCs, creatures, objects, information, encounters, and handouts.
 6. Keep each owned asset canonical under this location. Link visiting, mobile, or otherwise externally owned assets and record only location-specific appearance context instead of copying them.
 7. Apply the matching authoring-guide section to every local asset and the adventure-structure guide to local Scenes, Encounters, Information, Events, NPCs, and Factions. Provide multiple approaches and transitions as changed states; do not turn the location into a required scene sequence. Keep assets `draft` until their Definition of Done is met.
-8. Update the location body, relevant `50-indexes/` files, metadata logs, and cross-links.
+8. Inspect the navigation files reported by `scripts/new_asset.py`. Preserve its idempotent Location index and deterministic owner or Parent links; add only missing contextual cross-links and never duplicate an existing target. Update metadata logs and any other affected indexes.
 9. Run the adventure validator and report changed files plus unresolved continuity questions.
 
 Keep all descriptions system-neutral and table-usable. Do not invent a complete cast or exhaustive room list unless the user requests that scope.

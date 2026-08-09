@@ -79,6 +79,14 @@ class AdventureValidationTests(unittest.TestCase):
     def validate(self) -> tuple[list[str], list[str]]:
         return VALIDATOR.validate(self.adventure)
 
+    @staticmethod
+    def link_count(source: Path, target: Path) -> int:
+        return sum(
+            1
+            for raw_target in VALIDATOR.LINK.findall(source.read_text(encoding="utf-8"))
+            if VALIDATOR.resolve_link(source, raw_target) == target.resolve()
+        )
+
     def test_all_fourteen_types_pass_at_canonical_paths(self) -> None:
         self.create("scene", "ankunft", "Ankunft", "--location", "hafen")
         self.create("creature", "nebelvogel", "Nebelvogel", "--location", "hafen")
@@ -164,6 +172,89 @@ class AdventureValidationTests(unittest.TestCase):
         self.validate()
         after = self.file_hashes()
         self.assertEqual(before, after)
+
+    def test_generator_keeps_indexes_and_backlinks_idempotent(self) -> None:
+        location = self.adventure / "30-locations/hafen/location.md"
+        npc = self.adventure / "30-locations/hafen/npcs/mara/npc.md"
+        information = self.adventure / "30-locations/hafen/information/route/information.md"
+        visual = npc.parent / "visuals/portrait/visual.md"
+        npc_index = self.adventure / "50-indexes/npcs.md"
+        information_index = self.adventure / "50-indexes/information.md"
+        faction_index = self.adventure / "40-global/factions/index.md"
+
+        self.assertEqual(self.link_count(location, npc), 1)
+        self.assertEqual(self.link_count(npc, location), 1)
+        self.assertEqual(self.link_count(location, information), 1)
+        self.assertEqual(self.link_count(information, location), 1)
+        self.assertEqual(self.link_count(npc, visual), 1)
+        self.assertEqual(self.link_count(visual, npc), 1)
+        self.assertIn("| npc-mara | Mara | draft | loc-hafen |", npc_index.read_text(encoding="utf-8"))
+        self.assertIn("| info-route | Route | established | loc-hafen |", information_index.read_text(encoding="utf-8"))
+        self.assertIn("| fac-laterne | Laterne | draft |", faction_index.read_text(encoding="utf-8"))
+
+        self.create("location", "kai", "Kai", "--parent-location", "hafen")
+        child = self.adventure / "30-locations/kai/location.md"
+        self.assertEqual(self.link_count(location, child), 1)
+        self.assertEqual(self.link_count(child, location), 1)
+
+        self.create("npc", "mara", "Mara Neu", "--location", "hafen", "--overwrite")
+        self.assertEqual(self.link_count(location, npc), 1)
+        self.assertEqual(self.link_count(npc, location), 1)
+        self.assertEqual(npc_index.read_text(encoding="utf-8").count("npcs/mara/npc.md"), 1)
+        self.assertIn("| npc-mara | Mara Neu | draft | loc-hafen |", npc_index.read_text(encoding="utf-8"))
+        self.assertIn("[Mara Neu](npcs/mara/npc.md)", location.read_text(encoding="utf-8"))
+
+    def test_validator_detects_navigation_drift(self) -> None:
+        location = self.adventure / "30-locations/hafen/location.md"
+        npc_index = self.adventure / "50-indexes/npcs.md"
+        information_index = self.adventure / "50-indexes/information.md"
+        faction_index = self.adventure / "40-global/factions/index.md"
+
+        npc_index.write_text(
+            npc_index.read_text(encoding="utf-8").replace(
+                "| npc-mara | Mara | draft | loc-hafen |",
+                "| npc-mara | Alte Mara | ready | loc-hafen |",
+            ),
+            encoding="utf-8",
+        )
+        faction_index.write_text(
+            "\n".join(
+                line
+                for line in faction_index.read_text(encoding="utf-8").splitlines()
+                if "laterne/faction.md" not in line
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        information_row = next(
+            line
+            for line in information_index.read_text(encoding="utf-8").splitlines()
+            if "information/route/information.md" in line
+        )
+        information_index.write_text(
+            information_index.read_text(encoding="utf-8").rstrip()
+            + "\n"
+            + information_row
+            + "\n",
+            encoding="utf-8",
+        )
+        location.write_text(
+            "\n".join(
+                line
+                for line in location.read_text(encoding="utf-8").splitlines()
+                if "npcs/mara/npc.md" not in line
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[INDEX_STALE]", rendered)
+        self.assertIn("[INDEX_MISSING]", rendered)
+        self.assertIn("[INDEX_DUPLICATE]", rendered)
+        self.assertIn("[BACKLINK_MISSING]", rendered)
 
     def file_hashes(self) -> dict[Path, str]:
         return {

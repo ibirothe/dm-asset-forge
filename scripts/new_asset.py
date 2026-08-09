@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -18,6 +19,8 @@ SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 ID_FIELD = re.compile(r"^id:\s*[\"']?([^\"'\s]+)[\"']?\s*$", re.MULTILINE)
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
+MARKDOWN_LINK = re.compile(r"(?<!!)\[([^\]]*)\]\(([^)]+)\)")
+SECTION = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
 
 
 @dataclass(frozen=True)
@@ -72,6 +75,38 @@ LOCATION_CHILD_DIRS = (
     "visuals",
 )
 
+LOCATION_SECTION_BY_TYPE = {
+    "scene": "Areas",
+    "npc": "Inhabitants",
+    "creature": "Inhabitants",
+    "object": "Objects",
+    "information": "Information and secrets",
+    "encounter": "Encounters and pressures",
+    "handout": "Information and secrets",
+}
+
+ASSET_LOCATION_SECTION = {
+    "scene": "Related assets",
+    "npc": "Locations and movement",
+    "creature": "Habitat and movement",
+    "object": "Location, ownership, and components",
+    "information": "Discovery points",
+    "encounter": "Follow-up links",
+    "handout": "Delivery",
+}
+
+INDEX_PATHS = {
+    "location": (Path("50-indexes/locations.md"),),
+    "npc": (Path("50-indexes/npcs.md"),),
+    "object": (Path("50-indexes/objects.md"),),
+    "information": (Path("50-indexes/information.md"),),
+    "plot-thread": (
+        Path("20-plot/threads/index.md"),
+        Path("50-indexes/open-threads.md"),
+    ),
+    "faction": (Path("40-global/factions/index.md"),),
+}
+
 
 def require_slug(parser: argparse.ArgumentParser, label: str, value: str) -> None:
     if not SLUG_PATTERN.fullmatch(value):
@@ -86,6 +121,138 @@ def frontmatter_id(path: Path) -> str | None:
         return None
     id_match = ID_FIELD.search(match.group(1))
     return id_match.group(1) if id_match else None
+
+
+def frontmatter_value(path: Path, key: str) -> str | None:
+    if not path.is_file():
+        return None
+    match = FRONTMATTER.match(path.read_text(encoding="utf-8"))
+    if not match:
+        return None
+    field = re.search(rf"^{re.escape(key)}:\s*(.*?)\s*$", match.group(1), re.MULTILINE)
+    if not field:
+        return None
+    value = field.group(1).strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+        value = value[1:-1]
+    return value.replace('\\"', '"').replace("\\\\", "\\")
+
+
+def relative_target(source: Path, target: Path) -> str:
+    return os.path.relpath(target, source.parent).replace(os.sep, "/")
+
+
+def link_resolves_to(source: Path, raw_target: str, target: Path) -> bool:
+    value = raw_target.split("#", 1)[0].strip().strip("<>")
+    if not value or value.startswith(("http://", "https://", "mailto:")):
+        return False
+    return (source.parent / value.replace("%20", " ")).resolve() == target.resolve()
+
+
+def upsert_section_link(
+    parser: argparse.ArgumentParser,
+    content: str,
+    source: Path,
+    target: Path,
+    label: str,
+    heading: str,
+    descriptor: str | None = None,
+    allow_new_section: bool = False,
+) -> str:
+    rendered_link = f"[{label}]({relative_target(source, target)})"
+    for match in MARKDOWN_LINK.finditer(content):
+        if link_resolves_to(source, match.group(2), target):
+            return content[: match.start()] + rendered_link + content[match.end() :]
+
+    entry = f"- {descriptor}: {rendered_link}" if descriptor else f"- {rendered_link}"
+    section = re.search(
+        rf"(^##\s+{re.escape(heading)}\s*$)(.*?)(?=^##\s+|\Z)",
+        content,
+        re.MULTILINE | re.DOTALL,
+    )
+    if section is None:
+        if allow_new_section:
+            return content.rstrip() + f"\n\n## {heading}\n\n{entry}\n"
+        parser.error(f"navigation section '## {heading}' not found: {source}")
+
+    body = section.group(2).rstrip()
+    replacement = body + f"\n\n{entry}\n\n"
+    return content[: section.start(2)] + replacement + content[section.end(2) :]
+
+
+def update_existing_link(
+    parser: argparse.ArgumentParser,
+    source: Path,
+    target: Path,
+    label: str,
+    heading: str,
+    descriptor: str | None = None,
+    allow_new_section: bool = False,
+) -> bool:
+    content = source.read_text(encoding="utf-8")
+    updated = upsert_section_link(
+        parser,
+        content,
+        source,
+        target,
+        label,
+        heading,
+        descriptor,
+        allow_new_section,
+    )
+    if updated == content:
+        return False
+    source.write_text(updated, encoding="utf-8")
+    return True
+
+
+def index_row(
+    asset_type: str,
+    asset_id: str,
+    title: str,
+    target: Path,
+    index: Path,
+    location_id: str | None,
+) -> str:
+    link = f"[{title}]({relative_target(index, target)})"
+    if asset_type == "location":
+        return f"| {asset_id} | {title} | draft | unknown | {link} |"
+    if asset_type in {"npc", "object"}:
+        return f"| {asset_id} | {title} | draft | {location_id} | {link} |"
+    if asset_type == "information":
+        return f"| {asset_id} | {title} | established | {location_id} | {link} |"
+    return f"| {asset_id} | {title} | draft | — | {link} |"
+
+
+def upsert_index_row(index: Path, target: Path, asset_id: str, row: str) -> bool:
+    content = index.read_text(encoding="utf-8")
+    lines = content.splitlines()
+    updated: list[str] = []
+    replaced = False
+    for line in lines:
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        target_match = any(
+            link_resolves_to(index, match.group(2), target)
+            for match in MARKDOWN_LINK.finditer(line)
+        )
+        id_match = bool(cells) and cells[0] == asset_id
+        if target_match or id_match:
+            if not replaced:
+                updated.append(row)
+                replaced = True
+            continue
+        updated.append(line)
+    if not replaced:
+        insert_at = max(
+            (number for number, line in enumerate(updated) if line.lstrip().startswith("|")),
+            default=len(updated) - 1,
+        ) + 1
+        updated.insert(insert_at, row)
+    rendered = "\n".join(updated).rstrip() + "\n"
+    if rendered == content:
+        return False
+    index.write_text(rendered, encoding="utf-8")
+    return True
 
 
 def find_asset_paths(asset_id: str) -> list[Path]:
@@ -129,6 +296,8 @@ def validate_arguments(parser: argparse.ArgumentParser, args: argparse.Namespace
         parser.error("--title must not be empty")
     if "\n" in args.title or "\r" in args.title:
         parser.error("--title must be a single line")
+    if "|" in args.title or "]" in args.title:
+        parser.error("--title must not contain '|' or ']' because navigation uses Markdown tables and links")
 
     local_types = set(LOCAL_DIRS)
     if args.type in local_types and not args.location:
@@ -287,6 +456,97 @@ def main() -> int:
         else None
     )
 
+    navigation_updates: list[tuple[Path, Path, str, str, str | None, bool]] = []
+    if args.type in LOCAL_DIRS:
+        assert args.location is not None
+        owner = location_file(args.location)
+        owner_title = frontmatter_value(owner, "title") or args.location
+        content = upsert_section_link(
+            parser,
+            content,
+            target,
+            owner,
+            owner_title,
+            ASSET_LOCATION_SECTION[args.type],
+            "Primary location",
+        )
+        navigation_updates.append(
+            (
+                owner,
+                target,
+                args.title.strip(),
+                LOCATION_SECTION_BY_TYPE[args.type],
+                None,
+                False,
+            )
+        )
+
+    if args.type == "location" and args.parent_location:
+        parent = location_file(args.parent_location)
+        parent_title = frontmatter_value(parent, "title") or args.parent_location
+        content = upsert_section_link(
+            parser,
+            content,
+            target,
+            parent,
+            parent_title,
+            "Connections",
+            "Parent location",
+        )
+        navigation_updates.append(
+            (parent, target, args.title.strip(), "Areas", "Child location", False)
+        )
+
+    if args.type == "visual" and subject_path is not None:
+        subject_title = frontmatter_value(subject_path, "title") or args.subject or "Subject"
+        content = upsert_section_link(
+            parser,
+            content,
+            target,
+            subject_path,
+            subject_title,
+            "Subject",
+            "Canonical subject",
+        )
+        subject_content = subject_path.read_text(encoding="utf-8")
+        subject_headings = set(SECTION.findall(subject_content))
+        visual_heading = (
+            "Visual reference"
+            if "Visual reference" in subject_headings
+            else "Related assets"
+            if "Related assets" in subject_headings
+            else "Visuals"
+        )
+        navigation_updates.append(
+            (
+                subject_path,
+                target,
+                args.title.strip(),
+                visual_heading,
+                "Visual",
+                visual_heading == "Visuals",
+            )
+        )
+
+    index_updates: list[tuple[Path, str]] = []
+    for relative_index in INDEX_PATHS.get(args.type, ()):
+        index = ADVENTURE / relative_index
+        if not index.is_file():
+            parser.error(f"navigation index not found: {index}")
+        index_updates.append(
+            (
+                index,
+                index_row(
+                    args.type,
+                    asset_id,
+                    args.title.strip(),
+                    target,
+                    index,
+                    f"loc-{args.location}" if args.location else None,
+                ),
+            )
+        )
+
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(content, encoding="utf-8")
 
@@ -299,9 +559,27 @@ def main() -> int:
     if visual_prompt_target is not None and visual_prompt_content is not None:
         visual_prompt_target.write_text(visual_prompt_content, encoding="utf-8")
 
+    changed_navigation: set[Path] = set()
+    for source, linked_target, label, heading, descriptor, allow_new_section in navigation_updates:
+        if update_existing_link(
+            parser,
+            source,
+            linked_target,
+            label,
+            heading,
+            descriptor,
+            allow_new_section,
+        ):
+            changed_navigation.add(source)
+    for index, row in index_updates:
+        if upsert_index_row(index, target, asset_id, row):
+            changed_navigation.add(index)
+
     print(target.relative_to(ROOT))
     if visual_prompt_target is not None:
         print(visual_prompt_target.relative_to(ROOT))
+    for path in sorted(changed_navigation):
+        print(path.relative_to(ROOT))
     return 0
 
 

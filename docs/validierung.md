@@ -29,6 +29,7 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Pfade | kanonischer Pfad aus Typ, ID, primärem Ort oder Visual-Subject |
 | Inhalt | erforderliche `##`-Abschnitte des passenden Asset-Templates |
 | Beziehungen | existierende Ziel-ID und erlaubter Zieltyp für strukturierte Relationsfelder |
+| Navigation | vollständige, eindeutige und aktuelle Indexzeilen sowie relative Links und verpflichtende Gegenlinks strukturierter Beziehungen |
 | Referenzen | doppelte IDs, defekte relative Markdown-Links und verwaiste Visual-Prompts |
 | Bilder | ausschließlich PNG-Dateien und PNG-Verweise; passender Prompt für jedes Visual |
 | Hygiene | verbliebene Template-Platzhalter und mögliche systemspezifische Begriffe |
@@ -51,12 +52,12 @@ ERROR: 30-locations/hafen/npcs/mara/npc.md [FM_ENUM]: invalid 'reach' value 'gal
 
 - `ERROR` kennzeichnet eine verletzte Struktur-, Schema-, Pfad- oder Integritätsregel und blockiert den erfolgreichen Abschluss.
 - `WARNING` kennzeichnet einen prüfbedürftigen Fund, der nicht zweifelsfrei falsch ist. Systemspezifische Begriffe sind Warnungen, weil sie auch in Zitaten oder bewussten Erläuterungen vorkommen können.
-- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `SECTION_REQUIRED` oder `LINK_BROKEN`.
+- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED` oder `LINK_BROKEN`.
 - `Fix` nennt die kleinste typische Korrektur. Vor einer Änderung bleibt der fachliche Kontext zu prüfen.
 
 ## Grenzen
 
-Der Validator prüft keine Dramaturgie, Originalität, Spielbarkeit, Hinweisredundanz oder inhaltliche Plausibilität. Kontinuität, Informationswege, Spielerwirksamkeit und Tischreife bearbeitet der Skill `dm-audit-adventure` nach dem [Fachlichen Audit-Leitfaden](adventure-audit-guide.md) getrennt. Der Validator erzeugt keine Assets, aktualisiert keine Indizes und führt keine automatische Reparatur durch.
+Der Validator prüft keine Dramaturgie, Originalität, Spielbarkeit, Hinweisredundanz oder inhaltliche Plausibilität. Kontinuität, Informationswege, Spielerwirksamkeit und Tischreife bearbeitet der Skill `dm-audit-adventure` nach dem [Fachlichen Audit-Leitfaden](adventure-audit-guide.md) getrennt. Der Validator erzeugt keine Assets, aktualisiert keine Indizes und führt keine automatische Reparatur durch. Er erkennt nur deterministische Navigationslücken; ob eine optionale Freitextbeziehung dauerhaft oder spielrelevant genug für einen Gegenlink ist, bleibt eine fachliche Entscheidung.
 
 ## Regressionstests
 

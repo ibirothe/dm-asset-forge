@@ -126,6 +126,19 @@ Die strukturierte Beziehung wird an der Source geführt. Ein Rückverweis ist ei
 
 Indizes sind Navigationshilfen und keine zweite kanonische Quelle. Sie verlinken Assets, enthalten aber keine vollständigen Beschreibungen.
 
+### Deterministische Navigationspflege
+
+`scripts/new_asset.py` pflegt beim Anlegen eines Assets nur Beziehungen, die ohne fachliche Interpretation feststehen:
+
+- lokale Assets und ihr `primary_location` verlinken sich gegenseitig;
+- Parent- und Child-Locations verlinken sich gegenseitig;
+- Visual und `subject_asset` verlinken sich gegenseitig;
+- Locations, NPCs, Objects, Information, Plot-Threads und Factions erhalten genau eine aktuelle Zeile in ihren vorhandenen zuständigen Indizes.
+
+Die Pflege ist idempotent: Ein ausdrücklich wiederholtes Schreiben aktualisiert die bestehende Zeile oder den vorhandenen Link, statt einen zweiten Eintrag anzulegen. Manuell ergänzte strukturierte Beziehungen benötigen ebenfalls die in der Tabelle definierten Links. `scripts/validate_adventure.py` meldet fehlende Gegenlinks sowie fehlende, doppelte oder anhand der kanonischen Metadaten eindeutig veraltete Indexzeilen. Es verändert keine Datei.
+
+Codex bleibt für die fachliche Auswahl optionaler Beziehungen, ortsspezifischen Kontext, Linktexte mit zusätzlicher Bedeutung und das Change Log verantwortlich.
+
 ## Mobile NPCs und reisende Kreaturen
 
 - Die kanonische Datei bleibt unter `primary_location`, auch wenn `current_location` wechselt.
