@@ -101,6 +101,20 @@ class AdventureValidationTests(unittest.TestCase):
 
         self.assertEqual(errors, [])
         self.assertEqual(warnings, [])
+
+        trimmed_sections = {
+            self.adventure / "30-locations/hafen/location.md": ("## DM notes",),
+            self.adventure / "30-locations/hafen/scenes/ankunft/scene.md": ("## Changes after the scene",),
+            self.adventure / "30-locations/hafen/npcs/mara/npc.md": ("## Visual reference",),
+            self.adventure / "30-locations/hafen/creatures/nebelvogel/creature.md": ("## Variations", "## Visual reference"),
+            self.adventure / "30-locations/hafen/objects/schluessel/object.md": ("## Visual reference",),
+            self.adventure / "30-locations/hafen/handouts/brief/handout.md": ("## Rendered output",),
+        }
+        for path, removed in trimmed_sections.items():
+            content = path.read_text(encoding="utf-8")
+            for heading in removed:
+                self.assertNotIn(heading, content)
+        self.assertIn("## Visuals", (self.adventure / "30-locations/hafen/npcs/mara/npc.md").read_text(encoding="utf-8"))
         self.assertEqual(
             set(VALIDATOR.ASSET_SPECS),
             {
@@ -109,6 +123,30 @@ class AdventureValidationTests(unittest.TestCase):
                 "handout", "visual", "random-table",
             },
         )
+
+    def test_legacy_optional_sections_remain_compatible(self) -> None:
+        self.create("scene", "ankunft", "Ankunft", "--location", "hafen")
+        self.create("creature", "nebelvogel", "Nebelvogel", "--location", "hafen")
+        self.create("object", "schluessel", "Schlüssel", "--location", "hafen")
+        self.create("handout", "brief", "Brief", "--location", "hafen")
+
+        legacy_sections = {
+            self.adventure / "30-locations/hafen/location.md": ("DM notes",),
+            self.adventure / "30-locations/hafen/scenes/ankunft/scene.md": ("Changes after the scene",),
+            self.adventure / "30-locations/hafen/npcs/mara/npc.md": ("Visual reference",),
+            self.adventure / "30-locations/hafen/creatures/nebelvogel/creature.md": ("Variations", "Visual reference"),
+            self.adventure / "30-locations/hafen/objects/schluessel/object.md": ("Visual reference",),
+            self.adventure / "30-locations/hafen/handouts/brief/handout.md": ("Rendered output",),
+        }
+        for path, headings in legacy_sections.items():
+            content = path.read_text(encoding="utf-8").rstrip()
+            content += "\n\n" + "\n\n".join(f"## {heading}\n\nLegacy content." for heading in headings) + "\n"
+            path.write_text(content, encoding="utf-8")
+
+        errors, warnings = self.validate()
+
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
 
     def test_approved_player_handout_is_standalone_and_traceable(self) -> None:
         self.create("handout", "brief", "Brief", "--location", "hafen")
