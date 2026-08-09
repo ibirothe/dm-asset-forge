@@ -25,12 +25,26 @@ updated: {{DATE}}
 
 ## Pressures and progression
 
+- Next pressure:
+- Late pressure:
+
 ## Information path
 
+- Must preserve:
+
 ## Involved assets
+
+- Core:
+- Supporting:
+- Optional:
+- Safe cuts:
+  - Cut: none defined
+  - Impact: none documented
 
 ## Player choices
 
 ## Possible resolutions
+
+- Minimum resolution state:
 
 ## Consequences of neglect
