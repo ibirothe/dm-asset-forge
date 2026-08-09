@@ -175,6 +175,28 @@ Ein globales Asset wird nicht lokal, nur weil es derzeit an einem Ort sichtbar i
 
 ## Änderungsabläufe
 
+### Gemeinsamer Preflight
+
+Vor Titeländerung, Ownership-Wechsel, Retire oder Zusammenführung:
+
+1. kanonische Datei, stabile ID, aktuellen Pfad und zuständigen Index feststellen;
+2. mit einer repository-weiten Textsuche alle eingehenden relativen Links und strukturierten ID-Verweise erfassen;
+3. betroffene Locations, Assets, Visuals und Meta-Dateien als geplanten Änderungsumfang nennen;
+4. Zielpfad und kanonische Ownership gegen Asset-Katalog und Beziehungsmodell prüfen;
+5. bei mehrdeutiger Ownership, unklarem Nachfolger oder widersprüchlicher Zusammenführung ohne Dateiänderung stoppen und den User entscheiden lassen.
+
+Der Preflight ist eine Auswirkungsanalyse, keine Freigabe für zusätzliche Inhaltsänderungen. Nicht betroffene Dateien bleiben unverändert.
+
+### Titel ändern
+
+1. `title` und sichtbare Hauptüberschrift der kanonischen Datei ändern.
+2. ID, technischer Slug, kanonischen Pfad und `created` unverändert lassen.
+3. `version` erhöhen und `updated` auf das Änderungsdatum setzen.
+4. zuständige Indexzeile sowie sinnvolle sichtbare Linktexte aktualisieren; Linkziele bleiben unverändert.
+5. Änderung im Change Log dokumentieren und das Abenteuer validieren.
+
+Eine reine Titeländerung ist keine Umbenennung der Identität. Eine ID oder ein technischer Slug wird niemals still geändert.
+
 ### Temporärer Auftritt
 
 1. Kanonische Datei unverändert lassen.
@@ -191,8 +213,32 @@ Ein globales Asset wird nicht lokal, nur weil es derzeit an einem Ort sichtbar i
 
 ### Dauerhafte Änderung der Ownership
 
-1. Kanonische Datei an den neuen Katalogpfad verschieben, nicht kopieren.
-2. `primary_location` ändern; ID und `created` beibehalten.
-3. Alle relativen Links und betroffenen Indizes aktualisieren.
-4. Alten Pfad entfernen und Änderung im Change Log dokumentieren.
-5. Abenteuer validieren.
+1. Gemeinsamen Preflight durchführen und den vollständigen betroffenen Dateiumfang nennen.
+2. Kanonische Datei an den neuen Katalogpfad verschieben, nicht kopieren.
+3. `primary_location` ändern; ID und `created` beibehalten. `current_location` nur ändern, wenn sich auch der fiktive Aufenthaltsort ändert.
+4. `version` erhöhen und `updated` setzen.
+5. Alle eingehenden relativen Links, verpflichtenden Gegenlinks und betroffenen Indizes auf den neuen Pfad aktualisieren.
+6. Alten Pfad entfernen; keine Weiterleitungsdatei und keine zweite kanonische Kopie anlegen.
+7. Änderung im Change Log dokumentieren und das Abenteuer validieren.
+
+### Asset retiren
+
+1. Gemeinsamen Preflight durchführen und prüfen, ob der One-Shot noch aktiv von diesem Asset abhängt.
+2. Kanonische Datei und stabile ID behalten; `status: retired` setzen, `version` erhöhen und `updated` aktualisieren.
+3. Im passenden vorhandenen Inhaltsabschnitt knapp festhalten, warum das Asset nicht mehr aktiv ist und welcher Nachfolger oder Restkanon gilt, sofern bestätigt.
+4. Asset mit Status `retired` im zuständigen Index auffindbar halten.
+5. Eingehende Links einzeln behandeln: mit Kontext erhalten, auf einen bestätigten Nachfolger umstellen oder entfernen. Keinen defekten Link zurücklassen.
+6. Aktive Plot-, Informations- und Ownership-Beziehungen auf notwendige Korrekturen prüfen.
+7. Änderung im Change Log dokumentieren und das Abenteuer validieren.
+
+Retire ist kein Löschen. Eine Datei wird nur entfernt, wenn der User dies ausdrücklich verlangt und zuvor geklärt ist, dass kein erhaltenswerter Kanon oder eingehender Verweis verloren geht.
+
+### Assets zusammenführen
+
+1. Vor jeder Änderung alle kanonischen Aussagen, Links, IDs, Pfade und Indizes beider Assets als Auswirkungsumfang nennen.
+2. Den User ausdrücklich entscheiden lassen, welches Asset mit welcher ID und welchem Pfad kanonisch bleibt und welche Aussagen übernommen, verworfen oder offen gehalten werden.
+3. Nur bestätigte Inhalte in das überlebende Asset einarbeiten; Widersprüche nicht automatisch auflösen.
+4. Das andere Asset nach dem Retire-Ablauf erhalten und auf den bestätigten Nachfolger verlinken, sofern der User nicht ausdrücklich eine sichere Löschung verlangt.
+5. Alle betroffenen Beziehungen und Indizes konsistent aktualisieren, Change Log pflegen und validieren.
+
+Ohne eindeutige Entscheidung findet keine Zusammenführung statt. Es gibt keine automatische semantische Merge-, Move- oder Transaktionsfunktion.
