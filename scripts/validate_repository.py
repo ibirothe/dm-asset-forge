@@ -169,6 +169,24 @@ def main() -> int:
             if section not in player_handout_content:
                 errors.append(f"player Handout workflow is missing section: {section}")
 
+    image_workflow = ROOT / "docs" / "bild-workflow.md"
+    required_image_workflow_sections = (
+        "## Dateimodell",
+        "## Kanonische Identitätsquelle",
+        "## Zustandsvarianten im One-Shot",
+        "## Reproduzierbares Briefing",
+        "## PNG-Status",
+        "## Freigabe und Erzeugung",
+        "## Definition of Done",
+    )
+    if not image_workflow.is_file():
+        errors.append("missing image workflow: docs/bild-workflow.md")
+    else:
+        image_workflow_content = image_workflow.read_text(encoding="utf-8")
+        for section in required_image_workflow_sections:
+            if section not in image_workflow_content:
+                errors.append(f"image workflow is missing section: {section}")
+
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
@@ -188,6 +206,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the validation guide")
     if "docs/player-handout-workflow.md" not in agents_content:
         errors.append("AGENTS.md does not reference the player Handout workflow")
+    if "docs/bild-workflow.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the image workflow")
 
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
@@ -266,6 +286,16 @@ def main() -> int:
 
     if not (ROOT / "templates" / "visual-prompt.md").is_file():
         errors.append("missing visual prompt template: templates/visual-prompt.md")
+    else:
+        visual_prompt_content = (ROOT / "templates" / "visual-prompt.md").read_text(encoding="utf-8")
+        for section in (
+            "## Identity anchors",
+            "## Depicted state",
+            "## Allowed variation",
+            "## Canon checks",
+        ):
+            if section not in visual_prompt_content:
+                errors.append(f"visual prompt template is missing section: {section}")
     if not (ROOT / "templates" / "player-handout.md").is_file():
         errors.append("missing player Handout template: templates/player-handout.md")
 
@@ -276,6 +306,12 @@ def main() -> int:
         not in create_asset_skill.read_text(encoding="utf-8")
     ):
         errors.append("dm-create-asset does not reference the player Handout workflow")
+    if (
+        create_asset_skill.is_file()
+        and "docs/bild-workflow.md"
+        not in create_asset_skill.read_text(encoding="utf-8")
+    ):
+        errors.append("dm-create-asset does not reference the image workflow")
 
     plot_overview = ROOT / "templates" / "adventure" / "20-plot" / "overview.md"
     required_plot_sections = (
