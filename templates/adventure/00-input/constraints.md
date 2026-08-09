@@ -4,19 +4,22 @@ Source: [Original request](original-request.md) and [Clarifications](clarificati
 
 ## Tone and themes
 
-- Ton:
-- Gewünschte Themen:
-- Ausgeschlossene Themen:
+- Tone: open
+- Desired themes: open
+- Focus: open
+- Excluded themes: open
 
-## Table constraints
+## One-shot frame
 
-- Erwarteter Umfang:
-- Gruppenvorgaben:
-- Sicherheits- und Inhaltsgrenzen:
+- Target duration: open
+- Content density: open
+- Player role: open
+- Content boundaries: open
+- Other user constraints: open
 
 ## System neutrality
 
 - Keine systemspezifischen Werte oder Mechaniken.
 - Herausforderungen über Situation, Risiko, Ansatzpunkte und Konsequenzen beschreiben.
 
-Nur ausdrücklich genannte Vorgaben als bestätigt führen. Fehlende Präferenzen bleiben offen.
+Nur ausdrücklich genannte Vorgaben als bestätigt führen. `open` bezeichnet eine fehlende Nutzerpräferenz und ist weder Annahme noch Erlaubnis, sie automatisch festzulegen.

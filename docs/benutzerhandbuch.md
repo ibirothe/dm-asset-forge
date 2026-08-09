@@ -4,13 +4,15 @@
 
 Starte Codex im Stammverzeichnis dieses Repositories. Beschreibe Welt und Plot zunächst grob. Ein geeigneter Startauftrag ist:
 
-> Erstelle einen neuen regelneutralen One-Shot mit dem Titel „…“. Die Welt ist … Der Ausgangskonflikt ist … Die Spielerfiguren sollen … erleben. Lege Unklarheiten als offene Fragen ab und bereite den zentralen Konflikt vollständig auflösbar vor.
+> Erstelle einen neuen regelneutralen One-Shot mit dem Titel „…“. Die Welt ist … Der Ausgangskonflikt ist … Gewünschte ungefähre Spieldauer: … Ton und Themen: … Ausgeschlossen sind: … Lege fehlende Präferenzen als offen ab und bereite den zentralen Konflikt vollständig auflösbar vor.
 
 Codex legt das Abenteuer unter `adventure/` an. Die vollständige ursprüngliche Anfrage bleibt unverändert in `adventure/00-input/original-request.md` erhalten. Welt, Plot und Constraints werden daraus getrennt extrahiert; spätere Antworten stehen datiert in `clarifications.md`.
 
 Ein Repository enthält genau einen abgeschlossenen One-Shot. Existiert `adventure/` bereits, arbeitet Codex mit diesem Stand weiter und initialisiert keinen zweiten One-Shot. Für einen weiteren One-Shot wird eine neue Arbeitskopie aus dem Template erzeugt.
 
-Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Konfliktidee. Titel, Spielerrolle, gewünschte Spieldauer und genaue Stimmung dürfen später ergänzt werden. Codex fragt vor dem Erstlauf nur nach, wenn fehlende oder widersprüchliche Angaben den ersten kohärenten Stand wesentlich verändern würden.
+Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Konfliktidee. Titel, Spielerrolle, gewünschte Spieldauer, Inhaltsdichte, genaue Stimmung und Inhaltsgrenzen sind optional. Codex übernimmt vorhandene Angaben und dokumentiert fehlende Präferenzen ausdrücklich als `open`, statt sie zu erfinden. Es fragt vor dem Erstlauf nur nach, wenn fehlende oder widersprüchliche Angaben den ersten kohärenten Stand wesentlich verändern würden.
+
+Vor der Asset-Erzeugung fasst Codex die spielbare One-Shot-Prämisse zusammen: player-facing Ausgangslage, zentraler Konflikt, mindestens zwei grundsätzlich unterschiedliche Formen der Spieler-Einflussnahme und der innerhalb des One-Shots erforderliche Abschlussrahmen. Diese Angaben werden in den bestehenden Input-, Plot- und Meta-Dateien geführt; es entsteht keine zusätzliche Kanonquelle.
 
 Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt- und Plot-Intake](intake-workflow.md).
 

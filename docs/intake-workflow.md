@@ -5,6 +5,7 @@ Diese Datei definiert den reproduzierbaren Erstlauf, mit dem Codex aus einem fre
 ## Inhalt
 
 - [Ziel und Ergebnis](#ziel-und-ergebnis)
+- [One-Shot-Prämisse](#one-shot-prämisse)
 - [Minimale Eingaben](#minimale-eingaben)
 - [Optionale Vertiefung](#optionale-vertiefung)
 - [Rückfragen und Annahmen](#rückfragen-und-annahmen)
@@ -28,6 +29,21 @@ Nach dem Erstlauf existieren:
 - getrennte Klarstellungen, Annahmen, Entscheidungen und offene Fragen;
 - eine Abschlussmeldung mit Ergebnis, Unsicherheiten, Validierung und nächsten Schritten.
 
+## One-Shot-Prämisse
+
+Vor der Asset-Erzeugung leitet Codex aus den bestätigten Angaben eine kompakte, spielbare One-Shot-Prämisse ab. Sie ist kein zusätzlicher Dateityp und keine zweite Kanonquelle. Ihre Plotbestandteile werden in `adventure/20-plot/overview.md`, ihre Nutzerpräferenzen in `adventure/00-input/constraints.md` geführt.
+
+Die Prämisse beantwortet:
+
+1. **Player-facing starting situation:** Welche Lage, Gelegenheit oder Bedrohung können die Spieler zu Beginn wahrnehmen?
+2. **Central conflict:** Welche zentrale dramatische Frage kann innerhalb dieses One-Shots beantwortet werden?
+3. **Player influence:** Über welche mindestens zwei grundsätzlich unterschiedlichen Arten können Spieler die Lage beeinflussen, ohne dass ihre konkrete Entscheidung vorweggenommen wird?
+4. **Resolution boundary:** Welcher Konflikt muss im One-Shot auflösbar sein und welche Nebenfragen dürfen bewusst offen bleiben?
+5. **Target frame:** Welche ungefähre Spieldauer und Inhaltsdichte wünscht der User?
+6. **Tone and boundaries:** Welche Stimmung, Themen, Schwerpunkte und Inhaltsgrenzen wurden genannt?
+
+Fehlt eine nicht blockierende Präferenz, wird sie als `open` dokumentiert. Codex erfindet weder Spielerrollen noch Präferenzen. Eine Rückfrage ist nur nötig, wenn unterschiedliche Antworten den ersten Asset-Umfang, die zentrale Konfliktstruktur oder eine ausdrückliche Inhaltsgrenze materiell verändern würden.
+
 ## Minimale Eingaben
 
 Der User darf in freiem Text schreiben. Eine feste Formularsprache ist nicht erforderlich.
@@ -38,8 +54,10 @@ Der User darf in freiem Text schreiben. Eine feste Formularsprache ist nicht erf
 | Plotbeschreibung | ja | Mindestens Ausgangskonflikt, drohende Entwicklung oder dramatische Frage. |
 | Titel | nein | Codex darf einen ausdrücklich vorläufigen Arbeitstitel vorschlagen und als Annahme dokumentieren. |
 | Startort | nein | Wird aus dem Plot abgeleitet; nur bei strukturell gleichwertigen, stark unterschiedlichen Optionen nachfragen. |
-| Spielerrolle | nein | Darf als offene Frage verbleiben, solange ein neutraler Einstieg möglich ist. |
-| Spieldauer und Regelsystem | nein | Das Repository bleibt regelneutral und auf einen One-Shot begrenzt; eine gewünschte ungefähre Spieldauer darf später ergänzt werden. |
+| Spielerrolle | nein | Wird nur übernommen, wenn der User sie vorgibt; andernfalls bleibt der Einstieg rollen- und motivationsneutral. |
+| Zielspielzeit und Inhaltsdichte | nein | Eine Nutzerangabe wird übernommen; fehlt sie, werden beide Werte im Intake ausdrücklich als `open` dokumentiert. |
+| Ton, Themen, Schwerpunkte und Inhaltsgrenzen | nein | Ausdrückliche Angaben werden übernommen; fehlende Präferenzen bleiben `open` und werden nicht stillschweigend festgelegt. |
+| Regelsystem | nein | Das Repository bleibt unabhängig von der Antwort regelneutral. |
 
 Fehlt Welt- oder Plottext vollständig, beginnt Codex nicht mit der Initialisierung. Es bittet gezielt um die fehlende minimale Eingabe.
 
@@ -55,7 +73,7 @@ Die folgenden Fragen verbessern den Entwurf, blockieren ihn aber normalerweise n
 - Gibt es unverzichtbare Orte, Fraktionen, Figuren, Gegenstände oder Enthüllungen?
 - Wie offen oder zielgerichtet sollen mögliche Verläufe sein?
 
-Codex stellt diese Fragen nach dem ersten strukturierten Durchlauf als sinnvolle Vertiefungsoptionen, sofern ihre Antworten nicht bereits vorliegen.
+Codex übernimmt bereits enthaltene Antworten in `constraints.md` und dokumentiert fehlende Präferenzen als `open`. Es stellt nicht automatisch den vollständigen Fragenkatalog, sondern fragt nur, wenn eine Antwort den ersten kohärenten Stand materiell verändert.
 
 ## Rückfragen und Annahmen
 
@@ -67,6 +85,7 @@ Vor der Initialisierung wird nur gefragt, wenn mindestens eine Bedingung erfüll
 2. Zwei Aussagen widersprechen sich in einer Weise, die Kernprämisse, Startort oder zentralen Konflikt unterschiedlich strukturieren würde.
 3. Mehrere gleich plausible Interpretationen würden zu deutlich verschiedenen ersten Locations oder Plot-Threads führen.
 4. Eine ausdrückliche Nutzergrenze ist so unklar, dass ihre falsche Auslegung den gewünschten Inhalt verletzen könnte.
+5. Eine player-facing Ausgangslage lässt sich nur ableiten, indem Codex Herkunft, Motivation, Loyalität oder Entscheidung der Spielerfiguren erfinden müsste.
 
 Rückfragen werden in einem kompakten Block gestellt. Nur die kleinste Zahl von Fragen verwenden, die den Erstlauf freigibt; in der Regel höchstens drei.
 
@@ -103,7 +122,8 @@ Solche Punkte bleiben offene Fragen oder werden vorab geklärt, wenn sie den ers
 | vollständige ursprüngliche Nutzeranfrage | `00-input/original-request.md` | Nach dem ersten Speichern nicht umformulieren oder überschreiben. |
 | extrahierte Weltangaben | `00-input/world.md` | Mit Quelle zur Originalanfrage; keine neuen Fakten ergänzen. |
 | extrahierte Plotangaben | `00-input/plot.md` | Mit Quelle zur Originalanfrage; keine neue Auflösung ergänzen. |
-| extrahierte Grenzen und Präferenzen | `00-input/constraints.md` | Nur ausdrücklich genannte Vorgaben als bestätigt führen. |
+| extrahierte Grenzen und Präferenzen | `00-input/constraints.md` | Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Grenzen führen; fehlende Werte als `open` markieren. |
+| abgeleitete One-Shot-Prämisse | `20-plot/overview.md` | Ausgangslage, zentralen Konflikt, Spieler-Einfluss und Abschlussrahmen aus bestätigten Angaben ableiten; Unsicherheit verlinken. |
 | spätere Antworten und Präzisierungen | `00-input/clarifications.md` | Datiert, wortgetreu und mit betroffener Frage speichern. |
 | unbestätigte Arbeitsannahmen | `90-meta/assumptions.md` | Status `proposed`, `confirmed`, `rejected` oder `superseded`. |
 | getroffene Entscheidungen | `90-meta/decisions.md` | Entscheidung, Begründung und Autorität getrennt führen. |
@@ -143,12 +163,23 @@ Jede relevante Aussage genau einer Arbeitskategorie zuordnen:
 
 Nicht bestätigte Annahmen erscheinen nie unter „Established truths“ oder als feststehende Plotauflösung.
 
-### 4. Erster strukturierter Stand
+### 4. One-Shot-Prämisse prüfen
+
+1. Eine player-facing Ausgangslage formulieren, ohne Hintergrund, Motivation, Loyalität oder Entscheidung der Spielerfiguren festzulegen.
+2. Den zentralen Konflikt als innerhalb des One-Shots beantwortbare dramatische Frage abgrenzen.
+3. Mindestens zwei grundsätzlich unterschiedliche Formen der Spieler-Einflussnahme benennen, ohne eine Methode oder Reihenfolge vorzuschreiben.
+4. Den Abschlussrahmen festhalten: Was muss auflösbar sein, was darf als bewusste Nebenfrage offen bleiben?
+5. Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Inhaltsgrenzen aus den Eingaben übernehmen oder jeweils als `open` dokumentieren.
+6. Jede unbestätigte Interpretation in `assumptions.md` oder `open-questions.md` ablegen und aus der Prämisse darauf verweisen.
+
+Erst nach diesem Check wird entschieden, welche Locations und Assets wirklich notwendig sind.
+
+### 5. Erster strukturierter Stand
 
 1. `10-world/overview.md` mit Prämisse, bestätigten Wahrheiten, Alltag, Kräften und Unknowns füllen.
 2. `10-world/themes.md` nur mit belegten Themen und Guardrails füllen; fehlende Angaben offenlassen.
 3. `10-world/timeline.md` nur mit ausdrücklich etablierten oder klar als unbekannt markierten Ereignissen ergänzen.
-4. `20-plot/overview.md` mit Ausgangslage, flexiblen Spieler-Hooks, Konflikt, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen.
+4. `20-plot/overview.md` mit player-facing Ausgangslage, flexiblen Spieler-Hooks, zentralem Konflikt, mindestens zwei Formen der Spieler-Einflussnahme, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Abschlussrahmen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen.
 5. Nur Plot-Threads anlegen, die für den Kernkonflikt und seine möglichen Auflösungen erforderlich sind.
 6. Genau die Locations anlegen, die für Einstieg, zentrale Entscheidungen, Verständnis oder Auflösung des Kernkonflikts notwendig sind.
 7. Nur Assets anlegen, die für den vollständigen One-Shot oder die logische Verbindung des Plots benötigt werden.
@@ -156,7 +187,7 @@ Nicht bestätigte Annahmen erscheinen nie unter „Established truths“ oder al
 
 Nicht jeden erwähnten Ort, NPC oder Gegenstand ausarbeiten. Ein Name oder Link genügt, wenn das Asset noch keine eigenständige Tischfunktion benötigt.
 
-### 5. Navigation und Nachweis
+### 6. Navigation und Nachweis
 
 1. Alle erzeugten Assets aus den passenden Locations und Indizes verlinken.
 2. Annahmen, Entscheidungen und offene Fragen in ihren getrennten Dateien erfassen.
@@ -171,6 +202,8 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] `00-input/original-request.md` enthält die unveränderte ursprüngliche Anfrage.
 - [ ] Welt, Plot und Constraints sind extrahiert und auf die Originalanfrage zurückführbar.
 - [ ] Klarstellungen, Annahmen, Entscheidungen und offene Fragen sind getrennt gespeichert.
+- [ ] Die One-Shot-Prämisse benennt player-facing Ausgangslage, zentralen Konflikt, mindestens zwei Formen der Spieler-Einflussnahme und den Abschlussrahmen.
+- [ ] Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Inhaltsgrenzen sind als Nutzerangabe oder ausdrücklich als `open` dokumentiert.
 - [ ] `10-world/overview.md` trennt bestätigte Wahrheiten von Unknowns und Arbeitsannahmen.
 - [ ] `20-plot/overview.md` enthält Ausgangslage, zentralen Konflikt, Stakes und mehrere mögliche Auflösungen des vollständigen One-Shots.
 - [ ] Der Einstieg bietet mindestens zwei erkennbare Ansatzpunkte, ohne Motivation oder Entscheidung der Spielerfiguren vorzugeben.
@@ -189,7 +222,7 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 
 Codex antwortet nach dem Erstlauf auf Deutsch und in dieser Reihenfolge:
 
-1. **Erzeugter Stand:** Titel, Kurzprämisse und wichtigste angelegte Bereiche.
+1. **Erzeugter Stand:** Titel, player-facing Ausgangslage, zentraler Konflikt, Formen der Spieler-Einflussnahme und wichtigste angelegte Bereiche.
 2. **Bestätigte Grundlage:** die wesentlichen Nutzerfakten, ohne Annahmen beizumischen.
 3. **Annahmen:** Anzahl und wichtigste noch unbestätigte Arbeitsannahmen mit Dateiverweis.
 4. **Offene Fragen:** blockierende oder besonders wirkungsvolle Fragen mit Dateiverweis.
