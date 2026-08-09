@@ -24,6 +24,8 @@ Codex liest zuerst Übersicht, Indizes und den betroffenen Ort. Es folgt Links n
 
 Ein Asset besitzt genau einen kanonischen Speicherort. Wenn ein NPC an mehreren Orten auftreten kann, bleibt seine vollständige Datei am primären Ort. Andere Orte verweisen per Link darauf.
 
+Der primäre Ort bestimmt die Ablage, der aktuelle Ort den momentanen Aufenthalt in der Spielwelt. Bei einer Reise ändert Codex `current_location` und die Links am Zielort, kopiert oder verschiebt die NPC-Datei aber nicht. Erst wenn sich die dauerhafte redaktionelle Zuordnung ändert, wird die kanonische Datei einmalig verschoben und werden alle Verweise angepasst. Details stehen in [Beziehungen und ortszentrierte Speicherung](beziehungen-und-speicherorte.md).
+
 ## Offene Fragen und Annahmen
 
 - `90-meta/open-questions.md` enthält Entscheidungen, die noch vom User benötigt werden.

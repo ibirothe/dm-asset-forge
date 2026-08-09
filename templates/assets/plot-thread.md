@@ -4,6 +4,7 @@ type: plot-thread
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: global
 entry_locations: []
 related_factions: []
 danger: unknown

@@ -1,6 +1,6 @@
 # Gemeinsame Metadaten und regelneutrale Werte v1
 
-Diese Datei ist die normative Quelle für gemeinsame YAML-Schlüssel, kontrollierte Werte und den Umgang mit fehlenden Angaben. Der [DM-Asset-Katalog](asset-katalog.md) definiert Typen, ID-Präfixe und Speicherorte; diese Datei definiert die Metadaten dieser Typen.
+Diese Datei ist die normative Quelle für gemeinsame YAML-Schlüssel, kontrollierte Werte und den Umgang mit fehlenden Angaben. Der [DM-Asset-Katalog](asset-katalog.md) definiert Typen, ID-Präfixe und Speicherorte; [Beziehungen und ortszentrierte Speicherung](beziehungen-und-speicherorte.md) definieren Ownership und Verweise.
 
 ## Gemeinsames Metadatenschema
 
@@ -13,6 +13,7 @@ Jedes Asset führt die folgenden Pflichtfelder. Das Abenteuer-Manifest in `adven
 | `title` | nicht leerer String | Anzeigename; darf geändert werden, ohne die ID zu ändern. |
 | `status` | kontrollierter String | Bearbeitungsstand gemäß Statuswerten unten. |
 | `version` | positive Ganzzahl | Inhaltsversion des Assets; beginnt bei `1` und steigt bei einer inhaltlich relevanten Überarbeitung. |
+| `scope` | `singleton`, `global`, `local` oder `subject-owned` | Speicher- und Ownership-Semantik gemäß Beziehungsmodell. |
 | `tags` | Liste von Strings | Sachliche Suchbegriffe in englischem `kebab-case`; `[]`, wenn noch keine vergeben sind. |
 | `themes` | Liste von Strings | Inhaltliche Themen in englischem `kebab-case`; `[]`, wenn noch keine vergeben sind. |
 | `created` | `YYYY-MM-DD` | Datum der erstmaligen Anlage; bleibt unverändert. |
@@ -142,14 +143,20 @@ Templates dürfen neben den gemeinsamen Schlüsseln nur die hier für ihren Typ 
 
 | Type | Zusätzliche Keys |
 |---|---|
+| `world` | keine |
 | `location` | `parent_location`, `function`, `danger`, `accessibility` |
-| `npc` | `primary_location`, `factions`, `influence`, `reach` |
-| `object` | `primary_location`, `owner`, `danger`, `rarity`, `accessibility` |
-| `information` | `truth_status`, `confidence`, `accessibility`, `primary_location`, `known_by`, `related_threads` |
+| `scene` | `primary_location`, `participants`, `related_threads`, `danger` |
+| `npc` | `primary_location`, `current_location`, `origin_location`, `appearance_locations`, `factions`, `influence`, `reach` |
+| `creature` | `primary_location`, `current_location`, `origin_location`, `appearance_locations`, `danger`, `rarity`, `reach` |
+| `object` | `primary_location`, `current_location`, `origin_location`, `appearance_locations`, `owner`, `part_of`, `components`, `danger`, `rarity`, `accessibility` |
+| `information` | `truth_status`, `confidence`, `accessibility`, `primary_location`, `discovery_locations`, `known_by`, `related_threads` |
 | `encounter` | `primary_location`, `participants`, `related_threads`, `danger` |
-| `handout` | `primary_location`, `reveals`, `accessibility` |
-| `faction` | `scope`, `locations`, `influence`, `reach` |
+| `handout` | `primary_location`, `delivery_locations`, `reveals`, `accessibility` |
+| `faction` | `related_locations`, `influence`, `reach` |
 | `plot-thread` | `entry_locations`, `related_factions`, `danger`, `reach` |
+| `event` | `related_locations`, `participants`, `affected_assets`, `danger`, `reach` |
+| `visual` | `subject_asset`, `output_file` |
+| `random-table` | `related_locations`, `applicable_contexts` |
 | `image-brief` | `subject_asset`, `output_file` |
 
 `image-brief` bleibt bis zur vollständigen Implementierung des Katalogtyps `visual` ein vorläufiger technischer Dokumenttyp. Er darf nicht anstelle eines anderen Assets verwendet werden.

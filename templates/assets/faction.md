@@ -4,8 +4,8 @@ type: faction
 title: "{{TITLE}}"
 status: draft
 version: 1
-scope: unknown
-locations: []
+scope: global
+related_locations: []
 influence: unknown
 reach: unknown
 tags: []
@@ -23,6 +23,8 @@ updated: {{DATE}}
 ## Agenda
 
 ## Structure and reach
+
+## Locations and presence
 
 ## Resources and leverage
 

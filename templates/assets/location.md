@@ -4,6 +4,7 @@ type: location
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: local
 parent_location: null
 function: unknown
 danger: unknown

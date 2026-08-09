@@ -5,8 +5,8 @@ description: Create or revise a single structured, system-neutral Dungeon Master
 
 # Create or revise an asset
 
-1. Read `AGENTS.md`, the normative `docs/asset-katalog.md` and `docs/metadaten-und-werte.md`, the target adventure overview, the relevant index, and the minimum linked context.
-2. Determine the asset type, scope, required relations, and canonical path from the catalog. Do not substitute another type because its generator already exists.
+1. Read `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/metadaten-und-werte.md`, and `docs/beziehungen-und-speicherorte.md`, the target adventure overview, the relevant index, and the minimum linked context.
+2. Determine the asset type, scope, canonical owner, required relations, reverse-link policy, and canonical path from the normative references. Do not substitute another type because its generator already exists.
 3. For a type currently supported by the asset generator, run:
 
    ```bash
@@ -29,7 +29,7 @@ description: Create or revise a single structured, system-neutral Dungeon Master
    - Faction: agenda, reach, resources, methods, internal tensions, relationships, escalation.
    - Plot thread: dramatic question, entry points, pressures, information path, choices, resolutions, neglect.
    - Image brief: canonical facts, composition, style, exclusions, PNG output path, provenance.
-6. Add relative links from the parent location and index below `adventure/`. Update related assets only where the relationship must be reciprocal.
+6. Keep the full asset in exactly one canonical file. Add relative links from its owner, appearance locations, and index below `adventure/`. Update related assets wherever the relationship model requires a reciprocal link.
 7. Update `90-meta/change-log.md`; record assumptions and questions in their respective files.
 8. Run the adventure validator and summarize the result.
 

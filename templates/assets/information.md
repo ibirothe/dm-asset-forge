@@ -4,10 +4,12 @@ type: information
 title: "{{TITLE}}"
 status: draft
 version: 1
+scope: local
 truth_status: established
 confidence: unknown
 accessibility: unknown
 primary_location: "{{LOCATION_ID}}"
+discovery_locations: ["{{LOCATION_ID}}"]
 known_by: []
 related_threads: []
 tags: []

@@ -60,11 +60,17 @@ def main() -> int:
     if not metadata_spec.is_file():
         errors.append("missing metadata specification: docs/metadaten-und-werte.md")
 
+    relationship_spec = ROOT / "docs" / "beziehungen-und-speicherorte.md"
+    if not relationship_spec.is_file():
+        errors.append("missing relationship specification: docs/beziehungen-und-speicherorte.md")
+
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
     if "docs/metadaten-und-werte.md" not in agents_content:
         errors.append("AGENTS.md does not reference the metadata specification")
+    if "docs/beziehungen-und-speicherorte.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the relationship specification")
 
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
@@ -99,6 +105,8 @@ def main() -> int:
             errors.append(f"skill does not reference the canonical asset catalog: {skill_dir.name}")
         if "docs/metadaten-und-werte.md" not in path.read_text(encoding="utf-8"):
             errors.append(f"skill does not reference the metadata specification: {skill_dir.name}")
+        if "docs/beziehungen-und-speicherorte.md" not in path.read_text(encoding="utf-8"):
+            errors.append(f"skill does not reference the relationship specification: {skill_dir.name}")
         name = data.get("name", "")
         description = data.get("description", "")
         if not NAME.fullmatch(name):

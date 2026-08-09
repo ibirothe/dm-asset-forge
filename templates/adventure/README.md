@@ -4,6 +4,7 @@ type: adventure
 title: "{{ADVENTURE_TITLE}}"
 status: draft
 version: 1
+scope: singleton
 tags: []
 themes: []
 created: {{DATE}}
