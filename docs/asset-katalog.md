@@ -19,6 +19,7 @@ Ein Asset wird nur einmal vollständig gespeichert. Weitere Vorkommen werden dur
 | `location` | `loc-` | local | `adventure/30-locations/<location>/location.md` | world; optional parent location | optionale Ansicht, Karte oder Atmosphäre als `visual` |
 | `scene` | `scene-` | local | `adventure/30-locations/<location>/scenes/<scene>/scene.md` | primary location | optionales Stimmungs- oder Situationsbild |
 | `npc` | `npc-` | local | `adventure/30-locations/<location>/npcs/<npc>/npc.md` | primary location | empfohlenes Identitäts- oder Porträt-`visual` bei wiederkehrenden NPCs |
+| `player-character` | `pc-` | global | `adventure/40-global/player-characters/<player-character>/player-character.md` | adventure; optional related assets | optionales Portrait- oder Identitäts-`visual` |
 | `creature` | `cre-` | local | `adventure/30-locations/<location>/creatures/<creature>/creature.md` | primary location | empfohlenes Referenz-`visual` bei wichtigen Arten oder Individuen |
 | `faction` | `fac-` | global | `adventure/40-global/factions/<faction>/faction.md` | world | optionales Emblem, Zeichen oder Gruppenbild |
 | `object` | `obj-` | local | `adventure/30-locations/<location>/objects/<object>/object.md` | primary location | empfohlen, wenn Aussehen, Zustand oder Erkennung spielrelevant ist |
@@ -57,6 +58,12 @@ Typische Nutzung: Audienz, Untersuchung, Reiseabschnitt, Enthüllung oder sozial
 Beschreibt einen individuellen handlungsfähigen Charakter mit Identität, Motivation, Wissen, Beziehungen und wiedererkennbarem Verhalten. Die erzählerische Rolle entscheidet, nicht Spezies oder Erscheinungsform.
 
 Typische Nutzung: benannte Person, individueller Geist, intelligentes Tier oder einzigartiges Wesen. Ein austauschbarer Vertreter einer Art oder ein Artenprofil ist `creature`.
+
+### `player-character`
+
+Beschreibt eine optionale vorgefertigte oder teilweise vorbereitete Spielerfigur für den einen One-Shot. Der Asset führt spielbare Ausgangslage, freiwillige persönliche Hooks, etablierten Hintergrund, offene Entscheidungen, narrative Stärken und Grenzen, Startwissen sowie relevante Beziehungen. Interne DM-Verknüpfungen bleiben von einer optional freigegebenen `player.md` getrennt.
+
+Typische Nutzung: One-Shot-Archetyp, vorgefertigte Figur oder kompakter Charakterrahmen. Herkunft, Motivation, Loyalität und Entscheidungen werden nur als etabliert geführt, wenn der User sie ausdrücklich festgelegt hat. Ein vom DM geführter Charakter ist `npc`; systemspezifische Werte gehören nicht in dieses Asset.
 
 ### `creature`
 
@@ -125,6 +132,7 @@ Typische Nutzung: Gerüchte, Begegnungsimpulse, Wetter, Fundstücke, Namen oder 
 | `location` oder `scene` | der räumliche Kontext stabil und wiederbesuchbar ist | die konkrete Situation, Besetzung oder Spannung zeitlich begrenzt ist |
 | `scene` oder `encounter` | der spielbare Rahmen auch ohne Konflikt funktioniert | Absichten, Druck, Eskalation und Konsequenzen im Zentrum stehen |
 | `npc` oder `creature` | ein individuelles Wesen Motivation, Wissen und Beziehungen besitzt | Art, Archetyp oder austauschbares Verhalten beschrieben wird |
+| `player-character` oder `npc` | die Figur von einem Spieler geführt wird und offene Entscheidungen behalten muss | die Figur vom DM geführt wird und eigenständig vorbereitete Absichten verfolgt |
 | `object` oder `handout` | der Gegenstand in der Fiktion existiert | die spielersichtbare Ausgabe am Tisch gemeint ist |
 | `information` oder `handout` | Wahrheit, Gerücht oder Erkenntnis als Kanon geführt wird | die kontrollierte Vermittlungsform für Spieler gemeint ist |
 | `plot-thread` oder `event` | eine offene dramatische Frage fortschreitet | ein zeitlich bestimmtes Geschehen festgehalten wird |
@@ -133,6 +141,6 @@ Typische Nutzung: Gerüchte, Begegnungsimpulse, Wetter, Fundstücke, Namen oder 
 
 ## Implementierungsstatus
 
-`scripts/new_asset.py` unterstützt alle 14 Typen aus diesem Katalog. Der Generator wählt Template, ID-Präfix und kanonischen Pfad anhand von `--type`, prüft erforderliche Beziehungen vor dem Schreiben und überschreibt bestehende Dateien nur mit `--overwrite`.
+`scripts/new_asset.py` unterstützt alle 15 Typen aus diesem Katalog. Der Generator wählt Template, ID-Präfix und kanonischen Pfad anhand von `--type`, prüft erforderliche Beziehungen vor dem Schreiben und überschreibt bestehende Dateien nur mit `--overwrite`.
 
 Bei `world` ersetzt der Generator mit explizitem `--overwrite` die noch unbefüllte Overview-Datei des initialisierten Scaffolds. Bei `visual` entstehen `visual.md` und das zugehörige `<slug>.prompt.md`; eine PNG-Datei wird nicht automatisch erzeugt. Der Generator pflegt die vorhandenen zuständigen Indizes sowie eindeutig aus Ownership, Location-Hierarchie und Visual-Subject ableitbare relative Gegenlinks. Freie oder kontextabhängige Beziehungen und das Change Log werden weiterhin bewusst durch Codex gepflegt.
