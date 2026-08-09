@@ -38,6 +38,18 @@ Jedes `ready`-Asset erfüllt mindestens:
 
 `status: draft` bleibt richtig, solange zentrale Voraussetzungen, Beziehungen oder Konsequenzen fehlen. Ein formal vollständiges Template ist nicht automatisch `ready`.
 
+### Abschnittsfunktion und Redundanz
+
+Jeder ausgefüllte Abschnitt erfüllt mindestens eine klar erkennbare Rolle:
+
+- **Tischfunktion:** liefert unmittelbar beschreibbare Merkmale, Entscheidungslage, Reaktion, Druck, Ansatz oder Folgezustand;
+- **Kanonfunktion:** hält genau die Aussage, Identität, Zuständigkeit oder Wahrheitsgrenze, für die dieser Asset-Typ verantwortlich ist;
+- **Navigationsfunktion:** verlinkt kanonische Assets und ergänzt nur den für dieses Asset spezifischen Kurzkontext.
+
+Navigationsabschnitte wiederholen weder Erscheinung, Motivation, Aussage noch Konsequenzen des Ziel-Assets vollständig. Eine optionale Beziehung erhält erst dann einen eigenen Abschnitt, wenn sie existiert und nützlich ist. Insbesondere legt `new_asset.py` bei einem tatsächlich erzeugten Visual am Subject den Abschnitt `Visuals` an; leere `Visual reference`-Platzhalter gehören nicht zum Mindestgerüst.
+
+Typspezifische Kernabschnitte ersetzen ein pauschales Universal-Feld: `Core premise` trägt die Tischfunktion der World, `Statement` die der Information, `Dramatic question` die des Plot-Threads und `Player-facing content` die des Handouts. Diese Unterschiede sind beabsichtigt.
+
 ### Sichtbarkeit
 
 - Spielerwissen umfasst nur unmittelbar Wahrnehmbares, allgemein Bekanntes oder bewusst Offenbartes.
@@ -89,7 +101,7 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Einsatz:** Eine konkrete spielbare Situation mit Ausgangszustand, Beteiligten und möglichen Übergängen rahmen. Eine Scene ist kein vorgeschriebenes Drehbuch.
 
-**Mindestinhalt:** Einstiegssituation, Teilnehmer und Absichten, unmittelbare Spannung, nutzbare Umgebung, entdeckbare Informationen, mehrere mögliche Übergänge und Veränderungen nach der Scene.
+**Mindestinhalt:** Einstiegssituation, Teilnehmer und Absichten, unmittelbare Spannung, nutzbare Umgebung, entdeckbare Informationen sowie mehrere mögliche Übergänge mit ihren Zustandsänderungen.
 
 **Leitfragen:** Was ist beim Eintritt bereits in Bewegung? Was wollen die Beteiligten jetzt? Welche Entscheidungen verändern die Situation? Wohin kann die Scene plausibel führen?
 
@@ -121,7 +133,7 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Einsatz:** Eine Art, einen Archetyp, einen Schwarm oder ein austauschbares Wesen über Verhalten und Umweltbezug beschreiben. Ein eigenständiges Individuum mit Motivation und Beziehungen ist `npc`.
 
-**Mindestinhalt:** Tischfunktion, erster Eindruck, erkennbare Merkmale, Habitat, Bedürfnisse, Verhalten, Spuren, Risiken, Schwächen oder Ansatzpunkte und relevante Variationen.
+**Mindestinhalt:** Tischfunktion, erster Eindruck, erkennbare Merkmale, Habitat, Bedürfnisse, Verhalten, Spuren, Risiken sowie Schwächen oder Ansatzpunkte. Varianten werden nur ergänzt, wenn sie Wiedererkennung, Verhalten, Risiko oder mögliche Ansätze verändern.
 
 **Leitfragen:** Woran wird die Kreatur erkannt, bevor sie erscheint? Was braucht oder verteidigt sie? Wie reagiert sie auf Annäherung, Bedrohung oder Veränderung ihrer Umwelt? Welche nicht-konfrontativen Ansatzpunkte bestehen?
 
@@ -233,7 +245,7 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Einsatz:** Ein kontrolliert spielersichtbares Artefakt mit eigener Ausgabe und eindeutig getrenntem DM-Kontext bereitstellen.
 
-**Mindestinhalt:** Player-facing Inhalt, Auslieferungssituation, DM-only Kontext, offenbarte Information, Player-Release-Status und geplanter Ausgabezustand.
+**Mindestinhalt:** Player-facing Inhalt, Auslieferungssituation, DM-only Kontext, offenbarte Information und Player-Release-Status. `Player release` verweist auf eine vorhandene freigegebene `player.md`; eine PNG-Fassung wird ausschließlich als verlinktes Visual geführt.
 
 **Leitfragen:** Was erhalten Spieler tatsächlich? Wann und unter welchen Bedingungen? Welche Information wird dadurch bestätigt oder angedeutet? Welche internen Hinweise dürfen keinesfalls in die Ausgabe gelangen?
 
