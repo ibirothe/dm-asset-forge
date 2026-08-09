@@ -14,7 +14,6 @@ description: Create or revise a single structured, system-neutral Dungeon Master
 
    ```bash
    python3 scripts/new_asset.py \
-     --adventure <adventure-slug> \
      --type <type> \
      --location <location-slug-if-required> \
      --slug <slug> \
@@ -31,7 +30,7 @@ description: Create or revise a single structured, system-neutral Dungeon Master
    - Faction: agenda, reach, resources, methods, internal tensions, relationships, escalation.
    - Plot thread: dramatic question, entry points, pressures, information path, choices, resolutions, neglect.
    - Image brief: canonical facts, composition, style, exclusions, PNG output path, provenance.
-6. Add relative links from the parent location and index. Update related assets only where the relationship must be reciprocal.
+6. Add relative links from the parent location and index below `adventure/`. Update related assets only where the relationship must be reciprocal.
 7. Update `90-meta/change-log.md`; record assumptions and questions in their respective files.
 8. Run the adventure validator and summarize the result.
 

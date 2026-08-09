@@ -3,7 +3,7 @@
 ## Abenteuerverzeichnis
 
 ```text
-adventures/<adventure-slug>/
+adventure/
 ├── README.md
 ├── 00-input/
 │   ├── world.md
@@ -28,6 +28,8 @@ adventures/<adventure-slug>/
 ├── 50-indexes/
 └── 90-meta/
 ```
+
+Das Verzeichnis `adventure/` entsteht bei der einmaligen Initialisierung. Titel und Slug werden als stabile Metadaten im Abenteuer-Frontmatter geführt, nicht als zusätzliche Verzeichnisebene.
 
 ## Benennung
 

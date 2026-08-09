@@ -5,11 +5,11 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
 
 # Audit an adventure
 
-1. Read the root `AGENTS.md`, adventure `README.md`, all `50-indexes/`, and `90-meta/` files.
+1. Read the root `AGENTS.md`, `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
 2. Run:
 
    ```bash
-   python3 scripts/validate_adventure.py adventures/<adventure-slug>
+   python3 scripts/validate_adventure.py
    ```
 
 3. Use validator results to select a narrow read set. Inspect implicated locations, assets, and their direct links.

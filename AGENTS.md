@@ -8,17 +8,18 @@ Use this repository to create and maintain system-neutral tabletop role-playing 
 
 1. Begin with the user's rough world and plot description. Ask only for missing information that blocks a coherent first pass.
 2. Choose a lowercase ASCII kebab-case adventure slug and run `python3 scripts/init_adventure.py --slug <slug> --title "<title>"`.
-3. Preserve the user's original wording in `00-input/world.md` and `00-input/plot.md` before interpreting it.
-4. Derive only supported facts. Record assumptions in `90-meta/decisions.md` and unresolved choices in `90-meta/open-questions.md`.
-5. Create locations and assets with `scripts/new_asset.py`; do not copy template files manually when the script supports the asset type.
+3. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
+4. Preserve the user's original wording in `adventure/00-input/world.md` and `adventure/00-input/plot.md` before interpreting it.
+5. Derive only supported facts. Record assumptions in `adventure/90-meta/decisions.md` and unresolved choices in `adventure/90-meta/open-questions.md`.
+6. Create locations and assets with `scripts/new_asset.py`; do not copy template files manually when the script supports the asset type.
 
 ## Read before editing
 
 For an existing adventure, read in this order:
 
-1. the adventure `README.md`;
-2. relevant files in `50-indexes/` and `90-meta/open-questions.md`;
-3. the target location's `location.md`;
+1. `adventure/README.md`;
+2. relevant files in `adventure/50-indexes/` and `adventure/90-meta/open-questions.md`;
+3. the target location's `location.md` below `adventure/30-locations/`;
 4. only the linked assets required for the task.
 
 Do not scan every asset by default. Expand the read set only when relationships or continuity require it.
@@ -26,15 +27,15 @@ Do not scan every asset by default. Expand the read set only when relationships 
 ## Canonical storage
 
 - Store a local asset exactly once under its primary location:
-  - `30-locations/<location>/npcs/<npc>/npc.md`
-  - `30-locations/<location>/objects/<object>/object.md`
-  - `30-locations/<location>/information/<information>/information.md`
-  - `30-locations/<location>/encounters/<encounter>/encounter.md`
-  - `30-locations/<location>/handouts/<handout>/handout.md`
-- Store factions under `40-global/factions/` and plot threads under `20-plot/threads/`.
+  - `adventure/30-locations/<location>/npcs/<npc>/npc.md`
+  - `adventure/30-locations/<location>/objects/<object>/object.md`
+  - `adventure/30-locations/<location>/information/<information>/information.md`
+  - `adventure/30-locations/<location>/encounters/<encounter>/encounter.md`
+  - `adventure/30-locations/<location>/handouts/<handout>/handout.md`
+- Store factions under `adventure/40-global/factions/` and plot threads under `adventure/20-plot/threads/`.
 - Represent appearances elsewhere with relative Markdown links. Never duplicate the descriptive body.
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
-- Update the relevant files in `50-indexes/` whenever an asset is added, moved, renamed, or retired.
+- Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, or retired.
 
 ## Content rules
 
@@ -56,8 +57,8 @@ Do not scan every asset by default. Expand the read set only when relationships 
 ## Finish work
 
 1. Resolve or record affected links and contradictions.
-2. Update indexes and `90-meta/change-log.md`.
-3. Run `python3 scripts/validate_adventure.py adventures/<slug>`.
+2. Update indexes and `adventure/90-meta/change-log.md`.
+3. Run `python3 scripts/validate_adventure.py`.
 4. Report created or changed files, unresolved questions, and validation results.
 
 Do not create example adventures in this template repository.
