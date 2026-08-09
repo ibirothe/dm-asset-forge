@@ -27,7 +27,7 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Typen | alle 14 Katalogtypen, ID-Präfix, Scope, typspezifische Schlüssel und Pflichtfelder |
 | Werte | `status`, `truth_status`, `provenance` und alle regelneutralen qualitativen Skalen |
 | Pfade | kanonischer Pfad aus Typ, ID, primärem Ort oder Visual-Subject |
-| Inhalt | erforderliche `##`-Abschnitte des passenden Asset-Templates |
+| Inhalt | ausschließlich die funktional erforderlichen `##`-Abschnitte des passenden Asset-Templates; optionale Navigation erst bei tatsächlichem Bedarf |
 | Beziehungen | existierende Ziel-ID und erlaubter Zieltyp für strukturierte Relationsfelder |
 | Navigation | vollständige, eindeutige und aktuelle Indexzeilen sowie relative Links und verpflichtende Gegenlinks strukturierter Beziehungen |
 | Referenzen | doppelte IDs, defekte relative Markdown-Links und verwaiste Visual-Prompts |
@@ -35,6 +35,8 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Hygiene | verbliebene Template-Platzhalter und mögliche systemspezifische Begriffe |
 
 Die normativen Grundlagen bleiben der [Asset-Katalog](asset-katalog.md), die [Metadaten und Werte](metadaten-und-werte.md) sowie das [Beziehungsmodell](beziehungen-und-speicherorte.md). Die anschließende fachliche Prüfung und ihr getrenntes Berichtsformat definiert der [Fachliche Audit-Leitfaden](adventure-audit-guide.md).
+
+Zusätzliche Überschriften aus älteren Template-Ständen bleiben zulässig. Werden funktionslose Pflichtaufforderungen aus einem Template entfernt, bleiben bestehende Abenteuer daher valide; der Validator verlangt sie lediglich bei neu erzeugten oder überarbeiteten Assets nicht mehr.
 
 ## Ausgabe verstehen
 
