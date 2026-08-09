@@ -35,6 +35,7 @@ ASSET_SPECS = {
     "location": AssetSpec("loc-", "local", "location"),
     "scene": AssetSpec("scene-", "local", "local"),
     "npc": AssetSpec("npc-", "local", "local"),
+    "player-character": AssetSpec("pc-", "global", "global"),
     "creature": AssetSpec("cre-", "local", "local"),
     "faction": AssetSpec("fac-", "global", "global"),
     "object": AssetSpec("obj-", "local", "local"),
@@ -59,6 +60,7 @@ LOCAL_DIRS = {
 
 GLOBAL_TARGETS = {
     "faction": Path("40-global/factions"),
+    "player-character": Path("40-global/player-characters"),
     "plot-thread": Path("20-plot/threads"),
     "event": Path("10-world/events"),
     "random-table": Path("40-global/random-tables"),
@@ -98,6 +100,7 @@ ASSET_LOCATION_SECTION = {
 INDEX_PATHS = {
     "location": (Path("50-indexes/locations.md"),),
     "npc": (Path("50-indexes/npcs.md"),),
+    "player-character": (Path("50-indexes/player-characters.md"),),
     "object": (Path("50-indexes/objects.md"),),
     "information": (Path("50-indexes/information.md"),),
     "plot-thread": (
@@ -219,6 +222,8 @@ def index_row(
         return f"| {asset_id} | {title} | draft | unknown | — | {link} |"
     if asset_type in {"npc", "object"}:
         return f"| {asset_id} | {title} | draft | {location_id} | — | {link} |"
+    if asset_type == "player-character":
+        return f"| {asset_id} | {title} | draft | — | — | {link} |"
     if asset_type == "information":
         return f"| {asset_id} | {title} | established | {location_id} | — | — | {link} |"
     if asset_type == "plot-thread" and index.name == "open-threads.md":

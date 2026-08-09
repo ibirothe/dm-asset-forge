@@ -21,10 +21,12 @@ SKILL_REFERENCE_REQUIREMENTS = {
     "dm-create-adventure": (
         "docs/intake-workflow.md",
         "docs/adventure-structure-guide.md",
+        "docs/player-character-workflow.md",
     ),
     "dm-create-asset": (
         "docs/asset-katalog.md",
         "docs/asset-authoring-guide.md",
+        "docs/player-character-workflow.md",
     ),
     "dm-develop-location": (
         "docs/asset-katalog.md",
@@ -55,6 +57,7 @@ def main() -> int:
         "location",
         "scene",
         "npc",
+        "player-character",
         "creature",
         "faction",
         "object",
@@ -174,6 +177,24 @@ def main() -> int:
             if section not in player_handout_content:
                 errors.append(f"player Handout workflow is missing section: {section}")
 
+    player_character_guide = ROOT / "docs" / "player-character-workflow.md"
+    required_player_character_sections = (
+        "## Dateimodell",
+        "## Fachliche Grenzen",
+        "## Freigabestatus in der Quelle",
+        "## Freigabeworkflow",
+        "## Safety-Check",
+        "## Visuals",
+        "## Definition of Done",
+    )
+    if not player_character_guide.is_file():
+        errors.append("missing Player Character workflow: docs/player-character-workflow.md")
+    else:
+        player_character_content = player_character_guide.read_text(encoding="utf-8")
+        for section in required_player_character_sections:
+            if section not in player_character_content:
+                errors.append(f"Player Character workflow is missing section: {section}")
+
     image_workflow = ROOT / "docs" / "bild-workflow.md"
     required_image_workflow_sections = (
         "## Dateimodell",
@@ -211,6 +232,8 @@ def main() -> int:
         errors.append("AGENTS.md does not reference the validation guide")
     if "docs/player-handout-workflow.md" not in agents_content:
         errors.append("AGENTS.md does not reference the player Handout workflow")
+    if "docs/player-character-workflow.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the Player Character workflow")
     if "docs/bild-workflow.md" not in agents_content:
         errors.append("AGENTS.md does not reference the image workflow")
 
@@ -303,6 +326,8 @@ def main() -> int:
                 errors.append(f"visual prompt template is missing section: {section}")
     if not (ROOT / "templates" / "player-handout.md").is_file():
         errors.append("missing player Handout template: templates/player-handout.md")
+    if not (ROOT / "templates" / "player-character-player.md").is_file():
+        errors.append("missing Player Character player template: templates/player-character-player.md")
 
     create_asset_skill = SKILLS / "dm-create-asset" / "SKILL.md"
     if (
@@ -311,6 +336,12 @@ def main() -> int:
         not in create_asset_skill.read_text(encoding="utf-8")
     ):
         errors.append("dm-create-asset does not reference the player Handout workflow")
+    if (
+        create_asset_skill.is_file()
+        and "docs/player-character-workflow.md"
+        not in create_asset_skill.read_text(encoding="utf-8")
+    ):
+        errors.append("dm-create-asset does not reference the Player Character workflow")
     if (
         create_asset_skill.is_file()
         and "docs/bild-workflow.md"

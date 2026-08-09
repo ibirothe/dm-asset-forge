@@ -90,9 +90,9 @@ Ortspezifischer Kontext darf am auftretenden Ort stehen, etwa „Mara wartet hie
 | `delivery_locations` | `handout` → `location` | Mögliche Übergabeorte. |
 | `entry_locations` | `plot-thread` → `location` | Einstiegspunkte. |
 | `related_locations` | globales Asset → `location` | Direkte Ortsrelevanz ohne Ownership. |
-| `owner` | `object` → `npc` oder `faction` | Besitz oder Verantwortung in der Fiktion. |
+| `owner` | `object` → `npc`, `player-character` oder `faction` | Besitz oder Verantwortung in der Fiktion. |
 | `factions` | `npc` → `faction` | Mitgliedschaft oder feste Zugehörigkeit. |
-| `known_by` | `information` → `npc` oder `faction` | Akteure mit dieser Information. |
+| `known_by` | `information` → `npc`, `player-character` oder `faction` | Akteure mit dieser Information. |
 | `participants` | `scene`, `encounter` oder `event` → Asset | Beteiligung im jeweiligen Kontext. |
 | `reveals` | `handout` → `information` | Kontrolliert offengelegte Information. |
 | `related_threads` | Asset → `plot-thread` | Direkte Plot-Relevanz. |
@@ -133,7 +133,7 @@ Indizes sind Navigationshilfen und keine zweite kanonische Quelle. Sie verlinken
 - lokale Assets und ihr `primary_location` verlinken sich gegenseitig;
 - Parent- und Child-Locations verlinken sich gegenseitig;
 - Visual und `subject_asset` verlinken sich gegenseitig;
-- Locations, NPCs, Objects, Information, Plot-Threads und Factions erhalten genau eine aktuelle Zeile in ihren vorhandenen zuständigen Indizes.
+- Locations, NPCs, Player Characters, Objects, Information, Plot-Threads und Factions erhalten genau eine aktuelle Zeile in ihren vorhandenen zuständigen Indizes.
 
 Die Pflege ist idempotent: Ein ausdrücklich wiederholtes Schreiben aktualisiert die bestehende Zeile oder den vorhandenen Link, statt einen zweiten Eintrag anzulegen. Manuell ergänzte strukturierte Beziehungen benötigen ebenfalls die in der Tabelle definierten Links. `scripts/validate_adventure.py` meldet fehlende Gegenlinks sowie fehlende, doppelte oder anhand der kanonischen Metadaten eindeutig veraltete Indexzeilen. Es verändert keine Datei.
 
@@ -169,7 +169,7 @@ Eine Information wird nicht pro Fundort kopiert:
 
 ## Globale Assets
 
-Globale Assets wie Fraktionen und Plot-Threads besitzen `scope: global` und kein `primary_location`. Ihre `related_locations` oder spezialisierten Ortslisten drücken Relevanz aus, aber übertragen keine Ownership.
+Globale Assets wie Fraktionen, Player Characters und Plot-Threads besitzen `scope: global` und kein `primary_location`. Ihre `related_locations` oder spezialisierten Ortslisten drücken Relevanz aus, aber übertragen keine Ownership. Ein Player Character bleibt global gespeichert, weil sein kanonischer Kontext nicht von einem aktuellen Aufenthaltsort abhängt.
 
 Ein globales Asset wird nicht lokal, nur weil es derzeit an einem Ort sichtbar ist. Umgekehrt wird ein lokales Asset nicht global, nur weil seine Auswirkungen weit reichen. `scope` folgt der Speicher- und Ownership-Semantik; `reach` folgt der erzählerischen Reichweite.
 

@@ -35,6 +35,7 @@ REQUIRED_FILES = (
     "40-global/factions/index.md",
     "50-indexes/locations.md",
     "50-indexes/npcs.md",
+    "50-indexes/player-characters.md",
     "50-indexes/objects.md",
     "50-indexes/information.md",
     "50-indexes/open-threads.md",
@@ -79,6 +80,7 @@ PLAYER_FORBIDDEN_HEADINGS = frozenset(
         "Player-facing content",
         "Delivery",
         "DM-only context",
+        "DM-only connections",
         "Reveals and consequences",
         "Player release",
         "Rendered output",
@@ -176,6 +178,11 @@ ASSET_SPECS = {
         ("primary_location", "current_location", "origin_location", "appearance_locations", "factions", "influence", "reach"), ("primary_location",),
         ("Table purpose", "First impression", "Appearance and manner", "Voice cues", "Public role", "Locations and movement", "Motivation", "Fear and pressure", "Resources and leverage", "Knowledge", "Relationships", "Likely behavior", "Hooks and consequences"),
     ),
+    "player-character": spec(
+        "pc-", "global", "player-character.md", "40-global/player-characters",
+        ("related_locations", "related_factions", "related_threads"), (),
+        ("Table purpose", "Player-facing concept", "Starting situation", "Personal hooks", "Established background", "Open choices", "Strengths and approaches", "Limits and complications", "Starting knowledge", "Relationships", "DM-only connections", "Player release"),
+    ),
     "creature": spec(
         "cre-", "local", "creature.md", "creatures",
         ("primary_location", "current_location", "origin_location", "appearance_locations", "danger", "rarity", "reach"), ("primary_location",),
@@ -259,9 +266,9 @@ RELATION_RULES = {
     "delivery_locations": (True, frozenset({"location"})),
     "entry_locations": (True, frozenset({"location"})),
     "related_locations": (True, frozenset({"location"})),
-    "owner": (False, frozenset({"npc", "faction"})),
+    "owner": (False, frozenset({"npc", "player-character", "faction"})),
     "factions": (True, frozenset({"faction"})),
-    "known_by": (True, frozenset({"npc", "faction"})),
+    "known_by": (True, frozenset({"npc", "faction", "player-character"})),
     "participants": (True, None),
     "reveals": (True, frozenset({"information"})),
     "related_threads": (True, frozenset({"plot-thread"})),
@@ -274,6 +281,7 @@ RELATION_RULES = {
 INDEX_PATHS = {
     "location": (Path("50-indexes/locations.md"),),
     "npc": (Path("50-indexes/npcs.md"),),
+    "player-character": (Path("50-indexes/player-characters.md"),),
     "object": (Path("50-indexes/objects.md"),),
     "information": (Path("50-indexes/information.md"),),
     "plot-thread": (
@@ -491,11 +499,11 @@ def validate_asset_record(
                 errors.append(diagnostic(rel, "VISUAL_PROMPT", f"matching prompt is missing at {relative(prompt, root)}.", "Create the prompt companion from templates/visual-prompt.md."))
             else:
                 validate_visual_generation(root, record, prompt, errors)
-    elif record.asset_type == "handout":
-        validate_handout_release(root, record, errors)
+    elif record.asset_type in {"handout", "player-character"}:
+        validate_player_release(root, record, errors)
 
 
-def validate_handout_release(
+def validate_player_release(
     root: Path,
     record: AssetRecord,
     errors: list[str],
@@ -523,7 +531,7 @@ def validate_handout_release(
             diagnostic(
                 relative(player, root),
                 "PLAYER_RELEASE_BLOCKED",
-                "player.md exists although the canonical Handout is not approved.",
+                "player.md exists although the canonical source asset is not approved.",
                 "Remove the player file or obtain explicit approval and document the current source version.",
             )
         )
@@ -543,7 +551,7 @@ def validate_handout_release(
             diagnostic(
                 rel,
                 "PLAYER_SOURCE_LINK",
-                "approved player.md is not linked from its canonical Handout.",
+                "approved player.md is not linked from its canonical source asset.",
                 "Set '- Player file: [player.md](player.md)' in Player release.",
             )
         )
@@ -555,7 +563,7 @@ def validate_handout_release(
             diagnostic(
                 rel,
                 "PLAYER_SOURCE_VERSION",
-                "approved source version does not match the current Handout version.",
+                "approved source version does not match the current asset version.",
                 f"Obtain explicit approval for version {current_version} before replacing player.md.",
             )
         )
@@ -976,7 +984,7 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
                 errors.append(diagnostic(rel, "FM_MISSING", "asset has no YAML frontmatter.", "Add frontmatter from the matching asset template."))
                 continue
             if declared_type not in ASSET_SPECS:
-                errors.append(diagnostic(rel, "ASSET_TYPE", f"unknown or missing asset type {declared_type!r}.", "Use one of the 14 types from docs/asset-katalog.md."))
+                errors.append(diagnostic(rel, "ASSET_TYPE", f"unknown or missing asset type {declared_type!r}.", "Use one of the 15 types from docs/asset-katalog.md."))
                 continue
             record = AssetRecord(path, metadata, declared_type)
             records.append(record)

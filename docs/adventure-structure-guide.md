@@ -153,6 +153,7 @@ Offene Enden sind bewusst, wenn klar ist:
 | `information` | Führt eine präzise Aussage mit Wahrheitsstatus, Hinweisen und unabhängigen Entdeckungspfaden. |
 | `event` | Zeigt, wie Akteure und Welt mit oder ohne Eingreifen fortschreiten und welche Folgen sichtbar werden. |
 | `npc` / `faction` | Handeln aus eigenen Zielen und reagieren nachvollziehbar auf veränderte Zustände. |
+| `player-character` | Bietet eine spielbare Ausgangslage, freiwillige Hooks und offene Entscheidungen, ohne Motivation oder Lösung vorzuschreiben. |
 | `location` | Bietet konkrete Zugänge, Hindernisse, Hebel und sichtbare Veränderungen. |
 
 Kein einzelnes Asset trägt allein den gesamten Verlauf. Beziehungen zeigen, welche Assets einen Zustand erklären, verändern oder sichtbar machen.

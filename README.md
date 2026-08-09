@@ -23,6 +23,7 @@ Das verbindliche Ownership- und Beziehungsmodell steht in [docs/beziehungen-und-
 Der geführte Erstlauf von freiem Welt- und Plottext zum strukturierten Abenteuer steht in [docs/intake-workflow.md](docs/intake-workflow.md).
 Regeln, Fehlercodes und Grenzen der technischen Prüfung stehen in [docs/validierung.md](docs/validierung.md).
 Der Safety- und Freigabeworkflow für eigenständige Spieler-Handouts steht in [docs/player-handout-workflow.md](docs/player-handout-workflow.md).
+Der regelneutrale Aufbau und die Freigabe vorbereiteter Player Characters stehen in [docs/player-character-workflow.md](docs/player-character-workflow.md).
 Reproduzierbare Visual-Briefings, Identitätsanker und PNG-Freigaben stehen in [docs/bild-workflow.md](docs/bild-workflow.md).
 
 ## Grundprinzipien
@@ -61,12 +62,13 @@ python3 scripts/init_adventure.py --slug nebel-ueber-arken --title "Nebel über 
 python3 scripts/new_asset.py --type world --slug nebel-ueber-arken --title "Nebel über Arken" --overwrite
 python3 scripts/new_asset.py --type location --slug hafenviertel --title "Hafenviertel"
 python3 scripts/new_asset.py --type npc --location hafenviertel --slug mara-veen --title "Mara Veen"
+python3 scripts/new_asset.py --type player-character --slug ira-veen --title "Ira Veen"
 python3 scripts/new_asset.py --type visual --subject npc-mara-veen --slug portrait --title "Porträt von Mara Veen"
 python3 scripts/validate_adventure.py
 python3 -m unittest discover -s tests -v
 ```
 
-`new_asset.py` unterstützt alle 14 Typen des Asset-Katalogs. `python3 scripts/new_asset.py --help` zeigt typspezifische Optionen und Beispiele. Es überschreibt keine bestehende Datei ohne `--overwrite`. Beim Schreiben pflegt es vorhandene zuständige Indizes sowie die aus `primary_location`, `parent_location` und `subject_asset` eindeutig ableitbaren Gegenlinks ohne doppelte Einträge. Kontextabhängige Beziehungen und das Change Log bleiben Aufgabe von Codex.
+`new_asset.py` unterstützt alle 15 Typen des Asset-Katalogs. `python3 scripts/new_asset.py --help` zeigt typspezifische Optionen und Beispiele. Es überschreibt keine bestehende Datei ohne `--overwrite`. Beim Schreiben pflegt es vorhandene zuständige Indizes sowie die aus `primary_location`, `parent_location` und `subject_asset` eindeutig ableitbaren Gegenlinks ohne doppelte Einträge. Kontextabhängige Beziehungen und das Change Log bleiben Aufgabe von Codex.
 
 Die Skripte verwenden ausschließlich die Python-Standardbibliothek.
 

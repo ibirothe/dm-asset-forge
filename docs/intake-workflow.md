@@ -189,7 +189,7 @@ Nicht jeden erwähnten Ort, NPC oder Gegenstand ausarbeiten. Ein Name oder Link 
 
 ### 6. Navigation und Nachweis
 
-1. Alle erzeugten Assets aus den passenden Locations und Indizes verlinken. In den fünf Indizes je einen kurzen tischrelevanten Kontext ergänzen; vollständige Beschreibungen bleiben im kanonischen Asset.
+1. Alle erzeugten Assets aus den passenden Locations und Indizes verlinken. In den sechs Indizes je einen kurzen tischrelevanten Kontext ergänzen; vollständige Beschreibungen bleiben im kanonischen Asset.
 2. Annahmen, Entscheidungen und offene Fragen in ihren getrennten Dateien erfassen.
 3. Den Erstlauf in `90-meta/change-log.md` dokumentieren.
 4. `adventure/README.md` mit Kurzfassung, Arbeitsstand, wichtigster offener Frage und nächsten Schritten aktualisieren. Die Tischübersicht muss Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse und relevante Folgezustände knapp beantworten; Pacing und sichere Kürzungen nur zusammenfassen und zum Plot verlinken.
@@ -215,7 +215,7 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] Der zentrale Konflikt besitzt mindestens zwei plausible Auflösungen oder eine Auflösung plus einen bewusst offenen Endzustand.
 - [ ] Alle für Einstieg und Kernkonflikt notwendigen Locations existieren; optionale Orte wurden nicht vorsorglich ausgebaut.
 - [ ] Notwendige Plot-Threads und Assets besitzen kanonische Pfade, Metadaten und Links.
-- [ ] Alle fünf Indizes spiegeln den erzeugten Stand wider.
+- [ ] Alle sechs Indizes spiegeln den erzeugten Stand wider.
 - [ ] Jeder Indexeintrag besitzt einen kurzen tischrelevanten Kontext und genau einen Link zur einzigen kanonischen Beschreibung.
 - [ ] Jedes zentrale Asset ist direkt aus der README oder über genau einen passenden Index ohne Volltextsuche erreichbar.
 - [ ] `adventure/README.md` nennt Arbeitsstand, wichtigste offene Frage und nächste Schritte und beantwortet die für die Tischübersicht geforderten Kernfragen.

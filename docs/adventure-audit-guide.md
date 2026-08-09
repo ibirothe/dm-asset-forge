@@ -36,7 +36,7 @@ Ein Audit:
 ## Prüfreihenfolge
 
 1. **Scope festhalten:** Audit-Ziel und ausdrücklich ausgeschlossene Bereiche nennen.
-2. **Orientierung lesen:** `adventure/README.md`, alle fünf Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
+2. **Orientierung lesen:** `adventure/README.md`, alle sechs Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
 3. **Technische Basis prüfen:** Validator ausführen und dessen Ergebnis unverändert als eigenen Berichtsteil behandeln.
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
@@ -46,7 +46,7 @@ Ein Audit:
 9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
 10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
 11. **Pacing prüfen:** Zielrahmen, minimalen Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
-12. **Navigation prüfen:** README und fünf Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
+12. **Navigation prüfen:** README und sechs Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
 13. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
 14. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
 15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
@@ -111,11 +111,11 @@ Diese Prüfung ergänzt den technischen Validator um semantische Grenzen. Bei ei
 
 Für jede `player.md` prüfen:
 
-1. **Freigabequelle:** Verweist das zugehörige `handout.md` auf genau diese Spielerdatei und die freigegebene Quellversion?
-2. **Erlaubter Inhalt:** Stammt jede Aussage aus `Player-facing content` oder aus einer bewusst offenbarten Information unter `reveals`?
+1. **Freigabequelle:** Verweist das zugehörige `handout.md` oder `player-character.md` auf genau diese Spielerdatei und die freigegebene Quellversion?
+2. **Erlaubter Inhalt:** Stammt jede Aussage beim Handout aus `Player-facing content` oder bewusst offenbarten Informationen und beim Player Character ausschließlich aus freigabefähigem Konzept, Ausgangslage, Hintergrund, offenen Entscheidungen, Stärken, Grenzen, Startwissen und Beziehungen?
 3. **Wahrheitsgrenze:** Bleiben Gerücht, Lüge, Teilwahrheit und Unsicherheit in derselben Bedeutung erhalten?
-4. **Auslieferung:** Verrät die Datei nur, was Spieler in der dokumentierten Auslieferungssituation tatsächlich erhalten?
-5. **Geheimnisschutz:** Fehlen DM-Kontext, verdeckte Ursachen, Lösungen, zukünftige Ereignisse, interne IDs, Statuswerte und Repository-Navigation?
+4. **Auslieferung:** Verrät die Datei nur, was Spieler in der dokumentierten Auslieferungs- oder Character-Ausgangssituation tatsächlich erhalten?
+5. **Geheimnisschutz und Entscheidungsfreiheit:** Fehlen DM-Kontext, verdeckte Ursachen, Lösungen, zukünftige Ereignisse, interne IDs, Statuswerte und Repository-Navigation, und bleiben unbestätigte Motivation, Loyalität und Entscheidungen offen?
 
 Für jedes relevante Visual prüfen:
 
@@ -167,13 +167,13 @@ Die README wird als abgeleitete Tischübersicht geprüft, nicht als zweite Kanon
 
 Für jedes zentrale Asset prüfen:
 
-1. **Direkter Weg:** Ist es aus der README direkt oder über genau einen passenden der fünf Indizes erreichbar?
+1. **Direkter Weg:** Ist es aus der README direkt oder über genau einen passenden der sechs Indizes erreichbar?
 2. **Tischkontext:** Erklärt der Link oder die Indexzeile knapp, warum das Asset jetzt relevant ist?
 3. **Kanonisches Ziel:** Führt der Weg zur einzigen vollständigen Beschreibung statt zu einer Kopie oder weiteren Übersichtsdatei?
 4. **Aktualität:** Stimmen Kurzkontext, Status und Link mit dem kanonischen Plot oder Asset überein?
 5. **Abdeckung:** Sind insbesondere zentrale Factions und Events direkt in der README verlinkt, da für sie keiner der fünf Tischindizes existiert?
 
-Die fünf Indizes werden nach ihrer jeweiligen Tischfunktion bewertet: aktueller Ortsdruck, unmittelbare NPC-Absicht, Object-Einsatz, Bedeutung und unabhängige Fundwege einer Information sowie nächster Druck, minimaler Auflösungszustand und sichere Kürzung eines aktiven Threads. Kurzkontexte bleiben knapp und enthalten keinen vollständigen Kanon.
+Die sechs Indizes werden nach ihrer jeweiligen Tischfunktion bewertet: aktueller Ortsdruck, unmittelbare NPC-Absicht, One-Shot-Rolle und freiwilliger Hook eines Player Characters, Object-Einsatz, Bedeutung und unabhängige Fundwege einer Information sowie nächster Druck, minimaler Auflösungszustand und sichere Kürzung eines aktiven Threads. Kurzkontexte bleiben knapp und enthalten keinen vollständigen Kanon.
 
 Ein zentrales Asset, das nur durch Volltextsuche oder blindes Durchsuchen von Ordnern erreichbar ist, ist mindestens `important`. Ein veralteter Kurzkontext ist nach seiner Auswirkung einzustufen und `blocking`, wenn er den DM zum falschen einzigen Informationsweg oder zu einer unerreichbaren Auflösung führt.
 
@@ -231,7 +231,7 @@ Der Bericht verwendet diese Reihenfolge:
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
 8. **Pacing und Kürzbarkeit:** Zielrahmen, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
-9. **Übersichten und Navigation:** README-Kernfragen, fünf Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
+9. **Übersichten und Navigation:** README-Kernfragen, sechs Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
 10. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
 11. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
@@ -266,7 +266,7 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
 - [ ] Zielrahmen, minimaler Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` fachlich geprüft wurden;
 - [ ] jede sichere Kürzung notwendige Informationswege, mehrere Formen der Spieler-Einflussnahme und erreichbare Auflösungen erhält;
-- [ ] README und fünf Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
+- [ ] README und sechs Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
 - [ ] jedes zentrale Asset direkt oder über genau einen passenden Index ohne Volltextsuche erreichbar ist;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;
