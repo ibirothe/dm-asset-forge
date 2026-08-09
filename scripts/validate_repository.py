@@ -94,6 +94,7 @@ def main() -> int:
         "## Auflösungen und offene Enden",
         "## Asset-Rollen im Verlauf",
         "## One-Shot-Umfang begrenzen",
+        "## Pacing und sichere Kürzbarkeit",
         "## Definition of Done",
     )
     if not structure_guide.is_file():
@@ -111,6 +112,10 @@ def main() -> int:
         "## Kanon und Kontinuität",
         "## Informationswege",
         "## Plot-Threads und Spielerwirksamkeit",
+        "## Spielerausgaben und Visuals",
+        "## Pacing und sichere Kürzbarkeit",
+        "## Übersichten und Navigationswege",
+        "## Tischreife",
         "## Schweregrade",
         "## Format eines Findings",
         "## Audit-Bericht",
