@@ -4,6 +4,12 @@ Source: [Visual asset](visual.md)
 
 ## Prompt
 
+## Identity anchors
+
+## Depicted state
+
+## Allowed variation
+
 ## Composition and viewpoint
 
 ## Style, palette, and lighting
@@ -11,6 +17,12 @@ Source: [Visual asset](visual.md)
 ## Narrative details
 
 ## Exclusions
+
+## Canon checks
+
+- Identity source:
+- State basis:
+- Conflicts: none
 
 ## Output
 
