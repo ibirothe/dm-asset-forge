@@ -3,7 +3,10 @@ id: info-{{SLUG}}
 type: information
 title: "{{TITLE}}"
 status: draft
+version: 1
 truth_status: established
+confidence: unknown
+accessibility: unknown
 primary_location: "{{LOCATION_ID}}"
 known_by: []
 related_threads: []

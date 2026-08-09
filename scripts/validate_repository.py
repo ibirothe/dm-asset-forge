@@ -56,9 +56,15 @@ def main() -> int:
             if f"| `{asset_type}` |" not in catalog_content:
                 errors.append(f"asset catalog is missing type: {asset_type}")
 
+    metadata_spec = ROOT / "docs" / "metadaten-und-werte.md"
+    if not metadata_spec.is_file():
+        errors.append("missing metadata specification: docs/metadaten-und-werte.md")
+
     agents_content = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     if "docs/asset-katalog.md" not in agents_content:
         errors.append("AGENTS.md does not reference the canonical asset catalog")
+    if "docs/metadaten-und-werte.md" not in agents_content:
+        errors.append("AGENTS.md does not reference the metadata specification")
 
     if (ROOT / "adventures").exists():
         errors.append("legacy multi-adventure directory exists: adventures/")
@@ -91,6 +97,8 @@ def main() -> int:
             errors.append(f"frontmatter must contain only name and description: {path.relative_to(ROOT)}")
         if "docs/asset-katalog.md" not in path.read_text(encoding="utf-8"):
             errors.append(f"skill does not reference the canonical asset catalog: {skill_dir.name}")
+        if "docs/metadaten-und-werte.md" not in path.read_text(encoding="utf-8"):
+            errors.append(f"skill does not reference the metadata specification: {skill_dir.name}")
         name = data.get("name", "")
         description = data.get("description", "")
         if not NAME.fullmatch(name):

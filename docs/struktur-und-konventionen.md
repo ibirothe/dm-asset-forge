@@ -52,13 +52,7 @@ Kurzregel:
 
 ## Frontmatter
 
-Jedes Asset beginnt mit YAML-Frontmatter. Die gemeinsamen Pflichtfelder sind `id`, `type`, `title`, `status`, `tags`, `themes`, `created` und `updated`. Typspezifische Felder stehen in den Dateien unter `templates/assets/`.
-
-Erlaubte Statuswerte:
-
-- `draft`: angelegt, aber noch nicht spielbereit
-- `ready`: spielbereit und konsistent verknüpft
-- `retired`: nicht mehr aktiv, bleibt aber aus Kontinuitätsgründen erhalten
+Jedes Asset beginnt mit YAML-Frontmatter. [Gemeinsame Metadaten und regelneutrale Werte v1](metadaten-und-werte.md) ist die verbindliche Quelle für Pflichtfelder, zulässige typspezifische Schlüssel, kontrollierte Werte und die Unterscheidung zwischen `unknown`, `null`, `[]` und offenen Entscheidungen. Die Dateien unter `templates/assets/` setzen dieses Schema um.
 
 ## Verknüpfungen
 

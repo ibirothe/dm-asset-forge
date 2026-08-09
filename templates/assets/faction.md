@@ -3,8 +3,11 @@ id: fac-{{SLUG}}
 type: faction
 title: "{{TITLE}}"
 status: draft
-scope: ""
+version: 1
+scope: unknown
 locations: []
+influence: unknown
+reach: unknown
 tags: []
 themes: []
 created: {{DATE}}

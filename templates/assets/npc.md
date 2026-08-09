@@ -3,8 +3,11 @@ id: npc-{{SLUG}}
 type: npc
 title: "{{TITLE}}"
 status: draft
+version: 1
 primary_location: "{{LOCATION_ID}}"
 factions: []
+influence: unknown
+reach: unknown
 tags: []
 themes: []
 created: {{DATE}}

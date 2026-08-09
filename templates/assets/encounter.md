@@ -3,9 +3,11 @@ id: enc-{{SLUG}}
 type: encounter
 title: "{{TITLE}}"
 status: draft
+version: 1
 primary_location: "{{LOCATION_ID}}"
 participants: []
 related_threads: []
+danger: unknown
 tags: []
 themes: []
 created: {{DATE}}

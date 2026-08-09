@@ -3,8 +3,10 @@ id: hand-{{SLUG}}
 type: handout
 title: "{{TITLE}}"
 status: draft
+version: 1
 primary_location: "{{LOCATION_ID}}"
 reveals: []
+accessibility: unknown
 tags: []
 themes: []
 created: {{DATE}}

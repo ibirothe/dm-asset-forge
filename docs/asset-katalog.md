@@ -1,6 +1,6 @@
 # Kanonischer DM-Asset-Katalog v1
 
-Diese Datei ist die normative Quelle für Asset-Typen, technische Bezeichner, kanonische Speicherorte und Typauswahl. Widersprechen Templates, Skripte oder andere Anleitungen diesem Katalog, gilt dieser Katalog. Gemeinsame Metadaten und qualitative Werteskalen werden separat spezifiziert.
+Diese Datei ist die normative Quelle für Asset-Typen, technische Bezeichner, kanonische Speicherorte und Typauswahl. Widersprechen Templates, Skripte oder andere Anleitungen diesem Katalog, gilt dieser Katalog. Gemeinsame Metadaten und qualitative Werteskalen stehen in [Metadaten und regelneutrale Werte v1](metadaten-und-werte.md).
 
 ## Geltungsbereich
 

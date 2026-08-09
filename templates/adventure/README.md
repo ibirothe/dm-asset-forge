@@ -3,6 +3,9 @@ id: adv-{{ADVENTURE_SLUG}}
 type: adventure
 title: "{{ADVENTURE_TITLE}}"
 status: draft
+version: 1
+tags: []
+themes: []
 created: {{DATE}}
 updated: {{DATE}}
 ---

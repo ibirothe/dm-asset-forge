@@ -3,8 +3,11 @@ id: loc-{{SLUG}}
 type: location
 title: "{{TITLE}}"
 status: draft
+version: 1
 parent_location: null
-function: ""
+function: unknown
+danger: unknown
+accessibility: unknown
 tags: []
 themes: []
 created: {{DATE}}

@@ -5,7 +5,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
 
 # Audit an adventure
 
-1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
+1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md` and `docs/metadaten-und-werte.md`, `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
 2. Run:
 
    ```bash
@@ -15,6 +15,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
 3. Use validator results to select a narrow read set. Inspect implicated locations, assets, and their direct links.
 4. Check narrative quality separately from structural validation:
    - every asset uses the catalog type and canonical path that match its purpose;
+   - every asset uses only defined metadata keys, controlled values, and missing-value semantics;
    - every active plot thread has an entry point, pressure, player choice, and possible outcome;
    - important information has at least one discoverable path and meaningful consequence;
    - no required conclusion depends on a single fragile clue;

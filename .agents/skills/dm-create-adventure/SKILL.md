@@ -5,7 +5,7 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
 
 # Create an adventure
 
-1. Read the repository `AGENTS.md`, `docs/struktur-und-konventionen.md`, and the normative `docs/asset-katalog.md`.
+1. Read the repository `AGENTS.md`, `docs/struktur-und-konventionen.md`, and the normative `docs/asset-katalog.md` and `docs/metadaten-und-werte.md`.
 2. Capture the requested title plus the user's rough world and plot descriptions. Ask only about missing facts that would materially change the first structure; record non-blocking uncertainties instead.
 3. Derive a lowercase ASCII kebab-case slug. Confirm that `adventure/` does not exist; one repository may contain only one initialized adventure.
 4. Run:
@@ -18,7 +18,7 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
    - `00-input/world.md`
    - `00-input/plot.md`
    - `00-input/constraints.md` when constraints were supplied
-6. Build a restrained first pass in `10-world/` and `20-plot/`. Distinguish facts, interpretations, assumptions, and unknowns.
+6. Build a restrained first pass in `10-world/` and `20-plot/`. Distinguish facts, interpretations, assumptions, and unknowns. Apply the documented controlled values and missing-value semantics.
 7. Create only locations and assets supported by the brief. Use `scripts/new_asset.py` for each supported asset type.
 8. Link every created asset from the relevant local file and `50-indexes/`. Do not duplicate descriptive bodies.
 9. Record impactful assumptions in `90-meta/decisions.md`, unresolved user choices in `90-meta/open-questions.md`, and the work in `90-meta/change-log.md`.
