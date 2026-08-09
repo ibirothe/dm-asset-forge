@@ -5,7 +5,7 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
 
 # Audit an adventure
 
-1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md`, then `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
+1. Read the root `AGENTS.md`, the normative `docs/asset-katalog.md`, `docs/asset-authoring-guide.md`, `docs/adventure-structure-guide.md`, `docs/metadaten-und-werte.md`, `docs/beziehungen-und-speicherorte.md`, and `docs/validierung.md`, then `adventure/README.md`, all `adventure/50-indexes/`, and `adventure/90-meta/` files.
 2. Run:
 
    ```bash
@@ -18,9 +18,11 @@ description: Audit an existing system-neutral tabletop RPG adventure for structu
    - every asset uses only defined metadata keys, controlled values, and missing-value semantics;
    - every local asset has one canonical owner location, appearances are links rather than copies, and required reciprocal links exist;
    - unconfirmed assumptions remain in `90-meta/assumptions.md` and are not presented as established truths;
-   - every active plot thread has an entry point, pressure, player choice, and possible outcome;
-   - important information has at least one discoverable path and meaningful consequence;
-   - no required conclusion depends on a single fragile clue;
+   - the entry situation is understandable without prescribing player-character background, motivation, or action;
+   - every active plot thread has an entry point, next pressure, meaningful choice, playable neglect state, and multiple possible outcomes;
+   - every necessary conclusion has at least two independent discovery paths, while other important information has a discoverable path and meaningful consequence;
+   - failure, retreat, and neglect create playable changed states rather than dead ends;
+   - required progress depends on states, not a single action, clue, location, encounter, or mandatory Scene;
    - NPC knowledge and motivations do not contradict established facts;
    - timelines, locations, ownership, and relationships agree;
    - every asset marked `ready` meets the shared and type-specific Definition of Done in the authoring guide;

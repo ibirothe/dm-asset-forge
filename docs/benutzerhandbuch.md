@@ -14,6 +14,12 @@ Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Ko
 
 Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt- und Plot-Intake](intake-workflow.md).
 
+## Abenteuerstruktur und Spielerentscheidungen
+
+Codex bereitet das Abenteuer als veränderbare Situation vor, nicht als feste Szenenfolge. Der Einstieg erklärt den aktuellen Druck und bietet mehrere Ansatzpunkte, ohne Herkunft, Motivation oder Entscheidung der Spielerfiguren vorzugeben. Notwendige Erkenntnisse bleiben über unabhängige Informationswege erreichbar. Scheitern, Rückzug und Ignorieren verändern Akteure, Orte, Beziehungen oder Druck, statt den Plot zu beenden.
+
+Der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md) enthält die prüfbaren Kriterien für Einstieg, Entscheidungen, Konsequenzen, optionale Scenes, Plot-Threads, mögliche Auflösungen und die Skalierung vom One-Shot bis zum längeren Abenteuer.
+
 ## Sinnvolle Folgeaufträge
 
 - „Arbeite den Ort `<name>` aus und lege alle dort verankerten NPCs, Objekte und Hinweise am Ort ab.“

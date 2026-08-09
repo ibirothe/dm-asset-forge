@@ -1,6 +1,6 @@
 # Geführter Welt- und Plot-Intake v1
 
-Diese Datei definiert den reproduzierbaren Erstlauf, mit dem Codex aus einem freien Welt- und Plottext einen belastbaren ersten Abenteuerstand erzeugt. Sie ist die normative Quelle für Eingaben, Rückfragen, Annahmen, Ablage und Definition of Done.
+Diese Datei definiert den reproduzierbaren Erstlauf, mit dem Codex aus einem freien Welt- und Plottext einen belastbaren ersten Abenteuerstand erzeugt. Sie ist die normative Quelle für Eingaben, Rückfragen, Annahmen, Ablage und Definition of Done. Die fachlichen Regeln für Entscheidungen, Informationswege und Folgezustände stehen im [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md).
 
 ## Inhalt
 
@@ -148,7 +148,7 @@ Nicht bestätigte Annahmen erscheinen nie unter „Established truths“ oder al
 1. `10-world/overview.md` mit Prämisse, bestätigten Wahrheiten, Alltag, Kräften und Unknowns füllen.
 2. `10-world/themes.md` nur mit belegten Themen und Guardrails füllen; fehlende Angaben offenlassen.
 3. `10-world/timeline.md` nur mit ausdrücklich etablierten oder klar als unbekannt markierten Ereignissen ergänzen.
-4. `20-plot/overview.md` mit Ausgangslage, Konflikt, Stakes, möglichen Zielen und mehreren möglichen Ergebnissen füllen.
+4. `20-plot/overview.md` mit Ausgangslage, flexiblen Spieler-Hooks, Konflikt, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen.
 5. Nur Plot-Threads anlegen, die für den Kernkonflikt erforderlich sind.
 6. Genau die Locations anlegen, die für Einstieg, unmittelbare Handlung oder Verständnis des Kernkonflikts notwendig sind.
 7. Nur Assets anlegen, die im ersten spielbaren Abschnitt oder für die logische Verbindung des Plots benötigt werden.
@@ -173,6 +173,10 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] Klarstellungen, Annahmen, Entscheidungen und offene Fragen sind getrennt gespeichert.
 - [ ] `10-world/overview.md` trennt bestätigte Wahrheiten von Unknowns und Arbeitsannahmen.
 - [ ] `20-plot/overview.md` enthält Ausgangslage, zentralen Konflikt, Stakes und mehrere mögliche Entwicklungen oder Ergebnisse.
+- [ ] Der Einstieg bietet mindestens zwei erkennbare Ansatzpunkte, ohne Motivation oder Entscheidung der Spielerfiguren vorzugeben.
+- [ ] Notwendige Schlussfolgerungen besitzen mindestens zwei unabhängige Entdeckungspfade; keine Pflichtentwicklung hängt an einer einzelnen Scene.
+- [ ] Zentrale Entscheidungen sowie Scheitern, Rückzug oder Ignorieren führen zu spielbaren Folgezuständen.
+- [ ] Der zentrale Konflikt besitzt mindestens zwei plausible Auflösungen oder eine Auflösung plus einen bewusst offenen Endzustand.
 - [ ] Alle für Einstieg und Kernkonflikt notwendigen Locations existieren; optionale Orte wurden nicht vorsorglich ausgebaut.
 - [ ] Notwendige Plot-Threads und Assets besitzen kanonische Pfade, Metadaten und Links.
 - [ ] Alle fünf Indizes spiegeln den erzeugten Stand wider.
