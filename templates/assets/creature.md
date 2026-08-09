@@ -26,6 +26,8 @@ updated: {{DATE}}
 
 ## Recognizable features
 
+<!-- Varianten nur ergänzen, wenn sie Wiedererkennung, Verhalten, Risiko oder mögliche Ansätze am Tisch verändern. -->
+
 ## Habitat and movement
 
 ## Needs and behavior
@@ -36,8 +38,4 @@ updated: {{DATE}}
 
 ## Weaknesses and leverage
 
-## Variations
-
 ## Hooks and consequences
-
-## Visual reference
