@@ -23,6 +23,7 @@ Das verbindliche Ownership- und Beziehungsmodell steht in [docs/beziehungen-und-
 Der geführte Erstlauf von freiem Welt- und Plottext zum strukturierten Abenteuer steht in [docs/intake-workflow.md](docs/intake-workflow.md).
 Regeln, Fehlercodes und Grenzen der technischen Prüfung stehen in [docs/validierung.md](docs/validierung.md).
 Der Safety- und Freigabeworkflow für eigenständige Spieler-Handouts steht in [docs/player-handout-workflow.md](docs/player-handout-workflow.md).
+Reproduzierbare Visual-Briefings, Identitätsanker und PNG-Freigaben stehen in [docs/bild-workflow.md](docs/bild-workflow.md).
 
 ## Grundprinzipien
 

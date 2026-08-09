@@ -12,6 +12,7 @@ Read `docs/metadaten-und-werte.md` before creating or changing frontmatter. Trea
 Read `docs/beziehungen-und-speicherorte.md` before creating or changing ownership, location relations, appearances, movement, components, or reciprocal links.
 Read `docs/validierung.md` before interpreting validator diagnostics or changing validation rules.
 Read `docs/player-handout-workflow.md` before creating or replacing a player-facing Handout file. Never infer approval from asset status or an earlier release.
+Read `docs/bild-workflow.md` before creating or revising a Visual brief or generating or replacing a PNG. Keep the Subject as the identity source and require approval for the exact Visual version before image generation.
 
 ## Start a new adventure
 
@@ -82,8 +83,9 @@ Do not scan every asset by default. Expand the read set only when relationships 
 
 - Store final visual assets as `.png`.
 - Store visual metadata in `visual.md` and a neighboring `<slug>.prompt.md` brief containing composition, style, exclusions, and output path.
+- Separate stable Subject identity, depicted One-Shot state, and allowed stylistic variation. Resolve conflicts before generating an image.
 - Do not claim an image exists until the PNG file exists.
-- Do not generate or replace images unless the user requests it or approves a proposed image pass.
+- Do not generate or replace images until the user explicitly approves the exact Visual version, prompt, and target path. Keep an older PNG as `stale` after briefing changes until replacement is approved.
 
 ## Finish work
 

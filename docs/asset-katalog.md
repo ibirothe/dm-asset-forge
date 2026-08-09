@@ -108,7 +108,7 @@ Typische Nutzung: Brief, Aushang, Tagebuchseite, Symbolblatt oder Bild für Spie
 
 ### `visual`
 
-Beschreibt die reproduzierbare visuelle Darstellung genau eines Subject-Assets. Es führt kanonische visuelle Fakten, Komposition, Stil, Ausschlüsse, Ausgabe, Provenienz und Revisionen.
+Beschreibt die reproduzierbare visuelle Darstellung genau eines Subject-Assets. Das Subject bleibt Quelle stabiler Identitätsmerkmale; das Visual trennt deren Extrakt von dargestelltem One-Shot-Zustand, freier Variation, Komposition, Stil, Ausschlüssen, Ausgabe, Freigabe, Provenienz und Revisionen.
 
 Typische Nutzung: Porträt, Ortsansicht, Karte, Gegenstandsbild, Emblem oder Stimmungsbild. Das `visual`-Asset ist die Metadatenquelle; PNG und Prompt sind zugehörige Dateien, keine separaten kanonischen Assets.
 

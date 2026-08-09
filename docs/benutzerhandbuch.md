@@ -116,9 +116,9 @@ Leere Zeichenketten werden nicht als Platzhalter verwendet. Dadurch kann Codex o
 
 ## Bilder
 
-Bilddateien werden als PNG gespeichert. Ein Visual-Ordner enthält das kanonische `visual.md`, ein gleichnamiges Bildbriefing mit der Endung `.prompt.md` und optional die PNG-Datei. So kann das Motiv später reproduziert oder gezielt überarbeitet werden.
+Bilddateien werden als PNG gespeichert. Ein Visual-Ordner enthält das kanonische `visual.md`, ein gleichnamiges Bildbriefing mit der Endung `.prompt.md` und optional die PNG-Datei. Die Subject-Datei bleibt Quelle stabiler Identitätsmerkmale; Visual und Prompt trennen diese Merkmale vom dargestellten One-Shot-Zustand sowie von Stil, Perspektive und Licht.
 
-Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Codex darf erst dann behaupten, dass ein Bild vorhanden ist, wenn die PNG-Datei tatsächlich im Projekt liegt.
+Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Bitte Codex vor einer Erzeugung um das vollständige Briefing und gib die konkrete Visual-Version sowie den Zielpfad ausdrücklich frei. Das gilt erneut, wenn eine vorhandene PNG-Datei ersetzt werden soll. Nach einer Briefing-Änderung bleibt das ältere PNG erhalten, wird aber als `stale` geführt. Codex darf erst dann behaupten, dass ein aktuelles Bild vorhanden ist, wenn die PNG-Datei tatsächlich gespeichert wurde. Details stehen im [Bild-Workflow](bild-workflow.md).
 
 ## Vor dem Spielen
 
