@@ -26,6 +26,8 @@ updated: {{DATE}}
 
 ## Discovery points
 
+<!-- Orte, Akteure, Objects, Handouts oder Situationen relativ verlinken und pro Pfad nur Zugang und Präsentation beschreiben. Die Aussage selbst bleibt ausschließlich unter Statement kanonisch. -->
+
 ## Preconditions
 
 ## Presentation clues
@@ -37,3 +39,5 @@ updated: {{DATE}}
 ## Consequences when missed
 
 ## Related assets
+
+<!-- Nur Beziehungen verlinken, die Wahrheitsstatus, Zugang oder Konsequenzen erklären; keine Wiederholung der verlinkten Assets. -->
