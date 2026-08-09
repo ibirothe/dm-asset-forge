@@ -22,6 +22,8 @@ Codex bereitet das Abenteuer als veränderbare Situation vor, nicht als feste Sz
 
 Der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-structure-guide.md) enthält die prüfbaren Kriterien für Einstieg, Entscheidungen, Konsequenzen, optionale Scenes, Plot-Threads, mögliche Auflösungen und einen begrenzten One-Shot-Umfang.
 
+Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target duration` und `Content density` in `00-input/constraints.md`; fehlende Angaben bleiben `open`. Für die Vorbereitung unterscheidet Codex Inhalte redaktionell als `core`, `supporting` oder `optional`. Der Plot nennt einen minimalen Auflösungszustand, mindestens eine sichere Kürzung und einen vorbereiteten `late pressure`-Zustandswechsel. Diese Angaben helfen beim Verdichten, bilden aber weder einen Zeitplan noch eine feste Szenenfolge.
+
 ## Sinnvolle Folgeaufträge
 
 - „Arbeite den Ort `<name>` aus und lege alle dort verankerten NPCs, Objekte und Hinweise am Ort ab.“
