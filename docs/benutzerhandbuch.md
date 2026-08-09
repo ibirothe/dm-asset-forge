@@ -47,7 +47,7 @@ Nach der Initialisierung wird der World-Singleton einmalig aus seinem Asset-Temp
 python3 scripts/new_asset.py --type world --slug <adventure-slug> --title "<title>" --overwrite
 ```
 
-`--overwrite` ist hier nur für die noch unveränderte Platzhalterdatei des Scaffolds vorgesehen. Der Generator aktualisiert keine Indizes, Rückverweise oder Inhalte automatisch; diese werden anschließend durch Codex gepflegt. Alle Optionen zeigt `python3 scripts/new_asset.py --help`.
+`--overwrite` ist hier nur für die noch unveränderte Platzhalterdatei des Scaffolds vorgesehen. Der Generator aktualisiert vorhandene zuständige Indizes und die eindeutig ableitbaren Links zwischen lokalem Asset und primärem Ort, Parent- und Child-Location sowie Visual und Subject. Wiederholtes Schreiben mit ausdrücklichem `--overwrite` erzeugt dabei keine doppelten Navigationseinträge. Kontextabhängige Beziehungen, inhaltliche Beschreibungen und das Change Log werden anschließend durch Codex gepflegt. Alle Optionen zeigt `python3 scripts/new_asset.py --help`.
 
 ## Assets fachlich ausarbeiten
 
