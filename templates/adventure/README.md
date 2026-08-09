@@ -17,13 +17,45 @@ updated: {{DATE}}
 
 <!-- Zwei bis vier Sätze für die schnelle Orientierung. -->
 
+## Tischübersicht
+
+### Ausgangslage, Konflikt und Druck
+
+- Ausgangslage: [Plot overview](20-plot/overview.md#player-facing-starting-situation) — noch nicht ausgearbeitet.
+- Zentraler Konflikt: [Plot overview](20-plot/overview.md#central-conflict) — noch nicht ausgearbeitet.
+- Aktueller Druck: [Open threads](50-indexes/open-threads.md) — noch nicht ausgearbeitet.
+- Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — noch nicht ausgearbeitet.
+
+### Zentrale Akteure
+
+- Noch nicht erfasst.
+
+<!-- Ersetze den Platzhalter durch direkte Links auf zentrale NPCs, Factions oder Events und je einen Satz zu ihrer unmittelbaren Absicht oder nächsten Handlung. -->
+
+### Notwendige Informationen
+
+- Noch nicht erfasst. Siehe [Information index](50-indexes/information.md).
+
+<!-- Verlinke jede für den zentralen Konflikt notwendige Information direkt und fasse nur ihre Tischfunktion zusammen. Fundwege bleiben im Information index und im kanonischen Asset. -->
+
+### Abschlüsse und Folgezustände
+
+- Erreichbare Abschlüsse: [Possible outcomes](20-plot/overview.md#possible-outcomes) — noch nicht ausgearbeitet.
+- Relevante Folgezustände: [Failure, retreat, and neglect](20-plot/overview.md#failure-retreat-and-neglect) — noch nicht ausgearbeitet.
+
+### Pacing und Kürzung
+
+- Zielrahmen und sichere Kürzung: [One-shot scope and pacing](20-plot/overview.md#one-shot-scope-and-pacing) — noch nicht ausgearbeitet.
+
+<!-- Diese Übersicht enthält nur kurze, abgeleitete Tischhinweise mit stabilen Links. Vollständiger Kanon bleibt ausschließlich in Plot- und Asset-Dateien; Änderungen werden zuerst dort und danach hier nachvollzogen. -->
+
 ## Aktueller Arbeitsstand
 
 - Phase: Initialisierung
 - Spielbereit: Nein
 - Wichtigste offene Frage: [Open questions](90-meta/open-questions.md)
 
-## Einstiegspunkte
+## Projektnavigation
 
 - [Original request](00-input/original-request.md)
 - [Extracted world brief](00-input/world.md)

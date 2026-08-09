@@ -216,11 +216,13 @@ def index_row(
 ) -> str:
     link = f"[{title}]({relative_target(index, target)})"
     if asset_type == "location":
-        return f"| {asset_id} | {title} | draft | unknown | {link} |"
+        return f"| {asset_id} | {title} | draft | unknown | — | {link} |"
     if asset_type in {"npc", "object"}:
-        return f"| {asset_id} | {title} | draft | {location_id} | {link} |"
+        return f"| {asset_id} | {title} | draft | {location_id} | — | {link} |"
     if asset_type == "information":
-        return f"| {asset_id} | {title} | established | {location_id} | {link} |"
+        return f"| {asset_id} | {title} | established | {location_id} | — | — | {link} |"
+    if asset_type == "plot-thread" and index.name == "open-threads.md":
+        return f"| {asset_id} | {title} | draft | — | — | — | {link} |"
     return f"| {asset_id} | {title} | draft | — | {link} |"
 
 
@@ -238,6 +240,12 @@ def upsert_index_row(index: Path, target: Path, asset_id: str, row: str) -> bool
         id_match = bool(cells) and cells[0] == asset_id
         if target_match or id_match:
             if not replaced:
+                generated = [cell.strip() for cell in row.strip().strip("|").split("|")]
+                if len(cells) == len(generated):
+                    for number in range(1, len(generated) - 1):
+                        if generated[number] == "—" and cells[number] not in {"", "—"}:
+                            generated[number] = cells[number]
+                    row = "| " + " | ".join(generated) + " |"
                 updated.append(row)
                 replaced = True
             continue

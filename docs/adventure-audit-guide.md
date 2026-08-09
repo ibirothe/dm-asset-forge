@@ -12,6 +12,7 @@ Dieser Leitfaden definiert die read-only Prüfung eines vollständigen One-Shots
 - [Spielerausgaben und Visuals](#spielerausgaben-und-visuals)
 - [Plot-Threads und Spielerwirksamkeit](#plot-threads-und-spielerwirksamkeit)
 - [Pacing und sichere Kürzbarkeit](#pacing-und-sichere-kürzbarkeit)
+- [Übersichten und Navigationswege](#übersichten-und-navigationswege)
 - [Tischreife](#tischreife)
 - [Schweregrade](#schweregrade)
 - [Format eines Findings](#format-eines-findings)
@@ -45,9 +46,10 @@ Ein Audit:
 9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
 10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
 11. **Pacing prüfen:** Zielrahmen, minimalen Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
-12. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
-13. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
-14. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
+12. **Navigation prüfen:** README und fünf Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
+13. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
+14. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
+15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
 
 ## Technische Basisprüfung
 
@@ -159,6 +161,22 @@ Prüfen:
 
 Ein Zielrahmen ohne realistisch erreichbaren minimalen Auflösungszustand oder ohne sichere Kürzung ist mindestens `important`. Ein als sicher bezeichneter Cut ist `blocking`, wenn er den einzigen verbleibenden Fortschritt oder jede Auflösung entfernt. Der Audit bewertet keine exakten Minuten und erzeugt keinen Ablaufplan.
 
+## Übersichten und Navigationswege
+
+Die README wird als abgeleitete Tischübersicht geprüft, nicht als zweite Kanonquelle. Sie muss Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse und relevante Folgezustände knapp sichtbar machen. Pacing und sichere Kürzungen werden nur aus dem Plot zusammengefasst und dorthin verlinkt.
+
+Für jedes zentrale Asset prüfen:
+
+1. **Direkter Weg:** Ist es aus der README direkt oder über genau einen passenden der fünf Indizes erreichbar?
+2. **Tischkontext:** Erklärt der Link oder die Indexzeile knapp, warum das Asset jetzt relevant ist?
+3. **Kanonisches Ziel:** Führt der Weg zur einzigen vollständigen Beschreibung statt zu einer Kopie oder weiteren Übersichtsdatei?
+4. **Aktualität:** Stimmen Kurzkontext, Status und Link mit dem kanonischen Plot oder Asset überein?
+5. **Abdeckung:** Sind insbesondere zentrale Factions und Events direkt in der README verlinkt, da für sie keiner der fünf Tischindizes existiert?
+
+Die fünf Indizes werden nach ihrer jeweiligen Tischfunktion bewertet: aktueller Ortsdruck, unmittelbare NPC-Absicht, Object-Einsatz, Bedeutung und unabhängige Fundwege einer Information sowie nächster Druck, minimaler Auflösungszustand und sichere Kürzung eines aktiven Threads. Kurzkontexte bleiben knapp und enthalten keinen vollständigen Kanon.
+
+Ein zentrales Asset, das nur durch Volltextsuche oder blindes Durchsuchen von Ordnern erreichbar ist, ist mindestens `important`. Ein veralteter Kurzkontext ist nach seiner Auswirkung einzustufen und `blocking`, wenn er den DM zum falschen einzigen Informationsweg oder zu einer unerreichbaren Auflösung führt.
+
 ## Tischreife
 
 Für den Scope relevante Assets mit `status: ready` werden gegen die gemeinsame und typspezifische Definition of Done im Autorenleitfaden geprüft. Besondere Aufmerksamkeit gilt:
@@ -199,7 +217,7 @@ Jedes fachliche Finding verwendet dieses Format:
 - Kleinste Korrekturrichtung: <eng begrenzte Richtung, keine erfundene Lösung>
 ```
 
-Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-output`, `visual-consistency`, `player-agency`, `plot-thread`, `pacing`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
+Zulässige Bereiche sind mindestens `continuity`, `information-path`, `player-output`, `visual-consistency`, `player-agency`, `plot-thread`, `pacing`, `navigation`, `truth-boundary`, `one-shot-scope` und `table-readiness`. Bei einem Widerspruch werden alle beteiligten Dateien genannt. Ein Finding ohne Begründung, Auswirkung oder Korrekturrichtung ist unvollständig.
 
 ## Audit-Bericht
 
@@ -213,8 +231,9 @@ Der Bericht verwendet diese Reihenfolge:
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
 8. **Pacing und Kürzbarkeit:** Zielrahmen, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
-9. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
-10. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
+9. **Übersichten und Navigation:** README-Kernfragen, fünf Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
+10. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
+11. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
 Sind keine fachlichen Findings vorhanden, wird dies ausdrücklich gesagt. Es werden keine leeren Schweregradabschnitte künstlich gefüllt.
 
@@ -247,6 +266,8 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
 - [ ] Zielrahmen, minimaler Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` fachlich geprüft wurden;
 - [ ] jede sichere Kürzung notwendige Informationswege, mehrere Formen der Spieler-Einflussnahme und erreichbare Auflösungen erhält;
+- [ ] README und fünf Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
+- [ ] jedes zentrale Asset direkt oder über genau einen passenden Index ohne Volltextsuche erreichbar ist;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;
 - [ ] der Bericht eine priorisierte nächste Aktion nennt.

@@ -24,6 +24,16 @@ Der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-struc
 
 Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target duration` und `Content density` in `00-input/constraints.md`; fehlende Angaben bleiben `open`. Für die Vorbereitung unterscheidet Codex Inhalte redaktionell als `core`, `supporting` oder `optional`. Der Plot nennt einen minimalen Auflösungszustand, mindestens eine sichere Kürzung und einen vorbereiteten `late pressure`-Zustandswechsel. Diese Angaben helfen beim Verdichten, bilden aber weder einen Zeitplan noch eine feste Szenenfolge.
 
+## Vorbereitung und Tischgebrauch
+
+Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
+
+Die Kurztexte in README und Indizes dienen nur der Orientierung. Vollständiger Kanon, Geheimnisse, Bedingungen und Konsequenzen werden ausschließlich im verlinkten Plot oder Asset gepflegt. Ändert sich dort eine tischrelevante Aussage, lässt du Codex anschließend die betroffene Kurzfassung aktualisieren. Eine Volltextsuche oder ein Durchsehen sämtlicher Ordner sollte für zentrale Inhalte nicht nötig sein.
+
+Ein geeigneter Prüfauftrag ist:
+
+> Prüfe README und die fünf Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
+
 ## Sinnvolle Folgeaufträge
 
 - „Arbeite den Ort `<name>` aus und lege alle dort verankerten NPCs, Objekte und Hinweise am Ort ab.“

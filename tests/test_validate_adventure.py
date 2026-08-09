@@ -296,6 +296,18 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertIn("| info-route | Route | established | loc-hafen |", information_index.read_text(encoding="utf-8"))
         self.assertIn("| fac-laterne | Laterne | draft |", faction_index.read_text(encoding="utf-8"))
 
+        self.assertIn("| Current pressure | Link |", (self.adventure / "50-indexes/locations.md").read_text(encoding="utf-8"))
+        self.assertIn("| Immediate intent | Link |", npc_index.read_text(encoding="utf-8"))
+        self.assertIn("| Table relevance | Discovery paths | Link |", information_index.read_text(encoding="utf-8"))
+
+        npc_index.write_text(
+            npc_index.read_text(encoding="utf-8").replace(
+                "| npc-mara | Mara | draft | loc-hafen | — |",
+                "| npc-mara | Mara | draft | loc-hafen | Sucht sofort die gestohlene Fracht. |",
+            ),
+            encoding="utf-8",
+        )
+
         self.create("location", "kai", "Kai", "--parent-location", "hafen")
         child = self.adventure / "30-locations/kai/location.md"
         self.assertEqual(self.link_count(location, child), 1)
@@ -306,6 +318,7 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertEqual(self.link_count(npc, location), 1)
         self.assertEqual(npc_index.read_text(encoding="utf-8").count("npcs/mara/npc.md"), 1)
         self.assertIn("| npc-mara | Mara Neu | draft | loc-hafen |", npc_index.read_text(encoding="utf-8"))
+        self.assertIn("Sucht sofort die gestohlene Fracht.", npc_index.read_text(encoding="utf-8"))
         self.assertIn("[Mara Neu](npcs/mara/npc.md)", location.read_text(encoding="utf-8"))
 
     def test_validator_detects_navigation_drift(self) -> None:
@@ -373,8 +386,8 @@ class AdventureValidationTests(unittest.TestCase):
         index = self.adventure / "50-indexes/npcs.md"
         index.write_text(
             index.read_text(encoding="utf-8").replace(
-                "| npc-mara | Mara | draft | loc-hafen | [Mara]",
-                "| npc-mara | Mara Veen | retired | loc-hafen | [Mara Veen]",
+                "| npc-mara | Mara | draft | loc-hafen | — | [Mara]",
+                "| npc-mara | Mara Veen | retired | loc-hafen | — | [Mara Veen]",
             ),
             encoding="utf-8",
         )
