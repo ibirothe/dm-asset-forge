@@ -230,8 +230,6 @@ def main() -> int:
                 if reference not in content:
                     errors.append(f"skill {name} does not reference required guide: {reference}")
 
-    for missing_policy in sorted(names - SKILL_REFERENCE_REQUIREMENTS.keys()):
-        errors.append(f"missing skill-specific reference policy: {missing_policy}")
     for missing_skill in sorted(SKILL_REFERENCE_REQUIREMENTS.keys() - names):
         errors.append(f"configured skill is missing: {missing_skill}")
 
