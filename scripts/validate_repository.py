@@ -13,6 +13,24 @@ SKILLS = ROOT / ".agents" / "skills"
 FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 FIELD = re.compile(r"^([a-z_]+):\s*(.+)$")
 NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+SKILL_REFERENCE_REQUIREMENTS = {
+    "dm-audit-adventure": (
+        "docs/adventure-audit-guide.md",
+        "docs/validierung.md",
+    ),
+    "dm-create-adventure": (
+        "docs/intake-workflow.md",
+        "docs/adventure-structure-guide.md",
+    ),
+    "dm-create-asset": (
+        "docs/asset-katalog.md",
+        "docs/asset-authoring-guide.md",
+    ),
+    "dm-develop-location": (
+        "docs/asset-katalog.md",
+        "docs/asset-authoring-guide.md",
+    ),
+}
 
 
 def metadata(path: Path) -> dict[str, str] | None:
@@ -192,16 +210,6 @@ def main() -> int:
             continue
         if set(data) != {"name", "description"}:
             errors.append(f"frontmatter must contain only name and description: {path.relative_to(ROOT)}")
-        if "docs/asset-katalog.md" not in path.read_text(encoding="utf-8"):
-            errors.append(f"skill does not reference the canonical asset catalog: {skill_dir.name}")
-        if "docs/asset-authoring-guide.md" not in path.read_text(encoding="utf-8"):
-            errors.append(f"skill does not reference the asset authoring guide: {skill_dir.name}")
-        if "docs/adventure-structure-guide.md" not in path.read_text(encoding="utf-8"):
-            errors.append(f"skill does not reference the adventure structure guide: {skill_dir.name}")
-        if "docs/metadaten-und-werte.md" not in path.read_text(encoding="utf-8"):
-            errors.append(f"skill does not reference the metadata specification: {skill_dir.name}")
-        if "docs/beziehungen-und-speicherorte.md" not in path.read_text(encoding="utf-8"):
-            errors.append(f"skill does not reference the relationship specification: {skill_dir.name}")
         name = data.get("name", "")
         description = data.get("description", "")
         if not NAME.fullmatch(name):
@@ -213,16 +221,17 @@ def main() -> int:
         names.add(name)
         if len(description) < 40:
             errors.append(f"skill description too short: {name}")
+        content = path.read_text(encoding="utf-8")
+        references = SKILL_REFERENCE_REQUIREMENTS.get(name)
+        if references is None:
+            errors.append(f"missing skill-specific reference policy: {name}")
+        else:
+            for reference in references:
+                if reference not in content:
+                    errors.append(f"skill {name} does not reference required guide: {reference}")
 
-    create_adventure_skill = SKILLS / "dm-create-adventure" / "SKILL.md"
-    if create_adventure_skill.is_file() and "docs/intake-workflow.md" not in create_adventure_skill.read_text(encoding="utf-8"):
-        errors.append("dm-create-adventure does not reference the intake workflow")
-
-    audit_skill = SKILLS / "dm-audit-adventure" / "SKILL.md"
-    if audit_skill.is_file() and "docs/validierung.md" not in audit_skill.read_text(encoding="utf-8"):
-        errors.append("dm-audit-adventure does not reference the validation guide")
-    if audit_skill.is_file() and "docs/adventure-audit-guide.md" not in audit_skill.read_text(encoding="utf-8"):
-        errors.append("dm-audit-adventure does not reference the adventure audit guide")
+    for missing_skill in sorted(SKILL_REFERENCE_REQUIREMENTS.keys() - names):
+        errors.append(f"configured skill is missing: {missing_skill}")
 
     validator_tests = ROOT / "tests" / "test_validate_adventure.py"
     if not validator_tests.is_file():
