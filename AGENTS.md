@@ -53,6 +53,7 @@ Do not scan every asset by default. Expand the read set only when relationships 
 - Keep `primary_location` stable when only `current_location` or a temporary appearance changes. Move the canonical file only when editorial ownership changes permanently.
 - Store relationship targets as stable IDs in frontmatter and add relative Markdown links plus required back-references according to `docs/beziehungen-und-speicherorte.md`.
 - Keep an optional player-facing Handout as `player.md` beside its canonical `handout.md`. It has no frontmatter, internal links, or DM-only content and requires explicit approval before creation or replacement.
+- Represent every Handout PNG as a regular Visual under the Handout's `visuals/<slug>/` directory. Never store `player.png` directly beside `handout.md`.
 - Keep all IDs unique and stable after creation. Rename titles without changing IDs.
 - Update the relevant files in `adventure/50-indexes/` whenever an asset is added, moved, renamed, or retired.
 
