@@ -39,6 +39,7 @@ class AdventureValidationTests(unittest.TestCase):
         self.create("npc", "mara", "Mara", "--location", "hafen")
         self.create("information", "route", "Route", "--location", "hafen")
         self.create("faction", "laterne", "Laterne")
+        self.create("player-character", "ira", "Ira")
         self.create("visual", "portrait", "Portrait", "--subject", "npc-mara")
 
     def tearDown(self) -> None:
@@ -87,7 +88,7 @@ class AdventureValidationTests(unittest.TestCase):
             if VALIDATOR.resolve_link(source, raw_target) == target.resolve()
         )
 
-    def test_all_fourteen_types_pass_at_canonical_paths(self) -> None:
+    def test_all_fifteen_types_pass_at_canonical_paths(self) -> None:
         self.create("scene", "ankunft", "Ankunft", "--location", "hafen")
         self.create("creature", "nebelvogel", "Nebelvogel", "--location", "hafen")
         self.create("object", "schluessel", "Schlüssel", "--location", "hafen")
@@ -118,11 +119,78 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertEqual(
             set(VALIDATOR.ASSET_SPECS),
             {
-                "world", "location", "scene", "npc", "creature", "faction",
+                "world", "location", "scene", "npc", "player-character", "creature", "faction",
                 "object", "information", "encounter", "plot-thread", "event",
                 "handout", "visual", "random-table",
             },
         )
+        self.assertIn("player-character", VALIDATOR.RELATION_RULES["owner"][1])
+        self.assertIn("player-character", VALIDATOR.RELATION_RULES["known_by"][1])
+
+    def test_player_character_is_global_indexed_and_can_own_a_visual(self) -> None:
+        character = self.adventure / "40-global/player-characters/ira/player-character.md"
+        index = self.adventure / "50-indexes/player-characters.md"
+
+        self.assertTrue(character.is_file())
+        self.assertEqual(index.read_text(encoding="utf-8").count("pc-ira"), 1)
+
+        self.create("visual", "ira-portrait", "Ira-Porträt", "--subject", "pc-ira")
+        errors, warnings = self.validate()
+
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+        visual = character.parent / "visuals/ira-portrait/visual.md"
+        self.assertTrue(visual.is_file())
+        self.assertIn("[Ira-Porträt]", character.read_text(encoding="utf-8"))
+
+    def test_approved_player_character_release_is_standalone_and_traceable(self) -> None:
+        character = self.adventure / "40-global/player-characters/ira/player-character.md"
+        player = character.parent / "player.md"
+        source = character.read_text(encoding="utf-8")
+        source = source.replace("- Status: not-approved", "- Status: approved")
+        source = source.replace("- Player file: none", "- Player file: [player.md](player.md)")
+        source = source.replace("- Approved source version: none", "- Approved source version: 1")
+        source = source.replace("- Approval: none", "- Approval: User approved this exact character draft")
+        character.write_text(source, encoding="utf-8")
+        player.write_text(
+            "# Ira\n\n## Konzept\n\nEine aufmerksame Reisende.\n\n"
+            "## Offene Entscheidungen\n\nDu entscheidest, wem Ira vertraut.\n",
+            encoding="utf-8",
+        )
+
+        errors, warnings = self.validate()
+
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+
+    def test_player_character_release_blocks_dm_content_and_unapproved_file(self) -> None:
+        character = self.adventure / "40-global/player-characters/ira/player-character.md"
+        player = character.parent / "player.md"
+        player.write_text(
+            "---\nsource: internal\n---\n\n# Ira\n\n"
+            "## DM-only connections\n\n[Interne Quelle](player-character.md)\n",
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[PLAYER_RELEASE_BLOCKED]", rendered)
+        self.assertIn("[PLAYER_FRONTMATTER]", rendered)
+        self.assertIn("[PLAYER_DM_SECTION]", rendered)
+        self.assertIn("[PLAYER_INTERNAL_LINK]", rendered)
+
+    def test_player_character_relationship_types_are_checked(self) -> None:
+        character = self.adventure / "40-global/player-characters/ira/player-character.md"
+        source = character.read_text(encoding="utf-8")
+        character.write_text(
+            source.replace("related_factions: []", "related_factions: [loc-hafen]"),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+
+        self.assertIn("[REL_TARGET_TYPE]", "\n".join(errors))
 
     def test_legacy_optional_sections_remain_compatible(self) -> None:
         self.create("scene", "ankunft", "Ankunft", "--location", "hafen")
