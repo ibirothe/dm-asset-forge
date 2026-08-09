@@ -30,7 +30,10 @@ adventure/
 │   ├── handouts/<handout>/
 │   │   ├── handout.md
 │   │   ├── player.md (optional, freigegeben)
-│   │   └── player.png (optional)
+│   │   └── visuals/player/ (optionale Bildfassung)
+│   │       ├── visual.md
+│   │       ├── player.prompt.md
+│   │       └── player.png
 │   └── visuals/<visual>/
 │       ├── visual.md
 │       ├── <visual>.prompt.md
@@ -58,7 +61,7 @@ Der [geführte Intake-Workflow](intake-workflow.md) definiert, wie Originalanfra
 - IDs: stabiler Präfix plus Slug, beispielsweise `loc-old-harbor` oder `npc-mara-veen`
 - Bilder: PNG; Briefing: gleicher Basisname plus `.prompt.md`
 
-Eine Spielerfassung eines Handouts liegt ausschließlich als optionale `player.md` neben der kanonischen `handout.md`. Sie besitzt kein Frontmatter und entsteht nur nach dem Freigabeworkflow in [Spielerfreigabe für Handouts](player-handout-workflow.md). Eine `player.png` darf nur aus dieser freigegebenen Markdown-Fassung abgeleitet werden.
+Eine Spielerfassung eines Handouts liegt ausschließlich als optionale `player.md` neben der kanonischen `handout.md`. Sie besitzt kein Frontmatter und entsteht nur nach dem Freigabeworkflow in [Spielerfreigabe für Handouts](player-handout-workflow.md). Eine Bildfassung wird als reguläres Subject-owned Visual unter `visuals/player/` geführt; eine direkte `player.png` neben `handout.md` ist unzulässig.
 
 ## Asset-Typen
 
