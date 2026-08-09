@@ -5,24 +5,21 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
 
 # Create an adventure
 
-1. Read the repository `AGENTS.md`, `docs/struktur-und-konventionen.md`, and the normative `docs/asset-katalog.md`, `docs/metadaten-und-werte.md`, and `docs/beziehungen-und-speicherorte.md`.
-2. Capture the requested title plus the user's rough world and plot descriptions. Ask only about missing facts that would materially change the first structure; record non-blocking uncertainties instead.
-3. Derive a lowercase ASCII kebab-case slug. Confirm that `adventure/` does not exist; one repository may contain only one initialized adventure.
+1. Read `AGENTS.md` and the normative `docs/intake-workflow.md`, `docs/asset-katalog.md`, `docs/metadaten-und-werte.md`, and `docs/beziehungen-und-speicherorte.md` before creating assets.
+2. Treat the user's free-form world description and plot or conflict description as the required inputs. Accept an optional title and constraints. Ask only the minimum blocking questions defined by the intake workflow.
+3. Confirm that `adventure/` does not exist. Derive a provisional title when needed and a lowercase ASCII kebab-case slug; record an agent-proposed title as an assumption after initialization.
 4. Run:
 
    ```bash
    python3 scripts/init_adventure.py --slug <slug> --title "<title>"
    ```
 
-5. Preserve the user's original wording in:
-   - `00-input/world.md`
-   - `00-input/plot.md`
-   - `00-input/constraints.md` when constraints were supplied
-6. Build a restrained first pass in `10-world/` and `20-plot/`. Distinguish facts, interpretations, assumptions, and unknowns. Apply the documented controlled values and missing-value semantics.
-7. Create only locations and assets supported by the brief. Use `scripts/new_asset.py` for each supported asset type.
-8. Assign one canonical owner to every local asset. Link every created asset from the relevant local file and `50-indexes/`; add reciprocal links required by the relationship model. Do not duplicate descriptive bodies.
-9. Record impactful assumptions in `90-meta/decisions.md`, unresolved user choices in `90-meta/open-questions.md`, and the work in `90-meta/change-log.md`.
-10. Run `python3 scripts/validate_adventure.py` and fix structural errors.
-11. Return a concise summary of the created structure, assumptions, open questions, and validation result.
+5. Preserve the complete original request unchanged in `00-input/original-request.md`. Extract only explicit world, plot, and constraint statements into their dedicated input files; store later user answers in `00-input/clarifications.md`.
+6. Classify derived work as established fact, clarification, assumption, decision, or open question. Store each category in the file required by the intake workflow and never present a proposed assumption as established canon.
+7. Build the restrained world and plot overviews. Create only the plot threads, locations, and assets necessary for the entry situation and central conflict, using `scripts/new_asset.py` for supported types.
+8. Assign canonical ownership and add required links. Update all five indexes, the adventure README, and the change log.
+9. Do not generate images during initialization.
+10. Check every item in the intake Definition of Done. Run `python3 scripts/validate_adventure.py` and fix structural errors.
+11. Return the German completion summary in the exact content order defined by the intake workflow: created state, confirmed basis, assumptions, open questions, validation, and prioritized next steps.
 
 Do not introduce system-specific rules, statistics, difficulty values, or named mechanics. Do not create an example adventure when the user has not supplied a world and plot brief. If `adventure/` already exists, stop initialization and offer to continue editing the existing adventure.

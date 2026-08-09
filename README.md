@@ -17,6 +17,7 @@ Die vollständige Anleitung steht in [docs/benutzerhandbuch.md](docs/benutzerhan
 Der verbindliche v1-Typenkatalog steht in [docs/asset-katalog.md](docs/asset-katalog.md).
 Das gemeinsame Metadatenschema und alle regelneutralen Werteskalen stehen in [docs/metadaten-und-werte.md](docs/metadaten-und-werte.md).
 Das verbindliche Ownership- und Beziehungsmodell steht in [docs/beziehungen-und-speicherorte.md](docs/beziehungen-und-speicherorte.md).
+Der geführte Erstlauf von freiem Welt- und Plottext zum strukturierten Abenteuer steht in [docs/intake-workflow.md](docs/intake-workflow.md).
 
 ## Grundprinzipien
 

@@ -1,9 +1,11 @@
-# Original world brief
+# Extracted world brief
 
-## User input
+Source: [Original request](original-request.md)
 
-<!-- Originalbeschreibung der Welt möglichst wortgetreu einfügen. -->
+## Explicit world statements
 
-## Clarifications
+<!-- Nur aus der Originalanfrage extrahierte Weltangaben; keine neuen Fakten ergänzen. -->
 
-<!-- Spätere Klarstellungen mit Datum ergänzen; Originaltext nicht überschreiben. -->
+## Related clarifications
+
+Siehe [Clarifications](clarifications.md).

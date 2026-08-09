@@ -6,9 +6,13 @@ Starte Codex im Stammverzeichnis dieses Repositories. Beschreibe Welt und Plot z
 
 > Erstelle ein neues regelneutrales Abenteuer mit dem Titel „…“. Die Welt ist … Der Ausgangskonflikt ist … Die Spielerfiguren sollen … erleben. Lege Unklarheiten als offene Fragen ab.
 
-Codex legt das Abenteuer unter `adventure/` an. Der ursprüngliche Welt- und Plottext bleibt in `adventure/00-input/` erhalten. Daraus entstehen strukturierte Welt-, Plot- und Ortsdateien.
+Codex legt das Abenteuer unter `adventure/` an. Die vollständige ursprüngliche Anfrage bleibt unverändert in `adventure/00-input/original-request.md` erhalten. Welt, Plot und Constraints werden daraus getrennt extrahiert; spätere Antworten stehen datiert in `clarifications.md`.
 
 Ein Repository enthält genau ein Abenteuer. Existiert `adventure/` bereits, arbeitet Codex mit diesem Stand weiter und initialisiert kein zweites Abenteuer. Für ein weiteres Abenteuer wird eine neue Arbeitskopie aus dem Template erzeugt.
+
+Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Konfliktidee. Titel, Spielerrolle, Umfang und genaue Stimmung dürfen später ergänzt werden. Codex fragt vor dem Erstlauf nur nach, wenn fehlende oder widersprüchliche Angaben den ersten kohärenten Stand wesentlich verändern würden.
+
+Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt- und Plot-Intake](intake-workflow.md).
 
 ## Sinnvolle Folgeaufträge
 
@@ -29,7 +33,9 @@ Der primäre Ort bestimmt die Ablage, der aktuelle Ort den momentanen Aufenthalt
 ## Offene Fragen und Annahmen
 
 - `90-meta/open-questions.md` enthält Entscheidungen, die noch vom User benötigt werden.
-- `90-meta/decisions.md` dokumentiert getroffene Annahmen und ihre Begründung.
+- `90-meta/assumptions.md` enthält unbestätigte, umkehrbare Arbeitsannahmen.
+- `90-meta/decisions.md` dokumentiert getroffene Entscheidungen und ihre Begründung.
+- `00-input/clarifications.md` bewahrt spätere Nutzerantworten möglichst wortgetreu.
 - `90-meta/change-log.md` macht inhaltliche Änderungen nachvollziehbar.
 
 Bitte Codex ausdrücklich, Annahmen nicht als Fakten auszugeben. Unkritische Annahmen dürfen dokumentiert werden; Entscheidungen mit großem Einfluss auf Ton, Plot oder Weltlogik sollen als offene Frage stehen bleiben.
