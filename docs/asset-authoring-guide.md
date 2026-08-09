@@ -249,17 +249,17 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Einsatz:** Eine reproduzierbare visuelle Darstellung genau eines kanonischen Subject-Assets beschreiben.
 
-**Mindestinhalt:** Tischfunktion, Subject-Beziehung, kanonische sichtbare Fakten, Spieler-Sichtbarkeit, gewünschte Ausgabe, Prompt-Verweis, Provenienz und Revisionskontext.
+**Mindestinhalt:** Tischfunktion, Subject-Beziehung und exakte Identitätsquelle, stabile visuelle Anker, dargestellter One-Shot-Zustand, erlaubte Variation, Spieler-Sichtbarkeit, PNG-Freigabestatus, gewünschte Ausgabe, Prompt-Verweis, Provenienz und Revisionskontext.
 
-**Leitfragen:** Welche Tischfunktion erfüllt das Bild? Welche Merkmale müssen unverändert bleiben? Welche Aspekte sind Stil oder situative Variante? Was darf das Bild nicht zeigen oder neu erfinden?
+**Leitfragen:** Welche Tischfunktion erfüllt das Bild? Welche Subject-Abschnitte begründen die Identität? Welche Merkmale müssen unverändert bleiben? Welcher innerhalb des One-Shots mögliche Zustand wird gezeigt? Welche Aspekte sind freie Stil- oder Perspektivvariation? Was darf das Bild nicht zeigen oder neu erfinden?
 
 **Am Spieltisch:** Subject, sichtbare Schlüsseldetails, Freigabestatus und vorhandene Ausgabe müssen eindeutig sein. Eine PNG-Datei gilt nur als vorhanden, wenn sie tatsächlich gespeichert ist.
 
-**Sichtbarkeit und Visual:** Das Visual selbst definiert, ob und wann seine Ausgabe Spielern gezeigt wird. Geheimnisse dürfen weder Komposition noch Hintergrund unbeabsichtigt verraten.
+**Sichtbarkeit und Visual:** Das Visual selbst definiert, ob und wann seine Ausgabe Spielern gezeigt wird. Geheimnisse dürfen weder Komposition noch Hintergrund unbeabsichtigt verraten. Vor jeder ersten PNG-Erzeugung und jedem Ersatz gilt der Freigabeweg aus dem [Bild-Workflow](bild-workflow.md).
 
 **Anti-Patterns:** Neue kanonische Fakten im Prompt erfinden; mehrere Subjects vermischen; Stil als Identitätsmerkmal behandeln; PNG ohne Prompt oder Provenienz; vorhandene Ausgabe still ersetzen.
 
-**Definition of Done:** Subject und stabile Fakten sind eindeutig; Prompt und Ausgabepfad stimmen überein; Sichtbarkeit und Ausschlüsse verhindern unbeabsichtigte Widersprüche oder Spoiler.
+**Definition of Done:** Subject und kanonische Identitätsquelle sind eindeutig; stabile Anker, dargestellter Zustand und freie Variation sind getrennt; Prompt und Ausgabepfad stimmen überein; Sichtbarkeit und Ausschlüsse verhindern Widersprüche oder Spoiler. Ein vorhandenes PNG entspricht seinem dokumentierten Status, der freigegebenen Visual-Version und der Provenienz.
 
 ## `random-table`
 
