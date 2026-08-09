@@ -24,7 +24,7 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 |---|---|
 | Struktur | Pflichtordner und Pflichtdateien des Abenteuer-Scaffolds |
 | Frontmatter | gemeinsame Pflichtfelder, unbekannte Schlüssel, Listenformat, leere Strings, Versionen und ISO-Daten |
-| Typen | alle 14 Katalogtypen, ID-Präfix, Scope, typspezifische Schlüssel und Pflichtfelder |
+| Typen | alle 15 Katalogtypen, ID-Präfix, Scope, typspezifische Schlüssel und Pflichtfelder |
 | Werte | `status`, `truth_status`, `provenance` und alle regelneutralen qualitativen Skalen |
 | Pfade | kanonischer Pfad aus Typ, ID, primärem Ort oder Visual-Subject |
 | Inhalt | ausschließlich die funktional erforderlichen `##`-Abschnitte des passenden Asset-Templates; optionale Navigation erst bei tatsächlichem Bedarf |
@@ -69,4 +69,4 @@ Der Validator prüft keine Dramaturgie, Originalität, Spielbarkeit, Hinweisredu
 python3 -m unittest discover -s tests -v
 ```
 
-Die Tests erzeugen temporäre Abenteuer, prüfen alle 14 Typen sowie gezielte Fehlerszenarien und vergleichen vor und nach der Validierung die Dateihashes.
+Die Tests erzeugen temporäre Abenteuer, prüfen alle 15 Typen sowie gezielte Fehlerszenarien und vergleichen vor und nach der Validierung die Dateihashes.
