@@ -25,6 +25,8 @@ updated: {{DATE}}
 
 ## Participants and intentions
 
+<!-- Beteiligte Assets verlinken und nur ihre Absicht in diesem Encounter ergänzen. -->
+
 ## Environment and leverage
 
 ## Escalation
@@ -39,3 +41,5 @@ updated: {{DATE}}
 - Ignorieren:
 
 ## Follow-up links
+
+<!-- Nur erreichbare Folgezustände oder betroffene Assets verlinken; deren vollständigen Kanon nicht kopieren. -->

@@ -26,7 +26,11 @@ updated: {{DATE}}
 
 ## Participants
 
+<!-- Beteiligte Assets verlinken und nur ihre Rolle in diesem Event ergänzen. -->
+
 ## Sequence
+
+<!-- Zustands- oder Phasenfolge des Events beschreiben, keine vorgeschriebene Spielerhandlung oder Scene-Reihenfolge. -->
 
 ## Visible signs
 
@@ -37,3 +41,5 @@ updated: {{DATE}}
 ## Prevention or alteration
 
 ## Related assets
+
+<!-- Betroffene Assets verlinken und nur die konkrete Zustandsänderung durch dieses Event zusammenfassen. -->

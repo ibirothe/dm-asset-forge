@@ -32,6 +32,8 @@ updated: {{DATE}}
 
 - Must preserve:
 
+<!-- Notwendige Information-Assets und unabhängige Pfade verlinken; Aussagen und Hinweise nicht im Plot-Thread duplizieren. -->
+
 ## Involved assets
 
 - Core:
@@ -40,6 +42,8 @@ updated: {{DATE}}
 - Safe cuts:
   - Cut: none defined
   - Impact: none documented
+
+<!-- Beteilige Assets unter ihrer Pacing-Rolle verlinken und nur ihre Funktion für diesen Thread zusammenfassen. -->
 
 ## Player choices
 

@@ -42,6 +42,8 @@ updated: {{DATE}}
 
 ## Knowledge
 
+<!-- Nur Wissensstand und Perspektive des NPC festhalten. Plot-relevante Aussagen als Information-Assets verlinken, nicht erneut kanonisch ausformulieren. -->
+
 ### Established facts
 
 ### Rumors
@@ -57,7 +59,3 @@ updated: {{DATE}}
 - Wenn ignoriert:
 
 ## Hooks and consequences
-
-## Visual reference
-
-<!-- Optionaler relativer Link zu PNG und .prompt.md. -->

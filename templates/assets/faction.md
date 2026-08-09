@@ -26,6 +26,8 @@ updated: {{DATE}}
 
 ## Locations and presence
 
+<!-- Locations und lokale Vertreter relativ verlinken; hier nur Art und Bedeutung der Präsenz zusammenfassen. -->
+
 ## Resources and leverage
 
 ## Methods
@@ -33,6 +35,8 @@ updated: {{DATE}}
 ## Internal tensions
 
 ## Relationships
+
+<!-- Beziehungen verlinken und nur Haltung, Druck oder Hebel der Faction ergänzen; Gegenüber nicht erneut beschreiben. -->
 
 ## Current pressure
 

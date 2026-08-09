@@ -164,22 +164,22 @@ ASSET_SPECS = {
     "location": spec(
         "loc-", "local", "location.md", "location",
         ("parent_location", "function", "danger", "accessibility"), (),
-        ("Table purpose", "First impression", "Sensory details", "Access and boundaries", "Areas", "Inhabitants", "Objects", "Information and secrets", "Encounters and pressures", "Connections", "Changes over time", "DM notes"),
+        ("Table purpose", "First impression", "Sensory details", "Access and boundaries", "Areas", "Inhabitants", "Objects", "Information and secrets", "Encounters and pressures", "Connections", "Changes over time"),
     ),
     "scene": spec(
         "scene-", "local", "scene.md", "scenes",
         ("primary_location", "participants", "related_threads", "danger"), ("primary_location",),
-        ("Table purpose", "Entry state", "Participants and intentions", "Immediate tension", "Environment and opportunities", "Discoverable information", "Possible transitions", "Changes after the scene", "Related assets"),
+        ("Table purpose", "Entry state", "Participants and intentions", "Immediate tension", "Environment and opportunities", "Discoverable information", "Possible transitions", "Related assets"),
     ),
     "npc": spec(
         "npc-", "local", "npc.md", "npcs",
         ("primary_location", "current_location", "origin_location", "appearance_locations", "factions", "influence", "reach"), ("primary_location",),
-        ("Table purpose", "First impression", "Appearance and manner", "Voice cues", "Public role", "Locations and movement", "Motivation", "Fear and pressure", "Resources and leverage", "Knowledge", "Relationships", "Likely behavior", "Hooks and consequences", "Visual reference"),
+        ("Table purpose", "First impression", "Appearance and manner", "Voice cues", "Public role", "Locations and movement", "Motivation", "Fear and pressure", "Resources and leverage", "Knowledge", "Relationships", "Likely behavior", "Hooks and consequences"),
     ),
     "creature": spec(
         "cre-", "local", "creature.md", "creatures",
         ("primary_location", "current_location", "origin_location", "appearance_locations", "danger", "rarity", "reach"), ("primary_location",),
-        ("Table purpose", "First impression", "Recognizable features", "Habitat and movement", "Needs and behavior", "Signs and discoverability", "Risks and pressure", "Weaknesses and leverage", "Variations", "Hooks and consequences", "Visual reference"),
+        ("Table purpose", "First impression", "Recognizable features", "Habitat and movement", "Needs and behavior", "Signs and discoverability", "Risks and pressure", "Weaknesses and leverage", "Hooks and consequences"),
     ),
     "faction": spec(
         "fac-", "global", "faction.md", "40-global/factions",
@@ -189,7 +189,7 @@ ASSET_SPECS = {
     "object": spec(
         "obj-", "local", "object.md", "objects",
         ("primary_location", "current_location", "origin_location", "appearance_locations", "owner", "part_of", "components", "danger", "rarity", "accessibility"), ("primary_location",),
-        ("Table purpose", "Appearance", "Context and origin", "Location, ownership, and components", "Discoverability", "Properties", "Uses and leverage", "Risks and costs", "Related information", "Consequences", "Visual reference"),
+        ("Table purpose", "Appearance", "Context and origin", "Location, ownership, and components", "Discoverability", "Properties", "Uses and leverage", "Risks and costs", "Related information", "Consequences"),
     ),
     "information": spec(
         "info-", "local", "information.md", "information",
@@ -214,7 +214,7 @@ ASSET_SPECS = {
     "handout": spec(
         "hand-", "local", "handout.md", "handouts",
         ("primary_location", "delivery_locations", "reveals", "accessibility"), ("primary_location",),
-        ("Player-facing content", "Delivery", "DM-only context", "Reveals and consequences", "Player release", "Rendered output"),
+        ("Player-facing content", "Delivery", "DM-only context", "Reveals and consequences", "Player release"),
     ),
     "visual": spec(
         "vis-", "subject-owned", "visual.md", "subject",

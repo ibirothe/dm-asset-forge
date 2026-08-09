@@ -43,6 +43,6 @@ updated: {{DATE}}
 
 ## Related information
 
-## Consequences
+<!-- Kanonische Information verlinken und nur erklären, wie Besitz, Untersuchung oder Nutzung Zugang dazu gibt. -->
 
-## Visual reference
+## Consequences
