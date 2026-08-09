@@ -30,7 +30,7 @@ updated: {{DATE}}
 
 - Noch nicht erfasst.
 
-<!-- Ersetze den Platzhalter durch direkte Links auf zentrale NPCs, Factions oder Events und je einen Satz zu ihrer unmittelbaren Absicht oder nächsten Handlung. -->
+<!-- Ersetze den Platzhalter durch direkte Links auf zentrale Player Characters, NPCs, Factions oder Events und je einen Satz zu ihrer unmittelbaren Rolle, Absicht oder nächsten Handlung. -->
 
 ### Notwendige Informationen
 
@@ -64,6 +64,7 @@ updated: {{DATE}}
 - [World overview](10-world/overview.md)
 - [Plot overview](20-plot/overview.md)
 - [Location index](50-indexes/locations.md)
+- [Player Character index](50-indexes/player-characters.md)
 - [Open threads](50-indexes/open-threads.md)
 - [Assumptions](90-meta/assumptions.md)
 
