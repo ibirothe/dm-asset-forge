@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "templates" / "adventure"
-ADVENTURES = ROOT / "adventures"
+ADVENTURE = ROOT / "adventure"
 SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
@@ -38,9 +38,12 @@ def main() -> int:
     if not TEMPLATE.is_dir():
         parser.error(f"template directory not found: {TEMPLATE}")
 
-    target = ADVENTURES / args.slug
+    target = ADVENTURE
     if target.exists():
-        parser.error(f"adventure already exists: {target}")
+        parser.error(
+            "this repository already contains an adventure workspace: "
+            f"{target}"
+        )
 
     shutil.copytree(TEMPLATE, target)
     values = {

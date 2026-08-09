@@ -6,7 +6,9 @@ Starte Codex im Stammverzeichnis dieses Repositories. Beschreibe Welt und Plot z
 
 > Erstelle ein neues regelneutrales Abenteuer mit dem Titel „…“. Die Welt ist … Der Ausgangskonflikt ist … Die Spielerfiguren sollen … erleben. Lege Unklarheiten als offene Fragen ab.
 
-Codex legt ein neues Verzeichnis unter `adventures/` an. Der ursprüngliche Welt- und Plottext bleibt in `00-input/` erhalten. Daraus entstehen strukturierte Welt-, Plot- und Ortsdateien.
+Codex legt das Abenteuer unter `adventure/` an. Der ursprüngliche Welt- und Plottext bleibt in `adventure/00-input/` erhalten. Daraus entstehen strukturierte Welt-, Plot- und Ortsdateien.
+
+Ein Repository enthält genau ein Abenteuer. Existiert `adventure/` bereits, arbeitet Codex mit diesem Stand weiter und initialisiert kein zweites Abenteuer. Für ein weiteres Abenteuer wird eine neue Arbeitskopie aus dem Template erzeugt.
 
 ## Sinnvolle Folgeaufträge
 
@@ -51,5 +53,5 @@ Beauftrage Codex mit einer Konsistenzprüfung. Die Prüfung kontrolliert unter a
 Das technische Prüfsystem kann auch direkt ausgeführt werden:
 
 ```bash
-python3 scripts/validate_adventure.py adventures/<adventure-slug>
+python3 scripts/validate_adventure.py
 ```

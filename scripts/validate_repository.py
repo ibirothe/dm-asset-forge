@@ -30,6 +30,25 @@ def metadata(path: Path) -> dict[str, str] | None:
 def main() -> int:
     errors: list[str] = []
     names: set[str] = set()
+
+    if (ROOT / "adventures").exists():
+        errors.append("legacy multi-adventure directory exists: adventures/")
+
+    legacy_markers = ("adventures/", "--adventure")
+    workflow_files = [ROOT / "README.md", ROOT / "AGENTS.md"]
+    workflow_files.extend((ROOT / "docs").glob("*.md"))
+    workflow_files.extend((ROOT / "scripts").glob("*.py"))
+    workflow_files.extend(SKILLS.glob("*/SKILL.md"))
+    for path in sorted(workflow_files):
+        if path.resolve() == Path(__file__).resolve():
+            continue
+        content = path.read_text(encoding="utf-8")
+        for marker in legacy_markers:
+            if marker in content:
+                errors.append(
+                    f"legacy workspace marker {marker!r}: {path.relative_to(ROOT)}"
+                )
+
     for skill_dir in sorted(path for path in SKILLS.iterdir() if path.is_dir()):
         path = skill_dir / "SKILL.md"
         if not path.is_file():

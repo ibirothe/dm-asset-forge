@@ -7,7 +7,7 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
 
 1. Read the repository `AGENTS.md` and `docs/struktur-und-konventionen.md`.
 2. Capture the requested title plus the user's rough world and plot descriptions. Ask only about missing facts that would materially change the first structure; record non-blocking uncertainties instead.
-3. Derive a lowercase ASCII kebab-case slug. Confirm no folder with that slug exists below `adventures/`.
+3. Derive a lowercase ASCII kebab-case slug. Confirm that `adventure/` does not exist; one repository may contain only one initialized adventure.
 4. Run:
 
    ```bash
@@ -22,7 +22,7 @@ description: Create and initialize a new system-neutral tabletop RPG adventure i
 7. Create only locations and assets supported by the brief. Use `scripts/new_asset.py` for each supported asset type.
 8. Link every created asset from the relevant local file and `50-indexes/`. Do not duplicate descriptive bodies.
 9. Record impactful assumptions in `90-meta/decisions.md`, unresolved user choices in `90-meta/open-questions.md`, and the work in `90-meta/change-log.md`.
-10. Run `python3 scripts/validate_adventure.py adventures/<slug>` and fix structural errors.
+10. Run `python3 scripts/validate_adventure.py` and fix structural errors.
 11. Return a concise summary of the created structure, assumptions, open questions, and validation result.
 
-Do not introduce system-specific rules, statistics, difficulty values, or named mechanics. Do not create an example adventure when the user has not supplied a world and plot brief.
+Do not introduce system-specific rules, statistics, difficulty values, or named mechanics. Do not create an example adventure when the user has not supplied a world and plot brief. If `adventure/` already exists, stop initialization and offer to continue editing the existing adventure.

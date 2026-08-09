@@ -10,6 +10,7 @@ from collections import defaultdict
 from pathlib import Path
 
 
+ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_DIRS = (
     "00-input",
     "10-world",
@@ -131,7 +132,13 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("path", type=Path, help="path to an adventure directory")
+    parser.add_argument(
+        "path",
+        nargs="?",
+        type=Path,
+        default=ROOT / "adventure",
+        help="path to an adventure directory (default: ./adventure)",
+    )
     args = parser.parse_args()
     root = args.path.resolve()
     if not root.is_dir():

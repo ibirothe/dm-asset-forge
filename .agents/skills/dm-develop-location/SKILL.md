@@ -5,12 +5,12 @@ description: Develop or revise one location in an existing system-neutral tablet
 
 # Develop a location
 
-1. Read the root `AGENTS.md`, the target adventure `README.md`, `50-indexes/locations.md`, and the target location if it exists.
+1. Read the root `AGENTS.md`, `adventure/README.md`, `adventure/50-indexes/locations.md`, and the target location if it exists.
 2. Read only directly related plot threads, world facts, and linked assets needed to maintain continuity.
 3. If the location is new, create it with:
 
    ```bash
-   python3 scripts/new_asset.py --adventure <adventure-slug> --type location --slug <slug> --title "<title>"
+   python3 scripts/new_asset.py --type location --slug <slug> --title "<title>"
    ```
 
 4. Give the location a table purpose, immediate impression, sensory identity, access boundaries, usable areas, pressures, and possible change over time.

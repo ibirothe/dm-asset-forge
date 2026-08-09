@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates" / "assets"
-ADVENTURES = ROOT / "adventures"
+ADVENTURE = ROOT / "adventure"
 SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 LOCAL_TYPES = {"npc", "object", "information", "encounter", "handout", "image-brief"}
 SUPPORTED_TYPES = {
@@ -56,14 +56,12 @@ def destination(adventure: Path, asset_type: str, slug: str, location: str | Non
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--adventure", required=True, help="adventure slug")
     parser.add_argument("--type", required=True, choices=sorted(SUPPORTED_TYPES))
     parser.add_argument("--slug", required=True, help="asset slug")
     parser.add_argument("--title", required=True, help="human-readable asset title")
     parser.add_argument("--location", help="primary location slug for local assets")
     args = parser.parse_args()
 
-    require_slug(parser, "--adventure", args.adventure)
     require_slug(parser, "--slug", args.slug)
     if args.location:
         require_slug(parser, "--location", args.location)
@@ -72,9 +70,12 @@ def main() -> int:
     if args.type in LOCAL_TYPES and not args.location:
         parser.error(f"--location is required for {args.type}")
 
-    adventure = ADVENTURES / args.adventure
+    adventure = ADVENTURE
     if not adventure.is_dir():
-        parser.error(f"adventure not found: {adventure}")
+        parser.error(
+            "adventure workspace not found; initialize this repository first: "
+            f"{adventure}"
+        )
     if args.location:
         location_file = adventure / "30-locations" / args.location / "location.md"
         if not location_file.is_file():
