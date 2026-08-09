@@ -31,7 +31,7 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Beziehungen | existierende Ziel-ID und erlaubter Zieltyp für strukturierte Relationsfelder |
 | Navigation | vollständige, eindeutige und aktuelle Indexzeilen sowie relative Links und verpflichtende Gegenlinks strukturierter Beziehungen |
 | Referenzen | doppelte IDs, defekte relative Markdown-Links und verwaiste Visual-Prompts |
-| Bilder | ausschließlich PNG-Dateien und PNG-Verweise; passender Prompt für jedes Visual |
+| Bilder | ausschließlich PNG-Dateien und PNG-Verweise; passender strukturierter Prompt, Identitätsquelle, Zustandsvariante, Ausgabepfad, Freigabe, Dateistatus und Provenienz für jedes Visual |
 | Hygiene | verbliebene Template-Platzhalter und mögliche systemspezifische Begriffe |
 
 Die normativen Grundlagen bleiben der [Asset-Katalog](asset-katalog.md), die [Metadaten und Werte](metadaten-und-werte.md) sowie das [Beziehungsmodell](beziehungen-und-speicherorte.md). Die anschließende fachliche Prüfung und ihr getrenntes Berichtsformat definiert der [Fachliche Audit-Leitfaden](adventure-audit-guide.md).
@@ -52,7 +52,7 @@ ERROR: 30-locations/hafen/npcs/mara/npc.md [FM_ENUM]: invalid 'reach' value 'gal
 
 - `ERROR` kennzeichnet eine verletzte Struktur-, Schema-, Pfad- oder Integritätsregel und blockiert den erfolgreichen Abschluss.
 - `WARNING` kennzeichnet einen prüfbedürftigen Fund, der nicht zweifelsfrei falsch ist. Systemspezifische Begriffe sind Warnungen, weil sie auch in Zitaten oder bewussten Erläuterungen vorkommen können.
-- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED` oder `LINK_BROKEN`.
+- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED`, `VISUAL_PNG_STATE`, `VISUAL_APPROVED_VERSION`, `PNG_ORPHAN` oder `LINK_BROKEN`.
 - `Fix` nennt die kleinste typische Korrektur. Vor einer Änderung bleibt der fachliche Kontext zu prüfen.
 
 ## Grenzen
