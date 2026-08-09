@@ -27,13 +27,11 @@ updated: {{DATE}}
 
 ## Reveals and consequences
 
+<!-- Offenbarte Information-Assets verlinken und nur Auslieferungswirkung oder Folgezustand ergänzen; die kanonische Aussage nicht erneut führen. -->
+
 ## Player release
 
 - Status: not-approved
 - Player file: none
 - Approved source version: none
 - Approval: none
-
-## Rendered output
-
-<!-- Optionaler Link zur freigegebenen player.md. Eine PNG-Fassung wird als Visual unter visuals/<slug>/ geführt. -->
