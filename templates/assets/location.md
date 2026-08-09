@@ -34,6 +34,8 @@ updated: {{DATE}}
 
 ## Inhabitants
 
+<!-- Inhabitants, Objects, Information and secrets sowie Encounters and pressures enthalten nur relative Links und knappen ortsspezifischen Kontext. Vollständige Beschreibungen bleiben in den verlinkten Assets. -->
+
 ## Objects
 
 ## Information and secrets
@@ -43,5 +45,3 @@ updated: {{DATE}}
 ## Connections
 
 ## Changes over time
-
-## DM notes
