@@ -23,6 +23,7 @@ Nach dem Erstlauf existieren:
 
 - die unveränderte Originalanfrage;
 - getrennte Welt-, Plot- und Constraint-Extrakte;
+- ein Session-Preflight mit ausdrücklich offenen oder bestätigten organisatorischen Angaben;
 - eine Weltübersicht und eine Plotübersicht;
 - nur die für Einstieg, Kernkonflikt und mögliche Auflösungen notwendigen Locations und Assets;
 - aktuelle Indizes;
@@ -123,6 +124,7 @@ Solche Punkte bleiben offene Fragen oder werden vorab geklärt, wenn sie den ers
 | extrahierte Weltangaben | `00-input/world.md` | Mit Quelle zur Originalanfrage; keine neuen Fakten ergänzen. |
 | extrahierte Plotangaben | `00-input/plot.md` | Mit Quelle zur Originalanfrage; keine neue Auflösung ergänzen. |
 | extrahierte Grenzen und Präferenzen | `00-input/constraints.md` | Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Grenzen führen; fehlende Werte als `open` markieren. |
+| Session-Logistik und Tischreife | `00-input/session-preflight.md` | Gruppe, Regelbasis, Hard Stop, Pausen, Safety, Barrierefreiheit, Technik, Materialien, Releases und Blocker führen; kanonische Constraints nur verlinken. |
 | abgeleitete One-Shot-Prämisse | `20-plot/overview.md` | Ausgangslage, zentralen Konflikt, Spieler-Einfluss und Abschlussrahmen aus bestätigten Angaben ableiten; Unsicherheit verlinken. |
 | spätere Antworten und Präzisierungen | `00-input/clarifications.md` | Datiert, wortgetreu und mit betroffener Frage speichern. |
 | unbestätigte Arbeitsannahmen | `90-meta/assumptions.md` | Status `proposed`, `confirmed`, `rejected` oder `superseded`. |
@@ -149,7 +151,8 @@ Originaltext, Klarstellung, Annahme und Entscheidung dürfen nicht in derselben 
 3. Den World-Singleton mit `python3 scripts/new_asset.py --type world --slug <slug> --title "<title>" --overwrite` aus dem Asset-Template erzeugen. `--overwrite` nur verwenden, solange `10-world/overview.md` noch die unveränderte Scaffold-Platzhalterdatei ist; sonst stoppen und den bestehenden Inhalt erhalten.
 4. Die vollständige Nutzeranfrage unverändert in `00-input/original-request.md` einfügen.
 5. Welt-, Plot- und Constraint-Angaben in die jeweiligen Input-Dateien extrahieren und zur Originalanfrage verlinken.
-6. Noch keine Bilder erzeugen oder Bilddateien behaupten.
+6. Bereits genannte Angaben zu Gruppe, Regelbasis, Zeitplan, Safety, Barrierefreiheit, Spielmodus, Materialien und Spielerfreigaben in `00-input/session-preflight.md` übernehmen. Fehlende Angaben als `open` erhalten und Zielspielzeit sowie Inhaltsgrenzen nur aus `constraints.md` verlinken.
+7. Noch keine Bilder erzeugen oder Bilddateien behaupten.
 
 ### 3. Aussagen klassifizieren
 
@@ -170,7 +173,8 @@ Nicht bestätigte Annahmen erscheinen nie unter „Established truths“ oder al
 3. Mindestens zwei grundsätzlich unterschiedliche Formen der Spieler-Einflussnahme benennen, ohne eine Methode oder Reihenfolge vorzuschreiben.
 4. Den Abschlussrahmen festhalten: Was muss auflösbar sein, was darf als bewusste Nebenfrage offen bleiben?
 5. Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Inhaltsgrenzen aus den Eingaben übernehmen oder jeweils als `open` dokumentieren.
-6. Jede unbestätigte Interpretation in `assumptions.md` oder `open-questions.md` ablegen und aus der Prämisse darauf verweisen.
+6. Session-spezifische Angaben im Preflight bestätigen oder als `open` belassen. Sie blockieren den ersten strukturierten Stand nur, wenn ohne sie eine ausdrückliche Grenze verletzt oder die geplante Sitzung nicht sicher durchgeführt werden könnte.
+7. Jede unbestätigte Interpretation in `assumptions.md` oder `open-questions.md` ablegen und aus der Prämisse darauf verweisen.
 
 Erst nach diesem Check wird entschieden, welche Locations und Assets wirklich notwendig sind.
 
@@ -204,6 +208,8 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] Klarstellungen, Annahmen, Entscheidungen und offene Fragen sind getrennt gespeichert.
 - [ ] Die One-Shot-Prämisse benennt player-facing Ausgangslage, zentralen Konflikt, mindestens zwei Formen der Spieler-Einflussnahme und den Abschlussrahmen.
 - [ ] Zielspielzeit, Inhaltsdichte, Ton, Themen, Schwerpunkt und Inhaltsgrenzen sind als Nutzerangabe oder ausdrücklich als `open` dokumentiert.
+- [ ] `00-input/session-preflight.md` enthält Gruppe, Regelbasis, Zeitplan, Safety, Barrierefreiheit, Spielmodus, Materialien, Spielerfreigaben und Blocker als bestätigte Angabe oder ausdrücklich als `open`.
+- [ ] Der Session-Preflight verlinkt Zielspielzeit und Inhaltsgrenzen aus `constraints.md`, statt sie als zweite Kanonquelle zu wiederholen.
 - [ ] Der Plot unterscheidet `core`, `supporting` und `optional` Inhalte in Prosa und benennt mindestens eine sichere Kürzung.
 - [ ] Der minimale Auflösungszustand bleibt nach jeder vorgesehenen Kürzung erreichbar; notwendige Schlussfolgerungen behalten ihre unabhängigen Entdeckungspfade.
 - [ ] Ein vorbereiteter `late pressure`-Zustandswechsel verdichtet den One-Shot, ohne eine Spielerentscheidung oder feste Szenenfolge zu erzwingen.
