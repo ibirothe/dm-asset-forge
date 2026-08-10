@@ -108,6 +108,9 @@ class AdventureValidationTests(unittest.TestCase):
         cheat_sheet = self.adventure / "60-session/dm-cheat-sheet.md"
         self.assertTrue(cheat_sheet.is_file())
         self.assertIn("| NPC | Immediate intent | Voice cue | Source |", cheat_sheet.read_text(encoding="utf-8"))
+        run_sheet = self.adventure / "60-session/run-sheet.md"
+        self.assertTrue(run_sheet.is_file())
+        self.assertIn("| Checkpoint | Observe | If behind | If ahead | Source |", run_sheet.read_text(encoding="utf-8"))
 
         trimmed_sections = {
             self.adventure / "30-locations/hafen/location.md": ("## DM notes",),
@@ -187,6 +190,53 @@ class AdventureValidationTests(unittest.TestCase):
 
     def test_missing_dm_cheat_sheet_is_a_structural_error(self) -> None:
         (self.adventure / "60-session/dm-cheat-sheet.md").unlink()
+
+        errors, _ = self.validate()
+
+        self.assertIn("[STRUCT_FILE]", "\n".join(errors))
+
+    def test_session_run_sheet_structure_sources_and_routes_are_checked(self) -> None:
+        run_sheet = self.adventure / "60-session/run-sheet.md"
+        content = run_sheet.read_text(encoding="utf-8")
+        content = content.replace("## Checkpoints\n", "")
+        content = content.replace(
+            "| Checkpoint | Observe | If behind | If ahead | Source |",
+            "| Checkpoint | Observe | Source |",
+        )
+        content = content.replace(
+            "../00-input/session-preflight.md",
+            "../00-input/clarifications.md",
+        )
+        run_sheet.write_text(content, encoding="utf-8")
+
+        readme = self.adventure / "README.md"
+        readme.write_text(
+            readme.read_text(encoding="utf-8").replace(
+                "60-session/run-sheet.md",
+                "60-session/dm-cheat-sheet.md",
+            ),
+            encoding="utf-8",
+        )
+        cheat_sheet = self.adventure / "60-session/dm-cheat-sheet.md"
+        cheat_sheet.write_text(
+            cheat_sheet.read_text(encoding="utf-8").replace(
+                "(run-sheet.md)",
+                "(dm-cheat-sheet.md)",
+            ),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[RUN_SHEET_SECTION]", rendered)
+        self.assertIn("[RUN_SHEET_STRUCTURE]", rendered)
+        self.assertIn("[RUN_SHEET_SOURCE_LINK]", rendered)
+        self.assertIn("[RUN_SHEET_README_LINK]", rendered)
+        self.assertIn("[RUN_SHEET_COMPANION_LINK]", rendered)
+
+    def test_missing_session_run_sheet_is_a_structural_error(self) -> None:
+        (self.adventure / "60-session/run-sheet.md").unlink()
 
         errors, _ = self.validate()
 
