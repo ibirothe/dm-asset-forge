@@ -94,61 +94,61 @@ PLAYER_FORBIDDEN_HEADINGS = frozenset(
     }
 )
 SESSION_PREFLIGHT_STATUS = re.compile(
-    r"^- Preflight status:\s*(open|blocked|ready)\s*$", re.MULTILINE
+    r"^- Preflight-Status:\s*(open|blocked|ready)\s*$", re.MULTILINE
 )
 SESSION_PREFLIGHT_SECTIONS = frozenset(
     {
-        "Group and rules",
-        "Schedule",
-        "Safety and accessibility",
-        "Table and technology",
-        "Materials",
-        "Player releases",
-        "Open blockers",
-        "Ready for session",
+        "Gruppe und Regeln",
+        "Zeitplan",
+        "Sicherheit und Barrierefreiheit",
+        "Spieltisch und Technik",
+        "Materialien",
+        "Spielerfreigaben",
+        "Offene Blocker",
+        "Spielbereit",
     }
 )
 DM_CHEAT_SHEET_SECTIONS = frozenset(
     {
-        "Opening and pressure",
-        "Key locations",
-        "Key NPCs",
-        "Critical conclusions",
-        "Escalation",
-        "Safe cuts",
-        "Minimum resolution",
-        "Possible endings",
+        "Einstieg und Druck",
+        "Zentrale Orte",
+        "Zentrale NPCs",
+        "Kritische Schlussfolgerungen",
+        "Eskalation",
+        "Sichere Kürzungen",
+        "Mindestauflösung",
+        "Mögliche Endzustände",
     }
 )
 DM_CHEAT_SHEET_MARKERS = frozenset(
     {
-        "| NPC | Immediate intent | Voice cue | Source |",
-        "| Conclusion | Independent paths | Fallback | Source |",
-        "| Cut | Trigger | Preserved resolution | Source |",
-        "| Ending state | Trigger | Consequence | Source |",
+        "| NPC | Unmittelbare Absicht | Stimmhinweis | Quelle |",
+        "| Schlussfolgerung | Unabhängige Pfade | Auffangweg | Quelle |",
+        "| Kürzung | Auslöser | Erhaltene Auflösung | Quelle |",
+        "| Endzustand | Auslöser | Folge | Quelle |",
     }
 )
 SESSION_RUN_SHEET_SECTIONS = frozenset(
     {
-        "Session frame",
-        "Opening options",
-        "Flexible phases",
-        "Checkpoints",
-        "Late pressure",
-        "Safe cuts",
-        "Finale trigger",
-        "Resolution",
-        "Live notes",
+        "Session-Rahmen",
+        "Einstiegsoptionen",
+        "Flexible Phasen",
+        "Kontrollpunkte",
+        "Später Druck",
+        "Sichere Kürzungen",
+        "Finale-Auslöser",
+        "Auflösung",
+        "Notizen während des Spiels",
     }
 )
 SESSION_RUN_SHEET_MARKERS = frozenset(
     {
-        "| Entry state | Player-facing cue | Use when | Source |",
-        "| Phase or window | Desired state | Available transitions | Pressure if delayed | Source |",
-        "| Checkpoint | Observe | If behind | If ahead | Source |",
-        "| Trigger | Visible state change | Preserved choices | Source |",
-        "| Cut | Trigger | Must preserve | Impact | Source |",
-        "| Ending state | Trigger | Consequence | Source |",
+        "| Ausgangszustand | Spielerhinweis | Einsatz | Quelle |",
+        "| Phase oder Zeitfenster | Zielzustand | Verfügbare Übergänge | Druck bei Verzögerung | Quelle |",
+        "| Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |",
+        "| Auslöser | Sichtbarer Zustandswechsel | Erhaltene Entscheidungen | Quelle |",
+        "| Kürzung | Auslöser | Muss erhalten | Auswirkung | Quelle |",
+        "| Endzustand | Auslöser | Folge | Quelle |",
     }
 )
 READINESS_REPORT_SECTIONS = frozenset(
@@ -172,10 +172,10 @@ READINESS_CHECKS = {
     "Fachlicher Audit": frozenset({"not-run", "blocking", "clear"}),
 }
 CLUE_MATRIX_HEADER = (
-    "| Conclusion key | Requirement | Information asset | Presentation clue | "
-    "Source and discovery location | Access method | Independence group | "
-    "Preconditions | Fail-forward | Consequence when learned, late, or missed | "
-    "Plot threads |"
+    "| Schlussfolgerungsschlüssel | Anforderung | Information-Asset | "
+    "Präsentierbarer Hinweis | Quelle und Fundort | Zugangsweise | "
+    "Unabhängigkeitsgruppe | Voraussetzungen | Auffangweg | Folge bei "
+    "frühzeitiger, später oder verpasster Erkenntnis | Plot-Threads |"
 )
 CLUE_REQUIREMENTS = frozenset({"necessary", "optional", "open"})
 VISUAL_GENERATION_STATUS = re.compile(
@@ -1020,7 +1020,7 @@ def validate_clue_matrix(
 
     rel = relative(path, root)
     content = path.read_text(encoding="utf-8")
-    if "## Conclusion paths" not in content or CLUE_MATRIX_HEADER not in content:
+    if "## Schlussfolgerungspfade" not in content or CLUE_MATRIX_HEADER not in content:
         errors.append(
             diagnostic(
                 rel,
@@ -1086,7 +1086,7 @@ def validate_clue_matrix(
         if not stripped.startswith("|"):
             continue
         cells = [cell.strip() for cell in stripped.strip("|").split("|")]
-        if not cells or cells[0] == "Conclusion key" or set(cells[0]) <= {"-", ":"}:
+        if not cells or cells[0] == "Schlussfolgerungsschlüssel" or set(cells[0]) <= {"-", ":"}:
             continue
         row_key = cells[0] or "<empty>"
         if len(cells) != 11:
@@ -1371,7 +1371,7 @@ def validate_session_preflight(root: Path, errors: list[str]) -> None:
                 rel,
                 "PREFLIGHT_STATUS",
                 "Preflight status is missing or invalid.",
-                "Use '- Preflight status: open', 'blocked', or 'ready'.",
+                "Use '- Preflight-Status: open', 'blocked', or 'ready'.",
             )
         )
 
