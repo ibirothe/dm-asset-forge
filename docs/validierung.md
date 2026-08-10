@@ -10,6 +10,14 @@ Im Repository-Stamm:
 python3 scripts/validate_adventure.py
 ```
 
+Repository-Templates, Skills und der normative Intake werden separat geprüft:
+
+```bash
+python3 scripts/validate_repository.py
+```
+
+Diese Prüfung verhindert unter anderem, dass der verpflichtende Intake Dateien verlangt, die das Adventure-Scaffold nicht erzeugt. Themen und Guardrails bleiben in `00-input/constraints.md`; eigenständige Ereignisse werden bei Bedarf als `event`-Assets angelegt.
+
 Ein anderes Abenteuerverzeichnis kann ausdrücklich angegeben werden:
 
 ```bash
