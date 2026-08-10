@@ -26,6 +26,7 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Session-Preflight | Pflichtabschnitte, Status `open`, `blocked` oder `ready` und Verweis auf die kanonischen Constraints |
 | DM-Spickzettel | Pflichtbereiche und kompakte Tabellenstruktur, Links zu Plot und zuständigen Indizes sowie direkter Zugang aus der Adventure-README |
 | Session Run Sheet | Pflichtbereiche und operative Tabellen, Links zu Preflight, Plot, Informationen, offenen Threads und DM-Spickzettel sowie Zugänge aus README und Spickzettel |
+| Globale Clue Matrix | Pflichtstruktur, kontrollierte Notwendigkeit, stabile ID-Linktexte, kanonische Information-, Quellen-, Fundort- und Plot-Thread-Ziele, vollständige Information-/Fundort-/Thread-Abdeckung sowie zwei unterschiedliche Gruppen und Pfadsignaturen für notwendige Schlussfolgerungen |
 | Frontmatter | gemeinsame Pflichtfelder, unbekannte Schlüssel, Listenformat, leere Strings, Versionen und ISO-Daten |
 | Typen | alle 15 Katalogtypen, ID-Präfix, Scope, typspezifische Schlüssel und Pflichtfelder |
 | Werte | `status`, `truth_status`, `provenance` und alle regelneutralen qualitativen Skalen |
@@ -57,12 +58,12 @@ ERROR: 30-locations/hafen/npcs/mara/npc.md [FM_ENUM]: invalid 'reach' value 'gal
 
 - `ERROR` kennzeichnet eine verletzte Struktur-, Schema-, Pfad- oder Integritätsregel und blockiert den erfolgreichen Abschluss.
 - `WARNING` kennzeichnet einen prüfbedürftigen Fund, der nicht zweifelsfrei falsch ist. Systemspezifische Begriffe sind Warnungen, weil sie auch in Zitaten oder bewussten Erläuterungen vorkommen können.
-- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED`, `PREFLIGHT_SECTION`, `PREFLIGHT_STATUS`, `PREFLIGHT_CONSTRAINTS_LINK`, `DM_SHEET_SECTION`, `DM_SHEET_STRUCTURE`, `DM_SHEET_SOURCE_LINK`, `DM_SHEET_README_LINK`, `RUN_SHEET_SECTION`, `RUN_SHEET_STRUCTURE`, `RUN_SHEET_SOURCE_LINK`, `RUN_SHEET_README_LINK`, `RUN_SHEET_COMPANION_LINK`, `VISUAL_PNG_STATE`, `VISUAL_APPROVED_VERSION`, `PNG_ORPHAN` oder `LINK_BROKEN`.
+- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED`, `PREFLIGHT_SECTION`, `PREFLIGHT_STATUS`, `PREFLIGHT_CONSTRAINTS_LINK`, `DM_SHEET_SECTION`, `DM_SHEET_STRUCTURE`, `DM_SHEET_SOURCE_LINK`, `DM_SHEET_README_LINK`, `RUN_SHEET_SECTION`, `RUN_SHEET_STRUCTURE`, `RUN_SHEET_SOURCE_LINK`, `RUN_SHEET_README_LINK`, `RUN_SHEET_COMPANION_LINK`, `CLUE_MATRIX_STRUCTURE`, `CLUE_MATRIX_ID`, `CLUE_MATRIX_INFORMATION`, `CLUE_MATRIX_SOURCE`, `CLUE_MATRIX_INDEPENDENCE`, `CLUE_MATRIX_LOCATION_COVERAGE`, `CLUE_MATRIX_THREAD_COVERAGE`, `VISUAL_PNG_STATE`, `VISUAL_APPROVED_VERSION`, `PNG_ORPHAN` oder `LINK_BROKEN`.
 - `Fix` nennt die kleinste typische Korrektur. Vor einer Änderung bleibt der fachliche Kontext zu prüfen.
 
 ## Grenzen
 
-Der Validator prüft keine Dramaturgie, Originalität, Spielbarkeit, Hinweisredundanz oder inhaltliche Plausibilität. Kontinuität, Informationswege, Spielerwirksamkeit und Tischreife bearbeitet der Skill `dm-audit-adventure` nach dem [Fachlichen Audit-Leitfaden](adventure-audit-guide.md) getrennt. Der Validator erzeugt keine Assets, aktualisiert keine Indizes und führt keine automatische Reparatur durch. Er erkennt nur deterministische Navigationslücken; ob eine optionale Freitextbeziehung dauerhaft oder spielrelevant genug für einen Gegenlink ist, bleibt eine fachliche Entscheidung.
+Der Validator prüft keine Dramaturgie, Originalität, Spielbarkeit oder inhaltliche Plausibilität. In der Clue Matrix erkennt er nur strukturell, ob verschiedene Gruppen und verschiedene Kombinationen aus Quelle und Zugangsweise vorliegen; ob diese Pfade erzählerisch tatsächlich unabhängig und konkret präsentierbar sind, entscheidet der fachliche Audit anhand der kanonischen Assets. Kontinuität, Informationswege, Spielerwirksamkeit und Tischreife bearbeitet der Skill `dm-audit-adventure` nach dem [Fachlichen Audit-Leitfaden](adventure-audit-guide.md) getrennt. Der Validator erzeugt keine Assets, aktualisiert keine Indizes und führt keine automatische Reparatur durch. Er erkennt nur deterministische Navigationslücken; ob eine optionale Freitextbeziehung dauerhaft oder spielrelevant genug für einen Gegenlink ist, bleibt eine fachliche Entscheidung.
 
 ## Regressionstests
 
