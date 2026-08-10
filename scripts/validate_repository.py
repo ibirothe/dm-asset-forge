@@ -411,6 +411,24 @@ def main() -> int:
             if marker not in run_sheet_content:
                 errors.append(f"Session run sheet template is missing marker: {marker}")
 
+    readiness_report = ROOT / "templates" / "adventure" / "60-session" / "readiness-report.md"
+    required_readiness_markers = (
+        "- Gesamtstatus: open",
+        "## Prüfbasis",
+        "| Prüfung | Ergebnis | Geprüft am | Quelle |",
+        "## Verbleibende Blocker",
+        "- Blockerstatus: open",
+        "## Nächste Aktion",
+        "- Priorität:",
+    )
+    if not readiness_report.is_file():
+        errors.append("missing readiness report template: templates/adventure/60-session/readiness-report.md")
+    else:
+        readiness_content = readiness_report.read_text(encoding="utf-8")
+        for marker in required_readiness_markers:
+            if marker not in readiness_content:
+                errors.append(f"Readiness report template is missing marker: {marker}")
+
     clue_matrix = ROOT / "templates" / "adventure" / "50-indexes" / "clue-matrix.md"
     required_clue_matrix_markers = (
         "## Conclusion paths",
