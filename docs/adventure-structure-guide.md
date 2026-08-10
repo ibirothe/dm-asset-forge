@@ -97,7 +97,7 @@ Für jede Schlussfolgerung, die zum Verständnis oder Fortschritt des zentralen 
 
 Zusätzliche Hinweise dürfen Gewissheit, Kontext, Vorteil oder frühere Handlungsfähigkeit schaffen. Redundanz bedeutet nicht, denselben Text mehrfach zu verstecken, sondern dieselbe notwendige Schlussfolgerung aus unterschiedlichen Quellen erreichbar zu machen.
 
-Die abenteuerweite Prüfung dieser Pfade wird in `50-indexes/clue-matrix.md` abgeleitet. Eine Zeile entspricht einem konkret präsentierbaren Pfad; alternative Pfade teilen einen stabilen `Conclusion key`, unterscheiden sich aber in `Independence group` und mindestens Quelle oder Zugangsweise. Information-Assets, Quellen, Fundorte und Plot-Threads werden über ihre stabilen IDs relativ verlinkt. Aussage, `truth_status`, Grenzen und vollständige Entdeckungslogik bleiben ausschließlich in den kanonischen Information-Assets.
+Die abenteuerweite Prüfung dieser Pfade wird in `50-indexes/clue-matrix.md` abgeleitet. Eine Zeile entspricht einem konkret präsentierbaren Pfad; alternative Pfade teilen einen stabilen Schlussfolgerungsschlüssel, unterscheiden sich aber in der Unabhängigkeitsgruppe und mindestens Quelle oder Zugangsweise. Information-Assets, Quellen, Fundorte und Plot-Threads werden über ihre stabilen IDs relativ verlinkt. Aussage, `truth_status`, Grenzen und vollständige Entdeckungslogik bleiben ausschließlich in den kanonischen Information-Assets.
 
 ## Scheitern, Rückzug und Ignorieren
 
