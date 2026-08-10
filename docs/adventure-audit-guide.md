@@ -103,7 +103,7 @@ Für jede notwendige Schlussfolgerung prüfen:
 
 Eine bloße Wiederholung desselben Hinweises an zwei Stellen ist kein unabhängiger Pfad. Ebenso genügt ein verlinktes `information`-Asset nicht, wenn die beteiligte Scene, der NPC oder Ort keine konkrete Präsentation ermöglicht.
 
-Die globale Clue Matrix dient dabei als Coverage-Landkarte, nicht als Beweis. Der Audit gleicht jeden `Conclusion key`, jede Einstufung als `necessary`, jede `Independence group`, jeden Fundort, Fail-forward-Pfad, jede Folge und jeden Plot-Thread mit den verlinkten kanonischen Assets ab. Aussagen oder Wahrheitsstatus, die nur in der Matrix vorkommen, sind abgeleiteter Drift; zwei Matrixzeilen mit gleicher Quelle und Zugangsweise bleiben trotz verschiedener Gruppennamen derselbe Pfad.
+Die globale Hinweismatrix dient dabei als Abdeckungskarte, nicht als Beweis. Der Audit gleicht jeden Schlussfolgerungsschlüssel, jede Einstufung als `necessary`, jede Unabhängigkeitsgruppe, jeden Fundort, Auffangweg, jede Folge und jeden Plot-Thread mit den verlinkten kanonischen Assets ab. Aussagen oder Wahrheitsstatus, die nur in der Matrix vorkommen, sind abgeleiteter Drift; zwei Matrixzeilen mit gleicher Quelle und Zugangsweise bleiben trotz verschiedener Gruppennamen derselbe Pfad.
 
 Nicht notwendige Informationen benötigen nicht automatisch zwei Pfade. Sie brauchen jedoch einen verständlichen Zugang und eine erkennbare Tischfunktion, wenn sie als `ready` gelten.
 
