@@ -104,18 +104,19 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertEqual(warnings, [])
         preflight = self.adventure / "00-input/session-preflight.md"
         self.assertTrue(preflight.is_file())
-        self.assertIn("- Preflight status: open", preflight.read_text(encoding="utf-8"))
+        self.assertIn("- Preflight-Status: open", preflight.read_text(encoding="utf-8"))
         cheat_sheet = self.adventure / "60-session/dm-cheat-sheet.md"
         self.assertTrue(cheat_sheet.is_file())
-        self.assertIn("| NPC | Immediate intent | Voice cue | Source |", cheat_sheet.read_text(encoding="utf-8"))
+        self.assertIn("| NPC | Unmittelbare Absicht | Stimmhinweis | Quelle |", cheat_sheet.read_text(encoding="utf-8"))
         run_sheet = self.adventure / "60-session/run-sheet.md"
         self.assertTrue(run_sheet.is_file())
-        self.assertIn("| Checkpoint | Observe | If behind | If ahead | Source |", run_sheet.read_text(encoding="utf-8"))
+        self.assertIn("| Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |", run_sheet.read_text(encoding="utf-8"))
         readiness = self.adventure / "60-session/readiness-report.md"
         self.assertTrue(readiness.is_file())
         self.assertIn("- Gesamtstatus: open", readiness.read_text(encoding="utf-8"))
         clue_matrix = self.adventure / "50-indexes/clue-matrix.md"
         self.assertTrue(clue_matrix.is_file())
+        self.assertIn("| Schlussfolgerungsschlüssel | Anforderung | Information-Asset |", clue_matrix.read_text(encoding="utf-8"))
         self.assertIn("| info-route | open | [info-route]", clue_matrix.read_text(encoding="utf-8"))
 
         trimmed_sections = {
@@ -145,8 +146,8 @@ class AdventureValidationTests(unittest.TestCase):
     def test_session_preflight_structure_status_and_constraints_link_are_checked(self) -> None:
         preflight = self.adventure / "00-input/session-preflight.md"
         content = preflight.read_text(encoding="utf-8")
-        content = content.replace("## Schedule\n", "")
-        content = content.replace("- Preflight status: open", "- Preflight status: pending")
+        content = content.replace("## Zeitplan\n", "")
+        content = content.replace("- Preflight-Status: open", "- Preflight-Status: pending")
         content = content.replace("(constraints.md", "(clarifications.md")
         preflight.write_text(content, encoding="utf-8")
 
@@ -167,10 +168,10 @@ class AdventureValidationTests(unittest.TestCase):
     def test_dm_cheat_sheet_structure_sources_and_readme_route_are_checked(self) -> None:
         cheat_sheet = self.adventure / "60-session/dm-cheat-sheet.md"
         content = cheat_sheet.read_text(encoding="utf-8")
-        content = content.replace("## Key NPCs\n", "")
+        content = content.replace("## Zentrale NPCs\n", "")
         content = content.replace(
-            "| NPC | Immediate intent | Voice cue | Source |",
-            "| NPC | Immediate intent | Source |",
+            "| NPC | Unmittelbare Absicht | Stimmhinweis | Quelle |",
+            "| NPC | Unmittelbare Absicht | Quelle |",
         )
         content = content.replace("../50-indexes/npcs.md", "../50-indexes/objects.md")
         cheat_sheet.write_text(content, encoding="utf-8")
@@ -204,10 +205,10 @@ class AdventureValidationTests(unittest.TestCase):
     def test_session_run_sheet_structure_sources_and_routes_are_checked(self) -> None:
         run_sheet = self.adventure / "60-session/run-sheet.md"
         content = run_sheet.read_text(encoding="utf-8")
-        content = content.replace("## Checkpoints\n", "")
+        content = content.replace("## Kontrollpunkte\n", "")
         content = content.replace(
-            "| Checkpoint | Observe | If behind | If ahead | Source |",
-            "| Checkpoint | Observe | Source |",
+            "| Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |",
+            "| Kontrollpunkt | Beobachten | Quelle |",
         )
         content = content.replace(
             "../00-input/session-preflight.md",
