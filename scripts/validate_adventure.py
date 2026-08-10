@@ -44,6 +44,7 @@ REQUIRED_FILES = (
     "50-indexes/open-threads.md",
     "60-session/dm-cheat-sheet.md",
     "60-session/run-sheet.md",
+    "60-session/readiness-report.md",
     "90-meta/decisions.md",
     "90-meta/assumptions.md",
     "90-meta/open-questions.md",
@@ -150,6 +151,26 @@ SESSION_RUN_SHEET_MARKERS = frozenset(
         "| Ending state | Trigger | Consequence | Source |",
     }
 )
+READINESS_REPORT_SECTIONS = frozenset(
+    {
+        "Prüfbasis",
+        "Verbleibende Blocker",
+        "Nächste Aktion",
+    }
+)
+READINESS_REPORT_HEADER = "| Prüfung | Ergebnis | Geprüft am | Quelle |"
+READINESS_OVERALL_STATUS = re.compile(
+    r"^- Gesamtstatus:\s*(open|blocked|ready)\s*$", re.MULTILINE
+)
+READINESS_BLOCKER_STATUS = re.compile(
+    r"^- Blockerstatus:\s*(open|present|none)\s*$", re.MULTILINE
+)
+READINESS_NEXT_ACTION = re.compile(r"^- Priorität:\s*(\S.+?)\s*$", re.MULTILINE)
+READINESS_CHECKS = {
+    "Session-Preflight": frozenset({"open", "blocked", "ready"}),
+    "Technische Validierung": frozenset({"not-run", "failed", "passed"}),
+    "Fachlicher Audit": frozenset({"not-run", "blocking", "clear"}),
+}
 CLUE_MATRIX_HEADER = (
     "| Conclusion key | Requirement | Information asset | Presentation clue | "
     "Source and discovery location | Access method | Independence group | "
@@ -1497,6 +1518,168 @@ def validate_session_run_sheet(root: Path, errors: list[str]) -> None:
         )
 
 
+def validate_readiness_report(root: Path, errors: list[str]) -> None:
+    path = root / "60-session" / "readiness-report.md"
+    if not path.is_file():
+        return
+
+    rel = relative(path, root)
+    content = path.read_text(encoding="utf-8")
+    headings = frozenset(HEADING.findall(content))
+    for section in sorted(READINESS_REPORT_SECTIONS - headings):
+        errors.append(
+            diagnostic(
+                rel,
+                "READINESS_SECTION",
+                f"missing required section '## {section}'.",
+                f"Restore '## {section}' from templates/adventure/60-session/readiness-report.md.",
+            )
+        )
+
+    if READINESS_REPORT_HEADER not in content:
+        errors.append(
+            diagnostic(
+                rel,
+                "READINESS_BASIS",
+                "readiness basis table header is missing or changed.",
+                "Restore the compact four-column table from the readiness template.",
+            )
+        )
+
+    overall_match = READINESS_OVERALL_STATUS.search(content)
+    if overall_match is None:
+        errors.append(
+            diagnostic(
+                rel,
+                "READINESS_STATUS",
+                "overall readiness status is missing or invalid.",
+                "Use '- Gesamtstatus: open', 'blocked', or 'ready'.",
+            )
+        )
+
+    rows: dict[str, tuple[str, str]] = {}
+    for line in content.splitlines():
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) == 4 and cells[0] in READINESS_CHECKS:
+            rows[cells[0]] = (cells[1], cells[2])
+
+    for check, allowed_results in READINESS_CHECKS.items():
+        if check not in rows:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "READINESS_BASIS",
+                    f"readiness basis is missing the {check!r} row.",
+                    "Restore the three fixed check rows from the readiness template.",
+                )
+            )
+            continue
+        result, checked_on = rows[check]
+        if result not in allowed_results:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "READINESS_RESULT",
+                    f"{check} has invalid result {result!r}.",
+                    f"Use one of: {', '.join(sorted(allowed_results))}.",
+                )
+            )
+        if checked_on == "not-run":
+            if result not in {"open", "not-run"}:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "READINESS_DATE",
+                        f"{check} result {result!r} requires a check date.",
+                        "Use the actual ISO date YYYY-MM-DD.",
+                    )
+                )
+        else:
+            try:
+                dt.date.fromisoformat(checked_on)
+            except ValueError:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "READINESS_DATE",
+                        f"{check} has invalid check date {checked_on!r}.",
+                        "Use not-run or a valid ISO date YYYY-MM-DD.",
+                    )
+                )
+
+    blocker_match = READINESS_BLOCKER_STATUS.search(content)
+    if blocker_match is None:
+        errors.append(
+            diagnostic(
+                rel,
+                "READINESS_BLOCKER_STATUS",
+                "remaining blockers have no valid summary status.",
+                "Use '- Blockerstatus: open', 'present', or 'none'.",
+            )
+        )
+
+    if len(READINESS_NEXT_ACTION.findall(content)) != 1:
+        errors.append(
+            diagnostic(
+                rel,
+                "READINESS_NEXT_ACTION",
+                "readiness report must contain exactly one non-empty prioritized next action.",
+                "Keep one '- Priorität: ...' line under '## Nächste Aktion'.",
+            )
+        )
+
+    required_sources = (
+        root / "00-input" / "session-preflight.md",
+        root / "90-meta" / "open-questions.md",
+        root.parent / "docs" / "validierung.md",
+        root.parent / "docs" / "adventure-audit-guide.md",
+    )
+    linked = resolved_markdown_links(path)
+    for source in required_sources:
+        if source.resolve() not in linked:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "READINESS_SOURCE_LINK",
+                    f"required readiness source is not linked: {source.name}.",
+                    "Restore the source link from the readiness template instead of copying source content.",
+                )
+            )
+
+    readme = root / "README.md"
+    if path.resolve() not in resolved_markdown_links(readme):
+        errors.append(
+            diagnostic(
+                "README.md",
+                "READINESS_README_LINK",
+                "Adventure overview does not link the readiness report.",
+                "Add a direct relative link to 60-session/readiness-report.md.",
+            )
+        )
+
+    if overall_match is not None and overall_match.group(1) == "ready":
+        ready_basis = {
+            "Session-Preflight": "ready",
+            "Technische Validierung": "passed",
+            "Fachlicher Audit": "clear",
+        }
+        basis_ready = all(
+            rows.get(check, (None, None))[0] == expected
+            and rows.get(check, (None, "not-run"))[1] != "not-run"
+            for check, expected in ready_basis.items()
+        )
+        blockers_clear = blocker_match is not None and blocker_match.group(1) == "none"
+        if not basis_ready or not blockers_clear:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "READINESS_READY",
+                    "overall status ready is not supported by all three checks and a clear blocker state.",
+                    "Require preflight ready, validation passed, audit clear, dated results, and Blockerstatus none.",
+                )
+            )
+
+
 def validate(root: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -1603,6 +1786,7 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
     validate_session_preflight(root, errors)
     validate_dm_cheat_sheet(root, errors)
     validate_session_run_sheet(root, errors)
+    validate_readiness_report(root, errors)
 
     for asset_id, paths in sorted(ids.items()):
         if len(paths) > 1:
