@@ -109,6 +109,7 @@ INDEX_PATHS = {
     ),
     "faction": (Path("40-global/factions/index.md"),),
 }
+CLUE_MATRIX_PATH = Path("50-indexes/clue-matrix.md")
 
 
 def require_slug(parser: argparse.ArgumentParser, label: str, value: str) -> None:
@@ -265,6 +266,34 @@ def upsert_index_row(index: Path, target: Path, asset_id: str, row: str) -> bool
     if rendered == content:
         return False
     index.write_text(rendered, encoding="utf-8")
+    return True
+
+
+def ensure_clue_matrix_row(
+    matrix: Path,
+    target: Path,
+    location: Path,
+    asset_id: str,
+    location_id: str,
+) -> bool:
+    content = matrix.read_text(encoding="utf-8")
+    if any(
+        link_resolves_to(matrix, match.group(2), target)
+        for match in MARKDOWN_LINK.finditer(content)
+    ):
+        return False
+    row = (
+        f"| {asset_id} | open | [{asset_id}]({relative_target(matrix, target)}) | — | "
+        f"[{location_id}]({relative_target(matrix, location)}) | open | open | none | — | — | — |"
+    )
+    lines = content.splitlines()
+    insert_at = max(
+        (number for number, line in enumerate(lines) if line.lstrip().startswith("|")),
+        default=len(lines) - 1,
+    ) + 1
+    lines.insert(insert_at, row)
+    rendered = "\n".join(lines).rstrip() + "\n"
+    matrix.write_text(rendered, encoding="utf-8")
     return True
 
 
@@ -587,6 +616,20 @@ def main() -> int:
     for index, row in index_updates:
         if upsert_index_row(index, target, asset_id, row):
             changed_navigation.add(index)
+    if args.type == "information":
+        assert args.location is not None
+        clue_matrix = ADVENTURE / CLUE_MATRIX_PATH
+        if not clue_matrix.is_file():
+            parser.error(f"global clue matrix not found: {clue_matrix}")
+        location = location_file(args.location)
+        if ensure_clue_matrix_row(
+            clue_matrix,
+            target,
+            location,
+            asset_id,
+            f"loc-{args.location}",
+        ):
+            changed_navigation.add(clue_matrix)
 
     print(target.relative_to(ROOT))
     if visual_prompt_target is not None:

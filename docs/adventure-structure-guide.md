@@ -97,6 +97,8 @@ Für jede Schlussfolgerung, die zum Verständnis oder Fortschritt des zentralen 
 
 Zusätzliche Hinweise dürfen Gewissheit, Kontext, Vorteil oder frühere Handlungsfähigkeit schaffen. Redundanz bedeutet nicht, denselben Text mehrfach zu verstecken, sondern dieselbe notwendige Schlussfolgerung aus unterschiedlichen Quellen erreichbar zu machen.
 
+Die abenteuerweite Prüfung dieser Pfade wird in `50-indexes/clue-matrix.md` abgeleitet. Eine Zeile entspricht einem konkret präsentierbaren Pfad; alternative Pfade teilen einen stabilen `Conclusion key`, unterscheiden sich aber in `Independence group` und mindestens Quelle oder Zugangsweise. Information-Assets, Quellen, Fundorte und Plot-Threads werden über ihre stabilen IDs relativ verlinkt. Aussage, `truth_status`, Grenzen und vollständige Entdeckungslogik bleiben ausschließlich in den kanonischen Information-Assets.
+
 ## Scheitern, Rückzug und Ignorieren
 
 Scheitern beendet nicht automatisch den Plot. Es erzeugt einen Folgezustand: Der Druck steigt, ein Akteur gewinnt Einfluss, ein Zugang schließt sich, ein Preis wird fällig, eine Information wird verspätet sichtbar oder das Problem verlagert sich.
@@ -232,6 +234,7 @@ Eine vollständige One-Shot-Struktur ist fachlich belastbar, wenn:
 - [ ] kurzfristige und, wo relevant, langfristige Konsequenzen wichtiger Entscheidungen beschrieben sind;
 - [ ] jede zentrale Hürde mindestens zwei plausible Vorgehensweisen oder einen belastbaren Umweg unterstützt;
 - [ ] jede notwendige Schlussfolgerung über mindestens zwei unabhängige Entdeckungspfade erreichbar ist;
+- [ ] die globale Clue Matrix jedes Information-Asset und seine Fundorte verlinkt und für notwendige Schlussfolgerungen mindestens zwei konkret präsentierbare, tatsächlich unabhängige Pfade mit Fail-forward und Folgen zeigt, ohne Wahrheit oder Wahrheitsstatus zu duplizieren;
 - [ ] zentrale Situationen spielbare Folgezustände für Scheitern, Rückzug oder Ignorieren besitzen;
 - [ ] notwendige Voraussetzungen als Zustände formuliert und nicht an eine einzelne Scene gebunden sind;
 - [ ] jeder aktive Plot-Thread nächsten Druck, beteiligte Akteure und Folgen des Ignorierens besitzt;

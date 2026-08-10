@@ -24,6 +24,7 @@ Nach dem Erstlauf existieren:
 - die unveränderte Originalanfrage;
 - getrennte Welt-, Plot- und Constraint-Extrakte;
 - ein Session-Preflight mit ausdrücklich offenen oder bestätigten organisatorischen Angaben;
+- eine globale Clue Matrix mit allen Information-Assets, Fundorten und unabhängigen Pfaden notwendiger Schlussfolgerungen;
 - ein kompakter DM-Spickzettel als abgeleitete Tischansicht;
 - ein flexibles Session Run Sheet für Zeitrahmen, Checkpoints und Zustandswechsel;
 - eine Weltübersicht und eine Plotübersicht;
@@ -199,9 +200,10 @@ Nicht jeden erwähnten Ort, NPC oder Gegenstand ausarbeiten. Ein Name oder Link 
 2. Annahmen, Entscheidungen und offene Fragen in ihren getrennten Dateien erfassen.
 3. Den Erstlauf in `90-meta/change-log.md` dokumentieren.
 4. `adventure/README.md` mit Kurzfassung, Arbeitsstand, wichtigster offener Frage und nächsten Schritten aktualisieren. Die Tischübersicht muss Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse und relevante Folgezustände knapp beantworten; Pacing und sichere Kürzungen nur zusammenfassen und zum Plot verlinken.
-5. `60-session/dm-cheat-sheet.md` als besonders knappe Tischansicht füllen: Einstieg und Druck, zentrale Orte, zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit unabhängigen Ersatzpfaden, Eskalation, sichere Kürzungen, minimalen Auflösungszustand und mögliche Endzustände. Jede Zeile verlinkt auf Plot, Index oder kanonisches Asset und führt keinen neuen Kanon ein.
-6. `60-session/run-sheet.md` als operative, aber nicht lineare Sitzungsansicht füllen: optionale Zeiten aus dem Preflight, mehrere Einstiege, flexible Zustandsphasen, Checkpoints, `late pressure`, sichere Kürzungen, spätesten sinnvollen Finale-Trigger, Mindestauflösung, Endzustände und Live-Notizen. Keine feste Scene-Reihenfolge einführen.
-7. `python3 scripts/validate_adventure.py` ausführen und strukturelle Fehler beheben.
+5. `50-indexes/clue-matrix.md` vervollständigen: die automatisch angelegten `open`-Zeilen durch je einen konkreten Pfad ersetzen, alle Information-Assets und Fundorte über stabile IDs relativ verlinken und jede notwendige Schlussfolgerung mit mindestens zwei unterschiedlichen Unabhängigkeitsgruppen sowie verschiedenen Quellen oder Zugangsweisen führen. Aussage und Wahrheitsstatus nicht kopieren.
+6. `60-session/dm-cheat-sheet.md` als besonders knappe Tischansicht füllen: Einstieg und Druck, zentrale Orte, zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit unabhängigen Ersatzpfaden, Eskalation, sichere Kürzungen, minimalen Auflösungszustand und mögliche Endzustände. Jede Zeile verlinkt auf Plot, Clue Matrix, Index oder kanonisches Asset und führt keinen neuen Kanon ein.
+7. `60-session/run-sheet.md` als operative, aber nicht lineare Sitzungsansicht füllen: optionale Zeiten aus dem Preflight, mehrere Einstiege, flexible Zustandsphasen, Checkpoints, `late pressure`, sichere Kürzungen, spätesten sinnvollen Finale-Trigger, Mindestauflösung, Endzustände und Live-Notizen. Keine feste Scene-Reihenfolge einführen.
+8. `python3 scripts/validate_adventure.py` ausführen und strukturelle Fehler beheben.
 
 ## Definition of Done
 
@@ -221,6 +223,7 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] `20-plot/overview.md` enthält Ausgangslage, zentralen Konflikt, Stakes und mehrere mögliche Auflösungen des vollständigen One-Shots.
 - [ ] Der Einstieg bietet mindestens zwei erkennbare Ansatzpunkte, ohne Motivation oder Entscheidung der Spielerfiguren vorzugeben.
 - [ ] Notwendige Schlussfolgerungen besitzen mindestens zwei unabhängige Entdeckungspfade; keine Pflichtentwicklung hängt an einer einzelnen Scene.
+- [ ] `50-indexes/clue-matrix.md` verlinkt jedes Information-Asset und jeden kanonischen Fundort, unterscheidet notwendige, optionale und offene Schlussfolgerungen und zeigt konkrete Hinweise, Unabhängigkeitsgruppen, Voraussetzungen, Fail-forward, Folgen und zugehörige Plot-Threads ohne Wahrheit oder Wahrheitsstatus zu duplizieren.
 - [ ] Zentrale Entscheidungen sowie Scheitern, Rückzug oder Ignorieren führen zu spielbaren Folgezuständen.
 - [ ] Der zentrale Konflikt besitzt mindestens zwei plausible Auflösungen oder eine Auflösung plus einen bewusst offenen Endzustand.
 - [ ] Alle für Einstieg und Kernkonflikt notwendigen Locations existieren; optionale Orte wurden nicht vorsorglich ausgebaut.

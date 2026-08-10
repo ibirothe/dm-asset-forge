@@ -3,6 +3,7 @@
 This is an operational timing and state-change view, not a required Scene order. Use optional times from the [Session preflight](../00-input/session-preflight.md), keep every state change derived from canonical Plot or Assets, and preserve multiple player approaches.
 
 Companion runtime overview: [DM cheat sheet](dm-cheat-sheet.md).
+Necessary conclusion coverage: [Global clue matrix](../50-indexes/clue-matrix.md).
 
 ## Session frame
 

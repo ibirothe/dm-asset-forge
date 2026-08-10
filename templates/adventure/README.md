@@ -36,9 +36,9 @@ Für die unmittelbare Leitung am Spieltisch: [DM cheat sheet](60-session/dm-chea
 
 ### Notwendige Informationen
 
-- Noch nicht erfasst. Siehe [Information index](50-indexes/information.md).
+- Noch nicht erfasst. Siehe [Global clue matrix](50-indexes/clue-matrix.md) und [Information index](50-indexes/information.md).
 
-<!-- Verlinke jede für den zentralen Konflikt notwendige Information direkt und fasse nur ihre Tischfunktion zusammen. Fundwege bleiben im Information index und im kanonischen Asset. -->
+<!-- Verlinke jede für den zentralen Konflikt notwendige Information direkt und fasse nur ihre Tischfunktion zusammen. Globale Pfadabdeckung steht in der Clue Matrix; Wahrheit und vollständige Entdeckungslogik bleiben im kanonischen Asset. -->
 
 ### Abschlüsse und Folgezustände
 
@@ -69,6 +69,7 @@ Für die unmittelbare Leitung am Spieltisch: [DM cheat sheet](60-session/dm-chea
 - [Session run sheet](60-session/run-sheet.md)
 - [Location index](50-indexes/locations.md)
 - [Player Character index](50-indexes/player-characters.md)
+- [Global clue matrix](50-indexes/clue-matrix.md)
 - [Open threads](50-indexes/open-threads.md)
 - [Assumptions](90-meta/assumptions.md)
 

@@ -111,6 +111,9 @@ class AdventureValidationTests(unittest.TestCase):
         run_sheet = self.adventure / "60-session/run-sheet.md"
         self.assertTrue(run_sheet.is_file())
         self.assertIn("| Checkpoint | Observe | If behind | If ahead | Source |", run_sheet.read_text(encoding="utf-8"))
+        clue_matrix = self.adventure / "50-indexes/clue-matrix.md"
+        self.assertTrue(clue_matrix.is_file())
+        self.assertIn("| info-route | open | [info-route]", clue_matrix.read_text(encoding="utf-8"))
 
         trimmed_sections = {
             self.adventure / "30-locations/hafen/location.md": ("## DM notes",),
@@ -237,6 +240,125 @@ class AdventureValidationTests(unittest.TestCase):
 
     def test_missing_session_run_sheet_is_a_structural_error(self) -> None:
         (self.adventure / "60-session/run-sheet.md").unlink()
+
+        errors, _ = self.validate()
+
+        self.assertIn("[STRUCT_FILE]", "\n".join(errors))
+
+    def test_clue_matrix_structure_ids_sources_and_independence_are_checked(self) -> None:
+        matrix = self.adventure / "50-indexes/clue-matrix.md"
+        original_row = next(
+            line
+            for line in matrix.read_text(encoding="utf-8").splitlines()
+            if "information/route/information.md" in line
+        )
+        damaged_row = (
+            "| route-known | necessary | "
+            "[info-wrong](../30-locations/hafen/information/route/information.md) | "
+            "Die eingeritzte Route ist sichtbar. | [loc-hafen](../README.md) | untersuchen | "
+            "document | none | Die Route taucht später beschädigt auf. | "
+            "Früh gelernt entsteht ein Vorsprung; spät oder verpasst steigt der Druck. | — |"
+        )
+        matrix.write_text(
+            matrix.read_text(encoding="utf-8").replace(original_row, damaged_row),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[CLUE_MATRIX_ID]", rendered)
+        self.assertIn("[CLUE_MATRIX_TARGET]", rendered)
+        self.assertIn("[CLUE_MATRIX_SOURCE]", rendered)
+        self.assertIn("[CLUE_MATRIX_INDEPENDENCE]", rendered)
+
+    def test_clue_matrix_rejects_repeated_path_as_independent(self) -> None:
+        matrix = self.adventure / "50-indexes/clue-matrix.md"
+        original_row = next(
+            line
+            for line in matrix.read_text(encoding="utf-8").splitlines()
+            if "information/route/information.md" in line
+        )
+        prefix = (
+            "| route-known | necessary | "
+            "[info-route](../30-locations/hafen/information/route/information.md) |"
+        )
+        suffix = (
+            "| [loc-hafen](../30-locations/hafen/location.md) | untersuchen | "
+        )
+        first = (
+            f"{prefix} Kerben am Kai. {suffix}document | none | "
+            "Ein Zeuge zeigt die Kerben später. | Früh entsteht ein Vorsprung; spät steigt der Druck. | — |"
+        )
+        second = (
+            f"{prefix} Dieselben Kerben erneut. {suffix}testimony | none | "
+            "Ein Zeuge zeigt die Kerben später. | Früh entsteht ein Vorsprung; spät steigt der Druck. | — |"
+        )
+        matrix.write_text(
+            matrix.read_text(encoding="utf-8").replace(original_row, first + "\n" + second),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        self.assertIn("[CLUE_MATRIX_INDEPENDENCE]", "\n".join(errors))
+
+        matrix.write_text(
+            matrix.read_text(encoding="utf-8").replace(
+                "Dieselben Kerben erneut. | [loc-hafen](../30-locations/hafen/location.md) | untersuchen | testimony",
+                "Aussage des Hafenmeisters. | [loc-hafen](../30-locations/hafen/location.md) | befragen | testimony",
+            ),
+            encoding="utf-8",
+        )
+        errors, _ = self.validate()
+        self.assertNotIn("[CLUE_MATRIX_", "\n".join(errors))
+
+    def test_clue_matrix_covers_canonical_locations_and_threads(self) -> None:
+        self.create("location", "kai", "Kai")
+        self.create("plot-thread", "fracht", "Fracht")
+        information = self.adventure / "30-locations/hafen/information/route/information.md"
+        information.write_text(
+            information.read_text(encoding="utf-8")
+            .replace(
+                'discovery_locations: ["loc-hafen"]',
+                'discovery_locations: ["loc-hafen", "loc-kai"]',
+            )
+            .replace("related_threads: []", 'related_threads: ["plot-fracht"]'),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+        self.assertIn("[CLUE_MATRIX_LOCATION_COVERAGE]", rendered)
+        self.assertIn("[CLUE_MATRIX_THREAD_COVERAGE]", rendered)
+
+        matrix = self.adventure / "50-indexes/clue-matrix.md"
+        row = next(
+            line
+            for line in matrix.read_text(encoding="utf-8").splitlines()
+            if "information/route/information.md" in line
+        )
+        row = row.replace(
+            "[loc-hafen](../30-locations/hafen/location.md)",
+            "[loc-hafen](../30-locations/hafen/location.md) / "
+            "[loc-kai](../30-locations/kai/location.md)",
+        )
+        row = row.rsplit("| — |", 1)[0] + "| [plot-fracht](../20-plot/threads/fracht/plot-thread.md) |"
+        matrix.write_text(
+            "\n".join(
+                row if "information/route/information.md" in line else line
+                for line in matrix.read_text(encoding="utf-8").splitlines()
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+        self.assertNotIn("[CLUE_MATRIX_LOCATION_COVERAGE]", rendered)
+        self.assertNotIn("[CLUE_MATRIX_THREAD_COVERAGE]", rendered)
+
+    def test_missing_clue_matrix_is_a_structural_error(self) -> None:
+        (self.adventure / "50-indexes/clue-matrix.md").unlink()
 
         errors, _ = self.validate()
 
@@ -505,6 +627,7 @@ class AdventureValidationTests(unittest.TestCase):
         visual = npc.parent / "visuals/portrait/visual.md"
         npc_index = self.adventure / "50-indexes/npcs.md"
         information_index = self.adventure / "50-indexes/information.md"
+        clue_matrix = self.adventure / "50-indexes/clue-matrix.md"
         faction_index = self.adventure / "40-global/factions/index.md"
 
         self.assertEqual(self.link_count(location, npc), 1)
@@ -515,6 +638,8 @@ class AdventureValidationTests(unittest.TestCase):
         self.assertEqual(self.link_count(visual, npc), 1)
         self.assertIn("| npc-mara | Mara | draft | loc-hafen |", npc_index.read_text(encoding="utf-8"))
         self.assertIn("| info-route | Route | established | loc-hafen |", information_index.read_text(encoding="utf-8"))
+        self.assertEqual(self.link_count(clue_matrix, information), 1)
+        self.assertEqual(self.link_count(clue_matrix, location), 1)
         self.assertIn("| fac-laterne | Laterne | draft |", faction_index.read_text(encoding="utf-8"))
 
         self.assertIn("| Current pressure | Link |", (self.adventure / "50-indexes/locations.md").read_text(encoding="utf-8"))

@@ -36,17 +36,17 @@ Ein Audit:
 ## Prüfreihenfolge
 
 1. **Scope festhalten:** Audit-Ziel und ausdrücklich ausgeschlossene Bereiche nennen.
-2. **Orientierung lesen:** `adventure/README.md`, `60-session/dm-cheat-sheet.md`, `60-session/run-sheet.md`, alle sechs Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
+2. **Orientierung lesen:** `adventure/README.md`, `50-indexes/clue-matrix.md`, `60-session/dm-cheat-sheet.md`, `60-session/run-sheet.md`, alle sechs Asset-Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
 3. **Technische Basis prüfen:** Validator ausführen und dessen Ergebnis unverändert als eigenen Berichtsteil behandeln.
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
-6. **Informationswege prüfen:** Notwendigkeit, konkrete Präsentation, unabhängige Entdeckungspfade und Folgen des Verpassens bewerten.
+6. **Informationswege prüfen:** Aus der globalen Clue Matrix alle notwendigen Schlussfolgerungen und behaupteten Pfade ableiten; Notwendigkeit, konkrete Präsentation, echte Quellen- oder Zugangs-Unabhängigkeit und Folgen des Verpassens anschließend in den kanonischen Information-, Quellen- und Fundort-Assets bewerten.
 7. **Spielerausgaben prüfen:** Vorhandene `player.md`-Dateien gegen Freigabequelle, `reveals`, Wahrheitsstatus und Auslieferungssituation prüfen.
 8. **Visuals prüfen:** Visual, Subject, Prompt und vorhandene PNG auf Identität, dargestellten Zustand, Sichtbarkeit und Ausschlüsse abgleichen.
 9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
 10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
 11. **Pacing prüfen:** Zielrahmen, Session Run Sheet, minimalen Auflösungszustand, Inhaltsrollen, Checkpoints, sichere Kürzungen, `late pressure` und Finale-Trigger auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
-12. **Navigation prüfen:** README, DM-Spickzettel, Session Run Sheet und sechs Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
+12. **Navigation prüfen:** README, globale Clue Matrix, DM-Spickzettel, Session Run Sheet und sechs Asset-Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
 13. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
 14. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
 15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
@@ -102,6 +102,8 @@ Für jede notwendige Schlussfolgerung prüfen:
 7. **Konsequenz:** Verändert Lernen, spätes Lernen oder Verpassen die Situation nachvollziehbar?
 
 Eine bloße Wiederholung desselben Hinweises an zwei Stellen ist kein unabhängiger Pfad. Ebenso genügt ein verlinktes `information`-Asset nicht, wenn die beteiligte Scene, der NPC oder Ort keine konkrete Präsentation ermöglicht.
+
+Die globale Clue Matrix dient dabei als Coverage-Landkarte, nicht als Beweis. Der Audit gleicht jeden `Conclusion key`, jede Einstufung als `necessary`, jede `Independence group`, jeden Fundort, Fail-forward-Pfad, jede Folge und jeden Plot-Thread mit den verlinkten kanonischen Assets ab. Aussagen oder Wahrheitsstatus, die nur in der Matrix vorkommen, sind abgeleiteter Drift; zwei Matrixzeilen mit gleicher Quelle und Zugangsweise bleiben trotz verschiedener Gruppennamen derselbe Pfad.
 
 Nicht notwendige Informationen benötigen nicht automatisch zwei Pfade. Sie brauchen jedoch einen verständlichen Zugang und eine erkennbare Tischfunktion, wenn sie als `ready` gelten.
 
@@ -170,6 +172,8 @@ Der DM-Spickzettel wird als noch stärker verdichtete Laufzeitansicht geprüft. 
 
 Das Session Run Sheet wird als operative Laufzeitansicht geprüft. Es muss aus Preflight, Plot, Threads, Informationen und Spickzettel ableiten, mehrere Opening- und Abschlussoptionen erhalten und flexible Zustandsphasen statt Pflicht-Scenes verwenden. Checkpoints, `late pressure`, Kürzungen und Finale-Trigger dürfen weder einen einzelnen Lösungsweg erzwingen noch die letzten unabhängigen Informationspfade oder den minimalen Auflösungszustand entfernen.
 
+Die globale Clue Matrix wird als abgeleitete Abdeckungsansicht geprüft. Sie muss jedes Information-Asset und seine kanonischen Fundorte relativ über stabile IDs verlinken, notwendige von optionalen oder offenen Schlussfolgerungen unterscheiden und konkrete Präsentation, Zugang, Unabhängigkeitsgruppe, Voraussetzungen, Fail-forward, Folgen und betroffene Plot-Threads sichtbar machen. Wahrheit, Wahrheitsstatus und vollständige Entdeckungslogik werden nur in den kanonischen Information-Assets bewertet.
+
 Für jedes zentrale Asset prüfen:
 
 1. **Direkter Weg:** Ist es aus der README direkt oder über genau einen passenden der sechs Indizes erreichbar?
@@ -178,7 +182,7 @@ Für jedes zentrale Asset prüfen:
 4. **Aktualität:** Stimmen Kurzkontext, Status und Link mit dem kanonischen Plot oder Asset überein?
 5. **Abdeckung:** Sind insbesondere zentrale Factions und Events direkt in der README verlinkt, da für sie keiner der fünf Tischindizes existiert?
 
-Die sechs Indizes werden nach ihrer jeweiligen Tischfunktion bewertet: aktueller Ortsdruck, unmittelbare NPC-Absicht, One-Shot-Rolle und freiwilliger Hook eines Player Characters, Object-Einsatz, Bedeutung und unabhängige Fundwege einer Information sowie nächster Druck, minimaler Auflösungszustand und sichere Kürzung eines aktiven Threads. Kurzkontexte bleiben knapp und enthalten keinen vollständigen Kanon.
+Die sechs Asset-Indizes werden nach ihrer jeweiligen Tischfunktion bewertet: aktueller Ortsdruck, unmittelbare NPC-Absicht, One-Shot-Rolle und freiwilliger Hook eines Player Characters, Object-Einsatz, Bedeutung und unabhängige Fundwege einer Information sowie nächster Druck, minimaler Auflösungszustand und sichere Kürzung eines aktiven Threads. Kurzkontexte bleiben knapp und enthalten keinen vollständigen Kanon. Die Clue Matrix ersetzt den Information-Index nicht, sondern verbindet dessen kanonische Ziele abenteuerweit nach Schlussfolgerung und Pfad.
 
 Für jeden zentralen NPC wird geprüft, ob der Spickzettel unmittelbare Absicht und einen aus dem kanonischen NPC ableitbaren Voice Cue enthält. Für jede notwendige Schlussfolgerung wird geprüft, ob robuste Ersatzpfade sichtbar sind. Sichere Kürzungen dürfen weder den minimalen Auflösungszustand noch den letzten unabhängigen Informationsweg entfernen.
 
@@ -238,7 +242,7 @@ Der Bericht verwendet diese Reihenfolge:
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
 8. **Pacing und Kürzbarkeit:** Zielrahmen, Session Run Sheet, Checkpoints, `late pressure`, Finale-Trigger, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
-9. **Übersichten und Navigation:** README-Kernfragen, DM-Spickzettel, Session Run Sheet, sechs Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
+9. **Übersichten und Navigation:** README-Kernfragen, globale Clue Matrix, DM-Spickzettel, Session Run Sheet, sechs Asset-Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
 10. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
 11. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
@@ -266,6 +270,7 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] relevante Aussagen zu Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen auf Widersprüche geprüft wurden;
 - [ ] alle Kontinuitäts-Findings sämtliche beteiligten Dateien und den betroffenen Kanon nennen;
 - [ ] jede notwendige Schlussfolgerung auf konkrete Präsentation, mindestens zwei unabhängige Pfade und Folgen des Verpassens geprüft wurde;
+- [ ] die globale Clue Matrix vollständig gegen alle Information-Assets, Fundorte und zugehörigen Plot-Threads abgeglichen wurde und bloße Hinweiswiederholung nicht als Unabhängigkeit zählt;
 - [ ] jeder aktive Plot-Thread auf Einstieg, Druck, Wahl, Scheitern oder Rückzug, Ignorieren und Auflösungen geprüft wurde;
 - [ ] der zentrale Konflikt innerhalb des One-Shots vollständig erreichbar und auflösbar ist;
 - [ ] Annahmen, Gerüchte, Geheimnisse und etablierte Fakten nicht als gleichwertige Wahrheit behandelt wurden;
@@ -273,7 +278,7 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
 - [ ] Zielrahmen, Session Run Sheet, minimaler Auflösungszustand, Inhaltsrollen, Checkpoints, sichere Kürzungen, `late pressure` und Finale-Trigger fachlich geprüft wurden;
 - [ ] jede sichere Kürzung notwendige Informationswege, mehrere Formen der Spieler-Einflussnahme und erreichbare Auflösungen erhält;
-- [ ] README, DM-Spickzettel, Session Run Sheet und sechs Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
+- [ ] README, globale Clue Matrix, DM-Spickzettel, Session Run Sheet und sechs Asset-Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
 - [ ] der DM-Spickzettel zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit Ersatzpfaden sowie Mindestauflösung, sichere Kürzungen und mögliche Endzustände aus kanonischen Quellen verdichtet;
 - [ ] das Session Run Sheet optionale Zeitangaben aus dem Preflight, mehrere Einstiege und Abschlüsse sowie flexible Checkpoints, Druck-, Kürzungs- und Finale-Trigger ohne feste Scene-Reihenfolge oder neue Plotlogik führt;
 - [ ] jedes zentrale Asset direkt oder über genau einen passenden Index ohne Volltextsuche erreichbar ist;

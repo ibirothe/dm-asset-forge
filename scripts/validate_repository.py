@@ -391,6 +391,22 @@ def main() -> int:
             if marker not in run_sheet_content:
                 errors.append(f"Session run sheet template is missing marker: {marker}")
 
+    clue_matrix = ROOT / "templates" / "adventure" / "50-indexes" / "clue-matrix.md"
+    required_clue_matrix_markers = (
+        "## Conclusion paths",
+        "| Conclusion key | Requirement | Information asset | Presentation clue | Source and discovery location | Access method | Independence group | Preconditions | Fail-forward | Consequence when learned, late, or missed | Plot threads |",
+        "necessary",
+        "optional",
+        "Independence group",
+    )
+    if not clue_matrix.is_file():
+        errors.append("missing global clue matrix template: templates/adventure/50-indexes/clue-matrix.md")
+    else:
+        clue_matrix_content = clue_matrix.read_text(encoding="utf-8")
+        for marker in required_clue_matrix_markers:
+            if marker not in clue_matrix_content:
+                errors.append(f"Global clue matrix template is missing marker: {marker}")
+
     create_asset_skill = SKILLS / "dm-create-asset" / "SKILL.md"
     if (
         create_asset_skill.is_file()

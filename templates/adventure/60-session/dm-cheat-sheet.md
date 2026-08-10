@@ -25,6 +25,8 @@ Operational timing and state changes: [Session run sheet](run-sheet.md).
 
 ## Critical conclusions
 
+Prüfe globale Pfadabdeckung und Fail-forward-Optionen in der [Global clue matrix](../50-indexes/clue-matrix.md); Wahrheit und Details bleiben in den verlinkten Information-Assets.
+
 | Conclusion | Independent paths | Fallback | Source |
 |---|---|---|---|
 | — | — | — | [Information index](../50-indexes/information.md) |

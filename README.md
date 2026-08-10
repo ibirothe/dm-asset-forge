@@ -68,7 +68,7 @@ python3 scripts/validate_adventure.py
 python3 -m unittest discover -s tests -v
 ```
 
-`new_asset.py` unterstützt alle 15 Typen des Asset-Katalogs. `python3 scripts/new_asset.py --help` zeigt typspezifische Optionen und Beispiele. Es überschreibt keine bestehende Datei ohne `--overwrite`. Beim Schreiben pflegt es vorhandene zuständige Indizes sowie die aus `primary_location`, `parent_location` und `subject_asset` eindeutig ableitbaren Gegenlinks ohne doppelte Einträge. Kontextabhängige Beziehungen und das Change Log bleiben Aufgabe von Codex.
+`new_asset.py` unterstützt alle 15 Typen des Asset-Katalogs. `python3 scripts/new_asset.py --help` zeigt typspezifische Optionen und Beispiele. Es überschreibt keine bestehende Datei ohne `--overwrite`. Beim Schreiben pflegt es vorhandene zuständige Indizes sowie die aus `primary_location`, `parent_location` und `subject_asset` eindeutig ableitbaren Gegenlinks ohne doppelte Einträge. Neue Information-Assets erhalten außerdem eine offene Startzeile in der globalen Clue Matrix; Codex arbeitet sie anschließend zu konkreten unabhängigen Entdeckungspfaden aus. Kontextabhängige Beziehungen und das Change Log bleiben Aufgabe von Codex.
 
 Die Skripte verwenden ausschließlich die Python-Standardbibliothek.
 
