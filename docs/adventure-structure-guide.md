@@ -198,6 +198,8 @@ Eine **sichere Kürzung** benennt konkrete `supporting`- oder `optional`-Inhalte
 
 `Late pressure` ist ein vorbereiteter Zustandswechsel für fortgeschrittenen Zeitdruck: Ein bereits aktiver Akteur handelt, eine Gefahr wird sichtbar oder ein Zugang verändert sich. Der Wechsel darf verbleibende Ansatzpunkte bündeln oder den Preis erhöhen, aber niemals eine Spielerentscheidung treffen, eine Auflösung festlegen oder die Gruppe in eine Pflicht-Scene versetzen.
 
+Die optionale operative Ausarbeitung gehört in `60-session/run-sheet.md`. Dort werden vorhandene Zeitanker aus `00-input/session-preflight.md` übernommen, aber nicht erfunden. Phasen beschreiben bewegliche Zustandsziele statt einer Scene-Reihenfolge; Checkpoints, `late pressure`, sichere Kürzungen und der späteste Finale-Trigger verweisen auf kanonische Quellen und erhalten Spielerwahl, unabhängige Informationswege sowie den minimalen Auflösungszustand. Mehrere Einstiegs- und Abschlussoptionen verhindern, dass das Run Sheet zum Drehbuch wird.
+
 Jeder aktive Plot-Thread nennt in seinen bestehenden Abschnitten:
 
 - unter `Possible resolutions` den eigenen `Minimum resolution state`;
@@ -218,6 +220,7 @@ Jeder aktive Plot-Thread nennt in seinen bestehenden Abschnitten:
 - **Pflicht-Scene als Voraussetzung:** Der Besuch einer konkreten Scene wird mit dem benötigten Zustand verwechselt.
 - **Kürzen durch Railroading:** Zeitdruck wird gelöst, indem eine Entscheidung, Methode oder nächste Scene vorgeschrieben wird.
 - **Falsche sichere Kürzung:** Als optional markierter Inhalt entfernt einen notwendigen Informationsweg, Hebel oder erreichbaren Endzustand.
+- **Run Sheet als Drehbuch:** Zeitfenster oder Phasen schreiben eine feste Scene-Reihenfolge, einen einzigen Hinweisweg oder ein vorbestimmtes Ende vor.
 
 ## Definition of Done
 
@@ -238,5 +241,6 @@ Eine vollständige One-Shot-Struktur ist fachlich belastbar, wenn:
 - [ ] ein minimaler Auflösungszustand sowie `core`, `supporting` und `optional` Inhalte nachvollziehbar beschrieben sind;
 - [ ] mindestens eine sichere Kürzung notwendige Informationswege, Spieler-Einfluss und erreichbare Auflösungen erhält;
 - [ ] `late pressure` aus etablierten Akteuren oder Zuständen entsteht und keine Spielerentscheidung erzwingt;
+- [ ] das Session Run Sheet optionale Preflight-Zeiten, mehrere Einstiege und Abschlüsse sowie flexible Checkpoints, Druck-, Kürzungs- und Finale-Trigger ohne neue Plotlogik oder feste Scene-Reihenfolge führt;
 - [ ] der ausgearbeitete Umfang keine unnötige Verzweigungsfülle erzeugt;
 - [ ] alle Inhalte regelneutral bleiben.

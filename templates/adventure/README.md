@@ -19,7 +19,7 @@ updated: {{DATE}}
 
 ## Tischübersicht
 
-Für die unmittelbare Leitung am Spieltisch: [DM cheat sheet](60-session/dm-cheat-sheet.md).
+Für die unmittelbare Leitung am Spieltisch: [DM cheat sheet](60-session/dm-cheat-sheet.md) und [Session run sheet](60-session/run-sheet.md).
 
 ### Ausgangslage, Konflikt und Druck
 
@@ -66,6 +66,7 @@ Für die unmittelbare Leitung am Spieltisch: [DM cheat sheet](60-session/dm-chea
 - [World overview](10-world/overview.md)
 - [Plot overview](20-plot/overview.md)
 - [DM cheat sheet](60-session/dm-cheat-sheet.md)
+- [Session run sheet](60-session/run-sheet.md)
 - [Location index](50-indexes/locations.md)
 - [Player Character index](50-indexes/player-characters.md)
 - [Open threads](50-indexes/open-threads.md)

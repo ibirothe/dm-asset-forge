@@ -25,6 +25,7 @@ Nach dem Erstlauf existieren:
 - getrennte Welt-, Plot- und Constraint-Extrakte;
 - ein Session-Preflight mit ausdrücklich offenen oder bestätigten organisatorischen Angaben;
 - ein kompakter DM-Spickzettel als abgeleitete Tischansicht;
+- ein flexibles Session Run Sheet für Zeitrahmen, Checkpoints und Zustandswechsel;
 - eine Weltübersicht und eine Plotübersicht;
 - nur die für Einstieg, Kernkonflikt und mögliche Auflösungen notwendigen Locations und Assets;
 - aktuelle Indizes;
@@ -199,7 +200,8 @@ Nicht jeden erwähnten Ort, NPC oder Gegenstand ausarbeiten. Ein Name oder Link 
 3. Den Erstlauf in `90-meta/change-log.md` dokumentieren.
 4. `adventure/README.md` mit Kurzfassung, Arbeitsstand, wichtigster offener Frage und nächsten Schritten aktualisieren. Die Tischübersicht muss Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse und relevante Folgezustände knapp beantworten; Pacing und sichere Kürzungen nur zusammenfassen und zum Plot verlinken.
 5. `60-session/dm-cheat-sheet.md` als besonders knappe Tischansicht füllen: Einstieg und Druck, zentrale Orte, zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit unabhängigen Ersatzpfaden, Eskalation, sichere Kürzungen, minimalen Auflösungszustand und mögliche Endzustände. Jede Zeile verlinkt auf Plot, Index oder kanonisches Asset und führt keinen neuen Kanon ein.
-6. `python3 scripts/validate_adventure.py` ausführen und strukturelle Fehler beheben.
+6. `60-session/run-sheet.md` als operative, aber nicht lineare Sitzungsansicht füllen: optionale Zeiten aus dem Preflight, mehrere Einstiege, flexible Zustandsphasen, Checkpoints, `late pressure`, sichere Kürzungen, spätesten sinnvollen Finale-Trigger, Mindestauflösung, Endzustände und Live-Notizen. Keine feste Scene-Reihenfolge einführen.
+7. `python3 scripts/validate_adventure.py` ausführen und strukturelle Fehler beheben.
 
 ## Definition of Done
 
@@ -228,6 +230,7 @@ Der Erstlauf ist abgeschlossen, wenn alle folgenden Punkte erfüllt sind:
 - [ ] Jedes zentrale Asset ist direkt aus der README oder über genau einen passenden Index ohne Volltextsuche erreichbar.
 - [ ] `adventure/README.md` nennt Arbeitsstand, wichtigste offene Frage und nächste Schritte und beantwortet die für die Tischübersicht geforderten Kernfragen.
 - [ ] `60-session/dm-cheat-sheet.md` verdichtet nur die unmittelbar benötigten Tischinformationen, enthält Voice Cues und robuste Ersatzpfade und verlinkt jede Aussage auf ihre kanonische Quelle.
+- [ ] `60-session/run-sheet.md` übernimmt optionale Zeiten aus dem Preflight, unterstützt mehrere Einstiege und Abschlüsse und erhält bei Checkpoints, Druck und Kürzungen Spielerwahl, Informationswege und Mindestauflösung.
 - [ ] Es wurden keine PNGs oder automatischen Bilder erzeugt.
 - [ ] `python3 scripts/validate_adventure.py` endet ohne Fehler.
 - [ ] Der User erhält die definierte Abschlussmeldung.

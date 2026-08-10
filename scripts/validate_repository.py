@@ -369,6 +369,28 @@ def main() -> int:
             if marker not in dm_sheet_content:
                 errors.append(f"DM cheat sheet template is missing marker: {marker}")
 
+    session_run_sheet = ROOT / "templates" / "adventure" / "60-session" / "run-sheet.md"
+    required_run_sheet_markers = (
+        "## Session frame",
+        "## Opening options",
+        "## Flexible phases",
+        "| Phase or window | Desired state | Available transitions | Pressure if delayed | Source |",
+        "## Checkpoints",
+        "| Checkpoint | Observe | If behind | If ahead | Source |",
+        "## Late pressure",
+        "## Safe cuts",
+        "## Finale trigger",
+        "## Resolution",
+        "## Live notes",
+    )
+    if not session_run_sheet.is_file():
+        errors.append("missing Session run sheet template: templates/adventure/60-session/run-sheet.md")
+    else:
+        run_sheet_content = session_run_sheet.read_text(encoding="utf-8")
+        for marker in required_run_sheet_markers:
+            if marker not in run_sheet_content:
+                errors.append(f"Session run sheet template is missing marker: {marker}")
+
     create_asset_skill = SKILLS / "dm-create-asset" / "SKILL.md"
     if (
         create_asset_skill.is_file()

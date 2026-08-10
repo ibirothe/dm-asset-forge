@@ -36,7 +36,7 @@ Ein Audit:
 ## Prüfreihenfolge
 
 1. **Scope festhalten:** Audit-Ziel und ausdrücklich ausgeschlossene Bereiche nennen.
-2. **Orientierung lesen:** `adventure/README.md`, `60-session/dm-cheat-sheet.md`, alle sechs Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
+2. **Orientierung lesen:** `adventure/README.md`, `60-session/dm-cheat-sheet.md`, `60-session/run-sheet.md`, alle sechs Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
 3. **Technische Basis prüfen:** Validator ausführen und dessen Ergebnis unverändert als eigenen Berichtsteil behandeln.
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
@@ -45,8 +45,8 @@ Ein Audit:
 8. **Visuals prüfen:** Visual, Subject, Prompt und vorhandene PNG auf Identität, dargestellten Zustand, Sichtbarkeit und Ausschlüsse abgleichen.
 9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
 10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
-11. **Pacing prüfen:** Zielrahmen, minimalen Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
-12. **Navigation prüfen:** README, DM-Spickzettel und sechs Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
+11. **Pacing prüfen:** Zielrahmen, Session Run Sheet, minimalen Auflösungszustand, Inhaltsrollen, Checkpoints, sichere Kürzungen, `late pressure` und Finale-Trigger auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
+12. **Navigation prüfen:** README, DM-Spickzettel, Session Run Sheet und sechs Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
 13. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
 14. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
 15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
@@ -158,14 +158,17 @@ Prüfen:
 4. **Thread coverage:** Besitzt jeder aktive Plot-Thread einen eigenen minimalen Auflösungszustand, unverzichtbare Informationen und sichere Kürzungen?
 5. **Late pressure:** Entsteht die Verdichtung aus etablierten Akteuren oder Zuständen und bleiben mehrere plausible Spielerreaktionen möglich?
 6. **Overload:** Verlangt der minimale Auflösungszustand nahezu alle vorbereiteten Locations, Threads oder `supporting` Inhalte, obwohl der Zielrahmen kleiner ist?
+7. **Run Sheet:** Sind Zeiten optional aus dem Preflight übernommen, Phasen als bewegliche Zustandsziele statt Scene-Reihenfolge formuliert und Checkpoints, Druck, Kürzungen sowie Finale-Trigger durch kanonische Zustände gedeckt?
 
-Ein Zielrahmen ohne realistisch erreichbaren minimalen Auflösungszustand oder ohne sichere Kürzung ist mindestens `important`. Ein als sicher bezeichneter Cut ist `blocking`, wenn er den einzigen verbleibenden Fortschritt oder jede Auflösung entfernt. Der Audit bewertet keine exakten Minuten und erzeugt keinen Ablaufplan.
+Ein Zielrahmen ohne realistisch erreichbaren minimalen Auflösungszustand oder ohne sichere Kürzung ist mindestens `important`. Ein als sicher bezeichneter Cut ist `blocking`, wenn er den einzigen verbleibenden Fortschritt oder jede Auflösung entfernt. Der Audit berechnet keine fehlenden Minuten und erfindet keinen Ablaufplan. Vorhandene Zeitangaben und Run-Sheet-Trigger werden jedoch auf Widerspruchsfreiheit, praktische Reihenfolge und erhaltene Spielerwahl geprüft.
 
 ## Übersichten und Navigationswege
 
 Die README wird als abgeleitete Tischübersicht geprüft, nicht als zweite Kanonquelle. Sie muss Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse und relevante Folgezustände knapp sichtbar machen. Pacing und sichere Kürzungen werden nur aus dem Plot zusammengefasst und dorthin verlinkt.
 
 Der DM-Spickzettel wird als noch stärker verdichtete Laufzeitansicht geprüft. Einstieg und Druck, zentrale Orte, NPC-Absichten und Voice Cues, notwendige Schlussfolgerungen und unabhängige Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände müssen schnell scannbar sein. Jede Aussage verweist auf ihre kanonische Plot-, Index- oder Asset-Quelle; ein Widerspruch oder neuer Kanon im Spickzettel ist nach seiner Tischwirkung einzustufen.
+
+Das Session Run Sheet wird als operative Laufzeitansicht geprüft. Es muss aus Preflight, Plot, Threads, Informationen und Spickzettel ableiten, mehrere Opening- und Abschlussoptionen erhalten und flexible Zustandsphasen statt Pflicht-Scenes verwenden. Checkpoints, `late pressure`, Kürzungen und Finale-Trigger dürfen weder einen einzelnen Lösungsweg erzwingen noch die letzten unabhängigen Informationspfade oder den minimalen Auflösungszustand entfernen.
 
 Für jedes zentrale Asset prüfen:
 
@@ -234,8 +237,8 @@ Der Bericht verwendet diese Reihenfolge:
 5. **Plot-Thread-Abdeckung:** jeder aktive Thread mit Ergebnis für Einstieg, Druck, Wahl, Ignorieren und Auflösung; `ok`, `finding <ID>` oder `not in scope`.
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
-8. **Pacing und Kürzbarkeit:** Zielrahmen, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
-9. **Übersichten und Navigation:** README-Kernfragen, DM-Spickzettel, sechs Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
+8. **Pacing und Kürzbarkeit:** Zielrahmen, Session Run Sheet, Checkpoints, `late pressure`, Finale-Trigger, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
+9. **Übersichten und Navigation:** README-Kernfragen, DM-Spickzettel, Session Run Sheet, sechs Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
 10. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
 11. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
@@ -268,10 +271,11 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] Annahmen, Gerüchte, Geheimnisse und etablierte Fakten nicht als gleichwertige Wahrheit behandelt wurden;
 - [ ] jede vorhandene `player.md` im Scope gegen Freigabequelle, `reveals`, Wahrheitsstatus, Auslieferung und DM-Wissen geprüft wurde;
 - [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
-- [ ] Zielrahmen, minimaler Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` fachlich geprüft wurden;
+- [ ] Zielrahmen, Session Run Sheet, minimaler Auflösungszustand, Inhaltsrollen, Checkpoints, sichere Kürzungen, `late pressure` und Finale-Trigger fachlich geprüft wurden;
 - [ ] jede sichere Kürzung notwendige Informationswege, mehrere Formen der Spieler-Einflussnahme und erreichbare Auflösungen erhält;
-- [ ] README, DM-Spickzettel und sechs Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
+- [ ] README, DM-Spickzettel, Session Run Sheet und sechs Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
 - [ ] der DM-Spickzettel zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit Ersatzpfaden sowie Mindestauflösung, sichere Kürzungen und mögliche Endzustände aus kanonischen Quellen verdichtet;
+- [ ] das Session Run Sheet optionale Zeitangaben aus dem Preflight, mehrere Einstiege und Abschlüsse sowie flexible Checkpoints, Druck-, Kürzungs- und Finale-Trigger ohne feste Scene-Reihenfolge oder neue Plotlogik führt;
 - [ ] jedes zentrale Asset direkt oder über genau einen passenden Index ohne Volltextsuche erreichbar ist;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;

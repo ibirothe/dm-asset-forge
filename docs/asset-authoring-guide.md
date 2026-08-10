@@ -68,6 +68,8 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 Ändert sich eine Aussage, die für die unmittelbare Tischführung verdichtet wurde, auch `60-session/dm-cheat-sheet.md` aktualisieren. Der Spickzettel enthält nur einen kurzen, handlungsrelevanten Kontext und einen relativen Link zur kanonischen Quelle. Insbesondere stammen NPC-Absicht und Voice Cue aus dem NPC, unabhängige Ersatzpfade aus den Information- und Plot-Assets sowie Mindestauflösung, sichere Kürzungen und Endzustände aus dem Plot.
 
+Ändert sich ein pacing- oder auflösungsrelevanter Zustand, zusätzlich `60-session/run-sheet.md` prüfen. Checkpoints, `late pressure`, Kürzungen und Finale-Trigger leiten sich aus Preflight, Plot, Threads, Informationen und betroffenen Assets ab. Sie dürfen keine feste Scene-Reihenfolge, neue Plotlogik oder einen einzelnen verpflichtenden Informationsweg etablieren.
+
 ## `world`
 
 **Einsatz:** Übergreifende Realität, Alltagslogik und Kräfte festlegen, die mehrere Orte oder Plot-Threads prägen. Einzelne Ortsdetails oder konkrete Geschehnisse gehören nicht hierher.
