@@ -32,11 +32,15 @@ Prüfe vor der Detailausarbeitung und erneut kurz vor dem Spiel `adventure/00-in
 
 Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
 
-Die Kurztexte in README und Indizes dienen nur der Orientierung. Vollständiger Kanon, Geheimnisse, Bedingungen und Konsequenzen werden ausschließlich im verlinkten Plot oder Asset gepflegt. Ändert sich dort eine tischrelevante Aussage, lässt du Codex anschließend die betroffene Kurzfassung aktualisieren. Eine Volltextsuche oder ein Durchsehen sämtlicher Ordner sollte für zentrale Inhalte nicht nötig sein.
+Während des Spiels verwende `adventure/60-session/dm-cheat-sheet.md`. Diese Ein-Seiten-Ansicht verdichtet Einstieg, aktuellen Druck, zentrale Orte, NPC-Absichten und Voice Cues, kritische Schlussfolgerungen und Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände. Jede Zeile bleibt kurz und verlinkt ihre kanonische Quelle; vollständige Motive, Wahrheiten und Konsequenzen werden dort nachgelesen.
+
+Die Kurztexte in README, Spickzettel und Indizes dienen nur der Orientierung. Vollständiger Kanon, Geheimnisse, Bedingungen und Konsequenzen werden ausschließlich im verlinkten Plot oder Asset gepflegt. Ändert sich dort eine tischrelevante Aussage, lässt du Codex anschließend die betroffenen Kurzfassungen aktualisieren. Eine Volltextsuche oder ein Durchsehen sämtlicher Ordner sollte für zentrale Inhalte nicht nötig sein.
 
 Ein geeigneter Prüfauftrag ist:
 
 > Prüfe README und die sechs Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
+
+> Aktualisiere den DM-Spickzettel aus den kanonischen Plot- und Asset-Dateien. Halte jede Zeile kurz, ergänze für zentrale NPCs unmittelbare Absicht und Voice Cue und führe für notwendige Schlussfolgerungen unabhängige Ersatzpfade auf. Erfinde keinen neuen Kanon.
 
 ## Sinnvolle Folgeaufträge
 
