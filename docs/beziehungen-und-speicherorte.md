@@ -134,7 +134,7 @@ Indizes sind Navigationshilfen und keine zweite kanonische Quelle. Sie verlinken
 - Parent- und Child-Locations verlinken sich gegenseitig;
 - Visual und `subject_asset` verlinken sich gegenseitig;
 - Locations, NPCs, Player Characters, Objects, Information, Plot-Threads und Factions erhalten genau eine aktuelle Zeile in ihren vorhandenen zuständigen Indizes.
-- Neue Information-Assets erhalten zusätzlich genau eine `open`-Startzeile in `50-indexes/clue-matrix.md`; fachlich ausgearbeitete alternative Entdeckungspfade dürfen dort mehrere Zeilen mit demselben `Conclusion key` besitzen.
+- Neue Information-Assets erhalten zusätzlich genau eine `open`-Startzeile in `50-indexes/clue-matrix.md`; fachlich ausgearbeitete alternative Entdeckungspfade dürfen dort mehrere Zeilen mit demselben Schlussfolgerungsschlüssel besitzen.
 
 Die Pflege ist idempotent: Ein ausdrücklich wiederholtes Schreiben aktualisiert die bestehende Zeile oder den vorhandenen Link, statt einen zweiten Eintrag anzulegen. Manuell ergänzte strukturierte Beziehungen benötigen ebenfalls die in der Tabelle definierten Links. `scripts/validate_adventure.py` meldet fehlende Gegenlinks sowie fehlende, doppelte oder anhand der kanonischen Metadaten eindeutig veraltete Indexzeilen. Es verändert keine Datei.
 
