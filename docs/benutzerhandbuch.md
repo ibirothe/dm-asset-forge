@@ -32,7 +32,9 @@ Prüfe vor der Detailausarbeitung und erneut kurz vor dem Spiel `adventure/00-in
 
 Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
 
-Während des Spiels verwende `adventure/60-session/dm-cheat-sheet.md`. Diese Ein-Seiten-Ansicht verdichtet Einstieg, aktuellen Druck, zentrale Orte, NPC-Absichten und Voice Cues, kritische Schlussfolgerungen und Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände. Jede Zeile bleibt kurz und verlinkt ihre kanonische Quelle; vollständige Motive, Wahrheiten und Konsequenzen werden dort nachgelesen.
+Während des Spiels verwende `adventure/60-session/dm-cheat-sheet.md` für Inhalte und `adventure/60-session/run-sheet.md` für Zeit- und Zustandssteuerung. Der Spickzettel verdichtet Einstieg, aktuellen Druck, zentrale Orte, NPC-Absichten und Voice Cues, kritische Schlussfolgerungen und Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände. Das Run Sheet ergänzt optionale Start-, Ziel- und Hard-Stop-Angaben aus dem Preflight, mehrere Opening-Optionen, flexible Phasen, Checkpoints, `late pressure`, Kürzungstrigger, Finale-Trigger und Live-Notizen.
+
+Die Phasen des Run Sheets sind verschiebbare Zustandsziele, keine feste Szenenreihenfolge. Wenn Spieler anders vorgehen, werden Phasen übersprungen, überlappt oder neu geordnet. Ein Checkpoint darf einen unabhängigen Informationsweg oder eine plausible Auflösung nicht entfernen. Jede operative Zeile verlinkt ihre kanonische Quelle; vollständige Motive, Wahrheiten und Konsequenzen werden dort nachgelesen.
 
 Die Kurztexte in README, Spickzettel und Indizes dienen nur der Orientierung. Vollständiger Kanon, Geheimnisse, Bedingungen und Konsequenzen werden ausschließlich im verlinkten Plot oder Asset gepflegt. Ändert sich dort eine tischrelevante Aussage, lässt du Codex anschließend die betroffenen Kurzfassungen aktualisieren. Eine Volltextsuche oder ein Durchsehen sämtlicher Ordner sollte für zentrale Inhalte nicht nötig sein.
 
@@ -41,6 +43,8 @@ Ein geeigneter Prüfauftrag ist:
 > Prüfe README und die sechs Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
 
 > Aktualisiere den DM-Spickzettel aus den kanonischen Plot- und Asset-Dateien. Halte jede Zeile kurz, ergänze für zentrale NPCs unmittelbare Absicht und Voice Cue und führe für notwendige Schlussfolgerungen unabhängige Ersatzpfade auf. Erfinde keinen neuen Kanon.
+
+> Erstelle oder aktualisiere das Session Run Sheet aus Preflight, Plot und Spickzettel. Verwende flexible Zustandsphasen statt einer Scene-Reihenfolge und stelle sicher, dass Checkpoints, Druck und Kürzungen mehrere Spielerreaktionen, unabhängige Informationswege und die Mindestauflösung erhalten.
 
 ## Sinnvolle Folgeaufträge
 
@@ -162,6 +166,8 @@ Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Bitt
 ## Vor dem Spielen
 
 Schließe zuerst den Session-Preflight ab. Prüfe insbesondere Hard Stop und Pausen, Safety-Werkzeuge, Barrierefreiheit, technische Voraussetzungen, benötigte Materialien sowie den aktuellen Freigabestatus aller vorgesehenen Player Characters, Handouts und player-facing Visuals. Verbleibende Blocker müssen gelöst oder bewusst akzeptiert sein; erst dann ist `Preflight status: ready` korrekt.
+
+Prüfe danach das Session Run Sheet gegen den aktuellen Preflight und Plot. Konkrete Zeiten sind optional; wenn sie verwendet werden, müssen Hard Stop, Checkpoints, sichere Kürzungen und Finale-Trigger zusammenpassen. `open` bleibt korrekt, solange keine Zeit festgelegt wurde.
 
 Beauftrage Codex mit einer Konsistenzprüfung des vollständigen One-Shots. Der technische Validator und der fachliche Audit werden getrennt berichtet. Der [Fachliche Audit-Leitfaden](adventure-audit-guide.md) verlangt für jedes Finding Begründung, betroffene Dateien, Auswirkung und kleinste sinnvolle Korrekturrichtung. Ohne ausdrücklichen Fix-Auftrag verändert Codex keine Inhalte.
 
