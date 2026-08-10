@@ -36,7 +36,7 @@ Ein Audit:
 ## Prüfreihenfolge
 
 1. **Scope festhalten:** Audit-Ziel und ausdrücklich ausgeschlossene Bereiche nennen.
-2. **Orientierung lesen:** `adventure/README.md`, `50-indexes/clue-matrix.md`, `60-session/dm-cheat-sheet.md`, `60-session/run-sheet.md`, alle sechs Asset-Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
+2. **Orientierung lesen:** `adventure/README.md`, `50-indexes/clue-matrix.md`, `60-session/dm-cheat-sheet.md`, `60-session/run-sheet.md`, `60-session/readiness-report.md`, alle sechs Asset-Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
 3. **Technische Basis prüfen:** Validator ausführen und dessen Ergebnis unverändert als eigenen Berichtsteil behandeln.
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
@@ -49,7 +49,7 @@ Ein Audit:
 12. **Navigation prüfen:** README, globale Clue Matrix, DM-Spickzettel, Session Run Sheet und sechs Asset-Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
 13. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
 14. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
-15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
+15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben. Zusätzlich melden, ob der vorhandene Readiness-Status zu Preflight, Validator und Audit-Ergebnis passt; den Readiness-Bericht ohne ausdrücklichen Schreibauftrag nicht aktualisieren.
 
 ## Technische Basisprüfung
 
@@ -201,6 +201,8 @@ Für den Scope relevante Assets mit `status: ready` werden gegen die gemeinsame 
 
 Ein formal vollständiges Asset kann fachlich noch `draft` sein. Ein Detailwunsch ohne Auswirkung auf Tischgebrauch oder Kontinuität ist höchstens `polish`.
 
+Der Readiness-Bericht ist nur eine abgeleitete Statussicht. Der Audit prüft, ob seine drei Ergebniszeilen, verbleibenden Blocker und die priorisierte nächste Aktion mit den gelesenen Quellen übereinstimmen. Ein Audit-Finding wird dort nicht wiederholt; nach einem reinen Audit bleibt die Datei unverändert.
+
 ## Schweregrade
 
 | Schweregrad | Bedeutung |
@@ -243,8 +245,9 @@ Der Bericht verwendet diese Reihenfolge:
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
 8. **Pacing und Kürzbarkeit:** Zielrahmen, Session Run Sheet, Checkpoints, `late pressure`, Finale-Trigger, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
 9. **Übersichten und Navigation:** README-Kernfragen, globale Clue Matrix, DM-Spickzettel, Session Run Sheet, sechs Asset-Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
-10. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
-11. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
+10. **Readiness-Abgleich:** vorhandener Gesamtstatus gegen Preflight, technische Validierung, fachliches Ergebnis und Blocker; `ok` oder `finding <ID>`.
+11. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
+12. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
 Sind keine fachlichen Findings vorhanden, wird dies ausdrücklich gesagt. Es werden keine leeren Schweregradabschnitte künstlich gefüllt.
 
@@ -281,6 +284,7 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] README, globale Clue Matrix, DM-Spickzettel, Session Run Sheet und sechs Asset-Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
 - [ ] der DM-Spickzettel zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit Ersatzpfaden sowie Mindestauflösung, sichere Kürzungen und mögliche Endzustände aus kanonischen Quellen verdichtet;
 - [ ] das Session Run Sheet optionale Zeitangaben aus dem Preflight, mehrere Einstiege und Abschlüsse sowie flexible Checkpoints, Druck-, Kürzungs- und Finale-Trigger ohne feste Scene-Reihenfolge oder neue Plotlogik führt;
+- [ ] der Readiness-Status mit Preflight, Validator, fachlichem Ergebnis und verbleibenden Blockern abgeglichen wurde, ohne Findings in den Bericht zu kopieren oder ihn ohne Schreibauftrag zu ändern;
 - [ ] jedes zentrale Asset direkt oder über genau einen passenden Index ohne Volltextsuche erreichbar ist;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;
