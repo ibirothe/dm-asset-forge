@@ -42,6 +42,7 @@ REQUIRED_FILES = (
     "50-indexes/information.md",
     "50-indexes/open-threads.md",
     "60-session/dm-cheat-sheet.md",
+    "60-session/run-sheet.md",
     "90-meta/decisions.md",
     "90-meta/assumptions.md",
     "90-meta/open-questions.md",
@@ -121,6 +122,29 @@ DM_CHEAT_SHEET_MARKERS = frozenset(
         "| NPC | Immediate intent | Voice cue | Source |",
         "| Conclusion | Independent paths | Fallback | Source |",
         "| Cut | Trigger | Preserved resolution | Source |",
+        "| Ending state | Trigger | Consequence | Source |",
+    }
+)
+SESSION_RUN_SHEET_SECTIONS = frozenset(
+    {
+        "Session frame",
+        "Opening options",
+        "Flexible phases",
+        "Checkpoints",
+        "Late pressure",
+        "Safe cuts",
+        "Finale trigger",
+        "Resolution",
+        "Live notes",
+    }
+)
+SESSION_RUN_SHEET_MARKERS = frozenset(
+    {
+        "| Entry state | Player-facing cue | Use when | Source |",
+        "| Phase or window | Desired state | Available transitions | Pressure if delayed | Source |",
+        "| Checkpoint | Observe | If behind | If ahead | Source |",
+        "| Trigger | Visible state change | Preserved choices | Source |",
+        "| Cut | Trigger | Must preserve | Impact | Source |",
         "| Ending state | Trigger | Consequence | Source |",
     }
 )
@@ -1054,6 +1078,77 @@ def validate_dm_cheat_sheet(root: Path, errors: list[str]) -> None:
         )
 
 
+def validate_session_run_sheet(root: Path, errors: list[str]) -> None:
+    path = root / "60-session" / "run-sheet.md"
+    if not path.is_file():
+        return
+
+    rel = relative(path, root)
+    content = path.read_text(encoding="utf-8")
+    headings = frozenset(HEADING.findall(content))
+    for section in sorted(SESSION_RUN_SHEET_SECTIONS - headings):
+        errors.append(
+            diagnostic(
+                rel,
+                "RUN_SHEET_SECTION",
+                f"missing required section '## {section}'.",
+                f"Restore '## {section}' from templates/adventure/60-session/run-sheet.md.",
+            )
+        )
+
+    for marker in sorted(SESSION_RUN_SHEET_MARKERS):
+        if marker not in content:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "RUN_SHEET_STRUCTURE",
+                    f"missing operational table header {marker!r}.",
+                    "Restore the table header from templates/adventure/60-session/run-sheet.md.",
+                )
+            )
+
+    required_sources = (
+        root / "00-input" / "session-preflight.md",
+        root / "20-plot" / "overview.md",
+        root / "50-indexes" / "information.md",
+        root / "50-indexes" / "open-threads.md",
+        root / "60-session" / "dm-cheat-sheet.md",
+    )
+    linked = resolved_markdown_links(path)
+    for source in required_sources:
+        if source.resolve() not in linked:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "RUN_SHEET_SOURCE_LINK",
+                    f"required source is not linked: {relative(source, root)}.",
+                    "Add a relative link to the canonical source or companion runtime view.",
+                )
+            )
+
+    readme = root / "README.md"
+    if path.resolve() not in resolved_markdown_links(readme):
+        errors.append(
+            diagnostic(
+                "README.md",
+                "RUN_SHEET_README_LINK",
+                "Adventure overview does not link the Session run sheet.",
+                "Add a direct relative link to 60-session/run-sheet.md.",
+            )
+        )
+
+    cheat_sheet = root / "60-session" / "dm-cheat-sheet.md"
+    if cheat_sheet.is_file() and path.resolve() not in resolved_markdown_links(cheat_sheet):
+        errors.append(
+            diagnostic(
+                relative(cheat_sheet, root),
+                "RUN_SHEET_COMPANION_LINK",
+                "DM cheat sheet does not link the Session run sheet.",
+                "Add the companion relative link to run-sheet.md.",
+            )
+        )
+
+
 def validate(root: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -1158,6 +1253,7 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
     validate_indexes(root, records, errors)
     validate_session_preflight(root, errors)
     validate_dm_cheat_sheet(root, errors)
+    validate_session_run_sheet(root, errors)
 
     for asset_id, paths in sorted(ids.items()):
         if len(paths) > 1:
