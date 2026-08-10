@@ -184,8 +184,8 @@ Erst nach diesem Check wird entschieden, welche Locations und Assets wirklich no
 ### 5. Erster strukturierter Stand
 
 1. `10-world/overview.md` mit Prämisse, bestätigten Wahrheiten, Alltag, Kräften und Unknowns füllen.
-2. `10-world/themes.md` nur mit belegten Themen und Guardrails füllen; fehlende Angaben offenlassen.
-3. `10-world/timeline.md` nur mit ausdrücklich etablierten oder klar als unbekannt markierten Ereignissen ergänzen.
+2. Themen und Guardrails ausschließlich in `00-input/constraints.md` pflegen; fehlende Präferenzen dort als `open` belassen und keine separate Themen-Datei anlegen.
+3. Etablierte Ereignisse nur dann mit `scripts/new_asset.py --type event` als Event-Assets anlegen, wenn sie eine eigenständige Tisch- oder Kontinuitätsfunktion besitzen; keine vorsorgliche Timeline-Datei anlegen.
 4. `20-plot/overview.md` mit player-facing Ausgangslage, flexiblen Spieler-Hooks, zentralem Konflikt, mindestens zwei Formen der Spieler-Einflussnahme, Stakes, möglichen Zielen, Entscheidungsraum, Informationswegen, Abschlussrahmen, Folgen von Scheitern oder Ignorieren und mehreren möglichen Ergebnissen füllen. Im Abschnitt `One-shot scope and pacing` den minimalen Auflösungszustand, `core`, `supporting` und `optional` Inhalte, mindestens eine sichere Kürzung und einen vorbereiteten `late pressure`-Zustandswechsel festhalten.
 5. Nur Plot-Threads anlegen, die für den Kernkonflikt und seine möglichen Auflösungen erforderlich sind. Jeder aktive Thread benennt seinen minimalen Auflösungszustand, unverzichtbare Informationen, sichere Kürzungen und die Auswirkung dieser Kürzungen.
 6. Genau die Locations anlegen, die für Einstieg, zentrale Entscheidungen, Verständnis oder Auflösung des Kernkonflikts notwendig sind.
