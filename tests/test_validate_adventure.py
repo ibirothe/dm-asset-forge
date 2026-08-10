@@ -111,6 +111,9 @@ class AdventureValidationTests(unittest.TestCase):
         run_sheet = self.adventure / "60-session/run-sheet.md"
         self.assertTrue(run_sheet.is_file())
         self.assertIn("| Checkpoint | Observe | If behind | If ahead | Source |", run_sheet.read_text(encoding="utf-8"))
+        readiness = self.adventure / "60-session/readiness-report.md"
+        self.assertTrue(readiness.is_file())
+        self.assertIn("- Gesamtstatus: open", readiness.read_text(encoding="utf-8"))
         clue_matrix = self.adventure / "50-indexes/clue-matrix.md"
         self.assertTrue(clue_matrix.is_file())
         self.assertIn("| info-route | open | [info-route]", clue_matrix.read_text(encoding="utf-8"))
@@ -240,6 +243,76 @@ class AdventureValidationTests(unittest.TestCase):
 
     def test_missing_session_run_sheet_is_a_structural_error(self) -> None:
         (self.adventure / "60-session/run-sheet.md").unlink()
+
+        errors, _ = self.validate()
+
+        self.assertIn("[STRUCT_FILE]", "\n".join(errors))
+
+    def test_readiness_report_structure_sources_and_route_are_checked(self) -> None:
+        readiness = self.adventure / "60-session/readiness-report.md"
+        content = readiness.read_text(encoding="utf-8")
+        content = content.replace("## Prüfbasis\n", "")
+        content = content.replace(
+            "| Prüfung | Ergebnis | Geprüft am | Quelle |",
+            "| Prüfung | Ergebnis | Quelle |",
+        )
+        content = content.replace(
+            "../../docs/adventure-audit-guide.md",
+            "../00-input/clarifications.md",
+        )
+        readiness.write_text(content, encoding="utf-8")
+
+        readme = self.adventure / "README.md"
+        readme.write_text(
+            readme.read_text(encoding="utf-8").replace(
+                "60-session/readiness-report.md",
+                "60-session/run-sheet.md",
+            ),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[READINESS_SECTION]", rendered)
+        self.assertIn("[READINESS_BASIS]", rendered)
+        self.assertIn("[READINESS_SOURCE_LINK]", rendered)
+        self.assertIn("[READINESS_README_LINK]", rendered)
+
+    def test_ready_status_requires_three_successful_checks_and_no_blockers(self) -> None:
+        readiness = self.adventure / "60-session/readiness-report.md"
+        readiness.write_text(
+            readiness.read_text(encoding="utf-8").replace(
+                "- Gesamtstatus: open",
+                "- Gesamtstatus: ready",
+            ),
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        self.assertIn("[READINESS_READY]", "\n".join(errors))
+
+        content = readiness.read_text(encoding="utf-8")
+        content = content.replace(
+            "| Session-Preflight | open | not-run |",
+            "| Session-Preflight | ready | 2026-08-10 |",
+        )
+        content = content.replace(
+            "| Technische Validierung | not-run | not-run |",
+            "| Technische Validierung | passed | 2026-08-10 |",
+        )
+        content = content.replace(
+            "| Fachlicher Audit | not-run | not-run |",
+            "| Fachlicher Audit | clear | 2026-08-10 |",
+        )
+        content = content.replace("- Blockerstatus: open", "- Blockerstatus: none")
+        readiness.write_text(content, encoding="utf-8")
+
+        errors, _ = self.validate()
+        self.assertNotIn("[READINESS_", "\n".join(errors))
+
+    def test_missing_readiness_report_is_a_structural_error(self) -> None:
+        (self.adventure / "60-session/readiness-report.md").unlink()
 
         errors, _ = self.validate()
 
