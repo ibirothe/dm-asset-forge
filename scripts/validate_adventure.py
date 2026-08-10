@@ -28,6 +28,7 @@ REQUIRED_FILES = (
     "00-input/world.md",
     "00-input/plot.md",
     "00-input/constraints.md",
+    "00-input/session-preflight.md",
     "00-input/clarifications.md",
     "10-world/overview.md",
     "20-plot/overview.md",
@@ -84,6 +85,21 @@ PLAYER_FORBIDDEN_HEADINGS = frozenset(
         "Reveals and consequences",
         "Player release",
         "Rendered output",
+    }
+)
+SESSION_PREFLIGHT_STATUS = re.compile(
+    r"^- Preflight status:\s*(open|blocked|ready)\s*$", re.MULTILINE
+)
+SESSION_PREFLIGHT_SECTIONS = frozenset(
+    {
+        "Group and rules",
+        "Schedule",
+        "Safety and accessibility",
+        "Table and technology",
+        "Materials",
+        "Player releases",
+        "Open blockers",
+        "Ready for session",
     }
 )
 VISUAL_GENERATION_STATUS = re.compile(
@@ -916,6 +932,46 @@ def validate_indexes(
                     )
 
 
+def validate_session_preflight(root: Path, errors: list[str]) -> None:
+    path = root / "00-input" / "session-preflight.md"
+    if not path.is_file():
+        return
+
+    rel = relative(path, root)
+    content = path.read_text(encoding="utf-8")
+    headings = frozenset(HEADING.findall(content))
+    for section in sorted(SESSION_PREFLIGHT_SECTIONS - headings):
+        errors.append(
+            diagnostic(
+                rel,
+                "PREFLIGHT_SECTION",
+                f"missing required section '## {section}'.",
+                f"Restore '## {section}' from templates/adventure/00-input/session-preflight.md.",
+            )
+        )
+
+    if SESSION_PREFLIGHT_STATUS.search(content) is None:
+        errors.append(
+            diagnostic(
+                rel,
+                "PREFLIGHT_STATUS",
+                "Preflight status is missing or invalid.",
+                "Use '- Preflight status: open', 'blocked', or 'ready'.",
+            )
+        )
+
+    constraints = root / "00-input" / "constraints.md"
+    if constraints.resolve() not in resolved_markdown_links(path):
+        errors.append(
+            diagnostic(
+                rel,
+                "PREFLIGHT_CONSTRAINTS_LINK",
+                "Session preflight does not link the canonical constraints file.",
+                "Link to constraints.md instead of copying target duration or content boundaries.",
+            )
+        )
+
+
 def validate(root: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -1018,6 +1074,7 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
     validate_relations(root, records, assets_by_id, errors)
     validate_navigation_links(root, records, assets_by_id, errors)
     validate_indexes(root, records, errors)
+    validate_session_preflight(root, errors)
 
     for asset_id, paths in sorted(ids.items()):
         if len(paths) > 1:
