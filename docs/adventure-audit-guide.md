@@ -36,7 +36,7 @@ Ein Audit:
 ## Prüfreihenfolge
 
 1. **Scope festhalten:** Audit-Ziel und ausdrücklich ausgeschlossene Bereiche nennen.
-2. **Orientierung lesen:** `adventure/README.md`, alle sechs Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
+2. **Orientierung lesen:** `adventure/README.md`, `60-session/dm-cheat-sheet.md`, alle sechs Indizes sowie `90-meta/open-questions.md`, `assumptions.md` und `decisions.md` lesen.
 3. **Technische Basis prüfen:** Validator ausführen und dessen Ergebnis unverändert als eigenen Berichtsteil behandeln.
 4. **Prüfmenge ableiten:** Aktive Plot-Threads, notwendige Schlussfolgerungen, betroffene Locations und direkt verknüpfte Assets bestimmen.
 5. **Kanon prüfen:** Widersprüche und unklare Wahrheitsgrenzen bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen untersuchen.
@@ -46,7 +46,7 @@ Ein Audit:
 9. **Spielerwirksamkeit prüfen:** Jeden aktiven Plot-Thread auf Einstieg, Druck, Wahl, Folgezustände, Ignorieren und Auflösungen prüfen.
 10. **One-Shot-Abschluss prüfen:** Sicherstellen, dass der zentrale Konflikt innerhalb des vorbereiteten Umfangs erreichbar aufgelöst werden kann und keine Pflichtentwicklung vertagt ist.
 11. **Pacing prüfen:** Zielrahmen, minimalen Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` auf praktische Leitbarkeit und erhaltene Spielerwirksamkeit prüfen.
-12. **Navigation prüfen:** README und sechs Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
+12. **Navigation prüfen:** README, DM-Spickzettel und sechs Indizes auf tischrelevante Kurzkontexte, direkte kanonische Links und einen Suchweg ohne Volltextsuche oder blindes Ordnerscannen prüfen.
 13. **Tischreife prüfen:** Relevante `ready`-Assets gegen ihre Definition of Done und die schnelle Nutzbarkeit am Tisch prüfen.
 14. **Findings konsolidieren:** Doppelte Symptome zu einer Ursache bündeln, Schweregrad begründen und kleinste sinnvolle Korrekturrichtung nennen.
 15. **Bericht ausgeben:** Technische und fachliche Ergebnisse getrennt, vollständig und ohne Änderungen am Kanon ausgeben.
@@ -165,6 +165,8 @@ Ein Zielrahmen ohne realistisch erreichbaren minimalen Auflösungszustand oder o
 
 Die README wird als abgeleitete Tischübersicht geprüft, nicht als zweite Kanonquelle. Sie muss Ausgangslage, zentralen Konflikt, aktuellen Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse und relevante Folgezustände knapp sichtbar machen. Pacing und sichere Kürzungen werden nur aus dem Plot zusammengefasst und dorthin verlinkt.
 
+Der DM-Spickzettel wird als noch stärker verdichtete Laufzeitansicht geprüft. Einstieg und Druck, zentrale Orte, NPC-Absichten und Voice Cues, notwendige Schlussfolgerungen und unabhängige Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände müssen schnell scannbar sein. Jede Aussage verweist auf ihre kanonische Plot-, Index- oder Asset-Quelle; ein Widerspruch oder neuer Kanon im Spickzettel ist nach seiner Tischwirkung einzustufen.
+
 Für jedes zentrale Asset prüfen:
 
 1. **Direkter Weg:** Ist es aus der README direkt oder über genau einen passenden der sechs Indizes erreichbar?
@@ -174,6 +176,8 @@ Für jedes zentrale Asset prüfen:
 5. **Abdeckung:** Sind insbesondere zentrale Factions und Events direkt in der README verlinkt, da für sie keiner der fünf Tischindizes existiert?
 
 Die sechs Indizes werden nach ihrer jeweiligen Tischfunktion bewertet: aktueller Ortsdruck, unmittelbare NPC-Absicht, One-Shot-Rolle und freiwilliger Hook eines Player Characters, Object-Einsatz, Bedeutung und unabhängige Fundwege einer Information sowie nächster Druck, minimaler Auflösungszustand und sichere Kürzung eines aktiven Threads. Kurzkontexte bleiben knapp und enthalten keinen vollständigen Kanon.
+
+Für jeden zentralen NPC wird geprüft, ob der Spickzettel unmittelbare Absicht und einen aus dem kanonischen NPC ableitbaren Voice Cue enthält. Für jede notwendige Schlussfolgerung wird geprüft, ob robuste Ersatzpfade sichtbar sind. Sichere Kürzungen dürfen weder den minimalen Auflösungszustand noch den letzten unabhängigen Informationsweg entfernen.
 
 Ein zentrales Asset, das nur durch Volltextsuche oder blindes Durchsuchen von Ordnern erreichbar ist, ist mindestens `important`. Ein veralteter Kurzkontext ist nach seiner Auswirkung einzustufen und `blocking`, wenn er den DM zum falschen einzigen Informationsweg oder zu einer unerreichbaren Auflösung führt.
 
@@ -231,7 +235,7 @@ Der Bericht verwendet diese Reihenfolge:
 6. **Kritische Informationswege:** jede notwendige Schlussfolgerung mit ihren unabhängigen Pfaden und zugehörigen Finding-IDs.
 7. **Spielerausgaben und Visuals:** jede geprüfte `player.md` und jedes relevante Visual mit `ok`, `finding <ID>` oder `not visually inspected`; wenn keine existieren, dies ausdrücklich nennen.
 8. **Pacing und Kürzbarkeit:** Zielrahmen, minimaler Auflösungszustand und jede deklarierte sichere Kürzung mit `ok`, `finding <ID>` oder `target frame open`.
-9. **Übersichten und Navigation:** README-Kernfragen, sechs Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
+9. **Übersichten und Navigation:** README-Kernfragen, DM-Spickzettel, sechs Indizes und der direkte Pfad zu jedem zentralen Asset mit `ok` oder `finding <ID>`.
 10. **Offene Fragen und Audit-Grenzen:** fehlende Festlegungen, nicht gelesene Bereiche und Bewertungen, die Bestätigung benötigen.
 11. **Empfohlene nächste Aktion:** kleinste priorisierte Korrektur oder Bestätigung, dass im Scope kein Handlungsbedarf besteht.
 
@@ -266,7 +270,8 @@ Ein fachlicher Audit ist abgeschlossen, wenn:
 - [ ] jedes relevante Visual im Scope gegen Subject-Identität, One-Shot-Zustand, Prompt, Sichtbarkeit, Ausschlüsse und eine vorhandene PNG geprüft oder die fehlende visuelle Prüfbarkeit als Grenze benannt wurde;
 - [ ] Zielrahmen, minimaler Auflösungszustand, Inhaltsrollen, sichere Kürzungen und `late pressure` fachlich geprüft wurden;
 - [ ] jede sichere Kürzung notwendige Informationswege, mehrere Formen der Spieler-Einflussnahme und erreichbare Auflösungen erhält;
-- [ ] README und sechs Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
+- [ ] README, DM-Spickzettel und sechs Indizes knappe tischrelevante Kurzkontexte besitzen, ohne vollständigen Kanon zu duplizieren;
+- [ ] der DM-Spickzettel zentrale NPCs mit unmittelbarer Absicht und Voice Cue, notwendige Schlussfolgerungen mit Ersatzpfaden sowie Mindestauflösung, sichere Kürzungen und mögliche Endzustände aus kanonischen Quellen verdichtet;
 - [ ] jedes zentrale Asset direkt oder über genau einen passenden Index ohne Volltextsuche erreichbar ist;
 - [ ] jedes Finding Schweregrad, Begründung, Nachweise, Auswirkung und kleinste Korrekturrichtung enthält;
 - [ ] ohne ausdrücklichen Fix-Auftrag keine Datei verändert wurde;
