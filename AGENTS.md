@@ -29,7 +29,8 @@ Read `docs/bild-workflow.md` before creating or revising a Visual brief or gener
 10. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
 11. Turn `adventure/README.md` into the concise table guide and add a short table-use context to every row in the six existing indexes. Link central actors, necessary information, and resolution-relevant assets directly instead of copying their canonical descriptions.
 12. Complete `adventure/60-session/dm-cheat-sheet.md` as the compact runtime view. Include only central locations, NPC intent and Voice cues, critical conclusions with independent fallback paths, escalation, safe cuts, minimum resolution, and possible endings; link every entry to its canonical source.
-13. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
+13. Complete `adventure/60-session/run-sheet.md` as the flexible timing and state-control view. Derive optional times from the session preflight, preserve multiple openings and endings, and use movable phases, checkpoints, late pressure, safe cuts, a latest finale trigger, minimum resolution, and live notes without prescribing a Scene order or adding canon.
+14. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
 
 ## Read before editing
 
@@ -44,7 +45,7 @@ For an existing adventure, read in this order:
 Do not scan every asset by default. Expand the read set only when relationships or continuity require it.
 
 For preparation and table use, navigate from `adventure/README.md` either directly to a central asset or through exactly one matching index. Treat README and index prose as short derived orientation only; resolve details and canon conflicts in the linked canonical asset.
-During play, use `adventure/60-session/dm-cheat-sheet.md` as the compact runtime view. Treat it as derived navigation, keep each entry short, and update it whenever a linked source changes materially.
+During play, use `adventure/60-session/dm-cheat-sheet.md` for compact content recall and `adventure/60-session/run-sheet.md` for flexible timing, checkpoints, and state changes. Treat both as derived navigation, keep each entry short, and update them whenever a linked source changes materially.
 
 ## Canonical storage
 
@@ -82,7 +83,7 @@ During play, use `adventure/60-session/dm-cheat-sheet.md` as the compact runtime
 - Express challenge and capability narratively with context, risks, leverage, and consequences.
 - Separate established facts, rumors, secrets, assumptions, and unresolved questions.
 - Give every usable asset a purpose at the table, discoverability, and consequences.
-- Keep `adventure/README.md`, `adventure/60-session/dm-cheat-sheet.md`, and index summaries concise and derived. Never introduce canon there that is absent from the linked plot or asset source, and never copy a full canonical description into navigation.
+- Keep `adventure/README.md`, `adventure/60-session/dm-cheat-sheet.md`, `adventure/60-session/run-sheet.md`, and index summaries concise and derived. Never introduce canon there that is absent from the linked plot or asset source, and never copy a full canonical description into navigation.
 - Never make required progress depend on one prescribed player action, one fragile clue, or one mandatory Scene. Express prerequisites as reachable states.
 - Treat player-character background, motivation, loyalty, and decisions as open unless the user explicitly establishes them.
 - Keep `status: draft` until the asset meets the shared and type-specific Definition of Done in `docs/asset-authoring-guide.md`; template completeness alone is insufficient.
