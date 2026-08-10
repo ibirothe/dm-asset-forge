@@ -19,6 +19,8 @@ updated: {{DATE}}
 
 ## Tischübersicht
 
+Für die unmittelbare Leitung am Spieltisch: [DM cheat sheet](60-session/dm-cheat-sheet.md).
+
 ### Ausgangslage, Konflikt und Druck
 
 - Ausgangslage: [Plot overview](20-plot/overview.md#player-facing-starting-situation) — noch nicht ausgearbeitet.
@@ -63,6 +65,7 @@ updated: {{DATE}}
 - [Clarifications](00-input/clarifications.md)
 - [World overview](10-world/overview.md)
 - [Plot overview](20-plot/overview.md)
+- [DM cheat sheet](60-session/dm-cheat-sheet.md)
 - [Location index](50-indexes/locations.md)
 - [Player Character index](50-indexes/player-characters.md)
 - [Open threads](50-indexes/open-threads.md)
