@@ -32,7 +32,8 @@ Read `docs/bild-workflow.md` before creating or revising a Visual brief or gener
 12. Complete `adventure/50-indexes/clue-matrix.md` as the global derived view of conclusion paths. Give every Information asset at least one row and every necessary conclusion at least two rows with different independence groups and source or access paths. Link stable Information, source, discovery-location, and Plot-Thread IDs; never copy truth or truth status from canonical Information assets.
 13. Complete `adventure/60-session/dm-cheat-sheet.md` as the compact runtime view. Include only central locations, NPC intent and Voice cues, critical conclusions with independent fallback paths, escalation, safe cuts, minimum resolution, and possible endings; link every entry to its canonical source.
 14. Complete `adventure/60-session/run-sheet.md` as the flexible timing and state-control view. Derive optional times from the session preflight, preserve multiple openings and endings, and use movable phases, checkpoints, late pressure, safe cuts, a latest finale trigger, minimum resolution, and live notes without prescribing a Scene order or adding canon.
-15. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
+15. Keep `adventure/60-session/readiness-report.md` as the single compact derived status view. Record only actual preflight, validator, and audit results with dates, remaining blockers, source links, and exactly one next action. Set `ready` only when all three checks pass and no blocker remains.
+16. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
 
 ## Read before editing
 
@@ -85,7 +86,7 @@ During play, use `adventure/60-session/dm-cheat-sheet.md` for compact content re
 - Express challenge and capability narratively with context, risks, leverage, and consequences.
 - Separate established facts, rumors, secrets, assumptions, and unresolved questions.
 - Give every usable asset a purpose at the table, discoverability, and consequences.
-- Keep `adventure/README.md`, `adventure/50-indexes/clue-matrix.md`, `adventure/60-session/dm-cheat-sheet.md`, `adventure/60-session/run-sheet.md`, and index summaries concise and derived. Never introduce canon there that is absent from the linked plot or asset source, and never copy a full canonical description into navigation.
+- Keep `adventure/README.md`, `adventure/50-indexes/clue-matrix.md`, `adventure/60-session/dm-cheat-sheet.md`, `adventure/60-session/run-sheet.md`, `adventure/60-session/readiness-report.md`, and index summaries concise and derived. Never introduce canon there that is absent from the linked plot or asset source, and never copy a full canonical description into navigation.
 - Never make required progress depend on one prescribed player action, one fragile clue, or one mandatory Scene. Express prerequisites as reachable states.
 - Treat player-character background, motivation, loyalty, and decisions as open unless the user explicitly establishes them.
 - Keep `status: draft` until the asset meets the shared and type-specific Definition of Done in `docs/asset-authoring-guide.md`; template completeness alone is insufficient.
