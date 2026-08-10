@@ -47,6 +47,8 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Bilder | ausschließlich PNG-Dateien und PNG-Verweise; passender strukturierter Prompt, Identitätsquelle, Zustandsvariante, Ausgabepfad, Freigabe, Dateistatus und Provenienz für jedes Visual |
 | Hygiene | verbliebene Template-Platzhalter und mögliche systemspezifische Begriffe |
 
+Bei Session-Preflight, Hinweismatrix, DM-Spickzettel und Session-Ablaufplan prüft der Validator die deutschen Nutzerüberschriften und Spaltennamen; technische Pfade, IDs, Asset-Typen und kontrollierte Werte bleiben englisch.
+
 Die normativen Grundlagen bleiben der [Asset-Katalog](asset-katalog.md), die [Metadaten und Werte](metadaten-und-werte.md) sowie das [Beziehungsmodell](beziehungen-und-speicherorte.md). Die anschließende fachliche Prüfung und ihr getrenntes Berichtsformat definiert der [Fachliche Audit-Leitfaden](adventure-audit-guide.md).
 
 Zusätzliche Überschriften aus älteren Template-Ständen bleiben zulässig. Werden funktionslose Pflichtaufforderungen aus einem Template entfernt, bleiben bestehende Abenteuer daher valide; der Validator verlangt sie lediglich bei neu erzeugten oder überarbeiteten Assets nicht mehr.

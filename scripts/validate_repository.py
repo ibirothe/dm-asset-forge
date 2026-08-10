@@ -351,14 +351,14 @@ def main() -> int:
 
     session_preflight = ROOT / "templates" / "adventure" / "00-input" / "session-preflight.md"
     required_preflight_sections = (
-        "## Group and rules",
-        "## Schedule",
-        "## Safety and accessibility",
-        "## Table and technology",
-        "## Materials",
-        "## Player releases",
-        "## Open blockers",
-        "## Ready for session",
+        "## Gruppe und Regeln",
+        "## Zeitplan",
+        "## Sicherheit und Barrierefreiheit",
+        "## Spieltisch und Technik",
+        "## Materialien",
+        "## Spielerfreigaben",
+        "## Offene Blocker",
+        "## Spielbereit",
     )
     if not session_preflight.is_file():
         errors.append("missing session preflight template: templates/adventure/00-input/session-preflight.md")
@@ -370,16 +370,16 @@ def main() -> int:
 
     dm_cheat_sheet = ROOT / "templates" / "adventure" / "60-session" / "dm-cheat-sheet.md"
     required_dm_sheet_markers = (
-        "## Opening and pressure",
-        "## Key locations",
-        "## Key NPCs",
-        "| NPC | Immediate intent | Voice cue | Source |",
-        "## Critical conclusions",
-        "| Conclusion | Independent paths | Fallback | Source |",
-        "## Escalation",
-        "## Safe cuts",
-        "## Minimum resolution",
-        "## Possible endings",
+        "## Einstieg und Druck",
+        "## Zentrale Orte",
+        "## Zentrale NPCs",
+        "| NPC | Unmittelbare Absicht | Stimmhinweis | Quelle |",
+        "## Kritische Schlussfolgerungen",
+        "| Schlussfolgerung | Unabhängige Pfade | Auffangweg | Quelle |",
+        "## Eskalation",
+        "## Sichere Kürzungen",
+        "## Mindestauflösung",
+        "## Mögliche Endzustände",
     )
     if not dm_cheat_sheet.is_file():
         errors.append("missing DM cheat sheet template: templates/adventure/60-session/dm-cheat-sheet.md")
@@ -391,17 +391,18 @@ def main() -> int:
 
     session_run_sheet = ROOT / "templates" / "adventure" / "60-session" / "run-sheet.md"
     required_run_sheet_markers = (
-        "## Session frame",
-        "## Opening options",
-        "## Flexible phases",
-        "| Phase or window | Desired state | Available transitions | Pressure if delayed | Source |",
-        "## Checkpoints",
-        "| Checkpoint | Observe | If behind | If ahead | Source |",
-        "## Late pressure",
-        "## Safe cuts",
-        "## Finale trigger",
-        "## Resolution",
-        "## Live notes",
+        "## Session-Rahmen",
+        "## Einstiegsoptionen",
+        "## Flexible Phasen",
+        "| Phase oder Zeitfenster | Zielzustand | Verfügbare Übergänge | Druck bei Verzögerung | Quelle |",
+        "## Kontrollpunkte",
+        "| Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |",
+        "## Später Druck",
+        "## Sichere Kürzungen",
+        "## Finale-Auslöser",
+        "## Auflösung",
+        "## Notizen während des Spiels",
+        "session-preflight.md#zeitplan",
     )
     if not session_run_sheet.is_file():
         errors.append("missing Session run sheet template: templates/adventure/60-session/run-sheet.md")
@@ -420,6 +421,7 @@ def main() -> int:
         "- Blockerstatus: open",
         "## Nächste Aktion",
         "- Priorität:",
+        "session-preflight.md#offene-blocker",
     )
     if not readiness_report.is_file():
         errors.append("missing readiness report template: templates/adventure/60-session/readiness-report.md")
@@ -431,11 +433,11 @@ def main() -> int:
 
     clue_matrix = ROOT / "templates" / "adventure" / "50-indexes" / "clue-matrix.md"
     required_clue_matrix_markers = (
-        "## Conclusion paths",
-        "| Conclusion key | Requirement | Information asset | Presentation clue | Source and discovery location | Access method | Independence group | Preconditions | Fail-forward | Consequence when learned, late, or missed | Plot threads |",
+        "## Schlussfolgerungspfade",
+        "| Schlussfolgerungsschlüssel | Anforderung | Information-Asset | Präsentierbarer Hinweis | Quelle und Fundort | Zugangsweise | Unabhängigkeitsgruppe | Voraussetzungen | Auffangweg | Folge bei frühzeitiger, später oder verpasster Erkenntnis | Plot-Threads |",
         "necessary",
         "optional",
-        "Independence group",
+        "Unabhängigkeitsgruppe",
     )
     if not clue_matrix.is_file():
         errors.append("missing global clue matrix template: templates/adventure/50-indexes/clue-matrix.md")

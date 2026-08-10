@@ -1,65 +1,65 @@
-# Session preflight
+# Session-Preflight
 
-This file tracks session logistics and readiness. Narrative preferences and content boundaries remain canonical in [Constraints](constraints.md); reference them here instead of copying them.
+Diese Datei erfasst Logistik und Bereitschaft der Session. Inhaltliche Präferenzen und Grenzen bleiben kanonisch in den [Constraints](constraints.md); verweise hier darauf, statt sie zu kopieren.
 
-## Group and rules
+## Gruppe und Regeln
 
-- Player count: open
-- Player experience: open
-- Rules basis: open
-- Character provision: open
-- Character limits: open
+- Spielerzahl: open
+- Spielerfahrung: open
+- Regelbasis: open
+- Bereitstellung der Charaktere: open
+- Charaktergrenzen: open
 
-## Schedule
+## Zeitplan
 
-- Planned start: open
-- Target duration: [Constraints — One-shot frame](constraints.md#one-shot-frame)
-- Hard stop: open
-- Breaks: open
+- Geplanter Start: open
+- Zielspielzeit: [Constraints – One-Shot-Rahmen](constraints.md#one-shot-frame)
+- Verbindliches Ende: open
+- Pausen: open
 
-## Safety and accessibility
+## Sicherheit und Barrierefreiheit
 
-- Content boundaries: [Constraints — One-shot frame](constraints.md#one-shot-frame)
-- Safety tools: open
-- Accessibility needs: open
+- Inhaltsgrenzen: [Constraints – One-Shot-Rahmen](constraints.md#one-shot-frame)
+- Sicherheitswerkzeuge: open
+- Anforderungen an Barrierefreiheit: open
 
-## Table and technology
+## Spieltisch und Technik
 
-- Play mode: open
-- Venue or platform: open
-- Technical requirements: open
+- Spielmodus: open
+- Ort oder Plattform: open
+- Technische Anforderungen: open
 
-## Materials
+## Materialien
 
-| Item | Required | Status | Source or note |
+| Gegenstand | Erforderlich | Status | Quelle oder Notiz |
 |---|---|---|---|
-| Dice or randomizer | open | open | — |
-| Tokens or markers | open | open | — |
-| Maps | open | open | — |
+| Würfel oder Zufallsgenerator | open | open | — |
+| Marker oder Spielsteine | open | open | — |
+| Karten | open | open | — |
 | Handouts | open | open | — |
 | Visuals | open | open | — |
 
-## Player releases
+## Spielerfreigaben
 
-| Release type | Status | Review source |
+| Freigabetyp | Status | Prüfquelle |
 |---|---|---|
-| Player Characters | open | [Player Character index](../50-indexes/player-characters.md) |
-| Handouts | open | [Location index](../50-indexes/locations.md) |
-| Player-visible Visuals | open | [Adventure overview](../README.md) |
+| Player Characters | open | [Player-Character-Index](../50-indexes/player-characters.md) |
+| Handouts | open | [Location-Index](../50-indexes/locations.md) |
+| Für Spieler sichtbare Visuals | open | [Abenteuerübersicht](../README.md) |
 
-## Open blockers
+## Offene Blocker
 
-| Blocker | Owner | Resolution or decision | Status |
+| Blocker | Zuständig | Lösung oder Entscheidung | Status |
 |---|---|---|---|
 | — | open | — | open |
 
-## Ready for session
+## Spielbereit
 
-- Preflight status: open
-- [ ] Group, rules basis, schedule, and play mode are confirmed.
-- [ ] Content boundaries, Safety tools, and accessibility needs are confirmed.
-- [ ] Required materials and technical setup are ready.
-- [ ] Intended Player Character, Handout, and player-visible Visual releases are current and approved.
-- [ ] Every remaining blocker is resolved or explicitly accepted.
+- Preflight-Status: open
+- [ ] Gruppe, Regelbasis, Zeitplan und Spielmodus sind bestätigt.
+- [ ] Inhaltsgrenzen, Sicherheitswerkzeuge und Anforderungen an Barrierefreiheit sind bestätigt.
+- [ ] Erforderliche Materialien und technische Einrichtung sind bereit.
+- [ ] Vorgesehene Freigaben für Player Characters, Handouts und für Spieler sichtbare Visuals sind aktuell und genehmigt.
+- [ ] Jeder verbleibende Blocker ist gelöst oder ausdrücklich akzeptiert.
 
-Use `open` for an unanswered or unconfirmed item. Set `Preflight status` to `blocked` when an unresolved item prevents play, and to `ready` only after every checklist item is satisfied.
+Verwende `open` für unbeantwortete oder unbestätigte Angaben. Setze den `Preflight-Status` auf `blocked`, wenn ein offener Punkt die Durchführung verhindert, und erst auf `ready`, wenn alle Punkte der Checkliste erfüllt sind.

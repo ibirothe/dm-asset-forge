@@ -28,6 +28,8 @@ Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target durati
 
 ## Vorbereitung und Tischgebrauch
 
+Die vier unmittelbar genutzten Tischvorlagen sind deutsch; technische Dateinamen, Pfade, IDs, YAML-Schlüssel, Asset-Typen und kontrollierte Werte bleiben englisch.
+
 Prüfe vor der Detailausarbeitung und erneut kurz vor dem Spiel `adventure/00-input/session-preflight.md`. Setze den Status auf `blocked`, wenn eine offene Angabe die Durchführung verhindert, und erst auf `ready`, wenn Gruppe, Zeitplan, Safety, Zugänglichkeit, Technik, Materialien und vorgesehene Spielerfreigaben bestätigt sind. Ein `open`-Wert ist sichtbar unentschieden und wird nicht automatisch als Zustimmung oder Bereitschaft behandelt.
 
 Nutze danach `adventure/60-session/readiness-report.md` als einzigen kompakten Gesamtstand. Trage dort nur das Ergebnis des Preflights, der letzten technischen Validierung und des letzten fachlichen Audits mit Datum ein, verlinke verbleibende Blocker und nenne genau eine nächste Aktion. `ready` ist nur zulässig, wenn der Preflight `ready`, die Validierung `passed`, der Audit `clear` und der Blockerstatus `none` sind; der Bericht ersetzt keine seiner Quellen.
@@ -171,7 +173,7 @@ Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Bitt
 
 ## Vor dem Spielen
 
-Schließe zuerst den Session-Preflight ab. Prüfe insbesondere Hard Stop und Pausen, Safety-Werkzeuge, Barrierefreiheit, technische Voraussetzungen, benötigte Materialien sowie den aktuellen Freigabestatus aller vorgesehenen Player Characters, Handouts und player-facing Visuals. Verbleibende Blocker müssen gelöst oder bewusst akzeptiert sein; erst dann ist `Preflight status: ready` korrekt.
+Schließe zuerst den Session-Preflight ab. Prüfe insbesondere Hard Stop und Pausen, Safety-Werkzeuge, Barrierefreiheit, technische Voraussetzungen, benötigte Materialien sowie den aktuellen Freigabestatus aller vorgesehenen Player Characters, Handouts und player-facing Visuals. Verbleibende Blocker müssen gelöst oder bewusst akzeptiert sein; erst dann ist `Preflight-Status: ready` korrekt.
 
 Prüfe danach das Session Run Sheet gegen den aktuellen Preflight und Plot. Konkrete Zeiten sind optional; wenn sie verwendet werden, müssen Hard Stop, Checkpoints, sichere Kürzungen und Finale-Trigger zusammenpassen. `open` bleibt korrekt, solange keine Zeit festgelegt wurde.
 

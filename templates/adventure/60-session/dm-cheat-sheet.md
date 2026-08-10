@@ -1,57 +1,57 @@
-# DM cheat sheet
+# DM-Spickzettel
 
-This is a compact, derived table view. Keep every entry to one short action-relevant sentence and link its canonical Plot or Asset source. Never establish new canon here.
+Diese kompakte Tischansicht ist vollständig abgeleitet. Halte jeden Eintrag auf einen kurzen, handlungsrelevanten Satz begrenzt und verlinke seine kanonische Plot- oder Asset-Quelle. Lege hier niemals neuen Kanon fest.
 
-Operational timing and state changes: [Session run sheet](run-sheet.md).
+Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 
-## Opening and pressure
+## Einstieg und Druck
 
-- Starting situation: [Plot overview](../20-plot/overview.md#player-facing-starting-situation) — not yet summarized.
-- Central conflict: [Plot overview](../20-plot/overview.md#central-conflict) — not yet summarized.
-- Current pressure: [Open threads](../50-indexes/open-threads.md) — not yet summarized.
-- Immediate entry options: [Plot overview](../20-plot/overview.md#flexible-player-hooks) — not yet summarized.
+- Ausgangslage: [Plot-Übersicht](../20-plot/overview.md#player-facing-starting-situation) — noch nicht zusammengefasst.
+- Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — noch nicht zusammengefasst.
+- Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — noch nicht zusammengefasst.
+- Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — noch nicht zusammengefasst.
 
-## Key locations
+## Zentrale Orte
 
-| Location | First impression | Current pressure | Source |
+| Ort | Erster Eindruck | Aktueller Druck | Quelle |
 |---|---|---|---|
-| — | — | — | [Location index](../50-indexes/locations.md) |
+| — | — | — | [Location-Index](../50-indexes/locations.md) |
 
-## Key NPCs
+## Zentrale NPCs
 
-| NPC | Immediate intent | Voice cue | Source |
+| NPC | Unmittelbare Absicht | Stimmhinweis | Quelle |
 |---|---|---|---|
-| — | — | — | [NPC index](../50-indexes/npcs.md) |
+| — | — | — | [NPC-Index](../50-indexes/npcs.md) |
 
-## Critical conclusions
+## Kritische Schlussfolgerungen
 
-Prüfe globale Pfadabdeckung und Fail-forward-Optionen in der [Global clue matrix](../50-indexes/clue-matrix.md); Wahrheit und Details bleiben in den verlinkten Information-Assets.
+Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../50-indexes/clue-matrix.md); Wahrheit und Details bleiben in den verlinkten Information-Assets.
 
-| Conclusion | Independent paths | Fallback | Source |
+| Schlussfolgerung | Unabhängige Pfade | Auffangweg | Quelle |
 |---|---|---|---|
-| — | — | — | [Information index](../50-indexes/information.md) |
+| — | — | — | [Information-Index](../50-indexes/information.md) |
 
-## Escalation
+## Eskalation
 
-- Active pressure: [Open threads](../50-indexes/open-threads.md) — not yet summarized.
-- Next visible change: [Plot overview](../20-plot/overview.md#one-shot-scope-and-pacing) — not yet summarized.
-- Trigger: [Open threads](../50-indexes/open-threads.md) — not yet summarized.
+- Aktiver Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — noch nicht zusammengefasst.
+- Nächste sichtbare Veränderung: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — noch nicht zusammengefasst.
+- Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — noch nicht zusammengefasst.
 
-## Safe cuts
+## Sichere Kürzungen
 
-| Cut | Trigger | Preserved resolution | Source |
+| Kürzung | Auslöser | Erhaltene Auflösung | Quelle |
 |---|---|---|---|
-| — | — | — | [Plot overview](../20-plot/overview.md#one-shot-scope-and-pacing) |
+| — | — | — | [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) |
 
-## Minimum resolution
+## Mindestauflösung
 
-- Required end state: [Plot overview](../20-plot/overview.md#one-shot-scope-and-pacing) — not yet summarized.
-- Must-preserve information: [Information index](../50-indexes/information.md) — not yet summarized.
+- Erforderlicher Endzustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — noch nicht zusammengefasst.
+- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md) — noch nicht zusammengefasst.
 
-## Possible endings
+## Mögliche Endzustände
 
-| Ending state | Trigger | Consequence | Source |
+| Endzustand | Auslöser | Folge | Quelle |
 |---|---|---|---|
-| — | — | — | [Plot overview](../20-plot/overview.md#possible-outcomes) |
+| — | — | — | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
 
-Refresh this sheet after a central source changes. Prefer the smallest set of locations, NPCs, conclusions, cuts, and endings that the DM must see without searching during play.
+Aktualisiere diesen Spickzettel nach jeder wesentlichen Änderung einer zentralen Quelle. Zeige nur die kleinste Menge an Orten, NPCs, Schlussfolgerungen, Kürzungen und Endzuständen, die der DM während des Spiels ohne Suche benötigt.

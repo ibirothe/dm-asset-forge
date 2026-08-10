@@ -1,11 +1,10 @@
-# Global clue matrix
+# Globale Hinweismatrix
 
 Abgeleitete Navigations- und Auditansicht, keine zweite Kanonquelle. Aussage, Wahrheitsstatus, Grenzen und vollständige Entdeckungslogik bleiben ausschließlich im verlinkten Information-Asset.
 
-Eine Zeile beschreibt genau einen konkret präsentierbaren Entdeckungspfad. Wiederhole denselben `Conclusion key` für alternative Pfade derselben Schlussfolgerung. `Requirement` verwendet `necessary`, `optional` oder `open`. Zwei Zeilen sind nur unabhängig, wenn sich ihre `Independence group` und mindestens Quelle oder Zugangsweise unterscheiden. Linktexte für Assets verwenden ihre stabilen IDs.
+Eine Zeile beschreibt genau einen konkret präsentierbaren Entdeckungspfad. Verwende denselben Schlussfolgerungsschlüssel für alternative Pfade derselben Schlussfolgerung. Die Anforderung bleibt als kontrollierter Wert `necessary`, `optional` oder `open`. Zwei Zeilen sind nur unabhängig, wenn sich ihre Unabhängigkeitsgruppe und mindestens die Quelle oder Zugangsweise unterscheiden. Linktexte für Assets verwenden ihre stabilen IDs.
 
-## Conclusion paths
+## Schlussfolgerungspfade
 
-| Conclusion key | Requirement | Information asset | Presentation clue | Source and discovery location | Access method | Independence group | Preconditions | Fail-forward | Consequence when learned, late, or missed | Plot threads |
+| Schlussfolgerungsschlüssel | Anforderung | Information-Asset | Präsentierbarer Hinweis | Quelle und Fundort | Zugangsweise | Unabhängigkeitsgruppe | Voraussetzungen | Auffangweg | Folge bei frühzeitiger, später oder verpasster Erkenntnis | Plot-Threads |
 |---|---|---|---|---|---|---|---|---|---|---|
-

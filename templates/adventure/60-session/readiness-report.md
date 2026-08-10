@@ -15,7 +15,7 @@ Dieser knappe, abgeleitete Bericht hält nur Prüfergebnisse und Links auf Quell
 ## Verbleibende Blocker
 
 - Blockerstatus: open
-- Details: [Preflight-Blocker](../00-input/session-preflight.md#open-blockers) und [offene Fragen](../90-meta/open-questions.md)
+- Details: [Preflight-Blocker](../00-input/session-preflight.md#offene-blocker) und [offene Fragen](../90-meta/open-questions.md)
 
 ## Nächste Aktion
 
