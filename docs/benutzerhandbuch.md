@@ -30,9 +30,9 @@ Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target durati
 
 Prüfe vor der Detailausarbeitung und erneut kurz vor dem Spiel `adventure/00-input/session-preflight.md`. Setze den Status auf `blocked`, wenn eine offene Angabe die Durchführung verhindert, und erst auf `ready`, wenn Gruppe, Zeitplan, Safety, Zugänglichkeit, Technik, Materialien und vorgesehene Spielerfreigaben bestätigt sind. Ein `open`-Wert ist sichtbar unentschieden und wird nicht automatisch als Zustimmung oder Bereitschaft behandelt.
 
-Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
+Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei. Die globale Clue Matrix zeigt zusätzlich alle Entdeckungspfade je Schlussfolgerung; Aussage und Wahrheitsstatus werden weiterhin im verlinkten Information-Asset nachgelesen.
 
-Während des Spiels verwende `adventure/60-session/dm-cheat-sheet.md` für Inhalte und `adventure/60-session/run-sheet.md` für Zeit- und Zustandssteuerung. Der Spickzettel verdichtet Einstieg, aktuellen Druck, zentrale Orte, NPC-Absichten und Voice Cues, kritische Schlussfolgerungen und Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände. Das Run Sheet ergänzt optionale Start-, Ziel- und Hard-Stop-Angaben aus dem Preflight, mehrere Opening-Optionen, flexible Phasen, Checkpoints, `late pressure`, Kürzungstrigger, Finale-Trigger und Live-Notizen.
+Während des Spiels verwende `adventure/60-session/dm-cheat-sheet.md` für Inhalte, `adventure/60-session/run-sheet.md` für Zeit- und Zustandssteuerung und `adventure/50-indexes/clue-matrix.md`, wenn ein Hinweis verpasst wird oder ein alternativer Zugang gebraucht wird. Der Spickzettel verdichtet Einstieg, aktuellen Druck, zentrale Orte, NPC-Absichten und Voice Cues, kritische Schlussfolgerungen und Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände. Das Run Sheet ergänzt optionale Start-, Ziel- und Hard-Stop-Angaben aus dem Preflight, mehrere Opening-Optionen, flexible Phasen, Checkpoints, `late pressure`, Kürzungstrigger, Finale-Trigger und Live-Notizen.
 
 Die Phasen des Run Sheets sind verschiebbare Zustandsziele, keine feste Szenenreihenfolge. Wenn Spieler anders vorgehen, werden Phasen übersprungen, überlappt oder neu geordnet. Ein Checkpoint darf einen unabhängigen Informationsweg oder eine plausible Auflösung nicht entfernen. Jede operative Zeile verlinkt ihre kanonische Quelle; vollständige Motive, Wahrheiten und Konsequenzen werden dort nachgelesen.
 
@@ -40,9 +40,11 @@ Die Kurztexte in README, Spickzettel und Indizes dienen nur der Orientierung. Vo
 
 Ein geeigneter Prüfauftrag ist:
 
-> Prüfe README und die sechs Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
+> Prüfe README, globale Clue Matrix und die sechs Asset-Indizes auf unmittelbare Tischführung. Stelle sicher, dass jedes zentrale Asset direkt oder über genau einen passenden Index erreichbar ist, und aktualisiere nur veraltete Kurzkontexte und Links. Dupliziere keinen vollständigen Kanon.
 
 > Aktualisiere den DM-Spickzettel aus den kanonischen Plot- und Asset-Dateien. Halte jede Zeile kurz, ergänze für zentrale NPCs unmittelbare Absicht und Voice Cue und führe für notwendige Schlussfolgerungen unabhängige Ersatzpfade auf. Erfinde keinen neuen Kanon.
+
+> Aktualisiere die globale Clue Matrix aus den kanonischen Information-Assets und ihren Fundorten. Verwende eine Zeile pro konkret präsentierbarem Pfad, stabile ID-Links und für notwendige Schlussfolgerungen mindestens zwei echte Unabhängigkeitsgruppen. Kopiere weder Aussage noch Wahrheitsstatus.
 
 > Erstelle oder aktualisiere das Session Run Sheet aus Preflight, Plot und Spickzettel. Verwende flexible Zustandsphasen statt einer Scene-Reihenfolge und stelle sicher, dass Checkpoints, Druck und Kürzungen mehrere Spielerreaktionen, unabhängige Informationswege und die Mindestauflösung erhalten.
 
@@ -180,6 +182,7 @@ Die Prüfung kontrolliert unter anderem:
 - systemgebundene Begriffe
 - Hinweise ohne Fundort oder Konsequenz
 - notwendige Schlussfolgerungen mit nur einem fragilen Entdeckungspfad
+- Clue-Matrix-Zeilen, die denselben Hinweis nur umformulieren oder dieselbe Quelle und Zugangsweise als unabhängige Pfade ausgeben
 - jeden aktiven Plotfaden auf Einstieg, Druck, Wahl, Ignorieren und mögliche Auflösung
 - Widersprüche bei Ort, Zeit, Ownership, Wissen, Status, Motivation und Beziehungen
 
