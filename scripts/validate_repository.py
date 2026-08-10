@@ -348,6 +348,27 @@ def main() -> int:
             if section not in preflight_content:
                 errors.append(f"session preflight template is missing section: {section}")
 
+    dm_cheat_sheet = ROOT / "templates" / "adventure" / "60-session" / "dm-cheat-sheet.md"
+    required_dm_sheet_markers = (
+        "## Opening and pressure",
+        "## Key locations",
+        "## Key NPCs",
+        "| NPC | Immediate intent | Voice cue | Source |",
+        "## Critical conclusions",
+        "| Conclusion | Independent paths | Fallback | Source |",
+        "## Escalation",
+        "## Safe cuts",
+        "## Minimum resolution",
+        "## Possible endings",
+    )
+    if not dm_cheat_sheet.is_file():
+        errors.append("missing DM cheat sheet template: templates/adventure/60-session/dm-cheat-sheet.md")
+    else:
+        dm_sheet_content = dm_cheat_sheet.read_text(encoding="utf-8")
+        for marker in required_dm_sheet_markers:
+            if marker not in dm_sheet_content:
+                errors.append(f"DM cheat sheet template is missing marker: {marker}")
+
     create_asset_skill = SKILLS / "dm-create-asset" / "SKILL.md"
     if (
         create_asset_skill.is_file()

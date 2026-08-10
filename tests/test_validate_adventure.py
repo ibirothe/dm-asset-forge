@@ -105,6 +105,9 @@ class AdventureValidationTests(unittest.TestCase):
         preflight = self.adventure / "00-input/session-preflight.md"
         self.assertTrue(preflight.is_file())
         self.assertIn("- Preflight status: open", preflight.read_text(encoding="utf-8"))
+        cheat_sheet = self.adventure / "60-session/dm-cheat-sheet.md"
+        self.assertTrue(cheat_sheet.is_file())
+        self.assertIn("| NPC | Immediate intent | Voice cue | Source |", cheat_sheet.read_text(encoding="utf-8"))
 
         trimmed_sections = {
             self.adventure / "30-locations/hafen/location.md": ("## DM notes",),
@@ -147,6 +150,43 @@ class AdventureValidationTests(unittest.TestCase):
 
     def test_missing_session_preflight_is_a_structural_error(self) -> None:
         (self.adventure / "00-input/session-preflight.md").unlink()
+
+        errors, _ = self.validate()
+
+        self.assertIn("[STRUCT_FILE]", "\n".join(errors))
+
+    def test_dm_cheat_sheet_structure_sources_and_readme_route_are_checked(self) -> None:
+        cheat_sheet = self.adventure / "60-session/dm-cheat-sheet.md"
+        content = cheat_sheet.read_text(encoding="utf-8")
+        content = content.replace("## Key NPCs\n", "")
+        content = content.replace(
+            "| NPC | Immediate intent | Voice cue | Source |",
+            "| NPC | Immediate intent | Source |",
+        )
+        content = content.replace("../50-indexes/npcs.md", "../50-indexes/objects.md")
+        cheat_sheet.write_text(content, encoding="utf-8")
+
+        readme = self.adventure / "README.md"
+        readme.write_text(
+            "\n".join(
+                line
+                for line in readme.read_text(encoding="utf-8").splitlines()
+                if "60-session/dm-cheat-sheet.md" not in line
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[DM_SHEET_SECTION]", rendered)
+        self.assertIn("[DM_SHEET_STRUCTURE]", rendered)
+        self.assertIn("[DM_SHEET_SOURCE_LINK]", rendered)
+        self.assertIn("[DM_SHEET_README_LINK]", rendered)
+
+    def test_missing_dm_cheat_sheet_is_a_structural_error(self) -> None:
+        (self.adventure / "60-session/dm-cheat-sheet.md").unlink()
 
         errors, _ = self.validate()
 

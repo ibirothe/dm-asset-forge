@@ -66,6 +66,8 @@ Ein `visual` ist sinnvoll, wenn Wiedererkennung, räumliche Orientierung, Zustan
 
 Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mitprüfen. `version` und `updated` nur bei tatsächlicher inhaltlicher Änderung aktualisieren. Indizes, Rückverweise und Change Log nach den Repository-Anweisungen pflegen.
 
+Ändert sich eine Aussage, die für die unmittelbare Tischführung verdichtet wurde, auch `60-session/dm-cheat-sheet.md` aktualisieren. Der Spickzettel enthält nur einen kurzen, handlungsrelevanten Kontext und einen relativen Link zur kanonischen Quelle. Insbesondere stammen NPC-Absicht und Voice Cue aus dem NPC, unabhängige Ersatzpfade aus den Information- und Plot-Assets sowie Mindestauflösung, sichere Kürzungen und Endzustände aus dem Plot.
+
 ## `world`
 
 **Einsatz:** Übergreifende Realität, Alltagslogik und Kräfte festlegen, die mehrere Orte oder Plot-Threads prägen. Einzelne Ortsdetails oder konkrete Geschehnisse gehören nicht hierher.
