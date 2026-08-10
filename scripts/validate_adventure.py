@@ -20,6 +20,7 @@ REQUIRED_DIRS = (
     "30-locations",
     "40-global",
     "50-indexes",
+    "60-session",
     "90-meta",
 )
 REQUIRED_FILES = (
@@ -40,6 +41,7 @@ REQUIRED_FILES = (
     "50-indexes/objects.md",
     "50-indexes/information.md",
     "50-indexes/open-threads.md",
+    "60-session/dm-cheat-sheet.md",
     "90-meta/decisions.md",
     "90-meta/assumptions.md",
     "90-meta/open-questions.md",
@@ -100,6 +102,26 @@ SESSION_PREFLIGHT_SECTIONS = frozenset(
         "Player releases",
         "Open blockers",
         "Ready for session",
+    }
+)
+DM_CHEAT_SHEET_SECTIONS = frozenset(
+    {
+        "Opening and pressure",
+        "Key locations",
+        "Key NPCs",
+        "Critical conclusions",
+        "Escalation",
+        "Safe cuts",
+        "Minimum resolution",
+        "Possible endings",
+    }
+)
+DM_CHEAT_SHEET_MARKERS = frozenset(
+    {
+        "| NPC | Immediate intent | Voice cue | Source |",
+        "| Conclusion | Independent paths | Fallback | Source |",
+        "| Cut | Trigger | Preserved resolution | Source |",
+        "| Ending state | Trigger | Consequence | Source |",
     }
 )
 VISUAL_GENERATION_STATUS = re.compile(
@@ -972,6 +994,66 @@ def validate_session_preflight(root: Path, errors: list[str]) -> None:
         )
 
 
+def validate_dm_cheat_sheet(root: Path, errors: list[str]) -> None:
+    path = root / "60-session" / "dm-cheat-sheet.md"
+    if not path.is_file():
+        return
+
+    rel = relative(path, root)
+    content = path.read_text(encoding="utf-8")
+    headings = frozenset(HEADING.findall(content))
+    for section in sorted(DM_CHEAT_SHEET_SECTIONS - headings):
+        errors.append(
+            diagnostic(
+                rel,
+                "DM_SHEET_SECTION",
+                f"missing required section '## {section}'.",
+                f"Restore '## {section}' from templates/adventure/60-session/dm-cheat-sheet.md.",
+            )
+        )
+
+    for marker in sorted(DM_CHEAT_SHEET_MARKERS):
+        if marker not in content:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "DM_SHEET_STRUCTURE",
+                    f"missing compact table header {marker!r}.",
+                    "Restore the table header from templates/adventure/60-session/dm-cheat-sheet.md.",
+                )
+            )
+
+    required_sources = (
+        root / "20-plot" / "overview.md",
+        root / "50-indexes" / "locations.md",
+        root / "50-indexes" / "npcs.md",
+        root / "50-indexes" / "information.md",
+        root / "50-indexes" / "open-threads.md",
+    )
+    linked = resolved_markdown_links(path)
+    for source in required_sources:
+        if source.resolve() not in linked:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "DM_SHEET_SOURCE_LINK",
+                    f"required canonical source is not linked: {relative(source, root)}.",
+                    "Add a relative link to the canonical Plot or matching index.",
+                )
+            )
+
+    readme = root / "README.md"
+    if path.resolve() not in resolved_markdown_links(readme):
+        errors.append(
+            diagnostic(
+                "README.md",
+                "DM_SHEET_README_LINK",
+                "Adventure overview does not link the DM cheat sheet.",
+                "Add a direct relative link to 60-session/dm-cheat-sheet.md.",
+            )
+        )
+
+
 def validate(root: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -1075,6 +1157,7 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
     validate_navigation_links(root, records, assets_by_id, errors)
     validate_indexes(root, records, errors)
     validate_session_preflight(root, errors)
+    validate_dm_cheat_sheet(root, errors)
 
     for asset_id, paths in sorted(ids.items()):
         if len(paths) > 1:
