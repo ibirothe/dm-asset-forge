@@ -1,71 +1,71 @@
-# Session run sheet
+# Session-Ablaufplan
 
-This is an operational timing and state-change view, not a required Scene order. Use optional times from the [Session preflight](../00-input/session-preflight.md), keep every state change derived from canonical Plot or Assets, and preserve multiple player approaches.
+Diese operative Ansicht steuert Zeit und Zustandswechsel, nicht die Reihenfolge verpflichtender Scenes. Verwende optionale Zeitangaben aus dem [Session-Preflight](../00-input/session-preflight.md), leite jeden Zustandswechsel aus kanonischem Plot oder Assets ab und erhalte mehrere Vorgehensweisen der Spieler.
 
-Companion runtime overview: [DM cheat sheet](dm-cheat-sheet.md).
-Necessary conclusion coverage: [Global clue matrix](../50-indexes/clue-matrix.md).
+Kompakte Tischübersicht: [DM-Spickzettel](dm-cheat-sheet.md).
+Abdeckung notwendiger Schlussfolgerungen: [Globale Hinweismatrix](../50-indexes/clue-matrix.md).
 
-## Session frame
+## Session-Rahmen
 
-- Planned start: [Session preflight — Schedule](../00-input/session-preflight.md#schedule)
-- Target end: open
-- Hard stop: [Session preflight — Schedule](../00-input/session-preflight.md#schedule)
-- Breaks: [Session preflight — Schedule](../00-input/session-preflight.md#schedule)
+- Geplanter Start: [Session-Preflight – Zeitplan](../00-input/session-preflight.md#zeitplan)
+- Zielende: open
+- Verbindliches Ende: [Session-Preflight – Zeitplan](../00-input/session-preflight.md#zeitplan)
+- Pausen: [Session-Preflight – Zeitplan](../00-input/session-preflight.md#zeitplan)
 
-## Opening options
+## Einstiegsoptionen
 
-| Entry state | Player-facing cue | Use when | Source |
+| Ausgangszustand | Spielerhinweis | Einsatz | Quelle |
 |---|---|---|---|
-| — | — | — | [Plot overview](../20-plot/overview.md#flexible-player-hooks) |
-| — | — | — | [Plot overview](../20-plot/overview.md#flexible-player-hooks) |
+| — | — | — | [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) |
+| — | — | — | [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) |
 
-## Flexible phases
+## Flexible Phasen
 
-| Phase or window | Desired state | Available transitions | Pressure if delayed | Source |
+| Phase oder Zeitfenster | Zielzustand | Verfügbare Übergänge | Druck bei Verzögerung | Quelle |
 |---|---|---|---|---|
-| Opening | Players can identify actionable pressure. | Any established approach. | Show the next visible pressure. | [Plot overview](../20-plot/overview.md) |
-| Development | Players can change the conflict state or information state. | Follow their chosen location, actor, or method. | Activate prepared escalation. | [Open threads](../50-indexes/open-threads.md) |
-| Resolution | The minimum resolution state is reachable. | Any established ending path. | Trigger the latest useful finale pressure. | [Plot overview](../20-plot/overview.md#possible-outcomes) |
+| Einstieg | Spieler können einen handlungsrelevanten Druck erkennen. | Jeder etablierte Ansatz. | Zeige den nächsten sichtbaren Druck. | [Plot-Übersicht](../20-plot/overview.md) |
+| Entwicklung | Spieler können den Konflikt- oder Informationszustand verändern. | Folge ihrem gewählten Ort, Akteur oder Vorgehen. | Aktiviere die vorbereitete Eskalation. | [Offene Plot-Threads](../50-indexes/open-threads.md) |
+| Auflösung | Der minimale Auflösungszustand ist erreichbar. | Jeder etablierte Weg zu einem Endzustand. | Löse den spätestmöglichen sinnvollen finalen Druck aus. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
 
-Rows describe movable state goals, not mandatory Scenes. Reorder, overlap, or skip them when player decisions change the situation.
+Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes. Ordne sie neu, lasse sie überlappen oder überspringe sie, wenn Spielerentscheidungen die Situation verändern.
 
-## Checkpoints
+## Kontrollpunkte
 
-| Checkpoint | Observe | If behind | If ahead | Source |
+| Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |
 |---|---|---|---|---|
-| open | Necessary information and changed states. | Use an independent fallback path or safe cut. | Allow optional depth without delaying resolution. | [Information index](../50-indexes/information.md) |
+| open | Notwendige Informationen und veränderte Zustände. | Nutze einen unabhängigen Auffangweg oder eine sichere Kürzung. | Erlaube optionale Vertiefung, ohne die Auflösung zu verzögern. | [Information-Index](../50-indexes/information.md) |
 
-## Late pressure
+## Später Druck
 
-| Trigger | Visible state change | Preserved choices | Source |
+| Auslöser | Sichtbarer Zustandswechsel | Erhaltene Entscheidungen | Quelle |
 |---|---|---|---|
-| open | — | At least two plausible responses remain. | [Open threads](../50-indexes/open-threads.md) |
+| open | — | Mindestens zwei plausible Reaktionen bleiben möglich. | [Offene Plot-Threads](../50-indexes/open-threads.md) |
 
-## Safe cuts
+## Sichere Kürzungen
 
-| Cut | Trigger | Must preserve | Impact | Source |
+| Kürzung | Auslöser | Muss erhalten | Auswirkung | Quelle |
 |---|---|---|---|---|
-| — | open | Minimum resolution and independent information paths. | — | [Plot overview](../20-plot/overview.md#one-shot-scope-and-pacing) |
+| — | open | Mindestauflösung und unabhängige Informationswege. | — | [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) |
 
-## Finale trigger
+## Finale-Auslöser
 
-- Latest useful trigger: open
-- Required state before trigger: [Plot overview](../20-plot/overview.md#one-shot-scope-and-pacing)
-- Visible pressure: [Open threads](../50-indexes/open-threads.md)
+- Spätestmöglicher sinnvoller Auslöser: open
+- Erforderlicher Zustand vor dem Auslöser: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
+- Sichtbarer Druck: [Offene Plot-Threads](../50-indexes/open-threads.md)
 
-## Resolution
+## Auflösung
 
-- Minimum resolution state: [Plot overview](../20-plot/overview.md#one-shot-scope-and-pacing)
-- Must-preserve information: [Information index](../50-indexes/information.md)
+- Minimaler Auflösungszustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
+- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md)
 
-| Ending state | Trigger | Consequence | Source |
+| Endzustand | Auslöser | Folge | Quelle |
 |---|---|---|---|
-| — | — | — | [Plot overview](../20-plot/overview.md#possible-outcomes) |
-| — | — | — | [Plot overview](../20-plot/overview.md#possible-outcomes) |
+| — | — | — | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
+| — | — | — | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
 
-## Live notes
+## Notizen während des Spiels
 
-- Current time: open
-- Active state: open
-- Next checkpoint: open
-- Notes: —
+- Aktuelle Zeit: open
+- Aktiver Zustand: open
+- Nächster Kontrollpunkt: open
+- Notizen: —
