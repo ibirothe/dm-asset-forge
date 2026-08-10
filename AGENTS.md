@@ -23,11 +23,12 @@ Read `docs/bild-workflow.md` before creating or revising a Visual brief or gener
 4. Treat `adventure/` as the single active adventure workspace. If it already exists, continue there and never initialize a second adventure in this repository.
 5. Store clarifications, assumptions, decisions, and open questions in their separate canonical files. Never present an unconfirmed assumption as an established fact.
 6. Before creating assets, record a compact one-shot premise in `adventure/20-plot/overview.md`: player-facing starting situation, central conflict, at least two broad forms of player influence, and the resolution boundary. Record target duration, content density, tone, themes, focus, and content boundaries in `adventure/00-input/constraints.md`; use `open` when the user did not specify them.
-7. Define qualitative pacing in `adventure/20-plot/overview.md`: distinguish `core`, `supporting`, and `optional` content in prose; preserve a minimum resolution state; name at least one safe cut and a prepared `late pressure` state change. Give every active Plot Thread its own minimum resolution state, must-preserve information, and safe cuts.
-8. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 15 catalog types. Do not copy asset templates manually.
-9. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
-10. Turn `adventure/README.md` into the concise table guide and add a short table-use context to every row in the six existing indexes. Link central actors, necessary information, and resolution-relevant assets directly instead of copying their canonical descriptions.
-11. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
+7. Record session logistics and readiness in `adventure/00-input/session-preflight.md`. Preserve missing answers as `open`; link target duration and content boundaries from `constraints.md` instead of duplicating them.
+8. Define qualitative pacing in `adventure/20-plot/overview.md`: distinguish `core`, `supporting`, and `optional` content in prose; preserve a minimum resolution state; name at least one safe cut and a prepared `late pressure` state change. Give every active Plot Thread its own minimum resolution state, must-preserve information, and safe cuts.
+9. Create only the locations and assets required for the complete one-shot. Use `scripts/new_asset.py`; it supports all 15 catalog types. Do not copy asset templates manually.
+10. Give necessary conclusions independent discovery paths and central situations playable consequences for failure, retreat, or neglect.
+11. Turn `adventure/README.md` into the concise table guide and add a short table-use context to every row in the six existing indexes. Link central actors, necessary information, and resolution-relevant assets directly instead of copying their canonical descriptions.
+12. Do not generate images during initialization. Do not create a Player Character's `player.md` during initialization without explicit approval for the exact release draft.
 
 ## Read before editing
 

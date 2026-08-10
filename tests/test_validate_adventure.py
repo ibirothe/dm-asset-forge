@@ -102,6 +102,9 @@ class AdventureValidationTests(unittest.TestCase):
 
         self.assertEqual(errors, [])
         self.assertEqual(warnings, [])
+        preflight = self.adventure / "00-input/session-preflight.md"
+        self.assertTrue(preflight.is_file())
+        self.assertIn("- Preflight status: open", preflight.read_text(encoding="utf-8"))
 
         trimmed_sections = {
             self.adventure / "30-locations/hafen/location.md": ("## DM notes",),
@@ -126,6 +129,28 @@ class AdventureValidationTests(unittest.TestCase):
         )
         self.assertIn("player-character", VALIDATOR.RELATION_RULES["owner"][1])
         self.assertIn("player-character", VALIDATOR.RELATION_RULES["known_by"][1])
+
+    def test_session_preflight_structure_status_and_constraints_link_are_checked(self) -> None:
+        preflight = self.adventure / "00-input/session-preflight.md"
+        content = preflight.read_text(encoding="utf-8")
+        content = content.replace("## Schedule\n", "")
+        content = content.replace("- Preflight status: open", "- Preflight status: pending")
+        content = content.replace("(constraints.md", "(clarifications.md")
+        preflight.write_text(content, encoding="utf-8")
+
+        errors, _ = self.validate()
+        rendered = "\n".join(errors)
+
+        self.assertIn("[PREFLIGHT_SECTION]", rendered)
+        self.assertIn("[PREFLIGHT_STATUS]", rendered)
+        self.assertIn("[PREFLIGHT_CONSTRAINTS_LINK]", rendered)
+
+    def test_missing_session_preflight_is_a_structural_error(self) -> None:
+        (self.adventure / "00-input/session-preflight.md").unlink()
+
+        errors, _ = self.validate()
+
+        self.assertIn("[STRUCT_FILE]", "\n".join(errors))
 
     def test_player_character_is_global_indexed_and_can_own_a_visual(self) -> None:
         character = self.adventure / "40-global/player-characters/ira/player-character.md"

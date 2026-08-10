@@ -12,6 +12,8 @@ Ein Repository enthält genau einen abgeschlossenen One-Shot. Existiert `adventu
 
 Für den Start genügen eine freie Weltbeschreibung und eine grobe Plot- oder Konfliktidee. Titel, Spielerrolle, gewünschte Spieldauer, Inhaltsdichte, genaue Stimmung und Inhaltsgrenzen sind optional. Codex übernimmt vorhandene Angaben und dokumentiert fehlende Präferenzen ausdrücklich als `open`, statt sie zu erfinden. Es fragt vor dem Erstlauf nur nach, wenn fehlende oder widersprüchliche Angaben den ersten kohärenten Stand wesentlich verändern würden.
 
+Zusätzlich entsteht `adventure/00-input/session-preflight.md`. Dort stehen organisatorische Angaben zu Gruppe, Regelbasis, Start und Hard Stop, Pausen, Safety-Werkzeugen, Barrierefreiheit, Spielmodus, Technik, Materialien, Spielerfreigaben und offenen Blockern. Fehlende Angaben bleiben `open`. Zielspielzeit und Inhaltsgrenzen werden weiterhin ausschließlich in `constraints.md` gepflegt und im Preflight nur verlinkt.
+
 Vor der Asset-Erzeugung fasst Codex die spielbare One-Shot-Prämisse zusammen: player-facing Ausgangslage, zentraler Konflikt, mindestens zwei grundsätzlich unterschiedliche Formen der Spieler-Einflussnahme und der innerhalb des One-Shots erforderliche Abschlussrahmen. Diese Angaben werden in den bestehenden Input-, Plot- und Meta-Dateien geführt; es entsteht keine zusätzliche Kanonquelle.
 
 Der vollständige Ablauf und seine Definition of Done stehen in [Geführter Welt- und Plot-Intake](intake-workflow.md).
@@ -25,6 +27,8 @@ Der [Leitfaden für Spielerentscheidungen und Abenteuerstruktur](adventure-struc
 Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target duration` und `Content density` in `00-input/constraints.md`; fehlende Angaben bleiben `open`. Für die Vorbereitung unterscheidet Codex Inhalte redaktionell als `core`, `supporting` oder `optional`. Der Plot nennt einen minimalen Auflösungszustand, mindestens eine sichere Kürzung und einen vorbereiteten `late pressure`-Zustandswechsel. Diese Angaben helfen beim Verdichten, bilden aber weder einen Zeitplan noch eine feste Szenenfolge.
 
 ## Vorbereitung und Tischgebrauch
+
+Prüfe vor der Detailausarbeitung und erneut kurz vor dem Spiel `adventure/00-input/session-preflight.md`. Setze den Status auf `blocked`, wenn eine offene Angabe die Durchführung verhindert, und erst auf `ready`, wenn Gruppe, Zeitplan, Safety, Zugänglichkeit, Technik, Materialien und vorgesehene Spielerfreigaben bestätigt sind. Ein `open`-Wert ist sichtbar unentschieden und wird nicht automatisch als Zustimmung oder Bereitschaft behandelt.
 
 Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei.
 
@@ -152,6 +156,8 @@ Bilddateien werden als PNG gespeichert. Ein Visual-Ordner enthält das kanonisch
 Ein Bildbriefing kann bereits erstellt werden, ohne das Bild zu generieren. Bitte Codex vor einer Erzeugung um das vollständige Briefing und gib die konkrete Visual-Version sowie den Zielpfad ausdrücklich frei. Das gilt erneut, wenn eine vorhandene PNG-Datei ersetzt werden soll. Nach einer Briefing-Änderung bleibt das ältere PNG erhalten, wird aber als `stale` geführt. Codex darf erst dann behaupten, dass ein aktuelles Bild vorhanden ist, wenn die PNG-Datei tatsächlich gespeichert wurde. Details stehen im [Bild-Workflow](bild-workflow.md).
 
 ## Vor dem Spielen
+
+Schließe zuerst den Session-Preflight ab. Prüfe insbesondere Hard Stop und Pausen, Safety-Werkzeuge, Barrierefreiheit, technische Voraussetzungen, benötigte Materialien sowie den aktuellen Freigabestatus aller vorgesehenen Player Characters, Handouts und player-facing Visuals. Verbleibende Blocker müssen gelöst oder bewusst akzeptiert sein; erst dann ist `Preflight status: ready` korrekt.
 
 Beauftrage Codex mit einer Konsistenzprüfung des vollständigen One-Shots. Der technische Validator und der fachliche Audit werden getrennt berichtet. Der [Fachliche Audit-Leitfaden](adventure-audit-guide.md) verlangt für jedes Finding Begründung, betroffene Dateien, Auswirkung und kleinste sinnvolle Korrekturrichtung. Ohne ausdrücklichen Fix-Auftrag verändert Codex keine Inhalte.
 

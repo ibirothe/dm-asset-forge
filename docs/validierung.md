@@ -23,6 +23,7 @@ Exit-Code `0` bedeutet: keine blockierenden Fehler. Exit-Code `1` bedeutet: mind
 | Bereich | Prüfung |
 |---|---|
 | Struktur | Pflichtordner und Pflichtdateien des Abenteuer-Scaffolds |
+| Session-Preflight | Pflichtabschnitte, Status `open`, `blocked` oder `ready` und Verweis auf die kanonischen Constraints |
 | Frontmatter | gemeinsame Pflichtfelder, unbekannte Schlüssel, Listenformat, leere Strings, Versionen und ISO-Daten |
 | Typen | alle 15 Katalogtypen, ID-Präfix, Scope, typspezifische Schlüssel und Pflichtfelder |
 | Werte | `status`, `truth_status`, `provenance` und alle regelneutralen qualitativen Skalen |
@@ -54,7 +55,7 @@ ERROR: 30-locations/hafen/npcs/mara/npc.md [FM_ENUM]: invalid 'reach' value 'gal
 
 - `ERROR` kennzeichnet eine verletzte Struktur-, Schema-, Pfad- oder Integritätsregel und blockiert den erfolgreichen Abschluss.
 - `WARNING` kennzeichnet einen prüfbedürftigen Fund, der nicht zweifelsfrei falsch ist. Systemspezifische Begriffe sind Warnungen, weil sie auch in Zitaten oder bewussten Erläuterungen vorkommen können.
-- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED`, `VISUAL_PNG_STATE`, `VISUAL_APPROVED_VERSION`, `PNG_ORPHAN` oder `LINK_BROKEN`.
+- `RULE_CODE` bezeichnet die stabile technische Regel, etwa `FM_UNKNOWN_KEY`, `ASSET_PATH`, `REL_TARGET_TYPE`, `REL_LINK_MISSING`, `BACKLINK_MISSING`, `INDEX_MISSING`, `INDEX_DUPLICATE`, `INDEX_STALE`, `SECTION_REQUIRED`, `PREFLIGHT_SECTION`, `PREFLIGHT_STATUS`, `PREFLIGHT_CONSTRAINTS_LINK`, `VISUAL_PNG_STATE`, `VISUAL_APPROVED_VERSION`, `PNG_ORPHAN` oder `LINK_BROKEN`.
 - `Fix` nennt die kleinste typische Korrektur. Vor einer Änderung bleibt der fachliche Kontext zu prüfen.
 
 ## Grenzen

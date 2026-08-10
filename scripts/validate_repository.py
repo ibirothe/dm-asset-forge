@@ -329,6 +329,25 @@ def main() -> int:
     if not (ROOT / "templates" / "player-character-player.md").is_file():
         errors.append("missing Player Character player template: templates/player-character-player.md")
 
+    session_preflight = ROOT / "templates" / "adventure" / "00-input" / "session-preflight.md"
+    required_preflight_sections = (
+        "## Group and rules",
+        "## Schedule",
+        "## Safety and accessibility",
+        "## Table and technology",
+        "## Materials",
+        "## Player releases",
+        "## Open blockers",
+        "## Ready for session",
+    )
+    if not session_preflight.is_file():
+        errors.append("missing session preflight template: templates/adventure/00-input/session-preflight.md")
+    else:
+        preflight_content = session_preflight.read_text(encoding="utf-8")
+        for section in required_preflight_sections:
+            if section not in preflight_content:
+                errors.append(f"session preflight template is missing section: {section}")
+
     create_asset_skill = SKILLS / "dm-create-asset" / "SKILL.md"
     if (
         create_asset_skill.is_file()

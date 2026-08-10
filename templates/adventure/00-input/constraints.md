@@ -22,4 +22,6 @@ Source: [Original request](original-request.md) and [Clarifications](clarificati
 - Keine systemspezifischen Werte oder Mechaniken.
 - Herausforderungen über Situation, Risiko, Ansatzpunkte und Konsequenzen beschreiben.
 
+Session logistics, materials, Safety tools, and table readiness are tracked in [Session preflight](session-preflight.md). Keep target duration and content boundaries canonical in this file and reference them from the preflight.
+
 Nur ausdrücklich genannte Vorgaben als bestätigt führen. `open` bezeichnet eine fehlende Nutzerpräferenz und ist weder Annahme noch Erlaubnis, sie automatisch festzulegen.
