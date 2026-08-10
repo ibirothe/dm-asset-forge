@@ -2,6 +2,8 @@
 
 This is a compact, derived table view. Keep every entry to one short action-relevant sentence and link its canonical Plot or Asset source. Never establish new canon here.
 
+Operational timing and state changes: [Session run sheet](run-sheet.md).
+
 ## Opening and pressure
 
 - Starting situation: [Plot overview](../20-plot/overview.md#player-facing-starting-situation) — not yet summarized.
