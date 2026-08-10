@@ -40,6 +40,7 @@ REQUIRED_FILES = (
     "50-indexes/player-characters.md",
     "50-indexes/objects.md",
     "50-indexes/information.md",
+    "50-indexes/clue-matrix.md",
     "50-indexes/open-threads.md",
     "60-session/dm-cheat-sheet.md",
     "60-session/run-sheet.md",
@@ -69,6 +70,7 @@ FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 KEY_VALUE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*)$")
 HEADING = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
 LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
+NAMED_LINK = re.compile(r"(?<!!)\[([^\]]+)\]\(([^)]+)\)")
 IMAGE_LINK = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
 HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
@@ -148,6 +150,13 @@ SESSION_RUN_SHEET_MARKERS = frozenset(
         "| Ending state | Trigger | Consequence | Source |",
     }
 )
+CLUE_MATRIX_HEADER = (
+    "| Conclusion key | Requirement | Information asset | Presentation clue | "
+    "Source and discovery location | Access method | Independence group | "
+    "Preconditions | Fail-forward | Consequence when learned, late, or missed | "
+    "Plot threads |"
+)
+CLUE_REQUIREMENTS = frozenset({"necessary", "optional", "open"})
 VISUAL_GENERATION_STATUS = re.compile(
     r"^- Status:\s*(not-approved|approved)\s*$", re.MULTILINE
 )
@@ -975,7 +984,346 @@ def validate_indexes(
                             f"index values for {expected[0]!r} are stale: expected {expected}, got {actual}.",
                             "Refresh the row from the canonical asset metadata without copying descriptive content.",
                         )
+                        )
+
+
+def validate_clue_matrix(
+    root: Path,
+    records: list[AssetRecord],
+    assets_by_id: dict[str, AssetRecord],
+    errors: list[str],
+) -> None:
+    path = root / "50-indexes" / "clue-matrix.md"
+    if not path.is_file():
+        return
+
+    rel = relative(path, root)
+    content = path.read_text(encoding="utf-8")
+    if "## Conclusion paths" not in content or CLUE_MATRIX_HEADER not in content:
+        errors.append(
+            diagnostic(
+                rel,
+                "CLUE_MATRIX_STRUCTURE",
+                "required conclusion-path section or table header is missing.",
+                "Restore the section and table header from templates/adventure/50-indexes/clue-matrix.md.",
+            )
+        )
+
+    records_by_path = {record.path.resolve(): record for record in records}
+    information_records = {
+        scalar(record.metadata.get("id", "")): record
+        for record in records
+        if record.asset_type == "information"
+    }
+    linked_information: set[str] = set()
+    linked_locations: defaultdict[str, set[str]] = defaultdict(set)
+    linked_threads: defaultdict[str, set[str]] = defaultdict(set)
+    requirements: defaultdict[str, set[str]] = defaultdict(set)
+    independence_groups: defaultdict[str, set[str]] = defaultdict(set)
+    path_signatures: defaultdict[str, set[tuple[tuple[str, ...], str]]] = defaultdict(set)
+
+    def linked_records(cell: str, row_key: str, role: str) -> list[AssetRecord]:
+        result: list[AssetRecord] = []
+        for label, raw_target in NAMED_LINK.findall(cell):
+            target = resolve_link(path, raw_target)
+            if target is None:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_LINK",
+                        f"row {row_key!r} uses a non-relative {role} link.",
+                        "Use a relative link to one canonical adventure asset.",
                     )
+                )
+                continue
+            record = records_by_path.get(target.resolve())
+            if record is None:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_TARGET",
+                        f"row {row_key!r} {role} link does not target a canonical asset.",
+                        "Link the stable ID to its canonical asset file.",
+                    )
+                )
+                continue
+            target_id = scalar(record.metadata.get("id", ""))
+            if label != target_id:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_ID",
+                        f"row {row_key!r} labels {role} target {target_id!r} as {label!r}.",
+                        f"Use the stable ID {target_id!r} as the Markdown link text.",
+                    )
+                )
+            result.append(record)
+        return result
+
+    for line in content.splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if not cells or cells[0] == "Conclusion key" or set(cells[0]) <= {"-", ":"}:
+            continue
+        row_key = cells[0] or "<empty>"
+        if len(cells) != 11:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_STRUCTURE",
+                    f"row {row_key!r} has {len(cells)} cells; expected 11.",
+                    "Restore all clue-matrix columns and escape prose that contains a table separator.",
+                )
+            )
+            continue
+        if not SLUG_PATTERN.fullmatch(cells[0]):
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_KEY",
+                    f"invalid conclusion key {cells[0]!r}.",
+                    "Use one stable lowercase ASCII kebab-case key for all paths to the same conclusion.",
+                )
+            )
+        requirement = cells[1]
+        if requirement not in CLUE_REQUIREMENTS:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_REQUIREMENT",
+                    f"row {row_key!r} has invalid requirement {requirement!r}.",
+                    "Use necessary, optional, or open.",
+                )
+            )
+        requirements[row_key].add(requirement)
+
+        information_links = NAMED_LINK.findall(cells[2])
+        information_targets = linked_records(cells[2], row_key, "information")
+        information: AssetRecord | None = None
+        if len(information_links) != 1 or len(information_targets) != 1:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_INFORMATION",
+                    f"row {row_key!r} must contain exactly one valid Information-asset link.",
+                    "Link one stable info-* ID to its canonical information.md file.",
+                )
+            )
+        elif information_targets[0].asset_type != "information":
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_INFORMATION",
+                    f"row {row_key!r} targets type {information_targets[0].asset_type!r} instead of information.",
+                    "Link one canonical Information asset.",
+                )
+            )
+        else:
+            information = information_targets[0]
+            linked_information.add(scalar(information.metadata.get("id", "")))
+
+        source_links = NAMED_LINK.findall(cells[4])
+        source_targets = linked_records(cells[4], row_key, "source")
+        if not source_links or len(source_targets) != len(source_links):
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_SOURCE",
+                    f"row {row_key!r} must link every source and discovery location to canonical assets.",
+                    "Add relative stable-ID links, including the applicable loc-* discovery location.",
+                )
+            )
+        source_ids = tuple(
+            sorted(scalar(record.metadata.get("id", "")) for record in source_targets)
+        )
+        location_ids = {
+            scalar(record.metadata.get("id", ""))
+            for record in source_targets
+            if record.asset_type == "location"
+        }
+        if not location_ids:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_SOURCE",
+                    f"row {row_key!r} has no linked discovery location.",
+                    "Link at least one canonical loc-* discovery location in the source cell.",
+                )
+            )
+
+        thread_links = NAMED_LINK.findall(cells[10])
+        thread_targets = linked_records(cells[10], row_key, "plot-thread")
+        if thread_links and len(thread_targets) != len(thread_links):
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_THREAD",
+                    f"row {row_key!r} contains an invalid Plot-Thread link.",
+                    "Link every plot-* ID to its canonical plot-thread.md file.",
+                )
+            )
+        for thread in thread_targets:
+            if thread.asset_type != "plot-thread":
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_THREAD",
+                        f"row {row_key!r} links type {thread.asset_type!r} as a Plot Thread.",
+                        "Use only canonical plot-thread assets in the final column.",
+                    )
+                )
+
+        if information is not None:
+            information_id = scalar(information.metadata.get("id", ""))
+            linked_locations[information_id].update(location_ids)
+            valid_threads = {
+                scalar(thread.metadata.get("id", ""))
+                for thread in thread_targets
+                if thread.asset_type == "plot-thread"
+            }
+            linked_threads[information_id].update(valid_threads)
+            expected_locations = set(
+                parse_list(information.metadata.get("discovery_locations", "[]")) or []
+            )
+            primary_location = scalar(information.metadata.get("primary_location", ""))
+            if primary_location:
+                expected_locations.add(primary_location)
+            unexpected_locations = location_ids - expected_locations
+            if unexpected_locations:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_LOCATION_RELATION",
+                        f"row {row_key!r} links discovery locations not declared by {information_id!r}: {sorted(unexpected_locations)}.",
+                        "Update the canonical Information discovery_locations relation or correct the matrix link.",
+                    )
+                )
+            expected_threads = set(
+                parse_list(information.metadata.get("related_threads", "[]")) or []
+            )
+            unexpected_threads = valid_threads - expected_threads
+            if unexpected_threads:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_THREAD_RELATION",
+                        f"row {row_key!r} links Plot Threads not declared by {information_id!r}: {sorted(unexpected_threads)}.",
+                        "Update the canonical Information related_threads relation or correct the matrix link.",
+                    )
+                )
+
+        if requirement == "necessary":
+            required_cells = {
+                "Presentation clue": cells[3],
+                "Access method": cells[5],
+                "Independence group": cells[6],
+                "Fail-forward": cells[8],
+                "Consequence": cells[9],
+            }
+            missing = [
+                name
+                for name, value in required_cells.items()
+                if value.strip().lower() in {"", "—", "open"}
+            ]
+            if missing:
+                errors.append(
+                    diagnostic(
+                        rel,
+                        "CLUE_MATRIX_REQUIRED_FIELD",
+                        f"necessary row {row_key!r} has no concrete value for: {', '.join(missing)}.",
+                        "Describe the presentable clue, access, independence, fail-forward, and consequences.",
+                    )
+                )
+            group = cells[6].strip().lower()
+            access = cells[5].strip().lower()
+            if group not in {"", "—", "open"}:
+                independence_groups[row_key].add(group)
+            if source_ids and access not in {"", "—", "open"}:
+                path_signatures[row_key].add((source_ids, access))
+
+    for key, values in requirements.items():
+        if len(values) > 1:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_REQUIREMENT",
+                    f"conclusion {key!r} uses inconsistent requirements: {sorted(values)}.",
+                    "Use the same requirement on every path for one conclusion key.",
+                )
+            )
+        if "necessary" in values and (
+            len(independence_groups[key]) < 2 or len(path_signatures[key]) < 2
+        ):
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_INDEPENDENCE",
+                    f"necessary conclusion {key!r} lacks two independent groups with distinct source/access paths.",
+                    "Add a second concretely presentable path with a different independence group and source or access method.",
+                )
+            )
+
+    for information_id, information in information_records.items():
+        if scalar(information.metadata.get("status", "")) == "retired":
+            continue
+        if information_id not in linked_information:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_MISSING_INFO",
+                    f"Information asset {information_id!r} is not represented.",
+                    f"Add at least one row linking to {relative(information.path, root)}.",
+                )
+            )
+            continue
+        expected_locations = set(
+            parse_list(information.metadata.get("discovery_locations", "[]")) or []
+        )
+        primary_location = scalar(information.metadata.get("primary_location", ""))
+        if primary_location:
+            expected_locations.add(primary_location)
+        missing_locations = expected_locations - linked_locations[information_id]
+        if missing_locations:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_LOCATION_COVERAGE",
+                    f"Information asset {information_id!r} is missing discovery-location links: {sorted(missing_locations)}.",
+                    "Add rows or source-cell links for every canonical discovery location.",
+                )
+            )
+        expected_threads = set(
+            parse_list(information.metadata.get("related_threads", "[]")) or []
+        )
+        missing_threads = expected_threads - linked_threads[information_id]
+        if missing_threads:
+            errors.append(
+                diagnostic(
+                    rel,
+                    "CLUE_MATRIX_THREAD_COVERAGE",
+                    f"Information asset {information_id!r} is missing related Plot-Thread links: {sorted(missing_threads)}.",
+                    "Link every canonical related_threads target in at least one matrix row.",
+                )
+            )
+
+    for route, rule, message, hint in (
+        (
+            root / "README.md",
+            "CLUE_MATRIX_README_LINK",
+            "Adventure overview does not link the global clue matrix.",
+            "Add a direct relative link to 50-indexes/clue-matrix.md.",
+        ),
+        (
+            root / "50-indexes" / "information.md",
+            "CLUE_MATRIX_INDEX_LINK",
+            "Information index does not link the global clue matrix.",
+            "Add a relative companion link to clue-matrix.md.",
+        ),
+    ):
+        if route.is_file() and path.resolve() not in resolved_markdown_links(route):
+            errors.append(diagnostic(relative(route, root), rule, message, hint))
 
 
 def validate_session_preflight(root: Path, errors: list[str]) -> None:
@@ -1251,6 +1599,7 @@ def validate(root: Path) -> tuple[list[str], list[str]]:
     validate_relations(root, records, assets_by_id, errors)
     validate_navigation_links(root, records, assets_by_id, errors)
     validate_indexes(root, records, errors)
+    validate_clue_matrix(root, records, assets_by_id, errors)
     validate_session_preflight(root, errors)
     validate_dm_cheat_sheet(root, errors)
     validate_session_run_sheet(root, errors)
