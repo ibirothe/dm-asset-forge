@@ -155,6 +155,26 @@ def main() -> int:
     intake_spec = ROOT / "docs" / "intake-workflow.md"
     if not intake_spec.is_file():
         errors.append("missing intake workflow: docs/intake-workflow.md")
+    else:
+        intake_content = intake_spec.read_text(encoding="utf-8")
+        for unsupported_path in (
+            "10-world/themes.md",
+            "10-world/timeline.md",
+        ):
+            if unsupported_path in intake_content:
+                errors.append(
+                    "intake workflow requires a file absent from the adventure scaffold: "
+                    f"{unsupported_path}"
+                )
+        for canonical_target in (
+            "00-input/constraints.md",
+            "scripts/new_asset.py --type event",
+        ):
+            if canonical_target not in intake_content:
+                errors.append(
+                    "intake workflow does not name the minimal canonical target: "
+                    f"{canonical_target}"
+                )
 
     validation_spec = ROOT / "docs" / "validierung.md"
     if not validation_spec.is_file():
