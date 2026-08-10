@@ -30,6 +30,8 @@ Die gewünschte ungefähre Spielzeit und Inhaltsdichte stehen als `Target durati
 
 Prüfe vor der Detailausarbeitung und erneut kurz vor dem Spiel `adventure/00-input/session-preflight.md`. Setze den Status auf `blocked`, wenn eine offene Angabe die Durchführung verhindert, und erst auf `ready`, wenn Gruppe, Zeitplan, Safety, Zugänglichkeit, Technik, Materialien und vorgesehene Spielerfreigaben bestätigt sind. Ein `open`-Wert ist sichtbar unentschieden und wird nicht automatisch als Zustimmung oder Bereitschaft behandelt.
 
+Nutze danach `adventure/60-session/readiness-report.md` als einzigen kompakten Gesamtstand. Trage dort nur das Ergebnis des Preflights, der letzten technischen Validierung und des letzten fachlichen Audits mit Datum ein, verlinke verbleibende Blocker und nenne genau eine nächste Aktion. `ready` ist nur zulässig, wenn der Preflight `ready`, die Validierung `passed`, der Audit `clear` und der Blockerstatus `none` sind; der Bericht ersetzt keine seiner Quellen.
+
 Beginne in `adventure/README.md`. Die dortige Tischübersicht fasst Ausgangslage, Konflikt, Druck, zentrale Akteure, notwendige Informationen, mögliche Abschlüsse, Folgezustände und den Verweis auf Pacing und sichere Kürzungen knapp zusammen. Zentrale Assets sind direkt verlinkt. Für weitere Locations, NPCs, Player Characters, Objects, Informationen und aktive Plot-Threads führt die Übersicht in genau den passenden Index und von dort in die kanonische Datei. Die globale Clue Matrix zeigt zusätzlich alle Entdeckungspfade je Schlussfolgerung; Aussage und Wahrheitsstatus werden weiterhin im verlinkten Information-Asset nachgelesen.
 
 Während des Spiels verwende `adventure/60-session/dm-cheat-sheet.md` für Inhalte, `adventure/60-session/run-sheet.md` für Zeit- und Zustandssteuerung und `adventure/50-indexes/clue-matrix.md`, wenn ein Hinweis verpasst wird oder ein alternativer Zugang gebraucht wird. Der Spickzettel verdichtet Einstieg, aktuellen Druck, zentrale Orte, NPC-Absichten und Voice Cues, kritische Schlussfolgerungen und Ersatzpfade, Eskalation, sichere Kürzungen, Mindestauflösung und mögliche Endzustände. Das Run Sheet ergänzt optionale Start-, Ziel- und Hard-Stop-Angaben aus dem Preflight, mehrere Opening-Optionen, flexible Phasen, Checkpoints, `late pressure`, Kürzungstrigger, Finale-Trigger und Live-Notizen.
@@ -47,6 +49,8 @@ Ein geeigneter Prüfauftrag ist:
 > Aktualisiere die globale Clue Matrix aus den kanonischen Information-Assets und ihren Fundorten. Verwende eine Zeile pro konkret präsentierbarem Pfad, stabile ID-Links und für notwendige Schlussfolgerungen mindestens zwei echte Unabhängigkeitsgruppen. Kopiere weder Aussage noch Wahrheitsstatus.
 
 > Erstelle oder aktualisiere das Session Run Sheet aus Preflight, Plot und Spickzettel. Verwende flexible Zustandsphasen statt einer Scene-Reihenfolge und stelle sicher, dass Checkpoints, Druck und Kürzungen mehrere Spielerreaktionen, unabhängige Informationswege und die Mindestauflösung erhalten.
+
+> Aktualisiere den Session-Bereitschaftsbericht aus den tatsächlich ausgeführten Prüfungen. Übernimm nur Status, Datum, Quellenlinks, verbleibende Blocker und genau eine nächste Aktion; dupliziere keine Findings oder Logistik.
 
 ## Sinnvolle Folgeaufträge
 
