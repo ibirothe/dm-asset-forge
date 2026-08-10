@@ -208,6 +208,8 @@ Bei einer inhaltlichen Änderung die betroffenen Beziehungen und Konsequenzen mi
 
 **Am Spieltisch:** Aussage, Fundorte, konkrete Präsentationshinweise, bekannte Träger und Konsequenz müssen schnell auffindbar sein.
 
+Nach Erstellung oder Änderung wird die abgeleitete Zeile in `50-indexes/clue-matrix.md` gepflegt. Jeder konkrete Pfad verlinkt das Information-Asset, seine Quelle, den Fundort und zugehörige Plot-Threads über stabile IDs. Notwendige Schlussfolgerungen erhalten mindestens zwei Zeilen mit unterschiedlichen Unabhängigkeitsgruppen und Quellen oder Zugangsweisen; Aussage und `truth_status` werden nicht in die Matrix kopiert.
+
 **Sichtbarkeit und Visual:** Die Information wird erst durch einen beschriebenen Entdeckungspunkt spielersichtbar; Wahrheitsstatus und Grenzen bleiben DM-Wissen. Ein eigenes Visual ist selten nötig, kann aber über Handout oder Subject-Visual vermittelt werden.
 
 **Anti-Patterns:** Vage Themen statt konkreter Aussage; genau ein fragiler Fundweg; Hinweis und Schlussfolgerung verwechseln; keine Folge bei Verpassen; Gerücht als bestätigte Wahrheit schreiben.
