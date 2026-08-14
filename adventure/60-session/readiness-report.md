@@ -15,7 +15,7 @@ Dieser knappe, abgeleitete Bericht hält nur Prüfergebnisse und Links auf Quell
 ## Verbleibende Blocker
 
 - Blockerstatus: open
-- Details: [Preflight-Blocker](../00-input/session-preflight.md#offene-blocker); die bisherigen Orts- und Mondphasenfragen sind in [Open Questions](../90-meta/open-questions.md) beantwortet.
+- Details: [Preflight-Blocker](../00-input/session-preflight.md#offene-blocker); die Mondphasenfrage ist in [Open Questions](../90-meta/open-questions.md) beantwortet.
 
 ## Nächste Aktion
 

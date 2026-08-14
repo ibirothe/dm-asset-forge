@@ -3,7 +3,7 @@ id: npc-nele-kerzenzieh
 type: npc
 title: "Nele Kerzenzieh"
 status: ready
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -65,7 +65,7 @@ Beobachtungen über Kerzenkäufe, nächtliche Aufbrüche, Gebete, Fluchzeichen u
 ### Established facts
 
 - Kann bestätigen, dass einige Verschwundene vor ihrem Aufbruch Licht, Schnur oder einfache Vorräte besorgten.
-- Weiß, dass Dornfels selbst die betroffene Gemeinschaft ist, nicht ein separates Dorf.
+- Kann bestätigen, dass die Angst auf dem Markt aus realen Verlusten in Dornfels entsteht.
 
 ### Rumors
 

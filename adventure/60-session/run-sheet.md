@@ -27,15 +27,15 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 
 | Ausgangszustand | Spielerhinweis | Einsatz | Quelle |
 |---|---|---|---|
-| Marktplatz von Dornfels | Aushang, Belohnung, Gerüchte und Einkaufsmöglichkeiten. | Schneller öffentlicher Start mit Vorbereitung. | [Dornfels](../30-locations/dornfels/location.md) |
-| Dornfelser Trauer- oder Marktzeugnis | Mira, Marktzeugen, Bettler oder Stadtwache zeigen Angst, fehlende Personen und Fluchdeutung. | Sozialer Start mit unmittelbarem Druck ohne separate Dorf-Location. | [Dornfels](../30-locations/dornfels/location.md) |
+| Marktplatz von Dornfels | Aushang, Belohnung, Gerüchte und Einkaufsmöglichkeiten. | Schneller öffentlicher Start mit Vorbereitung. | [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) |
+| Dornfelser Trauer- oder Marktzeugnis | Mira, Marktzeugen, Bettler oder Stadtwache zeigen Angst, fehlende Personen und Fluchdeutung. | Sozialer Start mit unmittelbarem Druck. | [Dornfels](../30-locations/dornfels/location.md) |
 | Zugänge zum Wachturm | Pilgerstraße oder Kanal mit sichtbaren Spuren. | Direkter, druckvoller Start. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 
 ## Flexible Phasen
 
 | Phase oder Zeitfenster | Zielzustand | Verfügbare Übergänge | Druck bei Verzögerung | Quelle |
 |---|---|---|---|---|
-| Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Krämer, Schmied, Bibliothek, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter oder Zeugen werden vorsichtiger. | [Dornfels](../30-locations/dornfels/location.md) |
+| Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Marktszene, Krämer, Schmied, Bibliothek, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter oder Zeugen werden vorsichtiger. | [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) |
 | Akt 2 / Route | Gruppe entscheidet über Wald/Pilgerstraße oder Kanal und erhält Wächterspuren. | Schleichen, Kampf, Verhandlung, Magie, Karte oder Kanalumweg. | Nutze den kleinen Kampf oder eine Spur als Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Akt 3 / Turm | Gruppe kann Glocke, Seil, Wächter und Gefallene beeinflussen. | Turmebenen nach Spielerfokus öffnen oder bündeln. | Baronischer Bergungsimpuls oder Turmreaktion. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 | Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Entlarvung, Beschwichtigung, Endkampf, Opfer oder bewusst offener Rest. | Letzten Bergungsdruck sichtbar machen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |

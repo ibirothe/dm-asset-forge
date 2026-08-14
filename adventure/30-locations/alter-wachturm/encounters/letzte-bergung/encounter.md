@@ -3,7 +3,7 @@ id: enc-letzte-bergung
 type: encounter
 title: "Letzte Bergung"
 status: draft
-version: 2
+version: 3
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["fac-gefallene-von-der-glocke", "obj-goldene-glocke", "npc-baron-von-dornfels", "npc-waechter-der-glocke"]
@@ -61,7 +61,7 @@ Eingangshalle, Turmbibliothek, Krypta, Katakomben, Glockenraum und Siegelkammer 
 - Erfolg oder Vorteil: Weitere Bergungen enden, und die Gruppe gewinnt einen beweisbaren oder symbolisch wirksamen Endzustand.
 - Teilerfolg oder Preis: Die akute Gefahr endet durch Kampf, Opfer oder Schwur, aber der Baron kann politische Folgen verzögern oder die historische Schuld bleibt offen.
 - Scheitern oder Rückzug: Spuren oder Beweise können erhalten bleiben; der Baron nutzt den Rückzug als Flucherzählung, während der Turm weiter erreichbar bleibt.
-- Ignorieren: Ein weiterer Bergungsversuch provoziert die Gefallenen und verschärft die Lage für Dorf und Dornfels.
+- Ignorieren: Ein weiterer Bergungsversuch provoziert die Gefallenen und verschärft die Lage für Dornfels.
 
 ## Follow-up links
 

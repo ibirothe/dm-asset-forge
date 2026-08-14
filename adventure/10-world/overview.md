@@ -3,7 +3,7 @@ id: world-die-verstummte-glocke
 type: world
 title: "Die verstummte Glocke"
 status: draft
-version: 3
+version: 4
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, hidden-crime]
@@ -21,7 +21,7 @@ Ein mittelalterlicher Landstrich um Dornfels wird von einer verstummten Turmgloc
 
 - Dornfels ist eine mittelgroße Stadt mit Marktplatz, Bibliothek, Schenke, Krämer und städtischem Alltag.
 - Magie, Zauber, Nekromantie und Alchemie existieren, ohne dass das Abenteuer übliche High-Fantasy-Wesen voraussetzt.
-- Dornfels verliert seit dem Verstummen der Glocke Bewohner; ein separates Dorf am Wachturm existiert nicht.
+- Dornfels verliert seit dem Verstummen der Glocke Bewohner.
 - Der alte Wachturm gehört zu den verfallenen Außenbereichen Dornfels'.
 - Der alte Wachturm kann über Waldwege oder durch die Kanalisation erreicht werden.
 - Die Glocke wurde vor einem Jahrhundert aus gestohlenem Gold eines geplünderten Dorfes gegossen, um gefallene Dorfbewohner zu beschwichtigen.

@@ -3,7 +3,7 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 3
+version: 4
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
@@ -26,6 +26,7 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Ausgangslage: [Plot overview](20-plot/overview.md#player-facing-starting-situation) — Aushang des Barons in Dornfels, Gerüchte und stumme Glocke.
 - Zentraler Konflikt: [Plot overview](20-plot/overview.md#central-conflict) — Fluchglaube, Baron und Gefallene müssen in einen tragfähigen Endzustand gebracht werden.
 - Aktueller Druck: [Open threads](50-indexes/open-threads.md) — der Baron kann weitere Bergungsversuche anstoßen.
+- Konkreter Start: [Marktszene](30-locations/dornfels/scenes/marktszene/scene.md) — Aushang, Marktzeugen, Ausrüstung und erste Anschlusswege.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
@@ -85,7 +86,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ## Nächste sinnvolle Schritte
 
-1. Bei Bedarf die sechs Turmebenen als einzelne Scenes vertiefen.
+1. Die Marktszene am Tisch testen und danach bei Bedarf Bibliothek, Schänke oder Turmebenen als einzelne Scenes vertiefen.
 2. Optional ein player-facing Handout für Aushang oder Regionalkarte entwerfen und erst nach Freigabe schreiben.
 3. Vor Spieltermin Regelbasis, Safety, Barrierefreiheit und reale Materialien klären.
 4. Fachlichen Audit durchführen, wenn der Stand finalisiert werden soll.

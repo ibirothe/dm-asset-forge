@@ -3,7 +3,7 @@ id: info-barons-auftrag-ist-irrefuehrend
 type: information
 title: "Barons Auftrag ist irreführend"
 status: draft
-version: 3
+version: 4
 scope: local
 truth_status: established
 confidence: supported
@@ -52,7 +52,7 @@ Die Gruppe kann den Baron für leichtgläubig statt schuldhaft halten oder den F
 
 ## Consequences when learned
 
-Der Auftrag kann umgedeutet werden: Beweise sichern, Baron konfrontieren, Dorf schützen oder Turm betreten, ohne die Glocke als Schatz zu behandeln.
+Der Auftrag kann umgedeutet werden: Beweise sichern, Baron konfrontieren, Dornfels schützen oder Turm betreten, ohne die Glocke als Schatz zu behandeln.
 
 ## Consequences when missed
 

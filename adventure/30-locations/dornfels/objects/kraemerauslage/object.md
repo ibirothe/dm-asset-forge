@@ -3,7 +3,7 @@ id: obj-kraemerauslage
 type: object
 title: "Krämerauslage"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -29,7 +29,7 @@ Die Krämerauslage gibt der Gruppe eine klare Vorbereitungsmöglichkeit vor Akt 
 
 ## Appearance
 
-Schmale Regale mit haltbaren Essensrationen, einfachen Heiltränken, Fackelbündeln und einer grob gezeichneten Karte der Region um Dornfels, Dorf, Waldweg und alten Turm.
+Schmale Regale mit haltbaren Essensrationen, einfachen Heiltränken, Fackelbündeln und einer grob gezeichneten Karte der Region um Dornfels, Waldweg, Kanalrand und alten Turm.
 
 ## Context and origin
 

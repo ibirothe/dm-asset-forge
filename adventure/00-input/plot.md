@@ -5,7 +5,7 @@ Source: [Original request](original-request.md)
 ## Explicit plot statements
 
 - Vor einem Jahr verstummte die Glocke des alten Wachturms.
-- Seitdem verschwindet jede Neumondnacht ein Bewohner von Dornfels; die anfängliche Dorf-Formulierung meint die Stadt und ihre verfallenen Außenbereiche am Wachturm.
+- Seitdem verschwindet jede Neumondnacht ein Bewohner von Dornfels.
 - Die Gruppe erfährt über einen Aushang des Barons auf dem Marktplatz von Dornfels von den Vorfällen.
 - Viele Bewohner Dornfels' glauben an einen Fluch; einige sprechen von Geistern, andere von einem Dämon im Turm.
 - Der Baron setzt eine hohe Belohnung aus und bittet die Helden, den Turm zu betreten, die Glocke wieder läuten zu lassen und den Fluch endgültig zu brechen.
@@ -20,8 +20,6 @@ Source: [Original request](original-request.md)
 ## Clarified plot corrections
 
 - Die ursprünglich vermischte Mondphase ist geklärt: Alle wiederkehrenden Verschwindungen und heimlichen Bergungen gehören zum Neumond.
-- Die anfängliche Dorfannahme ist geklärt: Es gibt kein separates Dorf; Dornfels ist die betroffene Stadt, und der Wachturm liegt in ihren verfallenen Außenbereichen.
-
 ## Related clarifications
 
 Siehe [Clarifications](clarifications.md).

@@ -7,6 +7,7 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 ## Einstieg und Druck
 
 - Ausgangslage: [Plot-Übersicht](../20-plot/overview.md#player-facing-starting-situation) — Aushang in Dornfels verspricht Belohnung für Turm, Glocke und Fluchbruch vor dem nächsten Neumond.
+- Konkreter Start: [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) — Markt, Aushang, Zeugen, Ausrüstung und mehrere Anschlusswege.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
