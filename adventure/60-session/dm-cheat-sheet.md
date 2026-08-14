@@ -13,6 +13,7 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 - Kanalpfad: [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md) — Nolte blockiert den Einstieg und kann bei schlechtem Umgang eskalieren.
 - Kanalstrecke: [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, frische Nordspur und verlorene Waffe geben der verdeckten Route Druck.
 - Waldaufstieg: [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Starkregen macht den Anstieg riskant und zeigt die abwehrende Präsenz des Wächters.
+- Turmschwelle: [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Versteckter Leichnam, Barons Auftragsspuren und Handaxt verbinden Opfer, Bergung und Auftraggeber.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -25,7 +26,7 @@ Indexroute: [Location-Index](../50-indexes/locations.md).
 |---|---|---|---|
 | Dornfels | Öffentlicher Auftrag, Einkauf, Marktzeugen, Bibliothek, Schänke und Trauer. | Baron schützt seine Erzählung. | [Dornfels](../30-locations/dornfels/location.md) |
 | Zugänge zum Wachturm | Pilgerstraße im Starkregen, Kanal, Ratten und Wächterzeichen. | Unwetter, kleiner Kampf, Rattenkontakt oder Umgehung setzt Akt-2-Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Alter Wachturm | Sechs Ebenen, stumme Glocke, Wächter und Siegelkammer. | Raublogik eskaliert Wächter und Gefallene. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Alter Wachturm | Gebrochene Schwelle, sechs Bereiche, stumme Glocke, Wächter und Siegelkammer. | Der Umgang mit Leichnam, Beweisen und Glocke beeinflusst Wächter und Gefallene. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 
 ## Zentrale NPCs
 
@@ -47,11 +48,11 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 
 | Schlussfolgerung | Unabhängige Pfade | Auffangweg | Quelle |
 |---|---|---|---|
-| Auftrag ist Vorwand | Aushang/Baron; Dornfelser Zeugen; Turmspuren | Bibliothek oder Turmspuren nachreichen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Auftrag ist Vorwand | Aushang/Baron; Dornfelser Zeugen; Auftragsrest an der Schwelle | Dornfelser Zeugen oder Turmbeweis nachreichen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Glocke ist Schuldgold | Bibliothekslücke; Schänkenüberlieferung; Glockenzeichen/Gefallene | Der jeweils andere Pfad bleibt erreichbar. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Wächter ist gebunden | Pilgerstraße/Kanal; Turmzeichen | Route oder Turm kann nachliefern. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Seil wurde durchtrennt | Glockenstube; Barons Widerspruch | Direkte Turmuntersuchung bestätigt spät. | [Clue Matrix](../50-indexes/clue-matrix.md) |
-| Verschwundene waren Bergungsleute | Dornfelser Zeugen; Schmiedestreit; Turmreste | Baron unter Druck oder Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Verschwundene waren Bergungsleute | Dornfelser Zeugen; Schmiedestreit; Leichnam an der Schwelle | Baron unter Druck oder weitere Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 
 ## Eskalation
 

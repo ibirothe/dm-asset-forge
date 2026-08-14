@@ -3,7 +3,7 @@ id: plot-fluch-oder-gier
 type: plot-thread
 title: "Fluch oder Gier"
 status: draft
-version: 4
+version: 5
 scope: global
 entry_locations: ["loc-dornfels", "loc-zugaenge-zum-wachturm", "loc-alter-wachturm"]
 related_factions: ["fac-gefallene-von-der-glocke"]
@@ -46,7 +46,7 @@ Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheid
 
 ## Involved assets
 
-- Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) als Auflösungsort; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
+- Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) mit der [Gebrochenen Schwelle](../../../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) als Auflösungsort und direktem Beweispfad; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
 - Supporting: [Zugänge zum Wachturm](../../../30-locations/zugaenge-zum-wachturm/location.md) für Reise, [Unwetter am Waldpfad](../../../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), kleinen Kampf und Wächterspuren; Dornfelser Markt- und Trauerzeugnisse für sozialen Druck; [Wächter der Glocke](../../../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) und [Gefallene von der Glocke](../../../40-global/factions/gefallene-von-der-glocke/faction.md) für Verhandlung, Opferoption und Konsequenzen.
 - Optional: Ausgespielter Schmiedediebstahl, vollständige Schänken- und Bibliotheksszene, ausführliche Rekonstruktion des historischen Raubs und jede nicht benötigte Turmebene.
 - Safe cuts:

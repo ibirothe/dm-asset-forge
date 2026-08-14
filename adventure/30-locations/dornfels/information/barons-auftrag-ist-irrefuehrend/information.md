@@ -3,7 +3,7 @@ id: info-barons-auftrag-ist-irrefuehrend
 type: information
 title: "Barons Auftrag ist irreführend"
 status: draft
-version: 4
+version: 5
 scope: local
 truth_status: established
 confidence: supported
@@ -37,6 +37,7 @@ Etabliert. Der Baron ist nicht nur besorgter Auftraggeber. Offen bleibt, wie vie
 - [Baron von Dornfels](../../npcs/baron-von-dornfels/npc.md): Ausweichende Antworten zu Bibliothek, Goldwert und Neumond.
 - [Dornfels](../../location.md): [Mira Seilern](../../npcs/mira-seilern/npc.md), Marktzeugen und übersehene Beobachter berichten von heimlichen Reichtumsversprechen.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Bergungswerkzeug und Turmspuren widersprechen einem rein übernatürlichen Fluch.
+- [Die gebrochene Schwelle](../../../alter-wachturm/scenes/die-gebrochene-schwelle/scene.md): Siegelrest, Stillschweigen und Zahlungsversprechen am Leichnam belegen einen geheimen Bergungsauftrag des Barons.
 
 ## Preconditions
 
@@ -44,7 +45,7 @@ Keine einzelne Voraussetzung. Mindestens ein Vergleich zwischen öffentlicher Er
 
 ## Presentation clues
 
-Überbetonte Belohnung, fehlende Warnung vor Bergung, Widerspruch zwischen öffentlicher Flucherzählung und konkreten Bergungsspuren, nervöse Reaktion des Barons auf Bibliotheksfragen.
+Überbetonte Belohnung, fehlende Warnung vor Bergung, Widerspruch zwischen öffentlicher Flucherzählung und konkreten Bergungsspuren, ein versiegelter geheimer Auftrag oder die nervöse Reaktion des Barons auf Bibliotheksfragen.
 
 ## Interpretation risks
 
