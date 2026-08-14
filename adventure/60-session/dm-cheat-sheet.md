@@ -12,6 +12,7 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 - Archivpfad: [Bibliotheksszene](../30-locations/dornfels/scenes/bibliotheksszene/scene.md) — Alena, fehlende Bücher und Barons Recherche nach Goldwert.
 - Kanalpfad: [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md) — Nolte blockiert den Einstieg und kann bei schlechtem Umgang eskalieren.
 - Kanalstrecke: [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, frische Nordspur und verlorene Waffe geben der verdeckten Route Druck.
+- Waldaufstieg: [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Starkregen macht den Anstieg riskant und zeigt die abwehrende Präsenz des Wächters.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -23,7 +24,7 @@ Indexroute: [Location-Index](../50-indexes/locations.md).
 | Ort | Erster Eindruck | Aktueller Druck | Quelle |
 |---|---|---|---|
 | Dornfels | Öffentlicher Auftrag, Einkauf, Marktzeugen, Bibliothek, Schänke und Trauer. | Baron schützt seine Erzählung. | [Dornfels](../30-locations/dornfels/location.md) |
-| Zugänge zum Wachturm | Pilgerstraße, Kanal, Ratten und Wächterzeichen. | Kleiner Kampf, Rattenkontakt oder Umgehung setzt Akt-2-Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Zugänge zum Wachturm | Pilgerstraße im Starkregen, Kanal, Ratten und Wächterzeichen. | Unwetter, kleiner Kampf, Rattenkontakt oder Umgehung setzt Akt-2-Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Alter Wachturm | Sechs Ebenen, stumme Glocke, Wächter und Siegelkammer. | Raublogik eskaliert Wächter und Gefallene. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 
 ## Zentrale NPCs

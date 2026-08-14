@@ -3,7 +3,7 @@ id: loc-zugaenge-zum-wachturm
 type: location
 title: "Zugänge zum Wachturm"
 status: draft
-version: 4
+version: 5
 scope: local
 parent_location: null
 function: route-and-pressure
@@ -38,7 +38,7 @@ Der Waldweg ist sichtbar und für alle zugänglich, aber anfällig für Begegnun
 
 ## Areas
 
-- Verlassene Pilgerstraße: offener Waldpfad mit alten Wegzeichen und dem kleinen Kampf.
+- Verlassene Pilgerstraße: offener Waldpfad mit alten Wegzeichen, dem [Unwetter am Waldpfad](scenes/unwetter-am-waldpfad/scene.md) und dem kleinen Kampf.
 - Kanalstrecke: verdeckter Zugang aus Dornfels über den [Kanalzugang](../dornfels/scenes/kanalzugang/scene.md) in die [Kanalstrecke](scenes/kanalstrecke/scene.md), feucht, eng und mit Ratten, Nordspur und möglichem Waffenfund.
 - Grenzstein des Wächters: verwitterter Stein mit Siegelresten, an dem [Erste Spuren des Wächters](information/erste-spuren-des-waechters/information.md) sichtbar werden.
 - Turmvorfeld: letzter Sichtkontakt zu Wald, Kanal und [Altem Wachturm](../alter-wachturm/location.md).
@@ -65,6 +65,7 @@ Der Waldweg ist sichtbar und für alle zugänglich, aber anfällig für Begegnun
 
 - [Kleiner Kampf an der Pilgerstraße](encounters/kleiner-kampf-an-der-pilgerstrasse/encounter.md)
 - [Ratten im Kanal](encounters/ratten-im-kanal/encounter.md)
+- [Unwetter am Waldpfad](scenes/unwetter-am-waldpfad/scene.md) verwandelt den nördlichen Aufstieg nach Einbruch der Dämmerung in schlammigen Geländedruck und eine frühe Prüfung durch die Präsenz des Wächters.
 - Plotdruck: [Fluch oder Gier](../../20-plot/threads/fluch-oder-gier/plot-thread.md) führt hier von Vorbereitung zu Turmentscheidung.
 - Zeitdruck kann die Route verdichten: ein weiterer Bergungstrupp oder dessen Spuren zeigen, dass der Baron nicht wartet.
 
@@ -75,4 +76,4 @@ Der Waldweg ist sichtbar und für alle zugänglich, aber anfällig für Begegnun
 
 ## Changes over time
 
-Nach einem lauten Kampf oder auffälligem Diebstahl in Dornfels wird die Pilgerstraße stärker beobachtet. Nach heimlichem Kanalvorgehen kann die Gruppe dagegen Beweise erreichen, ohne dass der Baron sofort reagiert. Nach einem lauten Rattenkonflikt bleibt der Kanal passierbar, aber weniger heimlich und beim Rückweg gefährlicher.
+Nach einem lauten Kampf oder auffälligem Diebstahl in Dornfels wird die Pilgerstraße stärker beobachtet. Nach dem Unwetter bleibt der Waldpfad aufgeweicht und auf dem Rückweg langsamer, während freigelegte Pilgersteine Wächtersignale deutlicher zeigen. Nach heimlichem Kanalvorgehen kann die Gruppe dagegen Beweise erreichen, ohne dass der Baron sofort reagiert. Nach einem lauten Rattenkonflikt bleibt der Kanal passierbar, aber weniger heimlich und beim Rückweg gefährlicher.

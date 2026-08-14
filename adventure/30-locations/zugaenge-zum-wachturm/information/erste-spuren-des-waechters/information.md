@@ -3,7 +3,7 @@ id: info-erste-spuren-des-waechters
 type: information
 title: "Erste Spuren des Wächters"
 status: draft
-version: 1
+version: 2
 scope: local
 truth_status: established
 confidence: supported
@@ -34,6 +34,7 @@ Etabliert. Die Spuren beweisen die Existenz des Wächters, aber noch nicht, ob e
 
 - Primary location: [Zugänge zum Wachturm](../../location.md)
 - Grenzstein an der Pilgerstraße: Siegelreste, tiefe Kratzspuren und kalter Ruß.
+- [Unwetter am Waldpfad](../../scenes/unwetter-am-waldpfad/scene.md): trockene Siegelspuren im Starkregen, eine reglose Gestalt zwischen den Bäumen und metallisches Dröhnen begleiten den Aufstieg nach Norden.
 - Kanalstrecke: ähnliche Zeichen an einer trockenen Nische, obwohl dort Feuchtigkeit alles andere verwischt.
 - Nach dem [Kleinen Kampf an der Pilgerstraße](../../encounters/kleiner-kampf-an-der-pilgerstrasse/encounter.md): Gegner oder Umgebung reagieren auf das Wort „Glocke“ auffällig.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Die gleichen Zeichen erscheinen in Eingangshalle, Krypta oder Siegelkammer wieder.
@@ -44,7 +45,7 @@ Waldweg oder Kanal aktiv untersuchen, nach Spuren suchen oder nach dem Kampf nic
 
 ## Presentation clues
 
-Ein eingeritztes Wächterzeichen, kaltes Metallgefühl ohne Metallquelle, Bewegungen im Augenwinkel und der Eindruck, dass der Weg nicht nur verlassen, sondern bewacht ist.
+Ein eingeritztes Wächterzeichen, kaltes Metallgefühl ohne Metallquelle, Bewegungen im Augenwinkel, im Regen trocken bleibende Siegelspuren und der Eindruck, dass der Weg nicht nur verlassen, sondern bewacht ist.
 
 ## Interpretation risks
 
