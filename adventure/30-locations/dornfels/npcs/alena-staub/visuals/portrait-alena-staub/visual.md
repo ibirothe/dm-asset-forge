@@ -56,10 +56,10 @@ Spielersichtbar in der Bibliothek. Das Bild darf keine konkreten fehlenden Titel
 
 ## Generation approval
 
-- Status: not-approved
-- PNG state: not-created
-- Approved visual version: none
-- Approval: none
+- Status: approved
+- PNG state: current
+- Approved visual version: 1
+- Approval: User confirmed generation of this Visual version in chat on 2026-08-14.
 
 ## Output
 
@@ -70,3 +70,4 @@ Spielersichtbar in der Bibliothek. Das Bild darf keine konkreten fehlenden Titel
 ## Provenance and revisions
 
 - 2026-08-14: Erstes Briefing aus dem NPC-Subject erstellt; keine PNG-Erzeugung freigegeben.
+- 2026-08-14: PNG nach expliziter User-Freigabe mit Codex built-in image generation erzeugt und als aktuelle Visual-Version gespeichert.
