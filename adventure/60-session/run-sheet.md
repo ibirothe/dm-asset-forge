@@ -1,0 +1,90 @@
+# Session-Ablaufplan
+
+Diese operative Ansicht steuert Zeit und Zustandswechsel, nicht die Reihenfolge verpflichtender Scenes. Verwende optionale Zeitangaben aus dem [Session-Preflight](../00-input/session-preflight.md), leite jeden Zustandswechsel aus kanonischem Plot oder Assets ab und erhalte mehrere Vorgehensweisen der Spieler.
+
+Kompakte Tischübersicht: [DM-Spickzettel](dm-cheat-sheet.md).
+Abdeckung notwendiger Schlussfolgerungen: [Globale Hinweismatrix](../50-indexes/clue-matrix.md).
+
+## Session-Rahmen
+
+- Geplanter Start: [Session-Preflight – Zeitplan](../00-input/session-preflight.md#zeitplan)
+- Zielende: nach Akt 4 und kurzem Epilog; genaue Uhrzeit offen.
+- Verbindliches Ende: [Session-Preflight – Zeitplan](../00-input/session-preflight.md#zeitplan)
+- Pausen: [Session-Preflight – Zeitplan](../00-input/session-preflight.md#zeitplan)
+
+## Gewünschte Aktstruktur
+
+Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spielerentscheidungen Orte oder Informationen verschieben, bleibt der Mindestzustand aus der [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) maßgeblich.
+
+| Akt | Zielzeit | Zielzustand | Kerninhalt | Quelle |
+|---|---:|---|---|---|
+| Akt 1: Dornfels | 30-45 Min. | Gruppe kennt Auftrag, kann Ausrüstung wählen und mindestens zwei Hinweise anstoßen. | NPCs vorstellen, Gerüchte, Krämer, Schmied, Bibliothek, Schänke. | [Dornfels](../30-locations/dornfels/location.md) |
+| Akt 2: Wald/Kanalisation | 30 Min. | Route ist gewählt, kleiner Kampf oder Umgehung ist aufgelöst, Wächter wird vorgeahnt. | Verlassene Pilgerstraße, Kanalstrecke, kleiner Kampf, Wächterspuren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | Eingangshalle, Turmbibliothek, Glockenraum, Krypta, Katakomben, Siegelkammer. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Akt 4: Finale | offen | Entscheidung über Glocke, Baron, Wächter und Gefallene fällt. | Wahrheit, Entscheidung, Endkampf oder Opfer, Epilog. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+
+## Einstiegsoptionen
+
+| Ausgangszustand | Spielerhinweis | Einsatz | Quelle |
+|---|---|---|---|
+| Marktplatz von Dornfels | Aushang, Belohnung, Gerüchte und Einkaufsmöglichkeiten. | Schneller öffentlicher Start mit Vorbereitung. | [Dornfels](../30-locations/dornfels/location.md) |
+| Dornfelser Trauer- oder Marktzeugnis | Mira, Marktzeugen, Bettler oder Stadtwache zeigen Angst, fehlende Personen und Fluchdeutung. | Sozialer Start mit unmittelbarem Druck ohne separate Dorf-Location. | [Dornfels](../30-locations/dornfels/location.md) |
+| Zugänge zum Wachturm | Pilgerstraße oder Kanal mit sichtbaren Spuren. | Direkter, druckvoller Start. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+
+## Flexible Phasen
+
+| Phase oder Zeitfenster | Zielzustand | Verfügbare Übergänge | Druck bei Verzögerung | Quelle |
+|---|---|---|---|---|
+| Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Krämer, Schmied, Bibliothek, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter oder Zeugen werden vorsichtiger. | [Dornfels](../30-locations/dornfels/location.md) |
+| Akt 2 / Route | Gruppe entscheidet über Wald/Pilgerstraße oder Kanal und erhält Wächterspuren. | Schleichen, Kampf, Verhandlung, Magie, Karte oder Kanalumweg. | Nutze den kleinen Kampf oder eine Spur als Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Akt 3 / Turm | Gruppe kann Glocke, Seil, Wächter und Gefallene beeinflussen. | Turmebenen nach Spielerfokus öffnen oder bündeln. | Baronischer Bergungsimpuls oder Turmreaktion. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Entlarvung, Beschwichtigung, Endkampf, Opfer oder bewusst offener Rest. | Letzten Bergungsdruck sichtbar machen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+
+Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes. Ordne sie neu, lasse sie überlappen oder überspringe sie, wenn Spielerentscheidungen die Situation verändern.
+
+## Kontrollpunkte
+
+| Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |
+|---|---|---|---|---|
+| Ende Akt 1 | Ausrüstung gewählt und mindestens zwei Hinweise sind begonnen. | Bibliothekslücke oder Schänkenüberlieferung anbieten. | Schmiedediebstahl oder Krämerkarte als Zusatzhebel zulassen. | [Dornfels](../30-locations/dornfels/location.md) |
+| Ende Akt 2 | Route ist entschieden und Wächter ist vorgeahnt. | Route kürzen und Wächterzeichen deutlich präsentieren. | Kampf umgehen lassen und Vorteil im Turm gewähren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Vor Akt 4 | Zwei zentrale Wahrheiten plus Wächterrolle sind zugänglich oder ein Auffangweg ist bereit. | Clue-Matrix-Pfad mit anderer Unabhängigkeitsgruppe nutzen. | Optional Krypta, Katakomben oder Siegelkammer vertiefen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+
+## Später Druck
+
+| Auslöser | Sichtbarer Zustandswechsel | Erhaltene Entscheidungen | Quelle |
+|---|---|---|---|
+| Zeitdruck, Zögern oder öffentliche Konfrontation | Baron lässt eine weitere Neumond-Bergung vorbereiten oder Turmzugänge sichern. | Beweise sichern, Bergung verhindern, Zeugen mobilisieren oder Turm umgehen. | [Fluch oder Gier](../20-plot/threads/fluch-oder-gier/plot-thread.md) |
+
+## Sichere Kürzungen
+
+| Kürzung | Auslöser | Muss erhalten | Auswirkung | Quelle |
+|---|---|---|---|---|
+| Dornfels-Montage | Akt 1 überzieht | Ausrüstung, Bibliothekslücke und Schänkenüberlieferung. | Krämer, Schmied, Bibliothek und Schänke als schnelle Auswahl präsentieren. | [Dornfels](../30-locations/dornfels/location.md) |
+| Zugangswege knapp abhandeln | Akt 2 überzieht | Wahl Wald/Kanal, Wächterspur und Turmzugang. | Nur Risiko und eine klare Spur je Zugang beschreiben. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Turmebenen bündeln | Akt 3 überzieht | Glocke, Wächter, mindestens zwei Wahrheiten und Siegelkammerentscheidung. | Eingangshalle mit Turmbibliothek oder Krypta mit Katakomben zusammenlegen. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+
+## Finale-Auslöser
+
+- Spätestmöglicher sinnvoller Auslöser: Der nächste Neumond-Bergungsversuch, der Wächter in der Siegelkammer oder eine Turmsicherung des Barons wird sichtbar.
+- Erforderlicher Zustand vor dem Auslöser: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
+- Sichtbarer Druck: [Offene Plot-Threads](../50-indexes/open-threads.md)
+
+## Auflösung
+
+- Minimaler Auflösungszustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
+- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md)
+
+| Endzustand | Auslöser | Folge | Quelle |
+|---|---|---|---|
+| Entlarvung | Beweise und Zeugen reichen für wirksamen Druck. | Baron verliert Kontrolle über die Erzählung. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
+| Beschwichtigung | Schuld und Glocke werden nicht als Raub behandelt. | Gefallene lassen einen ruhigeren Turmzustand zu. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
+| Opfer oder Preis | Wächter fordert sichtbaren Preis und die Gruppe akzeptiert ihn. | Wächter und Gefallene lassen die Glockenentscheidung zu. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Akute Rettung, offener Rest | Nächste Bergung wird gestoppt. | Dornfels ist vorerst sicher, politische Schuld bleibt offen. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
+
+## Notizen während des Spiels
+
+- Aktuelle Zeit: open
+- Aktiver Zustand: open
+- Nächster Kontrollpunkt: open
+- Notizen: —
