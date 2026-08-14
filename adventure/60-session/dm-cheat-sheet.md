@@ -8,8 +8,10 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 
 - Ausgangslage: [Plot-Übersicht](../20-plot/overview.md#player-facing-starting-situation) — Aushang in Dornfels verspricht Belohnung für Turm, Glocke und Fluchbruch vor dem nächsten Neumond.
 - Konkreter Start: [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) — Markt, Aushang, Zeugen, Ausrüstung und mehrere Anschlusswege.
+- Schmiedepfad: [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md) — Mira widerspricht Gerolts Schuldforderung, während Borin durch den Fensterladen späht.
 - Archivpfad: [Bibliotheksszene](../30-locations/dornfels/scenes/bibliotheksszene/scene.md) — Alena, fehlende Bücher und Barons Recherche nach Goldwert.
 - Kanalpfad: [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md) — Nolte blockiert den Einstieg und kann bei schlechtem Umgang eskalieren.
+- Kanalstrecke: [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, frische Nordspur und verlorene Waffe geben der verdeckten Route Druck.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -21,7 +23,7 @@ Indexroute: [Location-Index](../50-indexes/locations.md).
 | Ort | Erster Eindruck | Aktueller Druck | Quelle |
 |---|---|---|---|
 | Dornfels | Öffentlicher Auftrag, Einkauf, Marktzeugen, Bibliothek, Schänke und Trauer. | Baron schützt seine Erzählung. | [Dornfels](../30-locations/dornfels/location.md) |
-| Zugänge zum Wachturm | Pilgerstraße, Kanal und Wächterzeichen. | Kleiner Kampf oder Umgehung setzt Akt-2-Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Zugänge zum Wachturm | Pilgerstraße, Kanal, Ratten und Wächterzeichen. | Kleiner Kampf, Rattenkontakt oder Umgehung setzt Akt-2-Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Alter Wachturm | Sechs Ebenen, stumme Glocke, Wächter und Siegelkammer. | Raublogik eskaliert Wächter und Gefallene. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 
 ## Zentrale NPCs
@@ -32,6 +34,7 @@ Indexroute: [NPC-Index](../50-indexes/npcs.md).
 |---|---|---|---|
 | Baron von Dornfels | Goldinteresse und heimliche Bergungen verdecken. | Ruhig, herrschaftlich; bei Beweisen knapper und formeller. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
 | Wächter der Glocke | Raubabsicht prüfen und Preis erzwingen. | Leise, knapp, prüfend; fragt nach Zweck und Preis. | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
+| Gerolt Eisenfaust | Schuldforderung kontrollieren und Schmiedewaren schützen. | Knapp und trocken; bei Widerspruch sehr höflich. | [Gerolt Eisenfaust](../30-locations/dornfels/npcs/gerolt-eisenfaust/npc.md) |
 | Alena Staub | Fehlende Bücher und Archivspur kontrolliert öffnen. | Trocken, präzise, mit Pausen vor gefährlichen Namen. | [Alena Staub](../30-locations/dornfels/npcs/alena-staub/npc.md) |
 | Nolte am Tor | Kanalzugang und eigene Habe schützen, ohne sein Versteck zu verraten. | Spöttisch und kratzig; am Kanal sprunghaft und fahrig. | [Nolte am Tor](../30-locations/dornfels/npcs/nolte-am-tor/npc.md) |
 | Stammtisch der Alten | Plünderungsüberlieferung preisgeben oder verweigern. | Brüchig, überlagernd, spöttisch; Wichtiges langsam. | [Stammtisch der Alten](../30-locations/dornfels/npcs/stammtisch-der-alten/npc.md) |
@@ -47,7 +50,7 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 | Glocke ist Schuldgold | Bibliothekslücke; Schänkenüberlieferung; Glockenzeichen/Gefallene | Der jeweils andere Pfad bleibt erreichbar. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Wächter ist gebunden | Pilgerstraße/Kanal; Turmzeichen | Route oder Turm kann nachliefern. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Seil wurde durchtrennt | Glockenstube; Barons Widerspruch | Direkte Turmuntersuchung bestätigt spät. | [Clue Matrix](../50-indexes/clue-matrix.md) |
-| Verschwundene waren Bergungsleute | Dornfelser Zeugen; Turmreste | Baron unter Druck oder Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Verschwundene waren Bergungsleute | Dornfelser Zeugen; Schmiedestreit; Turmreste | Baron unter Druck oder Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 
 ## Eskalation
 

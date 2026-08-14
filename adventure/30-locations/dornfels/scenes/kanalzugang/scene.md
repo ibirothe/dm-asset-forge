@@ -3,7 +3,7 @@ id: scene-kanalzugang
 type: scene
 title: "Kanalzugang"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-dornfels"
 participants: ["npc-nolte-am-tor"]
@@ -49,7 +49,7 @@ Nolte wirkt seltsam und zunehmend fahrig: Er springt zwischen Warnung, Spott, Dr
 
 ## Possible transitions
 
-- Beruhigt oder respektiert: Nolte tritt zurück, warnt vor schlechter Sicht und bleibt später als Zeuge oder Ersatzpfad verfügbar.
+- Beruhigt oder respektiert: Nolte tritt zurück, warnt vor schlechter Sicht und bleibt später als Zeuge oder Ersatzpfad verfügbar; die Gruppe erreicht die [Kanalstrecke](../../../zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md).
 - Bezahlt, getauscht oder geschützt: Er lässt den Einstieg zu und kann einen kleinen Hinweis zu nächtlichen Abgängen oder Wachzeiten geben.
 - Überlistet oder umgangen: Die Gruppe erreicht den Kanal, aber Nolte fühlt sich bestohlen oder bedroht und spricht später weniger bereitwillig.
 - Schlecht behandelt: Nolte wird laut, schlägt mit Becher, Stock oder Steinen um sich, ruft Aufmerksamkeit herbei oder versucht den Deckel wieder zu blockieren.
@@ -60,5 +60,6 @@ Nolte wirkt seltsam und zunehmend fahrig: Er springt zwischen Warnung, Spott, Dr
 - Primary location: [Dornfels](../../location.md)
 - Schwellenfigur: [Nolte am Tor](../../npcs/nolte-am-tor/npc.md)
 - Anschlussroute: [Zugänge zum Wachturm](../../../zugaenge-zum-wachturm/location.md)
+- Nächste Kanalszene: [Kanalstrecke](../../../zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md)
 - Route-Hinweis: [Erste Spuren des Wächters](../../../zugaenge-zum-wachturm/information/erste-spuren-des-waechters/information.md)
 - Plotdruck: [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md)

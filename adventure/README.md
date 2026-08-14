@@ -3,7 +3,7 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 6
+version: 8
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
@@ -27,8 +27,10 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Zentraler Konflikt: [Plot overview](20-plot/overview.md#central-conflict) — Fluchglaube, Baron und Gefallene müssen in einen tragfähigen Endzustand gebracht werden.
 - Aktueller Druck: [Open threads](50-indexes/open-threads.md) — der Baron kann weitere Bergungsversuche anstoßen.
 - Konkreter Start: [Marktszene](30-locations/dornfels/scenes/marktszene/scene.md) — Aushang, Marktzeugen, Ausrüstung und erste Anschlusswege.
+- Vorbereiteter Schmiedepfad: [Schmiedestreit](30-locations/dornfels/scenes/schmiedestreit/scene.md) — Mira, Gerolt und Borin verbinden angebliche Schuld mit Turmvorbereitung.
 - Vorbereiteter Archivpfad: [Bibliotheksszene](30-locations/dornfels/scenes/bibliotheksszene/scene.md) — Alena, Kataloglücken und Barons Recherche.
 - Vorbereiteter Kanalpfad: [Kanalzugang](30-locations/dornfels/scenes/kanalzugang/scene.md) — Nolte blockiert den verdeckten Einstieg aus eigenem Geheimnis.
+- Vorbereitete Kanalstrecke: [Kanalstrecke](30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, Nordspur und verlorene Waffe machen die verdeckte Route druckvoll.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
@@ -88,7 +90,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ## Nächste sinnvolle Schritte
 
-1. Die Marktszene, Bibliotheksszene und den Kanalzugang am Tisch testen und danach bei Bedarf Schänke oder Turmebenen als einzelne Scenes vertiefen.
+1. Marktszene, Schmiedestreit, Bibliotheksszene, Kanalzugang und Kanalstrecke am Tisch testen und danach bei Bedarf Schänke oder Turmebenen als einzelne Scenes vertiefen.
 2. Optional ein player-facing Handout für Aushang oder Regionalkarte entwerfen und erst nach Freigabe schreiben.
 3. Vor Spieltermin Regelbasis, Safety, Barrierefreiheit und reale Materialien klären.
 4. Fachlichen Audit durchführen, wenn der Stand finalisiert werden soll.

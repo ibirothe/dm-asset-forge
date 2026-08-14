@@ -3,7 +3,7 @@ id: npc-borin-karrenschieber
 type: npc
 title: "Borin Karrenschieber"
 status: ready
-version: 3
+version: 4
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -12,8 +12,8 @@ appearance_locations: []
 factions: []
 influence: limited
 reach: local
-tags: [market-resident, porter, witness]
-themes: [work, fear, rumor]
+tags: [market-resident, porter, witness, eavesdropper]
+themes: [work, fear, rumor, public-pressure]
 created: 2026-08-14
 updated: 2026-08-14
 ---
@@ -22,7 +22,7 @@ updated: 2026-08-14
 
 ## Table purpose
 
-Borin ist einer von drei Marktzeugen: Er liefert körperliche, arbeitsnahe Beobachtungen zu Kisten, Werkzeugen und heimlichen Aufbrüchen.
+Borin ist einer von drei Marktzeugen: Er liefert körperliche, arbeitsnahe Beobachtungen zu Kisten, Werkzeugen und heimlichen Aufbrüchen und kann beim Schmiedestreit als heimlicher Zuhörer auftauchen.
 
 ## First impression
 
@@ -67,6 +67,7 @@ Beobachtungen zu Kisten, Werkzeugen, Nachtlieferungen, ungewöhnlichen Münzen u
 - Hat gesehen, dass vor Neumond Werkzeuge und Fackeln in Richtung Außenbereiche bewegt wurden.
 - Kann die [Krämerauslage](../../objects/kraemerauslage/object.md) und Schmiedewaren mit späteren Turmspuren verbinden, ohne den Gesamtplan zu kennen.
 - Stützt als Zeuge die Information zu den [verschwundenen Bergungsleuten](../../../alter-wachturm/information/verschwundene-bergungsleute/information.md).
+- Weiß, dass der [Schmiedestreit](../../scenes/schmiedestreit/scene.md) zu seinen Beobachtungen über Waren und Aufbrüche passt.
 
 ### Rumors
 
@@ -79,12 +80,13 @@ Beobachtungen zu Kisten, Werkzeugen, Nachtlieferungen, ungewöhnlichen Münzen u
 ## Relationships
 
 - Zu [Liska Warenmaß](../liska-warenmass/npc.md): hilft gelegentlich beim Tragen und kennt ihre Turmkunden vom Sehen.
+- Zu [Gerolt Eisenfaust](../gerolt-eisenfaust/npc.md): beobachtet die Schmiede lieber vom Fenster als offen im Laden.
 - Zu [Rena Falk](../rena-falk/npc.md): hält Abstand, weil Wachen seine Arbeit leicht beenden können.
 - Zu [Mira Seilern](../mira-seilern/npc.md): weiß, dass ihr verschwundener Mann nicht allein aus Aberglauben aufbrach.
 
 ## Likely behavior
 
-- Wenn unterstützt: Nennt Wege, Zeiten und Kisten, bleibt aber bei überprüfbaren Beobachtungen.
+- Wenn unterstützt: Nennt Wege, Zeiten und Kisten, bleibt aber bei überprüfbaren Beobachtungen; beim Fensterladen muss er erst vor Bloßstellung geschützt werden.
 - Wenn unter Druck: Bestreitet alles und wird plötzlich sehr beschäftigt.
 - Wenn ignoriert: Kann später als öffentlicher Zeuge dienen, wenn andere Beweise vorliegen.
 

@@ -3,7 +3,7 @@ id: info-verschwundene-bergungsleute
 type: information
 title: "Verschwundene Bergungsleute"
 status: draft
-version: 4
+version: 5
 scope: local
 truth_status: established
 confidence: corroborated
@@ -34,6 +34,7 @@ Etabliert. Die genaue Art jedes furchtbaren Schicksals bleibt offen genug, um am
 
 - Primary location: [Alter Wachturm](../../location.md)
 - [Dornfels](../../../dornfels/location.md): [Mira Seilern](../../../dornfels/npcs/mira-seilern/npc.md), [Borin Karrenschieber](../../../dornfels/npcs/borin-karrenschieber/npc.md), weitere Marktzeugen, der Baron und städtische Spuren können die Anwerbung politisch und persönlich verorten.
+- [Schmiedestreit](../../../dornfels/scenes/schmiedestreit/scene.md): Gerolts Forderung nach angeblich unbezahlten Waren und Miras Wut machen Ausrüstung, Schuldumkehr und jüngere Vorbereitung sichtbar.
 - [Alter Wachturm](../../location.md): zurückgelassene Werkzeuge, persönliche Zeichen und Spuren unvorbereiteter Bergungsversuche.
 - [Baron von Dornfels](../../../dornfels/npcs/baron-von-dornfels/npc.md): Druck oder Belege können seine Kenntnis der angeworbenen Personen zeigen.
 
@@ -43,7 +44,7 @@ Vertrauen in Dornfels, Untersuchung im Turm oder wirksamer Druck gegen den Baron
 
 ## Presentation clues
 
-Halbe Versprechen von Reichtum, fehlende Ausrüstung zu Hause, gleiche Zielrichtung zum Turm, Werkspuren statt zufälliger Verschleppung.
+Halbe Versprechen von Reichtum, fehlende Ausrüstung zu Hause, gleiche Zielrichtung zum Turm, Schmiedeschulden oder Werkspuren statt zufälliger Verschleppung.
 
 ## Interpretation risks
 

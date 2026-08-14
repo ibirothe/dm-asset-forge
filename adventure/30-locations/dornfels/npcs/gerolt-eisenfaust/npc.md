@@ -3,7 +3,7 @@ id: npc-gerolt-eisenfaust
 type: npc
 title: "Gerolt Eisenfaust"
 status: ready
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -12,8 +12,8 @@ appearance_locations: []
 factions: []
 influence: limited
 reach: local
-tags: [smith, weapons, sharpening, overpriced-goods]
-themes: [pride, scarcity, temptation]
+tags: [smith, weapons, sharpening, overpriced-goods, debt-claim]
+themes: [pride, scarcity, temptation, blame]
 created: 2026-08-14
 updated: 2026-08-14
 ---
@@ -22,7 +22,7 @@ updated: 2026-08-14
 
 ## Table purpose
 
-Gerolt macht die Schmiede zu einer Versuchung für die Gruppe: Seine Waren sind zu teuer, aber Schärfen, Tausch, Druck oder Diebstahl können reale Vorbereitungsvorteile schaffen.
+Gerolt macht die Schmiede zu einer Versuchung und einem sozialen Druckpunkt: Seine Waren sind zu teuer, und sein Streit mit Mira verbindet Ausrüstung, Schuldenbehauptung und verschwundene Bergungsleute.
 
 ## First impression
 
@@ -66,6 +66,7 @@ Teure Waffen, einfache Reparaturen, der Schleifstein, Kenntnis lokaler Werkspure
 
 - Weiß, welche Klingen frisch geschärft oder heimlich aus Dornfels hinausgetragen wurden.
 - Kennt den Wert praktischer Vorbereitung vor dem Weg über die [Zugänge zum Wachturm](../../../zugaenge-zum-wachturm/location.md).
+- Behauptet im [Schmiedestreit](../../scenes/schmiedestreit/scene.md), Miras verschwundener Mann habe Waren vor seinem Verschwinden gekauft oder bestellt und nicht bezahlt.
 
 ### Rumors
 
@@ -73,17 +74,19 @@ Teure Waffen, einfache Reparaturen, der Schleifstein, Kenntnis lokaler Werkspure
 
 ### Secrets
 
-- Ein verschwundener Bergungsmann ließ eine beschädigte Klinge schärfen und zahlte mit Münzen, die Gerolt nicht offen erklären will.
+- Ein verschwundener Bergungsmann ließ eine beschädigte Klinge schärfen und zahlte mit Münzen, die Gerolt nicht offen erklären will; Gerolts öffentliche Schuldforderung ist dadurch zumindest unvollständig.
 
 ## Relationships
 
 - Zur [Schmiedeware](../../objects/schmiedewaren-und-schleifstein/object.md): Besitz und Druckpunkt.
+- Zu [Mira Seilern](../mira-seilern/npc.md): verlangt angebliche Schuld und riskiert, ihre Wut zur öffentlichen Anklage zu machen.
 - Zu [Rena Falk](../rena-falk/npc.md): ruft sie bei offenem Diebstahl, verschweigt aber kleinere Verstöße, wenn er selbst Vorteile erhält.
+- Zum [Schmiedestreit](../../scenes/schmiedestreit/scene.md): versucht die Szene beim Eintritt der Gruppe zu kontrollieren.
 - Zum [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md): liefert Vorbereitung, Konflikt oder Spur zur heimlichen Bergung.
 
 ## Likely behavior
 
-- Wenn unterstützt: Schärft Waffen sauber, warnt vor schlechter Ausrüstung und nennt beiläufig verdächtige Nachtkundschaft.
+- Wenn unterstützt: Schärft Waffen sauber, warnt vor schlechter Ausrüstung und nennt beiläufig verdächtige Nachtkundschaft oder Art der angeblich offenen Waren.
 - Wenn unter Druck: Erhöht Preise, stellt sich vor die Waren und droht mit der Stadtwache.
 - Wenn ignoriert: Bleibt als Risiko oder Gelegenheit bestehen; nach einem Diebstahl kann er den Markt alarmieren.
 

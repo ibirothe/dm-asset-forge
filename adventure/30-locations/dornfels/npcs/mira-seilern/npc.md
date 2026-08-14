@@ -3,7 +3,7 @@ id: npc-mira-seilern
 type: npc
 title: "Mira Seilern"
 status: ready
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -12,8 +12,8 @@ appearance_locations: []
 factions: []
 influence: limited
 reach: personal
-tags: [widow, grief, witness]
-themes: [grief, exploitation, justice]
+tags: [widow, grief, witness, debt-claim]
+themes: [grief, exploitation, justice, blame]
 created: 2026-08-14
 updated: 2026-08-14
 ---
@@ -22,7 +22,7 @@ updated: 2026-08-14
 
 ## Table purpose
 
-Mira ist die trauernde Witwe, die die verschwundenen Bergungsleute emotional und beweiskräftig an Dornfels bindet.
+Mira ist die trauernde Witwe, die die verschwundenen Bergungsleute emotional und beweiskräftig an Dornfels bindet; in der Schmiede wehrt sie sich gegen Schuldumkehr nach dem Verschwinden ihres Mannes.
 
 ## First impression
 
@@ -66,6 +66,7 @@ Letzte Worte ihres Mannes, fehlende Ausrüstung, eine Münze ungewöhnlicher Her
 
 - Kennt Hinweise auf die [verschwundenen Bergungsleute](../../../alter-wachturm/information/verschwundene-bergungsleute/information.md).
 - Weiß, dass ihr Mann vor dem Aufbruch nicht von Geistern, sondern von versprochenem Geld sprach.
+- Weiß, dass Gerolt im [Schmiedestreit](../../scenes/schmiedestreit/scene.md) eine angebliche Warenschuld gegen sie richtet.
 
 ### Rumors
 
@@ -79,11 +80,12 @@ Letzte Worte ihres Mannes, fehlende Ausrüstung, eine Münze ungewöhnlicher Her
 
 - Zu [Jorek Malz](../jorek-malz/npc.md): vertraut ihm genug, in der Schänke nicht allein zu sein.
 - Zu [Nele Kerzenzieh](../nele-kerzenzieh/npc.md): nimmt Kerzen an, obwohl sie keine Trostworte will.
+- Zu [Gerolt Eisenfaust](../gerolt-eisenfaust/npc.md): widerspricht seiner Schuldforderung, weil sie darin eine Beschmutzung ihres verschwundenen Mannes sieht.
 - Zu [Baron von Dornfels](../baron-von-dornfels/npc.md): sucht eine Wahrheit, die ihn angreifbar macht.
 
 ## Likely behavior
 
-- Wenn unterstützt: Gibt Namen, letzte Worte und die Münze als Spur frei.
+- Wenn unterstützt: Gibt Namen, letzte Worte und die Münze als Spur frei; nach fairer Hilfe in der Schmiede spricht sie schneller.
 - Wenn unter Druck: Schließt sich, beschuldigt die Gruppe als weitere Werkzeuge des Barons.
 - Wenn ignoriert: Kann später als öffentliche Anklägerin auftreten, wenn die Gruppe Beweise bringt.
 
