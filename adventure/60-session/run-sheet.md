@@ -19,7 +19,7 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 | Akt | Zielzeit | Zielzustand | Kerninhalt | Quelle |
 |---|---:|---|---|---|
 | Akt 1: Dornfels | 30-45 Min. | Gruppe kennt Auftrag, kann Ausrüstung wählen und mindestens zwei Hinweise anstoßen. | NPCs vorstellen, Gerüchte, Krämer, Schmied, Bibliothek, Schänke. | [Dornfels](../30-locations/dornfels/location.md) |
-| Akt 2: Wald/Kanalisation | 30 Min. | Route ist gewählt, kleiner Kampf oder Umgehung ist aufgelöst, Wächter wird vorgeahnt. | Verlassene Pilgerstraße, Kanalstrecke, kleiner Kampf, Wächterspuren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Akt 2: Wald/Kanalisation | 30 Min. | Route ist gewählt, kleiner Kampf oder Umgehung ist aufgelöst, Wächter wird vorgeahnt. | Verlassene Pilgerstraße, [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), Kanalstrecke, kleiner Kampf, Wächterspuren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | Eingangshalle, Turmbibliothek, Glockenraum, Krypta, Katakomben, Siegelkammer. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 | Akt 4: Finale | offen | Entscheidung über Glocke, Baron, Wächter und Gefallene fällt. | Wahrheit, Entscheidung, Endkampf oder Opfer, Epilog. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
@@ -35,8 +35,8 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 
 | Phase oder Zeitfenster | Zielzustand | Verfügbare Übergänge | Druck bei Verzögerung | Quelle |
 |---|---|---|---|---|
-| Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Marktszene, Krämer, Schmied, Bibliothek, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter oder Zeugen werden vorsichtiger. | [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) |
-| Akt 2 / Route | Gruppe entscheidet über Wald/Pilgerstraße oder Kanal und erhält Wächterspuren. | Schleichen, Kampf, Verhandlung, Magie, Karte oder Kanalumweg. | Nutze den kleinen Kampf oder eine Spur als Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Marktszene, Krämer, Schmied, Bibliotheksszene, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter oder Zeugen werden vorsichtiger. | [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) |
+| Akt 2 / Route | Gruppe entscheidet über Wald/Pilgerstraße oder Kanal und erhält Wächterspuren. | Schleichen, Kampf, Verhandlung mit Nolte, Magie, Karte oder Kanalumweg. | Nutze den [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), den kleinen Kampf oder eine Spur als Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Akt 3 / Turm | Gruppe kann Glocke, Seil, Wächter und Gefallene beeinflussen. | Turmebenen nach Spielerfokus öffnen oder bündeln. | Baronischer Bergungsimpuls oder Turmreaktion. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 | Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Entlarvung, Beschwichtigung, Endkampf, Opfer oder bewusst offener Rest. | Letzten Bergungsdruck sichtbar machen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
@@ -46,8 +46,8 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 
 | Kontrollpunkt | Beobachten | Bei Rückstand | Bei Vorsprung | Quelle |
 |---|---|---|---|---|
-| Ende Akt 1 | Ausrüstung gewählt und mindestens zwei Hinweise sind begonnen. | Bibliothekslücke oder Schänkenüberlieferung anbieten. | Schmiedediebstahl oder Krämerkarte als Zusatzhebel zulassen. | [Dornfels](../30-locations/dornfels/location.md) |
-| Ende Akt 2 | Route ist entschieden und Wächter ist vorgeahnt. | Route kürzen und Wächterzeichen deutlich präsentieren. | Kampf umgehen lassen und Vorteil im Turm gewähren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Ende Akt 1 | Ausrüstung gewählt und mindestens zwei Hinweise sind begonnen. | [Bibliotheksszene](../30-locations/dornfels/scenes/bibliotheksszene/scene.md) oder Schänkenüberlieferung anbieten. | Schmiedediebstahl oder Krämerkarte als Zusatzhebel zulassen. | [Dornfels](../30-locations/dornfels/location.md) |
+| Ende Akt 2 | Route ist entschieden und Wächter ist vorgeahnt. | Nolte-Konflikt kurz entscheiden, Route kürzen und Wächterzeichen deutlich präsentieren. | Kanalzugang ruhig lösen oder Kampf umgehen lassen und Vorteil im Turm gewähren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Vor Akt 4 | Zwei zentrale Wahrheiten plus Wächterrolle sind zugänglich oder ein Auffangweg ist bereit. | Clue-Matrix-Pfad mit anderer Unabhängigkeitsgruppe nutzen. | Optional Krypta, Katakomben oder Siegelkammer vertiefen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 
 ## Später Druck
@@ -61,7 +61,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 | Kürzung | Auslöser | Muss erhalten | Auswirkung | Quelle |
 |---|---|---|---|---|
 | Dornfels-Montage | Akt 1 überzieht | Ausrüstung, Bibliothekslücke und Schänkenüberlieferung. | Krämer, Schmied, Bibliothek und Schänke als schnelle Auswahl präsentieren. | [Dornfels](../30-locations/dornfels/location.md) |
-| Zugangswege knapp abhandeln | Akt 2 überzieht | Wahl Wald/Kanal, Wächterspur und Turmzugang. | Nur Risiko und eine klare Spur je Zugang beschreiben. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
+| Zugangswege knapp abhandeln | Akt 2 überzieht | Wahl Wald/Kanal, Noltes Haltung, Wächterspur und Turmzugang. | Nolte mit einem klaren Preis, einer Warnung oder einer kurzen Blockade abhandeln; nur Risiko und eine klare Spur je Zugang beschreiben. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Turmebenen bündeln | Akt 3 überzieht | Glocke, Wächter, mindestens zwei Wahrheiten und Siegelkammerentscheidung. | Eingangshalle mit Turmbibliothek oder Krypta mit Katakomben zusammenlegen. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 
 ## Finale-Auslöser

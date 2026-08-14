@@ -3,7 +3,7 @@ id: loc-dornfels
 type: location
 title: "Dornfels"
 status: draft
-version: 5
+version: 7
 scope: local
 parent_location: null
 function: investigation-hub
@@ -41,10 +41,10 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 - Marktplatz: Einstieg über die [Marktszene](scenes/marktszene/scene.md), den [Aushang des Barons](objects/aushang-des-barons/object.md), Gerüchte und erste Zeugen wie [Borin Karrenschieber](npcs/borin-karrenschieber/npc.md), [Nele Kerzenzieh](npcs/nele-kerzenzieh/npc.md) und [Timo Netzflicker](npcs/timo-netzflicker/npc.md).
 - Krämer: [Liska Warenmaß](npcs/liska-warenmass/npc.md) verkauft die [Krämerauslage](objects/kraemerauslage/object.md) mit Essensrationen, Heiltränken, Fackeln und einer Regionalkarte.
 - Schmiede: [Gerolt Eisenfaust](npcs/gerolt-eisenfaust/npc.md) führt [Schmiedewaren und Schleifstein](objects/schmiedewaren-und-schleifstein/object.md); die Waren sind zu teuer, aber Diebstahl oder Waffenschärfen sind mögliche Hebel.
-- Bibliothek: [Alena Staub](npcs/alena-staub/npc.md) ist Rechercheankerin für [Herkunft der Glocke](information/herkunft-der-glocke/information.md); die [fehlenden Bücher der Plünderungszeit](information/fehlende-buecher-der-pluenderungszeit/information.md) verweisen auf eine gezielte Lücke.
+- Bibliothek: Die [Bibliotheksszene](scenes/bibliotheksszene/scene.md) macht [Alena Staub](npcs/alena-staub/npc.md), [Herkunft der Glocke](information/herkunft-der-glocke/information.md) und die [fehlenden Bücher der Plünderungszeit](information/fehlende-buecher-der-pluenderungszeit/information.md) als Archivpfad spielbar.
 - Schänke: [Jorek Malz](npcs/jorek-malz/npc.md) schützt den [Stammtisch der Alten](npcs/stammtisch-der-alten/npc.md), der die [Überlieferung der Plünderung](information/ueberlieferung-der-pluenderung/information.md) kennt.
 - Baronssitz oder Amtsstube: Sozialer Druckpunkt gegen [Baron von Dornfels](npcs/baron-von-dornfels/npc.md).
-- Stadttor, Kanalkante und verfallene Außenbereiche: [Nolte am Tor](npcs/nolte-am-tor/npc.md), [Rena Falk](npcs/rena-falk/npc.md) und der Weg zu den [Zugängen zum Wachturm](../zugaenge-zum-wachturm/location.md) machen heimliche Bewegungen sichtbar.
+- Stadttor, Kanalkante und verfallene Außenbereiche: Der [Kanalzugang](scenes/kanalzugang/scene.md), [Nolte am Tor](npcs/nolte-am-tor/npc.md), [Rena Falk](npcs/rena-falk/npc.md) und der Weg zu den [Zugängen zum Wachturm](../zugaenge-zum-wachturm/location.md) machen heimliche Bewegungen sichtbar.
 
 ## Inhabitants
 

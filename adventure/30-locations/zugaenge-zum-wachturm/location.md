@@ -3,7 +3,7 @@ id: loc-zugaenge-zum-wachturm
 type: location
 title: "Zugänge zum Wachturm"
 status: draft
-version: 2
+version: 3
 scope: local
 parent_location: null
 function: route-and-pressure
@@ -39,7 +39,7 @@ Der Waldweg ist sichtbar und für alle zugänglich, aber anfällig für Begegnun
 ## Areas
 
 - Verlassene Pilgerstraße: offener Waldpfad mit alten Wegzeichen und dem kleinen Kampf.
-- Kanalstrecke: verdeckter Zugang aus Dornfels, feucht, eng und geeignet für Schleichen, aber mit schlechter Sicht und Rückzugsdruck.
+- Kanalstrecke: verdeckter Zugang aus Dornfels über den [Kanalzugang](../dornfels/scenes/kanalzugang/scene.md), feucht, eng und geeignet für Schleichen, aber mit schlechter Sicht und Rückzugsdruck.
 - Grenzstein des Wächters: verwitterter Stein mit Siegelresten, an dem [Erste Spuren des Wächters](information/erste-spuren-des-waechters/information.md) sichtbar werden.
 - Turmvorfeld: letzter Sichtkontakt zu Wald, Kanal und [Altem Wachturm](../alter-wachturm/location.md).
 

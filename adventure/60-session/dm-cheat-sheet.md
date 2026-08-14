@@ -8,6 +8,8 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 
 - Ausgangslage: [Plot-Übersicht](../20-plot/overview.md#player-facing-starting-situation) — Aushang in Dornfels verspricht Belohnung für Turm, Glocke und Fluchbruch vor dem nächsten Neumond.
 - Konkreter Start: [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) — Markt, Aushang, Zeugen, Ausrüstung und mehrere Anschlusswege.
+- Archivpfad: [Bibliotheksszene](../30-locations/dornfels/scenes/bibliotheksszene/scene.md) — Alena, fehlende Bücher und Barons Recherche nach Goldwert.
+- Kanalpfad: [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md) — Nolte blockiert den Einstieg und kann bei schlechtem Umgang eskalieren.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -31,6 +33,7 @@ Indexroute: [NPC-Index](../50-indexes/npcs.md).
 | Baron von Dornfels | Goldinteresse und heimliche Bergungen verdecken. | Ruhig, herrschaftlich; bei Beweisen knapper und formeller. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
 | Wächter der Glocke | Raubabsicht prüfen und Preis erzwingen. | Leise, knapp, prüfend; fragt nach Zweck und Preis. | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
 | Alena Staub | Fehlende Bücher und Archivspur kontrolliert öffnen. | Trocken, präzise, mit Pausen vor gefährlichen Namen. | [Alena Staub](../30-locations/dornfels/npcs/alena-staub/npc.md) |
+| Nolte am Tor | Kanalzugang und eigene Habe schützen, ohne sein Versteck zu verraten. | Spöttisch und kratzig; am Kanal sprunghaft und fahrig. | [Nolte am Tor](../30-locations/dornfels/npcs/nolte-am-tor/npc.md) |
 | Stammtisch der Alten | Plünderungsüberlieferung preisgeben oder verweigern. | Brüchig, überlagernd, spöttisch; Wichtiges langsam. | [Stammtisch der Alten](../30-locations/dornfels/npcs/stammtisch-der-alten/npc.md) |
 | Mira Seilern | Verschwundene als ausgenutzte Menschen bezeugen. | Leise, hart, genau; bei Mitleid kälter. | [Mira Seilern](../30-locations/dornfels/npcs/mira-seilern/npc.md) |
 

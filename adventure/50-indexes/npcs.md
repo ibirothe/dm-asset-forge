@@ -15,5 +15,5 @@ Kurze Tischkontexte, keine zweite Kanonquelle. `Immediate intent` nennt die unmi
 | npc-timo-netzflicker | Timo Netzflicker | ready | loc-dornfels | Kennt Kanalränder und kann einen verdeckten Turmzugang eröffnen. | [Timo Netzflicker](../30-locations/dornfels/npcs/timo-netzflicker/npc.md) |
 | npc-rena-falk | Rena Falk | ready | loc-dornfels | Hält Ordnung, erschwert Diebstahl und kann mit Beweisen gegen den Baron kippen. | [Rena Falk](../30-locations/dornfels/npcs/rena-falk/npc.md) |
 | npc-alena-staub | Alena Staub | ready | loc-dornfels | Führt zu fehlenden Büchern, Kataloglücken und Barons Archivspur. | [Alena Staub](../30-locations/dornfels/npcs/alena-staub/npc.md) |
-| npc-nolte-am-tor | Nolte am Tor | ready | loc-dornfels | Beobachtet Tor, Kanalrand und heimliche Abgänge, wenn man ihn respektiert. | [Nolte am Tor](../30-locations/dornfels/npcs/nolte-am-tor/npc.md) |
+| npc-nolte-am-tor | Nolte am Tor | ready | loc-dornfels | Blockiert aus verdeckter Eigenangst den Kanalzugang und kennt heimliche Abgänge. | [Nolte am Tor](../30-locations/dornfels/npcs/nolte-am-tor/npc.md) |
 | npc-mira-seilern | Mira Seilern | ready | loc-dornfels | Macht die verschwundenen Bergungsleute persönlich und kann öffentlich anklagen. | [Mira Seilern](../30-locations/dornfels/npcs/mira-seilern/npc.md) |
