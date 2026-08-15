@@ -4,8 +4,8 @@ Kurze Tischkontexte, keine zweite Kanonquelle. `Immediate intent` nennt die unmi
 
 | ID | Title | Status | Primary location | Immediate intent | Link |
 |---|---|---|---|---|---|
-| npc-baron-von-dornfels | Baron von Dornfels | draft | loc-dornfels | Hält den Fluchauftrag öffentlich aufrecht und verdeckt sein Goldinteresse. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
-| npc-waechter-der-glocke | Wächter der Glocke | draft | loc-alter-wachturm | Prüft Raubabsicht und erzwingt Kampf, Opfer oder Wiedergutmachung. | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
+| npc-baron-von-dornfels | Baron von Dornfels | draft | loc-dornfels | Nutzt das Läuten als Sicherheitssignal und erscheint zur anschließenden Goldbergung am Turm. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
+| npc-waechter-der-glocke | Wächter der Glocke | draft | loc-alter-wachturm | Reagiert veränderbar auf den Umgang mit Toten, Gold und Glocke und fordert einen sichtbaren Zweck. | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
 | npc-gerolt-eisenfaust | Gerolt Eisenfaust | ready | loc-dornfels | Schützt teure Waren und treibt eine zweifelhafte Schuld gegen Mira ein. | [Gerolt Eisenfaust](../30-locations/dornfels/npcs/gerolt-eisenfaust/npc.md) |
 | npc-liska-warenmass | Liska Warenmaß | ready | loc-dornfels | Verkauft Rationen, Heiltränke, Fackeln und Karte mit vorsichtigen Gerüchten. | [Liska Warenmaß](../30-locations/dornfels/npcs/liska-warenmass/npc.md) |
 | npc-jorek-malz | Jorek Malz | ready | loc-dornfels | Schützt die Schänke und entscheidet, ob der Stammtisch offen spricht. | [Jorek Malz](../30-locations/dornfels/npcs/jorek-malz/npc.md) |

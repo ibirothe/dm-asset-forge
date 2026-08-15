@@ -3,7 +3,7 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 12
+version: 14
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
@@ -34,12 +34,13 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Vorbereiteter Waldaufstieg: [Unwetter am Waldpfad](30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Dämmerung, Starkregen und geisterhafter Widerstand erschweren den nördlichen Anstieg.
 - Vorbereiteter Turmeinstieg: [Die gebrochene Schwelle](30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Leichnam, Auftragsrest des Barons und rostige Handaxt eröffnen Akt 3 mit belastbaren Spuren.
 - Vorbereitete Treppenvision: [Das Echo der Plünderung](30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Totgeweihter, verstreute Goldmünzen und Glockenläuten verbinden den historischen Raub mit dem sichtbaren Seilbruch.
+- Vorbereiteter Finaldruck: [Letzte Bergung](30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) — Läuten oder Erfolgsmeldung ruft den Baron zur Goldbergung; der Wächter kann den früheren Bergungsmann als erzwungenen Kämpfer erheben.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
 
-- [Baron von Dornfels](30-locations/dornfels/npcs/baron-von-dornfels/npc.md): öffentlicher Auftraggeber, der sein Goldinteresse verdeckt.
-- [Wächter der Glocke](30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md): gebundener Prüfer, der Kampf, Opfer oder Wiedergutmachung erzwingen kann.
+- [Baron von Dornfels](30-locations/dornfels/npcs/baron-von-dornfels/npc.md): nutzt den Fluchauftrag zur Gefahrenräumung und beansprucht die Glocke nach dem Läuten wegen ihres Goldwerts.
+- [Wächter der Glocke](30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md): gebundener Prüfer mit vier veränderbaren Reaktionszuständen auf Tote, Gold, Seil und Glocke.
 - [Alena Staub](30-locations/dornfels/npcs/alena-staub/npc.md): Bibliothekarin mit Zugang zu fehlenden Büchern und Barons Archivspur.
 - [Stammtisch der Alten](30-locations/dornfels/npcs/stammtisch-der-alten/npc.md): soziale Quelle der Plünderungsüberlieferung.
 - [Mira Seilern](30-locations/dornfels/npcs/mira-seilern/npc.md): trauernde Witwe und starker Zeugenpfad zu heimlichen Reichtumsversprechen.
@@ -93,7 +94,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ## Nächste sinnvolle Schritte
 
-1. Marktszene, Schmiedestreit, Bibliotheksszene, Kanalzugang, Kanalstrecke, Unwetter am Waldpfad, die gebrochene Schwelle und das erweiterte Echo der Plünderung am Tisch testen und danach bei Bedarf Schänke oder weitere Turmbereiche als einzelne Scenes vertiefen.
+1. Wächterreaktionen, eindeutige Bergungsbeweise, optionale Wiedererweckung und Barons Ankunft gemeinsam mit der Letzten Bergung am Tisch testen; danach Forderungen und Endzustände des Finales bei Bedarf weiter vertiefen.
 2. Optional ein player-facing Handout für Aushang oder Regionalkarte entwerfen und erst nach Freigabe schreiben.
 3. Vor Spieltermin Regelbasis, Safety, Barrierefreiheit und reale Materialien klären.
 4. Fachlichen Audit durchführen, wenn der Stand finalisiert werden soll.

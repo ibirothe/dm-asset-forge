@@ -3,16 +3,16 @@ id: scene-die-gebrochene-schwelle
 type: scene
 title: "Die gebrochene Schwelle"
 status: draft
-version: 1
+version: 3
 scope: local
 primary_location: "loc-alter-wachturm"
-participants: ["npc-waechter-der-glocke"]
+participants: ["npc-waechter-der-glocke", "cre-wiedererweckter-bergungsmann"]
 related_threads: ["plot-fluch-oder-gier"]
 danger: significant
 tags: [tower-entrance, recovery-team, baron-evidence, rusty-handaxe]
 themes: [abandonment, fear, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Die gebrochene Schwelle
@@ -37,22 +37,26 @@ Der engste sichere Durchgang führt dicht am Leichnam vorbei. Wer ihn untersucht
 ## Environment and opportunities
 
 - Gebrochener Absatz: niedriger Schutzraum mit Kratzspuren an der Innenseite; der Tote hat sich bewusst hineingezwängt und wurde nicht lediglich von Trümmern bedeckt.
-- Auftragsreste: In einer verrotteten Innentasche liegen ein wasserfleckiger Zettelrest mit dem Siegel des Barons und lesbaren Bruchstücken wie „Glocke sichern“, „Stillschweigen“ und „Zahlung bei Übergabe“.
+- Bergungsgurt und Hebezeugmarken: Ein breiter Arbeitsgurt trägt Abrieb von Seilen und Haken; eingeritzte Markierungen dienen der Abschätzung von Last und Gewicht. Zusammen mit der Handaxt ist dies Ausrüstung zum Lösen und Abtransportieren eines schweren Gegenstands.
+- Bergungsanweisung: In einer verrotteten Innentasche liegt ein wasserfleckiger, aber ausreichend lesbarer Zettel mit dem Siegel des Barons. Er nennt „Bergungstrupp“, „Gewicht der Glocke feststellen“, „Glocke sichern“, „Stillschweigen“ und „Zahlung nach Übergabe an das Haus Dornfels“.
 - Vorschussmünze: Eine einzelne hochwertige Münze im Stoffbeutel trägt dasselbe herrschaftliche Zeichen wie der Auftragsrest und passt zu den in Dornfels erwähnten Reichtumsversprechen.
 - Rostige Handaxt: Sie liegt fest in der knöchernen Hand. Die Schneide ist schartig, der Stiel aufgequollen; sie kann noch als Hebel, Keil oder notdürftiges Werkzeug dienen, ist als verlässliche Waffe aber fragwürdig.
 - Weiterführende Spuren: Schleifspuren und abgebrochene Holzfasern führen tiefer in den Turm, während rußige Wächterzeichen oberhalb des Verstecks unberührt geblieben sind.
+- Nekromantische Bindung: Schwarze Wachsspuren oberhalb des Absatzes können sich mit den Knochen verbinden. Der Wächter kann den Toten als [Wiedererweckten Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md) erheben, wenn bewusste Gewalt oder erzwungene Bergung ihn feindselig macht.
 
 ## Discoverable information
 
-- [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md): Arbeitskleidung, Werkzeug, Vorschussmünze und der auf die Glocke gerichtete Auftrag zeigen, dass der Tote nicht zufällig verschwand, sondern Teil einer vorbereiteten Bergung war.
-- [Barons Auftrag ist irreführend](../../../dornfels/information/barons-auftrag-ist-irrefuehrend/information.md): Siegel, Stillschweigeklausel und Zahlungsversprechen belegen einen geheimen Bergungsauftrag, der der öffentlichen Flucherzählung widerspricht.
+- [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md): Der ausdrückliche Begriff „Bergungstrupp“, Gurt, Hebezeugmarken, Vorschuss und Auftrag zur Sicherung der Glocke machen die Rolle des Toten eindeutig.
+- [Barons Auftrag ist irreführend](../../../dornfels/information/barons-auftrag-ist-irrefuehrend/information.md): Siegel, Gewichtsschätzung, Stillschweigen und Zahlung nach Übergabe belegen, dass der Baron die Glocke bereits vor dem öffentlichen Auftrag bergen lassen wollte.
 - Die Schutzstellung unter dem Absatz zeigt Angst vor etwas im Turm, beweist aber weder, was der Tote sah, noch wodurch er starb.
 
 ## Possible transitions
 
 - Sorgfältig untersucht: Die Gruppe kann Auftragsrest und Münze als Beweise sichern und erkennt den Toten als ausgebeuteten Bergungsmann. Bibliothek, Krypta, Katakomben und Glockenraum bleiben gleichwertig erreichbar.
-- Würdevoll behandelt: Wird der Körper geschützt, zugedeckt oder für eine spätere Bestattung markiert, lässt der unmittelbare Druck kurz nach; dies ist ein erstes Zeichen für die Prüfung des Wächters, aber noch keine automatische Zustimmung.
-- Handaxt geborgen: Die Gruppe erhält einen brüchigen Hebel oder Keil. Grober Einsatz kann den Stiel brechen, Lärm verursachen oder lose Steine aus der Schwelle lösen.
+- Würdevoll behandelt: Wird der Körper geschützt, zugedeckt oder für eine spätere Bestattung markiert, beginnt der [Wächter](../../npcs/waechter-der-glocke/npc.md) bei seinem nächsten deutlichen Auftreten eher zugewandt statt nur prüfend; dies ist noch keine automatische Zustimmung.
+- Handaxt geborgen: Die Gruppe erhält einen brüchigen Hebel oder Keil. Nutzung als Werkzeug oder Beweissicherung wertet der Wächter neutral; angekündigter Verkauf oder Trophäenraub macht ihn abweisender. Grober Einsatz kann zusätzlich den Stiel brechen, Lärm verursachen oder lose Steine aus der Schwelle lösen.
+- Leichnam geplündert oder entwürdigt: Der Wächter beginnt mindestens abweisend und lässt Stimmen die Handlung wiederholen. Rückgabe, Schutz des Körpers oder spätere Rettung eines Gefährdeten kann den Zustand wieder verändern.
+- Nekromantisch erhoben: Schwarzes Wachs zieht die Knochen zusammen und der Wiedererweckte sperrt mit der Handaxt die Schwelle. Die Auftragsbeweise fallen sichtbar aus der Tasche und bleiben erreichbar. Kampf, Schutz des Leichnams, Unterbrechung der Wachsfäden, Umstimmung des Wächters oder Rückzug sind mögliche Übergänge.
 - Hastig passiert: Der weitere Weg bleibt offen, doch die direkten Beweise gegen den Baron und für den Bergungstrupp werden zunächst verpasst. Dornfelser Zeugnisse und weitere Turmspuren bleiben als Auffangwege erhalten.
 - Rückzug: Gesicherte Beweise können nach Dornfels gebracht werden; während der Verzögerung kann der Baron den Turmzugang überwachen oder einen weiteren Bergungsversuch beschleunigen.
 
@@ -62,4 +66,5 @@ Der engste sichere Durchgang führt dicht am Leichnam vorbei. Wer ihn untersucht
 - Opferzusammenhang: [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md)
 - Auftraggeberspur: [Barons Auftrag ist irreführend](../../../dornfels/information/barons-auftrag-ist-irrefuehrend/information.md)
 - Unsichtbarer Prüfer: [Wächter der Glocke](../../npcs/waechter-der-glocke/npc.md)
+- Erzwungener Kämpfer: [Wiedererweckter Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md)
 - Plotdruck: [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md)

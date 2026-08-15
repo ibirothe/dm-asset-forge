@@ -3,7 +3,7 @@ id: scene-echo-der-pluenderung
 type: scene
 title: "Das Echo der Plünderung"
 status: draft
-version: 2
+version: 3
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["fac-gefallene-von-der-glocke", "npc-waechter-der-glocke", "npc-totgeweihter"]
@@ -57,8 +57,8 @@ Die Vision ist gewaltvoll, laut und angsteinflößend. Plünderer brechen Türen
 
 ## Possible transitions
 
-- Münze aufgenommen: Die Berührung wird zum einzelnen hellen Klang, der in mächtiges Glockenläuten anschwillt. Die Gruppe erwacht gemeinsam auf der Treppe; in der Hand bleibt keine Münze, aber Gold, Banner und der Umgang mit dem Sterbenden bleiben erinnert.
-- Totgeweihter stirbt: Sein letzter Atemzug wird zum ersten Glockenschlag. Ob die Gruppe ihn begleitet, ignoriert oder seinen Tod beschleunigt hat, prägt die spätere Reaktion von Wächter und Gefallenen, ohne den weiteren Zugang zu blockieren.
+- Münze aufgenommen: Die Berührung wird zum einzelnen hellen Klang, der in mächtiges Glockenläuten anschwillt. Die Gruppe erwacht gemeinsam auf der Treppe; in der Hand bleibt keine Münze. Der [Wächter](../../npcs/waechter-der-glocke/npc.md) beurteilt nicht die Berührung allein, sondern ob sie als Ausweg, Untersuchung oder gieriger Zugriff erkennbar war.
+- Totgeweihter stirbt: Sein letzter Atemzug wird zum ersten Glockenschlag. Begleitung oder Schutz stimmt den Wächter eher zugewandt; bewusstes Töten macht ihn feindselig, bloße Überforderung oder erfolglose Hilfe dagegen nicht. Der weitere Zugang bleibt in jedem Fall offen.
 - Zeit gewonnen: Schutz, Trost oder Versorgung halten den Totgeweihten lange genug bei Bewusstsein, um mehrere Beobachtungen zu erhalten oder das Banner genauer zu betrachten. Danach kann die Gruppe bewusst eine Münze aufnehmen oder seinen unvermeidlichen Tod begleiten.
 - Gegenwart gehalten: Stimmen, Berührung, Handlauf und gezählte Stufen verhindern Trennung oder Sturz, beenden die Vision allein aber nicht. Sie erlauben der Gruppe, gemeinsam über den Umgang mit Zeuge und Gold zu entscheiden.
 - Rückzug oder gewaltsamer Bruch: Die Gruppe kann auf den unteren Absatz entkommen, bevor einer der Auslöser eintritt. Die Vision bleibt unvollständig und kehrt beim nächsten Aufstieg verkürzt mit Totgeweihtem und Münzen zurück; Archiv, Stammtisch und Glockenzeichen bleiben als andere Erkenntniswege offen.

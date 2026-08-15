@@ -3,26 +3,26 @@ id: npc-baron-von-dornfels
 type: npc
 title: "Baron von Dornfels"
 status: draft
-version: 3
+version: 4
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
 origin_location: unknown
-appearance_locations: []
+appearance_locations: ["loc-alter-wachturm"]
 factions: []
 influence: strong
 reach: local
 tags: [baron, patron, hidden-culprit]
 themes: [greed, public-authority]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Baron von Dornfels
 
 ## Table purpose
 
-Der Baron ist öffentlicher Auftraggeber und verdeckter Nutznießer des Fluchglaubens.
+Der Baron ist öffentlicher Auftraggeber, verdeckter Bergungsunternehmer und möglicher menschlicher Gegenspieler im Finale. Sein Auftrag benutzt das Läuten als Sicherheitssignal: Wenn die Glocke wieder klingt, hält er Wächter und Zugang für ausreichend neutralisiert, um ihren Goldwert selbst zu beanspruchen.
 
 ## First impression
 
@@ -45,10 +45,11 @@ Baron von Dornfels, Aussteller des [Aushangs](../../objects/aushang-des-barons/o
 <!-- Primären, aktuellen, ursprünglichen und weitere Auftrittsorte relativ verlinken. -->
 
 - Primary location: [Dornfels](../../location.md)
+- Appearance: [Alter Wachturm](../../../alter-wachturm/location.md). Beim Läuten, nach Nachricht eines Beobachters oder beim vorbereiteten nächsten Bergungsversuch erscheint er mit wenigen Wachen und Bergungsgerät im Finale der [Letzten Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md).
 
 ## Motivation
 
-Er will den Goldwert der Glocke sichern oder wenigstens verhindern, dass seine heimlichen Bergungsversuche bekannt werden.
+Er will die Glocke wegen ihres Materialwerts in seinen Besitz bringen. Solange der Turm gefährlich ist, sollen bezahlte Gruppen Wächter, Wege und Seil prüfen; danach beruft er sich auf Herrschaftsrecht und die Eigentumsklausel des Aushangs, um die Glocke selbst bergen zu lassen.
 
 ## Fear and pressure
 
@@ -56,7 +57,7 @@ Er fürchtet öffentliche Entlarvung, den Verlust seiner Autorität und dass die
 
 ## Resources and leverage
 
-Belohnung, Wachen, Zugang zu Verwaltung und Bibliothek, öffentliches Vertrauen und die Fähigkeit, Aberglauben als Ablenkung zu nutzen.
+Belohnung, Wachen, Bergungsgerät, Beobachter an den Turmwegen, Zugang zu Verwaltung und Bibliothek, öffentliches Vertrauen und die Fähigkeit, Aberglauben als Ablenkung sowie Herrschaftsrecht als Besitzanspruch zu nutzen.
 
 ## Knowledge
 
@@ -74,6 +75,7 @@ Belohnung, Wachen, Zugang zu Verwaltung und Bibliothek, öffentliches Vertrauen 
 ### Secrets
 
 - Hat heimlich Bewohner Dornfels' mit Reichtum zum Bergungsversuch bewegt: [info-verschwundene-bergungsleute](../../../alter-wachturm/information/verschwundene-bergungsleute/information.md).
+- Das geforderte Läuten ist für ihn kein Beweis einer moralischen Lösung, sondern das vereinbarte öffentliche Erfolgskriterium und ein weithin hörbares Signal, dass die eigentliche Goldbergung beginnen kann.
 
 ## Relationships
 
@@ -84,12 +86,12 @@ Belohnung, Wachen, Zugang zu Verwaltung und Bibliothek, öffentliches Vertrauen 
 ## Likely behavior
 
 - Wenn unterstützt: Gibt Belohnung und Auftrag schnell frei, vermeidet Details zur Bibliothek und drängt zum Läuten.
-- Wenn unter Druck: Verlangt Beweise, beschuldigt Aberglauben oder Einzelpersonen und versucht Zeugen zu kontrollieren.
-- Wenn ignoriert: Sucht neue Bergungsleute oder lässt Zugänge zum Turm beobachten.
+- Wenn unter Druck: Behauptet, die Glocke und jedes Turminventar gehörten rechtmäßig dem Haus Dornfels, verlangt Beweise und versucht Zeugen oder Fundstücke zu kontrollieren.
+- Wenn ignoriert: Lässt die Zugänge beobachten und erscheint nach Läuten, Erfolgsmeldung oder zum nächsten vorbereiteten Bergungsversuch mit Wachen am Turm.
 
 ## Hooks and consequences
 
-Wird er früh entlarvt, kann der Turm trotzdem aufgelöst werden, aber Dornfels wird politisch instabil. Bleibt er unentdeckt, kann er jedes Ergebnis als heldische Lösung oder Fluchbestätigung umdeuten.
+Wird er früh entlarvt, kann der Turm trotzdem aufgelöst werden, aber Dornfels wird politisch instabil. Bleibt er unentdeckt, tritt er nach dem Sicherheitssignal als scheinbar rechtmäßiger Eigentümer auf und versucht, die Glocke übernehmen zu lassen. Ohne Läuten kann sein planmäßiger nächster Bergungsversuch dieselbe Konfrontation auslösen.
 
 ## Visuals
 

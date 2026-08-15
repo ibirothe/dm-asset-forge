@@ -21,7 +21,7 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 | Akt 1: Dornfels | 30-45 Min. | Gruppe kennt Auftrag, kann Ausrüstung wählen und mindestens zwei Hinweise anstoßen. | NPCs vorstellen, Gerüchte, Krämer, [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), Bibliothek, Schänke. | [Dornfels](../30-locations/dornfels/location.md) |
 | Akt 2: Wald/Kanalisation | 30 Min. | Route ist gewählt, Unwetter, kleiner Kampf, Rattenkontakt oder Umgehung ist aufgelöst, Wächter wird vorgeahnt. | [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md), kleiner Kampf, Wächterspuren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md), [Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) mit Totgeweihtem, Münzauslöser und sichtbarem Seilbruch, Turmbibliothek, Glockenraum, Krypta, Katakomben, Siegelkammer. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
-| Akt 4: Finale | offen | Entscheidung über Glocke, Baron, Wächter und Gefallene fällt. | Wahrheit, Entscheidung, Endkampf oder Opfer, Epilog. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Akt 4: Finale | offen | Entscheidung über Glocke, Baron, Wächter und Gefallene fällt. | Wächterzustand bestimmen; Läuten, Beobachter oder Zeitplan bringt den Baron zur Goldbergung; Wahrheit, Entscheidung, Kampf oder Preis, Epilog. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 ## Einstiegsoptionen
 
@@ -38,7 +38,7 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 | Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Marktszene, Krämer, [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), Bibliotheksszene, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter, Zeugen werden vorsichtiger oder der Schmiedestreit wird Marktgerücht. | [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) |
 | Akt 2 / Route | Gruppe entscheidet über Wald/Pilgerstraße oder Kanal und erhält Wächterspuren. | Waldaufstieg sichern, Schutz suchen, einen Hangumweg wählen, schleichen, kämpfen, mit Nolte verhandeln, Ratten umgehen, Magie oder Karte nutzen. | Nutze das [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), den [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), [Ratten im Kanal](../30-locations/zugaenge-zum-wachturm/encounters/ratten-im-kanal/encounter.md), den kleinen Kampf oder eine Spur als Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Akt 3 / Turm | Gruppe kann Bergungsspuren, historische Erinnerung, Glocke, Seil, Wächter und Gefallene beeinflussen. | Gebrochene Schwelle untersuchen oder passieren, den Totgeweihten befragen oder begleiten, eine Münze aufnehmen und Turmbereiche nach Spielerfokus öffnen oder bündeln. | Ungesicherte Beweise verfallen, die Vision trennt oder verängstigt die Gruppe, der Wächter reagiert auf ihren Umgang mit Zeuge und Gold oder der Baron setzt einen weiteren Bergungsimpuls. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
-| Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Entlarvung, Beschwichtigung, Endkampf, Opfer oder bewusst offener Rest. | Letzten Bergungsdruck sichtbar machen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Wächter durch Zweck und Handlung öffnen, umgehen, bekämpfen oder einen Preis verhandeln; Entlarvung, Beschwichtigung oder bewusst offener Rest bleiben möglich. | Wächterzustand sichtbar verschärfen und letzten Bergungsdruck auslösen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes. Ordne sie neu, lasse sie überlappen oder überspringe sie, wenn Spielerentscheidungen die Situation verändern.
 
@@ -48,13 +48,13 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 |---|---|---|---|---|
 | Ende Akt 1 | Ausrüstung gewählt und mindestens zwei Hinweise sind begonnen. | [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), [Bibliotheksszene](../30-locations/dornfels/scenes/bibliotheksszene/scene.md) oder Schänkenüberlieferung anbieten. | Schmiedediebstahl, Borins Zusatzbeobachtung oder Krämerkarte als Zusatzhebel zulassen. | [Dornfels](../30-locations/dornfels/location.md) |
 | Ende Akt 2 | Route ist entschieden und Wächter ist vorgeahnt. | Unwetter als kurze Hindernismontage führen, Nolte-Konflikt kurz entscheiden, Ratten nur als Preis oder Spur zeigen und Wächterzeichen deutlich präsentieren. | Im Wald Schutz oder Hangumweg belohnen, Kanalzugang ruhig lösen, Ratten umgehen lassen oder eine Routenspur als Vorteil im Turm gewähren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Vor Akt 4 | Zwei zentrale Wahrheiten plus Wächterrolle sind zugänglich oder ein Auffangweg ist bereit. | Visionäres Läuten mit dem sichtbaren Seilbruch verbinden oder einen Clue-Matrix-Pfad anderer Unabhängigkeitsgruppe nutzen. | Optional den Totgeweihten länger befragen oder Krypta, Katakomben und Siegelkammer vertiefen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Vor Akt 4 | Zwei zentrale Wahrheiten plus Wächterrolle sind zugänglich; bisheriger Umgang mit Toten, Gold und Seil ergibt einen Startzustand. | Visionäres Läuten mit dem sichtbaren Seilbruch verbinden; Wächter im Zweifel prüfend beginnen lassen. | Konsequenzen früher Handlungen ansprechen oder Krypta, Katakomben und Siegelkammer vertiefen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 ## Später Druck
 
 | Auslöser | Sichtbarer Zustandswechsel | Erhaltene Entscheidungen | Quelle |
 |---|---|---|---|
-| Zeitdruck, Zögern oder öffentliche Konfrontation | Baron lässt eine weitere Neumond-Bergung vorbereiten oder Turmzugänge sichern. | Beweise sichern, Bergung verhindern, Zeugen mobilisieren oder Turm umgehen. | [Fluch oder Gier](../20-plot/threads/fluch-oder-gier/plot-thread.md) |
+| Läuten, Beobachtermeldung, Zeitdruck oder öffentliche Konfrontation | Baron erscheint mit Wachen und Bergungsgerät am Turm und beansprucht Glocke sowie Funde als Eigentum seines Hauses. | Beweise zeigen, Wachen überzeugen, Bergung verhindern, Anspruch öffentlich machen, mit Wächter verhandeln oder Turm verlassen. | [Fluch oder Gier](../20-plot/threads/fluch-oder-gier/plot-thread.md) |
 
 ## Sichere Kürzungen
 
@@ -66,7 +66,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 
 ## Finale-Auslöser
 
-- Spätestmöglicher sinnvoller Auslöser: Der nächste Neumond-Bergungsversuch, der Wächter in der Siegelkammer oder eine Turmsicherung des Barons wird sichtbar.
+- Spätestmöglicher sinnvoller Auslöser: Läuten, eine Beobachtermeldung oder der nächste Neumond-Bergungsversuch bringt den Baron zum Turm; alternativ stellt der Wächter die Gruppe in der Siegelkammer vor seine Forderung.
 - Erforderlicher Zustand vor dem Auslöser: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
 - Sichtbarer Druck: [Offene Plot-Threads](../50-indexes/open-threads.md)
 

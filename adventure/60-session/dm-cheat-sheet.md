@@ -35,8 +35,8 @@ Indexroute: [NPC-Index](../50-indexes/npcs.md).
 
 | NPC | Unmittelbare Absicht | Stimmhinweis | Quelle |
 |---|---|---|---|
-| Baron von Dornfels | Goldinteresse und heimliche Bergungen verdecken. | Ruhig, herrschaftlich; bei Beweisen knapper und formeller. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
-| Wächter der Glocke | Raubabsicht prüfen und Preis erzwingen. | Leise, knapp, prüfend; fragt nach Zweck und Preis. | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
+| Baron von Dornfels | Läuten als Sicherheitssignal nutzen und anschließend die goldene Glocke beanspruchen. | Ruhig, herrschaftlich; am Turm spricht er von Eigentum, Gewicht und Übergabe. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
+| Wächter der Glocke | Absicht prüfen, auf bisheriges Verhalten reagieren und einen sichtbaren Zweck fordern. | Leise, knapp; fragt: „Was nehmt ihr? Was lasst ihr? Wer trägt die Schuld?“ | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
 | Totgeweihter | Goldraub und Banner bezeugen, bevor die Erinnerung seinen Tod vollendet. | Heiser, abgerissen; Beobachtungen zwischen langen Atempausen. | [Totgeweihter](../30-locations/alter-wachturm/npcs/totgeweihter/npc.md) |
 | Gerolt Eisenfaust | Schuldforderung kontrollieren und Schmiedewaren schützen. | Knapp und trocken; bei Widerspruch sehr höflich. | [Gerolt Eisenfaust](../30-locations/dornfels/npcs/gerolt-eisenfaust/npc.md) |
 | Alena Staub | Fehlende Bücher und Archivspur kontrolliert öffnen. | Trocken, präzise, mit Pausen vor gefährlichen Namen. | [Alena Staub](../30-locations/dornfels/npcs/alena-staub/npc.md) |
@@ -61,6 +61,19 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 - Aktiver Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — Baron sucht weitere Neumond-Bergung oder kontrolliert Turmzugänge.
 - Nächste sichtbare Veränderung: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — ein weiterer Bergungstrupp, gesicherter Zugang oder Wächterforderung.
 - Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — Zeitdruck, öffentliche Konfrontation oder Zögern.
+- Menschlicher Finaldruck: [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) — Läuten, Beobachtermeldung oder Zeitplan bringt ihn mit Wachen und Bergungsgerät zum Turm.
+- Optionaler Kampf: [Wiedererweckter Bergungsmann](../30-locations/alter-wachturm/creatures/wiedererweckter-bergungsmann/creature.md) — feindseliger Wächter erhebt den Leichnam; Wachsfäden, Schutz, Absichtswechsel und Rückzug bleiben Alternativen.
+
+### Wächterreaktion
+
+| Zustand | Schnellzeichen | Nächster Druck |
+|---|---|---|
+| Zugewandt | Offene Wege, vollständige Sätze | Konkreten Schutz- oder Wiedergutmachungsschritt benennen lassen. |
+| Prüfend | Kälte an Händen, drei Fragen | Zweck, Grenze und Verantwortung sichtbar machen lassen. |
+| Abweisend | Türen schließen, Seil weicht zurück | Beute ablegen, Beweise schützen oder Rückzug wählen lassen. |
+| Feindselig | Feste Aschegestalt, gefährliche Zugänge | Bergung stoppen; Rettung, Wiedergutmachung, Aufgabe oder Kampf bleiben offen. |
+
+Auslöser und Zustandswechsel: [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md).
 
 ## Sichere Kürzungen
 

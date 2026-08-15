@@ -3,7 +3,7 @@ id: obj-aushang-des-barons
 type: object
 title: "Aushang des Barons"
 status: draft
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -18,7 +18,7 @@ accessibility: open
 tags: [notice, reward, hook]
 themes: [public-story, misdirection]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Aushang des Barons
@@ -29,11 +29,11 @@ Der Aushang ist der sichtbare Startimpuls und die erste manipulierte Quelle des 
 
 ## Appearance
 
-Offizielles Pergament mit Siegel des Barons, hoher Belohnung und klarer Bitte: Turm betreten, Glocke wieder läuten lassen, Fluch brechen.
+Offizielles Pergament mit Siegel des Barons, hoher Belohnung und klarer Bitte: Turm betreten, Glocke wieder läuten lassen, Fluch brechen. Im formellen Kleindruck verbleiben Glocke und sämtliche wertvollen Funde im Eigentum des Hauses Dornfels.
 
 ## Context and origin
 
-Der Aushang stammt aus Dornfels und steht im Dienst der öffentlichen Erzählung. Er nennt die Gefahr, aber nicht den Goldwert, die Bibliotheksfunde oder die heimlichen Bergungsversuche.
+Der Aushang stammt aus Dornfels und steht im Dienst der öffentlichen Erzählung. Er nennt die Gefahr, aber nicht den Goldwert, die Bibliotheksfunde oder die heimlichen Bergungsversuche. Das Läuten dient dem Baron zugleich als öffentliches Erfolgskriterium und weithin hörbares Signal, dass der Turm für seine nachfolgende Bergung hinreichend sicher sein könnte.
 
 ## Location, ownership, and components
 
@@ -48,7 +48,7 @@ Ohne Voraussetzung auf dem Marktplatz sichtbar. Umstehende Gespräche liefern so
 
 ## Properties
 
-Öffentlich, autoritativ und bewusst unvollständig. Die Wortwahl macht das Läuten der Glocke zur scheinbaren Lösung.
+Öffentlich, autoritativ und bewusst unvollständig. Die Wortwahl macht das Läuten der Glocke zur scheinbaren Lösung; die Eigentumsklausel sichert dem Baron bereits vorab den Zugriff auf ihren Materialwert.
 
 ## Uses and leverage
 

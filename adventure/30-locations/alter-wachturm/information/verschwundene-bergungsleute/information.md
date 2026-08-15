@@ -3,7 +3,7 @@ id: info-verschwundene-bergungsleute
 type: information
 title: "Verschwundene Bergungsleute"
 status: draft
-version: 6
+version: 7
 scope: local
 truth_status: established
 confidence: corroborated
@@ -15,7 +15,7 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [missing-people, secret-recruitment]
 themes: [greed, victims]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Verschwundene Bergungsleute
@@ -36,7 +36,8 @@ Etabliert. Die genaue Art jedes furchtbaren Schicksals bleibt offen genug, um am
 - [Dornfels](../../../dornfels/location.md): [Mira Seilern](../../../dornfels/npcs/mira-seilern/npc.md), [Borin Karrenschieber](../../../dornfels/npcs/borin-karrenschieber/npc.md), weitere Marktzeugen, der Baron und städtische Spuren können die Anwerbung politisch und persönlich verorten.
 - [Schmiedestreit](../../../dornfels/scenes/schmiedestreit/scene.md): Gerolts Forderung nach angeblich unbezahlten Waren und Miras Wut machen Ausrüstung, Schuldumkehr und jüngere Vorbereitung sichtbar.
 - [Alter Wachturm](../../location.md): zurückgelassene Werkzeuge, persönliche Zeichen und Spuren unvorbereiteter Bergungsversuche.
-- [Die gebrochene Schwelle](../../scenes/die-gebrochene-schwelle/scene.md): Ein unter einem Mauerabsatz versteckter Leichnam trägt Arbeitsausrüstung, Vorschussmünze und einen auf die Glocke gerichteten Auftragsrest.
+- [Die gebrochene Schwelle](../../scenes/die-gebrochene-schwelle/scene.md): Ein unter einem Mauerabsatz versteckter Leichnam trägt einen Bergungsgurt, Hebezeugmarken, Vorschussmünze und eine versiegelte Anweisung zur Sicherung, Gewichtsschätzung und Übergabe der Glocke.
+- [Wiedererweckter Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md): Wird der Leichnam erhoben, bleiben Arbeitsgurt, Münze und Anweisung sichtbar und können auch unter Druck gesichert werden.
 - [Baron von Dornfels](../../../dornfels/npcs/baron-von-dornfels/npc.md): Druck oder Belege können seine Kenntnis der angeworbenen Personen zeigen.
 
 ## Preconditions
@@ -45,7 +46,7 @@ Vertrauen in Dornfels, Untersuchung im Turm oder wirksamer Druck gegen den Baron
 
 ## Presentation clues
 
-Halbe Versprechen von Reichtum, fehlende Ausrüstung zu Hause, gleiche Zielrichtung zum Turm, Schmiedeschulden, ein versteckter Leichnam mit Vorschuss oder Werkspuren statt zufälliger Verschleppung.
+Halbe Versprechen von Reichtum, fehlende Ausrüstung zu Hause, gleiche Zielrichtung zum Turm, Schmiedeschulden, Bergungsgurt und Hebezeugmarken sowie eine versiegelte Anweisung mit Gewichtsschätzung, Übergabe und Vorschuss.
 
 ## Interpretation risks
 

@@ -3,7 +3,7 @@ id: obj-goldene-glocke
 type: object
 title: "Goldene Glocke"
 status: draft
-version: 2
+version: 3
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -51,7 +51,7 @@ Sie kann wieder läuten, wenn das Seil ersetzt oder ein anderer plausibler Mecha
 
 ## Uses and leverage
 
-Als Beweis gegen den Baron, als Fokus für Verhandlung mit den [Gefallenen](../../../../40-global/factions/gefallene-von-der-glocke/faction.md), als Mahnmal oder als gefährlicher Schatz.
+Als Beweis gegen den Baron, als Fokus für Verhandlung mit den [Gefallenen](../../../../40-global/factions/gefallene-von-der-glocke/faction.md), als Mahnmal oder als gefährlicher Schatz. Der Baron beansprucht sie über den [Aushang](../../../dornfels/objects/aushang-des-barons/object.md) als Eigentum seines Hauses, weil ihr Goldwert seine bisherigen Verluste und Verbrechen für ihn rechtfertigt.
 
 ## Risks and costs
 

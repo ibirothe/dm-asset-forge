@@ -3,7 +3,7 @@ id: info-barons-auftrag-ist-irrefuehrend
 type: information
 title: "Barons Auftrag ist irreführend"
 status: draft
-version: 5
+version: 6
 scope: local
 truth_status: established
 confidence: supported
@@ -15,14 +15,14 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [misdirection, patron]
 themes: [hidden-crime, public-story]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Barons Auftrag ist irreführend
 
 ## Statement
 
-Der öffentliche Auftrag des Barons verschweigt, dass er die Glocke wegen ihres Goldwerts bergen lassen will und den Fluchglauben als Ablenkung nutzt.
+Der öffentliche Auftrag des Barons verschweigt, dass er die Glocke wegen ihres Goldwerts besitzen und bergen lassen will. Das geforderte Läuten soll nicht nur den Fluch scheinbar brechen, sondern als Erfolgskriterium und weithin hörbares Sicherheitssignal den Weg für seine eigentliche Bergungsmannschaft öffnen.
 
 ## Truth and limits
 
@@ -33,11 +33,12 @@ Etabliert. Der Baron ist nicht nur besorgter Auftraggeber. Offen bleibt, wie vie
 <!-- Orte, Akteure, Objects, Handouts oder Situationen relativ verlinken und pro Pfad nur Zugang und Präsentation beschreiben. Die Aussage selbst bleibt ausschließlich unter Statement kanonisch. -->
 
 - Primary location: [Dornfels](../../location.md)
-- [Aushang des Barons](../../objects/aushang-des-barons/object.md): Wortwahl und Belohnung zeigen einen auffällig engen Fokus auf Läuten und Turmeintritt.
+- [Aushang des Barons](../../objects/aushang-des-barons/object.md): Wortwahl und Belohnung fokussieren das Läuten; eine kleingedruckte Eigentumsklausel beansprucht Glocke und wertvolle Funde für das Haus Dornfels.
 - [Baron von Dornfels](../../npcs/baron-von-dornfels/npc.md): Ausweichende Antworten zu Bibliothek, Goldwert und Neumond.
 - [Dornfels](../../location.md): [Mira Seilern](../../npcs/mira-seilern/npc.md), Marktzeugen und übersehene Beobachter berichten von heimlichen Reichtumsversprechen.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Bergungswerkzeug und Turmspuren widersprechen einem rein übernatürlichen Fluch.
-- [Die gebrochene Schwelle](../../../alter-wachturm/scenes/die-gebrochene-schwelle/scene.md): Siegelrest, Stillschweigen und Zahlungsversprechen am Leichnam belegen einen geheimen Bergungsauftrag des Barons.
+- [Die gebrochene Schwelle](../../../alter-wachturm/scenes/die-gebrochene-schwelle/scene.md): Die lesbare Bergungsanweisung nennt Gewichtsschätzung, Sicherung der Glocke, Stillschweigen und Zahlung nach Übergabe.
+- [Letzte Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md): Nach Läuten oder Erfolgsmeldung erscheint der Baron mit Wachen und Gerät, um seinen angeblichen Eigentumsanspruch durchzusetzen.
 
 ## Preconditions
 
@@ -45,7 +46,7 @@ Keine einzelne Voraussetzung. Mindestens ein Vergleich zwischen öffentlicher Er
 
 ## Presentation clues
 
-Überbetonte Belohnung, fehlende Warnung vor Bergung, Widerspruch zwischen öffentlicher Flucherzählung und konkreten Bergungsspuren, ein versiegelter geheimer Auftrag oder die nervöse Reaktion des Barons auf Bibliotheksfragen.
+Überbetonte Belohnung, Eigentumsklausel, fehlende Warnung vor der anschließenden Bergung, Widerspruch zwischen öffentlicher Flucherzählung und konkreten Bergungsspuren, eine versiegelte Anweisung zu Gewicht und Übergabe oder die vorbereitete Ankunft des Barons am Turm.
 
 ## Interpretation risks
 

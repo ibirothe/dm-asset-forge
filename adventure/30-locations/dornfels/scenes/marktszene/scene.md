@@ -3,7 +3,7 @@ id: scene-marktszene
 type: scene
 title: "Marktszene"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-dornfels"
 participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust"]
@@ -12,7 +12,7 @@ danger: limited
 tags: [market, opening, notice, witnesses]
 themes: [public-story, fear, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Marktszene
@@ -40,14 +40,14 @@ Der Aushang verspricht einfache Belohnung für eine scheinbar klare Aufgabe, abe
 
 ## Environment and opportunities
 
-- Aushangtafel: öffentlicher Text, Siegel und Wortwahl können geprüft, abgeschrieben oder als Anlass für Fragen genutzt werden.
+- Aushangtafel: Öffentlicher Text, Siegel und Wortwahl können geprüft oder abgeschrieben werden. Im formellen Kleindruck beansprucht das Haus Dornfels die Glocke und sämtliche wertvollen Funde; die hohe Belohnung gilt nur für Zugang, Fluchbruch und bestätigtes Läuten.
 - Marktstände: Vorräte, Kerzen, Fackeln, Karte und Schmiedewaren eröffnen Vorbereitung, Handel, Tausch, Ablenkung oder Diebstahl.
 - Gedränge: Beobachtung, leise Gespräche und Entkommen sind möglich, aber Rena und andere Zeugen merken sich auffälliges Verhalten.
 - Kanalkante und Seitengassen: Timo oder aufmerksame Figuren können einen späteren verdeckten Weg in Richtung Wachturm vorbereiten.
 
 ## Discoverable information
 
-- [Barons Auftrag ist irreführend](../../information/barons-auftrag-ist-irrefuehrend/information.md): Der Aushang fokussiert Läuten und Belohnung, während Zeugen von heimlichen Versprechen, Kisten oder nächtlichen Aufbrüchen sprechen.
+- [Barons Auftrag ist irreführend](../../information/barons-auftrag-ist-irrefuehrend/information.md): Der Aushang fokussiert Läuten und Belohnung, sichert wertvolle Funde aber dem Baron; Zeugen berichten ergänzend von heimlichen Versprechen, Kisten oder nächtlichen Aufbrüchen.
 - [Verschwundene Bergungsleute](../../../alter-wachturm/information/verschwundene-bergungsleute/information.md): Borin, Nele oder Timo können zeigen, dass die Verschwundenen vor ihrem Aufbruch einkauften, Werkzeuge bewegten oder sich ungewöhnlich verhielten.
 - [Verstummtes Seil](../../../alter-wachturm/information/verstummtes-seil/information.md): Die Frage, warum der Baron Läuten verlangt, aber keine technische Ursache nennt, kann als erster Widerspruch auffallen.
 - [Erste Spuren des Wächters](../../../zugaenge-zum-wachturm/information/erste-spuren-des-waechters/information.md): Timo oder die Regionalkarte können den Kanalrand, Grenzstein oder Waldweg als späteren Spurort vorbereiten, ohne den Wächter schon zu erklären.
