@@ -3,7 +3,7 @@ id: npc-waechter-der-glocke
 type: npc
 title: "Wächter der Glocke"
 status: draft
-version: 3
+version: 4
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -15,7 +15,7 @@ reach: local
 tags: [guardian, bell, bound-spirit]
 themes: [threshold, sacrifice, restitution]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Wächter der Glocke
@@ -45,6 +45,7 @@ In Dornfels wird er mit Dämon, Geist oder Turmfluch verwechselt. Tatsächlich i
 <!-- Primären, aktuellen, ursprünglichen und weitere Auftrittsorte relativ verlinken. -->
 
 - Primary location: [Alter Wachturm](../../location.md)
+- Im [Echo der Plünderung](../../scenes/echo-der-pluenderung/scene.md) hält er die Schwelle zwischen kollektiver Erinnerung und realer Treppe.
 - Appearance: [Zugänge zum Wachturm](../../../zugaenge-zum-wachturm/location.md) zeigen nur Spuren und Vorwarnungen.
 
 ## Motivation

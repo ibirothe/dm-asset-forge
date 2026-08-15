@@ -3,7 +3,7 @@ id: info-herkunft-der-glocke
 type: information
 title: "Herkunft der Glocke"
 status: draft
-version: 2
+version: 3
 scope: local
 truth_status: established
 confidence: corroborated
@@ -15,18 +15,18 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [bell-origin, stolen-gold]
 themes: [historical-guilt, restitution]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Herkunft der Glocke
 
 ## Statement
 
-Die Glocke wurde vor einem Jahrhundert aus dem gestohlenen Gold eines geplünderten Dorfes gegossen, um die Geister der gefallenen Dorfbewohner zu beschwichtigen.
+Die Glocke wurde vor einem Jahrhundert aus dem gestohlenen Gold eines geplünderten Dorfes gegossen, um die Geister der gefallenen Dorfbewohner zu beschwichtigen. In einer gebundenen Erinnerung tragen die Plünderer ein Banner, dessen Gestaltung dem heutigen Siegel des Barons deutlich ähnelt.
 
 ## Truth and limits
 
-Etabliert. Nicht festgelegt sind der Eigenname des geplünderten Dorfes und alle politischen Verantwortlichen des damaligen Raubs.
+Etabliert. Die sichtbare Ähnlichkeit des Banners ist kanonisch, beweist aber allein weder direkte Abstammung noch eine konkrete Rechtsnachfolge. Nicht festgelegt sind der Eigenname des geplünderten Dorfes und alle politischen Verantwortlichen des damaligen Raubs.
 
 ## Discovery points
 
@@ -37,6 +37,7 @@ Etabliert. Nicht festgelegt sind der Eigenname des geplünderten Dorfes und alle
 - [Fehlende Bücher der Plünderungszeit](../fehlende-buecher-der-pluenderungszeit/information.md): Die Lücken grenzen die relevante Epoche ein und zeigen, dass jemand den Archivpfad manipuliert hat.
 - [Überlieferung der Plünderung](../ueberlieferung-der-pluenderung/information.md): Der Stammtisch liefert eine mündliche Spur zur alten Schuld.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Glockenstube und Präsenz der Gefallenen bestätigen die Spur vor Ort.
+- [Das Echo der Plünderung](../../../alter-wachturm/scenes/echo-der-pluenderung/scene.md): Eine kollektive Vision zeigt Raub, zusammengetragenes Gold und das dem Baronssiegel ähnliche Banner.
 - [Goldene Glocke](../../../alter-wachturm/objects/goldene-glocke/object.md): Zeichen, Material und Reaktion der Gefallenen bestätigen die Bibliotheksspur.
 - [Gefallene von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): Erinnerungsbilder oder Forderungen können die Herkunft offenbaren.
 
@@ -46,11 +47,11 @@ Bibliothekszugang, Gespräch in der Schänke, Untersuchung der Glocke oder respe
 
 ## Presentation clues
 
-Alte Inventarnotizen, fehlende Bücher einer zusammenhängenden Epoche, uralte Erzählfragmente, ungewöhnlich hoher Goldwert, Namen oder Zeichen am Glockenrand, Kälte oder Stimmen bei respektloser Berührung.
+Alte Inventarnotizen, fehlende Bücher einer zusammenhängenden Epoche, uralte Erzählfragmente, eine gemeinsame Raubvision, ungewöhnlich hoher Goldwert, Namen oder Zeichen am Glockenrand, Kälte oder Stimmen bei respektloser Berührung.
 
 ## Interpretation risks
 
-Die Gruppe kann die Herkunft als reine Schatzinformation missverstehen und den Beschwichtigungszweck übersehen.
+Die Gruppe kann die Herkunft als reine Schatzinformation missverstehen, den Beschwichtigungszweck übersehen oder die Bannerähnlichkeit vorschnell als vollständigen Abstammungsbeweis behandeln.
 
 ## Consequences when learned
 

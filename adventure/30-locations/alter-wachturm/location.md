@@ -3,7 +3,7 @@ id: loc-alter-wachturm
 type: location
 title: "Alter Wachturm"
 status: draft
-version: 4
+version: 5
 scope: local
 parent_location: null
 function: resolution-site
@@ -12,7 +12,7 @@ accessibility: hidden
 tags: [tower, bell, forest-route, sewer-route]
 themes: [restless-dead, stolen-gold, choice]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Alter Wachturm
@@ -39,13 +39,12 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 ## Areas
 
 - Eingangshalle: Die [Gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md) zeigt den versteckten Leichnam eines früheren Bergungstrupps, Auftragsspuren des Barons und eine rostige Handaxt.
+- Treppenaufgang: Im [Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) erlebt die Gruppe gemeinsam den gewaltsamen Ursprung des Glockengolds und erkennt ein Banner mit Ähnlichkeiten zum Baronssiegel.
 - Turmbibliothek: Feuchte Regale, beschädigte Chroniken und Hinweise, die mit den Lücken in Dornfels korrespondieren.
 - Glockenraum: Standort der [Goldenen Glocke](objects/goldene-glocke/object.md), des durchtrennten Seils und der entscheidenden Konfrontation.
 - Krypta: Grab- und Namenraum, in dem Schuld und Opfer sichtbar werden.
 - Katakomben: Verbindungen zu Kanalanschluss, Rückzug und Spuren früherer Bergungsleute.
 - Siegelkammer: Ort der Grenze zwischen Wächter, Gefallenen und Glocke; hier kann Opfer, Schwur oder Wiedergutmachung die finale Lage verändern.
-
-- [Die gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md)
 
 ## Inhabitants
 
@@ -79,6 +78,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 
 - [Letzte Bergung](encounters/letzte-bergung/encounter.md)
 - [Die gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md) macht den Turmeinstieg, ein früheres Opfer und erste belastbare Bergungsspuren unmittelbar bespielbar.
+- [Das Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) legt beim Treppenaufgang eine kollektive, gewaltvolle Erinnerung über die reale Turmgeometrie.
 - Plotdruck: [Fluch oder Gier](../../20-plot/threads/fluch-oder-gier/plot-thread.md) erreicht hier die Entscheidung über Glocke, Baron und Gefallene.
 
 ## Connections

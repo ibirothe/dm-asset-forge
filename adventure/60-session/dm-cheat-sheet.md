@@ -14,6 +14,7 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 - Kanalstrecke: [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, frische Nordspur und verlorene Waffe geben der verdeckten Route Druck.
 - Waldaufstieg: [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Starkregen macht den Anstieg riskant und zeigt die abwehrende Präsenz des Wächters.
 - Turmschwelle: [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Versteckter Leichnam, Barons Auftragsspuren und Handaxt verbinden Opfer, Bergung und Auftraggeber.
+- Treppenvision: [Das Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Kollektive Gewalterinnerung zeigt geraubtes Gold und ein dem Baronssiegel ähnliches Banner.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -49,7 +50,7 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 | Schlussfolgerung | Unabhängige Pfade | Auffangweg | Quelle |
 |---|---|---|---|
 | Auftrag ist Vorwand | Aushang/Baron; Dornfelser Zeugen; Auftragsrest an der Schwelle | Dornfelser Zeugen oder Turmbeweis nachreichen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
-| Glocke ist Schuldgold | Bibliothekslücke; Schänkenüberlieferung; Glockenzeichen/Gefallene | Der jeweils andere Pfad bleibt erreichbar. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Glocke ist Schuldgold | Bibliothekslücke; Schänkenüberlieferung; Treppenvision; Glockenzeichen/Gefallene | Andere Archiv-, Erinnerungs- oder Turmpfade bleiben erreichbar. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Wächter ist gebunden | Pilgerstraße/Kanal; Turmzeichen | Route oder Turm kann nachliefern. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Seil wurde durchtrennt | Glockenstube; Barons Widerspruch | Direkte Turmuntersuchung bestätigt spät. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Verschwundene waren Bergungsleute | Dornfelser Zeugen; Schmiedestreit; Leichnam an der Schwelle | Baron unter Druck oder weitere Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |

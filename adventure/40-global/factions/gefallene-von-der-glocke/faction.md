@@ -3,7 +3,7 @@ id: fac-gefallene-von-der-glocke
 type: faction
 title: "Gefallene von der Glocke"
 status: draft
-version: 2
+version: 3
 scope: global
 related_locations: ["loc-alter-wachturm", "loc-dornfels"]
 influence: notable
@@ -11,7 +11,7 @@ reach: local
 tags: [restless-dead, bell, grievance]
 themes: [stolen-gold, unresolved-debt]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Gefallene von der Glocke
@@ -34,7 +34,7 @@ Keine Organisation im lebenden Sinn; sie wirken gebunden an [Alter Wachturm](../
 
 ## Locations and presence
 
-- [Alter Wachturm](../../../30-locations/alter-wachturm/location.md): stärkste Präsenz, besonders in der Glockenstube.
+- [Alter Wachturm](../../../30-locations/alter-wachturm/location.md): stärkste Präsenz, besonders in der Glockenstube und im [Echo der Plünderung](../../../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) am Treppenaufgang.
 - [Dornfels](../../../30-locations/dornfels/location.md): nur über Angst, Gerüchte, Schänkenüberlieferung und Folgen der verschwundenen Bergungsleute sichtbar.
 
 ## Resources and leverage

@@ -3,12 +3,12 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 10
+version: 11
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Die verstummte Glocke
@@ -33,6 +33,7 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Vorbereitete Kanalstrecke: [Kanalstrecke](30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, Nordspur und verlorene Waffe machen die verdeckte Route druckvoll.
 - Vorbereiteter Waldaufstieg: [Unwetter am Waldpfad](30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Dämmerung, Starkregen und geisterhafter Widerstand erschweren den nördlichen Anstieg.
 - Vorbereiteter Turmeinstieg: [Die gebrochene Schwelle](30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Leichnam, Auftragsrest des Barons und rostige Handaxt eröffnen Akt 3 mit belastbaren Spuren.
+- Vorbereitete Treppenvision: [Das Echo der Plünderung](30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Gewaltvolle gemeinsame Erinnerung zeigt den Raub des Glockengolds und ein dem Baronssiegel ähnliches Banner.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
@@ -92,7 +93,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ## Nächste sinnvolle Schritte
 
-1. Marktszene, Schmiedestreit, Bibliotheksszene, Kanalzugang, Kanalstrecke, Unwetter am Waldpfad und die gebrochene Schwelle am Tisch testen und danach bei Bedarf Schänke oder weitere Turmebenen als einzelne Scenes vertiefen.
+1. Marktszene, Schmiedestreit, Bibliotheksszene, Kanalzugang, Kanalstrecke, Unwetter am Waldpfad, die gebrochene Schwelle und das Echo der Plünderung am Tisch testen und danach bei Bedarf Schänke oder weitere Turmbereiche als einzelne Scenes vertiefen.
 2. Optional ein player-facing Handout für Aushang oder Regionalkarte entwerfen und erst nach Freigabe schreiben.
 3. Vor Spieltermin Regelbasis, Safety, Barrierefreiheit und reale Materialien klären.
 4. Fachlichen Audit durchführen, wenn der Stand finalisiert werden soll.
