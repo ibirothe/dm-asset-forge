@@ -3,7 +3,7 @@ id: info-verstummtes-seil
 type: information
 title: "Verstummtes Seil"
 status: draft
-version: 1
+version: 2
 scope: local
 truth_status: established
 confidence: confirmed
@@ -15,7 +15,7 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [bell-rope, sabotage]
 themes: [hidden-cause, repair]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Verstummtes Seil
@@ -35,15 +35,16 @@ Etabliert. Der genaue Täter des Schnitts bleibt im Erstlauf nicht als eigene Pe
 - Primary location: [Alter Wachturm](../../location.md)
 - [Goldene Glocke](../../objects/goldene-glocke/object.md): Faserreste, Schnittkante und fehlende Zugführung.
 - Glockenstube im [Alten Wachturm](../../location.md): Spuren eines hastigen Bergungsversuchs.
+- [Echo der Plünderung](../../scenes/echo-der-pluenderung/scene.md): Nach dem visionären Glockenläuten hängt der durchtrennte Seilrest vom Treppenaufgang aus sichtbar an der Zugmechanik; die reale Glocke bleibt stumm.
 - [Dornfels](../../../dornfels/location.md): Widerspruch zwischen Barons Forderung nach Läuten und fehlender technischer Erklärung.
 
 ## Preconditions
 
-Turmuntersuchung, Zugriff auf die Glockenstube oder gezielte Befragung zum ersten Bergungsversuch.
+Treppenaufgang nach Ende der Vision, Turmuntersuchung, Zugriff auf die Glockenstube oder gezielte Befragung zum ersten Bergungsversuch.
 
 ## Presentation clues
 
-Sauberer Schnitt statt natürlichem Verfall, alte Zugrille, abgebundene Faserreste, Werkspuren nahe der Glocke.
+Sauberer Schnitt statt natürlichem Verfall, schlaffes Seil am sichtbaren Mechanismus, alte Zugrille, abgebundene Faserreste und Werkspuren nahe der Glocke.
 
 ## Interpretation risks
 

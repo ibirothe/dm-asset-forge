@@ -3,14 +3,14 @@ id: info-herkunft-der-glocke
 type: information
 title: "Herkunft der Glocke"
 status: draft
-version: 3
+version: 4
 scope: local
 truth_status: established
 confidence: corroborated
 accessibility: limited
 primary_location: "loc-dornfels"
 discovery_locations: ["loc-dornfels", "loc-alter-wachturm"]
-known_by: ["npc-baron-von-dornfels"]
+known_by: ["npc-baron-von-dornfels", "npc-totgeweihter"]
 related_threads: ["plot-fluch-oder-gier"]
 tags: [bell-origin, stolen-gold]
 themes: [historical-guilt, restitution]
@@ -37,7 +37,8 @@ Etabliert. Die sichtbare Ähnlichkeit des Banners ist kanonisch, beweist aber al
 - [Fehlende Bücher der Plünderungszeit](../fehlende-buecher-der-pluenderungszeit/information.md): Die Lücken grenzen die relevante Epoche ein und zeigen, dass jemand den Archivpfad manipuliert hat.
 - [Überlieferung der Plünderung](../ueberlieferung-der-pluenderung/information.md): Der Stammtisch liefert eine mündliche Spur zur alten Schuld.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Glockenstube und Präsenz der Gefallenen bestätigen die Spur vor Ort.
-- [Das Echo der Plünderung](../../../alter-wachturm/scenes/echo-der-pluenderung/scene.md): Eine kollektive Vision zeigt Raub, zusammengetragenes Gold und das dem Baronssiegel ähnliche Banner.
+- [Das Echo der Plünderung](../../../alter-wachturm/scenes/echo-der-pluenderung/scene.md): Eine kollektive Vision zeigt Raub, verstreute und zusammengetragene Goldmünzen sowie das dem Baronssiegel ähnliche Banner.
+- [Totgeweihter](../../../alter-wachturm/npcs/totgeweihter/npc.md): Der sterbende Augenzeuge beschreibt die gezielte Goldsuche und die ordnende Funktion des Banners aus unmittelbarer Sicht.
 - [Goldene Glocke](../../../alter-wachturm/objects/goldene-glocke/object.md): Zeichen, Material und Reaktion der Gefallenen bestätigen die Bibliotheksspur.
 - [Gefallene von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): Erinnerungsbilder oder Forderungen können die Herkunft offenbaren.
 
@@ -47,7 +48,7 @@ Bibliothekszugang, Gespräch in der Schänke, Untersuchung der Glocke oder respe
 
 ## Presentation clues
 
-Alte Inventarnotizen, fehlende Bücher einer zusammenhängenden Epoche, uralte Erzählfragmente, eine gemeinsame Raubvision, ungewöhnlich hoher Goldwert, Namen oder Zeichen am Glockenrand, Kälte oder Stimmen bei respektloser Berührung.
+Alte Inventarnotizen, fehlende Bücher einer zusammenhängenden Epoche, uralte Erzählfragmente, die Aussage eines sterbenden Augenzeugen, verstreute Münzen in einer gemeinsamen Raubvision, ungewöhnlich hoher Goldwert, Namen oder Zeichen am Glockenrand, Kälte oder Stimmen bei respektloser Berührung.
 
 ## Interpretation risks
 

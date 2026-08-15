@@ -3,7 +3,7 @@ id: obj-goldene-glocke
 type: object
 title: "Goldene Glocke"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -18,7 +18,7 @@ accessibility: restricted
 tags: [bell, stolen-gold, relic]
 themes: [debt, remembrance, temptation]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 # Goldene Glocke
@@ -29,7 +29,7 @@ Die Glocke ist der materielle Kern der Entscheidung: Schatz, Beweis, Mahnmal, Be
 
 ## Appearance
 
-Eine schwere, dunkel angelaufene Glocke mit goldenen Rändern unter Ruß und Patina. Am Joch hängen Faserreste des durchtrennten Seils; feine Zeichen und Kerben wirken eher wie Namen als Schmuck.
+Eine schwere, dunkel angelaufene Glocke mit goldenen Rändern unter Ruß und Patina. Vom Treppenaufgang aus ist die Zugmechanik mit einem schlaff herabhängenden, sauber durchtrennten Seilende sichtbar; am Joch hängen weitere Faserreste. Feine Zeichen und Kerben wirken eher wie Namen als Schmuck.
 
 ## Context and origin
 
@@ -43,7 +43,7 @@ Vor einem Jahrhundert aus gestohlenem Gold eines geplünderten Dorfes gegossen. 
 
 ## Discoverability
 
-In der Glockenstube sichtbar, aber nicht ohne Risiko erreichbar. Wer sie untersucht, erkennt Wert, alte Beschwichtigungszeichen und neue Bergungsspuren.
+Die Zugmechanik und der Seilbruch sind bereits vom Treppenaufgang sichtbar; die Glocke selbst ist in der Glockenstube nicht ohne Risiko erreichbar. Wer sie näher untersucht, erkennt Wert, alte Beschwichtigungszeichen und neue Bergungsspuren.
 
 ## Properties
 

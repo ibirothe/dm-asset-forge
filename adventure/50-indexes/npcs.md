@@ -17,3 +17,4 @@ Kurze Tischkontexte, keine zweite Kanonquelle. `Immediate intent` nennt die unmi
 | npc-alena-staub | Alena Staub | ready | loc-dornfels | Führt zu fehlenden Büchern, Kataloglücken und Barons Archivspur. | [Alena Staub](../30-locations/dornfels/npcs/alena-staub/npc.md) |
 | npc-nolte-am-tor | Nolte am Tor | ready | loc-dornfels | Blockiert aus verdeckter Eigenangst den Kanalzugang und kennt heimliche Abgänge. | [Nolte am Tor](../30-locations/dornfels/npcs/nolte-am-tor/npc.md) |
 | npc-mira-seilern | Mira Seilern | ready | loc-dornfels | Wehrt Schuldumkehr ab und macht die verschwundenen Bergungsleute persönlich. | [Mira Seilern](../30-locations/dornfels/npcs/mira-seilern/npc.md) |
+| npc-totgeweihter | Totgeweihter | draft | loc-alter-wachturm | Bezeugt den Goldraub und ringt vor seinem unausweichlichen Tod um Erinnerung. | [Totgeweihter](../30-locations/alter-wachturm/npcs/totgeweihter/npc.md) |

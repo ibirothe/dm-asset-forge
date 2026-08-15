@@ -14,7 +14,7 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 - Kanalstrecke: [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md) — Ratten, frische Nordspur und verlorene Waffe geben der verdeckten Route Druck.
 - Waldaufstieg: [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Starkregen macht den Anstieg riskant und zeigt die abwehrende Präsenz des Wächters.
 - Turmschwelle: [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Versteckter Leichnam, Barons Auftragsspuren und Handaxt verbinden Opfer, Bergung und Auftraggeber.
-- Treppenvision: [Das Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Kollektive Gewalterinnerung zeigt geraubtes Gold und ein dem Baronssiegel ähnliches Banner.
+- Treppenvision: [Das Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Münzaufnahme oder Tod des Zeugen löst Glockenläuten aus; danach zeigt der sichtbare Seilbruch den Grund des realen Schweigens.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -37,6 +37,7 @@ Indexroute: [NPC-Index](../50-indexes/npcs.md).
 |---|---|---|---|
 | Baron von Dornfels | Goldinteresse und heimliche Bergungen verdecken. | Ruhig, herrschaftlich; bei Beweisen knapper und formeller. | [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) |
 | Wächter der Glocke | Raubabsicht prüfen und Preis erzwingen. | Leise, knapp, prüfend; fragt nach Zweck und Preis. | [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) |
+| Totgeweihter | Goldraub und Banner bezeugen, bevor die Erinnerung seinen Tod vollendet. | Heiser, abgerissen; Beobachtungen zwischen langen Atempausen. | [Totgeweihter](../30-locations/alter-wachturm/npcs/totgeweihter/npc.md) |
 | Gerolt Eisenfaust | Schuldforderung kontrollieren und Schmiedewaren schützen. | Knapp und trocken; bei Widerspruch sehr höflich. | [Gerolt Eisenfaust](../30-locations/dornfels/npcs/gerolt-eisenfaust/npc.md) |
 | Alena Staub | Fehlende Bücher und Archivspur kontrolliert öffnen. | Trocken, präzise, mit Pausen vor gefährlichen Namen. | [Alena Staub](../30-locations/dornfels/npcs/alena-staub/npc.md) |
 | Nolte am Tor | Kanalzugang und eigene Habe schützen, ohne sein Versteck zu verraten. | Spöttisch und kratzig; am Kanal sprunghaft und fahrig. | [Nolte am Tor](../30-locations/dornfels/npcs/nolte-am-tor/npc.md) |
@@ -52,7 +53,7 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 | Auftrag ist Vorwand | Aushang/Baron; Dornfelser Zeugen; Auftragsrest an der Schwelle | Dornfelser Zeugen oder Turmbeweis nachreichen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Glocke ist Schuldgold | Bibliothekslücke; Schänkenüberlieferung; Treppenvision; Glockenzeichen/Gefallene | Andere Archiv-, Erinnerungs- oder Turmpfade bleiben erreichbar. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Wächter ist gebunden | Pilgerstraße/Kanal; Turmzeichen | Route oder Turm kann nachliefern. | [Clue Matrix](../50-indexes/clue-matrix.md) |
-| Seil wurde durchtrennt | Glockenstube; Barons Widerspruch | Direkte Turmuntersuchung bestätigt spät. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Seil wurde durchtrennt | Sichtmechanismus nach der Vision; Glockenstube; Barons Widerspruch | Treppe oder direkte Glockenuntersuchung bestätigt. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Verschwundene waren Bergungsleute | Dornfelser Zeugen; Schmiedestreit; Leichnam an der Schwelle | Baron unter Druck oder weitere Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 
 ## Eskalation
