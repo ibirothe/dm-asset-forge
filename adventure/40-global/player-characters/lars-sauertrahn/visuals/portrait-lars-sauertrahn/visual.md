@@ -2,12 +2,12 @@
 id: vis-portrait-lars-sauertrahn
 type: visual
 title: "Portrait Lars Sauertrahn"
-status: draft
+status: ready
 version: 1
 scope: subject-owned
 subject_asset: "pc-lars-sauertrahn"
 output_file: "portrait-lars-sauertrahn.png"
-provenance: unknown
+provenance: agent-generated
 source_refs: ["../../player-character.md"]
 tags: [portrait, player-character, thief]
 themes: [freedom, distrust, stealth]
@@ -56,10 +56,10 @@ Vollständig spielersichtbar. Keine geheime Nachricht des Barons, keine gestohle
 
 ## Generation approval
 
-- Status: not-approved
-- PNG state: not-created
-- Approved visual version: none
-- Approval: none
+- Status: approved
+- PNG state: current
+- Approved visual version: 1
+- Approval: User approved generation of Visual version 1 in chat on 2026-08-16.
 
 ## Output
 
@@ -70,3 +70,4 @@ Vollständig spielersichtbar. Keine geheime Nachricht des Barons, keine gestohle
 ## Provenance and revisions
 
 - 2026-08-16: Erstes Briefing aus dem Player-Character-Subject erstellt; keine PNG-Erzeugung freigegeben.
+- 2026-08-16: PNG nach expliziter User-Freigabe mit Codex built-in image generation erzeugt, visuell gegen Identitätsanker und Ausschlüsse geprüft und als aktuelle Visual-Version gespeichert.
