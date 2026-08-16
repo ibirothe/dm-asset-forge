@@ -3,7 +3,7 @@ id: npc-baron-von-dornfels
 type: npc
 title: "Baron von Dornfels"
 status: draft
-version: 4
+version: 5
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -45,7 +45,7 @@ Baron von Dornfels, Aussteller des [Aushangs](../../objects/aushang-des-barons/o
 <!-- Primären, aktuellen, ursprünglichen und weitere Auftrittsorte relativ verlinken. -->
 
 - Primary location: [Dornfels](../../location.md)
-- Appearance: [Alter Wachturm](../../../alter-wachturm/location.md). Beim Läuten, nach Nachricht eines Beobachters oder beim vorbereiteten nächsten Bergungsversuch erscheint er mit wenigen Wachen und Bergungsgerät im Finale der [Letzten Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md).
+- Appearance: [Alter Wachturm](../../../alter-wachturm/location.md). Erst der wirkliche Glockenschlag ist sein vereinbartes Sicherheitssignal; daraufhin erscheint er mit wenigen Wachen, Arbeitern und dem [Bergungsgestell](../../../alter-wachturm/objects/bergungsgestell-des-barons/object.md) in der [Letzten Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md).
 
 ## Motivation
 
@@ -57,7 +57,7 @@ Er fürchtet öffentliche Entlarvung, den Verlust seiner Autorität und dass die
 
 ## Resources and leverage
 
-Belohnung, Wachen, Bergungsgerät, Beobachter an den Turmwegen, Zugang zu Verwaltung und Bibliothek, öffentliches Vertrauen und die Fähigkeit, Aberglauben als Ablenkung sowie Herrschaftsrecht als Besitzanspruch zu nutzen.
+Belohnung, Wachen, Arbeiter, das vorbereitete [Bergungsgestell](../../../alter-wachturm/objects/bergungsgestell-des-barons/object.md), Zugang zu Verwaltung und Bibliothek, öffentliches Vertrauen und die Fähigkeit, Aberglauben als Ablenkung sowie Herrschaftsrecht als Besitzanspruch zu nutzen.
 
 ## Knowledge
 
@@ -80,18 +80,19 @@ Belohnung, Wachen, Bergungsgerät, Beobachter an den Turmwegen, Zugang zu Verwal
 ## Relationships
 
 - Zur [Goldenen Glocke](../../../alter-wachturm/objects/goldene-glocke/object.md): verdecktes Begehrensobjekt.
+- Zum [Bergungsgestell](../../../alter-wachturm/objects/bergungsgestell-des-barons/object.md): Eigentümer und Auftraggeber; sein vorbereitetes Gerät beweist, dass der Abtransport von Anfang an geplant war.
 - Zu den [Gefallenen von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): versteht sie als Hindernis oder Aberglauben, nicht als Anspruchsträger.
 - Zum [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md): treibt die Eskalation.
 
 ## Likely behavior
 
-- Wenn unterstützt: Gibt Belohnung und Auftrag schnell frei, vermeidet Details zur Bibliothek und drängt zum Läuten.
+- Wenn unterstützt: Vor dem Turm drängt er zum Läuten. Im Finale ordnet er die Bergung an, stellt Wachen und Arbeiter bereit und erwartet, dass die Gruppe die untoten Verteidiger bindet.
 - Wenn unter Druck: Behauptet, die Glocke und jedes Turminventar gehörten rechtmäßig dem Haus Dornfels, verlangt Beweise und versucht Zeugen oder Fundstücke zu kontrollieren.
-- Wenn ignoriert: Lässt die Zugänge beobachten und erscheint nach Läuten, Erfolgsmeldung oder zum nächsten vorbereiteten Bergungsversuch mit Wachen am Turm.
+- Wenn die Gruppe seinen Anspruch im Turm verweigert: Lässt das Gestell aufrichten, befiehlt die Bergung gegen ihren Widerstand und zieht sich erst zurück, wenn Gerät oder Gefolgschaft nicht mehr einsetzbar sind.
 
 ## Hooks and consequences
 
-Wird er früh entlarvt, kann der Turm trotzdem aufgelöst werden, aber Dornfels wird politisch instabil. Bleibt er unentdeckt, tritt er nach dem Sicherheitssignal als scheinbar rechtmäßiger Eigentümer auf und versucht, die Glocke übernehmen zu lassen. Ohne Läuten kann sein planmäßiger nächster Bergungsversuch dieselbe Konfrontation auslösen.
+Wird er früh entlarvt, kann die Gruppe seine Wachen und Arbeiter im Finale leichter zum Aufgeben bringen. Nach dem Sicherheitssignal tritt er als scheinbar rechtmäßiger Eigentümer auf: Unterstützt ihn die Gruppe, kämpfen sie gemeinsam gegen Wächter und Bergungstote; verweigert sie ihm die Glocke, wird er zum menschlichen Gegner der Verteidiger.
 
 ## Visuals
 

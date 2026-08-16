@@ -3,7 +3,7 @@ id: obj-goldene-glocke
 type: object
 title: "Goldene Glocke"
 status: draft
-version: 3
+version: 4
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -47,7 +47,7 @@ Die Zugmechanik und der Seilbruch sind bereits vom Treppenaufgang sichtbar; die 
 
 ## Properties
 
-Sie kann wieder läuten, wenn das Seil ersetzt oder ein anderer plausibler Mechanismus hergestellt wird. Das Läuten allein ist keine garantierte Reinigung; seine Bedeutung hängt davon ab, ob Schuld anerkannt oder nur ein Auftrag erfüllt wird.
+Sie kann wieder läuten, wenn das Seil ersetzt oder ein anderer plausibler Mechanismus hergestellt wird. Das Läuten allein ist keine Reinigung: Es ruft den Baron mit seiner vorbereiteten Bergung zum Turm und erzwingt anschließend die Entscheidung, ihm zu helfen oder den Verbleib der Glocke zu verteidigen.
 
 ## Uses and leverage
 
@@ -64,4 +64,6 @@ Gierige Bergung wiederholt die Plünderung und verschärft den Turmdruck. Zerst�
 
 ## Consequences
 
-Die Entscheidung über die Glocke bestimmt, ob der One-Shot mit Entlarvung, Beschwichtigung, offenem Schuldzeichen oder erneuter Eskalation endet.
+- Eigener Diebstahl: Die Gruppe kann Gold gewinnen, trägt aber die fortbestehende Bindung des Wächters und der Gefallenen mit der Glocke hinaus.
+- Bergung mit dem Baron: Auftrag und Eigentumsklausel werden erfüllt; die Schuld bleibt an der geborgenen Glocke und ihren Helfern haften.
+- Verteidigung gegen den Baron: Die Glocke bleibt im Siegelring, die jüngeren Bergungstoten finden Ruhe und der Turm wird zum Mahnmal.

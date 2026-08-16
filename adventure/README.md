@@ -3,7 +3,7 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 15
+version: 16
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
@@ -35,7 +35,8 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Vorbereiteter Turmeinstieg: [Die gebrochene Schwelle](30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Leichnam, Auftragsrest des Barons und rostige Handaxt eröffnen Akt 3 mit belastbaren Spuren.
 - Vorbereitete Treppenvision: [Das Echo der Plünderung](30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Totgeweihter, verstreute Goldmünzen und Glockenläuten verbinden den historischen Raub mit dem sichtbaren Seilbruch.
 - Vorbereiteter feindseliger Aufstieg: [Der Turm schlägt zurück](30-locations/alter-wachturm/scenes/der-turm-schlaegt-zurueck/scene.md) und [Knochen und Ketten](30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — der Wächter manifestiert sich, erhebt den Bergungsmann und steuert wandgebundene Ketten sowie fallende Balken.
-- Vorbereiteter Finaldruck: [Letzte Bergung](30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) — Läuten oder Erfolgsmeldung ruft den Baron zur Goldbergung; Folgen des feindseligen Aufstiegs verändern Wächter und Rückweg.
+- Vorbereiteter Entscheidungsknoten: [Glockenraum und Siegelkammer](30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) — eigener Diebstahl oder Reparatur und Läuten führen in eine der drei Finalkonfigurationen.
+- Vorbereiteter Finaldruck: [Letzte Bergung](30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) — Totenwehr gegen neue Plünderer, gemeinsame Bergung mit dem Baron oder Verteidigung der Glocke mit Wächter und alten Gefallenen.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
@@ -46,6 +47,7 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - [Stammtisch der Alten](30-locations/dornfels/npcs/stammtisch-der-alten/npc.md): soziale Quelle der Plünderungsüberlieferung.
 - [Mira Seilern](30-locations/dornfels/npcs/mira-seilern/npc.md): trauernde Witwe und starker Zeugenpfad zu heimlichen Reichtumsversprechen.
 - [Gefallene von der Glocke](40-global/factions/gefallene-von-der-glocke/faction.md): ruhelose Anspruchsträger, die erneuten Raub verhindern wollen.
+- [Gefallene Bergungsleute](30-locations/alter-wachturm/creatures/gefallene-bergungsleute/creature.md): jüngere Opfer, deren Körper der Wächter gegen Goldbergung erhebt und bei Verteidigung der Glocke freigibt.
 
 ### Notwendige Informationen
 
@@ -61,7 +63,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ### Abschlüsse und Folgezustände
 
-- Erreichbare Abschlüsse: [Possible outcomes](20-plot/overview.md#possible-outcomes) — Entlarvung, Beschwichtigung, Wiedergutmachung oder akute Rettung mit offenem Rest.
+- Erreichbare Abschlüsse: [Possible outcomes](20-plot/overview.md#possible-outcomes) — eigener Glockenraub, Bergung mit dem Baron oder Verteidigung des Verbleibs gegen ihn.
 - Relevante Folgezustände: [Failure, retreat, and neglect](20-plot/overview.md#failure-retreat-and-neglect) — Rückzug und Scheitern erhöhen Druck, blockieren aber nicht den Plot.
 
 ### Pacing und Kürzung
@@ -95,7 +97,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ## Nächste sinnvolle Schritte
 
-1. Den Übergang von Treppenvision zu Knochen-und-Ketten-Passage sowie Barons spätere Ankunft gemeinsam mit der Letzten Bergung am Tisch testen; danach Forderungen und Endzustände des Finales bei Bedarf weiter vertiefen.
+1. Die drei Konfigurationen der Letzten Bergung am Tisch testen und Zahl der Bergungstoten, Wachen sowie Eingriffe des Turms an die gewählte Regelbasis anpassen.
 2. Optional ein player-facing Handout für Aushang oder Regionalkarte entwerfen und erst nach Freigabe schreiben.
 3. Vor Spieltermin Regelbasis, Safety, Barrierefreiheit und reale Materialien klären.
 4. Fachlichen Audit durchführen, wenn der Stand finalisiert werden soll.

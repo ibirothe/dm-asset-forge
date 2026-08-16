@@ -3,7 +3,7 @@ id: cre-wiedererweckter-bergungsmann
 type: creature
 title: "Wiedererweckter Bergungsmann"
 status: draft
-version: 2
+version: 3
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -62,4 +62,4 @@ Auf dem schmalen Treppenlauf kann der Wiedererweckte Personen zurückdrängen, d
 
 ## Hooks and consequences
 
-Wird der Körper befreit oder würdevoll niedergelegt, wechselt der Wächter mindestens zurück zu einer prüfenden Haltung. Wird er nur zerschlagen oder passiert, bleibt ein zeitweiliger Durchgang, aber der Wächterdruck besteht. Die versiegelte Anweisung, Vorschussmünze und Arbeitsausrüstung bleiben als Beweise für [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md) erhalten. Bleibt die Bindung nach [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) bestehen, kann der Wiedererweckte in der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md) erneut den Rückweg sperren oder als sichtbarer Beweis gegen den Baron dienen.
+Wird der Körper befreit oder würdevoll niedergelegt, wechselt der Wächter mindestens zurück zu einer prüfenden Haltung; er bleibt in Akt 4 liegen. Wird er nur zerschlagen oder passiert, bleibt ein zeitweiliger Durchgang, aber seine Bindung besteht. Die versiegelte Anweisung, Vorschussmünze und Arbeitsausrüstung bleiben als Beweise für [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md) erhalten. In der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md) erhebt er sich nur in den Konfigurationen „Die neuen Plünderer“ und „Im Dienst des Barons“ erneut; als „Verteidiger der Glocke“ gibt der Wächter ihn frei.

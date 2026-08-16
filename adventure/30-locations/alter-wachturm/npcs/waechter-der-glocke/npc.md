@@ -3,7 +3,7 @@ id: npc-waechter-der-glocke
 type: npc
 title: "Wächter der Glocke"
 status: draft
-version: 7
+version: 8
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -59,7 +59,7 @@ Er fürchtet nicht Tod, sondern Wiederholung: Goldgier, Lüge und ein Läuten oh
 
 ## Resources and leverage
 
-Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusche und Erinnerungsbilder beeinflussen, den gefallenen Bergungsmann nekromantisch erheben, morsche Balken lösen und alte Befestigungsketten an ihren Wandankern bewegen. Ketten und Balken bleiben räumlich an ihre Bauteile gebunden; auch der Wächter kann nicht frei außerhalb seines Turms handeln.
+Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusche und Erinnerungsbilder beeinflussen, den gefallenen Bergungsmann und weitere [Gefallene Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md) nekromantisch erheben, morsche Balken lösen und alte Befestigungsketten an ihren Wandankern bewegen. Ketten und Balken bleiben räumlich an ihre Bauteile gebunden; auch der Wächter kann nicht frei außerhalb seines Turms handeln.
 
 ## Knowledge
 
@@ -85,6 +85,7 @@ Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusc
 - Zum [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md): Er macht die Endentscheidung konkret.
 - Zum [Wiedererweckten Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md): Er zwingt den Leichnam als Schwellenwache in Bewegung, bindet dabei aber keine eigenständige Seele zurück.
 - Zu [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md): Er verbindet Leichnam, Maueranker und lose Balken zu einer gestaffelten Prüfung des weiteren Aufstiegs.
+- Zu den [Gefallenen Bergungsleuten](../../creatures/gefallene-bergungsleute/creature.md): Er zwingt ihre Körper gegen jeden neuen Bergungsversuch, entlässt sie aber, wenn die Gruppe den Verbleib der Glocke gegen den Baron verteidigt.
 
 ## Likely behavior
 
@@ -115,7 +116,7 @@ Die Handlung zählt stärker als der Gegenstand: Eine Münze aus der Vision zu b
 
 ## Hooks and consequences
 
-Die Verteidigung in [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) findet beim direkten oberen Aufstieg statt; sein Zustand bestimmt ihre Härte, nicht ihr grundsätzliches Erwachen. Ein Endkampf kann ihn zeitweise brechen, löst aber nicht automatisch die Schuld. Ein bewusstes Opfer, ein Eid, Wiedergutmachung oder die öffentliche Sicherung der Glocke kann ihn beruhigen. Die verbleibende Reaktion wird in der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md) zur Ausgangslage des Finales.
+Die Verteidigung in [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) findet beim direkten oberen Aufstieg statt; sein Zustand bestimmt ihre Härte, nicht ihr grundsätzliches Erwachen. Im [Glockenraum](../../scenes/glockenraum-und-siegelkammer/scene.md) lässt er Reparatur und Läuten zu, solange kein Abtransport beginnt. Bei eigenem Diebstahl oder Unterstützung des Barons erhebt er alle noch gebundenen Bergungstoten. Verteidigt die Gruppe den Verbleib der Glocke gegen den Baron, gibt er die jüngeren Opfer frei und lenkt den Turm an ihrer Seite. Diese Reaktion bestimmt die Konfiguration der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md).
 
 ## Visuals
 

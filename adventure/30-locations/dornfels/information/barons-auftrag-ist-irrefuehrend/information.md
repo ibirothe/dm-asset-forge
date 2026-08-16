@@ -3,7 +3,7 @@ id: info-barons-auftrag-ist-irrefuehrend
 type: information
 title: "Barons Auftrag ist irreführend"
 status: draft
-version: 6
+version: 7
 scope: local
 truth_status: established
 confidence: supported
@@ -38,7 +38,7 @@ Etabliert. Der Baron ist nicht nur besorgter Auftraggeber. Offen bleibt, wie vie
 - [Dornfels](../../location.md): [Mira Seilern](../../npcs/mira-seilern/npc.md), Marktzeugen und übersehene Beobachter berichten von heimlichen Reichtumsversprechen.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Bergungswerkzeug und Turmspuren widersprechen einem rein übernatürlichen Fluch.
 - [Die gebrochene Schwelle](../../../alter-wachturm/scenes/die-gebrochene-schwelle/scene.md): Die lesbare Bergungsanweisung nennt Gewichtsschätzung, Sicherung der Glocke, Stillschweigen und Zahlung nach Übergabe.
-- [Letzte Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md): Nach Läuten oder Erfolgsmeldung erscheint der Baron mit Wachen und Gerät, um seinen angeblichen Eigentumsanspruch durchzusetzen.
+- [Glockenraum und Siegelkammer](../../../alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md): Auf den wirklichen Glockenschlag folgt der Baron mit Wachen, Arbeitern und einem bereits vorbereiteten Bergungsgestell; er verlangt offen den Abtransport des Goldwerts.
 
 ## Preconditions
 

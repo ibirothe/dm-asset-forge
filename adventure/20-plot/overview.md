@@ -46,7 +46,7 @@ Wenn niemand eingreift, bleiben Bewohner gefährdet, der Baron kann weitere Mens
 - Wem glauben die Spieler zuerst: öffentlichem Aushang, Marktgerüchten, Bibliotheksakten, Turmspuren oder der eigenen Deutung?
 - Gehen sie über die verlassene Pilgerstraße im Wald, durch die Kanalisation, mit Unterstützung aus Dornfels oder nach öffentlicher Konfrontation des Barons zum Turm?
 - Behandeln sie die Glocke als Werkzeug gegen einen Fluch, als Goldschatz, als Beweisstück, als Grabmal oder als Verhandlungsanker?
-- Decken sie die Schuld des Barons offen auf, erzwingen sie eine Wiedergutmachung, schließen sie einen Kompromiss mit den Toten oder lassen sie bewusst Ambiguität zurück?
+- Stehlen sie die Glocke selbst, helfen sie nach dem Läuten dem Baron bei der Bergung oder verteidigen sie ihren Verbleib gemeinsam mit Wächter und Gefallenen?
 
 ## Information paths
 
@@ -66,10 +66,9 @@ Die konkrete Pfadabdeckung steht in der [globalen Hinweismatrix](../50-indexes/c
 
 ## Possible outcomes
 
-- Die Gruppe entlarvt den Baron und hält die Glocke als Beweis oder Mahnmal im Turm; die Gefallenen bleiben bewacht, aber nicht weiter geplündert.
-- Die Gruppe stellt das Läuten wieder her, verbindet es mit Anerkennung der historischen Schuld und beendet die aktuellen Verschwindungen.
-- Die Gruppe zwingt oder bewegt den Baron zu Wiedergutmachung; die Glocke wird nicht als Schatz, sondern als Schuldzeichen behandelt.
-- Die Gruppe verhindert nur die nächste Bergung und lässt die größere historische Schuld bewusst offen; die akute Gefahr endet, aber Dornfels bleibt politisch belastet.
+- Gold unter einem Fluch: Die Gruppe versucht selbst, die Glocke wegen ihres Goldwerts zu stehlen, und kämpft gegen alle noch gebundenen Bergungsleute unter der nekromantischen Orchestrierung des Wächters.
+- Der Preis des Auftrags: Die Gruppe repariert den Mechanismus, läutet die Glocke und unterstützt den mit Verstärkung eintreffenden Baron bei der Bergung gegen Wächter, Turm und gebundene Bergungstote.
+- Die Glocke bleibt: Die Gruppe repariert den Mechanismus, läutet die Glocke und verweigert dem Baron den Abtransport. Sie kämpft an der Seite des Wächters; die Gefallenen der alten Plünderung helfen aus dem Jenseits.
 
 ## Resolution boundary
 
@@ -78,7 +77,7 @@ Auflösbar sein muss, ob weitere Bewohner Dornfels' verschwinden und was mit Bar
 ## One-shot scope and pacing
 
 - Target frame: [Constraints](../00-input/constraints.md)
-- Minimum resolution state: Die Gruppe kennt mindestens zwei notwendige Wahrheiten über Baron/Glocke, erreicht einen handlungsfähigen Zustand am Wachturm und entscheidet, ob die Glocke geschützt, geläutet, geborgen, als Beweis gesichert oder bewusst unangetastet bleibt; weitere heimliche Bergungen sind gestoppt oder klar verlagert.
+- Minimum resolution state: Die Gruppe kennt mindestens zwei notwendige Wahrheiten über Baron und Glocke, erreicht den Glockenraum und vollendet eines der drei vorbereiteten Enden: eigener Diebstahl, Bergung mit dem Baron oder Verteidigung des Verbleibs gegen ihn.
 - Core content: Aushang und öffentlicher Auftrag in [Dornfels](../30-locations/dornfels/location.md), mindestens zwei unabhängige Informationswege, Zugang zum [Alten Wachturm](../30-locations/alter-wachturm/location.md), Entscheidung um die [Goldene Glocke](../30-locations/alter-wachturm/objects/goldene-glocke/object.md) und Folgen für [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md).
 - Supporting content: Dornfelser Markt- und Trauerzeugnisse, Bibliotheksrecherche, Schänkenüberlieferung, Ausrüstungsvorbereitung in Dornfels, Route über die [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md), Verhandlung mit den [Gefallenen von der Glocke](../40-global/factions/gefallene-von-der-glocke/faction.md) und dem [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md).
 - Optional content: Ausführliche Stadterkundung, ausgespielter Diebstahl beim Schmied, vollständige Rekonstruktion des hundert Jahre alten Raubs und jede Turmebene, die für die aktuelle Endentscheidung nicht benötigt wird.
@@ -89,7 +88,7 @@ Auflösbar sein muss, ob weitere Bewohner Dornfels' verschwinden und was mit Bar
   - Impact: Annäherung, Hinweis auf den Wächter und Finale bleiben erreichbar.
   - Cut: Im Turm zwei Ebenen zusammenziehen, etwa Krypta mit Katakomben oder Bibliothek mit Siegelkammer.
   - Impact: Glocke, Wächter, Herkunftshinweise und Endentscheidung bleiben erhalten.
-- Late pressure: Der Baron schickt einen weiteren heimlichen Bergungstrupp los oder lässt den Turmzugang sichern; die Gruppe sieht den Druck, kann aber weiter über Beweise, Verhandlung, Umwege oder direkte Intervention reagieren.
+- Late pressure: Der wirkliche Glockenschlag ruft den Baron mit Wachen, Arbeitern und vorbereitetem Bergungsgestell zum Turm. Sein offener Goldanspruch zwingt nach der Reparatur zur Unterstützung oder Verweigerung; ohne Läuten bleibt der eigene Diebstahl als dritte Finalroute erreichbar.
 
 <!-- `core`, `supporting`, and `optional` are editorial prose labels, not metadata values. Every safe cut must preserve independent paths to necessary conclusions, multiple forms of player influence, and reachable resolutions. Late pressure changes the situation without prescribing a player action or Scene. -->
 

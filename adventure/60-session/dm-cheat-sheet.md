@@ -59,10 +59,10 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 
 ## Eskalation
 
-- Aktiver Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — Baron sucht weitere Neumond-Bergung oder kontrolliert Turmzugänge.
-- Nächste sichtbare Veränderung: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — ein weiterer Bergungstrupp, gesicherter Zugang oder Wächterforderung.
-- Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — Zeitdruck, öffentliche Konfrontation oder Zögern.
-- Menschlicher Finaldruck: [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) — Läuten, Beobachtermeldung oder Zeitplan bringt ihn mit Wachen und Bergungsgerät zum Turm.
+- Aktiver Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — eigener Zugriff erweckt die Bergungstoten; wirkliches Läuten ruft den Baron.
+- Nächste sichtbare Veränderung: [Glockenraum und Siegelkammer](../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) — Siegelring reagiert auf Bergung oder Fackeln und Gestell werden nach dem Glockenschlag sichtbar.
+- Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — Glocke selbst lösen oder den reparierten Mechanismus wirklich läuten.
+- Menschlicher Finaldruck: [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) — Der Glockenschlag bringt ihn mit Wachen, Arbeitern und vorbereitetem Gestell zum Turm.
 - Turmverteidigung: [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — Wiedererweckter, Kettenanker und Balken müssen passiert oder entkoppelt werden; Kampf ist nur eine Möglichkeit.
 
 ### Wächterreaktion
@@ -86,16 +86,15 @@ Auslöser und Zustandswechsel: [Wächter der Glocke](../30-locations/alter-wacht
 
 ## Mindestauflösung
 
-- Erforderlicher Endzustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — weitere Neumond-Bergungen gestoppt, Baron/Glocke/Wächter verstanden, Glockenzukunft entschieden.
+- Erforderlicher Endzustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — eigener Diebstahl, Bergung mit dem Baron oder Verteidigung des Verbleibs ist vollendet.
 - Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md) — mindestens zwei zentrale Wahrheiten müssen belastbar erreichbar sein.
 
 ## Mögliche Endzustände
 
 | Endzustand | Auslöser | Folge | Quelle |
 |---|---|---|---|
-| Entlarvung | Beweise gegen Baron öffentlich oder wirksam gesichert. | Baron verliert Handlungsspielraum; Glocke bleibt Beweis oder Mahnmal. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
-| Beschwichtigung | Schuld wird anerkannt und die Glocke nicht geraubt. | Gefallene lassen eine ruhigere Zukunft des Turms zu. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
-| Opfer oder Preis | Wächterforderung wird akzeptiert. | Die Siegelkammer erlaubt eine nicht rein kämpferische Auflösung. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
-| Akute Rettung, offener Rest | Nächste Bergung verhindert, historische Schuld bleibt offen. | Gefahr sinkt sofort, politische Last bleibt. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
+| Gold unter einem Fluch | Gruppe birgt die Glocke selbst. | Totenwehr wird überwunden; Bindung und Schuld folgen dem Gold. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Der Preis des Auftrags | Gruppe unterstützt den Baron nach dem Läuten. | Baron erhält die Glocke; gebundene Tote werden besiegt, nicht erlöst. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Die Glocke bleibt | Gruppe weist den Baron zurück und verteidigt den Turm. | Alte Gefallene helfen; jüngere Bergungstote finden Ruhe. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 Aktualisiere diesen Spickzettel nach jeder wesentlichen Änderung einer zentralen Quelle. Zeige nur die kleinste Menge an Orten, NPCs, Schlussfolgerungen, Kürzungen und Endzuständen, die der DM während des Spiels ohne Suche benötigt.

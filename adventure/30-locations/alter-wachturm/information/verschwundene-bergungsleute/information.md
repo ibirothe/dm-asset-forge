@@ -3,7 +3,7 @@ id: info-verschwundene-bergungsleute
 type: information
 title: "Verschwundene Bergungsleute"
 status: draft
-version: 8
+version: 9
 scope: local
 truth_status: established
 confidence: corroborated
@@ -38,6 +38,7 @@ Etabliert. Die genaue Art jedes furchtbaren Schicksals bleibt offen genug, um am
 - [Alter Wachturm](../../location.md): zurückgelassene Werkzeuge, persönliche Zeichen und Spuren unvorbereiteter Bergungsversuche.
 - [Die gebrochene Schwelle](../../scenes/die-gebrochene-schwelle/scene.md): Ein unter einem Mauerabsatz versteckter Leichnam trägt einen Bergungsgurt, Hebezeugmarken, Vorschussmünze und eine versiegelte Anweisung zur Sicherung, Gewichtsschätzung und Übergabe der Glocke.
 - [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md): Beim direkten oberen Aufstieg wird der Leichnam als [Wiedererweckter Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md) erhoben; Arbeitsgurt, Münze und Anweisung bleiben sichtbar und können auch unter Druck gesichert werden.
+- [Glockenraum und Siegelkammer](../../scenes/glockenraum-und-siegelkammer/scene.md): Weitere Gebeine in Krypta- und Katakombennischen tragen übereinstimmende Gurte, Vorschusszeichen und Bergungswerkzeuge. Als [Gefallene Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md) zeigen sie das Ausmaß der wiederholten Aufträge.
 - [Baron von Dornfels](../../../dornfels/npcs/baron-von-dornfels/npc.md): Druck oder Belege können seine Kenntnis der angeworbenen Personen zeigen.
 
 ## Preconditions

@@ -20,8 +20,8 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 |---|---:|---|---|---|
 | Akt 1: Dornfels | 30-45 Min. | Gruppe kennt Auftrag, kann Ausrüstung wählen und mindestens zwei Hinweise anstoßen. | NPCs vorstellen, Gerüchte, Krämer, [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), Bibliothek, Schänke. | [Dornfels](../30-locations/dornfels/location.md) |
 | Akt 2: Wald/Kanalisation | 30 Min. | Route ist gewählt, Unwetter, kleiner Kampf, Rattenkontakt oder Umgehung ist aufgelöst, Wächter wird vorgeahnt. | [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md), kleiner Kampf, Wächterspuren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md), [Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) mit Totgeweihtem, Münzauslöser und sichtbarem Seilbruch, Turmbibliothek, Glockenraum, Krypta, Katakomben, Siegelkammer. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
-| Akt 4: Finale | offen | Entscheidung über Glocke, Baron, Wächter und Gefallene fällt. | Wächterzustand bestimmen; Läuten, Beobachter oder Zeitplan bringt den Baron zur Goldbergung; Wahrheit, Entscheidung, Kampf oder Preis, Epilog. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md), [Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md), [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md), danach Krypta/Katakomben und [Glockenraum und Siegelkammer](../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md). | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Akt 4: Finale | offen | Eine der drei Glockenentscheidungen wird vollendet. | Eigener Diebstahl; oder reparieren und läuten, dann Baron unterstützen beziehungsweise den Verbleib der Glocke verteidigen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 ## Einstiegsoptionen
 
@@ -38,7 +38,7 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 | Akt 1 / Einstieg | Gruppe erkennt Auftrag, rüstet sich aus und kann mehrere Hinweise anstoßen. | Marktszene, Krämer, [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), Bibliotheksszene, Schänke, Baron, Marktzeugen, Bettler, Stadtwache oder trauernde Witwe. | Baron wirbt weiter, Zeugen werden vorsichtiger oder der Schmiedestreit wird Marktgerücht. | [Marktszene](../30-locations/dornfels/scenes/marktszene/scene.md) |
 | Akt 2 / Route | Gruppe entscheidet über Wald/Pilgerstraße oder Kanal und erhält Wächterspuren. | Waldaufstieg sichern, Schutz suchen, einen Hangumweg wählen, schleichen, kämpfen, mit Nolte verhandeln, Ratten umgehen, Magie oder Karte nutzen. | Nutze das [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), den [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), [Ratten im Kanal](../30-locations/zugaenge-zum-wachturm/encounters/ratten-im-kanal/encounter.md), den kleinen Kampf oder eine Spur als Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
 | Akt 3 / Turm | Gruppe kann Bergungsspuren, historische Erinnerung, Turmverteidigung, Glocke, Seil, Wächter und Gefallene beeinflussen. | Gebrochene Schwelle untersuchen oder passieren, den Totgeweihten befragen oder begleiten, eine Münze aufnehmen und Knochen/Ketten durch Kampf, Entkopplung, Rettung, Passage oder Verhandlung überwinden. | Ungesicherte Beweise verfallen, die Vision trennt oder verängstigt die Gruppe, danach erheben sich Bergungsmann, Wandketten und Balken als räumlich gebundener Druck. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
-| Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Wächter durch Zweck und Handlung öffnen, umgehen, bekämpfen oder einen Preis verhandeln; Entlarvung, Beschwichtigung oder bewusst offener Rest bleiben möglich. | Wächterzustand sichtbar verschärfen und letzten Bergungsdruck auslösen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Akt 4 / Auflösung | Zukunft der Glocke und weitere Bergungen werden entschieden. | Selbst bergen; oder Mechanismus reparieren, läuten und nach Barons Ankunft seine Goldbergung unterstützen beziehungsweise bekämpfen. | Eigener Zugriff erhebt die Toten; Läuten bringt Baron, Wachen, Arbeiter und Gestell. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes. Ordne sie neu, lasse sie überlappen oder überspringe sie, wenn Spielerentscheidungen die Situation verändern.
 
@@ -54,7 +54,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 
 | Auslöser | Sichtbarer Zustandswechsel | Erhaltene Entscheidungen | Quelle |
 |---|---|---|---|
-| Läuten, Beobachtermeldung, Zeitdruck oder öffentliche Konfrontation | Baron erscheint mit Wachen und Bergungsgerät am Turm und beansprucht Glocke sowie Funde als Eigentum seines Hauses. | Beweise zeigen, Wachen überzeugen, Bergung verhindern, Anspruch öffentlich machen, mit Wächter verhandeln oder Turm verlassen. | [Fluch oder Gier](../20-plot/threads/fluch-oder-gier/plot-thread.md) |
+| Wirklicher Glockenschlag | Baron erscheint mit Wachen, Arbeitern und vorbereitetem Bergungsgestell und beansprucht Glocke sowie Funde als Eigentum seines Hauses. | Ihn unterstützen oder zurückweisen; Beweise können Wachen und Arbeiter beeinflussen. | [Fluch oder Gier](../20-plot/threads/fluch-oder-gier/plot-thread.md) |
 
 ## Sichere Kürzungen
 
@@ -66,7 +66,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 
 ## Finale-Auslöser
 
-- Spätestmöglicher sinnvoller Auslöser: Läuten, eine Beobachtermeldung oder der nächste Neumond-Bergungsversuch bringt den Baron zum Turm; alternativ stellt der Wächter die Gruppe in der Siegelkammer vor seine Forderung.
+- Spätestmöglicher sinnvoller Auslöser: Ein eigener Diebstahl beginnt sofort Konfiguration 1. Eine erfolgreiche Reparatur mit wirklichem Glockenschlag bringt den Baron und eröffnet die Wahl zwischen Konfiguration 2 und 3.
 - Erforderlicher Zustand vor dem Auslöser: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
 - Sichtbarer Druck: [Offene Plot-Threads](../50-indexes/open-threads.md)
 
@@ -77,10 +77,9 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 
 | Endzustand | Auslöser | Folge | Quelle |
 |---|---|---|---|
-| Entlarvung | Beweise und Zeugen reichen für wirksamen Druck. | Baron verliert Kontrolle über die Erzählung. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
-| Beschwichtigung | Schuld und Glocke werden nicht als Raub behandelt. | Gefallene lassen einen ruhigeren Turmzustand zu. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
-| Opfer oder Preis | Wächter fordert sichtbaren Preis und die Gruppe akzeptiert ihn. | Wächter und Gefallene lassen die Glockenentscheidung zu. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
-| Akute Rettung, offener Rest | Nächste Bergung wird gestoppt. | Dornfels ist vorerst sicher, politische Schuld bleibt offen. | [Plot-Übersicht](../20-plot/overview.md#possible-outcomes) |
+| Gold unter einem Fluch | Gruppe birgt die Glocke selbst. | Wächter und Gefallene bleiben an den geraubten Wert gebunden. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Der Preis des Auftrags | Gruppe unterstützt nach dem Läuten den Baron. | Glocke wird geborgen; Baron beansprucht sie, die Schuld bleibt ungelöst. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Die Glocke bleibt | Gruppe verteidigt sie nach dem Läuten gegen den Baron. | Bergung scheitert, jüngere Tote ruhen und der Turm wird Mahnmal. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 ## Notizen während des Spiels
 

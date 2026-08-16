@@ -3,7 +3,7 @@ id: fac-gefallene-von-der-glocke
 type: faction
 title: "Gefallene von der Glocke"
 status: draft
-version: 3
+version: 4
 scope: global
 related_locations: ["loc-alter-wachturm", "loc-dornfels"]
 influence: notable
@@ -39,11 +39,11 @@ Keine Organisation im lebenden Sinn; sie wirken gebunden an [Alter Wachturm](../
 
 ## Resources and leverage
 
-Sie können Raubversuche gefährlich machen, Schuldzeichen sichtbar werden lassen und die Atmosphäre im Turm verdichten. Sie können die Gruppe aber auch als Zeugen, Vermittler oder Träger einer Wiedergutmachung akzeptieren.
+Sie können Raubversuche gefährlich machen, Schuldzeichen sichtbar werden lassen und die Atmosphäre im Turm verdichten. Verteidigt die Gruppe die Glocke gegen den Baron, helfen sie aus dem Jenseits durch Kälte, Erinnerungsbilder, verlöschende Fackeln und einen einzelnen schützenden Eingriff.
 
 ## Methods
 
-Keine regelgebundenen Angriffe. Sie wirken über Stimmen, Kälte, Erinnerungsbilder, gefährliche Turmreaktionen und das Zurückweisen gieriger Handlungen.
+Keine regelgebundenen Angriffe. Sie wirken über Stimmen, Kälte, Erinnerungsbilder, gefährliche Turmreaktionen und das Zurückweisen gieriger Handlungen. Sie sind die Toten der alten Plünderung, nicht die jüngeren [Gefallenen Bergungsleute](../../../30-locations/alter-wachturm/creatures/gefallene-bergungsleute/creature.md), deren Körper der Wächter gegen neue Bergung zwingt.
 
 ## Internal tensions
 
@@ -61,4 +61,4 @@ Jeder neue Bergungsversuch verschärft ihre Reaktion. Das Verstummen der Glocke 
 
 ## Escalation and consequences
 
-Wenn die Gruppe die Glocke als Beute behandelt, eskaliert der Turm. Wenn sie Schuld anerkennt oder den Baron stoppt, können die Gefallenen eine nichtgewaltsame Auflösung zulassen.
+Wenn Gruppe oder Baron die Glocke als Beute behandeln, stehen die Gefallenen auf Seiten des Wächters. Verteidigt die Gruppe den Verbleib der Glocke gegen den Baron, unterstützen sie die Gruppe in der [Letzten Bergung](../../../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) und bezeugen anschließend den Turm als Mahnmal.

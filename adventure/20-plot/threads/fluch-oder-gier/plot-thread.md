@@ -3,7 +3,7 @@ id: plot-fluch-oder-gier
 type: plot-thread
 title: "Fluch oder Gier"
 status: draft
-version: 8
+version: 9
 scope: global
 entry_locations: ["loc-dornfels", "loc-zugaenge-zum-wachturm", "loc-alter-wachturm"]
 related_factions: ["fac-gefallene-von-der-glocke"]
@@ -35,7 +35,7 @@ Die Glocke ist seit einem Jahr stumm, weil das Seil beim ersten heimlichen Bergu
 
 - Next pressure: Der Baron hält den öffentlichen Auftrag aufrecht und sucht nach Menschen, die den Turm betreten, ohne seine Bibliotheksfunde offenzulegen.
 - Tower pressure: Nach der kollektiven Vision erhebt der Wächter den früheren Bergungsmann und steuert Wandketten sowie lose Balken. Die Gruppe muss den oberen Aufstieg passieren, kann dies aber durch Kampf, Entkopplung, Rettung, Umgehung oder glaubhafte Absicht erreichen.
-- Late pressure: Läuten, Nachricht eines Beobachters oder der ablaufende Zeitplan bringt den Baron mit Wachen und Bergungsgerät zum Turm. Die Gruppe kann seinen Eigentumsanspruch belegen, bestreiten, öffentlich machen, umlenken oder die Bergung verhindern.
+- Late pressure: Nur der wirkliche Glockenschlag bestätigt dem Baron, dass der obere Turm erreichbar ist. Er erscheint mit Wachen, Arbeitern und vorbereitetem Bergungsgestell, nennt den Goldwert als Ziel und fordert die Gruppe zur Mithilfe oder Übergabe auf.
 
 ## Information path
 
@@ -47,7 +47,7 @@ Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheid
 
 ## Involved assets
 
-- Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) mit der [Gebrochenen Schwelle](../../../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) als direktem Beweispfad, [Knochen und Ketten](../../../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) als notwendiger oberer Passage und der [Letzten Bergung](../../../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) als offenem Finaldruck; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber und späterer Anspruchsteller; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
+- Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) mit der [Gebrochenen Schwelle](../../../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) als direktem Beweispfad, [Knochen und Ketten](../../../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) als notwendiger oberer Passage, [Glockenraum und Siegelkammer](../../../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) als Entscheidungsknoten und der [Letzten Bergung](../../../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) als dreifach konfigurierbarem Finale; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber und späterer Anspruchsteller; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
 - Supporting: [Zugänge zum Wachturm](../../../30-locations/zugaenge-zum-wachturm/location.md) für Reise, [Unwetter am Waldpfad](../../../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), kleinen Kampf und Wächterspuren; das [Echo der Plünderung](../../../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) für historische Schuld und Bannerhinweis; [Der Turm schlägt zurück](../../../30-locations/alter-wachturm/scenes/der-turm-schlaegt-zurueck/scene.md) als Rahmung der Passage; Dornfelser Markt- und Trauerzeugnisse für sozialen Druck; [Wächter der Glocke](../../../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) und [Gefallene von der Glocke](../../../40-global/factions/gefallene-von-der-glocke/faction.md) für Verhandlung, Opferoption und Konsequenzen.
 - Optional: Ausgespielter Schmiedediebstahl, vollständige Schänken- und Bibliotheksszene, ausführliche Rekonstruktion des historischen Raubs und jede nicht benötigte Turmebene.
 - Safe cuts:
@@ -64,17 +64,16 @@ Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheid
 
 - Den Auftrag annehmen, prüfen, öffentlich in Frage stellen oder gegen den Baron verwenden.
 - Den Wachturm über Wald oder Kanalisation erreichen und dadurch unterschiedliche Risiken und Spuren priorisieren.
-- Die Glocke läuten, sichern, unangetastet lassen, als Beweis nutzen oder eine Wiedergutmachung verlangen.
+- Die Glocke selbst als Goldschatz bergen oder den Mechanismus reparieren, läuten und danach den Baron unterstützen beziehungsweise zurückweisen.
 - Mit Baron, Bewohnern Dornfels' oder Gefallenen arbeiten, drohen, verhandeln oder sie gegeneinander ausspielen.
 - Den Wächter bekämpfen, umgehen, überzeugen oder durch ein bewusstes Opfer beziehungsweise eine Wiedergutmachung beruhigen.
 
 ## Possible resolutions
 
-- Minimum resolution state: Weitere heimliche Bergungen sind gestoppt, die Gruppe versteht den Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten, und die Zukunft der Glocke ist als neuer Zustand entschieden.
-- Öffentliche Entlarvung: Der Baron verliert Handlungsspielraum; die Glocke bleibt Beweis oder Mahnmal.
-- Beschwichtigung: Die Gefallenen erhalten Anerkennung oder Wiedergutmachung; das Läuten wird zum Abschluss statt zum Raubsignal.
-- Opfer oder Preis: Die Gruppe akzeptiert einen persönlichen, materiellen oder politischen Preis, damit Wächter und Gefallene die Glocke nicht weiter gegen Bewohner Dornfels' verteidigen müssen.
-- Akute Rettung mit offenem Rest: Der nächste Bergungsversuch wird verhindert, aber historische Schuld und politische Folgen bleiben bewusst offen.
+- Minimum resolution state: Die Gruppe versteht den Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten und vollendet eine der drei Entscheidungen über die Glocke.
+- Gold unter einem Fluch: Die Gruppe raubt die Glocke für den eigenen Goldgewinn und überwindet die vom Wächter erhobenen Bergungstoten.
+- Der Preis des Auftrags: Nach Läuten unterstützt die Gruppe den Baron gegen Wächter und Bergungstote; er lässt die Glocke bergen und beansprucht sie über die Eigentumsklausel.
+- Die Glocke bleibt: Nach Läuten verteidigt die Gruppe mit Wächter und alten Gefallenen den Turm gegen Baron, Wachen und Bergungsgerät.
 
 ## Consequences of neglect
 
