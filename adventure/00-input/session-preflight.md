@@ -4,11 +4,11 @@ Diese Datei erfasst Logistik und Bereitschaft der Session. Inhaltliche Präferen
 
 ## Gruppe und Regeln
 
-- Spielerzahl: 3
+- Spielerzahl: 4
 - Spielerfahrung: open
 - Regelbasis: open
-- Bereitstellung der Charaktere: User nennt Konzepte; keine Player-Character-Dateien oder Spieler-Releases erstellt.
-- Charaktergrenzen: Bandit ist linkisch, geschickt, auf Diebstahl, Schleichen und Hinterrücks-Vorgehen ausgelegt; Zauberlehrling hat schwache Magie und wenige Zaubergegenstände; Kämpfer ist klein und kräftig.
+- Bereitstellung der Charaktere: User nennt vier Konzepte; Händler, Bandit und Zauberlehrling besitzen freigegebene Spielerfassungen, der kleine kräftige Kämpfer bleibt auszuarbeiten.
+- Charaktergrenzen: Händler ist kapitalstark, redegewandt und analytisch; Bandit ist geschickt und auf Diebstahl, Schleichen und Hinterrücks-Vorgehen ausgelegt; Zauberlehrling hat schwache Magie und wenige Zaubergegenstände; Kämpfer ist klein und kräftig.
 
 ## Zeitplan
 
