@@ -3,10 +3,10 @@ id: scene-marktszene
 type: scene
 title: "Marktszene"
 status: draft
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
-participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust"]
+participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust", "pc-justus-wertmueller"]
 related_threads: ["plot-fluch-oder-gier"]
 danger: limited
 tags: [market, opening, notice, witnesses]
@@ -33,6 +33,7 @@ Der Marktplatz ist voll genug, dass niemand allein mit seiner Angst ist. Der fri
 - [Timo Netzflicker](../../npcs/timo-netzflicker/npc.md): beobachtet Kanalränder und Wachen; Vertrauen oder diskrete Hilfe kann den verdeckten Zugang vorbereiten.
 - [Liska Warenmaß](../../npcs/liska-warenmass/npc.md): verkauft Vorräte und Karte, gibt aber Gerüchte nur vorsichtig weiter.
 - [Gerolt Eisenfaust](../../npcs/gerolt-eisenfaust/npc.md): schützt Schmiedewaren und Schleifstein; Verhandlung, Bezahlung oder Diebstahl verändern sofort den Marktdruck.
+- [Justus Wertmüller](../../../../40-global/player-characters/justus-wertmueller/player-character.md): begegnet hier den übrigen Spielerfiguren erstmals und kann Finanzierung, Analyse oder Sprecherrolle anbieten, ohne dass daraus bereits Loyalität folgt.
 
 ## Immediate tension
 

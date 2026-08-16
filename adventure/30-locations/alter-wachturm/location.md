@@ -3,7 +3,7 @@ id: loc-alter-wachturm
 type: location
 title: "Alter Wachturm"
 status: draft
-version: 9
+version: 10
 scope: local
 parent_location: null
 function: resolution-site
@@ -88,6 +88,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 ## Encounters and pressures
 
 
+- Spielerfigur: [Justus Wertmüller](../../40-global/player-characters/justus-wertmueller/player-character.md) kann hier Funde bewerten, Bergung finanzieren und zwischen schnellem Gewinn, Lebensgefahr, Ruf und langfristigem Marktinteresse abwägen.
 - [Letzte Bergung](encounters/letzte-bergung/encounter.md) führt das gemeinsame Schlachtfeld als „Die neuen Plünderer“, „Im Dienst des Barons“ oder „Verteidiger der Glocke“.
 - [Die gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md) macht den Turmeinstieg, ein früheres Opfer und erste belastbare Bergungsspuren unmittelbar bespielbar.
 - [Das Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) verbindet Totgeweihten, verstreute Münzen, visionäres Glockenläuten und den sichtbaren Seilbruch auf dem Treppenaufgang.

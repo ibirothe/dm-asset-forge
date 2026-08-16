@@ -4,3 +4,4 @@ Kurze Tischkontexte, keine zweite Kanonquelle. `One-shot role` nennt die unmitte
 
 | ID | Title | Status | One-shot role | Personal hook | Link |
 |---|---|---|---|---|---|
+| pc-justus-wertmueller | Justus Wertmüller | draft | Kapitalstarker Finanzier, analytischer Planer und gesellschaftlicher Sprecher. | Seltene Turmfunde versprechen Profit, während Ruf, Freiheit und Dornfels als Markt langfristigen Wert gewinnen können. | [Justus Wertmüller](../40-global/player-characters/justus-wertmueller/player-character.md) |

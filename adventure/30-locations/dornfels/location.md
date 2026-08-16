@@ -3,7 +3,7 @@ id: loc-dornfels
 type: location
 title: "Dornfels"
 status: draft
-version: 8
+version: 9
 scope: local
 parent_location: null
 function: investigation-hub
@@ -12,7 +12,7 @@ accessibility: open
 tags: [city, market, library, supplies]
 themes: [public-authority, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-16
 ---
 
 # Dornfels
@@ -79,6 +79,7 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 
 ## Encounters and pressures
 
+- Spielerfigur: [Justus Wertmüller](../../40-global/player-characters/justus-wertmueller/player-character.md) beginnt hier seine Handelsexkursion und trifft die übrige Gruppe auf dem Markt.
 - Plotdruck: [Fluch oder Gier](../../20-plot/threads/fluch-oder-gier/plot-thread.md) beginnt hier öffentlich.
 - Öffentliche Konfrontation des Barons erzeugt Zeugen, aber auch Gegenwehr, Verzögerung oder einen verdeckten Gegenzug.
 - Untätigkeit gibt dem Baron Zeit, weitere Bergungsleute oder Wachen in Richtung Turm zu schicken.
