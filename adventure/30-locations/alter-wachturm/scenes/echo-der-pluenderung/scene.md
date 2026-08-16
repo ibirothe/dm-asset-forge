@@ -3,7 +3,7 @@ id: scene-echo-der-pluenderung
 type: scene
 title: "Das Echo der Plünderung"
 status: draft
-version: 3
+version: 4
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["fac-gefallene-von-der-glocke", "npc-waechter-der-glocke", "npc-totgeweihter"]
@@ -12,7 +12,7 @@ danger: significant
 tags: [collective-vision, tower-stairs, plunder-memory, baron-heraldry]
 themes: [violence, fear, historical-guilt, witness]
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Das Echo der Plünderung
@@ -63,10 +63,13 @@ Die Vision ist gewaltvoll, laut und angsteinflößend. Plünderer brechen Türen
 - Gegenwart gehalten: Stimmen, Berührung, Handlauf und gezählte Stufen verhindern Trennung oder Sturz, beenden die Vision allein aber nicht. Sie erlauben der Gruppe, gemeinsam über den Umgang mit Zeuge und Gold zu entscheiden.
 - Rückzug oder gewaltsamer Bruch: Die Gruppe kann auf den unteren Absatz entkommen, bevor einer der Auslöser eintritt. Die Vision bleibt unvollständig und kehrt beim nächsten Aufstieg verkürzt mit Totgeweihtem und Münzen zurück; Archiv, Stammtisch und Glockenzeichen bleiben als andere Erkenntniswege offen.
 - Überwältigt: Der Totgeweihte stirbt, bevor klare Fragen möglich sind. Das Glockenläuten beendet die Vision als Fail-forward; Banner, verstreutes Gold und das sichtbare Seil bleiben als belastbare Fragmente.
+- Oberer Aufstieg: Sobald die Gruppe nach dem Ende der Vision weiter in Richtung Glockenraum vordringt, erhebt das Läuten die Turmverteidigung aus Bergungsmann, Wandketten und losen Balken. Rückzug und andere Turmbereiche bleiben erreichbar; passieren muss die Gruppe nur, wenn sie diesen direkten Weg nach oben nimmt.
 
 ## Return to the tower
 
 Mit dem letzten Glockenschlag stehen alle wieder auf den nassen Steinstufen. Über ihnen schwingt nichts; die reale Glocke bleibt vollkommen stumm. Im selben Blickfeld hängt ein schlaffes, sauber durchtrenntes Seilende an der Zugmechanik oberhalb des Treppenaufgangs. Die alte Laufrille und der fehlende Zug nach oben machen ohne weitere Untersuchung verständlich, weshalb kein Glockenschlag mehr den Turm erfüllt.
+
+Noch während der Blick am Seil hängt, schabt unterhalb Metall über Stein. Schwarze Wachsfäden spannen sich in den Mauerfugen, und die ersten Kettenglieder an der oberen Wand heben sich. Die folgende Lage ist in [Der Turm schlägt zurück](../der-turm-schlaegt-zurueck/scene.md) und [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) vorbereitet.
 
 ## Related assets
 
@@ -77,4 +80,5 @@ Mit dem letzten Glockenschlag stehen alle wieder auf den nassen Steinstufen. Üb
 - Schwellenwächter: [Wächter der Glocke](../../npcs/waechter-der-glocke/npc.md)
 - Sterbender Zeuge: [Totgeweihter](../../npcs/totgeweihter/npc.md)
 - Technische Ursache: [Verstummtes Seil](../../information/verstummtes-seil/information.md)
+- Feindseliger Aufstieg: [Der Turm schlägt zurück](../der-turm-schlaegt-zurueck/scene.md)
 - Plotdruck: [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md)

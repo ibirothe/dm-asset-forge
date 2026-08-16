@@ -3,7 +3,7 @@ id: cre-wiedererweckter-bergungsmann
 type: creature
 title: "Wiedererweckter Bergungsmann"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -15,14 +15,14 @@ reach: local
 tags: [animated-skeleton, recovery-worker, guardian-magic]
 themes: [exploitation, repeated-violence, unwilling-service]
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Wiedererweckter Bergungsmann
 
 ## Table purpose
 
-Der Wiedererweckte Bergungsmann macht aus dem Leichnam an der gebrochenen Schwelle eine optionale, räumlich enge Kampfgefahr. Er ist kein böser Toter aus eigenem Antrieb, sondern ein durch die Magie des Wächters bewegter Körper und kann durch Haltung, Schutz oder das Lösen dieser Bindung aufgehalten werden.
+Der Wiedererweckte Bergungsmann macht aus dem Leichnam an der gebrochenen Schwelle den nachrückenden Gegner in [Der Turm schlägt zurück](../../scenes/der-turm-schlaegt-zurueck/scene.md). Er ist kein böser Toter aus eigenem Antrieb, sondern ein durch die Magie des Wächters bewegter Körper und kann durch Kampf, Passage, Schutz oder das Lösen seiner Bindung aufgehalten werden.
 
 ## First impression
 
@@ -39,11 +39,11 @@ Schwarzes Wachs quillt aus den alten Kratzspuren über dem Versteck. Die Knochen
 ## Habitat and movement
 
 - Primary location: [Alter Wachturm](../../location.md)
-- Er erhebt sich an der [Gebrochenen Schwelle](../../scenes/die-gebrochene-schwelle/scene.md) und bleibt an Eingangshalle, Treppenfuß und die Zeichen des Wächters gebunden.
+- Er erhebt sich nach dem Ende der Treppenvision an der [Gebrochenen Schwelle](../../scenes/die-gebrochene-schwelle/scene.md), folgt bis zum oberen Treppenabsatz und bleibt an Eingangshalle, Treppenlauf und die Zeichen des Wächters gebunden.
 
 ## Needs and behavior
 
-Er besitzt keinen eigenen Hunger und keine vorbereitete Persönlichkeit. Die Magie des [Wächters der Glocke](../../npcs/waechter-der-glocke/npc.md) zwingt ihn, den Weg zur Glocke zu sperren, Bergungswerkzeug aus Händen zu schlagen und Personen mit offenem Beutezugriff von der Gruppe zu trennen. Sinkt der Wächterdruck, hält der Körper inne oder fällt zusammen.
+Er besitzt keinen eigenen Hunger und keine vorbereitete Persönlichkeit. Die Magie des [Wächters der Glocke](../../npcs/waechter-der-glocke/npc.md) zwingt ihn nach dem visionären Glockenläuten, den oberen Weg zu sperren, Bergungswerkzeug aus Händen zu schlagen und Personen in die Reichweite der Wandketten zu drängen. Sinkt der Wächterdruck oder wird die Bindung getrennt, hält der Körper inne oder fällt zusammen.
 
 ## Signs and discoverability
 
@@ -51,7 +51,7 @@ Wachs wird weich, Knochen schaben unter dem Absatz, die Axt bewegt sich gegen di
 
 ## Risks and pressure
 
-Auf der schmalen Schwelle kann der Wiedererweckte Personen zurückdrängen, den Rückweg blockieren und mit der Axt lose Steine oder den Handlauf lösen. Reine Zerstörung beendet die Gefahr nur vorübergehend, solange die magische Verbindung und der feindselige Auftrag des Wächters bestehen.
+Auf dem schmalen Treppenlauf kann der Wiedererweckte Personen zurückdrängen, den Rückweg blockieren und mit der Axt Beine, Geländer oder Ausrüstung haken. Im Encounter [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) treibt er die Gruppe in die festen Reichweiten der Wandketten. Reine Zerstörung beendet die Gefahr nur vorübergehend, solange die magische Verbindung des Wächters besteht.
 
 ## Weaknesses and leverage
 
@@ -62,4 +62,4 @@ Auf der schmalen Schwelle kann der Wiedererweckte Personen zurückdrängen, den 
 
 ## Hooks and consequences
 
-Wird der Körper befreit oder würdevoll niedergelegt, wechselt der Wächter mindestens zurück zu einer prüfenden Haltung. Wird er nur zerschlagen, bleibt ein zeitweiliger Durchgang, aber der Wächterdruck besteht. Die versiegelte Anweisung, Vorschussmünze und Arbeitsausrüstung bleiben als Beweise für [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md) erhalten. Im Finale der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md) kann der Wiedererweckte den Rückweg sperren oder als sichtbarer Beweis gegen den Baron dienen.
+Wird der Körper befreit oder würdevoll niedergelegt, wechselt der Wächter mindestens zurück zu einer prüfenden Haltung. Wird er nur zerschlagen oder passiert, bleibt ein zeitweiliger Durchgang, aber der Wächterdruck besteht. Die versiegelte Anweisung, Vorschussmünze und Arbeitsausrüstung bleiben als Beweise für [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md) erhalten. Bleibt die Bindung nach [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) bestehen, kann der Wiedererweckte in der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md) erneut den Rückweg sperren oder als sichtbarer Beweis gegen den Baron dienen.

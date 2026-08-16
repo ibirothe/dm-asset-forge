@@ -3,7 +3,7 @@ id: npc-waechter-der-glocke
 type: npc
 title: "Wächter der Glocke"
 status: draft
-version: 6
+version: 7
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -15,14 +15,14 @@ reach: local
 tags: [guardian, bell, bound-spirit]
 themes: [threshold, sacrifice, restitution]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Wächter der Glocke
 
 ## Table purpose
 
-Der Wächter gibt Akt 2 eine Vorahnung und Akt 4 eine konkrete Entscheidung zwischen Kampf, Umgehung, Opfer und Beschwichtigung. Vier veränderbare Reaktionszustände übersetzen den bisherigen Umgang der Gruppe mit Toten, Gold und Glocke unmittelbar in sein Auftreten.
+Der Wächter gibt Akt 2 eine Vorahnung, manifestiert sich in Akt 3 als geisterhafter Lenker der feindseligen Turmverteidigung und macht Akt 4 zur Entscheidung zwischen Kampf, Umgehung, Opfer und Beschwichtigung. Vier veränderbare Reaktionszustände übersetzen den bisherigen Umgang der Gruppe mit Toten, Gold und Glocke unmittelbar in sein Auftreten.
 
 ## First impression
 
@@ -46,6 +46,7 @@ In Dornfels wird er mit Dämon, Geist oder Turmfluch verwechselt. Tatsächlich i
 
 - Primary location: [Alter Wachturm](../../location.md)
 - Im [Echo der Plünderung](../../scenes/echo-der-pluenderung/scene.md) hält er die Schwelle zwischen kollektiver Erinnerung und realer Treppe.
+- In [Der Turm schlägt zurück](../../scenes/der-turm-schlaegt-zurueck/scene.md) erscheint er oberhalb der Gruppe als flackerndes Geisterbild und steuert Knochen, Ketten und Balken.
 - Appearance: [Zugänge zum Wachturm](../../../zugaenge-zum-wachturm/location.md) zeigen nur Spuren und Vorwarnungen.
 
 ## Motivation
@@ -58,7 +59,7 @@ Er fürchtet nicht Tod, sondern Wiederholung: Goldgier, Lüge und ein Läuten oh
 
 ## Resources and leverage
 
-Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusche, Erinnerungsbilder und Turmreaktionen beeinflussen, den Umgang mit Leichnam, Totgeweihtem, Gold und Seil wahrnehmen und den gefallenen Bergungsmann nekromantisch erheben, aber nicht frei außerhalb seines gebundenen Bereichs handeln.
+Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusche und Erinnerungsbilder beeinflussen, den gefallenen Bergungsmann nekromantisch erheben, morsche Balken lösen und alte Befestigungsketten an ihren Wandankern bewegen. Ketten und Balken bleiben räumlich an ihre Bauteile gebunden; auch der Wächter kann nicht frei außerhalb seines Turms handeln.
 
 ## Knowledge
 
@@ -83,6 +84,7 @@ Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusc
 - Zu den [Gefallenen von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): Er schützt ihren Anspruch, spricht aber nicht für alle Toten.
 - Zum [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md): Er macht die Endentscheidung konkret.
 - Zum [Wiedererweckten Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md): Er zwingt den Leichnam als Schwellenwache in Bewegung, bindet dabei aber keine eigenständige Seele zurück.
+- Zu [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md): Er verbindet Leichnam, Maueranker und lose Balken zu einer gestaffelten Prüfung des weiteren Aufstiegs.
 
 ## Likely behavior
 
@@ -96,10 +98,10 @@ Der Wächter führt kein verborgenes Punktesystem. Für sein nächstes Auftreten
 
 | Zustand | Typische Auslöser | Wahrnehmbares Auftreten | Nächste Handlung |
 |---|---|---|---|
-| Zugewandt | Leichnam geschützt; Totgeweihten begleitet; Beweise gesichert statt Beute genommen; Schuld vor einer Reparatur anerkannt. | Staub sinkt, Durchgänge bleiben offen, die Stimme spricht in vollständigen Sätzen. | Fragt nach dem künftigen Zweck der Glocke und akzeptiert ein konkretes Schutz- oder Wiedergutmachungsangebot als Verhandlungsbeginn. |
-| Prüfend | Gemischte oder unklare Absichten; Münze als Ausweg aus der Vision berührt; Axt oder Beweisstücke aus praktischem Grund geborgen. | Kälte folgt einzelnen Händen, Schatten stehen zwischen Gruppe und Glocke. | Stellt drei knappe Fragen: „Was nehmt ihr? Was lasst ihr? Wer trägt die Schuld?“ |
-| Abweisend | Toten ignoriert; Beuteinteresse gezeigt; Seil ohne erklärten Zweck repariert; Warnungen übergangen. | Türen fallen zu, das Seil entzieht sich dem Griff, Stimmen wiederholen die letzten Worte der Opfer. | Stoppt den Zugriff und verlangt eine sichtbare Korrektur: Beute ablegen, Beweise schützen, den Zweck des Läutens benennen oder einen Rückzug akzeptieren. |
-| Feindselig | Totgeweihten bewusst getötet; Leichnam für Verkauf geplündert; Glocke gewaltsam geborgen; Wächter oder Gefallene angegriffen. | Aschegestalt wird fest, Stufen und Zugänge werden gefährlich, die Glocke reagiert wie auf einen erneuten Raub. | Erhebt bei Bedarf den [Wiedererweckten Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md), trennt Beute vom Fluchtweg und geht zur offenen Konfrontation über; Aufgabe der Bergung, Rettung anderer, belastbare Wiedergutmachung oder Rückzug können ihn weiterhin umstimmen. |
+| Zugewandt | Leichnam geschützt; Totgeweihten begleitet; Beweise gesichert statt Beute genommen; Schuld vor einer Reparatur anerkannt. | Staub sinkt, das Geisterbild warnt vor jedem Balken, nur eine Kette greift gleichzeitig an. | Prüft den Aufstieg kurz, öffnet bei einem konkreten Schutz- oder Wiedergutmachungsschritt einen engen Durchgang und fragt nach dem künftigen Zweck der Glocke. |
+| Prüfend | Gemischte oder unklare Absichten; Münze als Ausweg aus der Vision berührt; Axt oder Beweisstücke aus praktischem Grund geborgen. | Kälte folgt einzelnen Händen, Schatten stehen zwischen Gruppe und Glocke, Ketten spannen sich nacheinander. | Stellt während des Aufstiegs drei knappe Fragen: „Was nehmt ihr? Was lasst ihr? Wer trägt die Schuld?“ |
+| Abweisend | Toten ignoriert; Beuteinteresse gezeigt; Seil ohne erklärten Zweck repariert; Warnungen übergangen. | Türen fallen zu, Balken trennen den Lauf, beide Ketten greifen nach Personen und Ausrüstung. | Lässt den Bergungsmann nachrücken und verlangt eine sichtbare Korrektur: Beute ablegen, Beweise schützen, den Zweck des Läutens benennen oder einen Rückzug akzeptieren. |
+| Feindselig | Totgeweihten bewusst getötet; Leichnam für Verkauf geplündert; Glocke gewaltsam geborgen; Wächter oder Gefallene angegriffen. | Aschegestalt wird fest, Balken stürzen ohne lange Warnung, Ketten würgen und schlagen, der Bergungsmann drängt unerbittlich. | Trennt Beute vom Fluchtweg und geht zur offenen Konfrontation über; Aufgabe der Bergung, Rettung anderer, belastbare Wiedergutmachung oder Rückzug können ihn weiterhin umstimmen. |
 
 Die Handlung zählt stärker als der Gegenstand: Eine Münze aus der Vision zu berühren ist nicht automatisch Gier, und die rostige Handaxt als Werkzeug oder einen Auftragsrest als Beweis zu sichern ist nicht automatisch Plünderung. Entscheidend ist, was die Gruppe damit erkennbar erreichen will und ob sie bereit ist, Verantwortung zu übernehmen.
 
@@ -113,7 +115,7 @@ Die Handlung zählt stärker als der Gegenstand: Eine Münze aus der Vision zu b
 
 ## Hooks and consequences
 
-Ein Endkampf kann ihn zeitweise brechen, löst aber nicht automatisch die Schuld. Ein bewusstes Opfer, ein Eid, Wiedergutmachung oder die öffentliche Sicherung der Glocke kann ihn beruhigen und den Konflikt ohne reinen Kampf beenden. Die Reaktionszustände werden im Encounter [Letzte Bergung](../../encounters/letzte-bergung/encounter.md) als Ausgangslage des Finales verwendet.
+Die Verteidigung in [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) findet beim direkten oberen Aufstieg statt; sein Zustand bestimmt ihre Härte, nicht ihr grundsätzliches Erwachen. Ein Endkampf kann ihn zeitweise brechen, löst aber nicht automatisch die Schuld. Ein bewusstes Opfer, ein Eid, Wiedergutmachung oder die öffentliche Sicherung der Glocke kann ihn beruhigen. Die verbleibende Reaktion wird in der [Letzten Bergung](../../encounters/letzte-bergung/encounter.md) zur Ausgangslage des Finales.
 
 ## Visuals
 

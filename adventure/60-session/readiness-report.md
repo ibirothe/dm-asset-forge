@@ -9,7 +9,7 @@ Dieser knappe, abgeleitete Bericht hält nur Prüfergebnisse und Links auf Quell
 | Prüfung | Ergebnis | Geprüft am | Quelle |
 |---|---|---|---|
 | Session-Preflight | open | not-run | [Session-Preflight](../00-input/session-preflight.md) |
-| Technische Validierung | passed | 2026-08-14 | [Validierungsleitfaden](../../docs/validierung.md) |
+| Technische Validierung | passed | 2026-08-16 | [Validierungsleitfaden](../../docs/validierung.md) |
 | Fachlicher Audit | not-run | not-run | [Audit-Leitfaden](../../docs/adventure-audit-guide.md) |
 
 ## Verbleibende Blocker

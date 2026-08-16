@@ -3,12 +3,12 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 14
+version: 15
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Die verstummte Glocke
@@ -34,7 +34,8 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Vorbereiteter Waldaufstieg: [Unwetter am Waldpfad](30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Dämmerung, Starkregen und geisterhafter Widerstand erschweren den nördlichen Anstieg.
 - Vorbereiteter Turmeinstieg: [Die gebrochene Schwelle](30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Leichnam, Auftragsrest des Barons und rostige Handaxt eröffnen Akt 3 mit belastbaren Spuren.
 - Vorbereitete Treppenvision: [Das Echo der Plünderung](30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Totgeweihter, verstreute Goldmünzen und Glockenläuten verbinden den historischen Raub mit dem sichtbaren Seilbruch.
-- Vorbereiteter Finaldruck: [Letzte Bergung](30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) — Läuten oder Erfolgsmeldung ruft den Baron zur Goldbergung; der Wächter kann den früheren Bergungsmann als erzwungenen Kämpfer erheben.
+- Vorbereiteter feindseliger Aufstieg: [Der Turm schlägt zurück](30-locations/alter-wachturm/scenes/der-turm-schlaegt-zurueck/scene.md) und [Knochen und Ketten](30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — der Wächter manifestiert sich, erhebt den Bergungsmann und steuert wandgebundene Ketten sowie fallende Balken.
+- Vorbereiteter Finaldruck: [Letzte Bergung](30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) — Läuten oder Erfolgsmeldung ruft den Baron zur Goldbergung; Folgen des feindseligen Aufstiegs verändern Wächter und Rückweg.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
@@ -94,7 +95,7 @@ Pfadabdeckung: [Global clue matrix](50-indexes/clue-matrix.md).
 
 ## Nächste sinnvolle Schritte
 
-1. Wächterreaktionen, eindeutige Bergungsbeweise, optionale Wiedererweckung und Barons Ankunft gemeinsam mit der Letzten Bergung am Tisch testen; danach Forderungen und Endzustände des Finales bei Bedarf weiter vertiefen.
+1. Den Übergang von Treppenvision zu Knochen-und-Ketten-Passage sowie Barons spätere Ankunft gemeinsam mit der Letzten Bergung am Tisch testen; danach Forderungen und Endzustände des Finales bei Bedarf weiter vertiefen.
 2. Optional ein player-facing Handout für Aushang oder Regionalkarte entwerfen und erst nach Freigabe schreiben.
 3. Vor Spieltermin Regelbasis, Safety, Barrierefreiheit und reale Materialien klären.
 4. Fachlichen Audit durchführen, wenn der Stand finalisiert werden soll.

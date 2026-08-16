@@ -3,7 +3,7 @@ id: plot-fluch-oder-gier
 type: plot-thread
 title: "Fluch oder Gier"
 status: draft
-version: 7
+version: 8
 scope: global
 entry_locations: ["loc-dornfels", "loc-zugaenge-zum-wachturm", "loc-alter-wachturm"]
 related_factions: ["fac-gefallene-von-der-glocke"]
@@ -12,7 +12,7 @@ reach: local
 tags: []
 themes: []
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Fluch oder Gier
@@ -34,6 +34,7 @@ Die Glocke ist seit einem Jahr stumm, weil das Seil beim ersten heimlichen Bergu
 ## Pressures and progression
 
 - Next pressure: Der Baron hält den öffentlichen Auftrag aufrecht und sucht nach Menschen, die den Turm betreten, ohne seine Bibliotheksfunde offenzulegen.
+- Tower pressure: Nach der kollektiven Vision erhebt der Wächter den früheren Bergungsmann und steuert Wandketten sowie lose Balken. Die Gruppe muss den oberen Aufstieg passieren, kann dies aber durch Kampf, Entkopplung, Rettung, Umgehung oder glaubhafte Absicht erreichen.
 - Late pressure: Läuten, Nachricht eines Beobachters oder der ablaufende Zeitplan bringt den Baron mit Wachen und Bergungsgerät zum Turm. Die Gruppe kann seinen Eigentumsanspruch belegen, bestreiten, öffentlich machen, umlenken oder die Bergung verhindern.
 
 ## Information path
@@ -46,8 +47,8 @@ Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheid
 
 ## Involved assets
 
-- Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) mit der [Gebrochenen Schwelle](../../../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) als direktem Beweispfad und der [Letzten Bergung](../../../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) als offenem Finaldruck; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber und späterer Anspruchsteller; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
-- Supporting: [Zugänge zum Wachturm](../../../30-locations/zugaenge-zum-wachturm/location.md) für Reise, [Unwetter am Waldpfad](../../../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), kleinen Kampf und Wächterspuren; das [Echo der Plünderung](../../../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) für historische Schuld und Bannerhinweis; Dornfelser Markt- und Trauerzeugnisse für sozialen Druck; [Wächter der Glocke](../../../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) und [Gefallene von der Glocke](../../../40-global/factions/gefallene-von-der-glocke/faction.md) für Verhandlung, Opferoption und Konsequenzen.
+- Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) mit der [Gebrochenen Schwelle](../../../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) als direktem Beweispfad, [Knochen und Ketten](../../../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) als notwendiger oberer Passage und der [Letzten Bergung](../../../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) als offenem Finaldruck; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber und späterer Anspruchsteller; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
+- Supporting: [Zugänge zum Wachturm](../../../30-locations/zugaenge-zum-wachturm/location.md) für Reise, [Unwetter am Waldpfad](../../../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), kleinen Kampf und Wächterspuren; das [Echo der Plünderung](../../../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) für historische Schuld und Bannerhinweis; [Der Turm schlägt zurück](../../../30-locations/alter-wachturm/scenes/der-turm-schlaegt-zurueck/scene.md) als Rahmung der Passage; Dornfelser Markt- und Trauerzeugnisse für sozialen Druck; [Wächter der Glocke](../../../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) und [Gefallene von der Glocke](../../../40-global/factions/gefallene-von-der-glocke/faction.md) für Verhandlung, Opferoption und Konsequenzen.
 - Optional: Ausgespielter Schmiedediebstahl, vollständige Schänken- und Bibliotheksszene, ausführliche Rekonstruktion des historischen Raubs und jede nicht benötigte Turmebene.
 - Safe cuts:
   - Cut: Markt- und Trauerzeugnisse in einer Dornfels-Montage bündeln.
@@ -55,7 +56,7 @@ Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheid
   - Cut: Annäherung an den Turm knapp über eine gewählte Route abhandeln.
   - Impact: Entscheidung über Risiko und erste Wächterspuren bleiben sichtbar, ohne die Auflösung zu verschieben.
   - Cut: Turmebenen bündeln, wenn die Session nach Akt 3 drängt.
-  - Impact: Glockenraum, Siegelkammer, Wächterentscheidung und mindestens zwei Wahrheitspfade bleiben erhalten.
+  - Impact: Gebrochene Schwelle und Vision werden kurz zusammengefasst; Knochen und Ketten wird auf Bergungsmann plus eine Kettenzone verdichtet. Glockenraum, Siegelkammer, Wächterentscheidung und mindestens zwei Wahrheitspfade bleiben erhalten.
 
 <!-- Beteilige Assets unter ihrer Pacing-Rolle verlinken und nur ihre Funktion für diesen Thread zusammenfassen. -->
 

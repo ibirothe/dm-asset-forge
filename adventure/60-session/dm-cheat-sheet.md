@@ -15,6 +15,7 @@ Operative Zeit- und Zustandssteuerung: [Session-Ablaufplan](run-sheet.md).
 - Waldaufstieg: [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md) — Starkregen macht den Anstieg riskant und zeigt die abwehrende Präsenz des Wächters.
 - Turmschwelle: [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Versteckter Leichnam, Barons Auftragsspuren und Handaxt verbinden Opfer, Bergung und Auftraggeber.
 - Treppenvision: [Das Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Münzaufnahme oder Tod des Zeugen löst Glockenläuten aus; danach zeigt der sichtbare Seilbruch den Grund des realen Schweigens.
+- Feindseliger Aufstieg: [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — Bergungsmann drängt von unten, Wandketten greifen nur in festen Radien an und angekündigte Balkenstürze verändern den Weg.
 - Zentraler Konflikt: [Plot-Übersicht](../20-plot/overview.md#central-conflict) — Wahrheit, Baron und Glocke müssen in einen Endzustand gebracht werden.
 - Aktueller Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — der Baron hält den Auftrag aktiv und kann eine weitere Bergung auslösen.
 - Unmittelbare Einstiegsoptionen: [Plot-Übersicht](../20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugen, Bibliothek oder Turmzugang.
@@ -27,7 +28,7 @@ Indexroute: [Location-Index](../50-indexes/locations.md).
 |---|---|---|---|
 | Dornfels | Öffentlicher Auftrag, Einkauf, Marktzeugen, Bibliothek, Schänke und Trauer. | Baron schützt seine Erzählung. | [Dornfels](../30-locations/dornfels/location.md) |
 | Zugänge zum Wachturm | Pilgerstraße im Starkregen, Kanal, Ratten und Wächterzeichen. | Unwetter, kleiner Kampf, Rattenkontakt oder Umgehung setzt Akt-2-Druck. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Alter Wachturm | Gebrochene Schwelle, sechs Bereiche, stumme Glocke, Wächter und Siegelkammer. | Der Umgang mit Leichnam, Beweisen und Glocke beeinflusst Wächter und Gefallene. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Alter Wachturm | Gebrochene Schwelle, Treppe mit Wandketten, stumme Glocke, Wächter und Siegelkammer. | Nach der Vision zwingt die vom Wächter gelenkte Turmverteidigung zu Passage, Befreiung, Umgehung oder Verhandlung. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 
 ## Zentrale NPCs
 
@@ -62,16 +63,16 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 - Nächste sichtbare Veränderung: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — ein weiterer Bergungstrupp, gesicherter Zugang oder Wächterforderung.
 - Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — Zeitdruck, öffentliche Konfrontation oder Zögern.
 - Menschlicher Finaldruck: [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) — Läuten, Beobachtermeldung oder Zeitplan bringt ihn mit Wachen und Bergungsgerät zum Turm.
-- Optionaler Kampf: [Wiedererweckter Bergungsmann](../30-locations/alter-wachturm/creatures/wiedererweckter-bergungsmann/creature.md) — feindseliger Wächter erhebt den Leichnam; Wachsfäden, Schutz, Absichtswechsel und Rückzug bleiben Alternativen.
+- Turmverteidigung: [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — Wiedererweckter, Kettenanker und Balken müssen passiert oder entkoppelt werden; Kampf ist nur eine Möglichkeit.
 
 ### Wächterreaktion
 
 | Zustand | Schnellzeichen | Nächster Druck |
 |---|---|---|
-| Zugewandt | Offene Wege, vollständige Sätze | Konkreten Schutz- oder Wiedergutmachungsschritt benennen lassen. |
-| Prüfend | Kälte an Händen, drei Fragen | Zweck, Grenze und Verantwortung sichtbar machen lassen. |
-| Abweisend | Türen schließen, Seil weicht zurück | Beute ablegen, Beweise schützen oder Rückzug wählen lassen. |
-| Feindselig | Feste Aschegestalt, gefährliche Zugänge | Bergung stoppen; Rettung, Wiedergutmachung, Aufgabe oder Kampf bleiben offen. |
+| Zugewandt | Balkenwarnung, nur eine aktive Kette | Schutzhandlung öffnet einen engen Durchgang. |
+| Prüfend | Ketten nacheinander, drei Fragen | Zweck, Grenze und Verantwortung während der Passage sichtbar machen. |
+| Abweisend | Beide Ketten, trennender Balken | Beute ablegen, Beweise schützen oder Rückzug wählen. |
+| Feindselig | Kurze Warnung, würgende Ketten, harter Nachdruck | Bergung stoppen; Rettung, Wiedergutmachung, Aufgabe oder Kampf bleiben offen. |
 
 Auslöser und Zustandswechsel: [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md).
 

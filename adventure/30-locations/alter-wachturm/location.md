@@ -3,7 +3,7 @@ id: loc-alter-wachturm
 type: location
 title: "Alter Wachturm"
 status: draft
-version: 7
+version: 8
 scope: local
 parent_location: null
 function: resolution-site
@@ -12,7 +12,7 @@ accessibility: hidden
 tags: [tower, bell, forest-route, sewer-route]
 themes: [restless-dead, stolen-gold, choice]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Alter Wachturm
@@ -39,7 +39,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 ## Areas
 
 - Eingangshalle: Die [Gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md) zeigt den versteckten Leichnam eines früheren Bergungstrupps, Auftragsspuren des Barons und eine rostige Handaxt.
-- Treppenaufgang: Im [Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) erlebt die Gruppe gemeinsam den gewaltsamen Ursprung des Glockengolds, begegnet einem sterbenden Zeugen und erkennt nach dem visionären Läuten das durchtrennte Seil am sichtbaren Mechanismus.
+- Treppenaufgang: Im [Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) erlebt die Gruppe den Ursprung des Glockengolds und erkennt den Seilbruch. Danach macht [Der Turm schlägt zurück](scenes/der-turm-schlaegt-zurueck/scene.md) denselben Aufstieg mit Bergungsmann, Wandketten und fallenden Balken zur feindseligen Passage.
 - Turmbibliothek: Feuchte Regale, beschädigte Chroniken und Hinweise, die mit den Lücken in Dornfels korrespondieren.
 - Glockenraum: Standort der [Goldenen Glocke](objects/goldene-glocke/object.md), des durchtrennten Seils und der entscheidenden Konfrontation.
 - Krypta: Grab- und Namenraum, in dem Schuld und Opfer sichtbar werden.
@@ -51,7 +51,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 - Die [Gefallenen von der Glocke](../../40-global/factions/gefallene-von-der-glocke/faction.md) sind nicht als gewöhnliche Monster vorbereitet, sondern als ruhelose Anspruchsträger an Schuld und Gold.
 - Der [Wächter der Glocke](npcs/waechter-der-glocke/npc.md) ist an Turm, Siegelkammer und Glocke gebunden und prüft, ob die Gruppe plündert, schützt oder opfert.
 - Der [Totgeweihte](npcs/totgeweihter/npc.md) erscheint nur in der Treppenvision als schwerverletzter Augenzeuge der Plünderung.
-- Der [Wiedererweckte Bergungsmann](creatures/wiedererweckter-bergungsmann/creature.md) ist der Leichnam von der Schwelle, den der Wächter bei gewaltsamer Bergung als erzwungenen Kämpfer erheben kann.
+- Der [Wiedererweckte Bergungsmann](creatures/wiedererweckter-bergungsmann/creature.md) ist der Leichnam von der Schwelle, den der Wächter nach der Vision als erzwungenen Kämpfer des oberen Aufstiegs erhebt.
 - [Baron von Dornfels](../dornfels/npcs/baron-von-dornfels/npc.md) erscheint mit Wachen und Bergungsgerät, sobald Läuten, Beobachter oder Zeitplan einen vermeintlich sicheren Zugriff auf das Gold versprechen.
 
 <!-- Inhabitants, Objects, Information and secrets sowie Encounters and pressures enthalten nur relative Links und knappen ortsspezifischen Kontext. Vollständige Beschreibungen bleiben in den verlinkten Assets. -->
@@ -86,6 +86,8 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 - [Letzte Bergung](encounters/letzte-bergung/encounter.md)
 - [Die gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md) macht den Turmeinstieg, ein früheres Opfer und erste belastbare Bergungsspuren unmittelbar bespielbar.
 - [Das Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) verbindet Totgeweihten, verstreute Münzen, visionäres Glockenläuten und den sichtbaren Seilbruch auf dem Treppenaufgang.
+- [Der Turm schlägt zurück](scenes/der-turm-schlaegt-zurueck/scene.md) rahmt die notwendige Passage durch den vom Geisterbild des Wächters gesteuerten Turm.
+- [Knochen und Ketten](encounters/knochen-und-ketten/encounter.md) führt Bergungsmann, wandgebundene Ketten und angekündigte Balkenstürze als mehrwegige Drucklage.
 - Plotdruck: [Fluch oder Gier](../../20-plot/threads/fluch-oder-gier/plot-thread.md) erreicht hier die Entscheidung über Glocke, Baron und Gefallene.
 - Menschlicher Finaldruck: Der [Baron](../dornfels/npcs/baron-von-dornfels/npc.md) beansprucht Glocke und Funde als Eigentum seines Hauses und macht den Goldzweck des Auftrags sichtbar.
 

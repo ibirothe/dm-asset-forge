@@ -3,7 +3,7 @@ id: enc-letzte-bergung
 type: encounter
 title: "Letzte Bergung"
 status: draft
-version: 5
+version: 6
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["fac-gefallene-von-der-glocke", "obj-goldene-glocke", "npc-baron-von-dornfels", "npc-waechter-der-glocke", "cre-wiedererweckter-bergungsmann"]
@@ -12,7 +12,7 @@ danger: severe
 tags: [tower-pressure, final-choice]
 themes: [greed, reckoning]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Letzte Bergung
@@ -35,11 +35,11 @@ Die Glocke hängt erreichbar, aber nicht friedlich. Spuren früherer Opfer, Seil
 - [Wächter der Glocke](../../npcs/waechter-der-glocke/npc.md): beginnt zugewandt, prüfend, abweisend oder feindselig und verändert sein Verhalten sichtbar, sobald die Gruppe Verantwortung übernimmt oder den Raub wiederholt.
 - [Goldene Glocke](../../objects/goldene-glocke/object.md): Fokus für Läuten, Beweis, Raub oder Beschwichtigung.
 - [Baron von Dornfels](../../../dornfels/npcs/baron-von-dornfels/npc.md): erscheint, sobald Läuten oder Nachricht ausreichende Sicherheit verspricht, und beansprucht Glocke sowie Funde aufgrund der Eigentumsklausel als Besitz seines Hauses.
-- [Wiedererweckter Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md): kann vom feindseligen Wächter als erzwungene Schwellenwache erhoben werden und verkörpert sichtbar, wen der Baron bereits für denselben Goldzweck verbraucht hat.
+- [Wiedererweckter Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md): hat die Gruppe bereits beim oberen Aufstieg angegriffen. Besteht seine Bindung noch, kann er den Rückweg erneut sperren; andernfalls bleiben seine Gebeine und Beweise als sichtbare Anklage gegen den Baron zurück.
 
 ## Environment and leverage
 
-Eingangshalle, Turmbibliothek, Krypta, Katakomben, Glockenraum und Siegelkammer können je nach Zeit als eigene Räume oder gebündelte Zustände dienen. Leverage entsteht durch Beweise, respektvollen Umgang mit der Glocke, öffentliche Zeugen, den Grenzstein-Hinweis, Opferbereitschaft oder die Drohung, den Baron zu entlarven. Frühere Entscheidungen an der [Gebrochenen Schwelle](../../scenes/die-gebrochene-schwelle/scene.md) und im [Echo der Plünderung](../../scenes/echo-der-pluenderung/scene.md) setzen die anfängliche Haltung, schreiben das Ergebnis aber nicht fest.
+Eingangshalle, Turmbibliothek, Krypta, Katakomben, Glockenraum und Siegelkammer können je nach Zeit als eigene Räume oder gebündelte Zustände dienen. Leverage entsteht durch Beweise, respektvollen Umgang mit der Glocke, öffentliche Zeugen, den Grenzstein-Hinweis, Opferbereitschaft oder die Drohung, den Baron zu entlarven. Frühere Entscheidungen an der [Gebrochenen Schwelle](../../scenes/die-gebrochene-schwelle/scene.md), im [Echo der Plünderung](../../scenes/echo-der-pluenderung/scene.md) und bei [Knochen und Ketten](../knochen-und-ketten/encounter.md) setzen die anfängliche Haltung, schreiben das Ergebnis aber nicht fest.
 
 ## Initialer Wächterzustand
 
@@ -56,7 +56,7 @@ Nutze die vollständigen Auslöser, sichtbaren Zeichen und Möglichkeiten zum Zu
 2. Er fragt nach Zweck, Grenze und Verantwortung; eine konkrete Antwort kann ihn öffnen, bloße Behauptungen halten die Prüfung aufrecht.
 3. Hastiger Zugriff macht den Turm gefährlich: brüchige Stufen, fallende Teile und blockierte Wege trennen Gruppe, Beute und Ausgang.
 4. Bei wiederholter Gewalt wird der Wächter zum Gegner; bei sichtbarer Korrektur wechselt er zurück zur Forderung nach einem Preis.
-5. Bei feindseligem Zustand kann der Wächter den früheren Bergungsmann erheben; die Gruppe kann kämpfen, die Bindung lösen, den Leichnam schützen oder ihre Absicht ändern.
+5. Besteht die Bindung des Bergungsmanns nach dem feindseligen Aufstieg fort, sperrt er erneut den Rückweg; gelöste oder würdevoll niedergelegte Gebeine bleiben dagegen aus dem Kampf.
 6. Läuten, eine Erfolgsmeldung oder der ablaufende Zeitplan bringt den Baron mit Wachen und Gerät zum Turm. Er verlangt Übergabe und nennt den Goldwert erstmals offen, wenn sein Anspruch bestritten wird.
 7. Eine klare Entscheidung kippt die Lage in Beschwichtigung, Entlarvung, Opfer, Rückzug oder offene Eskalation zwischen Baron, Wächter und Gruppe.
 
