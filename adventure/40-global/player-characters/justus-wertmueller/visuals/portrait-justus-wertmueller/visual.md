@@ -2,12 +2,12 @@
 id: vis-portrait-justus-wertmueller
 type: visual
 title: "Portrait Justus Wertmüller"
-status: draft
+status: ready
 version: 1
 scope: subject-owned
 subject_asset: "pc-justus-wertmueller"
 output_file: "portrait-justus-wertmueller.png"
-provenance: unknown
+provenance: agent-generated
 source_refs: ["../../player-character.md"]
 tags: [portrait, player-character, merchant]
 themes: [opportunity, reputation, analysis]
@@ -31,9 +31,14 @@ Spielersichtbares Charakterportrait für Justus als gepflegten, analytischen Hä
 
 <!-- Exakte kanonische Subject-Abschnitte relativ verlinken oder benennen. -->
 
+- [Subject Player-facing concept](../../player-character.md#player-facing-concept)
+- [Subject Established background](../../player-character.md#established-background)
+
 ## Stable identity anchors
 
 <!-- Nur die für diese Darstellung erforderlichen Anker aus der Identity source extrahieren; keine neue Subject-Beschreibung oder neue kanonische Eigenschaft einführen. -->
+
+48-jähriger menschlicher Mann; grauer Zwirbelbart; hochwertige, aber schlichte Kleidung; spitze Lederschuhe; gepflegtes, bewusst unaufdringliches Auftreten; verzaubertes Notizbuch als Arbeitsmittel.
 
 ## Depicted state
 
@@ -51,10 +56,10 @@ Vollständig spielersichtbar. Keine goldene Glocke, keine untoten Bergungsleute,
 
 ## Generation approval
 
-- Status: not-approved
-- PNG state: not-created
-- Approved visual version: none
-- Approval: none
+- Status: approved
+- PNG state: current
+- Approved visual version: 1
+- Approval: User approved generation of Visual version 1 in chat on 2026-08-16.
 
 ## Output
 
@@ -65,6 +70,4 @@ Vollständig spielersichtbar. Keine goldene Glocke, keine untoten Bergungsleute,
 ## Provenance and revisions
 
 - 2026-08-16: Erstes Briefing aus dem Player-Character-Subject erstellt; keine PNG-Erzeugung freigegeben.
-- [Subject Player-facing concept](../../player-character.md#player-facing-concept)
-- [Subject Established background](../../player-character.md#established-background)
-48-jähriger menschlicher Mann; grauer Zwirbelbart; hochwertige, aber schlichte Kleidung; spitze Lederschuhe; gepflegtes, bewusst unaufdringliches Auftreten; verzaubertes Notizbuch als Arbeitsmittel.
+- 2026-08-16: PNG nach expliziter User-Freigabe mit Codex built-in image generation erzeugt, visuell gegen Identitätsanker und Ausschlüsse geprüft und als aktuelle Visual-Version gespeichert.

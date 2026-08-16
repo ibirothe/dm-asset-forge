@@ -2,7 +2,7 @@
 id: pc-justus-wertmueller
 type: player-character
 title: "Justus Wertmüller"
-status: draft
+status: ready
 version: 1
 scope: global
 related_locations: ["loc-dornfels", "loc-alter-wachturm"]
@@ -106,10 +106,10 @@ Justus besitzt keine geheime Verbindung zum Baron, zur Glocke oder zu früheren 
 
 ## Player release
 
-- Status: not-approved
-- Player file: none
-- Approved source version: none
-- Approval: none
+- Status: approved
+- Player file: [player.md](player.md)
+- Approved source version: 1
+- Approval: User approved the complete player release draft in chat on 2026-08-16.
 
 ## Visuals
 
