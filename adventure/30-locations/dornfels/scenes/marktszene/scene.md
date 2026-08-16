@@ -3,10 +3,10 @@ id: scene-marktszene
 type: scene
 title: "Marktszene"
 status: draft
-version: 3
+version: 4
 scope: local
 primary_location: "loc-dornfels"
-participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust", "pc-justus-wertmueller"]
+participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust", "npc-baron-von-dornfels", "pc-justus-wertmueller", "pc-lars-sauertrahn"]
 related_threads: ["plot-fluch-oder-gier"]
 danger: limited
 tags: [market, opening, notice, witnesses]
@@ -34,6 +34,8 @@ Der Marktplatz ist voll genug, dass niemand allein mit seiner Angst ist. Der fri
 - [Liska Warenmaß](../../npcs/liska-warenmass/npc.md): verkauft Vorräte und Karte, gibt aber Gerüchte nur vorsichtig weiter.
 - [Gerolt Eisenfaust](../../npcs/gerolt-eisenfaust/npc.md): schützt Schmiedewaren und Schleifstein; Verhandlung, Bezahlung oder Diebstahl verändern sofort den Marktdruck.
 - [Justus Wertmüller](../../../../40-global/player-characters/justus-wertmueller/player-character.md): begegnet hier den übrigen Spielerfiguren erstmals und kann Finanzierung, Analyse oder Sprecherrolle anbieten, ohne dass daraus bereits Loyalität folgt.
+- [Lars Sauertrahn](../../../../40-global/player-characters/lars-sauertrahn/player-character.md): findet auf dem bewachten Markt wenig sichere Beute, begegnet hier der Gruppe und erhält bei einem kurzen Auftreten des Barons unbemerkt dessen versiegelte Nachricht.
+- [Baron von Dornfels](../../npcs/baron-von-dornfels/npc.md): zeigt sich kurz am öffentlichen Aushang, wahrt seine fürsorgliche Rolle und steckt Lars im Gedränge eine geheime Führungs- und Berichtsanweisung zu.
 
 ## Immediate tension
 
@@ -60,6 +62,7 @@ Der Aushang verspricht einfache Belohnung für eine scheinbar klare Aufgabe, abe
 - Sozialen Druck aufnehmen: Die Gruppe folgt Zeugen wie Borin, Nele, Timo oder später Mira und kann den Auftrag moralisch umdeuten, bevor sie den Turm erreicht.
 - Direkt aufbrechen: Die Gruppe geht über Waldweg oder Kanal zu den [Zugängen zum Wachturm](../../../zugaenge-zum-wachturm/location.md); verpasste Markthinweise bleiben über Turmspuren oder spätere Zeugenschaft auffangbar.
 - Öffentlich eskalieren: Fragen gegen den Baron erzeugen Aufmerksamkeit, Schutz durch Zeugen oder Gegenwehr der Obrigkeit; der Plot bleibt spielbar, aber der Baron reagiert früher.
+- Geheime Anweisung: Lars kann Barons Zettel verbergen, offenlegen, fälschen, ignorieren oder gegen ihn verwenden. Keine dieser Reaktionen ist Voraussetzung für Auftrag oder Turmzugang.
 
 ## Related assets
 

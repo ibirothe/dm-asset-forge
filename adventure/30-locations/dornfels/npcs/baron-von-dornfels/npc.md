@@ -3,7 +3,7 @@ id: npc-baron-von-dornfels
 type: npc
 title: "Baron von Dornfels"
 status: draft
-version: 5
+version: 6
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -83,10 +83,12 @@ Belohnung, Wachen, Arbeiter, das vorbereitete [Bergungsgestell](../../../alter-w
 - Zum [Bergungsgestell](../../../alter-wachturm/objects/bergungsgestell-des-barons/object.md): Eigentümer und Auftraggeber; sein vorbereitetes Gerät beweist, dass der Abtransport von Anfang an geplant war.
 - Zu den [Gefallenen von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): versteht sie als Hindernis oder Aberglauben, nicht als Anspruchsträger.
 - Zum [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md): treibt die Eskalation.
+- Zu [Lars Sauertrahn](../../../../40-global/player-characters/lars-sauertrahn/player-character.md): Wählt den unauffälligen Fremden beim Marktauftakt als heimlichen Berichterstatter und behaupteten Führer der Unternehmung, ohne dessen kriminelle Vergangenheit zu kennen.
 
 ## Likely behavior
 
 - Wenn unterstützt: Vor dem Turm drängt er zum Läuten. Im Finale ordnet er die Bergung an, stellt Wachen und Arbeiter bereit und erwartet, dass die Gruppe die untoten Verteidiger bindet.
+- Gegenüber Lars: Erwartet diskrete Berichte über Abweichungen, hat aber weder sichere Loyalität noch tatsächliche Führungsgewalt geschaffen. Bei Offenlegung leugnet er den Zweck des Zettels oder deutet ihn als gewöhnliche Auftragskoordination um.
 - Wenn unter Druck: Behauptet, die Glocke und jedes Turminventar gehörten rechtmäßig dem Haus Dornfels, verlangt Beweise und versucht Zeugen oder Fundstücke zu kontrollieren.
 - Wenn die Gruppe seinen Anspruch im Turm verweigert: Lässt das Gestell aufrichten, befiehlt die Bergung gegen ihren Widerstand und zieht sich erst zurück, wenn Gerät oder Gefolgschaft nicht mehr einsetzbar sind.
 
