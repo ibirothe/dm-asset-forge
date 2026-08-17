@@ -3,7 +3,7 @@ id: scene-die-gebrochene-schwelle
 type: scene
 title: "Die gebrochene Schwelle"
 status: draft
-version: 4
+version: 5
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["npc-waechter-der-glocke", "cre-wiedererweckter-bergungsmann"]
@@ -12,7 +12,7 @@ danger: significant
 tags: [tower-entrance, recovery-team, baron-evidence, rusty-handaxe]
 themes: [abandonment, fear, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Die gebrochene Schwelle
@@ -52,7 +52,7 @@ Der engste sichere Durchgang führt dicht am Leichnam vorbei. Wer ihn untersucht
 
 ## Possible transitions
 
-- Sorgfältig untersucht: Die Gruppe kann Auftragsrest und Münze als Beweise sichern und erkennt den Toten als ausgebeuteten Bergungsmann. Bibliothek, Krypta, Katakomben und Glockenraum bleiben gleichwertig erreichbar.
+- Sorgfältig untersucht: Die Gruppe kann Auftragsrest und Münze als Beweise sichern und erkennt den Toten als ausgebeuteten Bergungsmann. Treppenaufgang und Glockenraum bleiben erreichbar.
 - Würdevoll behandelt: Wird der Körper geschützt, zugedeckt oder für eine spätere Bestattung markiert, beginnt der [Wächter](../../npcs/waechter-der-glocke/npc.md) bei seinem nächsten deutlichen Auftreten eher zugewandt statt nur prüfend; dies ist noch keine automatische Zustimmung.
 - Handaxt geborgen: Die Gruppe erhält einen brüchigen Hebel oder Keil. Nutzung als Werkzeug oder Beweissicherung wertet der Wächter neutral; angekündigter Verkauf oder Trophäenraub macht ihn abweisender. Grober Einsatz kann zusätzlich den Stiel brechen, Lärm verursachen oder lose Steine aus der Schwelle lösen.
 - Leichnam geplündert oder entwürdigt: Der Wächter beginnt mindestens abweisend und lässt Stimmen die Handlung wiederholen. Rückgabe, Schutz des Körpers oder spätere Rettung eines Gefährdeten kann den Zustand wieder verändern.

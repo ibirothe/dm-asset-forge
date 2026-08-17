@@ -3,7 +3,7 @@ id: npc-jorek-malz
 type: npc
 title: "Jorek Malz"
 status: ready
-version: 3
+version: 4
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -56,7 +56,7 @@ Jorek fürchtet, dass ein falsches Wort den Baron auf den Stammtisch aufmerksam 
 
 ## Resources and leverage
 
-Gerüchte, Schlafplätze, Essen, Zugang zu Stammtischgesprächen und die Fähigkeit, Gespräche unauffällig zu lenken.
+Gerüchte, Schlafplätze, Essen, Zugang zu Stammtischgesprächen, die [Sturmlaterne der Schänke](../../objects/sturmlaterne-der-schaenke/object.md), [Wacholder-Salz und Kantenbrot](../../objects/wacholder-salz-und-kantenbrot/object.md) und die Fähigkeit, Gespräche unauffällig zu lenken.
 
 ## Knowledge
 
@@ -80,11 +80,12 @@ Gerüchte, Schlafplätze, Essen, Zugang zu Stammtischgesprächen und die Fähigk
 - Zum [Stammtisch der Alten](../stammtisch-der-alten/npc.md): schützt ihre Ruhe und sortiert respektvolle Fragende von Gaffern.
 - Zu [Mira Seilern](../mira-seilern/npc.md): gibt ihr Essen und hält ihren Platz frei.
 - Zur [Überlieferung der Plünderung](../../information/ueberlieferung-der-pluenderung/information.md): Zugangsfigur.
+- Zur [Sturmlaterne der Schänke](../../objects/sturmlaterne-der-schaenke/object.md) und zu [Wacholder-Salz und Kantenbrot](../../objects/wacholder-salz-und-kantenbrot/object.md): kann sie verkaufen, verleihen oder als Zeichen vorsichtiger Gastfreundschaft einsetzen.
 - Zu [Tjorbe Hammerhand](../../../../40-global/player-characters/tjorbe-hammerhand/player-character.md): Kennt den wandernden Arbeiter von dessen Aufenthalt in Dornfels und behandelt ihn als groben, aber zahlenden Stammgast auf Zeit.
 
 ## Likely behavior
 
-- Wenn unterstützt: Stellt einen Krug hin, deutet auf die Alten und warnt vor Wachenohren.
+- Wenn unterstützt: Stellt einen Krug hin, deutet auf die Alten, warnt vor Wachenohren und kann praktische Schänkenausrüstung anbieten.
 - Wenn unter Druck: Wird höflich unzugänglich und beendet Gespräche mit Arbeit.
 - Wenn ignoriert: Die Schänke bleibt Geräuschkulisse; der mündliche Geschichtspfad wird schwerer.
 

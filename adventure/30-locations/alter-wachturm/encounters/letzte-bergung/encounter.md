@@ -3,7 +3,7 @@ id: enc-letzte-bergung
 type: encounter
 title: "Letzte Bergung"
 status: draft
-version: 7
+version: 8
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["fac-gefallene-von-der-glocke", "obj-goldene-glocke", "npc-baron-von-dornfels", "npc-waechter-der-glocke", "cre-wiedererweckter-bergungsmann", "cre-gefallene-bergungsleute", "obj-bergungsgestell-des-barons"]
@@ -12,7 +12,7 @@ danger: severe
 tags: [tower-pressure, final-choice, configurable-encounter]
 themes: [greed, guardianship, reckoning]
 created: 2026-08-14
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Letzte Bergung
@@ -49,12 +49,12 @@ Glocke und Siegelring bilden den umkämpften Mittelpunkt. Frühere Entscheidunge
 - Durchtrenntes Seil und Hebel: Der reparierte Zug kann die Glocke läuten, trägt aber nicht ihr Gewicht. Im Kampf lässt er sich als Schwunglinie, Fessel oder Ablenkung nutzen.
 - Siegelring: Solange die Glocke innerhalb des Rings hängt, kann der Wächter Turm und Gebeine lenken. Wird sie darüber hinausgehoben, bricht die Bindung unkontrolliert auf.
 - Wandketten und Balken: Ketten schlagen oder würgen nur im Radius ihres Ankers; Balkenstürze werden durch Staub, Knarren und das Geisterbild angekündigt.
-- Krypta- und Katakombennischen: Von hier kommen die [Gefallenen Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md). Befreite oder würdevoll gebettete Tote bleiben liegen.
+- Mauernischen, Eingangswinkel und Spalten am Siegelring: Von hier kommen die [Gefallenen Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md). Befreite oder würdevoll gebettete Tote bleiben liegen.
 - Bergungsgestell: In Konfiguration 2 und 3 steht das [Bergungsgestell des Barons](../../objects/bergungsgestell-des-barons/object.md) über dem Schacht. Es ist Ziel, Deckung und Gefahrenquelle zugleich.
 
 ## Konfiguration 1: Die neuen Plünderer
 
-Die Gruppe versucht, die Glocke selbst als Goldschatz zu bergen. Der Wächter verriegelt den Rückweg, zieht schwarze Siegellinien zu allen noch gebundenen Leibern und orchestriert ihren Angriff. Dazu gehören der [Wiedererweckte Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md), falls seine Bindung im Aufstieg nicht gelöst wurde, und die weiteren Gefallenen aus Krypta und Katakomben.
+Die Gruppe versucht, die Glocke selbst als Goldschatz zu bergen. Der Wächter verriegelt den Rückweg, zieht schwarze Siegellinien zu allen noch gebundenen Leibern und orchestriert ihren Angriff. Dazu gehören der [Wiedererweckte Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md), falls seine Bindung im Aufstieg nicht gelöst wurde, und die weiteren Gefallenen aus Nischen, Spalten und Eingangswinkeln.
 
 Ziel der Gruppe ist, die Glocke aus dem Siegelring zu schaffen. Ziel des Wächters ist nicht ihr Tod, sondern die Aufgabe der Bergung: Er trennt Hände von Werkzeugen, Körper vom Joch und Beute vom Ausgang. Wer die Bergung sichtbar aufgibt, einen Gefährdeten rettet oder die Glocke wieder sichert, kann auch während des Kampfes kapitulieren.
 

@@ -3,7 +3,7 @@ id: loc-dornfels
 type: location
 title: "Dornfels"
 status: draft
-version: 12
+version: 13
 scope: local
 parent_location: null
 function: investigation-hub
@@ -42,7 +42,7 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 - Krämer: [Liska Warenmaß](npcs/liska-warenmass/npc.md) verkauft die [Krämerauslage](objects/kraemerauslage/object.md) mit Essensrationen, Heiltränken, Fackeln und einer Regionalkarte.
 - Schmiede: [Gerolt Eisenfaust](npcs/gerolt-eisenfaust/npc.md) führt [Schmiedewaren und Schleifstein](objects/schmiedewaren-und-schleifstein/object.md); der [Schmiedestreit](scenes/schmiedestreit/scene.md) verbindet angebliche Schulden, Mira und Borins Marktzeugnis mit Turmvorbereitung.
 - Bibliothek: Die [Bibliotheksszene](scenes/bibliotheksszene/scene.md) macht [Alena Staub](npcs/alena-staub/npc.md), [Herkunft der Glocke](information/herkunft-der-glocke/information.md) und die [fehlenden Bücher der Plünderungszeit](information/fehlende-buecher-der-pluenderungszeit/information.md) als Archivpfad spielbar.
-- Schänke: [Jorek Malz](npcs/jorek-malz/npc.md) schützt den [Stammtisch der Alten](npcs/stammtisch-der-alten/npc.md), der die [Überlieferung der Plünderung](information/ueberlieferung-der-pluenderung/information.md) kennt.
+- Schänke: [Jorek Malz](npcs/jorek-malz/npc.md) schützt den [Stammtisch der Alten](npcs/stammtisch-der-alten/npc.md), der die [Überlieferung der Plünderung](information/ueberlieferung-der-pluenderung/information.md) kennt; hinter dem Tresen liegen mit [Sturmlaterne der Schänke](objects/sturmlaterne-der-schaenke/object.md) und [Wacholder-Salz und Kantenbrot](objects/wacholder-salz-und-kantenbrot/object.md) zwei optionale Ausrüstungsvorteile.
 - Baronssitz oder Amtsstube: Sozialer Druckpunkt gegen [Baron von Dornfels](npcs/baron-von-dornfels/npc.md).
 - Stadttor, Kanalkante und verfallene Außenbereiche: Der [Kanalzugang](scenes/kanalzugang/scene.md), [Nolte am Tor](npcs/nolte-am-tor/npc.md), [Rena Falk](npcs/rena-falk/npc.md) und der Weg zu den [Zugängen zum Wachturm](../zugaenge-zum-wachturm/location.md) machen heimliche Bewegungen sichtbar.
 
@@ -66,6 +66,8 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 - [Aushang des Barons](objects/aushang-des-barons/object.md)
 - [Krämerauslage](objects/kraemerauslage/object.md)
 - [Schmiedewaren und Schleifstein](objects/schmiedewaren-und-schleifstein/object.md)
+- [Sturmlaterne der Schänke](objects/sturmlaterne-der-schaenke/object.md)
+- [Wacholder-Salz und Kantenbrot](objects/wacholder-salz-und-kantenbrot/object.md)
 
 ## Information and secrets
 

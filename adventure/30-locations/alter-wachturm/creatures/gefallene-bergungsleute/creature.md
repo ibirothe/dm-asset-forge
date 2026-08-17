@@ -3,7 +3,7 @@ id: cre-gefallene-bergungsleute
 type: creature
 title: "Gefallene Bergungsleute"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -15,7 +15,7 @@ reach: local
 tags: [animated-dead, recovery-crews, guardian-magic]
 themes: [exploitation, greed, unwilling-service]
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Gefallene Bergungsleute
@@ -26,7 +26,7 @@ Die Gefallenen Bergungsleute bilden die gemeinsame nekromantische Abwehr des Fin
 
 ## First impression
 
-Aus Krypta, Katakomben und Mauernischen antworten erst einzelne Werkzeuge: ein Haken kippt, eine Kette spannt sich, ein Stiefel schabt über Stein. Dann richten sich mehrere unvollständige, von schwarzen Wachsfäden gehaltene Körper gleichzeitig auf und wenden sich zwischen Glocke und Bergende.
+Aus Mauernischen, Eingangswinkeln und Spalten am Siegelring antworten erst einzelne Werkzeuge: ein Haken kippt, eine Kette spannt sich, ein Stiefel schabt über Stein. Dann richten sich mehrere unvollständige, von schwarzen Wachsfäden gehaltene Körper gleichzeitig auf und wenden sich zwischen Glocke und Bergende.
 
 ## Recognizable features
 
@@ -41,7 +41,7 @@ Aus Krypta, Katakomben und Mauernischen antworten erst einzelne Werkzeuge: ein H
 
 - Primary location: [Alter Wachturm](../../location.md)
 
-Ihre Überreste liegen in Krypta, Katakomben, Eingangsnischen und nahe früherer Arbeitsstellen. Im Finale ziehen sie zum Glockenraum, bleiben jedoch an Turm und Wächterzeichen gebunden. Der [Wiedererweckte Bergungsmann](../wiedererweckter-bergungsmann/creature.md) ist das früh sichtbare einzelne Opfer; wurde seine Bindung zuvor gelöst, bleibt er im Finale in Ruhe.
+Ihre Überreste liegen in Eingangsnischen, Mauerspalten, Bodensenken und nahe früherer Arbeitsstellen. Im Finale ziehen sie zum Glockenraum, bleiben jedoch an Turm und Wächterzeichen gebunden. Der [Wiedererweckte Bergungsmann](../wiedererweckter-bergungsmann/creature.md) ist das früh sichtbare einzelne Opfer; wurde seine Bindung zuvor gelöst, bleibt er im Finale in Ruhe.
 
 ## Needs and behavior
 
@@ -49,7 +49,7 @@ Die Körper besitzen keine eigenen Bedürfnisse. Der [Wächter](../../npcs/waech
 
 ## Signs and discoverability
 
-Wiederkehrende Vorschussmünzen, gleiche Gurtabnutzung, Hebezeugmarken, alte Brüche und schwarze Wachsspuren verbinden die verstreuten Toten. Wer Krypta oder Katakomben vor dem Finale untersucht, erkennt Anzahl, Zugänge und Werkzeuge der späteren Verteidigung und kann einzelne Bindungen vorab lösen.
+Wiederkehrende Vorschussmünzen, gleiche Gurtabnutzung, Hebezeugmarken, alte Brüche und schwarze Wachsspuren verbinden die verstreuten Toten. Wer Nischen, Spalten und den Siegelring vor dem Finale untersucht, erkennt Anzahl, Zugänge und Werkzeuge der späteren Verteidigung und kann einzelne Bindungen vorab lösen.
 
 ## Risks and pressure
 

@@ -3,7 +3,7 @@ id: loc-alter-wachturm
 type: location
 title: "Alter Wachturm"
 status: draft
-version: 13
+version: 14
 scope: local
 parent_location: null
 function: resolution-site
@@ -40,10 +40,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 
 - Eingangshalle: Die [Gebrochene Schwelle](scenes/die-gebrochene-schwelle/scene.md) zeigt den versteckten Leichnam eines früheren Bergungstrupps, Auftragsspuren des Barons und eine rostige Handaxt.
 - Treppenaufgang: Im [Echo der Plünderung](scenes/echo-der-pluenderung/scene.md) erlebt die Gruppe den Ursprung des Glockengolds und erkennt den Seilbruch. Danach macht [Der Turm schlägt zurück](scenes/der-turm-schlaegt-zurueck/scene.md) denselben Aufstieg mit Bergungsmann, Wandketten und fallenden Balken zur feindseligen Passage.
-- Turmbibliothek: Feuchte Regale, beschädigte Chroniken und Hinweise, die mit den Lücken in Dornfels korrespondieren.
 - Glockenraum und Siegelkammer: Die Scene [Glockenraum und Siegelkammer](scenes/glockenraum-und-siegelkammer/scene.md) verbindet Glocke, reparierbaren Zug, Gebeine weiterer Bergungsleute und die drei möglichen Finalkonfigurationen.
-- Krypta: Grab- und Namenraum, in dem Schuld und Opfer sichtbar werden.
-- Katakomben: Verbindungen zu Kanalanschluss, Rückzug und Spuren früherer Bergungsleute.
 - Siegelkammer: Ort der Grenze zwischen Wächter, Gefallenen und Glocke; der Siegelring reagiert auf Bergung, Schutz und Aufgabe.
 
 ## Inhabitants
@@ -52,7 +49,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 - Der [Wächter der Glocke](npcs/waechter-der-glocke/npc.md) ist an Turm, Siegelkammer und Glocke gebunden und prüft, ob die Gruppe plündert, schützt oder opfert.
 - Der [Totgeweihte](npcs/totgeweihter/npc.md) erscheint nur in der Treppenvision als schwerverletzter Augenzeuge der Plünderung.
 - Der [Wiedererweckte Bergungsmann](creatures/wiedererweckter-bergungsmann/creature.md) ist der Leichnam von der Schwelle, den der Wächter nach der Vision als erzwungenen Kämpfer des oberen Aufstiegs erhebt.
-- Die [Gefallenen Bergungsleute](creatures/gefallene-bergungsleute/creature.md) sind die weiteren Opfer früherer Bergungsversuche in Krypta und Katakomben. Der Wächter kann ihre Körper im Finale gegen neue Goldbergung erheben.
+- Die [Gefallenen Bergungsleute](creatures/gefallene-bergungsleute/creature.md) sind die weiteren Opfer früherer Bergungsversuche in Mauernischen, Eingangswinkeln und am Siegelring. Der Wächter kann ihre Körper im Finale gegen neue Goldbergung erheben.
 - [Baron von Dornfels](../dornfels/npcs/baron-von-dornfels/npc.md) erscheint nach wirklichem Läuten mit Wachen, Arbeitern und vorbereitetem Bergungsgestell.
 
 <!-- Inhabitants, Objects, Information and secrets sowie Encounters and pressures enthalten nur relative Links und knappen ortsspezifischen Kontext. Vollständige Beschreibungen bleiben in den verlinkten Assets. -->

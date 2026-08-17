@@ -20,7 +20,7 @@ Diese Akte sind vorbereitete Zeitanker, keine Pflichtreihenfolge. Wenn Spieleren
 |---|---:|---|---|---|
 | Akt 1: Dornfels | 30-45 Min. | Gruppe kennt Auftrag, kann Ausrüstung wählen und mindestens zwei Hinweise anstoßen. | NPCs vorstellen, Gerüchte, Krämer, [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), Bibliothek, Schänke. | [Dornfels](../30-locations/dornfels/location.md) |
 | Akt 2: Wald/Kanalisation | 30 Min. | Route ist gewählt, Unwetter, kleiner Kampf, Rattenkontakt oder Umgehung ist aufgelöst, Wächter wird vorgeahnt. | [Unwetter am Waldpfad](../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), [Kanalzugang](../30-locations/dornfels/scenes/kanalzugang/scene.md), [Kanalstrecke](../30-locations/zugaenge-zum-wachturm/scenes/kanalstrecke/scene.md), kleiner Kampf, Wächterspuren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md), [Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md), [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md), danach Krypta/Katakomben und [Glockenraum und Siegelkammer](../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md). | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Akt 3: Turm | ca. 90 Min. | Glocke, Seilbruch, Wächter und historische Schuld sind handlungsrelevant. | [Die gebrochene Schwelle](../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md), [Echo der Plünderung](../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md), [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) und [Glockenraum und Siegelkammer](../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md). | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 | Akt 4: Finale | offen | Eine der drei Glockenentscheidungen wird vollendet. | Eigener Diebstahl; oder reparieren und läuten, dann Baron unterstützen beziehungsweise den Verbleib der Glocke verteidigen. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 ## Einstiegsoptionen
@@ -48,7 +48,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 |---|---|---|---|---|
 | Ende Akt 1 | Ausrüstung gewählt und mindestens zwei Hinweise sind begonnen. | [Schmiedestreit](../30-locations/dornfels/scenes/schmiedestreit/scene.md), [Bibliotheksszene](../30-locations/dornfels/scenes/bibliotheksszene/scene.md) oder Schänkenüberlieferung anbieten. | Schmiedediebstahl, Borins Zusatzbeobachtung oder Krämerkarte als Zusatzhebel zulassen. | [Dornfels](../30-locations/dornfels/location.md) |
 | Ende Akt 2 | Route ist entschieden und Wächter ist vorgeahnt. | Unwetter als kurze Hindernismontage führen, Nolte-Konflikt kurz entscheiden, Ratten nur als Preis oder Spur zeigen und Wächterzeichen deutlich präsentieren. | Im Wald Schutz oder Hangumweg belohnen, Kanalzugang ruhig lösen, Ratten umgehen lassen oder eine Routenspur als Vorteil im Turm gewähren. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Vor Akt 4 | Zwei zentrale Wahrheiten plus Wächterrolle sind zugänglich; die Knochen-und-Ketten-Passage hat Haltung, Rückweg und verbliebene Gefahren gesetzt. | Visionäres Läuten mit Seilbruch verbinden und die Passage auf Bergungsmann plus eine Kettenzone verdichten; Wächter im Zweifel prüfend führen. | Gelöste oder fortbestehende Bindungen in Krypta, Katakomben, Siegelkammer oder Finale nachwirken lassen. | [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) |
+| Vor Akt 4 | Der Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten sowie die Wächterrolle sind zugänglich; die Knochen-und-Ketten-Passage hat Haltung, Rückweg und verbliebene Gefahren gesetzt. | Visionäres Läuten mit Seilbruch verbinden und die Passage auf Bergungsmann plus eine Kettenzone verdichten; Wächter im Zweifel prüfend führen. | Gelöste oder fortbestehende Bindungen an Schwelle, Treppenaufgang, Siegelkammer oder Finale nachwirken lassen. | [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) |
 
 ## Später Druck
 
@@ -62,7 +62,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 |---|---|---|---|---|
 | Dornfels-Montage | Akt 1 überzieht | Ausrüstung, Schmiedestreit-Hinweis, Bibliothekslücke und Schänkenüberlieferung. | Krämer, Schmiede, Bibliothek und Schänke als schnelle Auswahl präsentieren; den Streit als zwei belauschte Sätze und Borins Blick am Fenster verdichten. | [Dornfels](../30-locations/dornfels/location.md) |
 | Zugangswege knapp abhandeln | Akt 2 überzieht | Wahl Wald/Kanal, Noltes Haltung, Wächterspur, Nordspur und Turmzugang. | Waldunwetter auf eine Wahl zwischen Zeit, Sicherheit oder Ausrüstung verdichten; Nolte mit einem klaren Preis, einer Warnung oder einer kurzen Blockade abhandeln; Ratten als kurzes Risiko führen und nur eine klare Spur je Zugang beschreiben. | [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md) |
-| Turmebenen bündeln | Akt 3 überzieht | Glocke, Wächter, mindestens zwei Wahrheiten, eine echte Passageentscheidung und Siegelkammerentscheidung. | Gebrochene Schwelle und Treppenvision kurz bündeln; Knochen und Ketten auf Bergungsmann plus eine Kettenzone verdichten; Eingangshalle mit Turmbibliothek oder Krypta mit Katakomben zusammenlegen. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
+| Turmpassage straffen | Akt 3 überzieht | Glocke, Wächter, der Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten, eine echte Passageentscheidung und Siegelkammerentscheidung. | Gebrochene Schwelle und Treppenvision kurz bündeln; Knochen und Ketten auf Bergungsmann plus eine Kettenzone verdichten; sofort in den Glockenraum überleiten. | [Alter Wachturm](../30-locations/alter-wachturm/location.md) |
 
 ## Finale-Auslöser
 
@@ -73,7 +73,7 @@ Die Zeilen beschreiben verschiebbare Zustandsziele, keine verpflichtenden Scenes
 ## Auflösung
 
 - Minimaler Auflösungszustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing)
-- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md)
+- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md) — Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten.
 
 | Endzustand | Auslöser | Folge | Quelle |
 |---|---|---|---|

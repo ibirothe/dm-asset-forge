@@ -77,16 +77,16 @@ Auflösbar sein muss, ob weitere Bewohner Dornfels' verschwinden und was mit Bar
 ## One-shot scope and pacing
 
 - Target frame: [Constraints](../00-input/constraints.md)
-- Minimum resolution state: Die Gruppe kennt mindestens zwei notwendige Wahrheiten über Baron und Glocke, erreicht den Glockenraum und vollendet eines der drei vorbereiteten Enden: eigener Diebstahl, Bergung mit dem Baron oder Verteidigung des Verbleibs gegen ihn.
+- Minimum resolution state: Die Gruppe versteht den Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten, erreicht den Glockenraum und vollendet eines der drei vorbereiteten Enden: eigener Diebstahl, Bergung mit dem Baron oder Verteidigung des Verbleibs gegen ihn.
 - Core content: Aushang und öffentlicher Auftrag in [Dornfels](../30-locations/dornfels/location.md), mindestens zwei unabhängige Informationswege, Zugang zum [Alten Wachturm](../30-locations/alter-wachturm/location.md), Entscheidung um die [Goldene Glocke](../30-locations/alter-wachturm/objects/goldene-glocke/object.md) und Folgen für [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md).
 - Supporting content: Dornfelser Markt- und Trauerzeugnisse, Bibliotheksrecherche, Schänkenüberlieferung, Ausrüstungsvorbereitung in Dornfels, Route über die [Zugänge zum Wachturm](../30-locations/zugaenge-zum-wachturm/location.md), Verhandlung mit den [Gefallenen von der Glocke](../40-global/factions/gefallene-von-der-glocke/faction.md) und dem [Wächter der Glocke](../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md).
-- Optional content: Ausführliche Stadterkundung, ausgespielter Diebstahl beim Schmied, vollständige Rekonstruktion des hundert Jahre alten Raubs und jede Turmebene, die für die aktuelle Endentscheidung nicht benötigt wird.
+- Optional content: Ausführliche Stadterkundung, ausgespielter Diebstahl beim Schmied, vollständige Schänken- oder Bibliotheksgespräche und eine vollständige Rekonstruktion des hundert Jahre alten Raubs.
 - Safe cuts:
   - Cut: Krämer, Schmied, Bibliothek und Schänke in einer kompakten Dornfels-Montage bündeln.
-  - Impact: Ausrüstung, Bibliothekslücke und Stammtischüberlieferung bleiben als Optionen sichtbar; mindestens zwei Informationspfade bleiben erhalten.
+  - Impact: Ausrüstung, Bibliothekslücke und Stammtischüberlieferung bleiben als Optionen sichtbar; der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten bleibt über unabhängige Informationspfade erreichbar.
   - Cut: Wald-/Pilgerstraße und Kanalzugang nur als Wahl mit je einem Risiko darstellen; den kleinen Kampf als schnelle Druckprobe oder Nachwirkung führen.
   - Impact: Annäherung, Hinweis auf den Wächter und Finale bleiben erreichbar.
-  - Cut: Im Turm zwei Ebenen zusammenziehen, etwa Krypta mit Katakomben oder Bibliothek mit Siegelkammer.
+  - Cut: Im Turm Schwelle, Vision und feindseligen Aufstieg straff zusammenziehen.
   - Impact: Glocke, Wächter, Herkunftshinweise und Endentscheidung bleiben erhalten.
 - Late pressure: Der wirkliche Glockenschlag ruft den Baron mit Wachen, Arbeitern und vorbereitetem Bergungsgestell zum Turm. Sein offener Goldanspruch zwingt nach der Reparatur zur Unterstützung oder Verweigerung; ohne Läuten bleibt der eigene Diebstahl als dritte Finalroute erreichbar.
 

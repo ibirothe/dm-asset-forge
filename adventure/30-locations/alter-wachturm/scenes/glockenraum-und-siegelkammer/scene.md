@@ -3,7 +3,7 @@ id: scene-glockenraum-und-siegelkammer
 type: scene
 title: "Glockenraum und Siegelkammer"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["npc-waechter-der-glocke", "fac-gefallene-von-der-glocke", "obj-goldene-glocke", "npc-baron-von-dornfels", "cre-gefallene-bergungsleute", "obj-bergungsgestell-des-barons"]
@@ -12,7 +12,7 @@ danger: severe
 tags: [bell-chamber, seal-chamber, final-choice, recovery]
 themes: [greed, guardianship, stolen-gold, reckoning]
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Glockenraum und Siegelkammer
@@ -23,7 +23,7 @@ Die Scene macht den Entscheidungskern von Akt 4 spielbar: Die Gruppe kann die Gl
 
 ## Entry state
 
-Nach der Passage durch [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) erreicht die Gruppe einen offenen Glockenraum. Die [Goldene Glocke](../../objects/goldene-glocke/object.md) hängt über einem gebrochenen Schacht; darunter liegt die niedrigere Siegelkammer wie ein steinerner Ring um die Aufhängung. Das durchtrennte Glockenseil endet an einem noch funktionsfähigen Hebel. Aus Krypta und Katakomben führen schmale Nischen in den Raum, in denen Werkzeuge, Gurte und weitere Gebeine früherer Bergungstrupps liegen.
+Nach der Passage durch [Knochen und Ketten](../../encounters/knochen-und-ketten/encounter.md) erreicht die Gruppe einen offenen Glockenraum. Die [Goldene Glocke](../../objects/goldene-glocke/object.md) hängt über einem gebrochenen Schacht; darunter liegt die niedrigere Siegelkammer wie ein steinerner Ring um die Aufhängung. Das durchtrennte Glockenseil endet an einem noch funktionsfähigen Hebel. In Mauernischen, Eingangswinkeln und Bodenspalten liegen Werkzeuge, Gurte und weitere Gebeine früherer Bergungstrupps.
 
 Der Wächter erscheint zunächst nur in Spiegelungen des Glockenmetalls. Solange niemand die Glocke als Beute behandelt, beobachtet er Reparatur, Untersuchung und Sicherung, ohne den Endkampf auszulösen.
 
@@ -31,7 +31,7 @@ Der Wächter erscheint zunächst nur in Spiegelungen des Glockenmetalls. Solange
 
 - [Wächter der Glocke](../../npcs/waechter-der-glocke/npc.md): will die Glocke im Turm halten und erkennt offene Goldbergung als Wiederholung des Raubs. Er lässt Reparatur und Läuten zu, weil beides noch keinen Abtransport bedeutet.
 - [Gefallene von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): die Toten des geplünderten Dorfes bleiben zunächst Stimmen, Kälte und Erinnerungsbilder. Sie greifen erst zugunsten der Gruppe ein, wenn diese den Verbleib der Glocke gegen den Baron verteidigt.
-- [Gefallene Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md): ihre verstreuten Körper ruhen in Nischen, Krypta und Katakomben. Der Wächter erhebt alle noch gebundenen Leiber gegen eine Partei, die die Glocke bergen will.
+- [Gefallene Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md): ihre verstreuten Körper ruhen in Nischen, Eingangswinkeln und am Siegelring. Der Wächter erhebt alle noch gebundenen Leiber gegen eine Partei, die die Glocke bergen will.
 - [Baron von Dornfels](../../../dornfels/npcs/baron-von-dornfels/npc.md): erscheint erst nach wirklichem Läuten mit Wachen, Arbeitern und dem [Bergungsgestell](../../objects/bergungsgestell-des-barons/object.md). Er erklärt den Auftrag für erfüllt und fordert die Unterstützung beim Abtransport.
 
 ## Immediate tension
@@ -43,7 +43,7 @@ Die Glocke ist erreichbar, aber schwer und über dem offenen Schacht gefährlich
 - Glockenjoch: alte Bolzen, neue Sägespuren und ein schmaler Arbeitssteg. Wer daran arbeitet, kann reparieren, sichern, sabotieren oder eine Bergung vorbereiten, steht aber über dem Schacht.
 - Seilmechanismus: Der unterbrochene Zug kann mit mitgebrachtem Seil, gesicherten Kettenstücken, Gurten oder einer improvisierten Verbindung wieder geschlossen werden. Ein funktionsfähiger Zug erlaubt einen wirklichen Glockenschlag, trägt aber nicht das Gewicht der Glocke.
 - Siegelring: schwarze Wachslinien verbinden Joch, Bodennischen und Wächterzeichen. Beim Versuch, die Glocke aus dem Ring zu heben, laufen sie zu den Gebeinen der Bergungsleute.
-- Krypta- und Katakombennischen: Dort liegen mehrere frühere Bergungsopfer mit Hebeln, Haken, Seilresten und persönlichen Zeichen. Ihre Lage kündigt an, dass nicht nur der Tote von der Schwelle erhoben werden kann.
+- Mauernischen und Bodenspalten: Dort liegen mehrere frühere Bergungsopfer mit Hebeln, Haken, Seilresten und persönlichen Zeichen. Ihre Lage kündigt an, dass nicht nur der Tote von der Schwelle erhoben werden kann.
 - Schacht und Außengerüst: Öffnungen erlauben Blick und Ruf zum Turmvorfeld. Nach dem Läuten werden Fackeln, Befehle und das herangeschaffte Bergungsgestell sichtbar, bevor der Baron den Raum erreicht.
 - Beweisablage: Bergungsanweisung, Vorschussmünzen und Werkzeuge können offen ausgelegt, verborgen, dem Baron vorgehalten oder seinen Wachen gezeigt werden.
 

@@ -3,7 +3,7 @@ id: npc-waechter-der-glocke
 type: npc
 title: "Wächter der Glocke"
 status: draft
-version: 8
+version: 9
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -15,7 +15,7 @@ reach: local
 tags: [guardian, bell, bound-spirit]
 themes: [threshold, sacrifice, restitution]
 created: 2026-08-14
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Wächter der Glocke
@@ -59,7 +59,7 @@ Er fürchtet nicht Tod, sondern Wiederholung: Goldgier, Lüge und ein Läuten oh
 
 ## Resources and leverage
 
-Er kennt Schwellen, Siegel, Glockenraum und Katakomben. Er kann Türen, Geräusche und Erinnerungsbilder beeinflussen, den gefallenen Bergungsmann und weitere [Gefallene Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md) nekromantisch erheben, morsche Balken lösen und alte Befestigungsketten an ihren Wandankern bewegen. Ketten und Balken bleiben räumlich an ihre Bauteile gebunden; auch der Wächter kann nicht frei außerhalb seines Turms handeln.
+Er kennt Schwellen, Siegel, Treppenlauf und Glockenraum. Er kann Türen, Geräusche und Erinnerungsbilder beeinflussen, den gefallenen Bergungsmann und weitere [Gefallene Bergungsleute](../../creatures/gefallene-bergungsleute/creature.md) nekromantisch erheben, morsche Balken lösen und alte Befestigungsketten an ihren Wandankern bewegen. Ketten und Balken bleiben räumlich an ihre Bauteile gebunden; auch der Wächter kann nicht frei außerhalb seines Turms handeln.
 
 ## Knowledge
 

@@ -3,7 +3,7 @@ id: plot-fluch-oder-gier
 type: plot-thread
 title: "Fluch oder Gier"
 status: draft
-version: 9
+version: 10
 scope: global
 entry_locations: ["loc-dornfels", "loc-zugaenge-zum-wachturm", "loc-alter-wachturm"]
 related_factions: ["fac-gefallene-von-der-glocke"]
@@ -12,7 +12,7 @@ reach: local
 tags: []
 themes: []
 created: 2026-08-14
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Fluch oder Gier
@@ -25,7 +25,7 @@ Wird der angebliche Fluch als Schutzgeschichte für Gier entlarvt und in einen E
 
 - [Dornfels](../../../30-locations/dornfels/location.md): Der Aushang des Barons, Marktzeugen, Trauer, Schänke und Bibliothek öffnen öffentliche, soziale und investigative Zugänge.
 - [Zugänge zum Wachturm](../../../30-locations/zugaenge-zum-wachturm/location.md): Pilgerstraße und Kanalisation führen zu Route, kleinem Kampf und frühen Wächtersignalen.
-- [Alter Wachturm](../../../30-locations/alter-wachturm/location.md): Die Ebenen des Turms führen zu Glocke, Seilspuren, Wächter und Gefallenen.
+- [Alter Wachturm](../../../30-locations/alter-wachturm/location.md): Schwelle, Treppenaufgang und Glockenraum führen zu Glocke, Seilspuren, Wächter und Gefallenen.
 
 ## Current state
 
@@ -41,7 +41,7 @@ Die Glocke ist seit einem Jahr stumm, weil das Seil beim ersten heimlichen Bergu
 
 - Must preserve: [info-barons-auftrag-ist-irrefuehrend](../../../30-locations/dornfels/information/barons-auftrag-ist-irrefuehrend/information.md), [info-herkunft-der-glocke](../../../30-locations/dornfels/information/herkunft-der-glocke/information.md), [info-verstummtes-seil](../../../30-locations/alter-wachturm/information/verstummtes-seil/information.md) und [info-verschwundene-bergungsleute](../../../30-locations/alter-wachturm/information/verschwundene-bergungsleute/information.md) müssen erreichbar bleiben.
 
-Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheidung plausibel zugänglich sein; die volle Pfadabdeckung steht in der [globalen Hinweismatrix](../../../50-indexes/clue-matrix.md).
+Der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten muss vor der Endentscheidung plausibel zugänglich sein; die volle Pfadabdeckung steht in der [globalen Hinweismatrix](../../../50-indexes/clue-matrix.md).
 
 <!-- Notwendige Information-Assets und unabhängige Pfade verlinken; Aussagen und Hinweise nicht im Plot-Thread duplizieren. -->
 
@@ -49,14 +49,14 @@ Mindestens zwei unterschiedliche Schlussfolgerungen müssen vor der Endentscheid
 
 - Core: [Dornfels](../../../30-locations/dornfels/location.md) als Einstieg und Rechercheanker; [Alter Wachturm](../../../30-locations/alter-wachturm/location.md) mit der [Gebrochenen Schwelle](../../../30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) als direktem Beweispfad, [Knochen und Ketten](../../../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) als notwendiger oberer Passage, [Glockenraum und Siegelkammer](../../../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) als Entscheidungsknoten und der [Letzten Bergung](../../../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) als dreifach konfigurierbarem Finale; [Baron von Dornfels](../../../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) als verdeckter Auftraggeber und späterer Anspruchsteller; [Goldene Glocke](../../../30-locations/alter-wachturm/objects/goldene-glocke/object.md) als Entscheidungskern.
 - Supporting: [Zugänge zum Wachturm](../../../30-locations/zugaenge-zum-wachturm/location.md) für Reise, [Unwetter am Waldpfad](../../../30-locations/zugaenge-zum-wachturm/scenes/unwetter-am-waldpfad/scene.md), kleinen Kampf und Wächterspuren; das [Echo der Plünderung](../../../30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) für historische Schuld und Bannerhinweis; [Der Turm schlägt zurück](../../../30-locations/alter-wachturm/scenes/der-turm-schlaegt-zurueck/scene.md) als Rahmung der Passage; Dornfelser Markt- und Trauerzeugnisse für sozialen Druck; [Wächter der Glocke](../../../30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md) und [Gefallene von der Glocke](../../../40-global/factions/gefallene-von-der-glocke/faction.md) für Verhandlung, Opferoption und Konsequenzen.
-- Optional: Ausgespielter Schmiedediebstahl, vollständige Schänken- und Bibliotheksszene, ausführliche Rekonstruktion des historischen Raubs und jede nicht benötigte Turmebene.
+- Optional: Ausgespielter Schmiedediebstahl, vollständige Schänken- und Bibliotheksgespräche sowie eine ausführliche Rekonstruktion des historischen Raubs.
 - Safe cuts:
   - Cut: Markt- und Trauerzeugnisse in einer Dornfels-Montage bündeln.
   - Impact: Sozialer Informationspfad bleibt erhalten, wenn Bibliothek oder Turmspuren als zweiter Pfad bestehen.
   - Cut: Annäherung an den Turm knapp über eine gewählte Route abhandeln.
   - Impact: Entscheidung über Risiko und erste Wächterspuren bleiben sichtbar, ohne die Auflösung zu verschieben.
-  - Cut: Turmebenen bündeln, wenn die Session nach Akt 3 drängt.
-  - Impact: Gebrochene Schwelle und Vision werden kurz zusammengefasst; Knochen und Ketten wird auf Bergungsmann plus eine Kettenzone verdichtet. Glockenraum, Siegelkammer, Wächterentscheidung und mindestens zwei Wahrheitspfade bleiben erhalten.
+  - Cut: Turmpassage straffen, wenn die Session nach Akt 3 drängt.
+  - Impact: Gebrochene Schwelle und Vision werden kurz zusammengefasst; Knochen und Ketten wird auf Bergungsmann plus eine Kettenzone verdichtet. Glockenraum, Siegelkammer, Wächterentscheidung und der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten bleiben erreichbar.
 
 <!-- Beteilige Assets unter ihrer Pacing-Rolle verlinken und nur ihre Funktion für diesen Thread zusammenfassen. -->
 

@@ -82,12 +82,12 @@ Auslöser und Zustandswechsel: [Wächter der Glocke](../30-locations/alter-wacht
 |---|---|---|---|
 | Dornfels-Montage | Akt 1 überzieht | Ausrüstung und zwei Hinweiswege bleiben erhalten. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
 | Wald- und Kanalzugang knapp abhandeln | Akt 2 überzieht | Wahl des Risikos und Wächterspur bleiben sichtbar. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
-| Turmebenen bündeln | Akt 3 überzieht | Glocke, Wächter, Siegelkammer und Endentscheidung bleiben erreichbar. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
+| Turmpassage straffen | Akt 3 überzieht | Glocke, Wächter, Siegelkammer und Endentscheidung bleiben erreichbar. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
 
 ## Mindestauflösung
 
 - Erforderlicher Endzustand: [Plot-Übersicht](../20-plot/overview.md#one-shot-scope-and-pacing) — eigener Diebstahl, Bergung mit dem Baron oder Verteidigung des Verbleibs ist vollendet.
-- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md) — mindestens zwei zentrale Wahrheiten müssen belastbar erreichbar sein.
+- Unverzichtbare Informationen: [Information-Index](../50-indexes/information.md) — der Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten muss belastbar erreichbar sein.
 
 ## Mögliche Endzustände
 
