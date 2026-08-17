@@ -3,16 +3,16 @@ id: scene-marktszene
 type: scene
 title: "Marktszene"
 status: draft
-version: 5
+version: 6
 scope: local
 primary_location: "loc-dornfels"
-participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust", "npc-baron-von-dornfels", "pc-justus-wertmueller", "pc-lars-sauertrahn", "pc-benedict-karlheist"]
+participants: ["npc-rena-falk", "npc-borin-karrenschieber", "npc-nele-kerzenzieh", "npc-timo-netzflicker", "npc-liska-warenmass", "npc-gerolt-eisenfaust", "npc-baron-von-dornfels", "pc-justus-wertmueller", "pc-lars-sauertrahn", "pc-benedict-karlheist", "pc-tjorbe-hammerhand"]
 related_threads: ["plot-fluch-oder-gier"]
 danger: limited
 tags: [market, opening, notice, witnesses]
 themes: [public-story, fear, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Marktszene
@@ -36,6 +36,7 @@ Der Marktplatz ist voll genug, dass niemand allein mit seiner Angst ist. Der fri
 - [Justus Wertmüller](../../../../40-global/player-characters/justus-wertmueller/player-character.md): begegnet hier den übrigen Spielerfiguren erstmals und kann Finanzierung, Analyse oder Sprecherrolle anbieten, ohne dass daraus bereits Loyalität folgt.
 - [Lars Sauertrahn](../../../../40-global/player-characters/lars-sauertrahn/player-character.md): findet auf dem bewachten Markt wenig sichere Beute, begegnet hier der Gruppe und erhält bei einem kurzen Auftreten des Barons unbemerkt dessen versiegelte Nachricht.
 - [Benedict Karlheist](../../../../40-global/player-characters/benedict-karlheist/player-character.md): trifft hier erstmals auf die Gruppe und kann Aushang, Fluchgerüchte und die Turmunternehmung als praktische magische Bewährungsprobe betrachten.
+- [Tjorbe Hammerhand](../../../../40-global/player-characters/tjorbe-hammerhand/player-character.md): sucht Arbeit, kennt Jorek Malz und sieht in öffentlicher sowie geheimer Zusatzbelohnung eine große Gelegenheit; sein Schutzauftrag verpflichtet den Spieler zu keiner Loyalität.
 - [Baron von Dornfels](../../npcs/baron-von-dornfels/npc.md): zeigt sich kurz am öffentlichen Aushang, wahrt seine fürsorgliche Rolle und steckt Lars im Gedränge eine geheime Führungs- und Berichtsanweisung zu.
 
 ## Immediate tension

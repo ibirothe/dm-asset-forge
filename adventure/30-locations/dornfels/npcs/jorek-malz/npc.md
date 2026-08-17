@@ -3,7 +3,7 @@ id: npc-jorek-malz
 type: npc
 title: "Jorek Malz"
 status: ready
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -15,7 +15,7 @@ reach: local
 tags: [innkeeper, tavern, rumors]
 themes: [hospitality, fear, memory]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-17
 ---
 
 # Jorek Malz
@@ -80,6 +80,7 @@ Gerüchte, Schlafplätze, Essen, Zugang zu Stammtischgesprächen und die Fähigk
 - Zum [Stammtisch der Alten](../stammtisch-der-alten/npc.md): schützt ihre Ruhe und sortiert respektvolle Fragende von Gaffern.
 - Zu [Mira Seilern](../mira-seilern/npc.md): gibt ihr Essen und hält ihren Platz frei.
 - Zur [Überlieferung der Plünderung](../../information/ueberlieferung-der-pluenderung/information.md): Zugangsfigur.
+- Zu [Tjorbe Hammerhand](../../../../40-global/player-characters/tjorbe-hammerhand/player-character.md): Kennt den wandernden Arbeiter von dessen Aufenthalt in Dornfels und behandelt ihn als groben, aber zahlenden Stammgast auf Zeit.
 
 ## Likely behavior
 

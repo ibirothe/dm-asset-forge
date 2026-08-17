@@ -3,7 +3,7 @@ id: npc-baron-von-dornfels
 type: npc
 title: "Baron von Dornfels"
 status: draft
-version: 6
+version: 7
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -15,7 +15,7 @@ reach: local
 tags: [baron, patron, hidden-culprit]
 themes: [greed, public-authority]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-17
 ---
 
 # Baron von Dornfels
@@ -84,11 +84,13 @@ Belohnung, Wachen, Arbeiter, das vorbereitete [Bergungsgestell](../../../alter-w
 - Zu den [Gefallenen von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md): versteht sie als Hindernis oder Aberglauben, nicht als Anspruchsträger.
 - Zum [Fluch oder Gier](../../../../20-plot/threads/fluch-oder-gier/plot-thread.md): treibt die Eskalation.
 - Zu [Lars Sauertrahn](../../../../40-global/player-characters/lars-sauertrahn/player-character.md): Wählt den unauffälligen Fremden beim Marktauftakt als heimlichen Berichterstatter und behaupteten Führer der Unternehmung, ohne dessen kriminelle Vergangenheit zu kennen.
+- Zu [Tjorbe Hammerhand](../../../../40-global/player-characters/tjorbe-hammerhand/player-character.md): Verspricht dem kräftigen Wanderarbeiter heimlich eine Zusatzbelohnung für den Schutz der Unternehmung, ohne ihn über Goldwert oder frühere Bergungsversuche zu informieren.
 
 ## Likely behavior
 
 - Wenn unterstützt: Vor dem Turm drängt er zum Läuten. Im Finale ordnet er die Bergung an, stellt Wachen und Arbeiter bereit und erwartet, dass die Gruppe die untoten Verteidiger bindet.
 - Gegenüber Lars: Erwartet diskrete Berichte über Abweichungen, hat aber weder sichere Loyalität noch tatsächliche Führungsgewalt geschaffen. Bei Offenlegung leugnet er den Zweck des Zettels oder deutet ihn als gewöhnliche Auftragskoordination um.
+- Gegenüber Tjorbe: Betont Schutz, erfolgreiche Auftragserfüllung und persönliche Zusatzbezahlung. Bei Offenlegung nennt er den Brief eine gewöhnliche Sicherheitsmaßnahme und verschweigt weiterhin den geplanten Abtransport.
 - Wenn unter Druck: Behauptet, die Glocke und jedes Turminventar gehörten rechtmäßig dem Haus Dornfels, verlangt Beweise und versucht Zeugen oder Fundstücke zu kontrollieren.
 - Wenn die Gruppe seinen Anspruch im Turm verweigert: Lässt das Gestell aufrichten, befiehlt die Bergung gegen ihren Widerstand und zieht sich erst zurück, wenn Gerät oder Gefolgschaft nicht mehr einsetzbar sind.
 
