@@ -3,7 +3,7 @@ id: scene-bibliotheksszene
 type: scene
 title: "Bibliotheksszene"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-dornfels"
 participants: ["npc-alena-staub"]
@@ -12,7 +12,7 @@ danger: limited
 tags: [library, archive, investigation, missing-books]
 themes: [hidden-history, censorship, public-authority]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-29
 ---
 
 # Bibliotheksszene
@@ -38,13 +38,13 @@ Die gesuchte Wahrheit liegt nicht in einem einzelnen Buch, sondern in Lücken, R
 
 - Katalogpult: Karten, alte Signaturen und Ausleihnotizen zeigen leere Stellen besser als normale Lesetexte.
 - Plünderungsregal: Mehrere Bände fehlen in derselben Epoche; frische Staubkanten und alte Katalogverweise machen die Lücke präsentierbar.
-- Seitenraum: Alena kann mit Schutz oder Vertrauen eine zurückbehaltene Notiz zeigen, statt sie im öffentlichen Raum zu riskieren.
+- Seitenraum: Alena kann mit Schutz oder Vertrauen ein außerhalb der fehlenden Buchreihe erhaltenes Randregister und eine Inventarnotiz zeigen. Sie nennen Goldwert, Überführung zusammengetragenen Plündergolds in den Glockenguss und den Beschwichtigungszweck; eine getrennte private Notiz dokumentiert Barons spätere Fragen nach Goldwert und Glockenguss.
 - Lesetische: Die Gruppe kann Aufzeichnungen vergleichen, Abschriften sichern, Alena befragen oder unauffällig nach Spuren früherer Besucher suchen.
 
 ## Discoverable information
 
-- [Fehlende Bücher der Plünderungszeit](../../information/fehlende-buecher-der-pluenderungszeit/information.md): Katalogkarten ohne Buch, gleiche Datierung mehrerer Lücken, frische Staubkanten und Alenas zögerliche Korrekturen zeigen gezielte Entnahme.
-- [Herkunft der Glocke](../../information/herkunft-der-glocke/information.md): Inventarnotizen, Randvermerke und Alenas Abgleich mit der fehlenden Epoche nennen Goldwert, Guss und Beschwichtigungszweck als Recherchelinie.
+- [Fehlende Bücher der Plünderungszeit](../../information/fehlende-buecher-der-pluenderungszeit/information.md): Katalogkarten ohne Buch, gleiche Datierung mehrerer Lücken, frische Staubkanten und Alenas zögerliche Korrekturen zeigen gezielte Entnahme. Die Lücke belegt keine Materialherkunft.
+- [Herkunft der Glocke](../../information/herkunft-der-glocke/information.md): Das erhaltene Randregister und die Inventarnotiz nennen Goldwert, Plündergold, Glockenguss und Beschwichtigungszweck als eigenständigen Schriftbeleg außerhalb der entfernten Bände.
 - [Barons Auftrag ist irreführend](../../information/barons-auftrag-ist-irrefuehrend/information.md): Alenas Hinweis auf Barons Bibliotheksbesuch und Fragen nach Goldwert oder Glockenguss widerspricht dem öffentlichen Fluchauftrag.
 - [Überlieferung der Plünderung](../../information/ueberlieferung-der-pluenderung/information.md): Alena kann den Stammtisch als unsaubere, aber nützliche Gegenquelle nennen, wenn die Schriftspur unvollständig bleibt.
 
@@ -53,7 +53,7 @@ Die gesuchte Wahrheit liegt nicht in einem einzelnen Buch, sondern in Lücken, R
 - Archivspur gesichert: Die Gruppe kann mit Abschriften, Notizen oder Alenas Aussage den Baron befragen, Marktzeugen stärken oder den Turm mit anderer Deutung betreten.
 - Diskrete Recherche: Alena bleibt geschützt; der Baron merkt später oder gar nicht, dass die Gruppe den Archivpfad kennt.
 - Öffentliche Konfrontation: Der Baron oder seine Leute reagieren früher; Alena verlangt Schutz, und die Gruppe braucht zusätzliche Zeugen oder Turmbeweise.
-- Misslungene Recherche oder Rückzug: Die Gruppe erhält höchstens die Lücke, nicht die vollständige Herkunft; Schänke, Marktzeugen oder Glockenzeichen bleiben unabhängige Wege.
+- Misslungene Recherche oder Rückzug: Die Gruppe erhält höchstens die Manipulationslücke, nicht die Materialherkunft; Schänkenüberlieferung, Vision oder Glockenzeichen bleiben unabhängige Herkunftswege.
 - Zeitdruck: Wenn Akt 1 überzieht, kann Alena eine einzige starke Lücke plus Verweis auf Schänke oder Turm geben, ohne den ganzen Archivpfad auszuspielen.
 
 ## Related assets

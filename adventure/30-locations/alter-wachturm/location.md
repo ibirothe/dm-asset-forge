@@ -3,7 +3,7 @@ id: loc-alter-wachturm
 type: location
 title: "Alter Wachturm"
 status: draft
-version: 14
+version: 15
 scope: local
 parent_location: null
 function: resolution-site
@@ -12,7 +12,7 @@ accessibility: hidden
 tags: [tower, bell, forest-route, sewer-route]
 themes: [restless-dead, stolen-gold, choice]
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Alter Wachturm
@@ -50,7 +50,7 @@ Der Waldzugang ist sichtbar, aber exponiert und von Dornfelser Gerüchten beglei
 - Der [Totgeweihte](npcs/totgeweihter/npc.md) erscheint nur in der Treppenvision als schwerverletzter Augenzeuge der Plünderung.
 - Der [Wiedererweckte Bergungsmann](creatures/wiedererweckter-bergungsmann/creature.md) ist der Leichnam von der Schwelle, den der Wächter nach der Vision als erzwungenen Kämpfer des oberen Aufstiegs erhebt.
 - Die [Gefallenen Bergungsleute](creatures/gefallene-bergungsleute/creature.md) sind die weiteren Opfer früherer Bergungsversuche in Mauernischen, Eingangswinkeln und am Siegelring. Der Wächter kann ihre Körper im Finale gegen neue Goldbergung erheben.
-- [Baron von Dornfels](../dornfels/npcs/baron-von-dornfels/npc.md) erscheint nach wirklichem Läuten mit Wachen, Arbeitern und vorbereitetem Bergungsgestell.
+- [Baron von Dornfels](../dornfels/npcs/baron-von-dornfels/npc.md) erscheint nach wirklichem Läuten sofort oder bei sichtbar gewordener Beweissicherung beziehungsweise erklärter Schutzwache verzögert mit Wachen, Arbeitern und vorbereitetem Bergungsgestell.
 
 <!-- Inhabitants, Objects, Information and secrets sowie Encounters and pressures enthalten nur relative Links und knappen ortsspezifischen Kontext. Vollständige Beschreibungen bleiben in den verlinkten Assets. -->
 

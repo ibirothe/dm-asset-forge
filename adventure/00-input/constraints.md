@@ -13,7 +13,7 @@ Source: [Original request](original-request.md) and [Clarifications](clarificati
 
 - Target duration: Akt 1 30-45 Minuten, Akt 2 ca. 30 Minuten, Akt 3 ca. 90 Minuten, Akt 4 Finale mit Epilog.
 - Content density: kompakter Vier-Akt-One-Shot mit vorbereiteten Kürzungen.
-- Player role: drei frei geführte Figuren: Bandit, Zauberlehrling und kleiner kräftiger Kämpfer.
+- Player role: vier frei geführte Figuren: Händler, Bandit, Zauberlehrling und kleiner kräftiger Kämpfer.
 - Content boundaries: keine üblichen High-Fantasy-Wesen; keine systemspezifischen Werte oder Mechaniken.
 - Other user constraints: Mittelalterliches Setting mit Magie, Zaubern, Nekromantie und Alchemie.
 

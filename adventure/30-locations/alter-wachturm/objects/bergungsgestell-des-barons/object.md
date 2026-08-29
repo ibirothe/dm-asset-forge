@@ -3,7 +3,7 @@ id: obj-bergungsgestell-des-barons
 type: object
 title: "Bergungsgestell des Barons"
 status: draft
-version: 1
+version: 2
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -18,7 +18,7 @@ accessibility: open
 tags: [recovery-rig, winch, bell-removal, baron]
 themes: [greed, preparation, leverage]
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-29
 ---
 
 # Bergungsgestell des Barons
@@ -33,7 +33,7 @@ Ein zerlegbares Dreibein aus dunklen Balken, eiserne Rollen, eine Handwinde, bre
 
 ## Context and origin
 
-Der Baron ließ das Gestell in Dornfels für die schwere Glocke vorbereiten und hält es mit Arbeitern in den Außenbereichen bereit. Erst ein wirklicher Glockenschlag signalisiert, dass der Turm für den Zugriff hinreichend geöffnet scheint; dann wird es in Einzelteilen zum Wachturm gebracht und unter dem Glockenjoch aufgebaut.
+Der Baron ließ das Gestell in Dornfels für die schwere Glocke vorbereiten und hält es mit Arbeitern in den Außenbereichen bereit. Ein wirklicher Glockenschlag signalisiert, dass der Turm für den Zugriff hinreichend geöffnet scheint, und setzt es sofort in Bewegung. Werden stattdessen gesicherte Turmbeweise oder eine längere Schutzwache sichtbar, lässt der Baron es verzögert auch ohne Sicherheitssignal heranschaffen, um Beweise und Glocke nicht zu verlieren.
 
 ## Location, ownership, and components
 
@@ -45,7 +45,7 @@ Der Baron ließ das Gestell in Dornfels für die schwere Glocke vorbereiten und 
 
 ## Discoverability
 
-Nach dem Läuten sind Fackeln, Befehle und schleifende Balken bereits vom Glockenraum aus wahrnehmbar. Beim Eintreffen des Barons wird das Gerät offen aufgebaut; Zeichen, Maße und passende Gurte lassen keinen Zweifel am vorbereiteten Abtransport.
+Nach dem Läuten oder beim verzögerten Zugriff auf eine sichtbare schweigende Sicherung sind Fackeln, Befehle und schleifende Balken bereits vom Glockenraum aus wahrnehmbar. Beim Eintreffen des Barons wird das Gerät offen aufgebaut; Zeichen, Maße und passende Gurte lassen keinen Zweifel am vorbereiteten Abtransport.
 
 ## Properties
 

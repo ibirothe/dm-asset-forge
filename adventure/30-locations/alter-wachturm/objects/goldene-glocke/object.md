@@ -3,7 +3,7 @@ id: obj-goldene-glocke
 type: object
 title: "Goldene Glocke"
 status: draft
-version: 4
+version: 5
 scope: local
 primary_location: "loc-alter-wachturm"
 current_location: "loc-alter-wachturm"
@@ -18,7 +18,7 @@ accessibility: restricted
 tags: [bell, stolen-gold, relic]
 themes: [debt, remembrance, temptation]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-29
 ---
 
 # Goldene Glocke
@@ -47,7 +47,7 @@ Die Zugmechanik und der Seilbruch sind bereits vom Treppenaufgang sichtbar; die 
 
 ## Properties
 
-Sie kann wieder läuten, wenn das Seil ersetzt oder ein anderer plausibler Mechanismus hergestellt wird. Das Läuten allein ist keine Reinigung: Es ruft den Baron mit seiner vorbereiteten Bergung zum Turm und erzwingt anschließend die Entscheidung, ihm zu helfen oder den Verbleib der Glocke zu verteidigen.
+Sie kann wieder läuten, wenn das Seil ersetzt oder ein anderer plausibler Mechanismus hergestellt wird. Das Läuten allein ist keine Reinigung: Es ruft den Baron mit seiner vorbereiteten Bergung sofort zum Turm. Eine schweigende Sicherung schützt die Glocke zunächst, beendet den Konflikt aber nicht; wird sie durch Beweise, Rückkehr oder längere Wache sichtbar, riskiert der Baron den Zugriff verzögert auch ohne Sicherheitssignal.
 
 ## Uses and leverage
 

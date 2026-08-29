@@ -3,7 +3,7 @@ id: info-barons-auftrag-ist-irrefuehrend
 type: information
 title: "Barons Auftrag ist irreführend"
 status: draft
-version: 7
+version: 8
 scope: local
 truth_status: established
 confidence: supported
@@ -15,14 +15,14 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [misdirection, patron]
 themes: [hidden-crime, public-story]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-29
 ---
 
 # Barons Auftrag ist irreführend
 
 ## Statement
 
-Der öffentliche Auftrag des Barons verschweigt, dass er die Glocke wegen ihres Goldwerts besitzen und bergen lassen will. Das geforderte Läuten soll nicht nur den Fluch scheinbar brechen, sondern als Erfolgskriterium und weithin hörbares Sicherheitssignal den Weg für seine eigentliche Bergungsmannschaft öffnen.
+Der öffentliche Auftrag des Barons verschweigt, dass er die Glocke wegen ihres Goldwerts besitzen und bergen lassen will. Das geforderte Läuten soll nicht nur den Fluch scheinbar brechen, sondern als Erfolgskriterium und weithin hörbares Sicherheitssignal den Weg für seine eigentliche Bergungsmannschaft öffnen. Drohen ihm stattdessen durch sichtbare Turmbeweise oder eine erklärte Schutzwache Entlarvung und Kontrollverlust, riskiert er denselben Zugriff verzögert auch ohne Signal.
 
 ## Truth and limits
 
@@ -37,8 +37,8 @@ Etabliert. Der Baron ist nicht nur besorgter Auftraggeber. Offen bleibt, wie vie
 - [Baron von Dornfels](../../npcs/baron-von-dornfels/npc.md): Ausweichende Antworten zu Bibliothek, Goldwert und Neumond.
 - [Dornfels](../../location.md): [Mira Seilern](../../npcs/mira-seilern/npc.md), Marktzeugen und übersehene Beobachter berichten von heimlichen Reichtumsversprechen.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Bergungswerkzeug und Turmspuren widersprechen einem rein übernatürlichen Fluch.
-- [Die gebrochene Schwelle](../../../alter-wachturm/scenes/die-gebrochene-schwelle/scene.md): Die lesbare Bergungsanweisung nennt Gewichtsschätzung, Sicherung der Glocke, Stillschweigen und Zahlung nach Übergabe.
-- [Glockenraum und Siegelkammer](../../../alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md): Auf den wirklichen Glockenschlag folgt der Baron mit Wachen, Arbeitern und einem bereits vorbereiteten Bergungsgestell; er verlangt offen den Abtransport des Goldwerts.
+- [Die gebrochene Schwelle](../../../alter-wachturm/scenes/die-gebrochene-schwelle/scene.md): Die lesbare Bergungsanweisung nennt Gewichtsschätzung, Kappen des Zugseils, Sicherung der Glocke, Stillschweigen und Zahlung nach Übergabe.
+- [Glockenraum und Siegelkammer](../../../alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md): Auf den wirklichen Glockenschlag folgt der Baron sofort mit Wachen, Arbeitern und einem bereits vorbereiteten Bergungsgestell. Sichtbare Beweissicherung oder eine längere Schutzwache lösen denselben Zugriff verzögert aus; in beiden Fällen verlangt er offen den Abtransport des Goldwerts.
 
 ## Preconditions
 
@@ -46,7 +46,7 @@ Keine einzelne Voraussetzung. Mindestens ein Vergleich zwischen öffentlicher Er
 
 ## Presentation clues
 
-Überbetonte Belohnung, Eigentumsklausel, fehlende Warnung vor der anschließenden Bergung, Widerspruch zwischen öffentlicher Flucherzählung und konkreten Bergungsspuren, eine versiegelte Anweisung zu Gewicht und Übergabe oder die vorbereitete Ankunft des Barons am Turm.
+Überbetonte Belohnung, Eigentumsklausel, fehlende Warnung vor der anschließenden Bergung, Widerspruch zwischen öffentlicher Flucherzählung und konkreten Bergungsspuren, eine versiegelte Anweisung zu Zugseil, Gewicht und Übergabe oder die vorbereitete Ankunft des Barons am Turm.
 
 ## Interpretation risks
 

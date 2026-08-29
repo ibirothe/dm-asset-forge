@@ -3,7 +3,7 @@ id: npc-mira-seilern
 type: npc
 title: "Mira Seilern"
 status: ready
-version: 3
+version: 4
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -15,7 +15,7 @@ reach: personal
 tags: [widow, grief, witness, debt-claim]
 themes: [grief, exploitation, justice, blame]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-29
 ---
 
 # Mira Seilern
@@ -85,7 +85,7 @@ Letzte Worte ihres Mannes, fehlende Ausrüstung, eine Münze ungewöhnlicher Her
 
 ## Likely behavior
 
-- Wenn unterstützt: Gibt Namen, letzte Worte und die Münze als Spur frei; nach fairer Hilfe in der Schmiede spricht sie schneller.
+- Wenn unterstützt: Gibt letzte Worte, Vorschussmünze und beschreibbare persönliche Zeichen ihres Mannes als Spur frei; nach fairer Hilfe in der Schmiede spricht sie schneller. Sein genauer Name kann am Tisch genannt werden, ist aber für Beweisführung oder Wiedergutmachung nicht erforderlich.
 - Wenn unter Druck: Schließt sich, beschuldigt die Gruppe als weitere Werkzeuge des Barons.
 - Wenn ignoriert: Kann später als öffentliche Anklägerin auftreten, wenn die Gruppe Beweise bringt.
 

@@ -3,7 +3,7 @@ id: enc-letzte-bergung
 type: encounter
 title: "Letzte Bergung"
 status: draft
-version: 8
+version: 10
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["fac-gefallene-von-der-glocke", "obj-goldene-glocke", "npc-baron-von-dornfels", "npc-waechter-der-glocke", "cre-wiedererweckter-bergungsmann", "cre-gefallene-bergungsleute", "obj-bergungsgestell-des-barons"]
@@ -12,7 +12,7 @@ danger: severe
 tags: [tower-pressure, final-choice, configurable-encounter]
 themes: [greed, guardianship, reckoning]
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Letzte Bergung
@@ -23,7 +23,7 @@ Der Encounter setzt genau eine von drei Endkonfigurationen auf demselben Schlach
 
 ## Trigger
 
-Die Gruppe erreicht [Glockenraum und Siegelkammer](../../scenes/glockenraum-und-siegelkammer/scene.md). Der Encounter beginnt, sobald sie die Glocke für eigenen Gewinn löst oder nach wirklichem Läuten auf Barons offene Bergungsforderung antwortet.
+Die Gruppe erreicht [Glockenraum und Siegelkammer](../../scenes/glockenraum-und-siegelkammer/scene.md). Der Encounter beginnt, sobald sie die Glocke für eigenen Gewinn löst oder auf Barons offene Bergungsforderung antwortet. Der Baron erscheint nach wirklichem Läuten sofort; bei einer sichtbar gewordenen schweigenden Sicherung oder längeren Schutzwache setzt er sein vorbereitetes Gerät verzögert auch ohne Sicherheitssignal in Marsch.
 
 ## Situation
 
@@ -32,8 +32,8 @@ Glocke und Siegelring bilden den umkämpften Mittelpunkt. Frühere Entscheidunge
 | Auslöser | Konfiguration | Partei der Gruppe | Gegenseite |
 |---|---|---|---|
 | Die Gruppe beginnt ohne den Baron, Joch oder Glocke für den eigenen Goldgewinn zu lösen. | 1: Die neuen Plünderer | Gruppe | Wächter, sämtliche noch gebundenen Bergungstoten und der feindselige Turm |
-| Die reparierte Glocke wird geläutet; nach seiner Ankunft unterstützt die Gruppe den Bergungsanspruch des Barons. | 2: Im Dienst des Barons | Gruppe, Baron, Wachen und Arbeiter | Wächter, sämtliche noch gebundenen Bergungstoten und der feindselige Turm |
-| Die reparierte Glocke wird geläutet; die Gruppe verweigert dem Baron die Bergung und verteidigt den Verbleib der Glocke. | 3: Verteidiger der Glocke | Gruppe, Wächter und Gefallene des geplünderten Dorfes | Baron, Wachen, Arbeiter und Bergungsgestell |
+| Der Baron trifft nach Glockenschlag oder sichtbar gewordener schweigender Sicherung ein; die Gruppe unterstützt seinen Bergungsanspruch. | 2: Im Dienst des Barons | Gruppe, Baron, Wachen und Arbeiter | Wächter, sämtliche noch gebundenen Bergungstoten und der feindselige Turm |
+| Der Baron trifft nach Glockenschlag oder sichtbar gewordener schweigender Sicherung ein; die Gruppe verweigert ihm die Bergung und verteidigt den Verbleib der Glocke. | 3: Verteidiger der Glocke | Gruppe, Wächter und Gefallene des geplünderten Dorfes | Baron, Wachen, Arbeiter und Bergungsgestell |
 
 ## Participants and intentions
 
@@ -60,15 +60,15 @@ Ziel der Gruppe ist, die Glocke aus dem Siegelring zu schaffen. Ziel des Wächte
 
 ## Konfiguration 2: Im Dienst des Barons
 
-Nach dem Läuten erscheint der Baron mit wenigen Wachen, Arbeitern und vorbereitetem Gestell. Er erklärt offen, dass sein Haus den Goldwert der Glocke beansprucht, und ordnet ihre Bergung an. Unterstützt die Gruppe ihn, erhebt der Wächter dieselben noch gebundenen Bergungstoten wie in Konfiguration 1.
+Nach dem Glockenschlag oder dem verzögerten Zugriff auf eine sichtbar gewordene schweigende Sicherung erscheint der Baron mit wenigen Wachen, Arbeitern und vorbereitetem Gestell. Er erklärt offen, dass sein Haus den Goldwert der Glocke beansprucht, und ordnet ihre Bergung an. Unterstützt die Gruppe ihn, erhebt der Wächter dieselben noch gebundenen Bergungstoten wie in Konfiguration 1.
 
 Die Arbeiter bedienen Winde, Gurte und Keile; die Wachen schützen sie und die Gruppe hält Turmverteidigung und Tote fern. Der Baron kämpft nicht heldenhaft: Er gibt Befehle, nutzt Deckung und zieht sich nur so weit zurück, dass sein Anspruch bestehen bleibt. Fällt das Gestell aus, geraten Arbeiter in Gefahr oder wird seine Lüge vor seinen Leuten bewiesen, muss die Gruppe zwischen Rettung, Reparatur und fortgesetzter Goldbergung wählen.
 
 ## Konfiguration 3: Verteidiger der Glocke
 
-Nach dem Läuten fordert der Baron Übergabe und Mithilfe. Verweigert die Gruppe den Abtransport, lässt der Wächter die jüngeren Bergungsopfer zur Ruhe sinken: Sie sollen nicht ein weiteres Mal für fremde Gier kämpfen. Stattdessen treten die [Gefallenen von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md) als jenseitige Verbündete hervor.
+Nach seiner sofortigen oder verzögerten Ankunft fordert der Baron Übergabe und Mithilfe. Verweigert die Gruppe den Abtransport, lässt der Wächter die jüngeren Bergungsopfer zur Ruhe sinken: Sie sollen nicht ein weiteres Mal für fremde Gier kämpfen. Stattdessen treten die [Gefallenen von der Glocke](../../../../40-global/factions/gefallene-von-der-glocke/faction.md) als jenseitige Verbündete hervor.
 
-Die Gefallenen sind keine zusätzlichen gewöhnlichen Kämpfer. Sie löschen Fackeln, zeigen Angreifern Erinnerungsbilder der Plünderung, halten einmal einen stürzenden Balken auf oder öffnen der Gruppe eine kurze sichere Linie. Der Wächter lenkt Türen, Ketten und Joch gegen Bergungsgestell und Arbeiter. Ziel der Gruppe ist, die Bergung zu stoppen: Gestell unbrauchbar machen, Arbeiter und Wachen zum Aufgeben bringen oder den Baron zum Rückzug zwingen. Wer Wehrlose rettet oder den Toten Namen gibt, verstärkt die Hilfe der Gefallenen; wahllose Gewalt schwächt sie.
+Die Gefallenen sind keine zusätzlichen gewöhnlichen Kämpfer. Sie löschen Fackeln, zeigen Angreifern Erinnerungsbilder der Plünderung, halten einmal einen stürzenden Balken auf oder öffnen der Gruppe eine kurze sichere Linie. Der Wächter lenkt Türen, Ketten und Joch gegen Bergungsgestell und Arbeiter. Ziel der Gruppe ist, die Bergung zu stoppen: Gestell unbrauchbar machen, Arbeiter und Wachen zum Aufgeben bringen oder den Baron zum Rückzug zwingen. Wer Wehrlose rettet oder die Toten als einzelne Menschen bezeugt, verstärkt die Hilfe der Gefallenen; dafür genügen Miras letzte Worte und Vorschussmünze, Gurt- und Werkzeugzeichen, persönliche Gegenstände, eine würdige Bettung oder eine öffentliche Anerkennung. Ein verfügbarer Name kann verwendet werden, ist aber nicht erforderlich. Wahllose Gewalt schwächt die Hilfe.
 
 ## Escalation
 
@@ -80,7 +80,7 @@ Die Gefallenen sind keine zusätzlichen gewöhnlichen Kämpfer. Sie löschen Fac
 ## Approaches
 
 - Kettenanker, Joch, Hebel oder Gestell als konkrete Ziele sichern, blockieren, sabotieren oder übernehmen.
-- Tote durch Namen, Bestattung, Trennung ihrer Bergungszeichen oder Aufgabe des Raubs aus der Bindung lösen.
+- Tote durch persönliche Zeugnisse, zugeordnete Gegenstände, würdige Bettung, Trennung ihrer Bergungszeichen oder Aufgabe des Raubs aus der Bindung lösen; ein genauer Name ist keine Voraussetzung.
 - Beweise gegen den Baron seinen Wachen und Arbeitern zeigen, damit sie Befehle verweigern oder den Raum verlassen.
 - Den Wächter durch eine klare Schutzhandlung stärken oder durch erneute Plünderung schwächen.
 - Gegner zurückdrängen und die jeweilige Kernaufgabe unter Zeitdruck vollenden, statt alle Beteiligten besiegen zu müssen.

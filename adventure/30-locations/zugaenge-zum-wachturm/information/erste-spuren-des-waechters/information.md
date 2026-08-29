@@ -3,7 +3,7 @@ id: info-erste-spuren-des-waechters
 type: information
 title: "Erste Spuren des Wächters"
 status: draft
-version: 3
+version: 4
 scope: local
 truth_status: established
 confidence: supported
@@ -15,7 +15,7 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [guardian, warning, route-clue]
 themes: [threshold, warning]
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Erste Spuren des Wächters
@@ -36,7 +36,7 @@ Etabliert. Die Spuren beweisen die Existenz des Wächters, aber noch nicht, ob e
 - Grenzstein an der Pilgerstraße: Siegelreste, tiefe Kratzspuren und kalter Ruß.
 - [Unwetter am Waldpfad](../../scenes/unwetter-am-waldpfad/scene.md): trockene Siegelspuren im Starkregen, eine reglose Gestalt zwischen den Bäumen und metallisches Dröhnen begleiten den Aufstieg nach Norden.
 - Kanalstrecke: ähnliche Zeichen an einer trockenen Nische, obwohl dort Feuchtigkeit alles andere verwischt.
-- Nach dem [Kleinen Kampf an der Pilgerstraße](../../encounters/kleiner-kampf-an-der-pilgerstrasse/encounter.md): Gegner oder Umgebung reagieren auf das Wort „Glocke“ auffällig.
+- Nach dem [Kleinen Kampf an der Pilgerstraße](../../encounters/kleiner-kampf-an-der-pilgerstrasse/encounter.md): Der Standard-Wachposten beschreibt trockene schwarze Siegel, kaltes Metallgefühl und Dröhnen; beim Grenzstein werden dieselben Zeichen unmittelbar sichtbar. Optionale Gegnervarianten verändern nur die Aussage, nicht das Zeichen.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Die gleichen Zeichen erscheinen in Eingangshalle, Treppenaufgang oder Siegelkammer wieder.
 
 ## Preconditions

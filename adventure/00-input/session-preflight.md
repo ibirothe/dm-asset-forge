@@ -43,7 +43,7 @@ Diese Datei erfasst Logistik und Bereitschaft der Session. Inhaltliche Präferen
 
 | Freigabetyp | Status | Prüfquelle |
 |---|---|---|
-| Player Characters | open | [Player-Character-Index](../50-indexes/player-characters.md) |
+| Player Characters | approved | [Justus](../40-global/player-characters/justus-wertmueller/player-character.md), [Lars](../40-global/player-characters/lars-sauertrahn/player-character.md), [Benedict](../40-global/player-characters/benedict-karlheist/player-character.md) und [Tjorbe](../40-global/player-characters/tjorbe-hammerhand/player-character.md); Übersicht im [Player-Character-Index](../50-indexes/player-characters.md) |
 | Handouts | open | [Location-Index](../50-indexes/locations.md) |
 | Für Spieler sichtbare Visuals | open | [Abenteuerübersicht](../README.md) |
 

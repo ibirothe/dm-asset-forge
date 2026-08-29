@@ -3,7 +3,7 @@ id: npc-baron-von-dornfels
 type: npc
 title: "Baron von Dornfels"
 status: draft
-version: 7
+version: 8
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -15,7 +15,7 @@ reach: local
 tags: [baron, patron, hidden-culprit]
 themes: [greed, public-authority]
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Baron von Dornfels
@@ -45,7 +45,7 @@ Baron von Dornfels, Aussteller des [Aushangs](../../objects/aushang-des-barons/o
 <!-- Primären, aktuellen, ursprünglichen und weitere Auftrittsorte relativ verlinken. -->
 
 - Primary location: [Dornfels](../../location.md)
-- Appearance: [Alter Wachturm](../../../alter-wachturm/location.md). Erst der wirkliche Glockenschlag ist sein vereinbartes Sicherheitssignal; daraufhin erscheint er mit wenigen Wachen, Arbeitern und dem [Bergungsgestell](../../../alter-wachturm/objects/bergungsgestell-des-barons/object.md) in der [Letzten Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md).
+- Appearance: [Alter Wachturm](../../../alter-wachturm/location.md). Der wirkliche Glockenschlag ist sein vereinbartes Sicherheitssignal und bringt ihn sofort mit wenigen Wachen, Arbeitern und dem [Bergungsgestell](../../../alter-wachturm/objects/bergungsgestell-des-barons/object.md) in die [Letzte Bergung](../../../alter-wachturm/encounters/letzte-bergung/encounter.md). Werden stattdessen Turmbeweise oder die Rückkehr der Gruppe sichtbar oder erklärt sie eine längere Schutzwache, riskiert er denselben Zugriff verzögert, um Beweise und Glocke nicht zu verlieren.
 
 ## Motivation
 
@@ -92,6 +92,7 @@ Belohnung, Wachen, Arbeiter, das vorbereitete [Bergungsgestell](../../../alter-w
 - Gegenüber Lars: Erwartet diskrete Berichte über Abweichungen, hat aber weder sichere Loyalität noch tatsächliche Führungsgewalt geschaffen. Bei Offenlegung leugnet er den Zweck des Zettels oder deutet ihn als gewöhnliche Auftragskoordination um.
 - Gegenüber Tjorbe: Betont Schutz, erfolgreiche Auftragserfüllung und persönliche Zusatzbezahlung. Bei Offenlegung nennt er den Brief eine gewöhnliche Sicherheitsmaßnahme und verschweigt weiterhin den geplanten Abtransport.
 - Wenn unter Druck: Behauptet, die Glocke und jedes Turminventar gehörten rechtmäßig dem Haus Dornfels, verlangt Beweise und versucht Zeugen oder Fundstücke zu kontrollieren.
+- Wenn die Gruppe ohne Läuten mit Turmbeweisen zurückkehrt oder eine Schutzwache ankündigt: Gibt er den Sicherheitsvorbehalt auf, setzt das vorbereitete Gerät in Marsch und versucht, Anspruch sowie Beweise am Turm zugleich unter Kontrolle zu bringen.
 - Wenn die Gruppe seinen Anspruch im Turm verweigert: Lässt das Gestell aufrichten, befiehlt die Bergung gegen ihren Widerstand und zieht sich erst zurück, wenn Gerät oder Gefolgschaft nicht mehr einsetzbar sind.
 
 ## Hooks and consequences

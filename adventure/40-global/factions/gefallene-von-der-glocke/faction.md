@@ -3,7 +3,7 @@ id: fac-gefallene-von-der-glocke
 type: faction
 title: "Gefallene von der Glocke"
 status: draft
-version: 4
+version: 5
 scope: global
 related_locations: ["loc-alter-wachturm", "loc-dornfels"]
 influence: notable
@@ -11,7 +11,7 @@ reach: local
 tags: [restless-dead, bell, grievance]
 themes: [stolen-gold, unresolved-debt]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-29
 ---
 
 # Gefallene von der Glocke
@@ -43,7 +43,7 @@ Sie können Raubversuche gefährlich machen, Schuldzeichen sichtbar werden lasse
 
 ## Methods
 
-Keine regelgebundenen Angriffe. Sie wirken über Stimmen, Kälte, Erinnerungsbilder, gefährliche Turmreaktionen und das Zurückweisen gieriger Handlungen. Sie sind die Toten der alten Plünderung, nicht die jüngeren [Gefallenen Bergungsleute](../../../30-locations/alter-wachturm/creatures/gefallene-bergungsleute/creature.md), deren Körper der Wächter gegen neue Bergung zwingt.
+Keine regelgebundenen Angriffe. Sie wirken über Stimmen, Kälte, Erinnerungsbilder, gefährliche Turmreaktionen und das Zurückweisen gieriger Handlungen. Persönliche Zeugnisse, zugeordnete Gegenstände, würdige Bettung oder öffentliche Anerkennung behandeln die Toten als einzelne Menschen und können ihre Hilfe stärken; genaue Namen sind dafür nicht erforderlich. Sie sind die Toten der alten Plünderung, nicht die jüngeren [Gefallenen Bergungsleute](../../../30-locations/alter-wachturm/creatures/gefallene-bergungsleute/creature.md), deren Körper der Wächter gegen neue Bergung zwingt.
 
 ## Internal tensions
 

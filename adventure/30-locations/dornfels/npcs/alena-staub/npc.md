@@ -3,7 +3,7 @@ id: npc-alena-staub
 type: npc
 title: "Alena Staub"
 status: ready
-version: 2
+version: 3
 scope: local
 primary_location: "loc-dornfels"
 current_location: "loc-dornfels"
@@ -15,7 +15,7 @@ reach: local
 tags: [librarian, archive, missing-books]
 themes: [knowledge, censorship, fear]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-29
 ---
 
 # Alena Staub
@@ -65,7 +65,7 @@ Katalog, Regalordnung, Ausleihnotizen, Archivschlüssel, Kenntnis von Handschrif
 ### Established facts
 
 - Kennt die [fehlenden Bücher der Plünderungszeit](../../information/fehlende-buecher-der-pluenderungszeit/information.md).
-- Kann auf die [Herkunft der Glocke](../../information/herkunft-der-glocke/information.md) hinführen, wenn die Gruppe Lücken statt nur Titel untersucht.
+- Kann die Archivlücke als Manipulationsspur erklären und getrennt davon über ein erhaltenes Randregister und eine Inventarnotiz auf die [Herkunft der Glocke](../../information/herkunft-der-glocke/information.md) führen.
 
 ### Rumors
 
@@ -73,7 +73,7 @@ Katalog, Regalordnung, Ausleihnotizen, Archivschlüssel, Kenntnis von Handschrif
 
 ### Secrets
 
-- Hat eine private Notiz zurückbehalten, die belegt, dass jemand gezielt nach Goldwert und Glockenguss fragte.
+- Hat eine private Notiz zurückbehalten, die belegt, dass jemand gezielt nach Goldwert und Glockenguss fragte; sie ist ein Hinweis auf Barons Recherche, nicht der Herkunftsbeleg selbst.
 
 ## Relationships
 

@@ -3,7 +3,7 @@ id: info-herkunft-der-glocke
 type: information
 title: "Herkunft der Glocke"
 status: draft
-version: 4
+version: 5
 scope: local
 truth_status: established
 confidence: corroborated
@@ -15,7 +15,7 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [bell-origin, stolen-gold]
 themes: [historical-guilt, restitution]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-29
 ---
 
 # Herkunft der Glocke
@@ -33,8 +33,8 @@ Etabliert. Die sichtbare Ähnlichkeit des Banners ist kanonisch, beweist aber al
 <!-- Orte, Akteure, Objects, Handouts oder Situationen relativ verlinken und pro Pfad nur Zugang und Präsentation beschreiben. Die Aussage selbst bleibt ausschließlich unter Statement kanonisch. -->
 
 - Primary location: [Dornfels](../../location.md)
-- Bibliothek in [Dornfels](../../location.md): Aufzeichnungen über Goldwert, Guss und Beschwichtigungszweck.
-- [Fehlende Bücher der Plünderungszeit](../fehlende-buecher-der-pluenderungszeit/information.md): Die Lücken grenzen die relevante Epoche ein und zeigen, dass jemand den Archivpfad manipuliert hat.
+- [Bibliotheksszene](../../scenes/bibliotheksszene/scene.md): Ein erhaltenes Randregister und eine Inventarnotiz nennen Goldwert, die Überführung zusammengetragenen Plündergolds in den Glockenguss und den Beschwichtigungszweck. Dieser Beleg liegt außerhalb der entfernten Buchreihe.
+- [Fehlende Bücher der Plünderungszeit](../fehlende-buecher-der-pluenderungszeit/information.md): Die Lücken grenzen die relevante Epoche ein und zeigen Archivmanipulation, belegen aber für sich weder Materialherkunft noch Guss.
 - [Überlieferung der Plünderung](../ueberlieferung-der-pluenderung/information.md): Der Stammtisch liefert eine mündliche Spur zur alten Schuld.
 - [Alter Wachturm](../../../alter-wachturm/location.md): Glockenstube und Präsenz der Gefallenen bestätigen die Spur vor Ort.
 - [Das Echo der Plünderung](../../../alter-wachturm/scenes/echo-der-pluenderung/scene.md): Eine kollektive Vision zeigt Raub, verstreute und zusammengetragene Goldmünzen sowie das dem Baronssiegel ähnliche Banner.
@@ -48,7 +48,7 @@ Bibliothekszugang, Gespräch in der Schänke, Untersuchung der Glocke oder respe
 
 ## Presentation clues
 
-Alte Inventarnotizen, fehlende Bücher einer zusammenhängenden Epoche, uralte Erzählfragmente, die Aussage eines sterbenden Augenzeugen, verstreute Münzen in einer gemeinsamen Raubvision, ungewöhnlich hoher Goldwert, Namen oder Zeichen am Glockenrand, Kälte oder Stimmen bei respektloser Berührung.
+Erhaltenes Randregister und Inventarnotiz, davon getrennte fehlende Bücher einer zusammenhängenden Epoche, uralte Erzählfragmente, die Aussage eines sterbenden Augenzeugen, verstreute Münzen in einer gemeinsamen Raubvision, ungewöhnlich hoher Goldwert, Namen oder Zeichen am Glockenrand, Kälte oder Stimmen bei respektloser Berührung.
 
 ## Interpretation risks
 

@@ -3,7 +3,7 @@ id: plot-fluch-oder-gier
 type: plot-thread
 title: "Fluch oder Gier"
 status: draft
-version: 10
+version: 11
 scope: global
 entry_locations: ["loc-dornfels", "loc-zugaenge-zum-wachturm", "loc-alter-wachturm"]
 related_factions: ["fac-gefallene-von-der-glocke"]
@@ -12,7 +12,7 @@ reach: local
 tags: []
 themes: []
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Fluch oder Gier
@@ -35,7 +35,7 @@ Die Glocke ist seit einem Jahr stumm, weil das Seil beim ersten heimlichen Bergu
 
 - Next pressure: Der Baron hält den öffentlichen Auftrag aufrecht und sucht nach Menschen, die den Turm betreten, ohne seine Bibliotheksfunde offenzulegen.
 - Tower pressure: Nach der kollektiven Vision erhebt der Wächter den früheren Bergungsmann und steuert Wandketten sowie lose Balken. Die Gruppe muss den oberen Aufstieg passieren, kann dies aber durch Kampf, Entkopplung, Rettung, Umgehung oder glaubhafte Absicht erreichen.
-- Late pressure: Nur der wirkliche Glockenschlag bestätigt dem Baron, dass der obere Turm erreichbar ist. Er erscheint mit Wachen, Arbeitern und vorbereitetem Bergungsgestell, nennt den Goldwert als Ziel und fordert die Gruppe zur Mithilfe oder Übergabe auf.
+- Late pressure: Der wirkliche Glockenschlag bestätigt dem Baron sofort, dass der obere Turm erreichbar ist. Wird stattdessen eine schweigende Schutzentscheidung durch gesicherte Turmbeweise, die Rückkehr der Gruppe nach Dornfels oder eine erklärte längere Wache sichtbar, riskiert er den Zugriff ohne Sicherheitssignal, um Glocke und belastendes Material nicht zu verlieren. In beiden Fällen erscheint er mit Wachen, Arbeitern und vorbereitetem Bergungsgestell, nennt den Goldwert als Ziel und fordert Mithilfe oder Übergabe.
 
 ## Information path
 
@@ -54,7 +54,7 @@ Der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten
   - Cut: Markt- und Trauerzeugnisse in einer Dornfels-Montage bündeln.
   - Impact: Sozialer Informationspfad bleibt erhalten, wenn Bibliothek oder Turmspuren als zweiter Pfad bestehen.
   - Cut: Annäherung an den Turm knapp über eine gewählte Route abhandeln.
-  - Impact: Entscheidung über Risiko und erste Wächterspuren bleiben sichtbar, ohne die Auflösung zu verschieben.
+  - Impact: Auf der Waldroute bleiben eine Kostenentscheidung und ein trockenes Siegel oder die reglose Gestalt sichtbar; auf der Kanalroute bleiben eine Zugangskostenfolge und ein trockenes Kanalzeichen sichtbar. Nolte und Nordspur werden nur verwendet, wenn der Kanal tatsächlich gespielt wird, und die Nordspur bleibt optional. Turmzugang und erste Wächterspur bleiben ohne Inhalte der ungewählten Route erreichbar.
   - Cut: Turmpassage straffen, wenn die Session nach Akt 3 drängt.
   - Impact: Gebrochene Schwelle und Vision werden kurz zusammengefasst; Knochen und Ketten wird auf Bergungsmann plus eine Kettenzone verdichtet. Glockenraum, Siegelkammer, Wächterentscheidung und der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten bleiben erreichbar.
 
@@ -64,7 +64,7 @@ Der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten
 
 - Den Auftrag annehmen, prüfen, öffentlich in Frage stellen oder gegen den Baron verwenden.
 - Den Wachturm über Wald oder Kanalisation erreichen und dadurch unterschiedliche Risiken und Spuren priorisieren.
-- Die Glocke selbst als Goldschatz bergen oder den Mechanismus reparieren, läuten und danach den Baron unterstützen beziehungsweise zurückweisen.
+- Die Glocke selbst als Goldschatz bergen, den Mechanismus reparieren und läuten oder Glocke und Beweise schweigend sichern; nach Barons sofortiger oder verzögerter Ankunft können sie ihn unterstützen beziehungsweise zurückweisen.
 - Mit Baron, Bewohnern Dornfels' oder Gefallenen arbeiten, drohen, verhandeln oder sie gegeneinander ausspielen.
 - Den Wächter bekämpfen, umgehen, überzeugen oder durch ein bewusstes Opfer beziehungsweise eine Wiedergutmachung beruhigen.
 
@@ -72,8 +72,8 @@ Der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten
 
 - Minimum resolution state: Die Gruppe versteht den Zusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten und vollendet eine der drei Entscheidungen über die Glocke.
 - Gold unter einem Fluch: Die Gruppe raubt die Glocke für den eigenen Goldgewinn und überwindet die vom Wächter erhobenen Bergungstoten.
-- Der Preis des Auftrags: Nach Läuten unterstützt die Gruppe den Baron gegen Wächter und Bergungstote; er lässt die Glocke bergen und beansprucht sie über die Eigentumsklausel.
-- Die Glocke bleibt: Nach Läuten verteidigt die Gruppe mit Wächter und alten Gefallenen den Turm gegen Baron, Wachen und Bergungsgerät.
+- Der Preis des Auftrags: Nach Barons Ankunft unterstützt die Gruppe ihn gegen Wächter und Bergungstote; er lässt die Glocke bergen und beansprucht sie über die Eigentumsklausel.
+- Die Glocke bleibt: Nach Barons Ankunft verteidigt die Gruppe mit Wächter und alten Gefallenen den Turm gegen Baron, Wachen und Bergungsgerät.
 
 ## Consequences of neglect
 

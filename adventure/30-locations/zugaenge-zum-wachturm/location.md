@@ -3,7 +3,7 @@ id: loc-zugaenge-zum-wachturm
 type: location
 title: "Zugänge zum Wachturm"
 status: draft
-version: 5
+version: 6
 scope: local
 parent_location: null
 function: route-and-pressure
@@ -12,7 +12,7 @@ accessibility: limited
 tags: [forest-route, sewer-route, pilgrim-road, giant-rats]
 themes: [approach, warning, ambush, hidden-movement]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-29
 ---
 
 # Zugänge zum Wachturm
@@ -63,7 +63,7 @@ Der Waldweg ist sichtbar und für alle zugänglich, aber anfällig für Begegnun
 ## Encounters and pressures
 
 
-- [Kleiner Kampf an der Pilgerstraße](encounters/kleiner-kampf-an-der-pilgerstrasse/encounter.md)
+- [Kleiner Kampf an der Pilgerstraße](encounters/kleiner-kampf-an-der-pilgerstrasse/encounter.md) setzt einen zurückgelassenen Wachposten des Barons als Standardgegner mit begrenztem Wissen und klaren Folgen; Varianten ersetzen ihn vollständig.
 - [Ratten im Kanal](encounters/ratten-im-kanal/encounter.md)
 - [Unwetter am Waldpfad](scenes/unwetter-am-waldpfad/scene.md) verwandelt den nördlichen Aufstieg nach Einbruch der Dämmerung in schlammigen Geländedruck und eine frühe Prüfung durch die Präsenz des Wächters.
 - Plotdruck: [Fluch oder Gier](../../20-plot/threads/fluch-oder-gier/plot-thread.md) führt hier von Vorbereitung zu Turmentscheidung.

@@ -3,7 +3,7 @@ id: info-fehlende-buecher-der-pluenderungszeit
 type: information
 title: "Fehlende Bücher der Plünderungszeit"
 status: draft
-version: 2
+version: 3
 scope: local
 truth_status: established
 confidence: supported
@@ -15,7 +15,7 @@ related_threads: ["plot-fluch-oder-gier"]
 tags: [library, missing-books, plunder-era]
 themes: [hidden-history, censorship]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-29
 ---
 
 # Fehlende Bücher der Plünderungszeit
@@ -26,7 +26,7 @@ In der Bibliothek von Dornfels fehlen oder wurden entnommen genau jene Bücher u
 
 ## Truth and limits
 
-Etabliert. Die Lücke beweist noch nicht allein, wer die Bücher entfernt hat oder was exakt darin stand; sie grenzt aber die relevante Zeit ein und macht absichtliches Verschweigen plausibel.
+Etabliert. Die Lücke beweist, dass der Archivbestand für eine zusammenhängende Epoche manipuliert wurde, und grenzt diese Epoche ein. Sie beweist weder, wer die Bücher entfernte, noch was darin stand, noch dass die Glocke aus geraubtem Gold besteht. Dieser Material- und Gusszusammenhang braucht ein erhaltenes Register, die Schänkenüberlieferung oder einen Turmbeleg.
 
 ## Discovery points
 
@@ -46,11 +46,11 @@ Katalogkarten ohne Buch, gleiche Datierung mehrerer Lücken, nervöse Bibliothek
 
 ## Interpretation risks
 
-Die Gruppe kann die Lücke als Zufall, schlechte Ordnung oder reine Zensur deuten und den Zusammenhang zur Glocke zu spät ziehen.
+Die Gruppe kann die Lücke als Zufall oder schlechte Ordnung deuten; umgekehrt darf sie aus der Lücke allein keinen bestimmten Buchinhalt oder Materialursprung ableiten.
 
 ## Consequences when learned
 
-Die Gruppe kann die Plünderungszeit eingrenzen, den Baron zu Bibliotheksbesuchen befragen und die Schänkenüberlieferung gezielter auswerten.
+Die Gruppe kann die Plünderungszeit eingrenzen, Archivmanipulation belegen, den Baron zu Bibliotheksbesuchen befragen und gezielt nach einem erhaltenen Register, der Schänkenüberlieferung oder Turmbelegen suchen.
 
 ## Consequences when missed
 

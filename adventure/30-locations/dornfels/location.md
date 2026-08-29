@@ -3,7 +3,7 @@ id: loc-dornfels
 type: location
 title: "Dornfels"
 status: draft
-version: 13
+version: 14
 scope: local
 parent_location: null
 function: investigation-hub
@@ -12,7 +12,7 @@ accessibility: open
 tags: [city, market, library, supplies]
 themes: [public-authority, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Dornfels
@@ -41,7 +41,7 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 - Marktplatz: Einstieg über die [Marktszene](scenes/marktszene/scene.md), den [Aushang des Barons](objects/aushang-des-barons/object.md), Gerüchte und erste Zeugen wie [Borin Karrenschieber](npcs/borin-karrenschieber/npc.md), [Nele Kerzenzieh](npcs/nele-kerzenzieh/npc.md) und [Timo Netzflicker](npcs/timo-netzflicker/npc.md).
 - Krämer: [Liska Warenmaß](npcs/liska-warenmass/npc.md) verkauft die [Krämerauslage](objects/kraemerauslage/object.md) mit Essensrationen, Heiltränken, Fackeln und einer Regionalkarte.
 - Schmiede: [Gerolt Eisenfaust](npcs/gerolt-eisenfaust/npc.md) führt [Schmiedewaren und Schleifstein](objects/schmiedewaren-und-schleifstein/object.md); der [Schmiedestreit](scenes/schmiedestreit/scene.md) verbindet angebliche Schulden, Mira und Borins Marktzeugnis mit Turmvorbereitung.
-- Bibliothek: Die [Bibliotheksszene](scenes/bibliotheksszene/scene.md) macht [Alena Staub](npcs/alena-staub/npc.md), [Herkunft der Glocke](information/herkunft-der-glocke/information.md) und die [fehlenden Bücher der Plünderungszeit](information/fehlende-buecher-der-pluenderungszeit/information.md) als Archivpfad spielbar.
+- Bibliothek: Die [Bibliotheksszene](scenes/bibliotheksszene/scene.md) trennt mit [Alena Staub](npcs/alena-staub/npc.md) das erhaltene Randregister zur [Herkunft der Glocke](information/herkunft-der-glocke/information.md) von den [fehlenden Büchern der Plünderungszeit](information/fehlende-buecher-der-pluenderungszeit/information.md) als Manipulationsspur.
 - Schänke: [Jorek Malz](npcs/jorek-malz/npc.md) schützt den [Stammtisch der Alten](npcs/stammtisch-der-alten/npc.md), der die [Überlieferung der Plünderung](information/ueberlieferung-der-pluenderung/information.md) kennt; hinter dem Tresen liegen mit [Sturmlaterne der Schänke](objects/sturmlaterne-der-schaenke/object.md) und [Wacholder-Salz und Kantenbrot](objects/wacholder-salz-und-kantenbrot/object.md) zwei optionale Ausrüstungsvorteile.
 - Baronssitz oder Amtsstube: Sozialer Druckpunkt gegen [Baron von Dornfels](npcs/baron-von-dornfels/npc.md).
 - Stadttor, Kanalkante und verfallene Außenbereiche: Der [Kanalzugang](scenes/kanalzugang/scene.md), [Nolte am Tor](npcs/nolte-am-tor/npc.md), [Rena Falk](npcs/rena-falk/npc.md) und der Weg zu den [Zugängen zum Wachturm](../zugaenge-zum-wachturm/location.md) machen heimliche Bewegungen sichtbar.
@@ -57,7 +57,7 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 - [Stammtisch der Alten](npcs/stammtisch-der-alten/npc.md) trägt die alte Plünderungsüberlieferung.
 - [Borin Karrenschieber](npcs/borin-karrenschieber/npc.md), [Nele Kerzenzieh](npcs/nele-kerzenzieh/npc.md) und [Timo Netzflicker](npcs/timo-netzflicker/npc.md) geben drei unterschiedliche Marktzeugnisse.
 - [Rena Falk](npcs/rena-falk/npc.md) hält Marktordnung und Wachdruck präsent.
-- [Alena Staub](npcs/alena-staub/npc.md) erschließt die Bibliothekslücken.
+- [Alena Staub](npcs/alena-staub/npc.md) erschließt Archivlücke, erhaltenes Randregister und Barons spätere Recherche als getrennte Spuren.
 - [Nolte am Tor](npcs/nolte-am-tor/npc.md) beobachtet übersehene Bewegungen am Tor und Kanalrand.
 - [Mira Seilern](npcs/mira-seilern/npc.md) macht die verschwundenen Bergungsleute persönlich und anklagbar.
 

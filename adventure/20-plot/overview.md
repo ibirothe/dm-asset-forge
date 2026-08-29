@@ -46,14 +46,14 @@ Wenn niemand eingreift, bleiben Bewohner gefährdet, der Baron kann weitere Mens
 - Wem glauben die Spieler zuerst: öffentlichem Aushang, Marktgerüchten, Bibliotheksakten, Turmspuren oder der eigenen Deutung?
 - Gehen sie über die verlassene Pilgerstraße im Wald, durch die Kanalisation, mit Unterstützung aus Dornfels oder nach öffentlicher Konfrontation des Barons zum Turm?
 - Behandeln sie die Glocke als Werkzeug gegen einen Fluch, als Goldschatz, als Beweisstück, als Grabmal oder als Verhandlungsanker?
-- Stehlen sie die Glocke selbst, helfen sie nach dem Läuten dem Baron bei der Bergung oder verteidigen sie ihren Verbleib gemeinsam mit Wächter und Gefallenen?
+- Stehlen sie die Glocke selbst, helfen sie dem eintreffenden Baron bei der Bergung oder verteidigen sie ihren Verbleib gemeinsam mit Wächter und Gefallenen? Reparatur und Läuten rufen ihn sofort; eine erklärte schweigende Schutzwache lässt seinen Druck erst nach Beweissicherung, sichtbarer Rückkehr oder längerem Ausharren eintreffen.
 
 ## Information paths
 
 - Die Schlussfolgerung, dass der Auftrag des Barons irreführend ist, ist über Aushangswidersprüche, Bibliotheksspuren, Aussagen über heimliche Anwerbungen und Bergungsspuren im Turm erreichbar.
-- Die Herkunft der Glocke ist über Bibliothekslücken, Schänkenüberlieferung, verbliebene Aufzeichnungen und Zeichen, Material oder Reaktionen im Wachturm erreichbar.
+- Die Herkunft der Glocke ist über ein erhaltenes Randregister und Inventarnotizen, die Schänkenüberlieferung sowie Zeichen, Material oder Reaktionen im Wachturm erreichbar. Die Bibliothekslücke grenzt nur die manipulierte Epoche ein und ist kein eigener Herkunftsbeweis.
 - Die Anwesenheit des Wächters ist über Spuren auf der Pilgerstraße und Zeichen im Turm früh erkennbar.
-- Das verstummte Seil ist über direkte Untersuchung der Glockenstube und über die Rekonstruktion des ersten Bergungsversuchs erreichbar.
+- Das verstummte Seil ist über direkte Untersuchung der Glockenmechanik und unabhängig über die versiegelte Kappanweisung samt Seilfasern an der Handaxt des ersten Bergungstrupps erreichbar.
 - Die verschwundenen Bewohner sind keine zufälligen Fluchopfer, sondern heimlich angeworbene Bergungsleute; dies ist über Dornfelser Markt- und Trauerzeugnisse sowie Turmreste erreichbar.
 
 Die konkrete Pfadabdeckung steht in der [globalen Hinweismatrix](../50-indexes/clue-matrix.md).
@@ -70,6 +70,8 @@ Die konkrete Pfadabdeckung steht in der [globalen Hinweismatrix](../50-indexes/c
 - Der Preis des Auftrags: Die Gruppe repariert den Mechanismus, läutet die Glocke und unterstützt den mit Verstärkung eintreffenden Baron bei der Bergung gegen Wächter, Turm und gebundene Bergungstote.
 - Die Glocke bleibt: Die Gruppe repariert den Mechanismus, läutet die Glocke und verweigert dem Baron den Abtransport. Sie kämpft an der Seite des Wächters; die Gefallenen der alten Plünderung helfen aus dem Jenseits.
 
+Eine schweigende Schutzentscheidung ist kein viertes Ende: Sichert die Gruppe Glocke und Beweise, ohne zu läuten oder zu bergen, erkennt der Wächter ihre Haltung an und lässt Vorbereitung oder Rückkehr nach Dornfels zu. Sobald die Gruppe mit Turmbeweisen sichtbar wird, den Baron offen herausfordert oder eine längere Wache am Turm erklärt, überwiegt für ihn die Gefahr von Entlarvung und Kontrollverlust. Er setzt das bereits vorbereitete Bergungsgestell trotz des fehlenden Sicherheitssignals in Marsch. Die Gruppe kann dann weiterhin selbst bergen, ihm helfen oder den Verbleib verteidigen.
+
 ## Resolution boundary
 
 Auflösbar sein muss, ob weitere Bewohner Dornfels' verschwinden und was mit Baron, Glocke und Turm nach der Aufdeckung geschieht. Offen bleiben dürfen der genaue Name des geplünderten historischen Dorfes, die vollständige Geschichte des damaligen Raubs und die langfristige politische Neuordnung Dornfels.
@@ -83,12 +85,12 @@ Auflösbar sein muss, ob weitere Bewohner Dornfels' verschwinden und was mit Bar
 - Optional content: Ausführliche Stadterkundung, ausgespielter Diebstahl beim Schmied, vollständige Schänken- oder Bibliotheksgespräche und eine vollständige Rekonstruktion des hundert Jahre alten Raubs.
 - Safe cuts:
   - Cut: Krämer, Schmied, Bibliothek und Schänke in einer kompakten Dornfels-Montage bündeln.
-  - Impact: Ausrüstung, Bibliothekslücke und Stammtischüberlieferung bleiben als Optionen sichtbar; der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten bleibt über unabhängige Informationspfade erreichbar.
-  - Cut: Wald-/Pilgerstraße und Kanalzugang nur als Wahl mit je einem Risiko darstellen; den kleinen Kampf als schnelle Druckprobe oder Nachwirkung führen.
-  - Impact: Annäherung, Hinweis auf den Wächter und Finale bleiben erreichbar.
+  - Impact: Ausrüstung, die Bibliothekslücke als Manipulationsspur und mindestens einer der tatsächlichen Herkunftspfade über erhaltenes Randregister oder Stammtischüberlieferung bleiben sichtbar; der Mindestzusammenhang zwischen Baron, Glocke und verschwundenen Bergungsleuten bleibt über unabhängige Informationspfade erreichbar.
+  - Cut: Nur die tatsächlich gewählte Route knapp führen. Auf Wald/Pilgerstraße bleiben eine Wahl zwischen Zeit, Sicherheit oder Ausrüstung und ein trockenes Wächterzeichen sichtbar; im Kanal bleiben eine Zugangskostenfolge und ein trockenes Kanalzeichen sichtbar. Den kleinen Kampf nur auf der Waldroute als schnelle Druckprobe oder Nachwirkung führen.
+  - Impact: Die gewählte Annäherung, ein routeneigener Hinweis auf den Wächter und das Finale bleiben erreichbar. Nolte und die frische Nordspur entfallen vollständig, wenn der Kanal nicht gewählt wurde; die Nordspur bleibt auch auf der Kanalroute optional.
   - Cut: Im Turm Schwelle, Vision und feindseligen Aufstieg straff zusammenziehen.
   - Impact: Glocke, Wächter, Herkunftshinweise und Endentscheidung bleiben erhalten.
-- Late pressure: Der wirkliche Glockenschlag ruft den Baron mit Wachen, Arbeitern und vorbereitetem Bergungsgestell zum Turm. Sein offener Goldanspruch zwingt nach der Reparatur zur Unterstützung oder Verweigerung; ohne Läuten bleibt der eigene Diebstahl als dritte Finalroute erreichbar.
+- Late pressure: Der wirkliche Glockenschlag ruft den Baron sofort mit Wachen, Arbeitern und vorbereitetem Bergungsgestell zum Turm. Ohne Läuten löst eine sichtbar gewordene Beweissicherung, die Rückkehr der Gruppe nach Dornfels oder eine erklärte längere Schutzwache denselben menschlichen Druck verzögert aus: Der Baron riskiert den Turm nun, um Beweise und Glocke nicht zu verlieren. Sein offener Goldanspruch lässt weiterhin Unterstützung, Verweigerung oder eigenen Diebstahl als die drei Finalrouten offen.
 
 <!-- `core`, `supporting`, and `optional` are editorial prose labels, not metadata values. Every safe cut must preserve independent paths to necessary conclusions, multiple forms of player influence, and reachable resolutions. Late pressure changes the situation without prescribing a player action or Scene. -->
 

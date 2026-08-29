@@ -52,17 +52,17 @@ Prüfe globale Pfadabdeckung und Auffangwege in der [globalen Hinweismatrix](../
 | Schlussfolgerung | Unabhängige Pfade | Auffangweg | Quelle |
 |---|---|---|---|
 | Auftrag ist Vorwand | Aushang/Baron; Dornfelser Zeugen; Auftragsrest an der Schwelle | Dornfelser Zeugen oder Turmbeweis nachreichen. | [Clue Matrix](../50-indexes/clue-matrix.md) |
-| Glocke ist Schuldgold | Bibliothekslücke; Schänkenüberlieferung; Treppenvision; Glockenzeichen/Gefallene | Andere Archiv-, Erinnerungs- oder Turmpfade bleiben erreichbar. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Glocke ist Schuldgold | Erhaltenes Randregister mit Inventarnotiz; Schänkenüberlieferung; Treppenvision; Glockenzeichen/Gefallene | Archivlücke ist nur Manipulationsspur; Schrift-, Erinnerungs- und Turmbelege bleiben unabhängig. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Wächter ist gebunden | Pilgerstraße/Kanal; Turmzeichen | Route oder Turm kann nachliefern. | [Clue Matrix](../50-indexes/clue-matrix.md) |
-| Seil wurde durchtrennt | Sichtmechanismus nach der Vision; Glockenstube; Barons Widerspruch | Treppe oder direkte Glockenuntersuchung bestätigt. | [Clue Matrix](../50-indexes/clue-matrix.md) |
+| Seil wurde durchtrennt | Glockenmechanik nach der Vision oder in der Glockenstube; versiegelte Kappanweisung mit Handaxtfasern an der Schwelle | Mechanismus und Dokument-/Werkzeugspur bleiben unabhängig; Barons Ausweichen ist nur Verdacht. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 | Verschwundene waren Bergungsleute | Dornfelser Zeugen; Schmiedestreit; Leichnam an der Schwelle | Baron unter Druck oder weitere Turmspuren. | [Clue Matrix](../50-indexes/clue-matrix.md) |
 
 ## Eskalation
 
 - Aktiver Druck: [Offene Plot-Threads](../50-indexes/open-threads.md) — eigener Zugriff erweckt die Bergungstoten; wirkliches Läuten ruft den Baron.
-- Nächste sichtbare Veränderung: [Glockenraum und Siegelkammer](../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) — Siegelring reagiert auf Bergung oder Fackeln und Gestell werden nach dem Glockenschlag sichtbar.
-- Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — Glocke selbst lösen oder den reparierten Mechanismus wirklich läuten.
-- Menschlicher Finaldruck: [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) — Der Glockenschlag bringt ihn mit Wachen, Arbeitern und vorbereitetem Gestell zum Turm.
+- Nächste sichtbare Veränderung: [Glockenraum und Siegelkammer](../30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) — Siegelring reagiert auf Bergung; Läuten bringt den Baron sofort, sichtbare schweigende Sicherung verzögert.
+- Auslöser: [Offene Plot-Threads](../50-indexes/open-threads.md) — Glocke selbst lösen, wirklich läuten oder eine schweigende Schutzentscheidung durch Beweise, Rückkehr oder längere Wache sichtbar machen.
+- Menschlicher Finaldruck: [Baron von Dornfels](../30-locations/dornfels/npcs/baron-von-dornfels/npc.md) — Er bringt Wachen, Arbeiter und Gestell nach Glockenschlag sofort, bei drohendem Kontrollverlust verzögert ohne Signal.
 - Turmverteidigung: [Knochen und Ketten](../30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — Wiedererweckter, Kettenanker und Balken müssen passiert oder entkoppelt werden; Kampf ist nur eine Möglichkeit.
 
 ### Wächterreaktion
@@ -81,7 +81,7 @@ Auslöser und Zustandswechsel: [Wächter der Glocke](../30-locations/alter-wacht
 | Kürzung | Auslöser | Erhaltene Auflösung | Quelle |
 |---|---|---|---|
 | Dornfels-Montage | Akt 1 überzieht | Ausrüstung und zwei Hinweiswege bleiben erhalten. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
-| Wald- und Kanalzugang knapp abhandeln | Akt 2 überzieht | Wahl des Risikos und Wächterspur bleiben sichtbar. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
+| Gewählten Zugang knapp abhandeln | Akt 2 überzieht | Eine routeneigene Kostenfolge und Wächterspur bleiben sichtbar; die ungewählte Route entfällt. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
 | Turmpassage straffen | Akt 3 überzieht | Glocke, Wächter, Siegelkammer und Endentscheidung bleiben erreichbar. | [Run Sheet](run-sheet.md#sichere-kürzungen) |
 
 ## Mindestauflösung
@@ -94,7 +94,7 @@ Auslöser und Zustandswechsel: [Wächter der Glocke](../30-locations/alter-wacht
 | Endzustand | Auslöser | Folge | Quelle |
 |---|---|---|---|
 | Gold unter einem Fluch | Gruppe birgt die Glocke selbst. | Totenwehr wird überwunden; Bindung und Schuld folgen dem Gold. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
-| Der Preis des Auftrags | Gruppe unterstützt den Baron nach dem Läuten. | Baron erhält die Glocke; gebundene Tote werden besiegt, nicht erlöst. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
-| Die Glocke bleibt | Gruppe weist den Baron zurück und verteidigt den Turm. | Alte Gefallene helfen; jüngere Bergungstote finden Ruhe. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Der Preis des Auftrags | Gruppe unterstützt den Baron nach seiner sofortigen oder verzögerten Ankunft. | Baron erhält die Glocke; gebundene Tote werden besiegt, nicht erlöst. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
+| Die Glocke bleibt | Gruppe weist den Baron nach seiner sofortigen oder verzögerten Ankunft zurück und verteidigt den Turm. | Alte Gefallene helfen; jüngere Bergungstote finden Ruhe. | [Letzte Bergung](../30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) |
 
 Aktualisiere diesen Spickzettel nach jeder wesentlichen Änderung einer zentralen Quelle. Zeige nur die kleinste Menge an Orten, NPCs, Schlussfolgerungen, Kürzungen und Endzuständen, die der DM während des Spiels ohne Suche benötigt.

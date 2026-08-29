@@ -3,7 +3,7 @@ id: scene-die-gebrochene-schwelle
 type: scene
 title: "Die gebrochene Schwelle"
 status: draft
-version: 5
+version: 6
 scope: local
 primary_location: "loc-alter-wachturm"
 participants: ["npc-waechter-der-glocke", "cre-wiedererweckter-bergungsmann"]
@@ -12,7 +12,7 @@ danger: significant
 tags: [tower-entrance, recovery-team, baron-evidence, rusty-handaxe]
 themes: [abandonment, fear, hidden-crime]
 created: 2026-08-14
-updated: 2026-08-17
+updated: 2026-08-29
 ---
 
 # Die gebrochene Schwelle
@@ -38,9 +38,9 @@ Der engste sichere Durchgang führt dicht am Leichnam vorbei. Wer ihn untersucht
 
 - Gebrochener Absatz: niedriger Schutzraum mit Kratzspuren an der Innenseite; der Tote hat sich bewusst hineingezwängt und wurde nicht lediglich von Trümmern bedeckt.
 - Bergungsgurt und Hebezeugmarken: Ein breiter Arbeitsgurt trägt Abrieb von Seilen und Haken; eingeritzte Markierungen dienen der Abschätzung von Last und Gewicht. Zusammen mit der Handaxt ist dies Ausrüstung zum Lösen und Abtransportieren eines schweren Gegenstands.
-- Bergungsanweisung: In einer verrotteten Innentasche liegt ein wasserfleckiger, aber ausreichend lesbarer Zettel mit dem Siegel des Barons. Er nennt „Bergungstrupp“, „Gewicht der Glocke feststellen“, „Glocke sichern“, „Stillschweigen“ und „Zahlung nach Übergabe an das Haus Dornfels“.
+- Bergungsanweisung: In einer verrotteten Innentasche liegt ein wasserfleckiger, aber ausreichend lesbarer Zettel mit dem Siegel des Barons. Er nennt „Bergungstrupp“, „Gewicht der Glocke feststellen“, „Zugseil vor dem Lösen des Jochs kappen“, „Glocke sichern“, „Stillschweigen“ und „Zahlung nach Übergabe an das Haus Dornfels“.
 - Vorschussmünze: Eine einzelne hochwertige Münze im Stoffbeutel trägt dasselbe herrschaftliche Zeichen wie der Auftragsrest und passt zu den in Dornfels erwähnten Reichtumsversprechen.
-- Rostige Handaxt: Sie liegt fest in der knöchernen Hand. Die Schneide ist schartig, der Stiel aufgequollen; sie kann noch als Hebel, Keil oder notdürftiges Werkzeug dienen, ist als verlässliche Waffe aber fragwürdig.
+- Rostige Handaxt: Sie liegt fest in der knöchernen Hand. Unter zwei Scharten der Schneide klemmen goldbraune, mit schwarzem Wachs verklebte Fasern eines schweren Seils. Erst der Abgleich mit Zugseil oder Resten im Glockenraum zeigt gleiche Drehung, Färbung und Wachsspur: Diese Axt oder ein gleich behandeltes Werkzeug trennte das Glockenseil während des Bergungsversuchs. Die Spur beweist die menschliche Einwirkung, aber nicht, wer die Axt führte. Der aufgequollene Stiel taugt noch als brüchiger Hebel oder Keil, nicht als verlässliche Waffe.
 - Weiterführende Spuren: Schleifspuren und abgebrochene Holzfasern führen tiefer in den Turm, während rußige Wächterzeichen oberhalb des Verstecks unberührt geblieben sind.
 - Nekromantische Bindung: Schwarze Wachsspuren oberhalb des Absatzes verbinden Knochen, Treppenwand und weiter oben befestigte Ketten. Nach der Treppenvision zieht der Wächter den Toten als [Wiedererweckten Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md) in die Verteidigung des oberen Aufstiegs; würdevoller Umgang schwächt die Bindung, verhindert die Prüfung aber nicht vollständig.
 
@@ -48,13 +48,14 @@ Der engste sichere Durchgang führt dicht am Leichnam vorbei. Wer ihn untersucht
 
 - [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md): Der ausdrückliche Begriff „Bergungstrupp“, Gurt, Hebezeugmarken, Vorschuss und Auftrag zur Sicherung der Glocke machen die Rolle des Toten eindeutig.
 - [Barons Auftrag ist irreführend](../../../dornfels/information/barons-auftrag-ist-irrefuehrend/information.md): Siegel, Gewichtsschätzung, Stillschweigen und Zahlung nach Übergabe belegen, dass der Baron die Glocke bereits vor dem öffentlichen Auftrag bergen lassen wollte.
+- [Verstummtes Seil](../../information/verstummtes-seil/information.md): Die versiegelte Kappanweisung und die schweren Seilfasern in der Handaxtschneide ergeben schon an der Schwelle einen vom Glockenmechanismus unabhängigen Dokument-/Werkzeugpfad zum absichtlichen Schnitt. Der spätere Faserabgleich bestätigt nur, dass genau dieses Werkzeug am Glockenseil eingesetzt wurde.
 - Die Schutzstellung unter dem Absatz zeigt Angst vor etwas im Turm, beweist aber weder, was der Tote sah, noch wodurch er starb.
 
 ## Possible transitions
 
 - Sorgfältig untersucht: Die Gruppe kann Auftragsrest und Münze als Beweise sichern und erkennt den Toten als ausgebeuteten Bergungsmann. Treppenaufgang und Glockenraum bleiben erreichbar.
 - Würdevoll behandelt: Wird der Körper geschützt, zugedeckt oder für eine spätere Bestattung markiert, beginnt der [Wächter](../../npcs/waechter-der-glocke/npc.md) bei seinem nächsten deutlichen Auftreten eher zugewandt statt nur prüfend; dies ist noch keine automatische Zustimmung.
-- Handaxt geborgen: Die Gruppe erhält einen brüchigen Hebel oder Keil. Nutzung als Werkzeug oder Beweissicherung wertet der Wächter neutral; angekündigter Verkauf oder Trophäenraub macht ihn abweisender. Grober Einsatz kann zusätzlich den Stiel brechen, Lärm verursachen oder lose Steine aus der Schwelle lösen.
+- Handaxt geborgen: Die Gruppe erhält einen brüchigen Hebel oder Keil und kann die verklebten Fasern als Beweis sichern. Nutzung als Werkzeug oder Beweissicherung wertet der Wächter neutral; angekündigter Verkauf oder Trophäenraub macht ihn abweisender. Grober Einsatz kann den Stiel brechen, die Faserspur zerstören, Lärm verursachen oder lose Steine aus der Schwelle lösen.
 - Leichnam geplündert oder entwürdigt: Der Wächter beginnt mindestens abweisend und lässt Stimmen die Handlung wiederholen. Rückgabe, Schutz des Körpers oder spätere Rettung eines Gefährdeten kann den Zustand wieder verändern.
 - Nach der Vision erhoben: Das visionäre Glockenläuten aktiviert die Wachsfäden. Der Wiedererweckte folgt der Gruppe auf den Treppenaufgang und drängt sie in die [Knochen-und-Ketten-Verteidigung](../../encounters/knochen-und-ketten/encounter.md). Kampf, Schutz des Leichnams, Unterbrechung der Wachsfäden, Passage, Verhandlung oder Rückzug bleiben mögliche Übergänge.
 - Hastig passiert: Der weitere Weg bleibt offen, doch die direkten Beweise gegen den Baron und für den Bergungstrupp werden zunächst verpasst. Dornfelser Zeugnisse und weitere Turmspuren bleiben als Auffangwege erhalten.
@@ -65,6 +66,7 @@ Der engste sichere Durchgang führt dicht am Leichnam vorbei. Wer ihn untersucht
 - Primary location: [Alter Wachturm](../../location.md)
 - Opferzusammenhang: [Verschwundene Bergungsleute](../../information/verschwundene-bergungsleute/information.md)
 - Auftraggeberspur: [Barons Auftrag ist irreführend](../../../dornfels/information/barons-auftrag-ist-irrefuehrend/information.md)
+- Werkzeugspur: [Verstummtes Seil](../../information/verstummtes-seil/information.md)
 - Unsichtbarer Prüfer: [Wächter der Glocke](../../npcs/waechter-der-glocke/npc.md)
 - Erzwungener Kämpfer: [Wiedererweckter Bergungsmann](../../creatures/wiedererweckter-bergungsmann/creature.md)
 - Spätere Turmverteidigung: [Der Turm schlägt zurück](../der-turm-schlaegt-zurueck/scene.md)

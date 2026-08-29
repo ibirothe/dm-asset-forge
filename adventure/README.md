@@ -3,12 +3,12 @@ id: adv-die-verstummte-glocke
 type: adventure
 title: "Die verstummte Glocke"
 status: draft
-version: 16
+version: 17
 scope: singleton
 tags: []
 themes: [curse, greed, restless-dead, investigation]
 created: 2026-08-14
-updated: 2026-08-16
+updated: 2026-08-29
 ---
 
 # Die verstummte Glocke
@@ -35,13 +35,13 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - Vorbereiteter Turmeinstieg: [Die gebrochene Schwelle](30-locations/alter-wachturm/scenes/die-gebrochene-schwelle/scene.md) — Leichnam, Auftragsrest des Barons und rostige Handaxt eröffnen Akt 3 mit belastbaren Spuren.
 - Vorbereitete Treppenvision: [Das Echo der Plünderung](30-locations/alter-wachturm/scenes/echo-der-pluenderung/scene.md) — Totgeweihter, verstreute Goldmünzen und Glockenläuten verbinden den historischen Raub mit dem sichtbaren Seilbruch.
 - Vorbereiteter feindseliger Aufstieg: [Der Turm schlägt zurück](30-locations/alter-wachturm/scenes/der-turm-schlaegt-zurueck/scene.md) und [Knochen und Ketten](30-locations/alter-wachturm/encounters/knochen-und-ketten/encounter.md) — der Wächter manifestiert sich, erhebt den Bergungsmann und steuert wandgebundene Ketten sowie fallende Balken.
-- Vorbereiteter Entscheidungsknoten: [Glockenraum und Siegelkammer](30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) — eigener Diebstahl oder Reparatur und Läuten führen in eine der drei Finalkonfigurationen.
+- Vorbereiteter Entscheidungsknoten: [Glockenraum und Siegelkammer](30-locations/alter-wachturm/scenes/glockenraum-und-siegelkammer/scene.md) — eigener Diebstahl, Reparatur und Läuten oder eine erklärte schweigende Schutzwache führen unter unterschiedlichem Druck in eine der drei Finalkonfigurationen.
 - Vorbereiteter Finaldruck: [Letzte Bergung](30-locations/alter-wachturm/encounters/letzte-bergung/encounter.md) — Totenwehr gegen neue Plünderer, gemeinsame Bergung mit dem Baron oder Verteidigung der Glocke mit Wächter und alten Gefallenen.
 - Mögliche Einstiege: [Plot overview](20-plot/overview.md#flexible-player-hooks) — Aushang, Dornfelser Zeugnisse, Bibliothek oder direkter Turmzugang.
 
 ### Zentrale Akteure
 
-- [Baron von Dornfels](30-locations/dornfels/npcs/baron-von-dornfels/npc.md): nutzt den Fluchauftrag zur Gefahrenräumung und beansprucht die Glocke nach dem Läuten wegen ihres Goldwerts.
+- [Baron von Dornfels](30-locations/dornfels/npcs/baron-von-dornfels/npc.md): nutzt den Fluchauftrag zur Gefahrenräumung und beansprucht die Glocke nach sofortiger oder verzögerter Ankunft wegen ihres Goldwerts.
 - [Wächter der Glocke](30-locations/alter-wachturm/npcs/waechter-der-glocke/npc.md): gebundener Prüfer mit vier veränderbaren Reaktionszuständen auf Tote, Gold, Seil und Glocke.
 - [Alena Staub](30-locations/dornfels/npcs/alena-staub/npc.md): Bibliothekarin mit Zugang zu fehlenden Büchern und Barons Archivspur.
 - [Stammtisch der Alten](30-locations/dornfels/npcs/stammtisch-der-alten/npc.md): soziale Quelle der Plünderungsüberlieferung.
@@ -49,12 +49,12 @@ Vor dem Spiel: [Session-Bereitschaft](60-session/readiness-report.md). Für die 
 - [Gefallene von der Glocke](40-global/factions/gefallene-von-der-glocke/faction.md): ruhelose Anspruchsträger, die erneuten Raub verhindern wollen.
 - [Gefallene Bergungsleute](30-locations/alter-wachturm/creatures/gefallene-bergungsleute/creature.md): jüngere Opfer, deren Körper der Wächter gegen Goldbergung erhebt und bei Verteidigung der Glocke freigibt.
 
-### Notwendige Informationen
+### Notwendige Schlussfolgerungen und Quellen
 
 - [Barons Auftrag ist irreführend](30-locations/dornfels/information/barons-auftrag-ist-irrefuehrend/information.md): kippt den Auftrag von „Fluch brechen“ zu „Machtmissbrauch aufdecken“.
-- [Herkunft der Glocke](30-locations/dornfels/information/herkunft-der-glocke/information.md): macht die Glocke zum Schuldzeichen.
-- [Fehlende Bücher der Plünderungszeit](30-locations/dornfels/information/fehlende-buecher-der-pluenderungszeit/information.md): schärft den Bibliothekspfad zur Epoche.
-- [Überlieferung der Plünderung](30-locations/dornfels/information/ueberlieferung-der-pluenderung/information.md): gibt einen sozialen Schänkenpfad zur alten Schuld.
+- [Herkunft der Glocke](30-locations/dornfels/information/herkunft-der-glocke/information.md): macht die Glocke über erhaltenes Randregister, Schänkenüberlieferung oder Turmbelege zum Schuldzeichen.
+- Unterstützende Archivspur: [Fehlende Bücher der Plünderungszeit](30-locations/dornfels/information/fehlende-buecher-der-pluenderungszeit/information.md) belegen Manipulation und grenzen die Epoche ein, aber nicht die Materialherkunft.
+- Sozialer Belegpfad: [Überlieferung der Plünderung](30-locations/dornfels/information/ueberlieferung-der-pluenderung/information.md) verbindet alte Schuld und spätere Glocke.
 - [Erste Spuren des Wächters](30-locations/zugaenge-zum-wachturm/information/erste-spuren-des-waechters/information.md): bereitet den Wächter vor dem Finale vor.
 - [Verstummtes Seil](30-locations/alter-wachturm/information/verstummtes-seil/information.md): trennt technische Reparatur von moralischer Auflösung.
 - [Verschwundene Bergungsleute](30-locations/alter-wachturm/information/verschwundene-bergungsleute/information.md): zeigt die aktuellen Opfer als ausgenutzte Bergungsleute.
