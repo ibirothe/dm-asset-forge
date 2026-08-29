@@ -114,3 +114,4 @@ Justus besitzt keine geheime Verbindung zum Baron, zur Glocke oder zu früheren 
 ## Visuals
 
 - Visual: [Portrait Justus Wertmüller](visuals/portrait-justus-wertmueller/visual.md)
+- Visual: [Charakterblatt Justus Wertmüller](visuals/character-sheet-justus-wertmueller/visual.md)

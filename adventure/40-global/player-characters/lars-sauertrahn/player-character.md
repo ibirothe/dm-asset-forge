@@ -106,3 +106,4 @@ Der Zettel macht Lars weder tatsächlich zum Gruppenführer noch verpflichtet er
 ## Visuals
 
 - Visual: [Portrait Lars Sauertrahn](visuals/portrait-lars-sauertrahn/visual.md)
+- Visual: [Charakterblatt Lars Sauertrahn](visuals/character-sheet-lars-sauertrahn/visual.md)

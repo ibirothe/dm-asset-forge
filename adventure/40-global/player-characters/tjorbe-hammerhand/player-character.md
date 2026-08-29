@@ -126,3 +126,4 @@ Ein wahrgenommener Loyalitätsbruch des Barons, ausbleibende Bezahlung oder Miss
 ## Visuals
 
 - Visual: [Portrait Tjorbe Hammerhand](visuals/portrait-tjorbe-hammerhand/visual.md)
+- Visual: [Charakterblatt Tjorbe Hammerhand](visuals/character-sheet-tjorbe-hammerhand/visual.md)

@@ -116,3 +116,4 @@ Sein frÃ¼her Akademieabgang und die ausbleibenden Antworten seiner Lehrperson kÃ
 ## Visuals
 
 - Visual: [Portrait Benedict Karlheist](visuals/portrait-benedict-karlheist/visual.md)
+- Visual: [Charakterblatt Benedict Karlheist](visuals/character-sheet-benedict-karlheist/visual.md)
