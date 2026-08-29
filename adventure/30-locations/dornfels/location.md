@@ -97,3 +97,7 @@ Der Marktplatz ist frei zugänglich. Die Bibliothek ist öffentlich oder mit ger
 ## Changes over time
 
 Wenn die Gruppe Beweise sammelt, wird Dornfels vom sicheren Auftraggeber-Ort zum politischen Druckraum. Wird der Baron öffentlich belastet, sucht er Schuldumkehr, Flucht oder eine letzte Beschleunigung am Turm.
+
+## Visuals
+
+- Visual: [Stadtkarte Dornfels](visuals/stadtkarte-dornfels/visual.md)
